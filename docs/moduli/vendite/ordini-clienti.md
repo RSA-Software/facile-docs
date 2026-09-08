@@ -37,34 +37,39 @@ Le altre voci del sottomenu — **Gestione**, **Inserimento**, **Modifica**,
 [Esportazione e duplicazione](esporta-duplica-documenti.md) e
 [Emissione fatture da documenti](emissione-fatture-da-documenti.md).
 
+!!! note "Le stesse voci, più complete, sotto il menu Ordini"
+
+    Questo sottomenu è la versione ridotta di **Ordini ▸ Ordini da Clienti**,
+    che ha le stesse voci più tutte le altre. I campi delle tre stampe sono
+    descritti per esteso in [Stampe degli ordini](../ordini/stampe-ordini.md).
+
 ## Prerequisiti
 
 Prima di usare queste stampe occorre avere registrato gli ordini.
+
+Prima della cancellazione occorre **una copia di sicurezza recente degli
+archivi**: non c'è modo di tornare indietro.
 
 ## La maschera
 
 ![Stampa ordini](../../assets/img/vendite/ordini-clienti.png)
 
-Sono finestre di selezione con il periodo e i filtri, e i pulsanti **F2 - OK**
-ed **Esci**.
+Le tre stampe sono finestre di selezione con gli intervalli e i filtri, e i
+pulsanti **F2 - OK** ed **Esci**. **Cancellazione Ordini Evasi** non ha invece
+alcuna maschera: parte subito con le domande di conferma.
 
 ## Campi
 
-| Campo | Obbl. | Descrizione | Valori ammessi |
-|---|:---:|---|---|
-| **Data Iniziale**, **Data Finale** | ● | Il periodo degli ordini. | date |
-| **Cliente** | | Restringe a un cliente. | codice |
-| **Articolo** | | Nella stampa per articolo, restringe a un articolo. | codice |
-
-{: .campi }
-
-<!-- DA VERIFICARE: i campi esatti delle tre stampe e della cancellazione ordini evasi. -->
+I campi delle tre stampe sono quelli descritti in
+[Stampe degli ordini](../ordini/stampe-ordini.md): intervalli di cliente,
+articolo e data, la zona, il deposito, il registro e la casella **Includi
+Ordini Totalmente Evasi**.
 
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - OK** | ++f2++ | Avvia la stampa o la cancellazione. |
+| **F2 - OK** | ++f2++ | Avvia la stampa. |
 | **Esci** | ++esc++ | Chiude senza fare nulla. |
 | Elenco di scelta | ++f10++ o ++space++ | Sul campo con il codice, apre l'elenco da cui scegliere. |
 
@@ -87,29 +92,32 @@ ed **Esci**.
 1. **Fai una copia di sicurezza degli archivi.**
 2. Stampa prima il **Riepilogo**, per avere traccia di cosa stai per togliere.
 3. Apri **Menu ▸ Vendite ▸ Ordini Clienti ▸ Cancellazione Ordini Evasi**.
-4. Indica il periodo e avvia.
+4. Rispondi **Sì** alle due domande di conferma.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi delle tre stampe e della cancellazione ordini evasi. -->
-
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *(nessun messaggio, solo un segnale acustico)* | Manca una delle date. | Compila il campo su cui si è posizionato il cursore. |
+| *Vuoi Cancellare gli Ordini Evasi ?* poi *Confermi la Cancellazione degli Ordini ?* | Hai avviato la cancellazione. | Rispondi **Sì** a entrambe solo se sei sicuro. La risposta preimpostata è **No**. |
+| *(nessun messaggio, solo un segnale acustico)* | Un campo del filtro non è valido. | Guarda dove si è posizionato il cursore. |
 
 ## Note
 
 !!! warning "La cancellazione degli ordini evasi è definitiva"
 
     Gli ordini cancellati spariscono dall'archivio con la loro storia. Stampa il
-    riepilogo prima, e fallo solo su periodi chiusi.
+    riepilogo prima, e fai una copia degli archivi.
 
-<!-- DA VERIFICARE: quando un ordine è considerato "evaso": se basta la quantità evasa pari all'ordinata o serva anche la fatturazione. -->
+!!! note "Non si sceglie il periodo"
 
-<!-- DA VERIFICARE: se la cancellazione chieda conferma. -->
+    **Cancellazione Ordini Evasi** non chiede nulla oltre alle due conferme:
+    toglie **tutti** gli ordini in stato *evaso*, di qualunque data. Un ordine è
+    evaso quando ogni sua riga è stata consegnata per intero.
 
 ## Vedi anche
 
 - [Documento di vendita](documento-di-vendita.md)
 - [Gestione documenti](gestione-documenti.md)
 - [Emissione fatture da documenti](emissione-fatture-da-documenti.md)
+- [Stampe degli ordini](../ordini/stampe-ordini.md)
+- [Ordini in lavorazione e in ricezione](../ordini/ordini-in-lavorazione-e-ricezione.md)

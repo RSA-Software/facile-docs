@@ -110,6 +110,10 @@ markdown_extensions:
 # riferimento è il menu completo (IDR_PROFESSIONAL); nelle licenze Standard e
 # Lite alcune voci non compaiono.
 #
+# UNICA ECCEZIONE: il ramo "Analisi Dati" non esiste in IDR_PROFESSIONAL — è
+# solo di Facile Evolution (IDR_MAINFRAME, fra Magazzino e Scadenze). Il
+# controllo di copertura su quel ramo va fatto su IDR_MAINFRAME.
+#
 # Le etichette qui sotto sono quelle del menu, non i titoli delle pagine.
 # Aggiungere ogni nuova maschera nella posizione che ha nel menu.
 # ---------------------------------------------------------------------------
@@ -217,6 +221,7 @@ nav:
       - Acconti: moduli/vendite/acconti.md
       - Gestione documenti: moduli/vendite/gestione-documenti.md
       - Inserimento e Modifica documenti: moduli/vendite/documento-di-vendita.md
+      - Ristampa: moduli/vendite/ristampa-documenti.md
       - Preventivi: moduli/vendite/preventivi.md
       - Documenti Accompagnatori Semplificati: moduli/vendite/documenti-accompagnatori-semplificati.md
       - Fatture Ricorrenti: moduli/vendite/fatture-ricorrenti.md
@@ -230,6 +235,15 @@ nav:
       - Promozioni: moduli/vendite/promozioni.md
       - Provvigioni Agenti - Capi Area: moduli/vendite/provvigioni-agenti.md
       - Stampe e strumenti: moduli/vendite/stampe-vendite.md
+  - Ordini:
+      - moduli/ordini/menu-ordini.md
+      - Ordini in Lavorazione e in Ricezione: moduli/ordini/ordini-in-lavorazione-e-ricezione.md
+      - Inserimento Ordini Tabacchi: moduli/ordini/ordini-tabacchi.md
+      - Generazione Ordini a Fornitori da Ordini Clienti: moduli/ordini/generazione-ordini.md
+      - Generazione Ordini con Analisi Prezzi: moduli/ordini/riordino-articoli.md
+      - Stampe degli ordini: moduli/ordini/stampe-ordini.md
+      - Invio e Ricezione Ordini: moduli/ordini/scambio-ordini.md
+      - Richieste Offerta: moduli/ordini/richieste-offerta.md
   - Magazzino:
       - moduli/magazzino/menu-magazzino.md
       - Carico Merci: moduli/magazzino/carico-merci.md
@@ -240,6 +254,45 @@ nav:
       - Stampe Magazzino Clienti: moduli/magazzino/stampe-magazzino-clienti.md
       - Stampe Magazzino Fornitori: moduli/magazzino/stampe-magazzino-fornitori.md
       - Stampe dei movimenti: moduli/magazzino/stampe-movimenti-magazzino.md
+  - Analisi Dati:
+      - moduli/analisi-dati/menu-analisi-dati.md
+      - Analisi delle vendite: moduli/analisi-dati/analisi-vendite.md
+      - Analisi e Giacenza Lotti: moduli/analisi-dati/analisi-lotti.md
+      - Venduto per…: moduli/analisi-dati/venduto-per.md
+      - Venduto incrociato: moduli/analisi-dati/venduto-incrociato.md
+      - Grafici e Report Personalizzati: moduli/analisi-dati/grafici-e-report.md
+  - Scadenze:
+      - moduli/scadenze/menu-scadenze.md
+      - Gestione Scadenze: moduli/scadenze/gestione-scadenze.md
+      - Distinte di Incasso e Pagamento: moduli/scadenze/distinte-incasso-pagamento.md
+      - Effetti e RI.BA.: moduli/scadenze/effetti-e-riba.md
+      - Stampe delle scadenze: moduli/scadenze/stampe-scadenze.md
+      - Controllo Crediti: moduli/scadenze/controllo-crediti.md
+      - Elimina, Totali e Cruscotto: moduli/scadenze/manutenzione-scadenze.md
+  - Inventario:
+      - moduli/inventario/menu-inventario.md
+      - Acquisizione Dati: moduli/inventario/acquisizione-letture.md
+      - Stampe dell'inventario: moduli/inventario/stampe-inventario.md
+      - Chiusura e azzeramenti: moduli/inventario/chiusura-inventario.md
+  - Casse e Bilance:
+      - moduli/casse-bilance/menu-casse-bilance.md
+      - Casse: moduli/casse-bilance/casse.md
+      - Bilance: moduli/casse-bilance/bilance.md
+      - Gestione e Stampa Frontalini: moduli/casse-bilance/frontalini.md
+      - Stampe e manutenzione: moduli/casse-bilance/stampe-casse-bilance.md
+  - Trasferimenti:
+      - moduli/trasferimenti/menu-trasferimenti.md
+      - Esportazione per tracciato: moduli/trasferimenti/esportazione-documenti.md
+      - Esportazioni con maschera propria: moduli/trasferimenti/esportazioni-specifiche.md
+      - Ricezione Dati: moduli/trasferimenti/ricezione-dati.md
+  - Utility:
+      - moduli/utility/menu-utility.md
+      - Stampa Etichette Barcode: moduli/utility/etichette-barcode.md
+      - Impostazioni Postazione: moduli/utility/impostazioni-postazione.md
+      - Esercizi, ditte e chiusure: moduli/utility/esercizi-e-chiusure.md
+      - Manutenzione degli archivi: moduli/utility/manutenzione-archivi.md
+      - Assistenza: moduli/utility/assistenza.md
+      - Gestione Licenza: moduli/utility/gestione-licenza.md
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi di errore: appendici/messaggi-errore.md

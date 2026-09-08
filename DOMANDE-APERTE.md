@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-08 — **317 domande** su 99 pagine.
+Aggiornato al 2026-09-08 — **426 domande** su 132 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -37,12 +37,6 @@ Per rigenerare questo elenco:
 
 - [ ] se la password dell'operatore sia digitata in chiaro o coperta, e dove venga richiesta durante il lavoro alla cassa.
 - [ ] quale lettore di tessere è previsto e in che formato va scritto il codice in "Tessera".
-
-## Uffici provinciali IVA
-
-`docs/moduli/altre-tabelle/uffici-provinciali-iva.md`
-
-- [ ] dove l'ufficio provinciale IVA viene richiamato: quale stampa o comunicazione lo usa.
 
 ## Agganci trasferimento documenti
 
@@ -123,10 +117,10 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/ditte.md`
 
-- [ ] i campi delle diciotto schede, uno per uno. Sono molti e governano il comportamento dell'intero programma: vanno documentati in una passata dedicata, scheda per scheda.
-- [ ] quale password protegge l'inserimento di una ditta nuova e chi la possiede.
-- [ ] se le schede Parametri Ristorazione, Parametri Hotel e CRM compaiano sempre o solo con i moduli corrispondenti attivi.
+- [ ] i campi delle schede Parametri Hotel e CRM, che nella copia in uso non sono state esaminate.
+- [ ] quale password protegge l'inserimento di una ditta nuova e le Impostazioni Protette, e chi la possiede.
 - [ ] cosa succede alla ditta duplicata quando, dopo il cambio, il programma propone la copia degli archivi.
+- [ ] se i moduli di stampa della scheda Modulistica si scelgano da un elenco o si scrivano a mano.
 
 ## Gestione compleanni
 
@@ -245,6 +239,81 @@ Per rigenerare questo elenco:
 - [ ] cosa comportano esattamente i "Privilegi Amministratore" rispetto alle spunte dell'albero: se scavalchino i permessi o si sommino.
 - [ ] che formato deve avere il file allegato con F7 Firma Email e dove viene usato.
 - [ ] dove si impostano i loghi a cui fa riferimento il campo Logo.
+
+## Analisi e giacenza dei lotti
+
+`docs/moduli/analisi-dati/analisi-lotti.md`
+
+- [ ] quali colonne mostra la griglia nei due modi, e cosa cambia fra Analisi e Giacenza.
+- [ ] quale impostazione attiva la gestione dei lotti e cosa mostrano queste analisi se non è attiva.
+- [ ] come viene usato il campo "Listino" nella valorizzazione.
+
+## Analisi delle vendite
+
+`docs/moduli/analisi-dati/analisi-vendite.md`
+
+- [ ] quali dimensioni e quali misure sono disponibili nel cubo multidimensionale.
+- [ ] cosa mostra esattamente "Analisi Scontrini" — se il dettaglio riga per riga o i totali per operatore.
+- [ ] che differenza c'è fra i filtri di "Analisi Vendite Periodo" e quelli di "Venduto per Articolo".
+
+## Grafici pluriennali e report personalizzati
+
+`docs/moduli/analisi-dati/grafici-e-report.md`
+
+- [ ] i messaggi di queste due maschere.
+- [ ] in quale cartella vengono cercati i file .rpt dei report personalizzati.
+- [ ] che aspetto ha il grafico prodotto e se sia esportabile o solo stampabile.
+- [ ] come le dieci caselle Anno_01…Anno_10 si associano agli anni di gestione presenti in archivio.
+
+## Venduto incrociato per cliente e per agente
+
+`docs/moduli/analisi-dati/venduto-incrociato.md`
+
+- [ ] i messaggi propri di queste analisi.
+- [ ] perché la casella si chiama "Salto Pagina dopo ogni Cliente" anche nelle analisi raggruppate per agente.
+- [ ] se la comparazione su due anni richieda che entrambe le annate siano nello storico dei movimenti.
+
+## Venduto per…
+
+`docs/moduli/analisi-dati/venduto-per.md`
+
+- [ ] i messaggi propri di queste analisi.
+- [ ] quali sono le voci dell'elenco "Tipo Vendita" oltre a TUTTE, e su quali analisi compare.
+- [ ] come viene calcolato il turnover e su quale giacenza media.
+
+## Bilance
+
+`docs/moduli/casse-bilance/bilance.md`
+
+- [ ] la differenza fra le due voci di invio delle bilance DIBAL, "- CS" e "- D900".
+- [ ] in quale cartella ciascuna marca di bilance scrive e legge i file di scambio.
+- [ ] se i tre modi della maschera Elga (invio, ricezione, ricezione da file) mostrino campi diversi.
+- [ ] cosa distingue la "ricezione scontrini" dalla "ricezione totali vendite" nel risultato in Facile.
+
+## Casse
+
+`docs/moduli/casse-bilance/casse.md`
+
+- [ ] quale famiglia usa quale cartella e quale tracciato di file.
+- [ ] come si configura il collegamento fisico alle casse Ditron oltre alla scelta delle porte.
+- [ ] cosa cambia fra i sei livelli di "PARZIALE" nella cancellazione promozioni.
+- [ ] se l'invio dei clienti e dei saldi fidelity esista anche per le altre famiglie di casse.
+
+## Frontalini
+
+`docs/moduli/casse-bilance/frontalini.md`
+
+- [ ] dove si configurano i formati dei frontalini e quali sono quelli standard.
+- [ ] cosa contiene la colonna "Cod. Bat." e a cosa serve.
+- [ ] quali terminalini sono supportati da "F8 - Acquisisci".
+
+## Stampe e manutenzione di casse e bilance
+
+`docs/moduli/casse-bilance/stampe-casse-bilance.md`
+
+- [ ] i messaggi propri di queste stampe.
+- [ ] dove si vedono gli scarti oltre che in stampa, e se si possano correggere senza reinserire il venduto a mano.
+- [ ] quali campi dell'articolo attivano il flag variazioni, e se lo attivi anche una modifica non di prezzo.
 
 ## Aliquote IVA
 
@@ -441,6 +510,29 @@ Per rigenerare questo elenco:
 - [ ] quali campi sono obbligatori. La maschera non fa i controlli tipici delle altre tabelle, e il numero è assegnato dal programma: va provata per capire cosa succede salvando un titolo incompleto.
 - [ ] le voci di menu Gestione Titoli Scaduti e Gestione Titoli Attivi sono due maschere a sé, da documentare separatamente.
 - [ ] il titolo della finestra è "Acquisizione Titoli", mentre la voce di menu dice "Titoli ▸ Inserimento". Quale nome usare nel manuale?
+
+## Acquisizione delle letture
+
+`docs/moduli/inventario/acquisizione-letture.md`
+
+- [ ] se le letture dello stesso articolo e deposito vengano sommate in chiusura o se contino come righe distinte.
+- [ ] le voci "EIA THUNDER" e "EIA SOLARIS" dell'elenco Origine puntano allo stesso tipo di terminale: verificare se è voluto.
+- [ ] quali sono i nomi esatti delle colonne facoltative del foglio Excel di importazione.
+
+## Chiusura dell'inventario
+
+`docs/moduli/inventario/chiusura-inventario.md`
+
+- [ ] cosa contiene il file di log della chiusura e dove viene scritto.
+- [ ] se la chiusura sommi le letture ripetute dello stesso articolo o consideri solo l'ultima.
+- [ ] quali sono i campi delle maschere di "Azzeramento Articoli non Inventariati" e "Azzeramento Articoli con Esistenza Negativa" nella versione con taglie e colori, dove il percorso è diverso.
+
+## Stampe dell'inventario
+
+`docs/moduli/inventario/stampe-inventario.md`
+
+- [ ] se "Stampa Articoli Inventariati" consideri inventariato l'articolo per la data ultimo inventario o per la presenza di una lettura.
+- [ ] su quale criterio il "Raggruppamento" per GRUPPO e SOTTOGRUPPO aggrega le righe.
 
 ## Analisi fornitore
 
@@ -660,6 +752,190 @@ Per rigenerare questo elenco:
 - [ ] il Coef. Moltip. converte fra quale coppia di unità? Serve un esempio numerico che oggi non ho.
 - [ ] la casella Riporta Colli. In quali documenti ha effetto?
 
+## Generazione degli ordini
+
+`docs/moduli/ordini/generazione-ordini.md`
+
+- [ ] con quale criterio viene scelto il fornitore quando l'articolo ne ha più d'uno in listino.
+- [ ] cosa contiene la colonna "Assort." del riassortimento e come viene calcolata la "Esistenza Centrale".
+
+## Ordini in lavorazione e in ricezione
+
+`docs/moduli/ordini/ordini-in-lavorazione-e-ricezione.md`
+
+- [ ] che cosa fa esattamente "F6- Scomponi" e in quali casi si usa.
+
+## Ordini tabacchi
+
+`docs/moduli/ordini/ordini-tabacchi.md`
+
+- [ ] cosa significano le voci "O", "S" e "M" dell'elenco Tipo: a video compaiono come lettere sole, accanto a SPECIALE e URGENTE che sono per esteso.
+- [ ] cosa contengono le colonne "D INS" e "T INS" e la differenza fra "Min Riord." e "Scorta Min".
+- [ ] che aspetto ha il fax U88 e come viene inviato — se in stampa, per posta o su file.
+- [ ] dove finisce il foglio generato da "F7 - Logista" e con che nome.
+
+## Richieste offerta
+
+`docs/moduli/ordini/richieste-offerta.md`
+
+- [ ] i messaggi propri delle richieste offerta.
+- [ ] se la richiesta offerta venga marcata in qualche modo dopo che ne è stato generato l'ordine.
+- [ ] se le richieste offerta compaiano nelle stampe degli ordini per articolo.
+
+## Riordino articoli con analisi prezzi
+
+`docs/moduli/ordini/riordino-articoli.md`
+
+- [ ] con quale criterio viene evidenziato il "Miglior Prezzo" quando due fornitori hanno lo stesso prezzo.
+- [ ] quali terminalini sono supportati dal pulsante "Dati" e come si configurano.
+- [ ] quando gli ordini sono generati e la generazione non produce nulla, in un caso Facile non mostra alcun messaggio.
+
+## Scambio degli ordini con l'esterno
+
+`docs/moduli/ordini/scambio-ordini.md`
+
+- [ ] cosa contiene esattamente il file di configurazione imp_mobile e chi lo prepara.
+- [ ] quale tracciato hanno i file .rsa degli ordini e se è documentato altrove.
+
+## Stampe degli ordini
+
+`docs/moduli/ordini/stampe-ordini.md`
+
+- [ ] i messaggi propri di queste stampe.
+- [ ] che differenza c'è fra la stampa ESTESA e la SINTETICA degli ordini per articolo.
+
+## Controllo crediti e debiti
+
+`docs/moduli/scadenze/controllo-crediti.md`
+
+- [ ] i campi di queste maschere: sono cinque diverse e non ho potuto estrarne le etichette dalle risorse.
+- [ ] i messaggi di queste maschere, compreso il caso del mittente non impostato per l'invio degli estratti conto.
+- [ ] cosa distingue "Credito Circolante" da "Stampa Controllo Crediti".
+- [ ] se il Controllo Crediti confronti l'esposizione con il fido del cliente.
+- [ ] come vengono inviati gli estratti conto: per posta elettronica, in stampa o entrambi.
+
+## Distinte di incasso e di pagamento
+
+`docs/moduli/scadenze/distinte-incasso-pagamento.md`
+
+- [ ] i messaggi di queste maschere.
+- [ ] se la distinta generi la registrazione contabile dell'incasso o solo la chiusura della scadenza.
+- [ ] cosa succede a una distinta annullata: se le scadenze tornino aperte.
+- [ ] da dove arrivano gli incassi dell'agente e in che formato.
+
+## Effetti e RI.BA.
+
+`docs/moduli/scadenze/effetti-e-riba.md`
+
+- [ ] i messaggi di queste maschere.
+- [ ] quali valori contiene l'elenco "Formato Stampa" delle RI.BA. e quali moduli prestampati supporta.
+- [ ] in quale cartella e con quale nome viene prodotto il file di flusso, e in che tracciato.
+- [ ] quali registrazioni genera "Contabilizza Effetti" e su quali conti.
+- [ ] i campi della maschera di generazione del file di flusso: non ho potuto estrarne le etichette.
+
+## Gestione scadenze
+
+`docs/moduli/scadenze/gestione-scadenze.md`
+
+- [ ] i messaggi di questa maschera.
+- [ ] quali campi si compilano aprendo una scadenza con F2 - Modifica.
+- [ ] come una scadenza viene marcata come pagata: se dalla distinta o a mano da questa maschera.
+
+## Manutenzione dello scadenziario
+
+`docs/moduli/scadenze/manutenzione-scadenze.md`
+
+- [ ] i campi di queste maschere e la struttura del cruscotto: non ho potuto estrarne le etichette dalle risorse.
+- [ ] i messaggi di queste maschere.
+- [ ] se "Elimina Scadenze" tolga solo le scadenze chiuse o tutte quelle del periodo.
+- [ ] cosa mostra il Cruscotto Finaziario e su quali dati è costruito.
+- [ ] come il controllo presenta le discordanze: stampa, griglia o messaggio.
+
+## Stampe delle scadenze
+
+`docs/moduli/scadenze/stampe-scadenze.md`
+
+- [ ] i campi propri di Stampa Sintesi, Stampa Interessi di Mora e Stampa Estratto Conto per Documento: non ho potuto estrarli tutti.
+- [ ] i messaggi di queste stampe.
+- [ ] con quale tasso vengono calcolati gli interessi di mora e dove si imposta.
+- [ ] se il testo della lettera di sollecito sia modificabile e dove.
+
+## Esportazione documenti per tracciato
+
+`docs/moduli/trasferimenti/esportazione-documenti.md`
+
+- [ ] quali campi compaiono per ciascun tracciato: la maschera ne nasconde una parte a seconda del formato scelto.
+- [ ] i messaggi di questa maschera: il file EsportazioneDocumenti.cpp supera le 24.000 righe e i messaggi sono specifici per tracciato.
+- [ ] in quale cartella e con quale nome viene scritto il file di ciascun tracciato.
+- [ ] dove si impostano i codici del destinatario su clienti e articoli per ciascun tracciato.
+- [ ] se esista un registro delle esportazioni già effettuate.
+
+## Esportazioni con maschera propria
+
+`docs/moduli/trasferimenti/esportazioni-specifiche.md`
+
+- [ ] i messaggi propri della generazione dati per Facile Mobile e della trasmissione 730.
+- [ ] in quale cartella finiscono i file generati da ciascuna di queste esportazioni.
+- [ ] come Facile ricorda il punto dell'ultima esportazione e come lo si azzera.
+- [ ] che cosa comprende esattamente "Genera Dati per Facile Mobile" e come i dati arrivano ai dispositivi.
+
+## Ricezione dati
+
+`docs/moduli/trasferimenti/ricezione-dati.md`
+
+- [ ] i campi delle maschere di importazione WinWork e Diamante.
+- [ ] se l'uso della stessa procedura per le promozioni CDS e SIDA sia voluto o un residuo.
+- [ ] in quale cartella ciascuna procedura cerca il proprio file.
+- [ ] cosa comprende esattamente "Aggiornamento Dati Agenti" e in che verso viaggiano i dati.
+
+## Assistenza
+
+`docs/moduli/utility/assistenza.md`
+
+- [ ] i messaggi finali di riepilogo delle variazioni di codice.
+- [ ] quali archivi vengono toccati da ciascuna variazione di codice.
+- [ ] cosa fa "Abilita NoSync" e in quali situazioni l'assistenza lo usa.
+- [ ] che differenza c'è fra "Inversione Modalità IVA" e la coppia "Articoli IVA Inclusa/Esclusa".
+
+## Esercizi, ditte e chiusure contabili
+
+`docs/moduli/utility/esercizi-e-chiusure.md`
+
+- [ ] cosa comprende esattamente il riporto delle esistenze di magazzino del nuovo esercizio.
+- [ ] i campi di "Seleziona Archivio" e cosa succede agli utenti collegati quando si cambia archivio.
+
+## Etichette codici a barre
+
+`docs/moduli/utility/etichette-barcode.md`
+
+- [ ] dove si configurano i formati delle etichette e quali sono quelli standard.
+- [ ] quale file viene letto da "Stampa Etichette Barcode da File" e in che formato.
+
+## Gestione della licenza
+
+`docs/moduli/utility/gestione-licenza.md`
+
+- [ ] il testo esatto della richiesta di conferma della disattivazione (stringa IDS_DISATTIVAZIONE).
+- [ ] come si comunica a R.S.A. l'attivazione e se serva un collegamento a internet.
+
+## Impostazioni della postazione
+
+`docs/moduli/utility/impostazioni-postazione.md`
+
+- [ ] i campi delle sei finestre minori (stampanti, WebApiService, pagamenti elettronici, EFT Pos, messaggi, stampanti comande).
+- [ ] i messaggi di queste maschere.
+- [ ] dove sono memorizzate queste impostazioni e se si possano copiare da una postazione all'altra.
+- [ ] cosa fa esattamente "Utilizza Server SQL ove Possibile" e quando conviene attivarla.
+
+## Manutenzione degli archivi
+
+`docs/moduli/utility/manutenzione-archivi.md`
+
+- [ ] i messaggi propri dei ricalcoli e della valorizzazione.
+- [ ] cosa fa esattamente "Aggiorna Catalogo Dati" sugli archivi.
+- [ ] da dove vengono lette le fotografie di "Importa Foto" e con quale criterio sono associate agli articoli.
+- [ ] se "Importa" da GESA sia ancora utilizzabile e in quali passaggi.
+
 ## Acconti
 
 `docs/moduli/vendite/acconti.md`
@@ -746,15 +1022,6 @@ Per rigenerare questo elenco:
 - [ ] quali valori assume la colonna Sync e in quali casi conviene usare F8 - Forza Invio.
 - [ ] quali registri compaiono nell'elenco Registro e da dove sono presi.
 
-## Ordini clienti
-
-`docs/moduli/vendite/ordini-clienti.md`
-
-- [ ] i campi esatti delle tre stampe e della cancellazione ordini evasi.
-- [ ] i messaggi delle tre stampe e della cancellazione ordini evasi.
-- [ ] quando un ordine è considerato "evaso": se basta la quantità evasa pari all'ordinata o serva anche la fatturazione.
-- [ ] se la cancellazione chieda conferma.
-
 ## Preventivi
 
 `docs/moduli/vendite/preventivi.md`
@@ -791,6 +1058,13 @@ Per rigenerare questo elenco:
 - [ ] cosa distingue "Statistiche" da "Statistiche Mensili".
 - [ ] se le sette voci "Fatturato Mensile per…" aprano la stessa maschera con un parametro, come sembra.
 - [ ] la voce di menu dice "Fatturato Mensile per Marchio" ma l'identificativo interno parla di stagione: verificare cosa raggruppa davvero.
+
+## Ristampa dei documenti
+
+`docs/moduli/vendite/ristampa-documenti.md`
+
+- [ ] se la ristampa aggiorni la data o il contatore di stampa del documento.
+- [ ] dove viene prodotto il file quando è attiva "Solo Esportazione".
 
 ## Scontrini
 

@@ -45,6 +45,11 @@ Prima di usare queste maschere occorre:
 
 Sono due finestrelle con pochi campi e i pulsanti **F2 - OK** ed **Esci**.
 
+La maschera degli spostamenti serve anche una terza stampa, che sta sotto un
+altro menu: **Casse e Bilance ▸ Stampa Scarti da Ricezione**. Quando si apre da
+lì prende il titolo *Stampa Scarti su Ricezione da Casse* e mostra un campo in
+più, descritto qui sotto.
+
 ## Campi
 
 ### Stampa Lotti in Scadenza
