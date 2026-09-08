@@ -14,9 +14,9 @@ proposti.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Inserimento *(oppure* Modifica*)*, o **F3 - Nuova** dalla [gestione prima nota](gestione-prima-nota.md)
-    **Scorciatoia:** ++f6++ elimina, ++f7++ allegati, ++f8++ causale, ++f9++ integrazioni
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Inserimento *(oppure* Modifica*)*, o **F3 - Nuova** dalla [gestione prima nota](gestione-prima-nota.md)
+    - **Scorciatoia:** ++f6++ elimina, ++f7++ allegati, ++f8++ causale, ++f9++ integrazioni
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

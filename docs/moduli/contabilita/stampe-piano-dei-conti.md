@@ -12,11 +12,12 @@ piano dei conti nudo e il piano dei conti con i saldi.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Stampa Schede Conti
-    Menu ▸ Archivi ▸ Contabilità ▸ Stampa Piano dei Conti
-    Menu ▸ Archivi ▸ Contabilità ▸ Stampa Piano dei Conti con Totali
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Contabilità ▸ Stampa Schede Conti
+        - Menu ▸ Archivi ▸ Contabilità ▸ Stampa Piano dei Conti
+        - Menu ▸ Archivi ▸ Contabilità ▸ Stampa Piano dei Conti con Totali
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

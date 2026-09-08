@@ -13,9 +13,9 @@ finestra. È il punto da cui si entra nei documenti tutti i giorni.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Gestione
-    **Scorciatoia:** ++f2++ nuovo, ++f3++ modifica, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Gestione
+    - **Scorciatoia:** ++f2++ nuovo, ++f3++ modifica, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

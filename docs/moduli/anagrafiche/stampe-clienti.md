@@ -13,9 +13,9 @@ filtri e si dice in che formato stampare.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Stampa *(oppure* Stampa Schede*,* Stampa Saldi*,* Stampa Elenco IVA*,* Stampa Condizioni Contrattuali*,* Stampa Buoni Sconto*)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Stampa *(oppure* Stampa Schede*,* Stampa Saldi*,* Stampa Elenco IVA*,* Stampa Condizioni Contrattuali*,* Stampa Buoni Sconto*)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

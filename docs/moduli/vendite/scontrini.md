@@ -13,9 +13,9 @@ il controllo del conferimento.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Scontrini ▸ Altri Scarichi - Scontrini *(oppure* Stampa Punti*,* Riepilogo Scontrini*,* Riepilogo IVA Scontrini *o* Controllo Conferimento*)*
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Scontrini ▸ Altri Scarichi - Scontrini *(oppure* Stampa Punti*,* Riepilogo Scontrini*,* Riepilogo IVA Scontrini *o* Controllo Conferimento*)*
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

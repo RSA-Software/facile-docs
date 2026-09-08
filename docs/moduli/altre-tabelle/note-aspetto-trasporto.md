@@ -12,11 +12,12 @@ quella frase si richiama poi sui documenti invece di riscriverla ogni volta.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Altre Tabelle ▸ Note Particolari ▸ Inserimento *(oppure* Modifica*)*
-    Menu ▸ Archivi ▸ Altre Tabelle ▸ Aspetto Esteriore Merci ▸ Inserimento *(oppure* Modifica*)*
-    Menu ▸ Archivi ▸ Altre Tabelle ▸ Causali Trasporto Merci ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Altre Tabelle ▸ Note Particolari ▸ Inserimento *(oppure* Modifica*)*
+        - Menu ▸ Archivi ▸ Altre Tabelle ▸ Aspetto Esteriore Merci ▸ Inserimento *(oppure* Modifica*)*
+        - Menu ▸ Archivi ▸ Altre Tabelle ▸ Causali Trasporto Merci ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

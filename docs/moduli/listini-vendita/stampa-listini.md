@@ -13,9 +13,9 @@ esistenze accanto ai prezzi.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Stampa Listino
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Stampa Listino
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

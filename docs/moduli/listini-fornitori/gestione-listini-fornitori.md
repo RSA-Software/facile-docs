@@ -14,9 +14,9 @@ manda e lo si confronta poi con
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Fornitori ▸ Gestione
-    **Scorciatoia:** ++f2++ modifica la riga, ++f3++ ne aggiunge una
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Listini Fornitori ▸ Gestione
+    - **Scorciatoia:** ++f2++ modifica la riga, ++f3++ ne aggiunge una
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -13,9 +13,9 @@ come il piano dei conti è organizzato.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Conti per la Riclassificazione ▸ Inserimento *(oppure* Modifica *o* Riclassificazione*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Conti per la Riclassificazione ▸ Inserimento *(oppure* Modifica *o* Riclassificazione*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

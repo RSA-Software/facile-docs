@@ -13,14 +13,15 @@ fornitore, e dove la contabilità non quadra.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Saldi Compensazione Clienti/Fornitori
-    Menu ▸ Contabilità ▸ Statistica Vendite
-    Menu ▸ Contabilità ▸ Statistica Acquisti
-    Menu ▸ Contabilità ▸ Statistica Acquisti su Conto
-    Menu ▸ Contabilità ▸ Squadrature Movimenti
-    Menu ▸ Contabilità ▸ Stampa Rapporti
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Contabilità ▸ Saldi Compensazione Clienti/Fornitori
+        - Menu ▸ Contabilità ▸ Statistica Vendite
+        - Menu ▸ Contabilità ▸ Statistica Acquisti
+        - Menu ▸ Contabilità ▸ Statistica Acquisti su Conto
+        - Menu ▸ Contabilità ▸ Squadrature Movimenti
+        - Menu ▸ Contabilità ▸ Stampa Rapporti
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

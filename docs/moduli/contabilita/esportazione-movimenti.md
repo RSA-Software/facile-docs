@@ -13,9 +13,9 @@ scritto, secondo il programma che il commercialista usa.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Esportazione Movimenti per SISPAC *(oppure per* TeamSystem*, per* IPSOA *o per* PROFIS SQL*)*
-    **Scorciatoia:** ++f2++ esporta, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Esportazione Movimenti per SISPAC *(oppure per* TeamSystem*, per* IPSOA *o per* PROFIS SQL*)*
+    - **Scorciatoia:** ++f2++ esporta, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

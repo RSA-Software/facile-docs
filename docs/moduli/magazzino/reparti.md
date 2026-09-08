@@ -12,9 +12,9 @@ reparti del registratore di cassa, che è quello che stampa lo scontrino.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Reparti ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Reparti ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

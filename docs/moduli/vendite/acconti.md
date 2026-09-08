@@ -12,9 +12,9 @@ scalare quando il documento definitivo viene emesso.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Acconti ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Acconti ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

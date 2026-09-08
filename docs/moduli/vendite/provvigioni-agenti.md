@@ -13,9 +13,9 @@ provvigioni, le attribuzioni automatiche, i ricalcoli, i controlli e le stampe.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Provvigioni Agenti - Capi Area ▸ *(una delle voci)*
-    **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Provvigioni Agenti - Capi Area ▸ *(una delle voci)*
+    - **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

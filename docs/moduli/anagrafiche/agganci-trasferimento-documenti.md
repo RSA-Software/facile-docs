@@ -13,10 +13,11 @@ trasferimento riconosce chi è chi.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Agganci Trasferimento Documenti
-    Menu ▸ Archivi ▸ Clienti ▸ Stampa Agganci Trasferimento Documenti
-    **Scorciatoia:** ++f2++ salva, ++f6++ cancella
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Clienti ▸ Agganci Trasferimento Documenti
+        - Menu ▸ Archivi ▸ Clienti ▸ Stampa Agganci Trasferimento Documenti
+    - **Scorciatoia:** ++f2++ salva, ++f6++ cancella
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

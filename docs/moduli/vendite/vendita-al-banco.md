@@ -13,10 +13,11 @@ documento differito ma battono lo scontrino e scaricano il magazzino subito.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Vendita
-    Menu ▸ Vendite ▸ Pos Touchscreen
-    **Scorciatoia:** ++f5++ preconto, ++f9++ resi
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); sull'utente pesano anche **Disabilita Stampe (POS)**, **Disabilita Rapporti e Azzeramenti Cassa (POS)** e **Disabilita Stampa Preconti**
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ Vendita
+        - Menu ▸ Vendite ▸ Pos Touchscreen
+    - **Scorciatoia:** ++f5++ preconto, ++f9++ resi
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); sull'utente pesano anche **Disabilita Stampe (POS)**, **Disabilita Rapporti e Azzeramenti Cassa (POS)** e **Disabilita Stampa Preconti**
 
 ---
 

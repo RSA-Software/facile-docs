@@ -13,9 +13,9 @@ li ha fatti.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Altre Tabelle ▸ Operatori ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Altre Tabelle ▸ Operatori ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

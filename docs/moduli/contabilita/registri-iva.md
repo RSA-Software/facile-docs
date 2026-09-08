@@ -13,9 +13,9 @@ caselle «Aggiorna» fanno avanzare i progressivi.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Stampe Contabili ▸ Stampa Registro Acquisti *(oppure una delle altre cinque)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Stampe Contabili ▸ Stampa Registro Acquisti *(oppure una delle altre cinque)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

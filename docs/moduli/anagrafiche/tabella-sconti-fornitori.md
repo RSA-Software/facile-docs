@@ -13,9 +13,9 @@ sconti si combinano con gli altri.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Fornitori ▸ Gestione Contratti ▸ Tabella Sconti Fornitori ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Fornitori ▸ Gestione Contratti ▸ Tabella Sconti Fornitori ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

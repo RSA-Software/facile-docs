@@ -14,10 +14,11 @@ un'altra ditta.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Copia Listini
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Copia Listino da Altra Ditta
-    **Scorciatoia:** ++f2++ avvia la copia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Copia Listini
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Copia Listino da Altra Ditta
+    - **Scorciatoia:** ++f2++ avvia la copia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

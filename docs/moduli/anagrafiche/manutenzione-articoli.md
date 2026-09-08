@@ -13,15 +13,16 @@ duplicarne uno, cancellarne un gruppo, raggrupparli in panieri.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Articoli ▸ Modifica da Griglia
-    Menu ▸ Archivi ▸ Articoli ▸ Impostazione Dati Web
-    Menu ▸ Archivi ▸ Articoli ▸ Attribuzione Tassonomie
-    Menu ▸ Archivi ▸ Articoli ▸ Caricamento Prezzi
-    Menu ▸ Archivi ▸ Articoli ▸ Cancellazione Articoli
-    Menu ▸ Archivi ▸ Articoli ▸ Gestione Panieri
-    Menu ▸ Archivi ▸ Articoli ▸ Duplica
-    **Scorciatoia:** ++f2++ salva o conferma, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Articoli ▸ Modifica da Griglia
+        - Menu ▸ Archivi ▸ Articoli ▸ Impostazione Dati Web
+        - Menu ▸ Archivi ▸ Articoli ▸ Attribuzione Tassonomie
+        - Menu ▸ Archivi ▸ Articoli ▸ Caricamento Prezzi
+        - Menu ▸ Archivi ▸ Articoli ▸ Cancellazione Articoli
+        - Menu ▸ Archivi ▸ Articoli ▸ Gestione Panieri
+        - Menu ▸ Archivi ▸ Articoli ▸ Duplica
+    - **Scorciatoia:** ++f2++ salva o conferma, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

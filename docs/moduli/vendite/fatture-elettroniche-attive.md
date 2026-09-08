@@ -13,10 +13,11 @@ punto sono.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Fatture ▸ Invio Massivo Fatture Elettroniche
-    Menu ▸ Vendite ▸ Fatture ▸ Cruscotto Fatture Elettroniche
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); serve anche **Abilita download Stati Fatture Attive** sull'utente
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ Fatture ▸ Invio Massivo Fatture Elettroniche
+        - Menu ▸ Vendite ▸ Fatture ▸ Cruscotto Fatture Elettroniche
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); serve anche **Abilita download Stati Fatture Attive** sull'utente
 
 ---
 

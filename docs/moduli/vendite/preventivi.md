@@ -13,9 +13,9 @@ porta l'oggetto e le condizioni di fornitura che sul preventivo vanno scritte.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Preventivi ▸ Inserimento *(oppure* Modifica*,* Gestione*,* Stampa Riepilogo *o* Duplica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca, ++f7++ stampa
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Preventivi ▸ Inserimento *(oppure* Modifica*,* Gestione*,* Stampa Riepilogo *o* Duplica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca, ++f7++ stampa
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

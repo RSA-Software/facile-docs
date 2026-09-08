@@ -12,9 +12,9 @@ articoli che si vendono in un periodo dell'anno e non in un altro.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Stagioni ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Stagioni ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

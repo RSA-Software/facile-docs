@@ -12,9 +12,9 @@ agenti e le tre stampe che riguardano i giri di visita.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Agenti ▸ Stampa *(oppure* Stampa Giri*,* Stampa Giro Agente*,* Stampa Etichette Giri Agenti*)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Agenti ▸ Stampa *(oppure* Stampa Giri*,* Stampa Giro Agente*,* Stampa Etichette Giri Agenti*)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

@@ -13,9 +13,9 @@ digitarli.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Importazione Listino ▸ *(nome del formato)*
-    **Scorciatoia:** ++f2++ avvia l'importazione, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Importazione Listino ▸ *(nome del formato)*
+    - **Scorciatoia:** ++f2++ avvia l'importazione, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

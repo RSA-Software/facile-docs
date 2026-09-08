@@ -13,9 +13,9 @@ avanzamenti fatturati e tutti i costi che vi si attribuiscono.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -12,9 +12,9 @@ lì si mandano gli auguri per email o SMS, o si stampa l'elenco.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Gestione Compleanni
-    **Scorciatoia:** ++f2++ seleziona, ++f4++ email, ++f5++ SMS, ++f6++ stampa
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Gestione Compleanni
+    - **Scorciatoia:** ++f2++ seleziona, ++f4++ email, ++f5++ SMS, ++f6++ stampa
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

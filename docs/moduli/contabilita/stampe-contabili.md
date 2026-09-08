@@ -13,9 +13,9 @@ aggiornano i progressivi e vanno fatte una volta sola.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Stampe Contabili ▸ Intestazione Fogli *(oppure* Brogliaccio Movimenti*,* Libro Mastro*,* Stampa Libro Giornale*,* Bilancio di Verifica*)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Stampe Contabili ▸ Intestazione Fogli *(oppure* Brogliaccio Movimenti*,* Libro Mastro*,* Stampa Libro Giornale*,* Bilancio di Verifica*)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

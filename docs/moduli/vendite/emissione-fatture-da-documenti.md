@@ -13,14 +13,15 @@ sua voce **Emissione Fatture**.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Emissione Fatture
-    Menu ▸ Vendite ▸ Bolle di Accompagnamento ▸ Emissione Fatture
-    Menu ▸ Vendite ▸ Buoni di Consegna ▸ Emissione Fatture
-    Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Emissione Fatture
-    Menu ▸ Vendite ▸ Doc. di Trasporto Consegne Terzi ▸ Emissione Fatture
-    Menu ▸ Vendite ▸ Ordini Clienti ▸ Fatturazione da Ordini
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Emissione Fatture
+        - Menu ▸ Vendite ▸ Bolle di Accompagnamento ▸ Emissione Fatture
+        - Menu ▸ Vendite ▸ Buoni di Consegna ▸ Emissione Fatture
+        - Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Emissione Fatture
+        - Menu ▸ Vendite ▸ Doc. di Trasporto Consegne Terzi ▸ Emissione Fatture
+        - Menu ▸ Vendite ▸ Ordini Clienti ▸ Fatturazione da Ordini
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

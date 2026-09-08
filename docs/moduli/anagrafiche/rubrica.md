@@ -13,9 +13,9 @@ tutti i loro numeri di telefono e indirizzi di posta.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Rubrica ▸ Inserimento *(oppure* Modifica*,* Cerca *o* Importa*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Rubrica ▸ Inserimento *(oppure* Modifica*,* Cerca *o* Importa*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

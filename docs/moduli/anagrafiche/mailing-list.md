@@ -13,9 +13,9 @@ esportare su Excel o usare per le etichette.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Mailing list
-    **Scorciatoia:** ++f2++ email, ++f3++ SMS, ++f4++ Excel, ++f5++ stampa elenco
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Mailing list
+    - **Scorciatoia:** ++f2++ email, ++f3++ SMS, ++f4++ Excel, ++f5++ stampa elenco
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

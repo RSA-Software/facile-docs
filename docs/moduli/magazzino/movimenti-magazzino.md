@@ -13,9 +13,9 @@ direttamente qui.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Magazzino ▸ Inserimento Movimenti *(oppure* Modifica Movimenti*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento Movimenti** e **Modifica Movimenti** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Magazzino ▸ Inserimento Movimenti *(oppure* Modifica Movimenti*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento Movimenti** e **Modifica Movimenti** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

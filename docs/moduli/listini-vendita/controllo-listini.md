@@ -14,10 +14,11 @@ allineare il secondo al primo dove i due non coincidono.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Conferma Listini
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Confronto Differenze Listini
-    **Scorciatoia:** ++f2++ salva in entrambe le maschere
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Conferma Listini
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Confronto Differenze Listini
+    - **Scorciatoia:** ++f2++ salva in entrambe le maschere
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

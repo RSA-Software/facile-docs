@@ -13,12 +13,13 @@ le quattro voci di menu che governano quelle variazioni in attesa.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Variazioni Listini
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Stampa Variazioni Listini
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Apporta Variazioni
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Cancella Variazioni Listini
-    **Scorciatoia:** ++f2++ in tutte e quattro le maschere
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Variazioni Listini
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Stampa Variazioni Listini
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Apporta Variazioni
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Cancella Variazioni Listini
+    - **Scorciatoia:** ++f2++ in tutte e quattro le maschere
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

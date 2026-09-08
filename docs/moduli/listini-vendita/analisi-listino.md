@@ -14,9 +14,9 @@ scorte, classificazioni ed esistenze.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Analisi Listino da Vendite/Esistenza
-    **Scorciatoia:** ++f2++ apre l'articolo della riga attiva
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Analisi Listino da Vendite/Esistenza
+    - **Scorciatoia:** ++f2++ apre l'articolo della riga attiva
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

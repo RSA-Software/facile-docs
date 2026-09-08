@@ -13,12 +13,13 @@ fornitori.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Ventilazione Corrispettivi
-    Menu ▸ Contabilità ▸ Liquidazione IVA Periodica
-    Menu ▸ Contabilità ▸ Liquidazione IVA Annuale
-    Menu ▸ Contabilità ▸ Elenco Clienti e Fornitori
-    **Scorciatoia:** ++f2++ calcola, ++f3++ elimina, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Contabilità ▸ Ventilazione Corrispettivi
+        - Menu ▸ Contabilità ▸ Liquidazione IVA Periodica
+        - Menu ▸ Contabilità ▸ Liquidazione IVA Annuale
+        - Menu ▸ Contabilità ▸ Elenco Clienti e Fornitori
+    - **Scorciatoia:** ++f2++ calcola, ++f3++ elimina, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -14,9 +14,9 @@ con quale documento è stata consegnata.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Banchi Conservatori - Attrezzature in Comodato ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca, ++f7++ stampa
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Banchi Conservatori - Attrezzature in Comodato ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca, ++f7++ stampa
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

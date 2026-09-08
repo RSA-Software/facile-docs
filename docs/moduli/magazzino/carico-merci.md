@@ -13,9 +13,9 @@ cui la merce è stata accettata.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Magazzino ▸ Nuovo Carico Merci *(oppure* Modifica Carico Merci*,* Modifica Carichi Fiscali*,* Controllo Merci in Entrata*,* Stampa Riepilogo Carichi*,* Generazione e Carico Buoni Regalo *o* Stampa Giornale Carichi Prodotti Fiscali*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Magazzino ▸ Nuovo Carico Merci *(oppure* Modifica Carico Merci*,* Modifica Carichi Fiscali*,* Controllo Merci in Entrata*,* Stampa Riepilogo Carichi*,* Generazione e Carico Buoni Regalo *o* Stampa Giornale Carichi Prodotti Fiscali*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -13,9 +13,9 @@ raggruppare le operazioni sotto soglia.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Comunicazione Operazioni IVA ▸ Comunicazione Trimestrale Operazioni IVA *(oppure* Comunicazioni Fatture Emesse(DTE) / Ricevute (DTR)*,* Spesometro*,* Gestione Aggregazioni*)*
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Comunicazione Operazioni IVA ▸ Comunicazione Trimestrale Operazioni IVA *(oppure* Comunicazioni Fatture Emesse(DTE) / Ricevute (DTR)*,* Spesometro*,* Gestione Aggregazioni*)*
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

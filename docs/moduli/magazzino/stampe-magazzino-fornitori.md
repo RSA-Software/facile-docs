@@ -13,9 +13,9 @@ fornitore, quanto e quando.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Magazzino ▸ Stampe Magazzino Fornitori ▸ Scheda Movimenti Fornitore *(oppure* Sintesi Movimenti Fornitore *o* Riepilogo Totali Movimenti Fornitori*)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Magazzino ▸ Stampe Magazzino Fornitori ▸ Scheda Movimenti Fornitore *(oppure* Sintesi Movimenti Fornitore *o* Riepilogo Totali Movimenti Fornitori*)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

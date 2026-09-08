@@ -13,11 +13,12 @@ tutti dagli scontrini.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Azzeramento Bollini Campagna Attuale
-    Menu ▸ Archivi ▸ Clienti ▸ Azzeramento Bollini Campagna Precedente
-    Menu ▸ Archivi ▸ Clienti ▸ Ricalcolo Bollini
-    **Scorciatoia:** nessuna; le elaborazioni partono dal menu
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Clienti ▸ Azzeramento Bollini Campagna Attuale
+        - Menu ▸ Archivi ▸ Clienti ▸ Azzeramento Bollini Campagna Precedente
+        - Menu ▸ Archivi ▸ Clienti ▸ Ricalcolo Bollini
+    - **Scorciatoia:** nessuna; le elaborazioni partono dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

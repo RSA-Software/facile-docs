@@ -13,9 +13,9 @@ carico di magazzino senza ribattere nulla.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Fatture Elettroniche Passive
-    **Scorciatoia:** ++f2++ carica, ++f3++ sincronizza, ++f4++ contabilizza, ++f5++ magazzino
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); lo scarico e la ricezione richiedono anche le abilitazioni **Abilita download Fatture Passive** e **Abilita download Stati Fatture Attive** sull'utente
+    - **Percorso:** Menu ▸ Contabilità ▸ Fatture Elettroniche Passive
+    - **Scorciatoia:** ++f2++ carica, ++f3++ sincronizza, ++f4++ contabilizza, ++f5++ magazzino
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); lo scarico e la ricezione richiedono anche le abilitazioni **Abilita download Fatture Passive** e **Abilita download Stati Fatture Attive** sull'utente
 
 ---
 

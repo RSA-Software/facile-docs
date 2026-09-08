@@ -13,10 +13,11 @@ passare dall'anagrafica completa.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Clienti ▸ Associazione Gruppi
-    Menu ▸ Archivi ▸ Agenti ▸ Associazione Giri
-    **Scorciatoia:** ++f2++ salva, ++f6++ cancella l'associazione
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Clienti ▸ Associazione Gruppi
+        - Menu ▸ Archivi ▸ Agenti ▸ Associazione Giri
+    - **Scorciatoia:** ++f2++ salva, ++f6++ cancella l'associazione
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

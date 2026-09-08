@@ -13,11 +13,12 @@ Tre elaborazioni che intervengono in un colpo solo su tutti gli articoli scelti:
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Listini
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Sconti
-    Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Provvigioni
-    **Scorciatoia:** ++f2++ avvia l'elaborazione, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Listini
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Sconti
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Varia Provvigioni
+    - **Scorciatoia:** ++f2++ avvia l'elaborazione, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

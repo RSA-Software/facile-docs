@@ -13,10 +13,10 @@ ha emessi e la banca su cui sono appoggiati.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Titoli ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Versione:** **solo Studio.** Nelle altre versioni la voce di menu c'è ma non apre nulla
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Titoli ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Versione:** **solo Studio.** Nelle altre versioni la voce di menu c'è ma non apre nulla
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

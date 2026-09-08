@@ -14,9 +14,9 @@ e le cinque voci di consegna aprono **la stessa maschera** con un verso diverso.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Magazzino ▸ Banchi Conservatori ▸ Consegna in Comodato Gratuito *(oppure* Consegna in Conto Vendita*,* Consegna per Riparazione*,* Ritiro Comodato Gratuito / Riparazione*,* Rottamazione*,* Modifica Movimenti *o* Stampa Movimenti*)*
-    **Scorciatoia:** ++f2++ salva, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Magazzino ▸ Banchi Conservatori ▸ Consegna in Comodato Gratuito *(oppure* Consegna in Conto Vendita*,* Consegna per Riparazione*,* Ritiro Comodato Gratuito / Riparazione*,* Rottamazione*,* Modifica Movimenti *o* Stampa Movimenti*)*
+    - **Scorciatoia:** ++f2++ salva, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

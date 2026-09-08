@@ -13,9 +13,9 @@ commissione trattenuta e i tagli dei buoni che si accettano.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Buoni Pasto - Buoni Celiachia ▸ Inserimento Gestori *(oppure* Modifica Gestori*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Buoni Pasto - Buoni Celiachia ▸ Inserimento Gestori *(oppure* Modifica Gestori*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

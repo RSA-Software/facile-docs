@@ -12,9 +12,9 @@ vendono e si contano: pezzi, chilogrammi, litri, confezioni.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Unità di Misura ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Magazzino ▸ Unità di Misura ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -13,9 +13,9 @@ percentuale. È la maschera che dice **dove si sta comprando male**.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Listini Fornitori ▸ Analisi Fornitore
-    **Scorciatoia:** ++f2++ esporta su Excel, ++f3++ cerca nella griglia
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Listini Fornitori ▸ Analisi Fornitore
+    - **Scorciatoia:** ++f2++ esporta su Excel, ++f3++ cerca nella griglia
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

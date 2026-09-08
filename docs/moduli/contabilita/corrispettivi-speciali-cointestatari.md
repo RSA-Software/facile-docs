@@ -13,11 +13,12 @@ passano dai registri ordinari, e i soggetti cointestatari di una fattura.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Dettagli Corrispettivi ▸ Integrazioni *(oppure* Stampa*)*
-    Menu ▸ Contabilità ▸ Operazioni Speciali ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
-    Menu ▸ Contabilità ▸ Cointestatari Fatture ▸ Gestione *(oppure* Stampa*)*
-    **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Contabilità ▸ Dettagli Corrispettivi ▸ Integrazioni *(oppure* Stampa*)*
+        - Menu ▸ Contabilità ▸ Operazioni Speciali ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
+        - Menu ▸ Contabilità ▸ Cointestatari Fatture ▸ Gestione *(oppure* Stampa*)*
+    - **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

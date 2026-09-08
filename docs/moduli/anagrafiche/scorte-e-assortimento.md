@@ -13,12 +13,13 @@ dove sta fisicamente.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Articoli ▸ Calcolo Scorta Ottimale
-    Menu ▸ Archivi ▸ Articoli ▸ Distribuzione Automatica Scorte e Riordino
-    Menu ▸ Archivi ▸ Articoli ▸ Assortimento Depositi
-    Menu ▸ Archivi ▸ Articoli ▸ Aggiornamento Ubicazione
-    **Scorciatoia:** varia da maschera a maschera, vedi sotto
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Articoli ▸ Calcolo Scorta Ottimale
+        - Menu ▸ Archivi ▸ Articoli ▸ Distribuzione Automatica Scorte e Riordino
+        - Menu ▸ Archivi ▸ Articoli ▸ Assortimento Depositi
+        - Menu ▸ Archivi ▸ Articoli ▸ Aggiornamento Ubicazione
+    - **Scorciatoia:** varia da maschera a maschera, vedi sotto
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

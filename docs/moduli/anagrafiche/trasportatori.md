@@ -13,9 +13,9 @@ legge richiede di indicare chi effettua il trasporto.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Trasportatori ▸ Inserisci *(oppure* Modifica*)*
-    **Scorciatoia:** nessuna; la maschera si apre dal menu
-    **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Trasportatori ▸ Inserisci *(oppure* Modifica*)*
+    - **Scorciatoia:** nessuna; la maschera si apre dal menu
+    - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

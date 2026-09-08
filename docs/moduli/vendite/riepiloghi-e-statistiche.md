@@ -13,10 +13,11 @@ fatturato e lo spezzano per una classificazione.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Riepilogo
-    Menu ▸ Vendite ▸ Fatture ▸ Statistiche *(oppure* Statistiche Mensili *o uno dei* Fatturato Mensile per…*)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Riepilogo
+        - Menu ▸ Vendite ▸ Fatture ▸ Statistiche *(oppure* Statistiche Mensili *o uno dei* Fatturato Mensile per…*)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

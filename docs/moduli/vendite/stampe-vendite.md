@@ -12,11 +12,12 @@ merce dal magazzino, a consegnarla e a controllare com'è andata la giornata.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Liste di Prelievo *(oppure* Stampa Distinta Carico Trasportatori*,* Stampa Distinta Trasportatori*,* Stampa Kg. Venduti*,* Stampa Rapporto Cassa *o* Analisi Commessa*)*
-    Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Valorizza Doc. Trasfert e Concessionario
-    Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Stampa Riepiloghi Competenze Doc. Trasfert e Conc.
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ Liste di Prelievo *(oppure* Stampa Distinta Carico Trasportatori*,* Stampa Distinta Trasportatori*,* Stampa Kg. Venduti*,* Stampa Rapporto Cassa *o* Analisi Commessa*)*
+        - Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Valorizza Doc. Trasfert e Concessionario
+        - Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Stampa Riepiloghi Competenze Doc. Trasfert e Conc.
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

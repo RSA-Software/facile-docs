@@ -13,12 +13,13 @@ Tre gruppi di voci che si ripetono su quasi tutti i tipi di documento:
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Esporta
-    Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Duplica
-    Menu ▸ Vendite ▸ Fatture ▸ Ricezione Fatture da Palmare *(oppure* dal Server FTP*)*
-    Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Riezione D.D.T. da Palmare *(oppure* Ricezione D.D.T. dal Server FTP*)*
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Esporta
+        - Menu ▸ Vendite ▸ *(un tipo di documento)* ▸ Duplica
+        - Menu ▸ Vendite ▸ Fatture ▸ Ricezione Fatture da Palmare *(oppure* dal Server FTP*)*
+        - Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Riezione D.D.T. da Palmare *(oppure* Ricezione D.D.T. dal Server FTP*)*
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

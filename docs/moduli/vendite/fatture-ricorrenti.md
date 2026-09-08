@@ -13,9 +13,9 @@ emetta le fatture quando è ora.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Inserimento Schede Contratti *(oppure* Modifica Schede Contratti*,* Stampa Schede Contratti *o* Emissione Fatture*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Inserimento Schede Contratti *(oppure* Modifica Schede Contratti*,* Stampa Schede Contratti *o* Emissione Fatture*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

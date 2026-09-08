@@ -13,10 +13,11 @@ cioè le condizioni promozionali che il fornitore concede a chi compra.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Magazzino ▸ Anomalie Carichi Merci ▸ Gestione *(oppure* Inserimento*,* Modifica*,* Riepilogo *o* Contabilizza*)*
-    Menu ▸ Magazzino ▸ Promozioni Sellin ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Magazzino ▸ Anomalie Carichi Merci ▸ Gestione *(oppure* Inserimento*,* Modifica*,* Riepilogo *o* Contabilizza*)*
+        - Menu ▸ Magazzino ▸ Promozioni Sellin ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva o avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

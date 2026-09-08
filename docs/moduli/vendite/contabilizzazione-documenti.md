@@ -15,14 +15,15 @@ registrazioni corrispondano.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Fatture ▸ Contabilizza
-    Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Contabilizza
-    Menu ▸ Vendite ▸ Ricevute Fiscali ▸ Contabilizza
-    Menu ▸ Vendite ▸ Autofatture - Integrazioni ▸ Contabilizza
-    Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture <-> Mov. Contabili
-    Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Controllo Fat. Pro Forma <-> Mov. Contabili
-    **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:**
+        - Menu ▸ Vendite ▸ Fatture ▸ Contabilizza
+        - Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Contabilizza
+        - Menu ▸ Vendite ▸ Ricevute Fiscali ▸ Contabilizza
+        - Menu ▸ Vendite ▸ Autofatture - Integrazioni ▸ Contabilizza
+        - Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture <-> Mov. Contabili
+        - Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Controllo Fat. Pro Forma <-> Mov. Contabili
+    - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

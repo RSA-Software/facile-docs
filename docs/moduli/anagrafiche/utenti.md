@@ -13,9 +13,9 @@ riproduce l'intero menu del programma.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Utenti ▸ Inserimento *(oppure* Modifica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** è la maschera che assegna i permessi; tenerla accessibile solo a chi amministra il programma
+    - **Percorso:** Menu ▸ Archivi ▸ Utenti ▸ Inserimento *(oppure* Modifica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** è la maschera che assegna i permessi; tenerla accessibile solo a chi amministra il programma
 
 ---
 

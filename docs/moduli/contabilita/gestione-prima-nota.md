@@ -13,9 +13,9 @@ nella contabilità tutti i giorni.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Gestione Prima Nota
-    **Scorciatoia:** ++f2++ apre la registrazione, ++f3++ ne crea una nuova
-    **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Gestione Prima Nota
+    - **Scorciatoia:** ++f2++ apre la registrazione, ++f3++ ne crea una nuova
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

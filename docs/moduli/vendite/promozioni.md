@@ -13,9 +13,9 @@ aperta.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Promozioni ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
-    **Scorciatoia:** ++f7++ aggiunge articoli, ++f8++ stampa, ++f9++ dati
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Promozioni ▸ Inserimento *(oppure* Modifica *o* Stampa*)*
+    - **Scorciatoia:** ++f7++ aggiunge articoli, ++f8++ stampa, ++f9++ dati
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

@@ -14,9 +14,9 @@ torna.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Contabilità ▸ Scheda Cliente *(oppure* Scheda Fornitore *o* Scheda Conto*)*
-    **Scorciatoia:** ++f2++ apre la registrazione, ++f3++ stampa, ++f4++ aggiorna
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Contabilità ▸ Scheda Cliente *(oppure* Scheda Fornitore *o* Scheda Conto*)*
+    - **Scorciatoia:** ++f2++ apre la registrazione, ++f3++ stampa, ++f4++ aggiorna
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 

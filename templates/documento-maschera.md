@@ -10,6 +10,16 @@ maschera_id: <identificativo interno della dialog, es. IDD_CLIENTI — utile per
   Copiare questo file, rinominarlo con lo slug della maschera e compilarlo.
   Regole: non eliminare sezioni; se una sezione non si applica scrivere
   "Non applicabile." Le sezioni vuote fanno sembrare il manuale incompleto.
+
+  Il blocco "In sintesi" è un ELENCO PUNTATO: senza il trattino Markdown
+  unisce le righe in un unico paragrafo e le etichette in grassetto si
+  perdono nel testo. Quando una voce ha più valori — per esempio una
+  maschera raggiungibile da più voci di menu — l'etichetta va su una riga
+  sua e i valori diventano un sotto-elenco:
+
+      - **Percorso:**
+          - Menu ▸ Vendite ▸ Fatture ▸ Contabilizza
+          - Menu ▸ Vendite ▸ Ricevute Fiscali ▸ Contabilizza
 -->
 
 # <Nome della maschera>
@@ -19,9 +29,9 @@ serve. Niente gergo interno, niente riferimenti al codice.>
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ <Voce> ▸ <Sottovoce>
-    **Scorciatoia:** ++f7++
-    **Permessi richiesti:** <profilo/i abilitati>
+    - **Percorso:** Menu ▸ <Voce> ▸ <Sottovoce>
+    - **Scorciatoia:** ++f7++
+    - **Permessi richiesti:** <profilo/i abilitati>
 
 ---
 

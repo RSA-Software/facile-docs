@@ -13,9 +13,9 @@ quello che viene stampato. Questa pagina le documenta tutte.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Articoli ▸ *(una delle voci elencate sotto)*
-    **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Articoli ▸ *(una delle voci elencate sotto)*
+    - **Scorciatoia:** ++f2++ avvia la stampa, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

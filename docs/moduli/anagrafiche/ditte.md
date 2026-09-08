@@ -14,9 +14,9 @@ ditta. Da qui si passa anche da un'azienda all'altra.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Archivi ▸ Ditte ▸ Inserimento *(oppure* Modifica *o* Cambio Ditta*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** l'inserimento chiede una password di amministrazione; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
+    - **Percorso:** Menu ▸ Archivi ▸ Ditte ▸ Inserimento *(oppure* Modifica *o* Cambio Ditta*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** l'inserimento chiede una password di amministrazione; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md)
 
 ---
 

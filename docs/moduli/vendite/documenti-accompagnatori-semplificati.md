@@ -12,9 +12,9 @@ energetici — quando viaggiano. Si compilano qui e se ne stampa la distinta.
 
 !!! info "In sintesi"
 
-    **Percorso:** Menu ▸ Vendite ▸ Documenti Accompagnatori Semplificati ▸ Inserimento *(oppure* Modifica*,* Stampa Distinta *o* Duplica*)*
-    **Scorciatoia:** ++f2++ salva, ++f5++ cerca
-    **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Vendite ▸ Documenti Accompagnatori Semplificati ▸ Inserimento *(oppure* Modifica*,* Stampa Distinta *o* Duplica*)*
+    - **Scorciatoia:** ++f2++ salva, ++f5++ cerca
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 
