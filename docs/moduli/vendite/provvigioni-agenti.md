@@ -24,8 +24,8 @@ provvigioni, le attribuzioni automatiche, i ricalcoli, i controlli e le stampe.
 | Voce di menu | A cosa serve |
 |---|---|
 | **Inserimento**, **Modifica** | Registrano a mano una provvigione su un documento. |
-| **Attribuzione Automatica Provvigioni Mancanti** | Assegna le provvigioni ai documenti che ne sono rimasti privi. |
-| **Attribuzione Provvigioni per Cliente** | Assegna le provvigioni in base al cliente. |
+| **Attribuzione Automatica Provvigioni  Mancanti** | Assegna le provvigioni ai documenti che ne sono rimasti privi. |
+| **Attribuzione  Provvigioni per Cliente** | Assegna le provvigioni in base al cliente. |
 | **Ricalcolo Provvigioni** | Rifà i conti sui documenti già emessi. |
 | **Calcolo Maturato Agenti / Capi Area** | Calcola quanto è maturato a ciascuno. |
 | **Stampa Distinta Provvigioni Agenti** | La distinta analitica, documento per documento. |
@@ -95,7 +95,7 @@ stampe aprono finestre di selezione con periodo e filtri.
 
 ### Liquidare le provvigioni del trimestre
 
-1. Fai girare **Attribuzione Automatica Provvigioni Mancanti**, così nessun
+1. Fai girare **Attribuzione Automatica Provvigioni  Mancanti**, così nessun
    documento resta scoperto.
 2. Stampa **Controllo Provvigioni Anomale** e verifica le righe che escono.
 3. Apri **Calcolo Maturato Agenti / Capi Area** e calcola il periodo.
@@ -131,7 +131,7 @@ stampe aprono finestre di selezione con periodo e filtri.
 
 <!-- DA VERIFICARE: cosa rende una provvigione "anomala" nella stampa di controllo. -->
 
-<!-- DA VERIFICARE: che differenza c'è fra "Attribuzione Automatica Provvigioni Mancanti" e "Attribuzione Provvigioni per Cliente". -->
+<!-- DA VERIFICARE: che differenza c'è fra "Attribuzione Automatica Provvigioni  Mancanti" e "Attribuzione  Provvigioni per Cliente". Nota: entrambe le voci di menu contengono un doppio spazio. -->
 
 <!-- DA VERIFICARE: dove si segna una provvigione come saldata, visto che la stampa filtra su "Saldati". -->
 
