@@ -82,7 +82,7 @@ IVA*: la barra dei comandi e sei campi.
 
 Non applicabile.
 
-<!-- DA VERIFICARE: dove l'ufficio provinciale IVA viene richiamato: quale stampa o comunicazione lo usa. -->
+<!--  VERIFICARE: dove l'ufficio provinciale IVA viene richiamato: quale stampa o comunicazione lo usa. -->
 
 ## Vedi anche
 
