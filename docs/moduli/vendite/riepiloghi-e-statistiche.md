@@ -27,8 +27,10 @@ buoni di consegna, ricevute fiscali, autofatture, pro forma, consegne terzi — 
 apre sempre la stessa maschera: elenca i documenti del periodo con i loro
 totali.
 
-I **Riepilogo Documenti Emessi** dei documenti di trasporto si declinano in tre
-voci: **a Clienti**, **a Fornitori** e **a Clienti e Fornitori**.
+Sui documenti di trasporto il riepilogo si declina in tre voci — **Riepilogo
+Documenti Emessi a Clienti**, **Riepilogo Documenti Emessi a Fornitori** e
+**Riepilogo Documenti Emessi a Clienti e Fornitori** — e sulle autofatture in
+due: **Riepilogo Autofatture** e **Riepilogo Integrazioni**.
 
 Le **statistiche** sommano il fatturato. Oltre a **Statistiche** e
 **Statistiche Mensili** ci sono sette tagli già pronti:

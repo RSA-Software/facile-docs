@@ -230,6 +230,16 @@ nav:
       - Promozioni: moduli/vendite/promozioni.md
       - Provvigioni Agenti - Capi Area: moduli/vendite/provvigioni-agenti.md
       - Stampe e strumenti: moduli/vendite/stampe-vendite.md
+  - Magazzino:
+      - moduli/magazzino/menu-magazzino.md
+      - Carico Merci: moduli/magazzino/carico-merci.md
+      - Anomalie Carichi e Promozioni Sellin: moduli/magazzino/anomalie-e-promozioni-sellin.md
+      - Banchi Conservatori - movimenti: moduli/magazzino/banchi-conservatori-movimenti.md
+      - Inserimento e Modifica Movimenti: moduli/magazzino/movimenti-magazzino.md
+      - Produzione: moduli/magazzino/produzione.md
+      - Stampe Magazzino Clienti: moduli/magazzino/stampe-magazzino-clienti.md
+      - Stampe Magazzino Fornitori: moduli/magazzino/stampe-magazzino-fornitori.md
+      - Stampe dei movimenti: moduli/magazzino/stampe-movimenti-magazzino.md
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi di errore: appendici/messaggi-errore.md

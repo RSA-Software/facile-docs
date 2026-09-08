@@ -141,5 +141,5 @@ La griglia ha queste colonne:
 ## Vedi anche
 
 - [Documento di vendita](documento-di-vendita.md)
-- [Riepiloghi dei documenti](riepiloghi-documenti.md)
+- [Riepiloghi e statistiche](riepiloghi-e-statistiche.md)
 - [Fatture elettroniche attive](fatture-elettroniche-attive.md)

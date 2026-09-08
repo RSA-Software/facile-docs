@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-08 — **203 domande** su 74 pagine.
+Aggiornato al 2026-09-08 — **317 domande** su 99 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -523,6 +523,37 @@ Per rigenerare questo elenco:
 - [ ] i nomi esatti con cui i tipi di vendita "C.S. Vendita" e "C.S. Trasfert" sono chiamati altrove nel programma: i messaggi di conferma li chiamano "Concessionario" e "Delivery".
 - [ ] quale impostazione del programma fa comparire i tipi di vendita oltre a "Normale", e come si chiama a video.
 
+## Anomalie carichi e promozioni sellin
+
+`docs/moduli/magazzino/anomalie-e-promozioni-sellin.md`
+
+- [ ] la struttura della maschera delle promozioni sellin e i suoi campi.
+- [ ] i campi delle promozioni sellin.
+- [ ] i comandi effettivi della maschera delle promozioni sellin.
+- [ ] i messaggi di queste maschere.
+- [ ] come l'anomalia si collega al carico su cui è stata riscontrata.
+- [ ] cosa produce la contabilizzazione di un'anomalia.
+- [ ] come le promozioni sellin entrano nel calcolo dei costi e dei margini.
+
+## Movimenti dei banchi conservatori
+
+`docs/moduli/magazzino/banchi-conservatori-movimenti.md`
+
+- [ ] i messaggi di queste maschere.
+- [ ] se il movimento aggiorni da solo lo Stato e il Cliente nella scheda dell'attrezzatura.
+- [ ] se la consegna generi un documento di trasporto vero o richieda solo di annotarne gli estremi.
+- [ ] come si sceglie quale attrezzatura consegnare: il campo non compare fra le etichette che ho potuto estrarre.
+
+## Carico merci
+
+`docs/moduli/magazzino/carico-merci.md`
+
+- [ ] i messaggi di questa maschera e delle voci che la accompagnano.
+- [ ] come si ripartisce la "% Spese" sulle righe: in proporzione al valore, al peso o alla quantità.
+- [ ] cosa cambia nel comportamento del programma secondo lo Stato del carico.
+- [ ] che rapporto c'è fra il carico e la registrazione di prima nota citata da "Prima Nota. N.".
+- [ ] cosa sono i "Carichi Fiscali" e in cosa la loro maschera differisce da questa.
+
 ## Categorie merceologiche
 
 `docs/moduli/magazzino/categorie-merceologiche.md`
@@ -559,12 +590,59 @@ Per rigenerare questo elenco:
 
 - [ ] le due voci dell'elenco Stock Ecommerce non hanno un'etichetta leggibile nel disegno della maschera. Quali sono, e quale delle due espone le giacenze sul sito?
 
+## Movimenti di magazzino
+
+`docs/moduli/magazzino/movimenti-magazzino.md`
+
+- [ ] i messaggi di questa maschera.
+- [ ] se esista una causale di trasferimento che muove entrambi i depositi in un colpo solo.
+- [ ] se il movimento generi una registrazione contabile.
+
+## Produzione
+
+`docs/moduli/magazzino/produzione.md`
+
+- [ ] la struttura delle maschere di produzione e i loro campi: non ho potuto estrarne le etichette dalle risorse.
+- [ ] i campi delle maschere di produzione.
+- [ ] i comandi effettivi delle maschere di produzione.
+- [ ] i messaggi delle maschere di produzione.
+- [ ] se la distinta ammetta più livelli, cioè componenti che sono a loro volta prodotti finiti.
+- [ ] che rapporto c'è fra "Inizio Nuova Produzione" e "Inserimento Carico da produzione": se siano due passi della stessa cosa o due strade alternative.
+- [ ] con quale criterio "Aggiornamento Costi" calcola il costo del finito.
+
 ## Reparti
 
 `docs/moduli/magazzino/reparti.md`
 
 - [ ] quando si usa Reparto Cassa 2 invece di Reparto Cassa? Serve un esempio di installazione reale.
 - [ ] la casella Non Fiscale. Che effetto ha esattamente sullo scontrino?
+
+## Stampe magazzino clienti
+
+`docs/moduli/magazzino/stampe-magazzino-clienti.md`
+
+- [ ] i campi esatti della maschera di selezione: cambiano secondo la stampa e non ho potuto estrarli tutti.
+- [ ] i messaggi di queste stampe.
+- [ ] cosa distingue "Analisi Vendite" dalle varie sintesi.
+- [ ] cosa sono le "sostituzioni" a cui due voci fanno riferimento.
+
+## Stampe magazzino fornitori
+
+`docs/moduli/magazzino/stampe-magazzino-fornitori.md`
+
+- [ ] i campi esatti della maschera di selezione per le stampe fornitori.
+- [ ] i messaggi di queste stampe.
+- [ ] se queste stampe considerino solo i carichi o anche i resi a fornitore.
+
+## Stampe dei movimenti di magazzino
+
+`docs/moduli/magazzino/stampe-movimenti-magazzino.md`
+
+- [ ] i campi delle maschere proprie di Interrogazione Articolo, Valore Magazzino, Movimenti Periodo, Registro Sostanze Zuccherine ed Esistenze da Lettore Formula 734.
+- [ ] i messaggi di queste stampe.
+- [ ] cosa misura la "percentuale di sell-out" e come è calcolata.
+- [ ] con quale criterio "Valore Magazzino" valorizza le giacenze: ultimo costo, medio o altro.
+- [ ] che differenza c'è fra "Movimenti Periodo" e "Sintesi Movimenti per Giorno".
 
 ## Tabelle di classificazione
 
@@ -581,3 +659,164 @@ Per rigenerare questo elenco:
 
 - [ ] il Coef. Moltip. converte fra quale coppia di unità? Serve un esempio numerico che oggi non ho.
 - [ ] la casella Riporta Colli. In quali documenti ha effetto?
+
+## Acconti
+
+`docs/moduli/vendite/acconti.md`
+
+- [ ] come l'acconto registrato qui viene scalato dal documento definitivo: se automaticamente o a mano.
+- [ ] se l'acconto generi una registrazione contabile o resti solo un promemoria.
+
+## Contabilizzazione dei documenti
+
+`docs/moduli/vendite/contabilizzazione-documenti.md`
+
+- [ ] i campi esatti delle maschere di contabilizzazione e di controllo.
+- [ ] i messaggi delle maschere di contabilizzazione e controllo.
+- [ ] se la contabilizzazione riconosca i documenti già contabilizzati e li salti.
+- [ ] cosa mostra esattamente il risultato del controllo: una stampa, una griglia o un messaggio.
+- [ ] perché DDT, bolle e buoni di consegna non hanno la voce Contabilizza: presumibilmente perché si contabilizzano le fatture che ne derivano.
+
+## Documenti accompagnatori semplificati
+
+`docs/moduli/vendite/documenti-accompagnatori-semplificati.md`
+
+- [ ] la struttura della maschera e i suoi campi: non ho potuto estrarne le etichette dalle risorse.
+- [ ] i campi del documento accompagnatorio semplificato.
+- [ ] i comandi effettivi di questa maschera.
+- [ ] i messaggi di questa maschera.
+- [ ] quali dati dell'articolo servono per emettere un DAS e dove si impostano.
+- [ ] il rapporto fra questi documenti e la Stampa Registro Sostanze Zuccherine del menu Magazzino.
+
+## Documento di vendita
+
+`docs/moduli/vendite/documento-di-vendita.md`
+
+- [ ] i messaggi di questa maschera. È la più grande del programma e i controlli sono molti: vanno raccolti in una passata dedicata.
+- [ ] quali campi della testata compaiono o spariscono secondo il tipo di documento.
+- [ ] cosa contengono il Piede e i Totali: non ho potuto estrarne le etichette.
+- [ ] a cosa serve il pulsante Tracc. e quali dati di tracciabilità raccoglie.
+- [ ] in quale momento il documento scarica il magazzino: al salvataggio o alla stampa.
+
+## Emissione fatture da documenti
+
+`docs/moduli/vendite/emissione-fatture-da-documenti.md`
+
+- [ ] i campi esatti delle maschere di emissione: sono più d'una e non ho potuto estrarli tutti.
+- [ ] i messaggi delle maschere di emissione fatture.
+- [ ] come il programma raggruppa i documenti in fattura: uno per documento o uno per cliente.
+- [ ] cosa succede rilanciando l'emissione su un periodo già fatturato.
+- [ ] cosa distingue "Emissione Fatture" da "Emissiona Fattura da Pro Forma" (la seconda etichetta contiene un refuso).
+
+## Esportazione, duplicazione e ricezione dei documenti
+
+`docs/moduli/vendite/esporta-duplica-documenti.md`
+
+- [ ] i campi delle maschere di esportazione e di ricezione.
+- [ ] i messaggi delle maschere di esportazione, duplicazione e ricezione.
+- [ ] in che formato "Esporta" produce il file e in quale cartella.
+- [ ] se la duplicazione copi anche le righe del corpo o solo la testata.
+- [ ] come sono configurati i palmari e il server FTP da cui si ricevono i documenti.
+- [ ] la voce di menu dei DDT è scritta "Riezione D.D.T. da Palmare": verificare se il refuso compare davvero a video.
+
+## Fatture elettroniche attive
+
+`docs/moduli/vendite/fatture-elettroniche-attive.md`
+
+- [ ] la struttura delle due finestre e le colonne delle griglie: non ho potuto estrarle dalle risorse.
+- [ ] i campi di selezione delle due maschere.
+- [ ] i comandi delle due maschere.
+- [ ] i messaggi delle due maschere.
+- [ ] se il cruscotto scarichi gli esiti da solo o vada aggiornato con un comando.
+- [ ] dove si legge il motivo dello scarto di una fattura.
+
+## Fatture ricorrenti
+
+`docs/moduli/vendite/fatture-ricorrenti.md`
+
+- [ ] quali cadenze contiene l'elenco Periodicità oltre ad ANNUALE, SEMESTRALE e QUADRIMESTRALE.
+- [ ] come il programma sa quali schede sono in scadenza: se da una data di ultima fatturazione sulla scheda.
+- [ ] se l'emissione chieda una data di riferimento o lavori sempre su oggi.
+
+## Gestione documenti
+
+`docs/moduli/vendite/gestione-documenti.md`
+
+- [ ] quali valori assume la colonna Stato e cosa significano.
+- [ ] quali valori assume la colonna Sync e in quali casi conviene usare F8 - Forza Invio.
+- [ ] quali registri compaiono nell'elenco Registro e da dove sono presi.
+
+## Ordini clienti
+
+`docs/moduli/vendite/ordini-clienti.md`
+
+- [ ] i campi esatti delle tre stampe e della cancellazione ordini evasi.
+- [ ] i messaggi delle tre stampe e della cancellazione ordini evasi.
+- [ ] quando un ordine è considerato "evaso": se basta la quantità evasa pari all'ordinata o serva anche la fatturazione.
+- [ ] se la cancellazione chieda conferma.
+
+## Preventivi
+
+`docs/moduli/vendite/preventivi.md`
+
+- [ ] se esista un comando per trasformare un preventivo accettato in ordine o in fattura.
+- [ ] se i campi delle condizioni (Consegna, Imballo, Resa, Garanzia) abbiano dei valori proposti o siano sempre da scrivere.
+
+## Promozioni
+
+`docs/moduli/vendite/promozioni.md`
+
+- [ ] i campi della testata della promozione: dalle risorse ho potuto estrarre solo il Registro.
+- [ ] gli altri campi della testata — periodo di validità, descrizione, depositi o punti vendita interessati.
+- [ ] i messaggi di questa maschera.
+- [ ] dove si indica il periodo di validità della promozione.
+- [ ] cosa apre esattamente "F9 - Dati".
+- [ ] cosa succede alla fine del periodo: se il prezzo torni da solo a quello di listino.
+- [ ] il rapporto con le "Promozioni Sellin" del menu Magazzino.
+
+## Provvigioni agenti e capi area
+
+`docs/moduli/vendite/provvigioni-agenti.md`
+
+- [ ] cosa rende una provvigione "anomala" nella stampa di controllo.
+- [ ] che differenza c'è fra "Attribuzione Automatica Provvigioni Mancanti" e "Attribuzione Provvigioni per Cliente". Nota: entrambe le voci di menu contengono un doppio spazio.
+- [ ] dove si segna una provvigione come saldata, visto che la stampa filtra su "Saldati".
+- [ ] cosa calcola esattamente "Incentivi Personale" e su quali dati.
+
+## Riepiloghi e statistiche di vendita
+
+`docs/moduli/vendite/riepiloghi-e-statistiche.md`
+
+- [ ] i campi esatti di ciascuna maschera: variano fra riepiloghi e statistiche e non ho potuto estrarli tutti.
+- [ ] cosa distingue "Statistiche" da "Statistiche Mensili".
+- [ ] se le sette voci "Fatturato Mensile per…" aprano la stessa maschera con un parametro, come sembra.
+- [ ] la voce di menu dice "Fatturato Mensile per Marchio" ma l'identificativo interno parla di stagione: verificare cosa raggruppa davvero.
+
+## Scontrini
+
+`docs/moduli/vendite/scontrini.md`
+
+- [ ] cosa significa la voce di menu "Altri Scarichi - Scontrini": il titolo del menu e quello della finestra non coincidono.
+- [ ] cosa verifica esattamente il "Controllo Conferimento" e su quali dati.
+- [ ] quali valori assumono le colonne SF, Azz., Tran. e Sync.
+
+## Stampe e strumenti di vendita
+
+`docs/moduli/vendite/stampe-vendite.md`
+
+- [ ] i campi esatti di ciascuna di queste maschere: sono sette diverse e non ho potuto estrarli tutti.
+- [ ] i messaggi di queste maschere.
+- [ ] cosa distingue "Stampa Distinta Carico Trasportatori" da "Stampa Distinta Trasportatori".
+- [ ] da quali documenti nascono le liste di prelievo e se si possa scegliere quali includere.
+- [ ] cosa mostra "Analisi Commessa" rispetto alla scheda della commessa in Archivi.
+- [ ] cosa vuol dire "valorizzare" un documento trasfert e quali valori vengono attribuiti.
+
+## Vendita al banco e POS
+
+`docs/moduli/vendite/vendita-al-banco.md`
+
+- [ ] la struttura esatta delle due schermate. Sono costruite a runtime e le etichette non stanno nelle risorse, quindi vanno descritte guardandole a video.
+- [ ] i campi delle due schermate di vendita.
+- [ ] i messaggi delle due schermate di vendita.
+- [ ] che differenza c'è, nei dati registrati, fra la vendita da tastiera e quella da POS touchscreen.
+- [ ] come si associa un cliente allo scontrino, per la raccolta punti.

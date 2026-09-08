@@ -9,7 +9,8 @@ maschera_id: nessuna dialog propria
 
 Un documento emesso non è ancora una registrazione contabile. **Contabilizza**
 genera le registrazioni di [prima nota](../contabilita/registrazione-prima-nota.md)
-dai documenti del periodo; i due **Controllo** verificano che documenti e
+dai documenti del periodo; **Controllo Fatture <-> Mov. Contabili** e
+**Controllo Fat. Pro Forma <-> Mov. Contabili** verificano che documenti e
 registrazioni corrispondano.
 
 !!! info "In sintesi"
@@ -18,8 +19,8 @@ registrazioni corrispondano.
     Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Contabilizza
     Menu ▸ Vendite ▸ Ricevute Fiscali ▸ Contabilizza
     Menu ▸ Vendite ▸ Autofatture - Integrazioni ▸ Contabilizza
-    Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture ▸ Mov. Contabili
-    Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Controllo Fat. Pro Forma ▸ Mov. Contabili
+    Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture <-> Mov. Contabili
+    Menu ▸ Vendite ▸ Fatture Pro Forma ▸ Controllo Fat. Pro Forma <-> Mov. Contabili
     **Scorciatoia:** ++f2++ avvia, ++esc++ esce
     **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
@@ -32,7 +33,7 @@ persona: il documento nasce in Vendite e diventa una scrittura contabile in un
 secondo momento. **Contabilizza** fa quel passaggio in blocco, sui documenti di
 un periodo.
 
-I due **Controllo … ↔ Mov. Contabili** servono dopo: dicono se qualche
+I due **Controllo <-> Mov. Contabili** servono dopo: dicono se qualche
 documento è rimasto senza registrazione o se qualche registrazione non ha più
 il suo documento.
 
@@ -86,7 +87,7 @@ ed **Esci**.
 
 ### Verificare che nulla sia rimasto indietro
 
-1. Apri **Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture ▸ Mov. Contabili**.
+1. Apri **Menu ▸ Vendite ▸ Fatture ▸ Controllo Fatture <-> Mov. Contabili**.
 2. Indica il periodo e avvia.
 3. Ogni riga che esce è una discordanza fra documento e registrazione.
 
@@ -103,7 +104,7 @@ ed **Esci**.
 !!! warning "Contabilizzare due volte lo stesso periodo"
 
     La contabilizzazione crea registrazioni in prima nota. Prima di rilanciarla
-    su un periodo già contabilizzato, verifica con il **Controllo … ↔ Mov.
+    su un periodo già contabilizzato, verifica con il **Controllo Fatture <-> Mov.
     Contabili** cosa esiste già, per non ritrovarti scritture doppie.
 
 <!-- DA VERIFICARE: se la contabilizzazione riconosca i documenti già contabilizzati e li salti. -->
