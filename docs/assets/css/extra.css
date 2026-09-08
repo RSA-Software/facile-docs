@@ -1,0 +1,28 @@
+/* ---------------------------------------------------------------------------
+   Manuale Facile — personalizzazioni grafiche
+   --------------------------------------------------------------------------- */
+
+/* Screenshot delle maschere: bordo leggero e angoli arrotondati, così le
+   catture con sfondo chiaro non si confondono con la pagina. */
+.md-typeset img[src*="/img/"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Tabella dei campi: prima colonna (nome campo) in evidenza. */
+.md-typeset table.campi td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Etichetta per i campi obbligatori: usare {: .obbligatorio } */
+.md-typeset .obbligatorio {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Percorso di menu, es. Menu > Anagrafiche > Clienti */
+.md-typeset kbd.percorso {
+  font-family: var(--md-text-font);
+}
