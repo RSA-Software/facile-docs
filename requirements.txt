@@ -1,0 +1,13 @@
+# Manuale Facile — dipendenze per la generazione del sito
+#
+# NOTA: MkDocs 2.0 (2026) è una riscrittura che rimuove il sistema di plugin e
+# non è compatibile con Material for MkDocs. Le versioni 9.7.5+ di
+# mkdocs-material limitano già MkDocs a <2, ma il vincolo è ripetuto qui per
+# sicurezza. Non rimuoverlo senza aver verificato la situazione.
+mkdocs-material>=9.7.5,<10
+mkdocs>=1.6,<2
+
+# Opzionali, decommentare dopo averli abilitati in mkdocs.yml:
+# mkdocs-glightbox        # zoom sugli screenshot
+# mike                    # pubblicazione di più versioni del manuale
+# mkdocs-with-pdf         # export dell'intero manuale in PDF

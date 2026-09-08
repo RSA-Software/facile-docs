@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+# .gitignore — Manuale Facile (sito MkDocs + Material)
+#
+# Regola generale: nel repository stanno solo i sorgenti (docs/, templates/,
+# tools/, mkdocs.yml, requirements.txt). Tutto ciò che viene generato,
+# installato o è specifico della singola postazione resta fuori.
+# ---------------------------------------------------------------------------
+
+# --- Sito generato da MkDocs -----------------------------------------------
+site/
+/public/
+
+# Cache dei plugin (social cards, ottimizzazione immagini, mkdocs-with-pdf)
+.cache/
+.mkdocs_cache/
+
+# --- Ambiente Python --------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Cache degli strumenti di sviluppo Python
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# --- Editor e IDE -----------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.code-workspace
+*.swp
+*~
+
+# --- Sistema operativo ------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS / Linux (utile se qualcuno lavora da un'altra postazione)
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# --- File temporanei di lavoro ---------------------------------------------
+# Lock file di Word/Excel aperti mentre si preparano i contenuti
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+*.tmp
+*.bak
+*.orig
+*.rej
+*.log
+
+# Sorgenti degli screenshot: nel repo va solo il PNG/WEBP finale in
+# docs/assets/img, non i file di lavoro dell'editor di immagini.
+*.psd
+*.xcf
+*.sketch
+
+# --- Claude Code ------------------------------------------------------------
+# Le skill condivise (.claude/skills/) restano versionate; fuori solo le
+# impostazioni e gli appunti personali della singola postazione.
+.claude/settings.local.json
+.claude/*.local.json
+CLAUDE.local.md
+
+# --- Credenziali ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key

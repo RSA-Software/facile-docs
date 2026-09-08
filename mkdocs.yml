@@ -1,0 +1,235 @@
+site_name: Manuale Facile
+site_description: Manuale utente del gestionale Facile — guida operativa maschera per maschera
+site_author: R.S.A. S.a.s. di Capizzi, Furnari & C.
+site_url: https://rsasoftware.github.io/facile-docs/   # <-- sostituire con il dominio definitivo
+copyright: © R.S.A. S.a.s. — Tutti i diritti riservati
+
+# ---------------------------------------------------------------------------
+# Repository (mostra il link "Modifica questa pagina" su ogni documento)
+# ---------------------------------------------------------------------------
+repo_url: https://github.com/rsasoftware/facile-docs
+repo_name: facile-docs
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+# ---------------------------------------------------------------------------
+# Tema
+# ---------------------------------------------------------------------------
+theme:
+  name: material
+  language: it
+  logo: assets/img/logo.png
+  favicon: assets/img/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Passa al tema scuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Passa al tema chiaro
+  features:
+    - navigation.instant        # navigazione senza ricaricare la pagina
+    - navigation.tracking
+    - navigation.tabs           # moduli come schede in alto
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes        # index.md come pagina della sezione
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+    - content.tooltips
+
+extra_css:
+  - assets/css/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.rsasoftware.it
+      name: rsasoftware.it
+  # Selettore di versione del manuale (attivo quando si pubblica con `mike`)
+  # version:
+  #   provider: mike
+  #   default: stabile
+
+# ---------------------------------------------------------------------------
+# Plugin
+# ---------------------------------------------------------------------------
+plugins:
+  - search:
+      lang: it
+      separator: '[\s\-\.]+'
+  # - glightbox        # zoom sugli screenshot (pip install mkdocs-glightbox)
+  # - mike             # versionamento del manuale (pip install mike)
+
+# ---------------------------------------------------------------------------
+# Estensioni Markdown
+# ---------------------------------------------------------------------------
+markdown_extensions:
+  - abbr
+  - admonition          # blocchi Nota / Attenzione / Suggerimento
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: In questa pagina
+  - pymdownx.details    # blocchi richiudibili
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys       # rende i tasti come F2 in stile tastiera
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ---------------------------------------------------------------------------
+# Struttura del manuale
+#
+# La navigazione ricalca il menu di Facile, voce per voce e nello stesso
+# ordine: chi conosce il programma trova la pagina dov'è la maschera. Il
+# riferimento è il menu completo (IDR_PROFESSIONAL); nelle licenze Standard e
+# Lite alcune voci non compaiono.
+#
+# Le etichette qui sotto sono quelle del menu, non i titoli delle pagine.
+# Aggiungere ogni nuova maschera nella posizione che ha nel menu.
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - Guida introduttiva:
+      - introduzione/index.md
+      - Primo accesso: introduzione/primo-accesso.md
+      - L'interfaccia di Facile: introduzione/interfaccia.md
+      - Convenzioni del manuale: introduzione/convenzioni.md
+  - Archivi:
+      - moduli/archivi.md
+      - Clienti: moduli/anagrafiche/anagrafica-clienti.md
+      - Mailing list: moduli/anagrafiche/mailing-list.md
+      - Associazione Gruppi e Giri: moduli/anagrafiche/associazioni.md
+      - Agganci Trasferimento Documenti: moduli/anagrafiche/agganci-trasferimento-documenti.md
+      - Gestione Compleanni: moduli/anagrafiche/gestione-compleanni.md
+      - Bollini: moduli/anagrafiche/bollini.md
+      - Stampe clienti: moduli/anagrafiche/stampe-clienti.md
+      - Fornitori: moduli/anagrafiche/anagrafica-fornitori.md
+      - Tabella Sconti Fornitori: moduli/anagrafiche/tabella-sconti-fornitori.md
+      - Stampe fornitori: moduli/anagrafiche/stampe-fornitori.md
+      - Articoli: moduli/anagrafiche/anagrafica-articoli.md
+      - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md
+      - Scorte, assortimento e ubicazioni: moduli/anagrafiche/scorte-e-assortimento.md
+      - Stampe articoli: moduli/anagrafiche/stampe-articoli.md
+      - Stampa lotti e spostamenti barcode: moduli/anagrafiche/stampe-lotti-e-barcode.md
+      - Listini Vendita:
+          - moduli/listini-vendita/index.md
+          - Gestione: moduli/listini-vendita/gestione-listini.md
+          - Varia Listini, Sconti e Provvigioni: moduli/listini-vendita/variazioni-di-massa.md
+          - Conferma e Confronto Listini: moduli/listini-vendita/controllo-listini.md
+          - Analisi Listino da Vendite/Esistenza: moduli/listini-vendita/analisi-listino.md
+          - Stampa Listino: moduli/listini-vendita/stampa-listini.md
+          - Variazioni Listini: moduli/listini-vendita/variazione-listini.md
+          - Copia Listini: moduli/listini-vendita/copia-listini.md
+          - Importazione Listino: moduli/listini-vendita/importazione-listino.md
+      - Listini Fornitori:
+          - moduli/listini-fornitori/index.md
+          - Gestione: moduli/listini-fornitori/gestione-listini-fornitori.md
+          - Analisi Fornitore: moduli/listini-fornitori/analisi-fornitore.md
+      - Agenti: moduli/anagrafiche/anagrafica-agenti.md
+      - Capi Area: moduli/anagrafiche/capi-area.md
+      - Stampe agenti: moduli/anagrafiche/stampe-agenti.md
+      - Rubrica: moduli/anagrafiche/rubrica.md
+      - Buoni Pasto - Buoni Celiachia: moduli/anagrafiche/gestori-buoni-pasto.md
+      - Banche: moduli/contabilita/banche.md
+      - Tipi di Pagamento: moduli/contabilita/tipi-di-pagamento.md
+      - Categorie Economiche: moduli/anagrafiche/categorie-economiche.md
+      - Aliquote IVA: moduli/contabilita/aliquote-iva.md
+      - Trasportatori: moduli/anagrafiche/trasportatori.md
+      - Zone: moduli/anagrafiche/zone.md
+      - Codici Catastali Comuni: moduli/anagrafiche/codici-catastali-comuni.md
+      - Nazioni: moduli/anagrafiche/nazioni.md
+      - Magazzino:
+          - moduli/magazzino/index.md
+          - Causali Magazzino: moduli/magazzino/causali-magazzino.md
+          - Depositi: moduli/magazzino/depositi.md
+          - Categorie Merceologiche: moduli/magazzino/categorie-merceologiche.md
+          - Unità di Misura: moduli/magazzino/unita-di-misura.md
+          - Stagioni: moduli/magazzino/stagioni.md
+          - Marchi: moduli/magazzino/marchi.md
+          - Reparti: moduli/magazzino/reparti.md
+          - Gruppi Taglie: moduli/magazzino/gruppi-taglie.md
+          - Le altre tabelle di classificazione: moduli/magazzino/tabelle-di-classificazione.md
+      - Contabilità:
+          - moduli/contabilita/index.md
+          - Causali Contabili: moduli/contabilita/causali-contabili.md
+          - Mastri: moduli/contabilita/mastri.md
+          - Conti: moduli/contabilita/conti.md
+          - Sottoconti: moduli/contabilita/sottoconti.md
+          - Sezioni: moduli/contabilita/sezioni.md
+          - Centri di Costo/Ricavo: moduli/contabilita/centri-di-costo.md
+          - Banche Ditta: moduli/contabilita/banche-ditta.md
+          - Titoli: moduli/contabilita/titoli.md
+          - Conti per la Riclassificazione: moduli/contabilita/conti-riclassificazione.md
+          - Stampe del piano dei conti: moduli/contabilita/stampe-piano-dei-conti.md
+      - Commesse di Contabilità Analitica: moduli/contabilita/commesse.md
+      - Banchi Conservatori - Attrezzature in Comodato: moduli/anagrafiche/banchi-conservatori.md
+      - Altre Tabelle:
+          - moduli/altre-tabelle/index.md
+          - Note, aspetto e causali di trasporto: moduli/altre-tabelle/note-aspetto-trasporto.md
+          - Canali di Vendita: moduli/altre-tabelle/canali-di-vendita.md
+          - Operatori: moduli/altre-tabelle/operatori.md
+          - Uffici Provinciali IVA: moduli/altre-tabelle/uffici-provinciali-iva.md
+      - Utenti: moduli/anagrafiche/utenti.md
+      - Ditte: moduli/anagrafiche/ditte.md
+  - Contabilità:
+      - moduli/contabilita/menu-contabilita.md
+      - Gestione Prima Nota: moduli/contabilita/gestione-prima-nota.md
+      - Inserimento e Modifica: moduli/contabilita/registrazione-prima-nota.md
+      - Fatture Elettroniche Passive: moduli/contabilita/fatture-elettroniche-passive.md
+      - Scheda Cliente, Fornitore e Conto: moduli/contabilita/schede-contabili.md
+      - Statistiche e controlli: moduli/contabilita/statistiche-e-controlli.md
+      - Liquidazione IVA e ventilazione: moduli/contabilita/liquidazione-iva.md
+      - Comunicazione Operazioni IVA: moduli/contabilita/comunicazioni-iva.md
+      - Dettagli Corrispettivi, Operazioni Speciali e Cointestatari: moduli/contabilita/corrispettivi-speciali-cointestatari.md
+      - Rinumerazione Protocolli: moduli/contabilita/rinumerazione-protocolli.md
+      - Stampe Contabili: moduli/contabilita/stampe-contabili.md
+      - Registri IVA: moduli/contabilita/registri-iva.md
+      - Esportazione Movimenti: moduli/contabilita/esportazione-movimenti.md
+  - Vendite:
+      - moduli/vendite/index.md
+      - Vendita e Pos Touchscreen: moduli/vendite/vendita-al-banco.md
+      - Acconti: moduli/vendite/acconti.md
+      - Gestione documenti: moduli/vendite/gestione-documenti.md
+      - Inserimento e Modifica documenti: moduli/vendite/documento-di-vendita.md
+      - Preventivi: moduli/vendite/preventivi.md
+      - Documenti Accompagnatori Semplificati: moduli/vendite/documenti-accompagnatori-semplificati.md
+      - Fatture Ricorrenti: moduli/vendite/fatture-ricorrenti.md
+      - Fatture elettroniche attive: moduli/vendite/fatture-elettroniche-attive.md
+      - Emissione Fatture da documenti: moduli/vendite/emissione-fatture-da-documenti.md
+      - Contabilizza e controlli: moduli/vendite/contabilizzazione-documenti.md
+      - Riepiloghi e statistiche: moduli/vendite/riepiloghi-e-statistiche.md
+      - Ordini Clienti: moduli/vendite/ordini-clienti.md
+      - Esporta, Duplica e Ricezione: moduli/vendite/esporta-duplica-documenti.md
+      - Scontrini: moduli/vendite/scontrini.md
+      - Promozioni: moduli/vendite/promozioni.md
+      - Provvigioni Agenti - Capi Area: moduli/vendite/provvigioni-agenti.md
+      - Stampe e strumenti: moduli/vendite/stampe-vendite.md
+  - Appendici:
+      - Glossario: appendici/glossario.md
+      - Messaggi di errore: appendici/messaggi-errore.md
