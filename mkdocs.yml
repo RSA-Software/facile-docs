@@ -1,14 +1,14 @@
 site_name: Manuale Facile
 site_description: Manuale utente del gestionale Facile — guida operativa maschera per maschera
 site_author: R.S.A. S.a.s. di Capizzi, Furnari & C.
-site_url: https://rsasoftware.github.io/facile-docs/   # <-- sostituire con il dominio definitivo
+site_url: https://rsa-software.github.io/facile-docs/   # <-- sostituire con il dominio definitivo
 copyright: © R.S.A. S.a.s. — Tutti i diritti riservati
 
 # ---------------------------------------------------------------------------
 # Repository (mostra il link "Modifica questa pagina" su ogni documento)
 # ---------------------------------------------------------------------------
-repo_url: https://github.com/rsasoftware/facile-docs
-repo_name: facile-docs
+repo_url: https://github.com/RSA-software/facile-docs
+repo_name: RSA-Software/facile-docs
 edit_uri: edit/main/docs/
 
 docs_dir: docs
