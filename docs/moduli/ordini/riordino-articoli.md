@@ -91,7 +91,7 @@ stessa riga si compila con calma:
 | **F7 - Genera Ordini** | ++f7++ | Genera automaticamente gli ordini, uno per fornitore. |
 | **F8 - Gen. Listino** | ++f8++ | Apre *Genera Listino da Miglior Prezzo*, che costruisce un listino di vendita dal miglior prezzo d'acquisto. |
 | **F9 - Importa Ordine** | ++f9++ | Importa le quantità da un foglio Excel. |
-| **Dati** | | Importa i dati da un terminalino di raccolta. |
+| **Dati** | | Apre un menu con i terminalini di raccolta supportati — **EIA Thunder**, **BCP8000 - ET8000**, **DENSO - N661** — e importa i codici letti. |
 | **Trova** | | Cerca dentro la griglia. |
 | **Rimuovi Forn.** | | Toglie dal confronto un fornitore, con la sua colonna. Chiede conferma. |
 | **Esci** | ++esc++ | Chiude la maschera. |
@@ -116,11 +116,13 @@ stessa riga si compila con calma:
 2. Premi **F4 - Sel. Fornitori** e scegli i fornitori da confrontare: senza
    questo passo la ricerca si rifiuta di partire.
 3. Premi **F2 - Cerca** e scegli gli articoli.
-4. Guarda la griglia: la colonna **Miglior Prezzo** e l'evidenziazione dicono
-   dove conviene comprare; **Ult. Prezzo Acq.** dice cosa hai pagato l'ultima
-   volta.
-5. Riga per riga compila **Q.ta da Ordinare** (o **Conf. da Ordinare**) e
-   indica il fornitore in **For. Sel.**.
+4. Guarda la griglia: la colonna del fornitore più conveniente è **già
+   evidenziata**, **Miglior Prezzo** ne riporta il valore e **For. Sel.** arriva
+   **già compilato** con quel fornitore. **Ult. Prezzo Acq.** dice cosa hai
+   pagato l'ultima volta.
+5. Riga per riga compila **Q.ta da Ordinare** (o **Conf. da Ordinare**), e
+   cambia il fornitore in **For. Sel.** solo dove non vuoi seguire il prezzo
+   migliore.
 6. Premi **F7 - Genera Ordini**: prima compare l'**Anteprima Ordini per
    Fornitore** con codice, fornitore, quantità e valore di ciascun ordine;
    confermando, gli ordini vengono scritti.
@@ -179,11 +181,28 @@ fornitore abituale?* rispondi **Sì** per allineare gli
     **F6 - Pulisci tabella** svuota tutto quello che hai impostato — quantità,
     fornitori scelti, prezzi corretti a mano — e non c'è modo di recuperarlo.
 
-<!-- DA VERIFICARE: con quale criterio viene evidenziato il "Miglior Prezzo" quando due fornitori hanno lo stesso prezzo. -->
+!!! note "Come viene scelto il «Miglior Prezzo»"
 
-<!-- DA VERIFICARE: quali terminalini sono supportati dal pulsante "Dati" e come si configurano. -->
+    È il **prezzo più basso fra quelli diversi da zero**: un fornitore che per
+    quell'articolo non ha un prezzo in listino viene semplicemente saltato, non
+    conta come «prezzo zero».
 
-<!-- DA VERIFICARE: quando gli ordini sono generati e la generazione non produce nulla, in un caso Facile non mostra alcun messaggio. -->
+    A parità di prezzo vince il fornitore **più a sinistra**, cioè il primo
+    nell'ordine in cui li hai scelti con **F4 - Sel. Fornitori**. Se due
+    fornitori praticano lo stesso prezzo e preferisci l'altro, cambialo a mano
+    in **For. Sel.**
+
+    Trovato il migliore, Facile evidenzia la sua colonna, scrive il valore in
+    **Miglior Prezzo** e **compila da sé For. Sel.**: la scelta è già fatta, e
+    va corretta solo dove non la si vuole seguire.
+
+!!! warning "Se «F7 - Genera Ordini» sembra non fare nulla"
+
+    Quando nessuna riga ha una quantità da ordinare il programma avvisa con
+    *Non ci sono ordini da generare!*. C'è però un caso in cui **non compare
+    alcun messaggio** e la maschera resta com'è: succede quando la generazione
+    non trova fornitori da servire. Se premendo **F7** non accade niente,
+    controlla che le righe con quantità abbiano il **For. Sel.** compilato.
 
 ## Vedi anche
 

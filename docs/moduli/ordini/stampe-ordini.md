@@ -137,13 +137,32 @@ Per fare il passo successivo in automatico, vedi
 
 ## Note
 
+!!! note "I due riepiloghi degli ordini a fornitori"
+
+    **Stampa Riepilogo** e **Stampa Riepilogo con Dettaglio Articoli e
+    Commesse** non sono la stessa stampa con un'opzione: sono due stampe
+    diverse. La prima elenca gli ordini, uno per riga; la seconda scende al
+    dettaglio delle righe, con l'articolo e la
+    [commessa](../contabilita/commesse.md) di ciascuna. Entrambe escono in
+    orizzontale.
+
+    Tutte e due **lasciano fuori i documenti annullati**.
+
 !!! note "Cosa vuol dire «evaso»"
 
     Un ordine è *totalmente evaso* quando ogni sua riga è stata consegnata per
     intero. Finché resta anche una quantità aperta, l'ordine compare nelle
     stampe anche con la casella spenta.
 
-<!-- DA VERIFICARE: che differenza c'è fra la stampa ESTESA e la SINTETICA degli ordini per articolo. -->
+!!! note "Estesa o sintetica"
+
+    Sono due stampe diverse, non due impaginazioni della stessa. `ESTESA` esce
+    **in orizzontale** con il dettaglio; `SINTETICA` esce **in verticale**, più
+    breve, e affianca all'ordinato l'**esistenza a magazzino**: è quella da
+    guardare per decidere cosa comprare, perché mette a confronto quello che
+    serve con quello che c'è già.
+
+<!-- DA VERIFICARE: quali colonne distinguono nel concreto le due stampe (ordxart.rpt e ordxarts.rpt). -->
 
 ## Vedi anche
 

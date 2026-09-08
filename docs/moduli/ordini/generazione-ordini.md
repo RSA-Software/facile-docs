@@ -189,9 +189,34 @@ partono affatto e compare uno dei messaggi elencati nell'
     anche con un messaggio, ma non blocca: se confermi, il secondo ordine viene
     creato lo stesso.
 
-<!-- DA VERIFICARE: con quale criterio viene scelto il fornitore quando l'articolo ne ha più d'uno in listino. -->
+!!! warning "Gli articoli senza fornitore spariscono dalla generazione"
 
-<!-- DA VERIFICARE: cosa contiene la colonna "Assort." del riassortimento e come viene calcolata la "Esistenza Centrale". -->
+    Per decidere a chi ordinare, Facile guarda in quest'ordine:
+
+    1. il **fornitore abituale** dell'articolo;
+    2. se manca, il **fornitore alternativo**;
+    3. se mancano entrambi, **l'articolo viene tolto** dalla generazione, senza
+       messaggio.
+
+    È il motivo più comune per cui negli ordini generati manca qualcosa: il
+    programma non lo segnala. Prima di generare, controlla che gli
+    [articoli](../anagrafiche/anagrafica-articoli.md) del periodo abbiano il
+    fornitore compilato — la
+    [Stampa Articoli per Fornitore](../anagrafiche/stampe-articoli.md) serve
+    proprio a questo. In alternativa, il fornitore si può indicare a mano riga
+    per riga con **F3 - Modifica**.
+
+!!! note "Le colonne del riassortimento che vengono dalla centrale"
+
+    **Esistenza Centrale** è l'esistenza dell'articolo nel deposito CE.DI.,
+    quello impostato nei [parametri della ditta](../anagrafiche/ditte.md): dice
+    se la merce che manca al punto vendita è già in casa alla centrale, o se va
+    comprata fuori.
+
+    **Assort.** dice se l'articolo è **in assortimento** per quel punto vendita.
+    Vale `0` quando è escluso, e in quel caso la **Quantità da Ordinare** viene
+    forzata a zero: un articolo fuori assortimento non si riassortisce, anche se
+    è stato venduto.
 
 ## Vedi anche
 

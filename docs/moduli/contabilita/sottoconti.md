@@ -107,6 +107,20 @@ Valgono inoltre:
    Costo Obbligatorio** e indica il **Cen.Costo Preferenziale**.
 6. Premi **F2 - Salva**.
 
+### Ritrovare e modificare un sottoconto
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Sottoconti ▸ Modifica**. La maschera
+   non si apre vuota: mostra già il **primo sottoconto** in ordine di mastro,
+   conto e sottoconto.
+2. Premi **F5 - Cerca** e scegli il sottoconto dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il
+sottoconto dall'archivio e abbandona le modifiche non salvate. Se l'archivio è
+ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Agganciare un sottoconto alla riclassificazione
 
 1. Carica il sottoconto.

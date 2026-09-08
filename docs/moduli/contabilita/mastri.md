@@ -82,6 +82,19 @@ Valgono inoltre:
 2. Digita il **Codice** e la **Descrizione**.
 3. Premi **F2 - Salva**. La maschera si svuota per il mastro successivo.
 
+### Ritrovare e modificare un mastro
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Mastri ▸ Modifica**. La maschera non
+   si apre vuota: mostra già il **primo mastro** in ordine di codice.
+2. Premi **F5 - Cerca** e scegli il mastro dall'elenco, oppure scorri con **F3
+   - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il mastro
+dall'archivio e abbandona le modifiche non salvate. Se l'archivio è ancora
+vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Controllare il saldo di un mastro
 
 1. Premi **F5 - Cerca** e carica il mastro.

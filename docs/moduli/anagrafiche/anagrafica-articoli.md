@@ -314,9 +314,30 @@ Valgono inoltre in tutta la maschera:
     La linguetta della settima scheda si legge **Alterntaivi**: è un refuso del
     programma, la scheda contiene gli articoli *alternativi*.
 
-<!-- DA VERIFICARE: l'elenco dei campi resi obbligatori è in un file di configurazione dell'installazione, come per i clienti. Va documentato in una pagina per l'amministratore? -->
+!!! note "Da dove viene il codice generato in automatico"
 
-<!-- DA VERIFICARE: la regola con cui il programma genera il codice articolo quando si lascia vuoto il campo (usa data, fornitore abituale e categoria merceologica). Vale la pena spiegarne il formato all'utente, o basta dire che viene generato? -->
+    Lasciando vuoto il **Codice**, il programma ne assegna uno secondo il
+    formato scelto nella scheda **Codici Articoli** delle
+    [ditte](ditte.md): `NESSUN CODICE`, `EAN`, `SERIALE DA ARTICOLI` o
+    `SERIALE DA CONTATORE`. Alcune versioni ne aggiungono altri — per esempio
+    uno composto da **anno, mese, codice del fornitore e progressivo**, un altro
+    che parte dalla **categoria merceologica**.
+
+    Il formato non si sceglie articolo per articolo: è un'impostazione della
+    ditta, e va decisa prima di cominciare a caricare l'archivio. I messaggi
+    *Codice Articolo inferiore/superiore al…* dipendono dall'intervallo
+    **Cod. Iniziale / Cod. Finale** impostato lì.
+
+!!! note "I campi obbligatori si configurano per installazione"
+
+    Oltre a quelli segnati in questa pagina, l'elenco dei campi che il programma
+    pretende può essere allungato per singola installazione, con un file di
+    configurazione (`cfgrticoli_check.ini`, sezione `[CHECK]`) che l'assistenza
+    predispone. Quando manca uno di quei campi **il programma non dice nulla**:
+    emette un segnale acustico e sposta il cursore. Se il salvataggio si rifiuta
+    senza spiegazioni, guarda dov'è finito il cursore.
+
+<!-- DA VERIFICARE: quali chiavi ammette la sezione [CHECK] di articoli_check.ini. -->
 
 ## Vedi anche
 

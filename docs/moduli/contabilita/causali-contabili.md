@@ -139,6 +139,20 @@ Valgono inoltre:
 6. Compila lo schema dei conti nella griglia in basso.
 7. Premi **F2 - Salva**.
 
+### Ritrovare e modificare una causale
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Causali Contabili ▸ Modifica**. La
+   maschera non si apre vuota: mostra già la causale con il **codice più
+   alto**.
+2. Premi **F5 - Cerca** e scegli la causale dall'elenco, oppure scorri con **F3
+   - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge la causale
+dall'archivio e abbandona le modifiche non salvate. Se l'archivio è ancora
+vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Rendere obbligatorio il centro di costo
 
 1. Carica la causale.

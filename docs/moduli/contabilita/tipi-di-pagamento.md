@@ -122,6 +122,19 @@ Valgono inoltre:
 4. Lascia **Rate** a 1, **Inizio Scadenza** e **Periodicità** a zero.
 5. Premi **F2 - Salva**: la scadenza cadrà lo stesso giorno della fattura.
 
+### Ritrovare e modificare un tipo di pagamento
+
+1. Apri **Menu ▸ Archivi ▸ Tipi di Pagamento ▸ Modifica**. La maschera non si
+   apre vuota: mostra già il pagamento con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli il pagamento dall'elenco — che riporta anche
+   tipo e numero di rate — oppure scorri con **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il
+pagamento dall'archivio e abbandona le modifiche non salvate. Se l'archivio è
+ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Creare un 60 giorni fine mese in due rate
 
 1. Scrivi la **Descrizione**, per esempio *BONIFICO 60/90 GG F.M.*

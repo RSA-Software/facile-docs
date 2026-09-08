@@ -73,6 +73,19 @@ la casella con cui si scelgono le righe su cui agire.
 Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
 **Arrivo**, **Totale**, **Cod. For.** e **Fornitore**.
 
+### Scomposizione Ordine per Fornitore
+
+Si apre da **F6- Scomponi** sull'ordine scelto.
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Numero Riferimento** | ● | L'ordine da scomporre. | numero |
+| **Registro** | | Il registro dell'ordine di partenza. | voce dell'elenco |
+| **Reg. Ordini Generati** | ● | Il registro su cui numerare gli ordini che nascono dalla scomposizione. | voce dell'elenco |
+| **Criterio Scomposizione** | ● | Come dividere l'ordine. | `FORNITORE` |
+
+{: .campi }
+
 ## Pulsanti e comandi
 
 ### Ordini in Lavorazione
@@ -85,7 +98,7 @@ Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
 | **F3- Lotti** *(o* **F3- Partite** *)* | ++f3++ | Attribuisce automaticamente lotti o partite agli ordini scelti. L'etichetta dipende da come è configurata la gestione. |
 | **F4- Documenti** | ++f4++ | Emette i documenti di vendita dagli ordini scelti. |
 | **F5- Prezzi** | ++f5++ | Apre il controllo dei prezzi dell'ordine. |
-| **F6- Scomponi** | ++f6++ | Scompone l'ordine. |
+| **F6- Scomponi** | ++f6++ | Apre *Scomposizione Ordine per Fornitore*: divide un ordine in più ordini, uno per fornitore. Vale su **un solo** ordine per volta, e solo se è ancora in stato *salvato*. |
 | **F7- Stampa** | ++f7++ | Stampa quello che si vede. |
 | **Ricarica** | | Rilegge gli ordini dall'archivio. |
 
@@ -93,11 +106,9 @@ Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - Apri** | ++f2++ | Apre l'ordine della riga corrente. |
+| **F2 - Apri** | ++f2++ | Apre l'ordine della riga corrente. Fanno lo stesso il doppio clic e ++enter++ sulla griglia. |
 | **F3 - Ricarica** | ++f3++ | Rilegge gli ordini dall'archivio. |
-| **F4 - Stampa** | ++f4++ | Stampa l'elenco. |
-
-<!-- DA VERIFICARE: che cosa fa esattamente "F6- Scomponi" e in quali casi si usa. -->
+| **F4 - Stampa** | ++f4++ | Stampa l'ordine della riga. Se l'ordine è ancora in stato *salvato*, prima di stampare ne ricalcola i totali. |
 
 ## Come si fa
 
@@ -140,6 +151,8 @@ Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
 | *Impossibile elaborare i documenti!* / *Impossibile elaborare il documento!* | L'elaborazione non è andata a buon fine. | Riprova; se insiste, segnala all'assistenza. |
 | *Errore su cancellazione movimenti dell' ordine!<br>Segnalare il problema all' assistenza e annullare l' ordine!* | I movimenti di magazzino dell'ordine non si sono potuti togliere. | Annulla l'ordine e chiama l'assistenza: gli archivi restano disallineati. |
 | *Vuoi calcolare l' Iva sulla Fattura Pro Forma ?* | Si sta generando una pro forma. | **Sì** per l'IVA in fattura, **No** per lasciarla fuori. |
+| *Confermi la Scomposizione dell'Ordine?* | Conferma prima di dividere l'ordine. | **Sì** procede. |
+| *Scomposizione Ordine Completata!* | La scomposizione è andata a buon fine. | Controlla gli ordini generati dalla [gestione documenti](../vendite/gestione-documenti.md). |
 | *Vuoi Cancellare gli Ordini Ricevuti ?* poi *Confermi la Cancellazione degli Ordini ?* | Hai avviato la cancellazione degli ordini ricevuti. | Rispondi **Sì** a entrambe solo se sei sicuro. La risposta preimpostata è **No**. |
 
 ## Note
@@ -150,6 +163,24 @@ Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
     fornitore in stato *evaso*, senza mostrare prima quali sono e senza
     possibilità di tornare indietro. Stampa l'elenco da **Ordini in Ricezione**
     e fai una copia degli archivi prima di lanciarla.
+
+!!! note "«Ricevuto» ed «evaso» sono lo stesso stato"
+
+    Facile registra un unico stato per l'ordine consegnato per intero, e lo
+    chiama con parole diverse a seconda del verso: **EVASO** su un ordine di un
+    cliente, **RICEVUTO** su un ordine a un fornitore. Esiste anche lo stato
+    corrispondente per la consegna **parziale**.
+
+    È per questo che le due cancellazioni — *Ordini Evasi* e *Ordini Ricevuti* —
+    si somigliano tanto: fanno la stessa cosa sui due tipi di documento.
+
+!!! note "A cosa serve scomporre un ordine"
+
+    Un cliente ordina venti articoli che arrivano da quattro fornitori diversi.
+    **F6- Scomponi** trasforma quell'ordine unico in quattro ordini, uno per
+    fornitore, così ciascuno si evade per conto suo. Funziona su un ordine per
+    volta e solo finché l'ordine è ancora **salvato**: dopo la conferma o
+    l'evasione parziale il comando si rifiuta.
 
 !!! note "Due domande, e la seconda non è una formalità"
 

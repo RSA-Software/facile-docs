@@ -83,6 +83,20 @@ Valgono inoltre:
 3. Scrivi la **Descrizione**.
 4. Premi **F2 - Salva**.
 
+### Ritrovare e modificare una voce
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Conti per la Riclassificazione ▸
+   Modifica**. La maschera non si apre vuota: mostra già la **prima voce** in
+   ordine di codice.
+2. Premi **F5 - Cerca** e scegli la voce dall'elenco, oppure scorri con **F3 -
+   Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge la voce
+dall'archivio e abbandona le modifiche non salvate. Se l'archivio è ancora
+vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Agganciare un sottoconto alla riclassificazione
 
 1. Apri i [sottoconti](sottoconti.md) e carica quello che ti interessa.

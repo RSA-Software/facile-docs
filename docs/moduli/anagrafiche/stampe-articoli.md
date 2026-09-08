@@ -102,7 +102,7 @@ caratteri e `?` un carattere solo.
 |---|:---:|---|---|
 | **Deposito** | | Su quale [deposito](../magazzino/depositi.md) calcolare esistenze e scorte. | codice |
 | **Data Riferimento** | | La data a cui riferire i valori. | data |
-| **Ordinamento** | | Come ordinare la stampa. | `CASUALE`, `CODICE`, `DESCRIZIONE`; sulla stampa anagrafica anche `CAT.MERC. E POSIZ.POS` |
+| **Ordinamento** | | Come ordinare la stampa. `CASUALE` è il valore predefinito e **non ordina a caso**: vedi la nota in fondo. | `CASUALE`, `CODICE`, `DESCRIZIONE`; a seconda della stampa anche `CAT.MERC. E POSIZ.POS`, `UBICAZIONE` o `CODICE FORNITORE` |
 | **Formato** | | L'impaginazione. | `ESISTENZA, SCORTA MIN/MAX`, `ESISTENZA, SCORTA MIN, Q.TA VENDUTA`, `FORNITORI, MARCHIO, GRUPPO, SOTTOG., ULT. PREZZO ACQ., LISTINI`, `LISTINO 2 - LISTINO 3 - ESISTENZE DEPOSITI` |
 | **Solo Articoli con Esistenza Maggiore di** | | Esclude gli articoli sotto la quantità indicata a fianco. | attivo/non attivo, più una quantità |
 | **Somma Esistenza Depositi** | | Somma le giacenze di tutti i depositi invece di fermarsi a quello scelto. | attivo/non attivo |
@@ -162,7 +162,15 @@ caratteri e `?` un carattere solo.
 
 <!-- DA VERIFICARE: quali campi (Formato, Data Riferimento, le tre caselle) compaiano su quali stampe: variano da una voce all'altra. -->
 
-<!-- DA VERIFICARE: cosa produce l'ordinamento CASUALE. -->
+!!! note "«CASUALE» non vuol dire a caso"
+
+    È il valore predefinito dell'**Ordinamento**, e nelle stampe destinate al
+    banco — etichette per i banconi, articoli per la gestione bilance — ordina
+    per **bancone e PLU**: cioè nell'ordine in cui gli articoli stanno sulle
+    [bilance](../casse-bilance/bilance.md), che è quello comodo per girare il
+    negozio. L'etichetta è fuorviante ma il comportamento è voluto.
+
+<!-- DA VERIFICARE: cosa produce l'ordinamento CASUALE nelle stampe diverse da quelle dei banconi. -->
 
 <!-- DA VERIFICARE: su quale periodo si basa "Solo Articoli Modificati o Movimentati". -->
 

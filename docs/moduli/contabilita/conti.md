@@ -84,6 +84,19 @@ Valgono inoltre:
 3. Digita il **Codice** e la **Descrizione** del conto.
 4. Premi **F2 - Salva**.
 
+### Ritrovare e modificare un conto
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Conti ▸ Modifica**. La maschera non si
+   apre vuota: mostra già il **primo conto** in ordine di mastro e conto.
+2. Premi **F5 - Cerca** e scegli il conto dall'elenco, oppure scorri con **F3 -
+   Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il conto
+dall'archivio e abbandona le modifiche non salvate. Se l'archivio è ancora
+vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Controllare il saldo di un conto
 
 1. Premi **F5 - Cerca** e carica il conto.

@@ -96,6 +96,19 @@ Valgono inoltre:
    trasporto.
 5. Premi **F2 - Salva**.
 
+### Ritrovare e modificare un trasportatore
+
+1. Apri **Menu ▸ Archivi ▸ Trasportatori ▸ Modifica**. La maschera non si apre
+   vuota: mostra già il trasportatore con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli il trasportatore dall'elenco, oppure scorri
+   con **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il
+trasportatore dall'archivio e abbandona le modifiche non salvate. Se l'archivio
+è ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Assegnare il vettore abituale a un cliente
 
 1. Apri l'[anagrafica del cliente](anagrafica-clienti.md).

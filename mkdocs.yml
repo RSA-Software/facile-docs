@@ -137,6 +137,8 @@ nav:
       - Tabella Sconti Fornitori: moduli/anagrafiche/tabella-sconti-fornitori.md
       - Stampe fornitori: moduli/anagrafiche/stampe-fornitori.md
       - Articoli: moduli/anagrafiche/anagrafica-articoli.md
+      - Modifica da Griglia: moduli/anagrafiche/modifica-da-griglia.md
+      - Impostazione Dati Web: moduli/anagrafiche/impostazione-dati-web.md
       - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md
       - Scorte, assortimento e ubicazioni: moduli/anagrafiche/scorte-e-assortimento.md
       - Stampe articoli: moduli/anagrafiche/stampe-articoli.md

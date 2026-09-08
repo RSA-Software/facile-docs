@@ -76,6 +76,19 @@ Valgono inoltre:
 2. Digita il **Codice** e la **Descrizione**.
 3. Premi **F2 - Salva**.
 
+### Ritrovare e modificare una stagione
+
+1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Stagioni ▸ Modifica**. La maschera non
+   si apre vuota: mostra già la stagione con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli la stagione dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge la
+stagione dall'archivio e abbandona le modifiche non salvate. Se l'archivio è
+ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Assegnare la stagione a un articolo
 
 1. Apri l'[anagrafica dell'articolo](../anagrafiche/anagrafica-articoli.md).

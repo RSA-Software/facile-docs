@@ -14,7 +14,13 @@ cui si scrive. Questa pagina le documenta tutte.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Archivi ▸ *(una delle voci elencate sotto)* ▸ Inserimento *(oppure* Modifica*)*
+    - **Percorso:**
+        - Menu ▸ Archivi ▸ Magazzino ▸ *(una delle voci elencate sotto)* ▸ Inserimento *(oppure* Modifica*)*
+        - Menu ▸ Archivi ▸ Altre Tabelle ▸ *(una delle voci elencate sotto)* ▸ Inserimento *(oppure* Modifica*)*
+        - Menu ▸ Archivi ▸ Fornitori ▸ Gruppi Fornitori ▸ Inserimento *(oppure* Modifica*)*
+        - Menu ▸ Archivi ▸ Banchi Conservatori - Attrezzature in Comodato ▸ Marche *(oppure* Categorie *o* Modelli*)*
+        - Menu ▸ Archivi ▸ Agenti ▸ Capi Area ▸ Inserimento Giro *(oppure* Modifica Giri*)*
+        - Menu ▸ Archivi ▸ Listini Vendita ▸ Inserimento Tabella *(oppure* Modifica Tabella*)*
     - **Scorciatoia:** nessuna; la maschera si apre dal menu
     - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 

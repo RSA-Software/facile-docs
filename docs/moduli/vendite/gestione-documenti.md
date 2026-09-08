@@ -132,9 +132,37 @@ La griglia ha queste colonne:
     per accorgersi di aver aperto la gestione sbagliata è leggere il titolo in
     alto.
 
-<!-- DA VERIFICARE: quali valori assume la colonna Stato e cosa significano. -->
+!!! note "I valori della colonna Stato"
 
-<!-- DA VERIFICARE: quali valori assume la colonna Sync e in quali casi conviene usare F8 - Forza Invio. -->
+    Lo **Stato** è il dato più importante della griglia: dice cosa si può ancora
+    fare con quel documento. I valori possibili, a seconda del tipo:
+
+    | Stato | Significa |
+    |---|---|
+    | `SALVATA` / `SALVATO` | Il documento è registrato ma non ancora stampato: si modifica liberamente. |
+    | `STAMPATA` / `STAMPATO` | È stato stampato. |
+    | `CONFERMATO` | L'ordine è confermato: da qui in poi può generare documenti. |
+    | `PARZ. CONFER.` | Ordine confermato solo in parte. |
+    | `EVASO` | L'ordine è stato consegnato per intero. È lo stato su cui lavora la [cancellazione degli ordini evasi](ordini-clienti.md). |
+    | `RICEVUTO` | L'ordine a fornitore è arrivato per intero. È **lo stesso stato** di `EVASO`: cambia solo la parola, secondo il verso del documento. Ci lavora la [cancellazione degli ordini ricevuti](../ordini/ordini-in-lavorazione-e-ricezione.md). |
+    | `FATTURATA` / `FATTURATO` | Il documento è già stato fatturato: non viene più ripreso dall'[emissione fatture](emissione-fatture-da-documenti.md). |
+    | `CONTABIL.` | Il documento è stato [contabilizzato](contabilizzazione-documenti.md). |
+    | `NOTA CREDITO` | È stata emessa la nota di credito. |
+    | `ANNULLATA` / `ANNULLATO` | Il documento è annullato. |
+    | `ERRORE` | La trasmissione elettronica ha dato errore. |
+
+    La forma maschile o femminile segue il tipo di documento: *SALVATA* per una
+    fattura, *SALVATO* per un ordine.
+
+!!! note "La colonna Sync"
+
+    Ha due soli valori: segna se il documento **è già stato sincronizzato** verso
+    l'esterno — cioè se porta l'ora di sincronizzazione. Vale `0` finché non è
+    partito, `1` quando è stato mandato.
+
+    **F8 - Forza Invio** serve a rimetterlo in coda: si usa quando un documento
+    risulta sincronizzato ma dall'altra parte non è arrivato, oppure quando è
+    stato corretto dopo l'invio e va rimandato.
 
 <!-- DA VERIFICARE: quali registri compaiono nell'elenco Registro e da dove sono presi. -->
 

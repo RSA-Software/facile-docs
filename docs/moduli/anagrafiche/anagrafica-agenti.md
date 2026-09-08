@@ -163,6 +163,19 @@ Valgono inoltre in tutta la maschera:
 6. Compila le percentuali della **% TABELLA PROVVIGIONI** che ti servono.
 7. Premi **F2 - Salva**. La maschera si svuota per l'agente successivo.
 
+### Ritrovare e modificare un agente
+
+1. Apri **Menu ▸ Archivi ▸ Agenti ▸ Modifica**. La maschera non si apre vuota:
+   mostra già l'agente con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli l'agente dall'elenco, oppure scorri con **F3 -
+   Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**. La scheda resta a video su quello
+   appena registrato; in inserimento invece si svuota per il successivo.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge l'agente
+dall'archivio e abbandona le modifiche non salvate. Se l'archivio è ancora
+vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
+
 ### Impostare le ritenute
 
 1. Carica l'agente e apri la scheda *Totali*.

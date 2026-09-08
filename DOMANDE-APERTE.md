@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-08 — **426 domande** su 132 pagine.
+Aggiornato al 2026-09-08 — **408 domande** su 130 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -56,8 +56,7 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/anagrafica-articoli.md`
 
-- [ ] l'elenco dei campi resi obbligatori è in un file di configurazione dell'installazione, come per i clienti. Va documentato in una pagina per l'amministratore?
-- [ ] la regola con cui il programma genera il codice articolo quando si lascia vuoto il campo (usa data, fornitore abituale e categoria merceologica). Vale la pena spiegarne il formato all'utente, o basta dire che viene generato?
+- [ ] quali chiavi ammette la sezione [CHECK] di articoli_check.ini.
 
 ## Anagrafica clienti
 
@@ -137,6 +136,15 @@ Per rigenerare questo elenco:
 - [ ] cosa succede alla cassa se il cliente presenta un buono di un taglio non previsto — viene rifiutato, o solo segnalato?
 - [ ] la % Commissione entra automaticamente nella fattura di rimborso al gestore, o è solo un dato di riferimento?
 
+## Impostazione dati web degli articoli
+
+`docs/moduli/anagrafiche/impostazione-dati-web.md`
+
+- [ ] come si sceglie la nazione a cui i testi web si riferiscono, e come si passa da una lingua all'altra.
+- [ ] quante immagini si possono caricare per articolo e a cosa serve il Deposito indicato accanto a ciascuna.
+- [ ] come si aggiungono e si tolgono gli articoli collegati.
+- [ ] se i dati web debbano essere salvati esplicitamente o siano registrati mano a mano.
+
 ## Mailing list
 
 `docs/moduli/anagrafiche/mailing-list.md`
@@ -150,11 +158,15 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/manutenzione-articoli.md`
 
-- [ ] quali sono le tre soglie "<=" della cancellazione articoli: le etichette a video sono solo il simbolo, non dicono su quale grandezza si applicano.
-- [ ] quali colonne si possono modificare in "Modifica da Griglia" e in "Impostazione Dati Web".
-- [ ] cosa sono le tassonomie e dove vengono usate.
-- [ ] a cosa servono i panieri e dove vengono richiamati.
-- [ ] se la duplicazione copi anche listini, codici a barre e scorte, o solo i dati anagrafici.
+- [ ] cosa fa esattamente il pulsante "Classifica" dell'attribuzione tassonomie.
+
+## Modifica articoli da griglia
+
+`docs/moduli/anagrafiche/modifica-da-griglia.md`
+
+- [ ] quali colonne sono modificabili e quali di sola lettura: dalle risorse risulta bloccata solo la colonna delle taglie.
+- [ ] se "Esporta su Excel" produca un foglio reimportabile da "Importa da Excel".
+- [ ] cosa succede alla colonna NPO quando si spunta: se venga anche registrata la data di non ordinabilità.
 
 ## Nazioni
 
@@ -174,9 +186,8 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/scorte-e-assortimento.md`
 
-- [ ] come si calcola la scorta a partire da Giorni, Copertura e % LS: la formula esatta.
 - [ ] che formato deve avere il file letto da "F3 - Importa" delle ubicazioni.
-- [ ] se il calcolo scriva la scorta minima, quella massima o entrambe.
+- [ ] con quale criterio si applicano i coefficienti stagionali quando la Copertura è 90 o 120 giorni.
 - [ ] come si sceglie il deposito di partenza e quello di arrivo nella distribuzione automatica.
 
 ## Stampe agenti
@@ -191,7 +202,7 @@ Per rigenerare questo elenco:
 `docs/moduli/anagrafiche/stampe-articoli.md`
 
 - [ ] quali campi (Formato, Data Riferimento, le tre caselle) compaiano su quali stampe: variano da una voce all'altra.
-- [ ] cosa produce l'ordinamento CASUALE.
+- [ ] cosa produce l'ordinamento CASUALE nelle stampe diverse da quelle dei banconi.
 - [ ] su quale periodo si basa "Solo Articoli Modificati o Movimentati".
 - [ ] se "Stampa Esistenza" nella versione Taglie e Colori apra una maschera diversa, e con quali campi.
 
@@ -752,27 +763,12 @@ Per rigenerare questo elenco:
 - [ ] il Coef. Moltip. converte fra quale coppia di unità? Serve un esempio numerico che oggi non ho.
 - [ ] la casella Riporta Colli. In quali documenti ha effetto?
 
-## Generazione degli ordini
-
-`docs/moduli/ordini/generazione-ordini.md`
-
-- [ ] con quale criterio viene scelto il fornitore quando l'articolo ne ha più d'uno in listino.
-- [ ] cosa contiene la colonna "Assort." del riassortimento e come viene calcolata la "Esistenza Centrale".
-
-## Ordini in lavorazione e in ricezione
-
-`docs/moduli/ordini/ordini-in-lavorazione-e-ricezione.md`
-
-- [ ] che cosa fa esattamente "F6- Scomponi" e in quali casi si usa.
-
 ## Ordini tabacchi
 
 `docs/moduli/ordini/ordini-tabacchi.md`
 
 - [ ] cosa significano le voci "O", "S" e "M" dell'elenco Tipo: a video compaiono come lettere sole, accanto a SPECIALE e URGENTE che sono per esteso.
-- [ ] cosa contengono le colonne "D INS" e "T INS" e la differenza fra "Min Riord." e "Scorta Min".
 - [ ] che aspetto ha il fax U88 e come viene inviato — se in stampa, per posta o su file.
-- [ ] dove finisce il foglio generato da "F7 - Logista" e con che nome.
 
 ## Richieste offerta
 
@@ -781,14 +777,6 @@ Per rigenerare questo elenco:
 - [ ] i messaggi propri delle richieste offerta.
 - [ ] se la richiesta offerta venga marcata in qualche modo dopo che ne è stato generato l'ordine.
 - [ ] se le richieste offerta compaiano nelle stampe degli ordini per articolo.
-
-## Riordino articoli con analisi prezzi
-
-`docs/moduli/ordini/riordino-articoli.md`
-
-- [ ] con quale criterio viene evidenziato il "Miglior Prezzo" quando due fornitori hanno lo stesso prezzo.
-- [ ] quali terminalini sono supportati dal pulsante "Dati" e come si configurano.
-- [ ] quando gli ordini sono generati e la generazione non produce nulla, in un caso Facile non mostra alcun messaggio.
 
 ## Scambio degli ordini con l'esterno
 
@@ -802,7 +790,7 @@ Per rigenerare questo elenco:
 `docs/moduli/ordini/stampe-ordini.md`
 
 - [ ] i messaggi propri di queste stampe.
-- [ ] che differenza c'è fra la stampa ESTESA e la SINTETICA degli ordini per articolo.
+- [ ] quali colonne distinguono nel concreto le due stampe (ordxart.rpt e ordxarts.rpt).
 
 ## Controllo crediti e debiti
 
@@ -974,26 +962,12 @@ Per rigenerare questo elenco:
 - [ ] a cosa serve il pulsante Tracc. e quali dati di tracciabilità raccoglie.
 - [ ] in quale momento il documento scarica il magazzino: al salvataggio o alla stampa.
 
-## Emissione fatture da documenti
-
-`docs/moduli/vendite/emissione-fatture-da-documenti.md`
-
-- [ ] i campi esatti delle maschere di emissione: sono più d'una e non ho potuto estrarli tutti.
-- [ ] i messaggi delle maschere di emissione fatture.
-- [ ] come il programma raggruppa i documenti in fattura: uno per documento o uno per cliente.
-- [ ] cosa succede rilanciando l'emissione su un periodo già fatturato.
-- [ ] cosa distingue "Emissione Fatture" da "Emissiona Fattura da Pro Forma" (la seconda etichetta contiene un refuso).
-
 ## Esportazione, duplicazione e ricezione dei documenti
 
 `docs/moduli/vendite/esporta-duplica-documenti.md`
 
 - [ ] i campi delle maschere di esportazione e di ricezione.
-- [ ] i messaggi delle maschere di esportazione, duplicazione e ricezione.
-- [ ] in che formato "Esporta" produce il file e in quale cartella.
-- [ ] se la duplicazione copi anche le righe del corpo o solo la testata.
 - [ ] come sono configurati i palmari e il server FTP da cui si ricevono i documenti.
-- [ ] la voce di menu dei DDT è scritta "Riezione D.D.T. da Palmare": verificare se il refuso compare davvero a video.
 
 ## Fatture elettroniche attive
 
@@ -1018,8 +992,6 @@ Per rigenerare questo elenco:
 
 `docs/moduli/vendite/gestione-documenti.md`
 
-- [ ] quali valori assume la colonna Stato e cosa significano.
-- [ ] quali valori assume la colonna Sync e in quali casi conviene usare F8 - Forza Invio.
 - [ ] quali registri compaiono nell'elenco Registro e da dove sono presi.
 
 ## Preventivi

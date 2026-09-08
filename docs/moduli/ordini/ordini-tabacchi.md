@@ -79,7 +79,19 @@ quantità; le altre sono di lettura.
 
 <!-- DA VERIFICARE: cosa significano le voci "O", "S" e "M" dell'elenco Tipo: a video compaiono come lettere sole, accanto a SPECIALE e URGENTE che sono per esteso. -->
 
-<!-- DA VERIFICARE: cosa contengono le colonne "D INS" e "T INS" e la differenza fra "Min Riord." e "Scorta Min". -->
+!!! note "«Min Riord.» e «Scorta Min» non sono la stessa cosa"
+
+    **Min Riord. (Kg.)** è il **lotto minimo di riordino** dell'articolo — la
+    quantità sotto la quale il fornitore non serve l'ordine — convertita in
+    chilogrammi. **Scorta Min (Kg.)** è la **scorta minima** impostata
+    sull'articolo per quel deposito, sempre in chili: è la soglia sotto la quale
+    non si vuole scendere a magazzino.
+
+    Il filtro `SOLO RIGHE SOTTOSCORTA` lavora sulla seconda; è dalla prima che
+    dipende invece quanto si è obbligati a ordinare per volta.
+
+    Le colonne **D INS** e **T INS** riportano data e ora in cui la riga è stata
+    inserita nell'ordine.
 
 ## Pulsanti e comandi
 
@@ -128,6 +140,7 @@ quantità ordinata più esistenza non arrivano alla scorta minima.
 | *Se vuoi adeguare alla Scorta Minima scegli SI.<br>Se Vuoi adeguare alla Scorta Massima scegli NO.* | Hai premuto **F4 - Scorta**. | Scegli il livello a cui adeguare, oppure **Annulla**. |
 | *Impossibile allocare la memoria!* | Il foglio per il logista non si è potuto creare. | Chiudi qualche programma e riprova. |
 | *Impossibile allocare il foglio di lavoro!* | Il modello `logista.xls` non ha il foglio atteso. | Controlla il modello nella cartella `template`. |
+| *Codice articolo non valido all riga N !<br>Generazione file interrotta.* | Una riga dell'ordine ha un codice che il tracciato del logista non accetta. | Correggi il codice dell'articolo. Il messaggio contiene un refuso: *all riga* invece di *alla riga*. |
 
 ## Note
 
@@ -145,7 +158,14 @@ quantità ordinata più esistenza non arrivano alla scorta minima.
 
 <!-- DA VERIFICARE: che aspetto ha il fax U88 e come viene inviato — se in stampa, per posta o su file. -->
 
-<!-- DA VERIFICARE: dove finisce il foglio generato da "F7 - Logista" e con che nome. -->
+!!! note "Dove finisce il foglio per il logista"
+
+    **F7 - Logista** legge il modello `template\logista.xls` della cartella del
+    programma e scrive il risultato in `out`, con un nome che riporta numero e
+    data dell'ordine — per esempio `ordine_147_del_08-09-2026.xls`, con il
+    registro aggiunto al numero quando c'è. Il foglio contiene, per ogni riga
+    ordinata, il codice e la quantità complessiva (quantità propria più
+    quantità patentini).
 
 ## Vedi anche
 

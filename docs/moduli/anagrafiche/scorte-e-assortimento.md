@@ -177,11 +177,39 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
     **F8 - Genera Ordini crea documenti d'ordine veri.** Non è una simulazione:
     controlla le due stampe di riepilogo prima di premerlo.
 
-<!-- DA VERIFICARE: come si calcola la scorta a partire da Giorni, Copertura e % LS: la formula esatta. -->
+!!! note "Come viene calcolata la scorta"
+
+    Il calcolo parte dal **venduto al giorno** del periodo indicato in
+    **Giorni**, e lo moltiplica per i giorni che la scorta deve coprire e per il
+    livello di servizio:
+
+    ```
+    venduto al giorno = venduto del periodo ÷ giorni del periodo
+
+    scorta minima  = (giorni di riordino dell'articolo + Copertura) ×
+                     venduto al giorno × %LS ÷ 100
+
+    scorta massima = (giorni di riordino dell'articolo + 365) ×
+                     venduto al giorno × %LS ÷ 100
+    ```
+
+    I **giorni di riordino** sono quelli impostati sul singolo
+    [articolo](anagrafica-articoli.md): sono il tempo che il fornitore impiega a
+    consegnare, e per questo si sommano alla copertura. Nella scorta massima si
+    usano 365 giorni, o la **Copertura** se è maggiore.
+
+    Il calcolo **scrive tutte e due le scorte**, minima e massima, e il valore
+    non scende mai sotto la quantità minima impostata sulla regola. Gli
+    articoli nuovi, che non hanno ancora un venduto, prendono la quantità
+    prevista per loro dalla regola.
+
+    Con **Copertura** a 90 o 120 giorni il risultato viene corretto da
+    coefficienti stagionali; su periodi di osservazione fino a 60 giorni la
+    scorta minima non scende mai sotto 1.
 
 <!-- DA VERIFICARE: che formato deve avere il file letto da "F3 - Importa" delle ubicazioni. -->
 
-<!-- DA VERIFICARE: se il calcolo scriva la scorta minima, quella massima o entrambe. -->
+<!-- DA VERIFICARE: con quale criterio si applicano i coefficienti stagionali quando la Copertura è 90 o 120 giorni. -->
 
 <!-- DA VERIFICARE: come si sceglie il deposito di partenza e quello di arrivo nella distribuzione automatica. -->
 
