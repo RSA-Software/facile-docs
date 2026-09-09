@@ -34,7 +34,7 @@ possono rileggere e correggere prima di chiudere.
 | **Acquisizione Dati da Carico Merci** | Si copiano da un [carico merci](../magazzino/carico-merci.md) già registrato: utile quando la merce appena arrivata è ancora sul bancale. |
 | **Acquisizione Dati da File Excel** | Si importano da un foglio con le colonne `CODICE` e `QUANTITA`. |
 | **Modifica Dati Acquisiti** | Riapre l'ultima lettura registrata per correggerla o cancellarla. |
-| **Esporta Dati Acquisiti in File Excel** | La voce di menu c'è ma **non fa nulla**: non le corrisponde alcun comando nel programma. |
+| **Esporta Dati Acquisiti in File Excel** | Fa il contrario: porta fuori le letture già acquisite in un foglio Excel. |
 
 ## Prerequisiti
 
@@ -149,6 +149,22 @@ Valgono inoltre in tutta la maschera:
    **Sì** alla domanda.
 3. Scegli il file.
 
+### Esportare le letture in Excel
+
+1. Apri **Menu ▸ Inventario ▸ Esporta Dati Acquisiti in File Excel**.
+2. Il programma chiede l'intervallo da esportare in **Intervallo Letture da
+   Esportare**: **Lettura Iniziale** e **Lettura Finale** arrivano già
+   compilate con la prima e l'ultima lettura in archivio. Restringile se ti
+   serve solo una parte.
+3. Scegli dove salvare. Il programma propone la cartella **out** sotto la
+   cartella dell'utente e il nome **letture**; il formato può essere `.xlsx` o
+   `.xls`.
+4. A scrittura finita **il file si apre da solo**.
+
+Il foglio si chiama **Letture** e ha una riga di intestazione con le colonne
+**DEPOSITO**, **CODICE**, **DESCRIZIONE**, **QUANTITA** e **SEZIONE**. Nella
+versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
+
 ### Correggere una lettura sbagliata
 
 1. Apri **Menu ▸ Inventario ▸ Modifica Dati Acquisiti**: si apre l'ultima
@@ -176,16 +192,11 @@ Valgono inoltre in tutta la maschera:
 | *Colonna QUANTITA non trovata nel documento!* | Idem. | Aggiungi la colonna. |
 | *Nessuna tra le Colonne IDXTAG o COLORE e' stata trovata nel documento !* | Nelle versioni con taglie e colori serve una delle due. | Aggiungila. |
 | *Deposito principale non impostato o non valido !* | L'importazione da Excel non sa dove mettere le letture. | Imposta il deposito attivo nei [parametri della ditta](../anagrafiche/ditte.md). |
+| *Non ci sono dati da esportare!* | Si è chiesta l'esportazione ma in archivio non c'è nessuna lettura. | Acquisisci le letture prima di esportarle. |
+| *Impossibile inizializzare il file excel!* | Il programma non è riuscito a creare il foglio. | Riprova; se insiste, avvisa l'assistenza. |
 | *Vuoi eliminare le letture?* | Dopo un'acquisizione da terminalino. | **Sì** svuota il terminalino, **No** le lascia. |
 
 ## Note
-
-!!! warning "«Esporta Dati Acquisiti in File Excel» non fa nulla"
-
-    La voce compare nel menu ma nel programma non le corrisponde alcuna
-    funzione: premendola non succede niente. È un difetto noto, non un
-    problema della tua installazione. Per portare fuori le letture, usa la
-    [Stampa Dati Acquisiti](stampe-inventario.md).
 
 !!! warning "Il carico merci inesistente non ferma la procedura"
 

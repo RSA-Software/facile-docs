@@ -101,11 +101,3 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
   per voce di menu.
 - [Ditte](anagrafiche/ditte.md) — l'anagrafica delle aziende gestite e tutte le
   impostazioni che ne governano il funzionamento.
-
-!!! warning "Il sottomenu Ristorazione non fa nulla"
-
-    **Menu ▸ Archivi ▸ Ristorazione** contiene cinque voci — **Modificatori**,
-    **Varianti** (con **Copia su altre categorie**), **Camerieri**, **Sale** e
-    **Tavoli** — che in questa versione di Facile **non aprono nessuna
-    maschera**: premendole non succede niente e non compare alcun messaggio.
-    Non sono documentate perché non c'è nulla da documentare.
