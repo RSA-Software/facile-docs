@@ -113,6 +113,33 @@ La stessa maschera si apre da altre dodici voci, sparse in cinque rami diversi:
     ai listini richiamati dalle
     [maschere dei listini di vendita](../listini-vendita/index.md).
 
+### Sotto Procedure Personali
+
+La stessa maschera si apre da altre cinque voci del ramo **Procedure
+Personali**:
+
+| Percorso | A cosa serve |
+|---|---|
+| **Gruppi Clienti** | Raggruppamento dei clienti |
+| **Tipi Attività** | Il tipo di attività di clienti e fornitori |
+| **Nature Giuridiche** | La forma giuridica dell'azienda |
+| **Tipi Contabilità** | Il regime contabile del soggetto |
+| **Coordinatori (non Agganciati)** | I coordinatori non ancora assegnati |
+
+!!! warning "Procedure Personali c'è solo nella versione Studio"
+
+    Se la versione non è quella dello studio professionale, all'avvio il
+    programma **toglie dal menu l'intero ramo Procedure Personali**, e con esso
+    queste cinque voci. Vedi [Versioni specifiche](../versioni/index.md).
+
+!!! note "«Tipi Attività» si raggiunge da due menu, e uno resta sempre"
+
+    La voce **Procedure Personali ▸ Tipi Attività** e la voce
+    **Archivi ▸ Altre Tabelle ▸ Tipi Attività** aprono la **stessa tabella**:
+    quello che inserisci da una lo ritrovi nell'altra. La seconda c'è in tutte
+    le versioni, quindi questa tabella resta raggiungibile anche dove il ramo
+    Procedure Personali non compare.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

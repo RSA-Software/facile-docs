@@ -1,0 +1,1754 @@
+# Generato da tools/inventario-schermate.py — non modificare a mano.
+# Le correzioni vanno in tools/schermate-override.yml.
+schermate:
+- slug: canali-di-vendita
+  scheda: docs/moduli/altre-tabelle/canali-di-vendita.md
+  titolo: Canali di vendita
+  modulo: Archivi ▸ Altre Tabelle
+  maschera_id: IDD_CTR_CANALI
+  immagine: docs/assets/img/altre-tabelle/canali-di-vendita.png
+  percorso: Archivi ▸ Altre Tabelle ▸ Canali di Vendita ▸ Inserimento
+  voce_id: ID_ARCHIVI_FORNITORI_GESTIONECONTRATTI_CANALI_INSERIMENTO
+  comando: 33557
+  alternative:
+  - percorso: Archivi ▸ Altre Tabelle ▸ Canali di Vendita ▸ Modifica
+    comando: 33558
+  suggerimenti: []
+  stato: pronta
+- slug: note-aspetto-trasporto
+  scheda: docs/moduli/altre-tabelle/note-aspetto-trasporto.md
+  titolo: Note, aspetto e causali di trasporto
+  modulo: Archivi ▸ Altre Tabelle
+  maschera_id: IDD_TBC_DESCRIZ
+  immagine: docs/assets/img/altre-tabelle/note-aspetto-trasporto.png
+  percorso: Archivi ▸ Altre Tabelle ▸ Note Particolari ▸ Inserimento
+  voce_id: ID_ARCHIVI_NOTEPARTICOLARI_INSERIMENTO
+  comando: 32870
+  alternative:
+  - percorso: Archivi ▸ Altre Tabelle ▸ Note Particolari ▸ Modifica
+    comando: 32871
+  suggerimenti: []
+  stato: pronta
+- slug: operatori
+  scheda: docs/moduli/altre-tabelle/operatori.md
+  titolo: Operatori
+  modulo: Archivi ▸ Altre Tabelle
+  maschera_id: IDD_TBC_OPERATORI
+  immagine: docs/assets/img/altre-tabelle/operatori.png
+  percorso: Archivi ▸ Altre Tabelle ▸ Operatori ▸ Inserimento
+  voce_id: ID_ARCHIVI_ALTRETABELLE_OPERATORI_INSERIMENTO
+  comando: 33303
+  alternative:
+  - percorso: Archivi ▸ Altre Tabelle ▸ Operatori ▸ Modifica
+    comando: 33304
+  suggerimenti: []
+  stato: pronta
+- slug: uffici-provinciali-iva
+  scheda: docs/moduli/altre-tabelle/uffici-provinciali-iva.md
+  titolo: Uffici provinciali IVA
+  modulo: Archivi ▸ Altre Tabelle
+  maschera_id: IDD_UFFICI_IVA
+  immagine: docs/assets/img/altre-tabelle/uffici-provinciali-iva.png
+  percorso: Archivi ▸ Altre Tabelle ▸ Uffici Provinciali IVA ▸ Inserimento
+  voce_id: ID_ARCHIVI_ALTRETABELLE_UFFICIPROVINCIALIIVA_INSERIMENTO
+  comando: 33333
+  alternative:
+  - percorso: Archivi ▸ Altre Tabelle ▸ Uffici Provinciali IVA ▸ Modifica
+    comando: 33334
+  suggerimenti: []
+  stato: pronta
+- slug: agganci-trasferimento-documenti
+  scheda: docs/moduli/anagrafiche/agganci-trasferimento-documenti.md
+  titolo: Agganci trasferimento documenti
+  modulo: Archivi
+  maschera_id: IDD_CLI_AGGANCI
+  immagine: docs/assets/img/anagrafiche/agganci-trasferimento-documenti.png
+  percorso: Archivi ▸ Clienti ▸ Agganci Trasferimento Documenti
+  voce_id: ID_ARCHIVI_CLIENTI_AGGANCITRASFERIMENTODOCUMENTI
+  comando: 33340
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: anagrafica-agenti
+  scheda: docs/moduli/anagrafiche/anagrafica-agenti.md
+  titolo: Anagrafica agenti
+  modulo: Archivi
+  maschera_id: IDD_AGE_AGENTI
+  immagine: docs/assets/img/anagrafiche/anagrafica-agenti.png
+  percorso: Archivi ▸ Agenti ▸ Inserimento
+  voce_id: ID_ARCHIVI_AGENTI_INSERIMENTO
+  comando: 32820
+  alternative:
+  - percorso: Archivi ▸ Agenti ▸ Modifica
+    comando: 32821
+  suggerimenti: []
+  stato: pronta
+- slug: anagrafica-clienti
+  scheda: docs/moduli/anagrafiche/anagrafica-clienti.md
+  titolo: Anagrafica clienti
+  modulo: Archivi
+  maschera_id: IDD_CLI_CLIENTI_NEW
+  immagine: docs/assets/img/anagrafiche/anagrafica-clienti.png
+  percorso: Archivi ▸ Clienti ▸ Inserimento
+  voce_id: ID_ARCHIVI_CLIENTI_INSERIMENTO
+  comando: 32798
+  alternative:
+  - percorso: Archivi ▸ Clienti ▸ Modifica
+    comando: 32799
+  suggerimenti: []
+  stato: pronta
+- slug: anagrafica-fornitori
+  scheda: docs/moduli/anagrafiche/anagrafica-fornitori.md
+  titolo: Anagrafica fornitori
+  modulo: Archivi
+  maschera_id: IDD_FOR_FORNITORI
+  immagine: docs/assets/img/anagrafiche/anagrafica-fornitori.png
+  percorso: Archivi ▸ Fornitori ▸ Inserimento
+  voce_id: ID_ARCHIVI_FORNITORI_INSERIMENTO
+  comando: 32839
+  alternative:
+  - percorso: Archivi ▸ Fornitori ▸ Modifica
+    comando: 32840
+  suggerimenti: []
+  stato: pronta
+- slug: associazioni
+  scheda: docs/moduli/anagrafiche/associazioni.md
+  titolo: Associazione gruppi e giri
+  modulo: Archivi
+  maschera_id: IDD_CLI_ASSOCIAZIONI
+  immagine: docs/assets/img/anagrafiche/associazioni.png
+  percorso: Archivi ▸ Clienti ▸ Associazione Gruppi
+  voce_id: ID_ARCHIVI_CLIENTI_ASSICIAZIONEREPARTI
+  comando: 33153
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: banchi-conservatori
+  scheda: docs/moduli/anagrafiche/banchi-conservatori.md
+  titolo: Banchi conservatori e attrezzature in comodato
+  modulo: Archivi
+  maschera_id: IDD_MAG_BANCHI
+  immagine: docs/assets/img/anagrafiche/banchi-conservatori.png
+  percorso: Archivi ▸ Banchi Conservatori - Attrezzature in Comodato ▸ Inserimento
+  voce_id: ID_ARCHIVI_BANCHICONSERVATORI_INSERIMENTO
+  comando: 33692
+  alternative:
+  - percorso: Archivi ▸ Banchi Conservatori - Attrezzature in Comodato ▸ Modifica
+    comando: 33693
+  suggerimenti: []
+  stato: pronta
+- slug: capi-area
+  scheda: docs/moduli/anagrafiche/capi-area.md
+  titolo: Capi area
+  modulo: Archivi
+  maschera_id: IDD_AGE_CAPIAREA
+  immagine: docs/assets/img/anagrafiche/capi-area.png
+  percorso: Archivi ▸ Agenti ▸ Capi Area ▸ Inserimento
+  voce_id: ID_CAPIAREA_INSERIMENTO
+  comando: 34042
+  alternative:
+  - percorso: Archivi ▸ Agenti ▸ Capi Area ▸ Modifica
+    comando: 34043
+  suggerimenti: []
+  stato: pronta
+- slug: categorie-economiche
+  scheda: docs/moduli/anagrafiche/categorie-economiche.md
+  titolo: Categorie economiche
+  modulo: Archivi
+  maschera_id: IDD_TBC_CATECO
+  immagine: docs/assets/img/anagrafiche/categorie-economiche.png
+  percorso: Archivi ▸ Categorie Economiche ▸ Inserimento
+  voce_id: ID_ARCHIVI_CATEGORIEECONOMICHE_INSERIMENTO
+  comando: 32785
+  alternative:
+  - percorso: Archivi ▸ Categorie Economiche ▸ Modifica
+    comando: 32786
+  suggerimenti: []
+  stato: pronta
+- slug: codici-catastali-comuni
+  scheda: docs/moduli/anagrafiche/codici-catastali-comuni.md
+  titolo: Codici catastali comuni
+  modulo: Archivi
+  maschera_id: IDD_TBC_COMUNI
+  immagine: docs/assets/img/anagrafiche/codici-catastali-comuni.png
+  percorso: Archivi ▸ Codici Catastali Comuni ▸ Inserimento
+  voce_id: ID_ARCHIVI_CODICICATASTALICOMUNI_INSERIMENTO
+  comando: 32836
+  alternative:
+  - percorso: Archivi ▸ Codici Catastali Comuni ▸ Modifica
+    comando: 32837
+  suggerimenti: []
+  stato: pronta
+- slug: ditte
+  scheda: docs/moduli/anagrafiche/ditte.md
+  titolo: Ditte
+  modulo: Archivi
+  maschera_id: IDD_DIT_DITTE
+  immagine: docs/assets/img/anagrafiche/ditte.png
+  percorso: Archivi ▸ Ditte ▸ Inserimento
+  voce_id: ID_ARCHIVI_DITTE_INSERIMENTO
+  comando: 32800
+  alternative:
+  - percorso: Archivi ▸ Ditte ▸ Modifica
+    comando: 32801
+  - percorso: Archivi ▸ Ditte ▸ Cambio Ditta
+    comando: 33009
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-compleanni
+  scheda: docs/moduli/anagrafiche/gestione-compleanni.md
+  titolo: Gestione compleanni
+  modulo: Archivi
+  maschera_id: IDD_CLI_COMPLEANNI
+  immagine: docs/assets/img/anagrafiche/gestione-compleanni.png
+  percorso: Archivi ▸ Clienti ▸ Gestione Compleanni
+  voce_id: ID_ARCHIVI_CLIENTI_STAMPAAUGURICOMPLEANNO
+  comando: 33474
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: gestori-buoni-pasto
+  scheda: docs/moduli/anagrafiche/gestori-buoni-pasto.md
+  titolo: Gestori buoni pasto
+  modulo: Archivi
+  maschera_id: IDD_CLI_TICKETS_RESTAURANT
+  immagine: docs/assets/img/anagrafiche/gestori-buoni-pasto.png
+  percorso: Archivi ▸ Buoni Pasto - Buoni Celiachia ▸ Inserimento Gestori
+  voce_id: ID_TICKETRESTAURANT_INSERIMENTOGESTORI
+  comando: 34007
+  alternative:
+  - percorso: Archivi ▸ Buoni Pasto - Buoni Celiachia ▸ Modifica Gestori
+    comando: 34008
+  suggerimenti: []
+  stato: pronta
+- slug: impostazione-dati-web
+  scheda: docs/moduli/anagrafiche/impostazione-dati-web.md
+  titolo: Impostazione dati web degli articoli
+  modulo: Archivi
+  maschera_id: IDD_ART_ARTICOLI_WEB
+  immagine: docs/assets/img/anagrafiche/impostazione-dati-web.png
+  percorso: Archivi ▸ Articoli ▸ Impostazione Dati Web
+  voce_id: ID_ARTICOLI_IMPOSTAZIONEDATIWEB
+  comando: 33959
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: mailing-list
+  scheda: docs/moduli/anagrafiche/mailing-list.md
+  titolo: Mailing list
+  modulo: Archivi
+  maschera_id: IDD_CLI_MAILING
+  immagine: docs/assets/img/anagrafiche/mailing-list.png
+  percorso: Archivi ▸ Clienti ▸ Mailing list
+  voce_id: ID_OFFICE_MAILINGLIST
+  comando: 33846
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: manutenzione-articoli
+  scheda: docs/moduli/anagrafiche/manutenzione-articoli.md
+  titolo: Manutenzione degli articoli
+  modulo: Archivi
+  maschera_id: IDD_ART_ARTICOLI_CANCELLA
+  immagine: docs/assets/img/anagrafiche/manutenzione-articoli.png
+  percorso: Archivi ▸ Articoli ▸ Attribuzione Tassonomie
+  voce_id: ID_ARTICOLI_ATTRIBUZIONETASSONOMIE
+  comando: 33934
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: modifica-da-griglia
+  scheda: docs/moduli/anagrafiche/modifica-da-griglia.md
+  titolo: Modifica articoli da griglia
+  modulo: Archivi
+  maschera_id: IDD_ART_GRID_EDIT
+  immagine: docs/assets/img/anagrafiche/modifica-da-griglia.png
+  percorso: Archivi ▸ Articoli ▸ Modifica da Griglia
+  voce_id: ID_ARTICOLI_MODIFICADAGRIGLIA
+  comando: 34018
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: nazioni
+  scheda: docs/moduli/anagrafiche/nazioni.md
+  titolo: Nazioni
+  modulo: Archivi
+  maschera_id: IDD_TBC_NAZIONI
+  immagine: docs/assets/img/anagrafiche/nazioni.png
+  percorso: Archivi ▸ Nazioni ▸ Inserimento
+  voce_id: ID_ENERGY_NAZIONI_INSERIMENTO
+  comando: 33762
+  alternative:
+  - percorso: Archivi ▸ Nazioni ▸ Modifica
+    comando: 33763
+  suggerimenti: []
+  stato: pronta
+- slug: scorte-e-assortimento
+  scheda: docs/moduli/anagrafiche/scorte-e-assortimento.md
+  titolo: Scorte, assortimento e ubicazioni
+  modulo: Archivi
+  maschera_id: IDD_ART_SCORTA_MIN_GRIIGLIA
+  immagine: docs/assets/img/anagrafiche/scorte-e-assortimento.png
+  percorso: Archivi ▸ Articoli ▸ Calcolo Scorta Ottimale
+  voce_id: ID_ARTICOLI_CALCOLOSCORTAMINIMAOTTIMALE
+  comando: 33946
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-agenti
+  scheda: docs/moduli/anagrafiche/stampe-agenti.md
+  titolo: Stampe agenti
+  modulo: Archivi
+  maschera_id: IDD_AGE_AGENTI_ST
+  immagine: docs/assets/img/anagrafiche/stampe-agenti.png
+  percorso: Archivi ▸ Agenti ▸ Stampa
+  voce_id: ID_ARCHIVI_AGENTI_STAMPA
+  comando: 33063
+  alternative:
+  - percorso: Archivi ▸ Agenti ▸ Stampa Giri
+    comando: 33182
+  - percorso: Archivi ▸ Agenti ▸ Stampa Giro Agente
+    comando: 33185
+  - percorso: Archivi ▸ Agenti ▸ Stampa Etichette Giri Agenti
+    comando: 33467
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-articoli
+  scheda: docs/moduli/anagrafiche/stampe-articoli.md
+  titolo: Stampe articoli
+  modulo: Archivi
+  maschera_id: IDD_ART_ARTICOLI_ST
+  immagine: docs/assets/img/anagrafiche/stampe-articoli.png
+  percorso: Archivi ▸ Articoli ▸ (una delle voci elencate sotto)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: stampe-clienti
+  scheda: docs/moduli/anagrafiche/stampe-clienti.md
+  titolo: Stampe clienti
+  modulo: Archivi
+  maschera_id: IDD_CLI_CLIENTI_ST
+  immagine: docs/assets/img/anagrafiche/stampe-clienti.png
+  percorso: Archivi ▸ Clienti ▸ Stampa
+  voce_id: ID_ARCHIVI_CLIENTI_STAMPA
+  comando: 32977
+  alternative:
+  - percorso: Archivi ▸ Clienti ▸ Stampa Schede
+    comando: 32850
+  - percorso: Archivi ▸ Clienti ▸ Stampa Saldi
+    comando: 32951
+  - percorso: Archivi ▸ Clienti ▸ Stampa Elenco IVA
+    comando: 33027
+  - percorso: Archivi ▸ Clienti ▸ Stampa Condizioni Contrattuali
+    comando: 33695
+  - percorso: Archivi ▸ Clienti ▸ Stampa Buoni Sconto
+    comando: 33475
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-fornitori
+  scheda: docs/moduli/anagrafiche/stampe-fornitori.md
+  titolo: Stampe fornitori
+  modulo: Archivi
+  maschera_id: IDD_FOR_FORNITORI_ST
+  immagine: docs/assets/img/anagrafiche/stampe-fornitori.png
+  percorso: Archivi ▸ Fornitori ▸ Stampa
+  voce_id: ID_ARCHIVI_FORNITORI_STAMPA
+  comando: 32841
+  alternative:
+  - percorso: Archivi ▸ Fornitori ▸ Stampa Schede
+    comando: 32851
+  - percorso: Archivi ▸ Fornitori ▸ Stampa Saldi
+    comando: 33032
+  - percorso: Archivi ▸ Fornitori ▸ Stampa Elenco IVA
+    comando: 33031
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-lotti-e-barcode
+  scheda: docs/moduli/anagrafiche/stampe-lotti-e-barcode.md
+  titolo: Stampa lotti in scadenza e spostamenti codici a barre
+  modulo: Archivi
+  maschera_id: IDD_ART_LOTTI_SCA
+  immagine: docs/assets/img/anagrafiche/stampe-lotti-e-barcode.png
+  percorso: Archivi ▸ Articoli ▸ Stampa Lotti in Scadenza
+  voce_id: ID_ARTICOLI_STAMPALOTTIINSCADENZA
+  comando: 34002
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: tabella-sconti-fornitori
+  scheda: docs/moduli/anagrafiche/tabella-sconti-fornitori.md
+  titolo: Tabella sconti fornitori
+  modulo: Archivi
+  maschera_id: IDD_CTR_SCONTIFOR
+  immagine: docs/assets/img/anagrafiche/tabella-sconti-fornitori.png
+  percorso: Archivi ▸ Fornitori ▸ Gestione Contratti ▸ Tabella Sconti Fornitori ▸ Inserimento
+  voce_id: ID_ARCHIVI_FORNITORI_GESTIONECONTRATTI_TABELLASCONTIFORNITORI_INSERIMENTO
+  comando: 33554
+  alternative:
+  - percorso: Archivi ▸ Fornitori ▸ Gestione Contratti ▸ Tabella Sconti Fornitori ▸ Modifica
+    comando: 33555
+  suggerimenti: []
+  stato: pronta
+- slug: trasportatori
+  scheda: docs/moduli/anagrafiche/trasportatori.md
+  titolo: Trasportatori
+  modulo: Archivi
+  maschera_id: IDD_TBC_VETTORI
+  immagine: docs/assets/img/anagrafiche/trasportatori.png
+  percorso: Archivi ▸ Trasportatori ▸ Inserisci
+  voce_id: ID_ARCHIVI_TRASPORTATORI_INSERISCI
+  comando: 32789
+  alternative:
+  - percorso: Archivi ▸ Trasportatori ▸ Modifica
+    comando: 32790
+  suggerimenti: []
+  stato: pronta
+- slug: utenti
+  scheda: docs/moduli/anagrafiche/utenti.md
+  titolo: Utenti
+  modulo: Archivi
+  maschera_id: IDD_IMPO_MENU
+  immagine: docs/assets/img/anagrafiche/utenti.png
+  percorso: Archivi ▸ Utenti ▸ Inserimento
+  voce_id: ID_UTILITY_UTENTI_INSERIMENTO
+  comando: 33563
+  alternative:
+  - percorso: Archivi ▸ Utenti ▸ Modifica
+    comando: 33564
+  suggerimenti: []
+  stato: pronta
+- slug: zone
+  scheda: docs/moduli/anagrafiche/zone.md
+  titolo: Zone
+  modulo: Archivi
+  maschera_id: IDD_TBC_ZONE
+  immagine: docs/assets/img/anagrafiche/zone.png
+  percorso: Archivi ▸ Zone ▸ Inserimento
+  voce_id: ID_ARCHIVI_ZONE_INSERIMENTO
+  comando: 32771
+  alternative:
+  - percorso: Archivi ▸ Zone ▸ Modifica
+    comando: 32772
+  suggerimenti: []
+  stato: pronta
+- slug: analisi-lotti
+  scheda: docs/moduli/analisi-dati/analisi-lotti.md
+  titolo: Analisi e giacenza dei lotti
+  modulo: Analisi Dati
+  maschera_id: IDD_ART_ANALISI_LOTTI
+  immagine: docs/assets/img/analisi-dati/analisi-lotti.png
+  percorso: Analisi Dati ▸ Analisi Lotti
+  voce_id: ID_ARTICOLI_ANALISILOTTI
+  comando: 34145
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: analisi-vendite
+  scheda: docs/moduli/analisi-dati/analisi-vendite.md
+  titolo: Analisi delle vendite
+  modulo: Analisi Dati
+  maschera_id: IDD_VEN_VENDITE_DAL
+  immagine: docs/assets/img/analisi-dati/analisi-vendite.png
+  percorso: Analisi Dati ▸ Analisi Vendite Periodo
+  voce_id: ID_ANALISIDATI_ANALISIVENDUTODAUNADATA
+  comando: 33706
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: grafici-e-report
+  scheda: docs/moduli/analisi-dati/grafici-e-report.md
+  titolo: Grafici pluriennali e report personalizzati
+  modulo: Analisi Dati
+  maschera_id: IDD_VEN_VENDUTO_PLURIENNALI
+  immagine: docs/assets/img/analisi-dati/grafici-e-report.png
+  percorso: Analisi Dati ▸ Grafico Vendite Pluriennali
+  voce_id: ID_ANALISIDATI_GRAFICOVENDITEPLURIENNALI
+  comando: 33717
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: venduto-incrociato
+  scheda: docs/moduli/analisi-dati/venduto-incrociato.md
+  titolo: Venduto incrociato per cliente e per agente
+  modulo: Analisi Dati
+  maschera_id: IDD_VEN_VENDUTO_CLI_ART
+  immagine: docs/assets/img/analisi-dati/venduto-incrociato.png
+  percorso: Analisi Dati ▸ Venduto Cliente/Articolo
+  voce_id: ID_ANALISIDATI_VENDUTOCLIENTEARTICOLO
+  comando: 33705
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: venduto-per
+  scheda: docs/moduli/analisi-dati/venduto-per.md
+  titolo: Venduto per…
+  modulo: Analisi Dati
+  maschera_id: IDD_VEN_VENDITE_REPORT
+  immagine: docs/assets/img/analisi-dati/venduto-per.png
+  percorso: Analisi Dati ▸ Turnover Articoli
+  voce_id: ID_ANALISIDATI_TURNOVERARTICOLI
+  comando: 33818
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: bilance
+  scheda: docs/moduli/casse-bilance/bilance.md
+  titolo: Bilance
+  modulo: Casse e Bilance
+  maschera_id: IDD_ELGA
+  immagine: docs/assets/img/casse-bilance/bilance.png
+  percorso: Casse e Bilance ▸ Bilance ▸ Bilance ZENITH ▸ (le sue voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: casse
+  scheda: docs/moduli/casse-bilance/casse.md
+  titolo: Casse
+  modulo: Casse e Bilance
+  maschera_id: IDD_VEN_BRAINPOS
+  immagine: docs/assets/img/casse-bilance/casse.png
+  percorso: Casse e Bilance ▸ Casse ▸ SysPC ▸ (le sue voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Casse e Bilance ▸ Casse ▸ SysPC ▸ Fine Giornata
+  stato: da-mappare
+- slug: frontalini
+  scheda: docs/moduli/casse-bilance/frontalini.md
+  titolo: Frontalini
+  modulo: Casse e Bilance
+  maschera_id: IDD_ART_FRONTALINI_ST
+  immagine: docs/assets/img/casse-bilance/frontalini.png
+  percorso: Casse e Bilance ▸ Gestione e Stampa Frontalini
+  voce_id: ID_BATTENTI_STAMPA
+  comando: 33359
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-casse-bilance
+  scheda: docs/moduli/casse-bilance/stampe-casse-bilance.md
+  titolo: Stampe e manutenzione di casse e bilance
+  modulo: Casse e Bilance
+  maschera_id: IDD_ART_ARTICOLI_ST
+  immagine: docs/assets/img/casse-bilance/stampe-casse-bilance.png
+  percorso: Casse e Bilance ▸ Bilance ▸ Stampa Articoli Gestione Bilance
+  voce_id: ID_CASSEBILANCE_STAMPAARTICOLIGESTIONEBILANCE
+  comando: 33416
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: banche-ditta
+  scheda: docs/moduli/contabilita/banche-ditta.md
+  titolo: Banche ditta
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_BANCHE_MIL
+  immagine: docs/assets/img/contabilita/banche-ditta.png
+  percorso: Archivi ▸ Contabilità ▸ Banche Ditta ▸ Inserimento
+  voce_id: ID_ARCHIVI_CONTABILIT_BANCHEDITTA_INSERIMENTO
+  comando: 33328
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Banche Ditta ▸ Modifica
+    comando: 33329
+  suggerimenti: []
+  stato: pronta
+- slug: banche
+  scheda: docs/moduli/contabilita/banche.md
+  titolo: Banche
+  modulo: Archivi
+  maschera_id: IDD_TBC_BANCHE
+  immagine: docs/assets/img/contabilita/banche.png
+  percorso: Archivi ▸ Banche ▸ Inserimento
+  voce_id: ID_ARCHIVI_BANCHE_INSERIMENTO
+  comando: 32791
+  alternative:
+  - percorso: Archivi ▸ Banche ▸ Modifica
+    comando: 32792
+  suggerimenti: []
+  stato: pronta
+- slug: centri-di-costo
+  scheda: docs/moduli/contabilita/centri-di-costo.md
+  titolo: Centri di costo/ricavo
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_CCOSTO
+  immagine: docs/assets/img/contabilita/centri-di-costo.png
+  percorso: Archivi ▸ Contabilità ▸ Centri di Costo/Ricavo ▸ Inserimento
+  voce_id: ID_ARCHIVI_CONTABILIT_CENTRIDICOSTO_INSERIMENTO
+  comando: 33823
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Centri di Costo/Ricavo ▸ Modifica
+    comando: 33824
+  suggerimenti: []
+  stato: pronta
+- slug: comunicazioni-iva
+  scheda: docs/moduli/contabilita/comunicazioni-iva.md
+  titolo: Comunicazioni IVA
+  modulo: Contabilità
+  maschera_id: IDD_CON_FATTURE_XML
+  immagine: docs/assets/img/contabilita/comunicazioni-iva.png
+  percorso: Contabilità ▸ Comunicazione Operazioni IVA ▸ Comunicazione Trimestrale Operazioni IVA
+  voce_id: ID_COMUNICAZIONEOPERAZIONIIVA_COMUNICAZIONETRIMASTRALEOPERAZIONIIVA
+  comando: 34036
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: conti-riclassificazione
+  scheda: docs/moduli/contabilita/conti-riclassificazione.md
+  titolo: Conti per la riclassificazione
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_RICLASSIFICAZIONE
+  immagine: docs/assets/img/contabilita/conti-riclassificazione.png
+  percorso: Archivi ▸ Contabilità ▸ Conti per la Riclassificazione ▸ Inserimento
+  voce_id: ID_ARCHIVI_CONTABILIT_CONTIRICLASSIFICAZIONE_INSERIMENTO
+  comando: 33284
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Conti per la Riclassificazione ▸ Modifica
+    comando: 33285
+  suggerimenti: []
+  stato: pronta
+- slug: conti
+  scheda: docs/moduli/contabilita/conti.md
+  titolo: Conti
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_CONTI
+  immagine: docs/assets/img/contabilita/conti.png
+  percorso: Archivi ▸ Contabilità ▸ Conti ▸ Inserimento
+  voce_id: ID_ARCHIVI_CONTI_INSERIMENTO
+  comando: 32825
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Conti ▸ Modifica
+    comando: 32826
+  suggerimenti: []
+  stato: pronta
+- slug: corrispettivi-speciali-cointestatari
+  scheda: docs/moduli/contabilita/corrispettivi-speciali-cointestatari.md
+  titolo: Integrazioni, operazioni speciali e cointestatari
+  modulo: Contabilità
+  maschera_id: IDD_CON_CORRISPETTIVI
+  immagine: docs/assets/img/contabilita/corrispettivi-speciali-cointestatari.png
+  percorso: Contabilità ▸ Dettagli Corrispettivi ▸ Integrazioni
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Contabilità ▸ Comunicazione Operazioni IVA ▸ Dettagli Corrispettivi ▸ Integrazioni
+  stato: da-mappare
+- slug: esportazione-movimenti
+  scheda: docs/moduli/contabilita/esportazione-movimenti.md
+  titolo: Esportazione movimenti
+  modulo: Contabilità
+  maschera_id: IDD_PNOTA_EXPORT
+  immagine: docs/assets/img/contabilita/esportazione-movimenti.png
+  percorso: Contabilità ▸ Esportazione Movimenti per SISPAC
+  voce_id: ID_PRIMANOTA_ESPORTAZIONEMOVIMENTIPERSISPAC
+  comando: 33130
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: fatture-elettroniche-passive
+  scheda: docs/moduli/contabilita/fatture-elettroniche-passive.md
+  titolo: Fatture elettroniche passive
+  modulo: Contabilità
+  maschera_id: IDD_CON_FATTURE_ELETTRONICHE
+  immagine: docs/assets/img/contabilita/fatture-elettroniche-passive.png
+  percorso: Contabilità ▸ Fatture Elettroniche Passive
+  voce_id: ID_PRIMANOTA_FATTUREELETTRONICHE
+  comando: 34060
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-prima-nota
+  scheda: docs/moduli/contabilita/gestione-prima-nota.md
+  titolo: Gestione prima nota
+  modulo: Contabilità
+  maschera_id: IDD_CON_GEST_PNOTA
+  immagine: docs/assets/img/contabilita/gestione-prima-nota.png
+  percorso: Contabilità ▸ Gestione Prima Nota
+  voce_id: ID_PRINANOTA_MODIFICA
+  comando: 32843
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: liquidazione-iva
+  scheda: docs/moduli/contabilita/liquidazione-iva.md
+  titolo: Liquidazione IVA e ventilazione
+  modulo: Contabilità
+  maschera_id: IDD_CON_LIQUIDAZ_IVA
+  immagine: docs/assets/img/contabilita/liquidazione-iva.png
+  percorso: Contabilità ▸ Ventilazione Corrispettivi
+  voce_id: ID_PRINANOTA_VENTILAZIONECORRISPETTIVI
+  comando: 33030
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: mastri
+  scheda: docs/moduli/contabilita/mastri.md
+  titolo: Mastri
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_MASTRI
+  immagine: docs/assets/img/contabilita/mastri.png
+  percorso: Archivi ▸ Contabilità ▸ Mastri ▸ Inserimento
+  voce_id: ID_ARCHIVI_MASTRI_INSERIMENTO
+  comando: 32822
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Mastri ▸ Modifica
+    comando: 32823
+  suggerimenti: []
+  stato: pronta
+- slug: registrazione-prima-nota
+  scheda: docs/moduli/contabilita/registrazione-prima-nota.md
+  titolo: Registrazione di prima nota
+  modulo: Contabilità
+  maschera_id: IDD_CON_PNOTA
+  immagine: docs/assets/img/contabilita/registrazione-prima-nota.png
+  percorso: Contabilità ▸ Inserimento
+  voce_id: ID_PRIMANOTA_INSERIMENTO
+  comando: 34103
+  alternative:
+  - percorso: Contabilità ▸ Modifica
+    comando: 34104
+  suggerimenti: []
+  stato: pronta
+- slug: registri-iva
+  scheda: docs/moduli/contabilita/registri-iva.md
+  titolo: Registri IVA
+  modulo: Contabilità
+  maschera_id: IDD_CON_REGISTRI_ST
+  immagine: docs/assets/img/contabilita/registri-iva.png
+  percorso: Contabilità ▸ Stampe Contabili ▸ Stampa Registro Acquisti
+  voce_id: ID_PRINANOTA_STAMPECONTABILI_STAMPAREGISTROACQUISTI
+  comando: 33014
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: rinumerazione-protocolli
+  scheda: docs/moduli/contabilita/rinumerazione-protocolli.md
+  titolo: Rinumerazione protocolli
+  modulo: Contabilità
+  maschera_id: IDD_CON_RENUM_PROT
+  immagine: docs/assets/img/contabilita/rinumerazione-protocolli.png
+  percorso: Contabilità ▸ Rinumerazione Protocolli
+  voce_id: ID_PRINANOTA_RINUMERAZIONEPROTOCOLLI
+  comando: 33012
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: sezioni
+  scheda: docs/moduli/contabilita/sezioni.md
+  titolo: Sezioni
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_TCN_SEZIONI
+  immagine: docs/assets/img/contabilita/sezioni.png
+  percorso: Archivi ▸ Contabilità ▸ Sezioni ▸ Inserimento
+  voce_id: ID_SEZIONI_INSERIMENTO
+  comando: 33878
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Sezioni ▸ Modifica
+    comando: 33879
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-contabili
+  scheda: docs/moduli/contabilita/stampe-contabili.md
+  titolo: Stampe contabili
+  modulo: Contabilità
+  maschera_id: IDD_CON_LIBRO_GIORNALE
+  immagine: docs/assets/img/contabilita/stampe-contabili.png
+  percorso: Contabilità ▸ Stampe Contabili ▸ Intestazione Fogli
+  voce_id: ID_PRINANOTA_STAMPECONTABILI_INTESTAZIONEFOGLI
+  comando: 33026
+  alternative:
+  - percorso: Contabilità ▸ Stampe Contabili ▸ Brogliaccio Movimenti
+    comando: 32944
+  - percorso: Contabilità ▸ Stampe Contabili ▸ Libro Mastro
+    comando: 33024
+  - percorso: Contabilità ▸ Stampe Contabili ▸ Stampa Libro Giornale
+    comando: 33023
+  - percorso: Contabilità ▸ Stampe Contabili ▸ Bilancio di Verifica
+    comando: 32976
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-piano-dei-conti
+  scheda: docs/moduli/contabilita/stampe-piano-dei-conti.md
+  titolo: Stampe del piano dei conti
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_CON_SCHEDE_CON
+  immagine: docs/assets/img/contabilita/stampe-piano-dei-conti.png
+  percorso: Archivi ▸ Contabilità ▸ Stampa Schede Conti
+  voce_id: ID_ARCHIVI_CONTABILIT_STAMPASCHEDECONTI
+  comando: 32971
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: statistiche-e-controlli
+  scheda: docs/moduli/contabilita/statistiche-e-controlli.md
+  titolo: Statistiche e controlli contabili
+  modulo: Contabilità
+  maschera_id: IDD_CON_STATISTICA
+  immagine: docs/assets/img/contabilita/statistiche-e-controlli.png
+  percorso: Contabilità ▸ Saldi Compensazione Clienti/Fornitori
+  voce_id: ID_PRIMANOTA_SALDICOMPENSAZIONECLIENTI
+  comando: 34077
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: titoli
+  scheda: docs/moduli/contabilita/titoli.md
+  titolo: Titoli
+  modulo: Archivi ▸ Contabilità
+  maschera_id: IDD_STU_TITOLI
+  immagine: docs/assets/img/contabilita/titoli.png
+  percorso: Archivi ▸ Contabilità ▸ Titoli ▸ Inserimento
+  voce_id: ID_MILONE_TITOLI_INSERIMENTO
+  comando: 32858
+  alternative:
+  - percorso: Archivi ▸ Contabilità ▸ Titoli ▸ Modifica
+    comando: 32859
+  suggerimenti: []
+  stato: pronta
+- slug: acquisizione-letture
+  scheda: docs/moduli/inventario/acquisizione-letture.md
+  titolo: Acquisizione delle letture
+  modulo: Inventario
+  maschera_id: IDD_INVENTARIO_AC
+  immagine: docs/assets/img/inventario/acquisizione-letture.png
+  percorso: Inventario ▸ Acquisizione Manuale Dati
+  voce_id: ID_INVENTARIO_ACQUISIZIONEDATI
+  comando: 32980
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: chiusura-inventario
+  scheda: docs/moduli/inventario/chiusura-inventario.md
+  titolo: Chiusura dell'inventario
+  modulo: Inventario
+  maschera_id: IDD_MAG_CHIUDI_INVENTARIO
+  immagine: docs/assets/img/inventario/chiusura-inventario.png
+  percorso: Inventario ▸ Chiusura Inventario
+  voce_id: ID_INVENTARIO_CHIUSURAINVENTARIO
+  comando: 32985
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-inventario
+  scheda: docs/moduli/inventario/stampe-inventario.md
+  titolo: Stampe dell'inventario
+  modulo: Inventario
+  maschera_id: IDD_ST_DATI_ACQUISITI
+  immagine: docs/assets/img/inventario/stampe-inventario.png
+  percorso: Inventario ▸ Stampa Dati Acquisiti
+  voce_id: ID_INVENTARIO_STAMPADATIACQUISITI
+  comando: 32981
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: analisi-fornitore
+  scheda: docs/moduli/listini-fornitori/analisi-fornitore.md
+  titolo: Analisi fornitore
+  modulo: Archivi ▸ Listini Fornitori
+  maschera_id: IDD_ART_ANALISI_FORNITORE
+  immagine: docs/assets/img/listini-fornitori/analisi-fornitore.png
+  percorso: Archivi ▸ Listini Fornitori ▸ Analisi Fornitore
+  voce_id: ID_LISTINIFORNITORI_ANALISIFORNITORE
+  comando: 34030
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-listini-fornitori
+  scheda: docs/moduli/listini-fornitori/gestione-listini-fornitori.md
+  titolo: Gestione listini fornitori
+  modulo: Archivi ▸ Listini Fornitori
+  maschera_id: IDD_LISTINI_FOR_GEST
+  immagine: docs/assets/img/listini-fornitori/gestione-listini-fornitori.png
+  percorso: Archivi ▸ Listini Fornitori ▸ Gestione
+  voce_id: ID_ARCHIVI_LISTINIACQUISTO
+  comando: 33553
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: analisi-listino
+  scheda: docs/moduli/listini-vendita/analisi-listino.md
+  titolo: Analisi listino da vendite ed esistenza
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ART_ANALISI_LISTINI
+  immagine: docs/assets/img/listini-vendita/analisi-listino.png
+  percorso: Archivi ▸ Listini Vendita ▸ Analisi Listino da Vendite/Esistenza
+  voce_id: ID_LISTINIVENDITA_ANALISILISTINODAVENDITE
+  comando: 34023
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: controllo-listini
+  scheda: docs/moduli/listini-vendita/controllo-listini.md
+  titolo: Conferma e confronto dei listini
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ART_CONFERMA_LISTINI
+  immagine: docs/assets/img/listini-vendita/controllo-listini.png
+  percorso: Archivi ▸ Listini Vendita ▸ Conferma Listini
+  voce_id: ID_LISTINIVENDITA_CONFERMALISTINI
+  comando: 33983
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: copia-listini
+  scheda: docs/moduli/listini-vendita/copia-listini.md
+  titolo: Copia listini
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_LISTINI_COPIA
+  immagine: docs/assets/img/listini-vendita/copia-listini.png
+  percorso: Archivi ▸ Listini Vendita ▸ Copia Listini
+  voce_id: ID_ARCHIVI_LISTINIVENDITA_COPIALISTINI
+  comando: 33212
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-listini
+  scheda: docs/moduli/listini-vendita/gestione-listini.md
+  titolo: Gestione listini
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ART_LISTINI_GEST
+  immagine: docs/assets/img/listini-vendita/gestione-listini.png
+  percorso: Archivi ▸ Listini Vendita ▸ Gestione
+  voce_id: ID_ARCHIVI_LISTINIVENDITA_GESTIONE
+  comando: 33214
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: stampa-listini
+  scheda: docs/moduli/listini-vendita/stampa-listini.md
+  titolo: Stampa listini
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ART_ARTICOLI_LISTINO
+  immagine: docs/assets/img/listini-vendita/stampa-listini.png
+  percorso: Archivi ▸ Listini Vendita ▸ Stampa Listino
+  voce_id: ID_ARCHIVI_ARTICOLI_STAMPALISTINO
+  comando: 33010
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: variazione-listini
+  scheda: docs/moduli/listini-vendita/variazione-listini.md
+  titolo: Variazioni di listino programmate
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ART_VARIAZIONE_LISTINI
+  immagine: docs/assets/img/listini-vendita/variazione-listini.png
+  percorso: Archivi ▸ Listini Vendita ▸ Variazioni Listini
+  voce_id: ID_LISTINIVENDITA_VARIAZIONILISTINI
+  comando: 34078
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: variazioni-di-massa
+  scheda: docs/moduli/listini-vendita/variazioni-di-massa.md
+  titolo: Variazioni di massa dei listini
+  modulo: Archivi ▸ Listini Vendita
+  maschera_id: IDD_ARTICOLI_LIS1
+  immagine: docs/assets/img/listini-vendita/variazioni-di-massa.png
+  percorso: Archivi ▸ Listini Vendita ▸ Varia Listini
+  voce_id: ID_ARCHIVI_ARTICOLI_VARIALISTINO
+  comando: 33094
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: anomalie-e-promozioni-sellin
+  scheda: docs/moduli/magazzino/anomalie-e-promozioni-sellin.md
+  titolo: Anomalie carichi e promozioni sellin
+  modulo: Magazzino
+  maschera_id: IDD_PRM_PROMO_SELLIN
+  immagine: docs/assets/img/magazzino/anomalie-e-promozioni-sellin.png
+  percorso: Magazzino ▸ Anomalie Carichi Merci ▸ Gestione
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Magazzino ▸ Anomalie Carichi Merci su Punti Vendita ▸ Gestione
+  - Magazzino ▸ Anomalie Documenti Interni ▸ Gestione
+  stato: da-mappare
+- slug: banchi-conservatori-movimenti
+  scheda: docs/moduli/magazzino/banchi-conservatori-movimenti.md
+  titolo: Movimenti dei banchi conservatori
+  modulo: Magazzino
+  maschera_id: IDD_MAG_BANCHI_CONSEGNA
+  immagine: docs/assets/img/magazzino/banchi-conservatori-movimenti.png
+  percorso: Magazzino ▸ Banchi Conservatori ▸ Consegna in Comodato Gratuito
+  voce_id: ID_MAGAZZINO_BANCHICONSERVATORI_CONSEGNA
+  comando: 33696
+  alternative:
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Consegna in Conto Vendita
+    comando: 33857
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Consegna per Riparazione
+    comando: 33861
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Ritiro Comodato Gratuito / Riparazione
+    comando: 33697
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Rottamazione
+    comando: 33856
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Modifica Movimenti
+    comando: 33698
+  - percorso: Magazzino ▸ Banchi Conservatori ▸ Stampa Movimenti
+    comando: 33699
+  suggerimenti: []
+  stato: pronta
+- slug: carico-merci
+  scheda: docs/moduli/magazzino/carico-merci.md
+  titolo: Carico merci
+  modulo: Magazzino
+  maschera_id: IDD_MAG_CARICO_MERCI
+  immagine: docs/assets/img/magazzino/carico-merci.png
+  percorso: Magazzino ▸ Nuovo Carico Merci
+  voce_id: ID_MAGAZZINO_CARICOMERCI_INSERIMENTO
+  comando: 32958
+  alternative:
+  - percorso: Magazzino ▸ Modifica Carico Merci
+    comando: 32959
+  - percorso: Magazzino ▸ Modifica Carichi Fiscali
+    comando: 33487
+  - percorso: Magazzino ▸ Controllo Merci in Entrata
+    comando: 33584
+  - percorso: Magazzino ▸ Stampa Riepilogo Carichi
+    comando: 33234
+  - percorso: Magazzino ▸ Generazione e Carico Buoni Regalo
+    comando: 33978
+  - percorso: Magazzino ▸ Stampa Giornale Carichi Prodotti Fiscali
+    comando: 33345
+  suggerimenti: []
+  stato: pronta
+- slug: categorie-merceologiche
+  scheda: docs/moduli/magazzino/categorie-merceologiche.md
+  titolo: Categorie merceologiche
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBM_CATMERC
+  immagine: docs/assets/img/magazzino/categorie-merceologiche.png
+  percorso: Archivi ▸ Magazzino ▸ Categorie Merceologiche ▸ Inserimento
+  voce_id: ID_ARCHIVI_CATEGORIEMERCEOLOGICHE_INSERIMENTO
+  comando: 32783
+  alternative:
+  - percorso: Archivi ▸ Magazzino ▸ Categorie Merceologiche ▸ Modifica
+    comando: 32784
+  suggerimenti: []
+  stato: pronta
+- slug: marchi
+  scheda: docs/moduli/magazzino/marchi.md
+  titolo: Marchi
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBM_MARCHI
+  immagine: docs/assets/img/magazzino/marchi.png
+  percorso: Archivi ▸ Magazzino ▸ Marchi ▸ Inserimento
+  voce_id: ID_ARCHIVI_MAGAZZINO_MARCHI_INSERIMENTO
+  comando: 33145
+  alternative:
+  - percorso: Archivi ▸ Magazzino ▸ Marchi ▸ Modifica
+    comando: 33146
+  suggerimenti: []
+  stato: pronta
+- slug: movimenti-magazzino
+  scheda: docs/moduli/magazzino/movimenti-magazzino.md
+  titolo: Movimenti di magazzino
+  modulo: Magazzino
+  maschera_id: IDD_MAG_MOVIMENTI
+  immagine: docs/assets/img/magazzino/movimenti-magazzino.png
+  percorso: Magazzino ▸ Inserimento Movimenti
+  voce_id: ID_MAGAZZINO_INSERIMENTOMOVIMENTI
+  comando: 32876
+  alternative:
+  - percorso: Magazzino ▸ Modifica Movimenti
+    comando: 32877
+  suggerimenti: []
+  stato: pronta
+- slug: produzione
+  scheda: docs/moduli/magazzino/produzione.md
+  titolo: Produzione
+  modulo: Magazzino
+  maschera_id: IDD_MAG_PRODUZIONE
+  immagine: docs/assets/img/magazzino/produzione.png
+  percorso: Magazzino ▸ Produzione ▸ (una delle voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: reparti
+  scheda: docs/moduli/magazzino/reparti.md
+  titolo: Reparti
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBM_REPARTI
+  immagine: docs/assets/img/magazzino/reparti.png
+  percorso: Archivi ▸ Magazzino ▸ Reparti ▸ Inserimento
+  voce_id: ID_ARCHIVI_REPARTI_INSERIMENTO
+  comando: 32862
+  alternative:
+  - percorso: Archivi ▸ Magazzino ▸ Reparti ▸ Modifica
+    comando: 32863
+  suggerimenti: []
+  stato: pronta
+- slug: stagioni
+  scheda: docs/moduli/magazzino/stagioni.md
+  titolo: Stagioni
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBM_STAGIONI
+  immagine: docs/assets/img/magazzino/stagioni.png
+  percorso: Archivi ▸ Magazzino ▸ Stagioni ▸ Inserimento
+  voce_id: ID_ARCHIVI_STAGIONI_INSERIMENTO
+  comando: 32864
+  alternative:
+  - percorso: Archivi ▸ Magazzino ▸ Stagioni ▸ Modifica
+    comando: 32865
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-magazzino-clienti
+  scheda: docs/moduli/magazzino/stampe-magazzino-clienti.md
+  titolo: Stampe magazzino clienti
+  modulo: Magazzino
+  maschera_id: IDD_ST_MAGAZZINO
+  immagine: docs/assets/img/magazzino/stampe-magazzino-clienti.png
+  percorso: Magazzino ▸ Stampe Magazzino Clienti ▸ (una delle voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: stampe-magazzino-fornitori
+  scheda: docs/moduli/magazzino/stampe-magazzino-fornitori.md
+  titolo: Stampe magazzino fornitori
+  modulo: Magazzino
+  maschera_id: IDD_ST_MAGAZZINO
+  immagine: docs/assets/img/magazzino/stampe-magazzino-fornitori.png
+  percorso: Magazzino ▸ Stampe Magazzino Fornitori ▸ Scheda Movimenti Fornitore
+  voce_id: ID_MAGAZZINO_SCHEDAMOVIMENTIFORNITORE
+  comando: 32954
+  alternative:
+  - percorso: Magazzino ▸ Stampe Magazzino Fornitori ▸ Sintesi Movimenti Fornitore
+    comando: 33268
+  - percorso: Magazzino ▸ Stampe Magazzino Fornitori ▸ Riepilogo Totali Movimenti Fornitori
+    comando: 33511
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-movimenti-magazzino
+  scheda: docs/moduli/magazzino/stampe-movimenti-magazzino.md
+  titolo: Stampe dei movimenti di magazzino
+  modulo: Magazzino
+  maschera_id: IDD_ST_MAGAZZINO
+  immagine: docs/assets/img/magazzino/stampe-movimenti-magazzino.png
+  percorso: Magazzino ▸ (una delle voci elencate sotto)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: tabelle-di-classificazione
+  scheda: docs/moduli/magazzino/tabelle-di-classificazione.md
+  titolo: Tabelle di classificazione
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBC_TABELLE
+  immagine: docs/assets/img/magazzino/tabelle-di-classificazione.png
+  percorso: Archivi ▸ Magazzino ▸ (una delle voci elencate sotto) ▸ Inserimento
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: unita-di-misura
+  scheda: docs/moduli/magazzino/unita-di-misura.md
+  titolo: Unità di misura
+  modulo: Archivi ▸ Magazzino
+  maschera_id: IDD_TBM_MISURE
+  immagine: docs/assets/img/magazzino/unita-di-misura.png
+  percorso: Archivi ▸ Magazzino ▸ Unità di Misura ▸ Inserimento
+  voce_id: ID_ARCHIVI_UNITDIMISURA_INSERIMENTO
+  comando: 32796
+  alternative:
+  - percorso: Archivi ▸ Magazzino ▸ Unità di Misura ▸ Modifica
+    comando: 32797
+  suggerimenti: []
+  stato: pronta
+- slug: generazione-ordini
+  scheda: docs/moduli/ordini/generazione-ordini.md
+  titolo: Generazione degli ordini
+  modulo: Ordini
+  maschera_id: IDD_VEN_ORDFOR_FROM_ORDCLI
+  immagine: docs/assets/img/ordini/generazione-ordini.png
+  percorso: Ordini ▸ Generazione Ordini a Fornitori da Ordini Clienti
+  voce_id: ID_ORDINI_GENERAZIONEORDINIAFORNITORIDAORDINICLIENTI
+  comando: 33968
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: ordini-in-lavorazione-e-ricezione
+  scheda: docs/moduli/ordini/ordini-in-lavorazione-e-ricezione.md
+  titolo: Ordini in lavorazione e in ricezione
+  modulo: Ordini
+  maschera_id: IDD_ORDINI_LAVORAZIONE
+  immagine: docs/assets/img/ordini/ordini-in-lavorazione-e-ricezione.png
+  percorso: Ordini ▸ Ordini da Clienti ▸ Ordini in Lavorazione
+  voce_id: ID_ORDINI_ORDINIINLAVORAZIONE
+  comando: 33299
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: ordini-tabacchi
+  scheda: docs/moduli/ordini/ordini-tabacchi.md
+  titolo: Ordini tabacchi
+  modulo: Ordini
+  maschera_id: IDD_VEN_ORDINI_TABACCHI
+  immagine: docs/assets/img/ordini/ordini-tabacchi.png
+  percorso: Ordini ▸ Ordini da Clienti ▸ Inserimento Ordini Tabacchi Patentini
+  voce_id: ID_ORDINI_ORDINIDACLIENTI_INSERIMENTOORDINITABACCHI
+  comando: 33849
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: richieste-offerta
+  scheda: docs/moduli/ordini/richieste-offerta.md
+  titolo: Richieste offerta
+  modulo: Ordini
+  maschera_id: nessuna dialog propria
+  immagine: docs/assets/img/ordini/richieste-offerta.png
+  percorso: Ordini ▸ Richieste Offerta ▸ Gestione
+  voce_id: ID_RICHIESTEOFFERTA_GESTIONE
+  comando: 34126
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: riordino-articoli
+  scheda: docs/moduli/ordini/riordino-articoli.md
+  titolo: Riordino articoli con analisi prezzi
+  modulo: Ordini
+  maschera_id: IDD_ART_RIORDINO
+  immagine: docs/assets/img/ordini/riordino-articoli.png
+  percorso: Ordini ▸ Ordini a Fornitori ▸ Generazione Ordini con Analisi Prezzi
+  voce_id: ID_ORDINIAFORNITORI_GENERAZIONEORDINICONANALISIPREZZI
+  comando: 33982
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: scambio-ordini
+  scheda: docs/moduli/ordini/scambio-ordini.md
+  titolo: Scambio degli ordini con l'esterno
+  modulo: Ordini
+  maschera_id: IDD_DOCUMENTI_INVIO
+  immagine: docs/assets/img/ordini/scambio-ordini.png
+  percorso: Ordini ▸ Ordini da Clienti ▸ Invio Ordini al Server
+  voce_id: ID_ORDINI_INVIOORDINIALSERVER
+  comando: 33107
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-ordini
+  scheda: docs/moduli/ordini/stampe-ordini.md
+  titolo: Stampe degli ordini
+  modulo: Ordini
+  maschera_id: IDD_ORDINI_CLI
+  immagine: docs/assets/img/ordini/stampe-ordini.png
+  percorso: Ordini ▸ Ordini da Clienti ▸ Stampa Riepilogo
+  voce_id: ID_VENDITE_ORDINICLIENTI_STAMPARIEPILOGO
+  comando: 33066
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: controllo-crediti
+  scheda: docs/moduli/scadenze/controllo-crediti.md
+  titolo: Controllo crediti e debiti
+  modulo: Scadenze
+  maschera_id: IDD_CON_CONTROLLO_CREDITI
+  immagine: docs/assets/img/scadenze/controllo-crediti.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Stampa Controllo Crediti
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa Controllo Crediti
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa Solleciti
+  stato: da-mappare
+- slug: distinte-incasso-pagamento
+  scheda: docs/moduli/scadenze/distinte-incasso-pagamento.md
+  titolo: Distinte di incasso e di pagamento
+  modulo: Scadenze
+  maschera_id: IDD_CON_SCAD_PAGAMENTO
+  immagine: docs/assets/img/scadenze/distinte-incasso-pagamento.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Inserimento Distinta Incasso
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Inserimento Distinta Incasso
+  - Scadenze ▸ Scadenzario Clienti ▸ Visualizza Distinta Incasso
+  stato: da-mappare
+- slug: effetti-e-riba
+  scheda: docs/moduli/scadenze/effetti-e-riba.md
+  titolo: Effetti e RI.BA.
+  modulo: Scadenze
+  maschera_id: IDD_CON_SCADENZE_RIBA
+  immagine: docs/assets/img/scadenze/effetti-e-riba.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Stampa Portafoglio Effetti
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa Portafoglio Effetti
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa Controllo Crediti
+  stato: da-mappare
+- slug: gestione-scadenze
+  scheda: docs/moduli/scadenze/gestione-scadenze.md
+  titolo: Gestione scadenze
+  modulo: Scadenze
+  maschera_id: IDD_CON_GEST_SCADENZE
+  immagine: docs/assets/img/scadenze/gestione-scadenze.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Gestione Scadenze
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Gestione Scadenze
+  - Scadenze ▸ Scadenzario Fornitori ▸ Gestione Scadenze
+  stato: da-mappare
+- slug: manutenzione-scadenze
+  scheda: docs/moduli/scadenze/manutenzione-scadenze.md
+  titolo: Manutenzione dello scadenziario
+  modulo: Scadenze
+  maschera_id: IDD_CON_SCADENZE_ELIMINA
+  immagine: docs/assets/img/scadenze/manutenzione-scadenze.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Controllo Scadenze <-> Schede Contabili
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Controllo Scadenze <-> Schede Contabili
+  - Scadenze ▸ Scadenzario Fornitori ▸ Controllo Scadenze <-> Schede Contabili
+  stato: da-mappare
+- slug: stampe-scadenze
+  scheda: docs/moduli/scadenze/stampe-scadenze.md
+  titolo: Stampe delle scadenze
+  modulo: Scadenze
+  maschera_id: IDD_CON_SCADENZE_ST
+  immagine: docs/assets/img/scadenze/stampe-scadenze.png
+  percorso: Scadenze ▸ Scadenziario Clienti ▸ Stampa
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa
+  - Scadenze ▸ Scadenzario Clienti ▸ Stampa RI.BA.
+  stato: da-mappare
+- slug: esportazione-documenti
+  scheda: docs/moduli/trasferimenti/esportazione-documenti.md
+  titolo: Esportazione documenti per tracciato
+  modulo: Trasferimenti
+  maschera_id: IDD_EXPORT_DOCUMENTI
+  immagine: docs/assets/img/trasferimenti/esportazione-documenti.png
+  percorso: Trasferimenti ▸ Esportazione DDT ▸ Fornitori ▸ (un tracciato)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Trasferimenti ▸ Esportazione DDT ▸ Fornitori ▸ Esportazione DDT - KRAFT
+  - Trasferimenti ▸ Esportazione DDT ▸ Fornitori ▸ Esportazione DDT - FACILE
+  stato: da-mappare
+- slug: esportazioni-specifiche
+  scheda: docs/moduli/trasferimenti/esportazioni-specifiche.md
+  titolo: Esportazioni con maschera propria
+  modulo: Trasferimenti
+  maschera_id: IDD_VEN_EXPORT_LISTINI
+  immagine: docs/assets/img/trasferimenti/esportazioni-specifiche.png
+  percorso: Trasferimenti ▸ Genera Listino per Punti Vendita
+  voce_id: ID_UTILITY_GENERALISTINOPERPUNTIVENDITA
+  comando: 33011
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: ricezione-dati
+  scheda: docs/moduli/trasferimenti/ricezione-dati.md
+  titolo: Ricezione dati
+  modulo: Trasferimenti
+  maschera_id: IDD_IMPORTAZIONE_DOCUMENTI
+  immagine: docs/assets/img/trasferimenti/ricezione-dati.png
+  percorso: Trasferimenti ▸ Ricezione Dati ▸ (una delle voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: assistenza
+  scheda: docs/moduli/utility/assistenza.md
+  titolo: Assistenza
+  modulo: Utility
+  maschera_id: IDD_ART_ARTICOLI_VARIA
+  immagine: docs/assets/img/utility/assistenza.png
+  percorso: Utility ▸ Assistenza ▸ (una delle voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: esercizi-e-chiusure
+  scheda: docs/moduli/utility/esercizi-e-chiusure.md
+  titolo: Esercizi, ditte e chiusure contabili
+  modulo: Utility
+  maschera_id: IDD_SEL_ESERCIZIO
+  immagine: docs/assets/img/utility/esercizi-e-chiusure.png
+  percorso: Utility ▸ Seleziona Archivio
+  voce_id: ID_UTILITY_SELEZIONAARCHIVIO
+  comando: 33006
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: etichette-barcode
+  scheda: docs/moduli/utility/etichette-barcode.md
+  titolo: Etichette codici a barre
+  modulo: Utility
+  maschera_id: IDD_ART_ST_ETICHETTE
+  immagine: docs/assets/img/utility/etichette-barcode.png
+  percorso: Utility ▸ Stampa Etichette Barcode
+  voce_id: ID_UTILITY_STAMPAETICHETTEBARCODE
+  comando: 32974
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-licenza
+  scheda: docs/moduli/utility/gestione-licenza.md
+  titolo: Gestione della licenza
+  modulo: Utility
+  maschera_id: IDD_RSAREGISTER_ATTIVAZIONE
+  immagine: docs/assets/img/utility/gestione-licenza.png
+  percorso: Utility ▸ Gestione Licenza ▸ Attivazione Licenza
+  voce_id: ID_UTILITY_GESTIONELICENZA_ATTIVAZIONE
+  comando: 33597
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: impostazioni-postazione
+  scheda: docs/moduli/utility/impostazioni-postazione.md
+  titolo: Impostazioni della postazione
+  modulo: Utility
+  maschera_id: IDD_IMPOSTAZIONI
+  immagine: docs/assets/img/utility/impostazioni-postazione.png
+  percorso: Utility ▸ Impostazioni Postazione
+  voce_id: ID_UTILITY_IMPOSTAZIONIPOSTAZIONE
+  comando: 32975
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: manutenzione-archivi
+  scheda: docs/moduli/utility/manutenzione-archivi.md
+  titolo: Manutenzione degli archivi
+  modulo: Utility
+  maschera_id: IDD_MAG_RICALCOLO_MAG
+  immagine: docs/assets/img/utility/manutenzione-archivi.png
+  percorso: Utility ▸ Ricalcolo Saldi Contabili
+  voce_id: ID_UTILITY_RIGENERAZIONESALDICONTABILI
+  comando: 32928
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: acconti
+  scheda: docs/moduli/vendite/acconti.md
+  titolo: Acconti
+  modulo: Vendite
+  maschera_id: IDD_LAD_ACCONTI
+  immagine: docs/assets/img/vendite/acconti.png
+  percorso: Vendite ▸ Acconti ▸ Inserimento
+  voce_id: ID_VENDITE_ACCONTI_INSERIMENTO
+  comando: 33643
+  alternative:
+  - percorso: Vendite ▸ Acconti ▸ Modifica
+    comando: 33644
+  - percorso: Vendite ▸ Acconti ▸ Stampa
+    comando: 33645
+  suggerimenti: []
+  stato: pronta
+- slug: contabilizzazione-documenti
+  scheda: docs/moduli/vendite/contabilizzazione-documenti.md
+  titolo: Contabilizzazione dei documenti
+  modulo: Vendite
+  maschera_id: nessuna dialog propria
+  immagine: docs/assets/img/vendite/contabilizzazione-documenti.png
+  percorso: Vendite ▸ Fatture ▸ Contabilizza
+  voce_id: ID_VENDITE_FATTURE_CONTABILIZZA
+  comando: 32892
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: documenti-accompagnatori-semplificati
+  scheda: docs/moduli/vendite/documenti-accompagnatori-semplificati.md
+  titolo: Documenti accompagnatori semplificati
+  modulo: Vendite
+  maschera_id: IDD_DAS
+  immagine: docs/assets/img/vendite/documenti-accompagnatori-semplificati.png
+  percorso: Vendite ▸ Documenti Accompagnatori Semplificati ▸ Inserimento
+  voce_id: ID_VENDITE_DOCUMENTIACCOMPAGNATORISEMPLIFICATI_INSERIMENTO
+  comando: 33729
+  alternative:
+  - percorso: Vendite ▸ Documenti Accompagnatori Semplificati ▸ Modifica
+    comando: 33730
+  - percorso: Vendite ▸ Documenti Accompagnatori Semplificati ▸ Stampa Distinta
+    comando: 33741
+  - percorso: Vendite ▸ Documenti Accompagnatori Semplificati ▸ Duplica
+    comando: 33942
+  suggerimenti: []
+  stato: pronta
+- slug: documento-di-vendita
+  scheda: docs/moduli/vendite/documento-di-vendita.md
+  titolo: Documento di vendita
+  modulo: Vendite
+  maschera_id: IDD_VEN_FATTURE
+  immagine: docs/assets/img/vendite/documento-di-vendita.png
+  percorso: Vendite ▸ (un tipo di documento) ▸ Inserimento
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Energy ▸ Tipi Documento ▸ Inserimento
+  stato: da-mappare
+- slug: emissione-fatture-da-documenti
+  scheda: docs/moduli/vendite/emissione-fatture-da-documenti.md
+  titolo: Emissione fatture da documenti
+  modulo: Vendite
+  maschera_id: nessuna dialog propria
+  immagine: docs/assets/img/vendite/emissione-fatture-da-documenti.png
+  percorso: Vendite ▸ Doc. di Trasporto ▸ Emissione Fatture
+  voce_id: ID_VENDITE_DOCDITRASPORTO_EMISSIONEFATTURE
+  comando: 32901
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: esporta-duplica-documenti
+  scheda: docs/moduli/vendite/esporta-duplica-documenti.md
+  titolo: Esportazione, duplicazione e ricezione dei documenti
+  modulo: Vendite
+  maschera_id: IDD_VEN_DUPLICA_DOC
+  immagine: docs/assets/img/vendite/esporta-duplica-documenti.png
+  percorso: Vendite ▸ (un tipo di documento) ▸ Esporta
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: fatture-elettroniche-attive
+  scheda: docs/moduli/vendite/fatture-elettroniche-attive.md
+  titolo: Fatture elettroniche attive
+  modulo: Vendite
+  maschera_id: IDD_CON_FATTURE_ELETTRONICHE_ATTIVE
+  immagine: docs/assets/img/vendite/fatture-elettroniche-attive.png
+  percorso: Vendite ▸ Fatture ▸ Invio Massivo Fatture Elettroniche
+  voce_id: ID_FATTURE_INVIOFATTUREELETTRONICHE
+  comando: 34067
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: fatture-ricorrenti
+  scheda: docs/moduli/vendite/fatture-ricorrenti.md
+  titolo: Fatture ricorrenti
+  modulo: Vendite
+  maschera_id: IDD_OFF_FATRIC
+  immagine: docs/assets/img/vendite/fatture-ricorrenti.png
+  percorso: Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Inserimento Schede Contratti
+  voce_id: ID_FATTURERICORRENTI_INSERIMENTO
+  comando: 33995
+  alternative:
+  - percorso: Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Modifica Schede Contratti
+    comando: 33996
+  - percorso: Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Stampa Schede Contratti
+    comando: 34003
+  - percorso: Vendite ▸ Fatture ▸ Fatture Ricorrenti ▸ Emissione Fatture
+    comando: 33998
+  suggerimenti: []
+  stato: pronta
+- slug: gestione-documenti
+  scheda: docs/moduli/vendite/gestione-documenti.md
+  titolo: Gestione documenti
+  modulo: Vendite
+  maschera_id: IDD_VEN_FATTURE_GRID
+  immagine: docs/assets/img/vendite/gestione-documenti.png
+  percorso: Vendite ▸ (un tipo di documento) ▸ Gestione
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: ordini-clienti
+  scheda: docs/moduli/vendite/ordini-clienti.md
+  titolo: Ordini clienti
+  modulo: Vendite
+  maschera_id: nessuna dialog propria
+  immagine: docs/assets/img/vendite/ordini-clienti.png
+  percorso: Vendite ▸ Ordini Clienti ▸ Stampa Riepilogo
+  voce_id: ID_VENDITE_ORDINICLIENTI_STAMPARIEPILOGO
+  comando: 33066
+  alternative:
+  - percorso: Vendite ▸ Ordini Clienti ▸ Stampa Ordini per Cliente
+    comando: 33068
+  - percorso: Vendite ▸ Ordini Clienti ▸ Stampa Ordini per Articolo
+    comando: 33069
+  - percorso: Vendite ▸ Ordini Clienti ▸ Cancellazione Ordini Evasi
+    comando: 33070
+  suggerimenti: []
+  stato: pronta
+- slug: preventivi
+  scheda: docs/moduli/vendite/preventivi.md
+  titolo: Preventivi
+  modulo: Vendite
+  maschera_id: IDD_VEN_PREVENTIVI
+  immagine: docs/assets/img/vendite/preventivi.png
+  percorso: Vendite ▸ Preventivi ▸ Inserimento
+  voce_id: ID_VENDITE_PREVENTIVI_INSERIMENTO
+  comando: 33141
+  alternative:
+  - percorso: Vendite ▸ Preventivi ▸ Modifica
+    comando: 33142
+  - percorso: Vendite ▸ Preventivi ▸ Gestione
+    comando: 34110
+  - percorso: Vendite ▸ Preventivi ▸ Stampa Riepilogo
+    comando: 33143
+  - percorso: Vendite ▸ Preventivi ▸ Duplica
+    comando: 33150
+  suggerimenti: []
+  stato: pronta
+- slug: promozioni
+  scheda: docs/moduli/vendite/promozioni.md
+  titolo: Promozioni
+  modulo: Vendite
+  maschera_id: IDD_PRM_PROMOZIONI_HEAD
+  immagine: docs/assets/img/vendite/promozioni.png
+  percorso: Vendite ▸ Promozioni ▸ Inserimento
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti:
+  - Vendite ▸ Promozioni Sellout ▸ Inserimento
+  - Vendite ▸ Acconti ▸ Inserimento
+  stato: da-mappare
+- slug: provvigioni-agenti
+  scheda: docs/moduli/vendite/provvigioni-agenti.md
+  titolo: Provvigioni agenti e capi area
+  modulo: Vendite
+  maschera_id: IDD_PROVVIGIONI
+  immagine: docs/assets/img/vendite/provvigioni-agenti.png
+  percorso: Vendite ▸ Provvigioni Agenti - Capi Area ▸ (una delle voci)
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: riepiloghi-e-statistiche
+  scheda: docs/moduli/vendite/riepiloghi-e-statistiche.md
+  titolo: Riepiloghi e statistiche di vendita
+  modulo: Vendite
+  maschera_id: IDD_FAT_RIEPILOGO
+  immagine: docs/assets/img/vendite/riepiloghi-e-statistiche.png
+  percorso: Vendite ▸ (un tipo di documento) ▸ Riepilogo
+  voce_id: null
+  comando: null
+  alternative: []
+  suggerimenti: []
+  stato: da-mappare
+- slug: ristampa-documenti
+  scheda: docs/moduli/vendite/ristampa-documenti.md
+  titolo: Ristampa dei documenti
+  modulo: Vendite
+  maschera_id: IDD_VEN_FAT_STAMPA
+  immagine: docs/assets/img/vendite/ristampa-documenti.png
+  percorso: Vendite ▸ Fatture ▸ Ristampa
+  voce_id: ID_VENDITE_FATTURE_RISTAMPA
+  comando: 32889
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: scontrini
+  scheda: docs/moduli/vendite/scontrini.md
+  titolo: Scontrini
+  modulo: Vendite
+  maschera_id: IDD_VEN_SCONTRINI_GRID
+  immagine: docs/assets/img/vendite/scontrini.png
+  percorso: Vendite ▸ Scontrini ▸ Altri Scarichi - Scontrini
+  voce_id: ID_VENDITE_SCONTRINI
+  comando: 33400
+  alternative:
+  - percorso: Vendite ▸ Scontrini ▸ Stampa Punti
+    comando: 33469
+  - percorso: Vendite ▸ Scontrini ▸ Riepilogo Scontrini
+    comando: 33740
+  - percorso: Vendite ▸ Scontrini ▸ Riepilogo IVA Scontrini
+    comando: 34086
+  - percorso: Vendite ▸ Scontrini ▸ Controllo Conferimento
+    comando: 33985
+  suggerimenti: []
+  stato: pronta
+- slug: stampe-vendite
+  scheda: docs/moduli/vendite/stampe-vendite.md
+  titolo: Stampe e strumenti di vendita
+  modulo: Vendite
+  maschera_id: nessuna dialog propria
+  immagine: docs/assets/img/vendite/stampe-vendite.png
+  percorso: Vendite ▸ Liste di Prelievo
+  voce_id: ID_VENDITE_LISTEDIPRELIEVO
+  comando: 34087
+  alternative:
+  - percorso: Vendite ▸ Stampa Distinta Carico Trasportatori
+    comando: 33170
+  - percorso: Vendite ▸ Stampa Distinta Trasportatori
+    comando: 33149
+  - percorso: Vendite ▸ Stampa Kg. Venduti
+    comando: 33362
+  - percorso: Vendite ▸ Stampa Rapporto Cassa
+    comando: 34136
+  - percorso: Vendite ▸ Analisi Commessa
+    comando: 34045
+  suggerimenti: []
+  stato: pronta
+- slug: vendita-al-banco
+  scheda: docs/moduli/vendite/vendita-al-banco.md
+  titolo: Vendita al banco e POS
+  modulo: Vendite
+  maschera_id: IDD_VEN_VENDITE
+  immagine: docs/assets/img/vendite/vendita-al-banco.png
+  percorso: Vendite ▸ Vendita
+  voce_id: ID_VENDITE_VENDITAALBANCO
+  comando: 32914
+  alternative: []
+  suggerimenti: []
+  stato: pronta
+- slug: cauzioni-vuoti
+  scheda: docs/moduli/versioni/cauzioni-vuoti.md
+  titolo: Tabella vuoti
+  modulo: Cauzioni
+  maschera_id: IDD_VUO_VUOTI
+  immagine: docs/assets/img/versioni/cauzioni-vuoti.png
+  percorso: Cauzioni ▸ Tabella Vuoti ▸ Inserimento
+  voce_id: ID_BEVANDE_TABELLAVUOTI_INSERIMENTO
+  comando: 33500
+  alternative:
+  - percorso: Cauzioni ▸ Tabella Vuoti ▸ Modifica
+    comando: 33501
+  - percorso: Cauzioni ▸ Tabella Vuoti ▸ Stampa
+    comando: 33502
+  suggerimenti: []
+  stato: pronta
+- slug: oreficerie-valenze
+  scheda: docs/moduli/versioni/oreficerie-valenze.md
+  titolo: Valenze di lavorazione
+  modulo: Oreficerie
+  maschera_id: IDD_VALENZE
+  immagine: docs/assets/img/versioni/oreficerie-valenze.png
+  percorso: Oreficerie ▸ Inserimento Valenze di Lavorazione
+  voce_id: ID_OREFICERIE_INSERIMENTOVALENZE
+  comando: 33320
+  alternative:
+  - percorso: Oreficerie ▸ Modifica Valenze di Lavorazione
+    comando: 33321
+  suggerimenti: []
+  stato: pronta
+- slug: studio-collaboratori
+  scheda: docs/moduli/versioni/studio-collaboratori.md
+  titolo: Responsabili e collaboratori
+  modulo: Procedure Personali
+  maschera_id: IDD_STU_COLLABORATORI
+  immagine: docs/assets/img/versioni/studio-collaboratori.png
+  percorso: Procedure Personali ▸ Responsabili e Collaboratori ▸ Inserimento
+  voce_id: ID_ARCHIVI_COLLABORATORI_INSERIMENTO
+  comando: 32818
+  alternative:
+  - percorso: Procedure Personali ▸ Responsabili e Collaboratori ▸ Modifica
+    comando: 32819
+  suggerimenti: []
+  stato: pronta

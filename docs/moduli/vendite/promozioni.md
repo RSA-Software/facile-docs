@@ -56,6 +56,30 @@ l'elenco degli articoli che vi appartengono, con i prezzi promozionali.
 
 <!-- DA VERIFICARE: gli altri campi della testata — periodo di validità, descrizione, depositi o punti vendita interessati. -->
 
+### Le righe della promozione
+
+Ogni riga della promozione si apre in una finestra propria, dove si stabilisce
+che cosa viene offerto e a quali condizioni.
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Articolo** | ● | L'articolo in promozione. | codice |
+| **Listino** | | Il listino su cui la promozione agisce. | codice |
+| **Tipo Offerta** | ● | La forma dell'offerta: sconto in valore o in percentuale, sul singolo articolo o sul subtotale, prendi M paghi N, regalo, bollino, coupon, fascia di prezzo, netto reparto, punti di pagamento e le varianti a più soglie. | 23 voci da `01 - Ammontare Subtotale` a `23 - Regalo Articolo su Subtotale` |
+| **Offerta Cumulativa** | | Come si comporta l'offerta quando l'articolo compare più volte nello scontrino. | `(Si) - Più Articoli Stessa Offerta`, `(No) - Articoli Autonomi`, `(Set) - Più Articoli Stessa Q.tà`, `(Pan) - Paniere` |
+| **Applicabilità** | | Quante volte l'offerta può scattare. | `Contingentata`, `Una Volta nello Scontrino`, `Sempre`, `In Continuo dopo la Soglia`, `n Volte Nello Scontrino` |
+| **Volte** | | Quante volte, quando l'applicabilità lo richiede. | numero |
+| **Limite Minimo**, **Limite Massimo** | | I limiti entro cui l'offerta vale. | numero |
+| **Casualità** | | La quota di casualità nell'applicazione dell'offerta. | numero |
+| **Frontalino** | | Il formato del frontalino da stampare per questa riga. | `PICCOLO`, `MEDIO`, `GRANDE`, `NESSUNO` |
+| **Codice Mix** | | Il codice che lega fra loro le righe di un'offerta mista. | codice |
+
+{: .campi }
+
+<!-- DA VERIFICARE: come si combinano Tipo Offerta, Offerta Cumulativa e Applicabilità nei casi tipici (3x2, sconto sul secondo pezzo, paniere). -->
+
+<!-- DA VERIFICARE: che cosa misura esattamente il campo Casualità e in quale unità. -->
+
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -1,0 +1,100 @@
+# Cosa coprire negli screenshot del manuale.
+#
+# Il riconoscimento e' per ETICHETTA, cioe' per la scritta che il lettore vede
+# accanto al campo. Non per numero di controllo: in Facile lo stesso numero
+# ricompare in maschere diverse con nomi diversi — l'id 295 e' insieme
+# IDC_CLI_D_START e IDC_CLI_FIRST_VAL2 — quindi una regola sui nomi copre cose
+# a caso (era cosi' che "Data Iniziale" finiva sfocata).
+#
+# Il confronto ignora maiuscole, accenti, spazi e punteggiatura: scrivere
+# "Rag. Sociale 1/Cognome" o "ragsociale1cognome" e' lo stesso. Si puo' usare *.
+
+etichette_sensibili:
+  # ragioni sociali, cognomi e nomi
+  - "rag*cognome"          # Rag. Sociale 1/Cognome
+  - "rag*nome"             # Rag. Sociale 2/ Nome
+  - "ragionesociale*"
+  - "cognome*"
+  - "nominativo*"
+  - "intestazione*"
+  - "dacliente"
+  - "acliente"
+  - "dafornitore"
+  - "afornitore"
+  - "cliente"
+  - "fornitore"
+  # identificativi fiscali
+  - "piva*"
+  - "partitaiva*"
+  - "codfiscale*"
+  - "codicefiscale*"
+  # recapiti
+  - "telefono*"
+  - "telefoni*"
+  - "cellulare*"
+  - "cellulari*"
+  - "fax"
+  - "email"
+  - "emai*"
+  - "pec"
+  - "indirizzo*"
+  - "sitoweb"
+  # date di nascita
+  - "datanascita"
+  - "data*nascita"
+  - "nato*"
+  - "compleanno*"
+
+# Etichette che contengono una parola sensibile ma non un dato personale.
+etichette_escluse:
+  - "tipocliente"
+  - "tipofornitore"
+  - "flagfatturato"
+  - "statoattivita"
+  - "gruppoclienti"
+  - "gruppofornitori"
+
+# Sotto questa larghezza (pixel) un campo e' il codice accanto alla
+# descrizione: contiene un numero, non un nome, e coprirlo sporca e basta.
+larghezza_minima: 70
+
+# --- griglie ---------------------------------------------------------------
+# Sono un unico controllo disegnato (FarPoint Spread): le celle non esistono
+# come finestre. Si copre la colonna intera, individuata dall'intestazione
+# letta a video con Tesseract. Senza Tesseract servono le frazioni a mano,
+# sotto in per_maschera.
+classi_griglia:
+  - SPR32A80
+  - SysListView32
+
+colonne_sensibili:
+  - "cliente*"
+  - "fornitore*"
+  - "cognome*"
+  - "nome*"
+  - "rag*"
+  - "intestazione*"
+  - "telefono*"
+  - "telefoni*"
+  - "cellulare*"
+  - "cellulari*"
+  - "email*"
+  - "pec"
+  - "indirizzo*"
+  - "compleanno*"
+  - "nascita*"
+  - "piva*"
+  - "codfiscale*"
+
+# --- eccezioni per singola maschera ----------------------------------------
+per_maschera:
+  # IDD_CLI_COMPLEANNI:
+  #   # colonne come frazioni della larghezza della griglia, da sinistra
+  #   colonne: [[0.22, 0.52], [0.52, 0.62], [0.62, 0.86]]
+  #   aggiungi_etichette: ["riferimento"]
+  #   escludi_etichette: ["citta"]
+  #   larghezza_minima: 90
+
+# Vecchio motore per nome di controllo: tenuto ma spento, vedi sopra.
+usa_nomi_controllo: false
+per_nome_controllo: []

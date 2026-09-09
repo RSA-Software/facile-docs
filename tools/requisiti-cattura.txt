@@ -1,0 +1,9 @@
+# Dipendenze della cattura schermate (non servono per costruire il sito).
+#   .venv\Scripts\pip.exe install -r tools\requisiti-cattura.txt
+pywin32>=306
+Pillow>=10
+numpy>=1.26
+
+# Facoltativo: rete di sicurezza OCR sui dati a video (--ocr).
+# Richiede anche Tesseract installato sul PC, con la lingua italiana.
+# pytesseract>=0.3.10

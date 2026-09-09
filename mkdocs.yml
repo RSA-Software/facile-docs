@@ -295,6 +295,11 @@ nav:
       - Manutenzione degli archivi: moduli/utility/manutenzione-archivi.md
       - Assistenza: moduli/utility/assistenza.md
       - Gestione Licenza: moduli/utility/gestione-licenza.md
+  - Versioni specifiche:
+      - moduli/versioni/index.md
+      - Valenze di Lavorazione (Oreficerie): moduli/versioni/oreficerie-valenze.md
+      - Tabella Vuoti (Cauzioni): moduli/versioni/cauzioni-vuoti.md
+      - Responsabili e Collaboratori (Studio): moduli/versioni/studio-collaboratori.md
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi di errore: appendici/messaggi-errore.md

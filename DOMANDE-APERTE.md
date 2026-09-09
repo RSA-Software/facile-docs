@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-08 — **408 domande** su 130 pagine.
+Aggiornato al 2026-09-09 — **417 domande** su 133 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -1007,6 +1007,8 @@ Per rigenerare questo elenco:
 
 - [ ] i campi della testata della promozione: dalle risorse ho potuto estrarre solo il Registro.
 - [ ] gli altri campi della testata — periodo di validità, descrizione, depositi o punti vendita interessati.
+- [ ] come si combinano Tipo Offerta, Offerta Cumulativa e Applicabilità nei casi tipici (3x2, sconto sul secondo pezzo, paniere).
+- [ ] che cosa misura esattamente il campo Casualità e in quale unità.
 - [ ] i messaggi di questa maschera.
 - [ ] dove si indica il periodo di validità della promozione.
 - [ ] cosa apre esattamente "F9 - Dati".
@@ -1066,3 +1068,25 @@ Per rigenerare questo elenco:
 - [ ] i messaggi delle due schermate di vendita.
 - [ ] che differenza c'è, nei dati registrati, fra la vendita da tastiera e quella da POS touchscreen.
 - [ ] come si associa un cliente allo scontrino, per la raccolta punti.
+
+## Tabella vuoti
+
+`docs/moduli/versioni/cauzioni-vuoti.md`
+
+- [ ] in quale documento la cauzione viene addebitata, e se il reso generi una riga di accredito automatica.
+- [ ] il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera.
+- [ ] confermare che i movimenti già registrati conservino la cauzione applicata al momento della consegna.
+
+## Valenze di lavorazione
+
+`docs/moduli/versioni/oreficerie-valenze.md`
+
+- [ ] in quali maschere la valenza viene richiamata, e se l'importo sia proposto o imposto.
+- [ ] il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera.
+
+## Responsabili e collaboratori
+
+`docs/moduli/versioni/studio-collaboratori.md`
+
+- [ ] in quali maschere dello studio il collaboratore viene richiamato, e se l'attribuzione influisca su compensi o statistiche.
+- [ ] il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera.

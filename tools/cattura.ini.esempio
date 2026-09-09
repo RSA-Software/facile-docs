@@ -1,0 +1,32 @@
+; Copia questo file in tools/cattura.ini e compilalo.
+; cattura.ini NON va nel repository: puo' contenere credenziali.
+
+[facile]
+eseguibile = C:\rsawin\Facile\Release\FacWin.exe
+sorgenti = C:\rsawin\Facile
+; se Facile e' gia' aperto ci si aggancia invece di avviarne un altro
+aggancia_se_aperto = true
+
+[cattura]
+; schermo = scatta quello che si vede davvero (consigliato: i controlli ActiveX
+;           di Facile con PrintWindow escono senza etichette)
+; printwindow = cattura la finestra anche se coperta, ma puo' perdere pezzi
+; auto = prova PrintWindow e ricade sullo schermo se esce vuota
+metodo = schermo
+; secondi di attesa perche' la maschera compaia
+attesa_dialog = 8
+; secondi perche' finisca di disegnarsi prima dello scatto
+attesa_disegno = 2.0
+; quando la scheda cita "Inserimento (oppure Modifica)", scatta la Modifica:
+; la maschera si apre su un record esistente e mostra dati e linguette
+preferisci_modifica = true
+
+[email]
+; report delle maschere non aperte. Con Gmail serve una password per le app.
+attivo = false
+mittente = capizz.filippo.rsa@gmail.com
+destinatario = capizz.filippo.rsa@gmail.com
+server = smtp.gmail.com
+porta = 465
+; meglio l'ambiente che il file: set FACILE_SMTP_PASSWORD=...
+password =

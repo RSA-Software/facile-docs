@@ -85,3 +85,9 @@ CLAUDE.local.md
 !.env.example
 *.pem
 *.key
+
+# configurazione locale della cattura schermate (puo' contenere credenziali)
+tools/cattura.ini
+tools/catture-report.json
+tools/catture-report.md
+tools/*.log
