@@ -17,7 +17,7 @@ già evasi.
 
     - **Percorso:** Menu ▸ Vendite ▸ Ordini Clienti ▸ Stampa Riepilogo *(oppure* Stampa Ordini per Cliente*,* Stampa Ordini per Articolo *o* Cancellazione Ordini Evasi*)*
     - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
-    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); **Cancellazione Ordini Evasi** richiede in più che l'utente non abbia il **Blocco Cancellazioni Dati**
 
 ---
 
@@ -28,7 +28,7 @@ già evasi.
 | **Stampa Riepilogo** | L'elenco degli ordini di un periodo. |
 | **Stampa Ordini per Cliente** | Gli ordini raggruppati per cliente: cosa deve ancora ricevere ciascuno. |
 | **Stampa Ordini per Articolo** | Gli ordini raggruppati per articolo: quanto è impegnato di ogni cosa. È la stampa da cui si decide cosa ordinare al fornitore. |
-| **Cancellazione Ordini Evasi** | Toglie dall'archivio gli ordini completamente evasi, per non trascinarseli dietro. |
+| **Cancellazione Ordini Evasi** | Toglie dall'archivio gli ordini completamente evasi di un periodo che scegli tu, per non trascinarseli dietro. |
 
 Le altre voci del sottomenu — **Gestione**, **Inserimento**, **Modifica**,
 **Duplica** e **Fatturazione da Ordini** — sono descritte in
@@ -55,8 +55,9 @@ archivi**: non c'è modo di tornare indietro.
 ![Stampa ordini](../../assets/img/vendite/ordini-clienti.png)
 
 Le tre stampe sono finestre di selezione con gli intervalli e i filtri, e i
-pulsanti **F2 - OK** ed **Esci**. **Cancellazione Ordini Evasi** non ha invece
-alcuna maschera: parte subito con le domande di conferma.
+pulsanti **F2 - OK** ed **Esci**. **Cancellazione Ordini Evasi** apre invece
+una finestra piccola, con le sole **Data Iniziale** e **Data Finale** del
+periodo da ripulire e gli stessi due pulsanti.
 
 ## Campi
 
@@ -92,27 +93,50 @@ Ordini Totalmente Evasi**.
 1. **Fai una copia di sicurezza degli archivi.**
 2. Stampa prima il **Riepilogo**, per avere traccia di cosa stai per togliere.
 3. Apri **Menu ▸ Vendite ▸ Ordini Clienti ▸ Cancellazione Ordini Evasi**.
-4. Rispondi **Sì** alle due domande di conferma.
+4. Indica **Data Iniziale** e **Data Finale**. All'apertura sono tutte e due
+   quella di oggi: il periodo va allargato a mano.
+5. Premi **F2 - OK**.
+6. Leggi il messaggio, che dice **quanti** ordini sta per cancellare e in che
+   periodo. Se il numero non è quello che ti aspettavi, rispondi **No** e
+   ricontrolla le date.
+7. Rispondi **Sì**. Alla fine Facile dice quanti documenti ha cancellato.
 
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Vuoi Cancellare gli Ordini Evasi ?* poi *Confermi la Cancellazione degli Ordini ?* | Hai avviato la cancellazione. | Rispondi **Sì** a entrambe solo se sei sicuro. La risposta preimpostata è **No**. |
+| *Verranno cancellati definitivamente … ordini evasi con data fra il … e il …, insieme alle loro righe. L' operazione non si può annullare. Vuoi continuare ?* | La conferma della cancellazione, con il numero dei documenti trovati. | Controlla il numero e il periodo. **Sì** cancella; la risposta preimpostata è **No**. |
+| *Nessun ordine evaso con data fra il … e il …* | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
+| *Cancellati … documenti.* | La cancellazione è finita. | Nulla: è il resoconto. |
+| *Cancellazione interrotta: … documenti su …* | Hai premuto **Annulla** sulla barra di avanzamento. | I documenti già cancellati non tornano: ripeti pure la procedura per togliere i rimanenti. |
+| *Cancellazioni non abilitate per l' utente !* | L'utente ha il **Blocco Cancellazioni Dati**. | Serve un utente abilitato, o va tolto il blocco da [Archivi ▸ Utenti](../anagrafiche/utenti.md). |
+| *La data è esterna all' esercizio corrente.* | Una delle due date non appartiene all'esercizio aperto. | Correggila: gli ordini degli altri esercizi stanno in archivi separati. |
 | *(nessun messaggio, solo un segnale acustico)* | Un campo del filtro non è valido. | Guarda dove si è posizionato il cursore. |
 
 ## Note
 
 !!! warning "La cancellazione degli ordini evasi è definitiva"
 
-    Gli ordini cancellati spariscono dall'archivio con la loro storia. Stampa il
-    riepilogo prima, e fai una copia degli archivi.
+    Gli ordini cancellati spariscono dall'archivio con le loro righe e la loro
+    storia. Stampa il riepilogo prima, e fai una copia degli archivi.
 
-!!! note "Non si sceglie il periodo"
+!!! note "Quali ordini entrano nel periodo"
 
-    **Cancellazione Ordini Evasi** non chiede nulla oltre alle due conferme:
-    toglie **tutti** gli ordini in stato *evaso*, di qualunque data. Un ordine è
-    evaso quando ogni sua riga è stata consegnata per intero.
+    Conta la **data del documento**, cioè quella con cui l'ordine è stato
+    registrato, non quella in cui è stato evaso: la data di evasione non è
+    scritta sulla testata dell'ordine.
+
+    Un ordine è *evaso* quando ogni sua riga è stata consegnata per intero;
+    quelli evasi solo in parte restano dove sono. Il periodo non può uscire
+    dall'esercizio aperto: gli ordini degli esercizi precedenti stanno in
+    archivi separati e si ripuliscono entrando in quell'esercizio.
+
+!!! note "Chi non può cancellare non può nemmeno da qui"
+
+    Se l'utente ha il **Blocco Cancellazioni Dati** in
+    [Archivi ▸ Utenti](../anagrafiche/utenti.md), la voce risponde
+    *Cancellazioni non abilitate per l' utente !* e non apre nemmeno la finestra
+    del periodo. Vale la stessa regola delle cancellazioni una per una.
 
 ## Vedi anche
 

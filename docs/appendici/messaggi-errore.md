@@ -50,6 +50,8 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 **Mas** = [Mastri](../moduli/contabilita/mastri.md),
 **Naz** = [Nazioni](../moduli/anagrafiche/nazioni.md),
 **Ntr** = [Note, aspetto e causali di trasporto](../moduli/altre-tabelle/note-aspetto-trasporto.md),
+**Ocl** = [Ordini clienti](../moduli/vendite/ordini-clienti.md),
+**Olr** = [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md),
 **Ope** = [Operatori](../moduli/altre-tabelle/operatori.md),
 **Pag** = [Tipi di pagamento](../moduli/contabilita/tipi-di-pagamento.md),
 **Pno** = [Registrazione di prima nota](../moduli/contabilita/registrazione-prima-nota.md),
@@ -59,6 +61,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 **Rub** = [Rubrica](../moduli/anagrafiche/rubrica.md),
 **Sag** = [Stampe agenti](../moduli/anagrafiche/stampe-agenti.md),
 **Sar** = [Stampe articoli](../moduli/anagrafiche/stampe-articoli.md),
+**Scb** = [Stampe e manutenzione di casse e bilance](../moduli/casse-bilance/stampe-casse-bilance.md),
 **Sco** = [Scorte, assortimento e ubicazioni](../moduli/anagrafiche/scorte-e-assortimento.md),
 **Sez** = [Sezioni](../moduli/contabilita/sezioni.md),
 **Sfo** = [Tabella sconti fornitori](../moduli/anagrafiche/tabella-sconti-fornitori.md),
@@ -97,6 +100,9 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Attenzione! Non é stato impostato alcun listino. Nelle vendite sarà preso come prezzo di riferimento il prezzo di acquisto. Vuoi Continuare?* | Cli | Il listino di vendita è a zero. | Rispondere **No** e impostare un listino, salvo che si voglia davvero vendere al prezzo di acquisto. |
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | Ali | Si è scritta un'esistenza, ma la causale di rettifica inventario non aggiorna la data di inventario. | Attivare l'opzione sulla causale di magazzino. |
 | *Cambio ditta non permesso!* | Dit | Il cambio ditta è stato bloccato per questa installazione. | Se serve, chiedi all'assistenza di abilitarlo. |
+| *Cancellati … documenti.* | Ocl, Olr | Resoconto finale della cancellazione degli ordini evasi o ricevuti. | Nulla: è una conferma. |
+| *Cancellazione interrotta: … documenti su …* | Ocl, Olr | Si è premuto **Annulla** sulla barra di avanzamento della cancellazione. | Quelli già cancellati non tornano; la procedura si può ripetere per togliere i rimanenti. |
+| *Cancellazioni non abilitate per l' utente !* | Tutte | L'utente ha il **Blocco Cancellazioni Dati** in [Archivi ▸ Utenti](../moduli/anagrafiche/utenti.md). | Serve un utente abilitato, oppure va tolto il blocco dalla scheda utente. |
 | *Ci sono ancora segnalazioni di errore! Vuoi continuare ?* | Liq, Civ | Restano nominativi con dati fiscali incompleti. | **No** e correggi prima i dati. |
 | *Ci sono segnalazioni di errore! Le vuoi visualizzare ?* | Liq, Civ | La comunicazione ha trovato dati fiscali incompleti. | **Sì** per vedere quali nominativi vanno corretti. |
 | *Ci sono Variazioni per i Listini dal … al … Vuoi apportare le Variazioni ?* | Vpr | All'avvio il programma ha trovato variazioni di listino scadute, di più giorni. | Rispondere **Sì** per metterle in vigore. |
@@ -132,6 +138,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Confermi la cancellazione dell' intero listino ?* | Lfo | Si è premuto **F6 - Elimina** sul listino di un fornitore. | **Sì** cancella **tutte** le righe di quel listino, non solo quella selezionata. |
 | *Confermi la cancellazione...* | Art | Conferma della **marcatura** dell'articolo come cancellato. | Rispondere **Sì** per marcare l'articolo. |
 | *Confermi la Cancellazione....* | Tutte | Conferma della cancellazione vera e propria dall'archivio. Su clienti e fornitori compare dopo l'avviso sugli altri esercizi; sugli articoli solo alla seconda eliminazione. | Rispondere **Sì** per eliminare definitivamente. |
+| *Confermi la Cancellazione delle Variazioni ?* | Vpr | Richiesta di conferma di **Cancella Variazioni Listini**. | **Sì** cancella le variazioni programmate del periodo e degli articoli selezionati. La risposta predefinita è **No**. |
 | *Confermi la Copia del Listino ?* | Cpl | Richiesta di conferma della copia. | **Sì** copia il listino sugli articoli selezionati, sovrascrivendo quello di arrivo. |
 | *Confermi la Variazione degli Sconti ?* | Vdm | Richiesta di conferma di **Varia Sconti**. | **Sì** riscrive i sette sconti su tutti gli articoli selezionati. |
 | *Confermi la variazione dei Listini ?* | Vpr | Richiesta di conferma di **Apporta Variazioni**. | **Sì** rende effettive le variazioni programmate a quella data. |
@@ -222,6 +229,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Listino non trovato in archivio!* | Cfl | Il codice indicato come listino di riferimento o target non esiste. | Correggere il codice o creare il listino nella tabella dei listini. |
 | *Mancano i dati del titolare/legale rappresentante!* | Cli | Si sta stampando il modulo di fidejussione e il titolare non è registrato. | Registrarlo dal menu **F7 - Altri**. |
 | *Nel file deve essere presente almeno un cliente o un fornitore !* | Liq | La selezione dell'elenco clienti e fornitori non ha prodotto nominativi. | Allarga la selezione. |
+| *Nessun ordine evaso con data fra il … e il …* / *Nessun ordine ricevuto con data fra il … e il …* | Ocl, Olr | Nel periodo indicato non ci sono ordini già evasi da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Tutte tranne Rub | Il record è richiamato da documenti, scadenze, prima nota, movimenti o altri archivi. | Non è eliminabile: lasciarlo in archivio. |
 | *Non è stata digitata la Partita IVA! Vuoi Continuare?* | Cli, For | Si sta salvando un nominativo senza partita IVA. | Rispondere **No** e inserirla, oppure **Sì** per salvare comunque. |
 | *Non hai l' Autorizzazioni sufficienti per completare l' operazione.* | Cli, For | Il codice digitato è fuori dall'intervallo riservato a clienti o fornitori. | Usare un codice compreso nell'intervallo, o lasciare quello proposto dal programma. |
@@ -244,8 +252,10 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Troppe sezioni selezionate. Le ultime saranno scartate !* | Stb | Si sono indicate più sezioni di quante la stampa del libro giornale ne gestisca. | Riduci le sezioni e ripeti la stampa per gruppi. |
 | *Una sola ditta e' presente in archivio!* | Dit | Si è chiesto il cambio ditta ma l'azienda gestita è una sola. | Non c'è nulla da fare: si sta già lavorando sull'unica azienda. |
 | *User ID gia' presente in archivio !* | Uti | Un altro utente ha già quello **UserID**. | Scegli un identificativo diverso. |
+| *Verranno cancellati definitivamente … ordini evasi (o ricevuti) con data fra il … e il …, insieme alle loro righe. L' operazione non si può annullare. Vuoi continuare ?* | Ocl, Olr | Conferma della cancellazione di massa degli ordini già evasi, con il numero dei documenti trovati nel periodo. | Controllare numero e periodo prima di rispondere: **Sì** cancella definitivamente, e la risposta preimpostata è **No**. |
 | *Vuoi annullare l 'azzeramento dei bollini della campagna precedente ?* | Bol | Seconda domanda dell'azzeramento della campagna precedente, formulata al contrario. | Rispondi **No** per procedere davvero con l'azzeramento. |
 | *Vuoi azzerare i valori iniziali ?* | Bol | Il ricalcolo dei bollini chiede se ripartire da zero. | **Sì** azzera anche i saldi di partenza; **No** li conserva. |
+| *Vuoi azzerare il flag delle variazioni su tutti gli articoli ?* | Scb | Richiesta di conferma di **Azzera Flag Variazioni Articoli**, che si trova sia in Casse e Bilance sia in Trasferimenti. | **Sì** toglie il segno «da mandare» da tutti gli articoli, e il successivo invio delle sole variazioni non manda nulla. La risposta predefinita è **No**. |
 | *Vuoi Calcolare l'esistenza ed il venduto?* | Sco | L'assortimento depositi chiede se calcolare i dati, operazione che richiede tempo. | **Sì** se ti servono le colonne di esistenza e venduto. |
 | *Vuoi generare il codice?* | Man | In **Duplica**, il codice del nuovo articolo non è stato scritto. | **Sì** lo fa assegnare al programma. |
 | *Vuoi importare i Banchi da un foglio Excel ?* | Bco | Il programma propone l'importazione delle attrezzature. | **Sì** apre la scelta del file. |

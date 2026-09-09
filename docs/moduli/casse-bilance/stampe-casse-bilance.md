@@ -104,19 +104,21 @@ bilance.
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Un campo del filtro non è valido. | Guarda dove si è posizionato il cursore. |
 | *(la maschera non si apre)* | L'archivio articoli è vuoto. | **Stampa Articoli Gestione Bilance** e **Stampa Articoli con Flag Variazioni Attivo** si chiudono in silenzio se non c'è nessun articolo. |
+| *Vuoi azzerare il flag delle variazioni su tutti gli articoli ?* | Richiesta di conferma di **Azzera Flag Variazioni Articoli**. | **Sì** toglie il segno «da mandare» da tutti gli articoli; la risposta predefinita è **No**. |
 
 ## Note
 
-!!! warning "«Azzera Flag Variazioni Articoli» non chiede conferma"
+!!! warning "«Azzera Flag Variazioni Articoli» agisce su tutti gli articoli"
 
-    Parte subito e toglie il segno «da mandare» da **tutti** gli articoli, in
-    un colpo solo. Dopo, **Invio Variazioni Articoli** non manda più niente
-    finché i prezzi non cambiano di nuovo: casse e bilance restano con quello
-    che hanno. Se l'hai lanciata per sbaglio, l'unico rimedio è un **Invio
-    Globale Articoli**.
+    Toglie il segno «da mandare» da **tutti** gli articoli in un colpo solo.
+    Dopo, **Invio Variazioni Articoli** non manda più niente finché i prezzi
+    non cambiano di nuovo: casse e bilance restano con quello che hanno, e
+    l'unico rimedio è un **Invio Globale Articoli**.
 
-    Stampa sempre prima gli **Articoli con Flag Variazioni Attivo**, così sai
-    cosa stai per perdere.
+    Il programma **chiede conferma** prima di procedere e la risposta
+    predefinita è **No**, ma la conferma è l'unica rete: una volta risposto
+    **Sì** non si torna indietro. Stampa prima gli **Articoli con Flag
+    Variazioni Attivo**, così sai cosa stai per perdere.
 
 !!! note "Perché servono gli scarti"
 

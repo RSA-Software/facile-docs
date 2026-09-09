@@ -34,7 +34,7 @@ Articoli** compaiono anche in questo menu, e sono descritte in
 [Stampe e manutenzione di casse e bilance](../casse-bilance/stampe-casse-bilance.md).
 Sono le stesse funzioni: qui la seconda si chiama *Azzera Flag Variazione
 Articoli*, là *Azzera Flag Variazioni Articoli*, ma è la medesima e azzera il
-segno «da mandare» su tutti gli articoli senza chiedere conferma.
+segno «da mandare» su tutti gli articoli, previa conferma.
 
 !!! tip "Come si imposta uno scambio nuovo"
 

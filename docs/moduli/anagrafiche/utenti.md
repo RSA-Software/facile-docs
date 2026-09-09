@@ -111,6 +111,7 @@ Utenti* — ed è divisa in tre parti:
 | **Disabilita Cancellazioni (SmartCard)** | | Impedisce le cancellazioni sui dispositivi con smartcard. | attivo/non attivo |
 | **Abilita download Stati Fatture Attive** | | Gli consente di scaricare gli esiti delle fatture emesse. | attivo/non attivo |
 | **Abilita download Fatture Passive** | | Gli consente di scaricare le fatture ricevute. | attivo/non attivo |
+| **Abilita Blocco Cancellazioni Dati** | | Gli impedisce di cancellare: al posto dell'eliminazione le maschere rispondono *Cancellazioni non abilitate per l' utente !*. Vale anche sulle cancellazioni di massa, come [Cancellazione Ordini Evasi](../vendite/ordini-clienti.md). | attivo/non attivo |
 
 {: .campi }
 

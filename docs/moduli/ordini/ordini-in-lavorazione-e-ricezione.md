@@ -17,7 +17,7 @@ al fornitore va ricevuto. Due griglie seguono i due percorsi.
         - Menu ▸ Ordini ▸ Ordini a Fornitori ▸ Ordini in Ricezione
         - Menu ▸ Ordini ▸ Ordini a Fornitori ▸ Cancellazione Ordini Ricevuti
     - **Scorciatoia:** ++f2++ apre la riga, ++esc++ esce
-    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md); **Cancellazione Ordini Ricevuti** richiede in più che l'utente non abbia il **Blocco Cancellazioni Dati**
 
 ---
 
@@ -27,7 +27,7 @@ al fornitore va ricevuto. Due griglie seguono i due percorsi.
 |---|---|
 | **Ordini in Lavorazione** | L'elenco degli ordini dei clienti ancora da evadere, con tutto quello che serve per portarli a documento: attribuzione di lotti o partite, emissione dei documenti, controllo dei prezzi, scomposizione. |
 | **Ordini in Ricezione** | L'elenco degli ordini fatti ai fornitori in attesa di arrivo. La finestra si chiama *Ordini da Ricevere*. |
-| **Cancellazione Ordini Ricevuti** | Toglie dall'archivio gli ordini a fornitore completamente evasi. |
+| **Cancellazione Ordini Ricevuti** | Toglie dall'archivio gli ordini a fornitore completamente evasi di un periodo che scegli tu. |
 
 ## Prerequisiti
 
@@ -131,7 +131,13 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 1. **Fai una copia di sicurezza degli archivi.**
 2. Apri **Menu ▸ Ordini ▸ Ordini a Fornitori ▸ Cancellazione Ordini
    Ricevuti**.
-3. Rispondi **Sì** alle due domande di conferma.
+3. Indica **Data Iniziale** e **Data Finale**. All'apertura sono tutte e due
+   quella di oggi: il periodo va allargato a mano.
+4. Premi **F2 - OK**.
+5. Leggi il messaggio, che dice **quanti** ordini sta per cancellare e in che
+   periodo. Se il numero non è quello che ti aspettavi, rispondi **No** e
+   ricontrolla le date.
+6. Rispondi **Sì**. Alla fine Facile dice quanti documenti ha cancellato.
 
 ## Controlli e messaggi
 
@@ -153,16 +159,22 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 | *Vuoi calcolare l' Iva sulla Fattura Pro Forma ?* | Si sta generando una pro forma. | **Sì** per l'IVA in fattura, **No** per lasciarla fuori. |
 | *Confermi la Scomposizione dell'Ordine?* | Conferma prima di dividere l'ordine. | **Sì** procede. |
 | *Scomposizione Ordine Completata!* | La scomposizione è andata a buon fine. | Controlla gli ordini generati dalla [gestione documenti](../vendite/gestione-documenti.md). |
-| *Vuoi Cancellare gli Ordini Ricevuti ?* poi *Confermi la Cancellazione degli Ordini ?* | Hai avviato la cancellazione degli ordini ricevuti. | Rispondi **Sì** a entrambe solo se sei sicuro. La risposta preimpostata è **No**. |
+| *Verranno cancellati definitivamente … ordini ricevuti con data fra il … e il …, insieme alle loro righe. L' operazione non si può annullare. Vuoi continuare ?* | La conferma della cancellazione, con il numero dei documenti trovati. | Controlla il numero e il periodo. **Sì** cancella; la risposta preimpostata è **No**. |
+| *Nessun ordine ricevuto con data fra il … e il …* | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
+| *Cancellati … documenti.* | La cancellazione è finita. | Nulla: è il resoconto. |
+| *Cancellazione interrotta: … documenti su …* | Hai premuto **Annulla** sulla barra di avanzamento. | I documenti già cancellati non tornano: ripeti pure la procedura per togliere i rimanenti. |
+| *Cancellazioni non abilitate per l' utente !* | L'utente ha il **Blocco Cancellazioni Dati**. | Serve un utente abilitato, o va tolto il blocco da [Archivi ▸ Utenti](../anagrafiche/utenti.md). |
+| *La data è esterna all' esercizio corrente.* | Una delle due date non appartiene all'esercizio aperto. | Correggila: gli ordini degli altri esercizi stanno in archivi separati. |
 
 ## Note
 
 !!! warning "La cancellazione è definitiva"
 
-    **Cancellazione Ordini Ricevuti** toglie dall'archivio tutti gli ordini a
-    fornitore in stato *evaso*, senza mostrare prima quali sono e senza
-    possibilità di tornare indietro. Stampa l'elenco da **Ordini in Ricezione**
-    e fai una copia degli archivi prima di lanciarla.
+    **Cancellazione Ordini Ricevuti** toglie dall'archivio gli ordini a
+    fornitore in stato *evaso* del periodo indicato, con le loro righe e senza
+    possibilità di tornare indietro. La conferma dice **quanti** sono, ma non
+    quali: stampa l'elenco da **Ordini in Ricezione** e fai una copia degli
+    archivi prima di lanciarla.
 
 !!! note "«Ricevuto» ed «evaso» sono lo stesso stato"
 
@@ -182,11 +194,13 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
     volta e solo finché l'ordine è ancora **salvato**: dopo la conferma o
     l'evasione parziale il comando si rifiuta.
 
-!!! note "Due domande, e la seconda non è una formalità"
+!!! note "Il numero nella domanda è il controllo vero"
 
-    Sia questa cancellazione sia quella degli ordini evasi chiedono conferma
-    due volte, con il pulsante **No** già scelto: è voluto, per non cancellare
-    per sbaglio premendo Invio.
+    Sia questa cancellazione sia quella degli [ordini
+    evasi](../vendite/ordini-clienti.md) chiedono conferma una volta sola, ma
+    la domanda dice quanti documenti sta per togliere e in che periodo, con il
+    pulsante **No** già scelto. Se il numero è molto più grande di quello che
+    ti aspetti, il periodo è sbagliato: rispondi **No**.
 
 ## Vedi anche
 

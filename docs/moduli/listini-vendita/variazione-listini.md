@@ -157,7 +157,8 @@ I campi sono quelli della [stampa del listino](stampa-listini.md), meno il
 2. Indica **Listino**, **Dal** e **Al**.
 3. **Restringi la selezione degli articoli**: senza filtro si cancellano le
    variazioni di tutti gli articoli nel periodo.
-4. Premi **F2 - OK**. La cancellazione parte subito, senza chiedere conferma.
+4. Premi **F2 - OK** e rispondi **Sì** a *«Confermi la Cancellazione delle
+   Variazioni ?»*. La risposta predefinita è **No**.
 
 ## Controlli e messaggi
 
@@ -166,6 +167,7 @@ I campi sono quelli della [stampa del listino](stampa-listini.md), meno il
 | *Ci sono Variazioni per i Listini in data gg/mm/aaaa* / *Vuoi apportare le Variazioni ?* | All'avvio, il programma ha trovato variazioni in attesa la cui decorrenza è arrivata. | Rispondi **Sì** per metterle in vigore. Rispondendo **No** i prezzi restano quelli vecchi e la domanda tornerà. |
 | *Ci sono Variazioni per i Listini dal gg/mm/aaaa al gg/mm/aaaa* / *Vuoi apportare le Variazioni ?* | Come sopra, quando le variazioni scadute sono di più giorni. | Come sopra. |
 | *Confermi la variazione dei Listini ?* | Richiesta di conferma di **Apporta Variazioni**. | **Sì** rende effettive le variazioni di quel giorno. |
+| *Confermi la Cancellazione delle Variazioni ?* | Richiesta di conferma di **Cancella Variazioni Listini**. | **Sì** cancella le variazioni del periodo e degli articoli selezionati; la risposta predefinita è **No**. |
 | *Sono state selezionate troppe variazioni di listino.* / *Estratte le ultime N di M* | In **Variazioni Listini** il periodo contiene più di 5.000 variazioni. | Restringi il periodo: la griglia mostra solo le ultime 5.000. |
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | In **Cancella Variazioni Listini** manca la data **Dal**, oppure **Al** è anteriore a **Dal**. | Correggi la data su cui si è posizionato il cursore. |
 

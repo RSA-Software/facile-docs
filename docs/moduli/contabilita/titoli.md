@@ -15,7 +15,7 @@ ha emessi e la banca su cui sono appoggiati.
 
     - **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Titoli ▸ Inserimento *(oppure* Modifica*)*
     - **Scorciatoia:** nessuna; la maschera si apre dal menu
-    - **Versione:** **solo Studio.** Nelle altre versioni la voce di menu c'è ma non apre nulla
+    - **Versione:** **solo Studio.** Nelle altre versioni le voci restano nel menu ma non aprono nulla
     - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
@@ -29,11 +29,13 @@ scade, su quale banca è appoggiato e quando è stato versato.
 Lo stesso menu contiene anche **Gestione Titoli Scaduti** e **Gestione Titoli
 Attivi**, che sono le due viste da cui si lavora sul portafoglio.
 
-!!! warning "Attenzione"
+!!! warning "Solo nella versione Studio, e il menu non lo dice"
 
-    Questa maschera esiste **solo nella versione Studio**. Nelle altre versioni
-    la voce di menu è presente ma non apre nulla: premendola non succede
-    niente e non compare alcun messaggio.
+    Queste maschere esistono **solo nella versione Studio**. Nelle altre
+    versioni le voci **Inserimento**, **Modifica**, **Stampa** e **Gestione
+    Titoli Scaduti** restano nel menu ma non aprono nulla: premendole non
+    succede niente e non compare alcun messaggio. Sparisce invece **Gestione
+    Titoli Attivi**, che il programma toglie all'avvio.
 
 ## Prerequisiti
 

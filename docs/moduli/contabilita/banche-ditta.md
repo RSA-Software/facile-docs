@@ -15,7 +15,7 @@ tratte e RI.BA., e i tassi applicati.
 
     - **Percorso:** Menu ▸ Archivi ▸ Contabilità ▸ Banche Ditta ▸ Inserimento *(oppure* Modifica*)*
     - **Scorciatoia:** nessuna; la maschera si apre dal menu
-    - **Versione:** **solo Studio.** Nelle altre versioni la voce di menu c'è ma non apre nulla
+    - **Versione:** **solo Studio.** Nelle altre versioni la voce di menu non c'è
     - **Permessi richiesti:** nessun profilo predefinito; **Inserimento** e **Modifica** si abilitano separatamente per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
@@ -31,11 +31,12 @@ Esempio: se sulla banca hai un castelletto RI.BA. di 50.000 euro e ne hai già
 utilizzati 32.000, il campo **Disp. Residua** dice che ne restano 18.000 prima
 di dover presentare altrove.
 
-!!! warning "Attenzione"
+!!! info "Solo nella versione Studio"
 
     Questa maschera esiste **solo nella versione Studio**. Nelle altre versioni
-    la voce di menu è presente ma non apre nulla: premendola non succede
-    niente e non compare alcun messaggio.
+    il programma **toglie le due voci dal menu all'avvio**: se non le trovi
+    sotto Archivi ▸ Contabilità, è perché la tua versione non ha questo
+    modulo.
 
 ## Prerequisiti
 

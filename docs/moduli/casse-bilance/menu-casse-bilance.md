@@ -42,9 +42,9 @@ cambiano nome da una all'altra, ma fanno le stesse cose.
 !!! warning "L'invio globale e l'azzeramento del flag vanno maneggiati con cura"
 
     **Invio Globale Articoli** rimanda tutto e su archivi grandi impiega molto;
-    **Azzera Flag Variazioni Articoli** parte senza chiedere conferma e lascia
-    casse e bilance con quello che hanno finché i prezzi non cambiano di nuovo.
-    Sono operazioni da fare sapendo perché.
+    **Azzera Flag Variazioni Articoli** chiede conferma, ma se rispondi **Sì**
+    lascia casse e bilance con quello che hanno finché i prezzi non cambiano di
+    nuovo. Sono operazioni da fare sapendo perché.
 
 !!! note "Facile scrive i file, il trasferimento lo fa la macchina"
 

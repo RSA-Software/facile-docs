@@ -9,8 +9,8 @@ maschera_id: IDD_ART_ARTICOLI_VARIA
 
 Il sottomenu **Assistenza** contiene le procedure che intervengono sugli
 archivi in modo massivo: cambiano un codice ovunque compaia, rimuovono
-movimenti, azzerano campi. Quasi tutte chiedono una **password** che ha
-l'assistenza R.S.A., e non a caso.
+movimenti, azzerano campi. Tutte chiedono una **password** che ha l'assistenza
+R.S.A., e non a caso.
 
 !!! danger "Queste procedure vanno usate con l'assistenza"
 
@@ -25,7 +25,7 @@ l'assistenza R.S.A., e non a caso.
 
     - **Percorso:** Menu ▸ Utility ▸ Assistenza ▸ *(una delle voci)*
     - **Scorciatoia:** ++f2++ conferma, ++esc++ esce
-    - **Permessi richiesti:** oltre all'abilitazione della voce di menu da [Archivi ▸ Utenti](../anagrafiche/utenti.md), quasi tutte chiedono la **password dell'assistenza** nella finestra *Richiesta Password*
+    - **Permessi richiesti:** oltre all'abilitazione della voce di menu da [Archivi ▸ Utenti](../anagrafiche/utenti.md), ogni voce chiede la **password dell'assistenza** nella finestra *Richiesta Password*
 
 ---
 
@@ -69,7 +69,6 @@ stato usato.
 | **Tronca Descrizioni Articoli a 30 Car** | Accorcia le descrizioni a trenta caratteri, per gli apparecchi che non ne accettano di più. |
 | **Azzeramento Commissione Articoli** | Azzera la commissione sugli articoli. |
 | **Abilita Trasferimento Articoli** | Rimette il segno «da mandare» sugli articoli, per rifare un invio a [casse e bilance](../casse-bilance/casse.md). |
-| **Cancellazione Articoli Inesistenti** | La voce di menu c'è ma **non fa nulla**: la funzione è vuota. |
 
 ### Rimozioni e riporti
 
@@ -209,19 +208,6 @@ codice attuale e quello nuovo.
 <!-- DA VERIFICARE: i messaggi finali di riepilogo delle variazioni di codice. -->
 
 ## Note
-
-!!! warning "Tre voci non chiedono la password"
-
-    **Cancellazione Buoni Sconto Scaduti**, **Variazione Sottoconti** e
-    **Cancellazione Articoli Inesistenti** partono senza chiedere nulla. Le
-    prime due modificano comunque gli archivi: trattale con la stessa cautela
-    delle altre.
-
-!!! warning "«Cancellazione Articoli Inesistenti» non fa nulla"
-
-    La voce compare nel menu ma nel programma la funzione è vuota: premendola
-    non succede niente. È un difetto noto, non un problema della tua
-    installazione.
 
 !!! note "Perché serve aprire tutti gli anni"
 
