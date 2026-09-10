@@ -73,18 +73,15 @@ Le versioni citate nel manuale sono queste:
 |---|---|
 | Ortofrutta | Commercio di prodotti ortofrutticoli |
 | Taglie e Colori | Abbigliamento e calzature |
+| Taglie e Colori - Calzature | Variante di Taglie e Colori per il settore calzaturiero |
 | Megastore | Supermercati e distribuzione organizzata |
 | Bevande | Distribuzione di bevande, con gestione dei vuoti |
 | Energy | Distribuzione di carburanti ed energia |
 | Oreficerie | Oreficerie e gioiellerie |
-| Fiscali | Studi e servizi fiscali |
-| Studio | Gestione di studio |
+| Fiscali | Attività commerciali che vendono modulistica fiscale soggetta a registrazione, come le ricevute fiscali |
+| Studio | Studi di consulenza fiscale e del lavoro: la gestione dei costi mensili delle attività professionali svolte |
 | RSA Office | Servizi in abbonamento e licenze |
 | CRM | Modulo di gestione della relazione con i clienti |
-| Killin | Personalizzazione per singolo cliente |
-
-<!-- DA VERIFICARE: due voci di questa tabella. "Studio" — la descrizione del settore è provvisoria, va confermata. "Killin" — è il nome interno di una personalizzazione: va citato così nel manuale o sostituito? -->
-
 
 !!! note "Nota"
 

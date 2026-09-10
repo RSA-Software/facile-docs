@@ -98,7 +98,8 @@ un'installazione completa si trovano, fra gli altri:
 | `RAGGRUPPATO PER STAGIONE` | Il listino diviso per stagione, con le varianti sull'esistenza. |
 
 L'ultimo formato usato viene riproposto la volta successiva. I formati riservati
-alla versione **Killin** compaiono solo in quella versione.
+alla versione **Taglie e Colori - Calzature** compaiono solo in quella
+versione.
 
 ## Pulsanti e comandi
 

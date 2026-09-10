@@ -159,8 +159,8 @@ Scaricata da Inizio Anno**.
 | *Impossibile inizializzare il file excel!* | Il programma non riesce a preparare il foglio Excel. | Segnala all'assistenza. |
 | *Impossibile aprire il file excel!* | Il file scelto non si apre: è aperto in Excel, spostato o danneggiato. | Chiudi il file in Excel, poi riprova. |
 | *Colonna CODICE non trovata nel file excel!* / *Impossibile continuare* | Il foglio da importare non ha l'intestazione `CODICE`. | Aggiungi la riga di intestazione con la colonna `CODICE`. |
-| *Se il movimento e di tipo SCARICO impostare ESITENZA -* | La causale di rettifica inventario impostata nella ditta è di tipo scarico ma non abbassa l'esistenza. | Correggi la [causale di magazzino](../magazzino/causali-magazzino.md), oppure indica nella ditta una causale adatta. |
-| *Se il movimento e di tipo CARICO impostare ESITENZA +* | La causale di rettifica è di tipo carico ma non alza l'esistenza. | Come sopra. |
+| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | La causale di rettifica inventario impostata nella ditta è di tipo scarico ma non abbassa l'esistenza. | Correggi la [causale di magazzino](../magazzino/causali-magazzino.md), oppure indica nella ditta una causale adatta. |
+| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | La causale di rettifica è di tipo carico ma non alza l'esistenza. | Come sopra. |
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | La causale di rettifica non aggiorna la data di inventario. | Attiva l'opzione corrispondente sulla causale. |
 | *L'articolo fa parte di un Gruppo Mix!* / *Vuoi inserire tutti gli altri articoli del gruppo ?* | L'articolo aggiunto appartiene a un gruppo mix. | **Sì** porta in griglia tutto il gruppo, così il ragionamento sui prezzi resta coerente. |
 | *L'articolo fa parte di un Gruppo Mix!* / *Vuoi aggiornare tutti gli altri articoli del gruppo ?* | Si è cambiato il prezzo di un articolo che appartiene a un gruppo mix. | **Sì** allinea tutto il gruppo. |

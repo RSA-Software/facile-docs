@@ -151,8 +151,8 @@ Personali**:
 
 {: .campi }
 
-Su **Sottogruppi**, nella versione Killin, compaiono in più un campo
-**%Sconto** e una casella **Barcode**.
+Su **Sottogruppi**, nella versione Taglie e Colori - Calzature, compaiono
+in più un campo **%Sconto** e una casella **Barcode**.
 
 Nella versione Taglie e Colori il **Codice** dei **Colori Interni** è limitato:
 da 1 a 999, oppure da 1 a 9999 se così è impostato nei dati dell'azienda. Nelle

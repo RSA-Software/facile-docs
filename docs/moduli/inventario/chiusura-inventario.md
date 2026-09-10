@@ -125,8 +125,8 @@ poi, se serve, il deposito. **Azzeramento Articoli non Inventariati** e
 |---|---|---|
 | *Operazione disponibile solo su archivi anno corrente.* | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro. |
 | *La Causale per l' inventario non é impostata o non é valida.* | Manca la causale di magazzino per l'inventario nei parametri della ditta. | Impostala prima di chiudere. |
-| *Se il movimento e di tipo SCARICO impostare ESITENZA -* | La causale è di scarico ma non sottrae dall'esistenza. | Correggi la [causale](../magazzino/causali-magazzino.md). |
-| *Se il movimento e di tipo CARICO impostare ESITENZA +* | La causale è di carico ma non somma all'esistenza. | Correggi la causale. |
+| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | La causale è di scarico ma non sottrae dall'esistenza. | Correggi la [causale](../magazzino/causali-magazzino.md). |
+| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | La causale è di carico ma non somma all'esistenza. | Correggi la causale. |
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | La causale non aggiorna la data di inventario. | Attiva il flag sulla causale. |
 | *Impostare la gestione delle matricola a OPZIONALE sulla Causale N* | Con le matricole attive la causale è impostata su `NO`. | Mettila su `OPZIONALE`. |
 | *Confermi la Chiusura dell' Inventario ?* | Conferma prima di scrivere le rettifiche. | **Sì** procede. La risposta preimpostata è **No**. |

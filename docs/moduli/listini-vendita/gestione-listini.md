@@ -52,20 +52,21 @@ La finestra ha tre parti: la **barra dei comandi** in alto, la **griglia** degli
 articoli al centro e, in basso, la barra di avanzamento che si muove mentre il
 programma carica.
 
-All'apertura la griglia è vuota: si riempie premendo **F2 - Filtro** e
-scegliendo quali articoli caricare.
+All'apertura la griglia è vuota e la finestra **Impostazione Filtro** si apre
+da sé, per far scegliere subito quali articoli caricare. Se la si chiude con
+**Esci** la griglia resta vuota: si riapre con **F2 - Filtro**.
 
 ## Campi
 
-Non c'è un modulo di dettaglio: i dati si leggono e si correggono nelle celle
-della griglia.
+Non c'è un modulo di dettaglio: la griglia mette in fila tutti i dati, ma non
+si corregge cella per cella — vedi la nota qui sotto.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Codice** | | Codice dell'articolo. Non modificabile. | — |
-| **Cod.Forn.** | | Codice con cui il fornitore identifica l'articolo. Non modificabile. | — |
-| **Descrizione** | | Descrizione dell'articolo. Non modificabile. | — |
-| **Ult.Prezzo Acq.** | | Ultimo prezzo pagato al fornitore: è il termine di paragone per giudicare il listino. Non modificabile. | — |
+| **Codice** | | Codice dell'articolo. | — |
+| **Cod.Forn.** | | Codice con cui il fornitore identifica l'articolo. Se l'articolo non ne ha uno, la colonna ripete il codice interno. | — |
+| **Descrizione** | | Descrizione dell'articolo. | — |
+| **Ult.Prezzo Acq.** | | Ultimo prezzo pagato al fornitore: è il termine di paragone per giudicare il listino. | — |
 | **1° Listino** | | Prezzo di vendita del primo listino. | importo |
 | **%Sc1** … **%Sc7** | | I sette sconti in cascata applicati al prezzo del listino. | da 0 a 100, due decimali |
 | **%Ric.** | | Ricarico che risulta dal prezzo netto rispetto al prezzo di acquisto. | percentuale |
@@ -80,10 +81,24 @@ La colonna **Obbl.** segna con ● i campi che il programma richiede
 obbligatoriamente per salvare: qui nessun campo è obbligatorio, perché non si
 inseriscono nuovi articoli ma si correggono quelli esistenti.
 
+!!! note "La griglia è di sola lettura"
+
+    Nelle celle non si scrive: la griglia serve a guardare e a confrontare. I
+    prezzi si cambiano dalle finestre che aprono **F3 - Tutti Listini**,
+    **F4 - Singolo Listino** e il doppio clic; chiudendo quelle, la riga si
+    aggiorna da sé.
+
+    Per cambiare molti prezzi in un colpo solo ci sono le [variazioni di
+    massa](variazioni-di-massa.md) o il giro da [Excel](#lavorare-i-prezzi-su-excel).
+
 !!! note "Colonne che cambiano nome o spariscono"
 
-    - Se l'azienda lavora con il **codice del fornitore** al posto del codice
-      interno, la colonna **Codice** viene nascosta e resta **Cod.Forn.**.
+    - Normalmente si vede la colonna **Codice** e **Cod.Forn.** resta nascosta.
+      Si scambiano di posto nelle installazioni avviate con il parametro
+      **DGC**: lì sparisce **Codice** e resta **Cod.Forn.**. Non è
+      un'impostazione della ditta ma una personalizzazione richiesta da un
+      cliente, che si attiva sul collegamento con cui si lancia il programma; si
+      riconosce perché la sigla **DGC** compare nella barra di stato di Facile.
     - Se le impostazioni della ditta prevedono i prezzi di acquisto IVA
       inclusa, l'intestazione della colonna diventa **Ult. Prezzo Acq.
       (Imponibile)**.
@@ -102,11 +117,12 @@ inseriscono nuovi articoli ma si correggono quelli esistenti.
 | **Consultazione** | ++f11++ | Apre la consultazione. |
 | **Guida** | ++f1++ | Apre la guida in linea sulla pagina della maschera. |
 
-!!! warning "Nella versione Killin il doppio clic è invertito"
+!!! warning "In Taglie e Colori - Calzature il doppio clic è invertito"
 
-    In **Killin** il doppio clic (e ++enter++ / ++space++) apre la finestra del
-    **singolo listino**, e serve ++ctrl++ per aprire quella dei ricarichi. Nelle
-    altre versioni vale quanto scritto in tabella.
+    In **Taglie e Colori - Calzature** il doppio clic (e ++enter++ /
+    ++space++) apre la finestra del **singolo listino**, e serve ++ctrl++ per
+    aprire quella dei ricarichi. Nelle altre versioni vale quanto scritto in
+    tabella.
 
 ### La finestra Impostazione Filtro
 
@@ -126,10 +142,13 @@ campo resta senza etichetta e non si può compilare.
 
 ### Correggere qualche prezzo a mano
 
-1. Apri **Menu ▸ Archivi ▸ Listini Vendita ▸ Gestione**.
-2. Premi **F2 - Filtro** e restringi agli articoli che ti interessano.
+1. Apri **Menu ▸ Archivi ▸ Listini Vendita ▸ Gestione**: la finestra del
+   filtro si apre da sé.
+2. Restringi agli articoli che ti interessano e conferma.
 3. Attendi il caricamento: la barra in basso dice a che punto è.
-4. Portati sulla riga dell'articolo e correggi la cella del listino.
+4. Portati sulla riga dell'articolo e apri la finestra della riga con **F3 -
+   Tutti Listini**, **F4 - Singolo Listino** o il doppio clic. È da lì che il
+   prezzo si cambia: scriverlo nella cella non serve.
 
 ### Lavorare su un singolo articolo
 
@@ -143,14 +162,20 @@ campo resta senza etichetta e non si può compilare.
 
 1. Carica gli articoli con **F2 - Filtro**.
 2. Premi **F5 - Esporta su Foglio Excel**: il programma propone la cartella
-   `out` dei documenti utente e il nome *Listini*, nei formati `.xlsx` o `.xls`.
+   `out` dei documenti utente, il nome *Listini* e il formato **`.xlsx`**; il
+   vecchio `.xls` resta disponibile nell'elenco dei tipi. Nel foglio finiscono
+   tutte le colonne che si vedono a video, con le stesse intestazioni, gli
+   stessi colori e la griglia dei bordi; restano fuori **Trovato** e le colonne
+   nascoste. La griglia non si muove: resta caricata com'era.
 3. Modifica il foglio fuori da Facile.
-4. Torna nella maschera e **ricarica la griglia con il filtro**: l'esportazione
-   la svuota, e l'importazione aggiorna solo gli articoli che vede caricati.
-5. Premi **F6 - Importa da Foglio Excel** e scegli il file: il programma parte
+4. Premi **F6 - Importa da Foglio Excel** e scegli il file: il programma parte
    dalla cartella `in` dei documenti utente.
-6. Controlla la colonna **Trovato**, poi rispondi alla domanda sugli articoli
+5. Controlla la colonna **Trovato**, poi rispondi alla domanda sugli articoli
    non trovati.
+
+L'importazione aggiorna **solo gli articoli caricati nella griglia**: se nel
+frattempo hai cambiato filtro, ricaricala con gli stessi articoli prima di
+importare.
 
 ### Come dev'essere fatto il foglio da importare
 
@@ -172,6 +197,23 @@ Se il foglio non ha la colonna `COD_LIS` i prezzi **non vengono toccati**: si
 aggiornano solo i dati delle colonne presenti. Se la colonna `DATA` contiene una
 data futura, il nuovo prezzo non entra subito in vigore ma viene messo fra le
 [variazioni programmate](variazione-listini.md).
+
+Prezzo, sconti, minimo di riordino e scorta minima si importano **con i
+decimali**, sia che la cella sia formattata come numero sia che contenga del
+testo. Nelle celle di testo la **virgola** va bene come separatore decimale: il
+programma la converte da sé.
+
+!!! warning "Il foglio esportato non si reimporta così com'è"
+
+    L'esportazione e l'importazione non sono l'una l'inverso dell'altra.
+    L'export scrive **tutti e tre i listini** affiancati, con le intestazioni
+    della griglia (`Codice`, `1° Listino`, `%Sc1`…); l'import lavora su **un
+    listino per volta** e cerca intestazioni diverse (`CODICE`, `COD_LIS`,
+    `PREZZO`, `SCONTO1`…). Reimportando il foglio appena esportato, il
+    programma riconosce solo la colonna del codice e i prezzi non si aggiornano.
+
+    Per fare il giro completo, il foglio da importare va preparato con le
+    intestazioni della tabella qui sopra, una riga per articolo e per listino.
 
 ## Controlli e messaggi
 
@@ -195,15 +237,11 @@ data futura, il nuovo prezzo non entra subito in vigore ma viene messo fra le
     domanda propone **No**: è la risposta prudente. Nella versione
     **Ortofrutta** la domanda non compare e nessun articolo viene marcato.
 
-    **L'esportazione svuota la griglia.** Dopo **F5 - Esporta su Foglio Excel**
-    la griglia resta vuota: prima di importare va ricaricata con il filtro,
-    altrimenti l'importazione non trova alcun articolo da aggiornare.
-
-<!-- DA VERIFICARE: in che momento vengono salvate le correzioni fatte direttamente nelle celle della griglia (a ogni cella, alla chiusura, o con un comando che non ho individuato). -->
-
-<!-- DA VERIFICARE: se i prezzi scritti in celle Excel di tipo numerico vengano importati con i decimali. -->
-
-<!-- DA VERIFICARE: quale impostazione della ditta fa nascondere la colonna Codice a favore di Cod.Forn. e come si chiama a video. -->
+    **Il separatore delle migliaia nelle celle di testo.** In una cella
+    formattata come **testo**, un numero scritto `1.234,56` viene letto come
+    `1,234`: il programma tratta come decimale il primo separatore che trova.
+    Nelle celle **numeriche** il problema non si pone. Se il foglio arriva da
+    fuori, conviene formattare come numero le colonne di prezzo e sconti.
 
 ## Vedi anche
 

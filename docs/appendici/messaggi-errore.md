@@ -174,6 +174,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Il codice della zona non é valido o disponibile.* | Age, Cli, For | Il codice digitato in **Zona** non esiste. | Premere ++f10++ sul campo e scegliere dall'elenco. |
 | *Il codice deve essere compreso tra 1 e 999.* — *Il codice deve essere compreso tra 1 e 9999.* | Tab | **Solo Taglie e Colori.** Il codice di un colore interno è fuori dall'intervallo consentito. | Usare un codice compreso nell'intervallo indicato dal messaggio. |
 | *Il codice deve essere compreso tra 1 e 99999.* | Tab | Sui listini di vendita il codice è fuori dall'intervallo consentito. | Usare un codice compreso fra 1 e 99999. |
+| *Hai cambiato il modo in cui questa causale muove i contatori di magazzino… Vuoi salvare ?* | Cau | Si stanno modificando i contatori di una causale già usata nei movimenti: quelli registrati restano contabilizzati con le impostazioni di prima. | **Sì** salva; subito dopo eseguire **Utility ▸ Ricalcolo Movimenti di Magazzino**. |
 | *Il Codice Fiscale digitato risulta già presente in archivio! Vuoi Continuare?* | Cli, For, Rub | Lo stesso codice fiscale è già assegnato a un altro nominativo. Il controllo vale solo in inserimento. | Verificare di non stare creando un doppione. |
 | *Il codice nazione impostato sulla ditta deve essere di due caratteri!* | Fep | Il codice nazione non è nel formato ISO a due lettere. | Correggilo nella ditta. |
 | *Il documento non contiene righe di dettaglio dei beni/servizi!* | Fep | La fattura non ha righe da cui generare il carico di magazzino. | Registrala solo in contabilità. |
@@ -220,6 +221,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *L'articolo fa parte di un Gruppo Mix! Vuoi inserire tutti gli altri articoli del gruppo ?* | Ali | L'articolo aggiunto alla griglia appartiene a un gruppo mix. | **Sì** porta in griglia tutto il gruppo. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | Cli, For | Primo dei due avvisi che precedono la cancellazione. | Rispondere **Sì** solo se si è certi che il record non serva negli esercizi precedenti. |
 | *La causale contabile deve avere il campo Causale IVA = "SI"* | For | La causale indicata non gestisce l'IVA. | Scegliere una causale IVA, o correggere quella esistente nella sua anagrafica. |
+| *La causale ha delle impostazioni che si contraddicono: … Vuoi salvarla lo stesso ?* | Cau | Al salvataggio sono state trovate combinazioni incoerenti fra tipo di movimento, esistenza e contatori di quantità e valore; il messaggio le elenca. | Correggere quello che l'elenco segnala. **Sì** salva comunque, e la risposta preimpostata è **No**. |
 | *La causale contabile deve essere in relazione con i fornitori!* | For | La causale indicata è impostata sui clienti. | Scegliere una causale collegata ai fornitori. |
 | *La descrizione articolo in italiano e' obbligatoria!* | Art | Si sta lavorando in una lingua diversa dall'italiano e la descrizione italiana è vuota. | Tornare all'italiano con **Seleziona Lingua** e scrivere la descrizione. |
 | *La Partita IVA digitata risulta già presente in archivio! Vuoi Continuare?* | Cli, For, Rub | La stessa partita IVA è già assegnata a un altro nominativo. Il controllo vale solo in inserimento. | Verificare di non stare creando un doppione. |
@@ -242,8 +244,8 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *PEC Azienda non impostata!* | Cli, For | Manca la PEC della propria azienda. | Completare i dati dell'azienda e ripetere la stampa. |
 | *Record di un archivio relazionato non trovato!* | Cli, For | Il record richiama una tabella di base il cui contenuto non esiste più. | Segnalare l'anomalia all'assistenza. |
 | *Registro Causale Contabile non compatibile!* | For | La causale indicata non è di acquisti, acquisti CEE o fatture sospese. | Scegliere una causale del registro acquisti. |
-| *Se il movimento e di tipo CARICO impostare ESITENZA +* | Ali | La causale di rettifica inventario è di tipo carico ma non alza l'esistenza. | Correggere la causale di magazzino, o indicarne un'altra nelle opzioni della ditta. |
-| *Se il movimento e di tipo SCARICO impostare ESITENZA -* | Ali | La causale di rettifica inventario è di tipo scarico ma non abbassa l'esistenza. | Correggere la causale di magazzino, o indicarne un'altra nelle opzioni della ditta. |
+| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | Ali | La causale di rettifica inventario è di tipo carico ma non alza l'esistenza. | Correggere la causale di magazzino, o indicarne un'altra nelle opzioni della ditta. |
+| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | Ali | La causale di rettifica inventario è di tipo scarico ma non abbassa l'esistenza. | Correggere la causale di magazzino, o indicarne un'altra nelle opzioni della ditta. |
 | *Sei Sicuro ?* | Man | Seconda conferma della cancellazione articoli in blocco. | **Sì** cancella davvero. Senza una copia di sicurezza non si recupera nulla. |
 | *Selezionare almeno un registro !* | Rnp | Nessuna delle sei caselle dei registri è spuntata. | Spunta il registro o i registri da rinumerare. |
 | *Sono aggiornabili solo i listini da 1 a 3 !* | Iml | Nell'importazione Fenapro il campo **Listino** è fuori intervallo. | Indicare 1, 2 o 3. |

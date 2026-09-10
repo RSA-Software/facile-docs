@@ -52,7 +52,7 @@ stabiliscono dove il deposito deve comparire e dove no.
 | Codice | ● | Identificativo del deposito. In inserimento il programma propone il primo codice libero. | Da 1 a 255 |
 | Descrizione | ● | Denominazione del deposito, come compare nell'anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Telefono 1 | | Recapito del deposito. | Fino a 14 cifre |
-| Telefono 2 | | Secondo recapito. Nella versione Killin accetta anche lettere e segni di punteggiatura, non solo cifre. | Fino a 14 cifre |
+| Telefono 2 | | Secondo recapito. Nella versione Taglie e Colori - Calzature accetta anche lettere e segni di punteggiatura, non solo cifre. | Fino a 14 cifre |
 | Registro Doc. | | Registro su cui numerare i documenti emessi da questo deposito. Lasciandolo vuoto vale il registro generale. | (vuoto) o un registro definito in azienda |
 | Fornitore | | Fornitore associato al deposito, per i magazzini in conto deposito. | Codice dall'archivio fornitori |
 | Cod. Destinazione | | Destinazione di consegna associata al deposito. | Numero della destinazione |
@@ -62,7 +62,7 @@ stabiliscono dove il deposito deve comparire e dove no.
 | Escludi da Inventario | | Il deposito non entra nelle stampe e nelle rilevazioni d'inventario. | Casella |
 | Escludi da Magazzino | | Il deposito non entra nelle stampe di magazzino. | Casella |
 | Cod. P.Vendita | | **Solo Megastore.** Codice con cui il punto vendita è identificato negli scambi con la centrale. | Fino a 7 caratteri |
-| Importa solo Articoli SMA | | **Solo Megastore.** L'importazione carica sul deposito i soli articoli previsti dalla centrale. Nella versione Killin la stessa casella si chiama **Non Esportare Sconto Clienti**. | Casella |
+| Importa solo Articoli SMA | | **Solo Megastore.** L'importazione carica sul deposito i soli articoli previsti dalla centrale. Nella versione Taglie e Colori - Calzature la stessa casella si chiama **Non Esportare Sconto Clienti**. | Casella |
 
 {: .campi }
 

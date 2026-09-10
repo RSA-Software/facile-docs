@@ -170,22 +170,36 @@ Valgono inoltre:
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La causale è usata in movimenti, documenti, scontrini, o è indicata in un cliente o in un'altra causale. | Non è eliminabile: lasciala in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa causale mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la causale mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
+| *La causale ha delle impostazioni che si contraddicono: … Vuoi salvarla lo stesso ?* | Al salvataggio il programma ha trovato combinazioni che non tornano, ed elenca quali. | Leggi l'elenco e correggi, oppure rispondi **Sì** se la causale è voluta così. La risposta preimpostata è **No**. |
+| *Hai cambiato il modo in cui questa causale muove i contatori di magazzino… Vuoi salvare ?* | Stai modificando i contatori di una causale già usata nei movimenti. | **Sì** salva; poi esegui **Utility ▸ Ricalcolo Movimenti di Magazzino**, altrimenti esistenze e progressivi restano quelli di prima. |
 
 ## Note
 
 !!! warning "Attenzione"
 
     Modificare i contatori di una causale **non ricalcola i movimenti già
-    registrati**: la nuova regola vale solo da lì in avanti. Se una causale è
-    stata usata con impostazioni sbagliate, le esistenze vanno ripristinate a
-    parte.
-
-    Il programma non impedisce combinazioni prive di senso — per esempio una
-    causale di *CARICO* che sottrae dall'esistenza. Rileggi le tre colonne
-    prima di salvare.
+    registrati**: la nuova regola vale solo da lì in avanti. Se la causale è
+    già stata usata, al salvataggio il programma te lo dice e ti manda a
+    **Utility ▸ Ricalcolo Movimenti di Magazzino**, che è la procedura che
+    rimette a posto esistenze e progressivi.
 
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
+
+!!! note "I controlli di coerenza avvisano, non impediscono"
+
+    Al salvataggio il programma rilegge le impostazioni e segnala quelle che si
+    contraddicono:
+
+    - una causale di **CARICO** che sottrae dall'**Esistenza**, o una di
+      **SCARICO** che ci somma;
+    - la **quantità** e il **valore** della stessa voce che vanno in versi
+      opposti, o uno che si muove e l'altro fermo — per esempio *Venduta* a
+      **+** e *Venduto* a **=**.
+
+    L'avviso li elenca tutti insieme e chiede se salvare lo stesso: non blocca,
+    perché una causale fuori dagli schemi può essere voluta. La risposta
+    preimpostata è **No**.
 
 <!-- DA VERIFICARE: il rapporto fra il campo Causale (contropartita) e la casella Movimentazione Interna. Vanno impostati sempre insieme, o esistono casi in cui si usa l'uno senza l'altra? -->
 
