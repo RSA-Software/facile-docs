@@ -95,7 +95,7 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra unità. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare l'unità. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | L'unità è assegnata a degli articoli o compare su righe di documento. | Non è eliminabile: lasciala in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | L'unità è assegnata a degli articoli o compare su righe di documento. | Non è eliminabile: lasciala in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa unità mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato l'unità mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

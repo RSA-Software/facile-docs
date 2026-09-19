@@ -290,7 +290,7 @@ Valgono inoltre in tutta la maschera:
 | *Accoppiata Bancone - PLU gia' presente in Archivio ! Vuoi Correggere ?* | Un altro articolo ha già quel numero di PLU su quel bancone. | Rispondi **Sì** e cambia **Num. PLU** o **Bancone** nella scheda *Impostazioni*. |
 | *Confermi la cancellazione...* | Conferma richiesta da **F6 - Elimina** sulla prima eliminazione. | Rispondi **Sì** per marcare l'articolo come cancellato. |
 | *Confermi la Cancellazione....* | Conferma richiesta dalla seconda eliminazione, quella definitiva. | Rispondi **Sì** per togliere l'articolo dall'archivio. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Stai eliminando definitivamente un articolo che compare in righe di documento, movimenti, distinte base, promozioni o inventari. | Non è eliminabile: lascialo marcato come cancellato. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Stai eliminando definitivamente un articolo che compare in righe di documento, movimenti, distinte base, promozioni o inventari. | Non è eliminabile: lascialo marcato come cancellato. |
 | *Deposito non trovato in archivio!* | L'utente collegato punta a un deposito che non esiste più. | Segnala all'assistenza: va corretto il deposito dell'utente o quello attivo dell'azienda. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso articolo mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato l'articolo mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |

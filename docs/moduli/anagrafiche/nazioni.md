@@ -107,7 +107,7 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra nazione. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la nazione. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La nazione è indicata in un cliente, in un fornitore o nelle descrizioni degli articoli. | Non è eliminabile: spunta invece **Non Attiva**. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | La nazione è indicata in un cliente, in un fornitore o nelle descrizioni degli articoli. | Non è eliminabile: spunta invece **Non Attiva**. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa nazione mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la nazione mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

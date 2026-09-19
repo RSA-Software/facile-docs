@@ -152,7 +152,7 @@ Bilance**.
 | *Vuoi trasferire gli articoli alle bilance DIBAL ?* | Come sopra, per le Dibal. | **Sì** procede. |
 | *Confermi la cancellazione degli archivi bilance e la ritrasmissione completa ?* | Hai avviato l'invio completo alle Zenith. | **Sì** svuota le bilance e rimanda tutto. |
 | *Deposito Attivo non Impostato!* | Manca il deposito nei parametri della ditta. | Impostalo prima di procedere. |
-| *Impossibile aprire il file C:\\DIBAL\\TX.TXT!* | Facile non riesce a scrivere il file per le bilance Dibal. | Controlla che la cartella esista e sia scrivibile. |
+| *Impossibile aprire il file C:\\DIBAL\\articoli.txt!* | Facile non riesce a scrivere il file per le bilance Dibal. | Controlla che la cartella `C:\\DIBAL` esista e sia scrivibile, e che nessun altro programma tenga aperto il file. |
 | *Impossibile aprire il file!* | Facile non riesce a leggere o scrivere il file di scambio. | Controlla percorsi e permessi, e che nessun altro programma tenga il file aperto. |
 | *Impossibile spostare il file !* | Il file ricevuto non si è potuto archiviare. | Controlla i permessi della cartella. |
 | *Ci sono Codici Scartati durante la Ricezione.<br>Li vuoi stampare?* | Alcuni codici venduti non corrispondono a nessun articolo. | **Sì**: la stampa dice quali. Vanno sistemati in anagrafica. |

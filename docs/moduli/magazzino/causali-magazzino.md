@@ -167,7 +167,7 @@ Valgono inoltre:
 | *Il codice della Causale di Magazzino richiesto non è valido o disponibile.* | La causale indicata nel campo **Causale** non esiste. | Correggila, oppure lascia il campo a zero. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra causale. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la causale. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La causale è usata in movimenti, documenti, scontrini, o è indicata in un cliente o in un'altra causale. | Non è eliminabile: lasciala in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | La causale è usata in movimenti, documenti, scontrini, o è indicata in un cliente o in un'altra causale. | Non è eliminabile: lasciala in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa causale mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la causale mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 | *La causale ha delle impostazioni che si contraddicono: … Vuoi salvarla lo stesso ?* | Al salvataggio il programma ha trovato combinazioni che non tornano, ed elenca quali. | Leggi l'elenco e correggi, oppure rispondi **Sì** se la causale è voluta così. La risposta preimpostata è **No**. |

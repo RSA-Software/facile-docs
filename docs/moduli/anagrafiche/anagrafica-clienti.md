@@ -332,13 +332,14 @@ Valgono inoltre in tutta la maschera:
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro cliente. | Cambia codice. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | Primo dei due avvisi che precedono la cancellazione. | Rispondi **Sì** solo se sei certo che il cliente non serva negli esercizi precedenti. |
 | *Confermi la Cancellazione....* | Seconda e ultima conferma prima di eliminare. | Rispondi **Sì** per eliminare davvero il cliente. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il cliente è usato in documenti, scadenze, prima nota, movimenti, scontrini, banchi, commesse, provvigioni o contratti. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il cliente è usato in documenti, scadenze, prima nota, movimenti, scontrini, banchi, commesse, provvigioni o contratti. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso cliente mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il cliente mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 | *Codice Fiscale Cliente non impostato!* — *Indirizzo Cliente non impostato!* — *Citta' Cliente non impostata!* | Stai stampando l'autorizzazione al trattamento dei dati e mancano dati del cliente. | Completa la scheda *Generale* e ripeti la stampa. |
 | *Mancano i dati del titolare/legale rappresentante!* | Stai stampando il modulo di fidejussione e il titolare non è registrato. | Registralo con **F7 - Altri ▸ Titolare/Rappr. Legale**. |
 | *Note non presenti! Le vuoi creare ?* | Hai aperto **F7 - Altri ▸ Note** su un cliente che non ne ha. | Rispondi **Sì** per aprire la nota vuota. |
 | *Impossibile acquisire i dati!* | Il testo incollato nella finestra del QR code non è leggibile. | Rileggi il QR code e riprova. |
+| *Codice Fiscale Titolare/Legale Rappresentante non presente in archivio e da compilare manualmente!* | Il titolare è registrato ma senza codice fiscale. | Completarne i dati, oppure scriverlo a mano sul modulo stampato. |
 
 ## Note
 

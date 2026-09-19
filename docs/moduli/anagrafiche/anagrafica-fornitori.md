@@ -294,7 +294,7 @@ Valgono inoltre in tutta la maschera:
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro fornitore. | Cambia codice. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | Primo dei due avvisi che precedono la cancellazione. | Rispondi **Sì** solo se sei certo che il fornitore non serva negli esercizi precedenti. |
 | *Confermi la Cancellazione....* | Seconda e ultima conferma prima di eliminare. | Rispondi **Sì** per eliminare davvero il fornitore. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il fornitore è usato in scadenze, prima nota, documenti, movimenti, articoli, contratti o promozioni. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il fornitore è usato in scadenze, prima nota, documenti, movimenti, articoli, contratti o promozioni. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso fornitore mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il fornitore mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 | *Record di un archivio relazionato non trovato!* | Il fornitore richiama un pagamento, una banca o un'altra tabella che non esiste più. | Segnala l'anomalia all'assistenza: manca un record in una tabella di base. |
@@ -302,6 +302,7 @@ Valgono inoltre in tutta la maschera:
 | *Codice Fiscale Azienda non impostato!* — *Indirizzo Domicilio Legale Azienda non impostato!* — *Citta' Domicilio Legale Azienda non impostata!* — *PEC Azienda non impostata!* | Per la stessa stampa mancano dati della tua azienda. | Completa i dati dell'azienda e ripeti la stampa. |
 | *Dati Titolare/Legale Rappresentante non presenti in archivio e da compilare manualmente!* | Il fornitore è una persona giuridica e non ne è stato registrato il titolare. | Registralo con **F7 - Altri ▸ Titolare/Rappr. Legale**, oppure compila a mano il modulo stampato. |
 | *Impossibile acquisire i dati!* | Il testo incollato nella finestra del QR code non è leggibile. | Rileggi il QR code e riprova. |
+| *Codice Fiscale Titolare/Legale Rappresentante non presente in archivio e da compilare manualmente!* | Il titolare è registrato ma senza codice fiscale. | Completarne i dati, oppure scriverlo a mano sul modulo stampato. |
 
 ## Note
 

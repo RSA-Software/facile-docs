@@ -87,15 +87,16 @@ Mentre si scrive, **il titolo della finestra conta i caratteri**: *Invio SMS :
 sente un segnale acustico — da lì in poi ogni 160 caratteri è un messaggio in
 più, e si paga in più.
 
-!!! tip "Il conteggio è prudenziale, ma non del tutto"
+!!! note "Alcuni caratteri contano doppio"
 
-    Gli **a capo non vengono contati**, e alcuni simboli — `{ } [ ] \ | ~ ^ €` —
-    sul telefono occupano il posto di due caratteri pur contando per uno. Se si
-    è a ridosso dei 160, conviene stare larghi.
+    I simboli `{ } [ ] \ | ~ ^ €` non stanno nell'alfabeto base degli SMS:
+    sul telefono occupano **il posto di due caratteri**, e il conteggio ne
+    tiene conto. Una parentesi graffa di troppo può far passare il messaggio
+    da uno a due.
 
-    I caratteri che un SMS non sa portare (le virgolette curve copiate da Word,
-    per esempio) non vengono contati affatto e arrivano storti: meglio scrivere
-    il testo qui dentro invece di incollarlo.
+    I caratteri che un SMS non sa portare — le virgolette curve copiate da
+    Word, per esempio — vengono contati, ma **arrivano storti**: meglio
+    scrivere il testo qui dentro invece di incollarlo da un documento.
 
 **I messaggi**
 

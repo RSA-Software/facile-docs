@@ -126,7 +126,7 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro deposito. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il deposito. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il deposito compare in movimenti, righe di documento, causali di magazzino, contratti o promozioni. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il deposito compare in movimenti, righe di documento, causali di magazzino, contratti o promozioni. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso deposito mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il deposito mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

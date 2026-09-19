@@ -110,7 +110,7 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca la **Descrizione**. | Il cursore torna sul campo: scrivi il nome del comune. |
 | *In archivio è già presente un record con lo stesso codice.* | Il comune digitato è già in archivio. | Cerca il comune esistente invece di crearne un altro. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il comune. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il comune è richiamato da altri archivi. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il comune è richiamato da altri archivi. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso comune mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il comune mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

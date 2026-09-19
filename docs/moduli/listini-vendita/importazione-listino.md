@@ -176,6 +176,7 @@ La finestra di **Fenapro** ha il solo campo **Listino**.
 | *Impossibile trovare il file della licenza.* / *Riattivare il software per accedere al server delle licenze.* | Importazione tabacchi: la licenza non è raggiungibile. | Riattiva il programma o contatta l'assistenza. |
 | *Accesso non consentito.* / *Necessario rinnovo canone.* | Importazione tabacchi: il canone di assistenza è scaduto. | Contatta l'assistenza per il rinnovo. |
 | *Connessione al server conclusa con errore n N* | Importazione tabacchi: il controllo della licenza non è andato a buon fine. | Verifica il collegamento a Internet e riprova; se il problema resta, contatta l'assistenza. |
+| *Impossibile allocare la memoria necessaria. Riavviare il pc e riprovare.* | Il controllo della licenza per l'importazione dei tabacchi non è riuscito. | Riavviare il computer; se il problema resta, contattare l'assistenza. |
 
 ## Note
 

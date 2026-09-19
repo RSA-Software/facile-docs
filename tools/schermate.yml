@@ -1461,7 +1461,7 @@ schermate:
   scheda: docs/moduli/vendite/contabilizzazione-documenti.md
   titolo: Contabilizzazione dei documenti
   modulo: Vendite
-  maschera_id: nessuna dialog propria
+  maschera_id: IDD_VEN_FAT_CONTABILIZZA
   immagine: docs/assets/img/vendite/contabilizzazione-documenti.png
   percorso: Vendite ▸ Fatture ▸ Contabilizza
   voce_id: ID_VENDITE_FATTURE_CONTABILIZZA
@@ -1473,7 +1473,7 @@ schermate:
   scheda: docs/moduli/vendite/documenti-accompagnatori-semplificati.md
   titolo: Documenti accompagnatori semplificati
   modulo: Vendite
-  maschera_id: IDD_DAS
+  maschera_id: IDD_VEN_DAS
   immagine: docs/assets/img/vendite/documenti-accompagnatori-semplificati.png
   percorso: Vendite ▸ Documenti Accompagnatori Semplificati ▸ Inserimento
   voce_id: ID_VENDITE_DOCUMENTIACCOMPAGNATORISEMPLIFICATI_INSERIMENTO
@@ -1528,7 +1528,7 @@ schermate:
   scheda: docs/moduli/vendite/fatture-elettroniche-attive.md
   titolo: Fatture elettroniche attive
   modulo: Vendite
-  maschera_id: IDD_CON_FATTURE_ELETTRONICHE_ATTIVE
+  maschera_id: IDD_VEN_FATTURE_INVIO, IDD_VEN_CRUSCOTTO_FATTURE_PA
   immagine: docs/assets/img/vendite/fatture-elettroniche-attive.png
   percorso: Vendite ▸ Fatture ▸ Invio Massivo Fatture Elettroniche
   voce_id: ID_FATTURE_INVIOFATTUREELETTRONICHE

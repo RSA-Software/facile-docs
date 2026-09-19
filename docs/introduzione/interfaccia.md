@@ -21,7 +21,7 @@ Dall'alto in basso:
 | **Menu** | Le voci dei moduli, da **Archivi** a **Utility**, più **File** e **?**. Contiene solo quello che l'utente collegato può aprire. |
 | **Barre degli strumenti** | I pulsanti con l'icona, per le operazioni più frequenti. |
 | **Area di lavoro** | Dove si aprono le maschere. Se ne possono tenere aperte più d'una insieme. |
-| **Barra di stato** | In basso, i tre indicatori **CAPS**, **NUM** e **SCRL**. |
+| **Barra di stato** | In basso: l'**utente** con cui si è entrati, la **versione** dell'eseguibile e i tre indicatori **CAPS**, **NUM** e **SCRL**. |
 
 Le barre degli strumenti si possono spostare, agganciare ai quattro lati o
 lasciare staccate, e si nascondono da **Menu ▸ File ▸ Toolbar ▸ Barra degli
@@ -132,7 +132,7 @@ programma per conto di tutte.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | **Sì** elimina. La risposta preimpostata è **No**. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il record è richiamato da qualche altro archivio. | Non si cancella finché è in uso. Il refuso «pochè» è del programma. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il record è richiamato da qualche altro archivio. | Non si cancella finché è in uso. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è di un altro record. | Cambiare codice. |
 | *Il record richiesto non è presente in archivio.* | Il codice cercato non esiste. | Controllare il codice, o sceglierlo dall'elenco con ++f10++. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un collega ha salvato lo stesso record mentre lo si modificava. | **Ricarica**, guardare che cosa è cambiato e rifare le proprie modifiche. |

@@ -206,7 +206,7 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
 | *Il codice della zona non è valido o disponibile.* | Il codice digitato in **Zona** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. |
 | *Il codice del Capo Area non è valido o disponibile.* | Il codice digitato in **Capo Area** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco, oppure inserisci prima il capo area. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare l'agente. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | L'agente è assegnato a dei clienti, oppure compare in documenti, movimenti, scadenze o provvigioni. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | L'agente è assegnato a dei clienti, oppure compare in documenti, movimenti, scadenze o provvigioni. | Non è eliminabile: lascialo in archivio. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro agente. | Cambia codice. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso agente mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato l'agente mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |

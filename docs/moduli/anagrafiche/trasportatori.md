@@ -124,7 +124,7 @@ trasportatore dall'archivio e abbandona le modifiche non salvate. Se l'archivio
 | *Partita IVA non valida! Vuoi continuare ?* | Il codice di controllo della partita IVA non torna. | Rispondi **No** e ricontrolla il numero, oppure **Sì** per salvare comunque. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro trasportatore. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il trasportatore. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il trasportatore è indicato in un cliente, in un fornitore o su un documento. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il trasportatore è indicato in un cliente, in un fornitore o su un documento. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso trasportatore mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il trasportatore mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

@@ -137,7 +137,7 @@ Valgono inoltre:
 | *Il codice del Sottoconto non è valido o disponibile.* | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggi il sottoconto, oppure lascia il campo a zero se la banca non è dell'azienda. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra banca. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la banca. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La banca è indicata in un cliente, un fornitore, un documento o una scadenza. | Non è eliminabile: lasciala in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | La banca è indicata in un cliente, un fornitore, un documento o una scadenza. | Non è eliminabile: lasciala in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa banca mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la banca mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

@@ -103,7 +103,7 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro marchio. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il marchio. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il marchio è assegnato a degli articoli, a contratti, a promozioni o a un calcolo scorte. | Non è eliminabile: prima cambia marchio agli articoli che lo usano. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il marchio è assegnato a degli articoli, a contratti, a promozioni o a un calcolo scorte. | Non è eliminabile: prima cambia marchio agli articoli che lo usano. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso marchio mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il marchio mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

@@ -140,6 +140,7 @@ periodo: le percentuali le prende dal listino, non dall'operatore.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca un campo obbligatorio. | Compila il campo su cui si è posizionato il cursore. |
+| *Non ci sono fatture in archivio!* | Si è chiesta l'attribuzione automatica delle provvigioni ma non c'è nessuna fattura da cui ricavare il periodo. | Emetti le fatture, poi ripeti. |
 
 ## Note
 

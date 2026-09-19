@@ -19,6 +19,21 @@ Legge il **disegno** della maschera. Campi nascosti o rinominati a runtime —
 per versione del programma, o secondo i dati dell'azienda — si trovano solo
 nel `.cpp` corrispondente.
 
+## `appendice-messaggi.py`
+
+Rigenera `docs/appendici/messaggi-errore.md` leggendo la sezione «Controlli e
+messaggi» di **tutte** le schede. L'appendice non si scrive a mano: si
+aggiunge il messaggio alla scheda della sua maschera e si rilancia questo.
+
+```
+.venv/Scripts/python.exe tools/appendice-messaggi.py
+```
+
+Prende solo le tabelle con le colonne `| Messaggio | Causa | Cosa fare |`: una
+tabella con colonne diverse, dentro quella sezione, viene ignorata. I messaggi
+identici su piu' schede diventano una riga sola, e oltre sei schede la colonna
+*Dove* dice «Molte maschere».
+
 ## `domande-aperte.py`
 
 Raccoglie i marcatori `DA VERIFICARE` sparsi nelle schede e rigenera

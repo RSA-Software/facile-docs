@@ -145,7 +145,7 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra categoria. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la categoria. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La categoria è assegnata ad articoli, a contratti, a promozioni o a un calcolo scorte. | Non è eliminabile: prima cambia categoria agli articoli che la usano. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | La categoria è assegnata ad articoli, a contratti, a promozioni o a un calcolo scorte. | Non è eliminabile: prima cambia categoria agli articoli che la usano. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa categoria mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la categoria mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

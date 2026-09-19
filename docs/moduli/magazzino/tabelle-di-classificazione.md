@@ -204,9 +204,11 @@ Valgono inoltre:
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già usato in questa tabella. | Cambia codice. Codici uguali in tabelle diverse non danno fastidio. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la voce. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La voce è assegnata a degli articoli, a un calcolo scorte o a un gruppo fornitori. | Non è eliminabile: prima cambia classificazione agli articoli che la usano. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | La voce è assegnata a degli articoli, a un calcolo scorte o a un gruppo fornitori. | Non è eliminabile: prima cambia classificazione agli articoli che la usano. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa voce mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato la voce mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
+| *Il codice deve essere compreso tra 1 e 999.* / *Il codice deve essere compreso tra 1 e 9999.* | **Solo Taglie e Colori.** Il codice di un colore interno è fuori dall'intervallo consentito. | Usare un codice compreso nell'intervallo indicato dal messaggio. |
+| *Il codice deve essere compreso tra 1 e 99999.* | Sui listini di vendita il codice è fuori dall'intervallo consentito. | Usare un codice compreso fra 1 e 99999. |
 
 ## Note
 

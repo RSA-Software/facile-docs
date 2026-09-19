@@ -1,6 +1,6 @@
 ---
 title: Versioni specifiche
-description: I rami di menu che esistono solo nelle versioni di Facile allestite per un settore — Oreficerie, Cauzioni e Studio.
+description: I rami di menu che esistono solo nelle versioni di Facile allestite per un settore — Oreficerie, Cauzioni, Studio, Ortofrutta, Energy, Office e Killin.
 modulo: Versioni specifiche
 maschera_id: nessuna dialog propria
 ---
@@ -9,13 +9,15 @@ maschera_id: nessuna dialog propria
 
 Alcuni rami del menu di Facile appartengono a **versioni allestite per un
 settore**: l'oreficeria, la distribuzione di bevande, lo studio professionale,
-il commercio all'ingrosso di ortofrutta.
+il commercio all'ingrosso di ortofrutta, i depositi di prodotti energetici, la
+vendita e l'assistenza di programmi.
 Le maschere ci sono in tutte le installazioni, ma **funzionano solo se la
 versione è stata compilata per quel settore**.
 
 !!! warning "Se non trovi il menu, la tua versione non lo prevede"
 
-    I rami **Oreficerie**, **Cauzioni** e **Procedure Personali** non ci sono in
+    I rami **Oreficerie**, **Cauzioni**, **Procedure Personali**,
+    **Ortofrutta**, **Energy**, **Office** e **Killin** non ci sono in
     tutte le installazioni: **all'avvio il programma toglie dalla barra dei menu
     l'intero ramo** che la versione non prevede. Non trovarlo non è un guasto e
     non è un problema di permessi — è la versione che non ha quel modulo. Per
@@ -29,6 +31,9 @@ versione è stata compilata per quel settore**.
 | [Valenze di lavorazione](oreficerie-valenze.md) | Oreficerie | La tabella dei costi di lavorazione dell'oro e dell'argento. |
 | [Tabella vuoti](cauzioni-vuoti.md) | Bevande | La tabella dei vuoti a rendere, con cauzione e prezzo di vendita. |
 | [Responsabili e collaboratori](studio-collaboratori.md) | Studio | L'anagrafica dei collaboratori dello studio. |
+| [Killin](killin.md) | Killin | Le stampe dei ricavi a costo medio e a costo specifico, i riepiloghi con le foto e lo scambio dati con Gesa. |
+| [Office](office.md) | Office | Licenze installate presso i clienti, canoni di assistenza, fatturazione dei canoni e crediti per la fattura elettronica. |
+| [Procedure Personali](procedure-personali/index.md) | Studio | Crediti verso i clienti, incassi e rettifiche, titoli, sospesi e analisi dello studio. |
 | [Energy](energy/index.md) | Energy | Un ramo di menu intero: il registro telematico dei prodotti energetici, i flussi per l'Agenzia delle Dogane, accise e ravvedimenti. |
 | [Ortofrutta](ortofrutta/index.md) | Ortofrutta | Un ramo di menu intero: le partite in conto deposito, la chiusura della vendita, gli estratti, gli ordini delle catene e gli imballaggi. |
 

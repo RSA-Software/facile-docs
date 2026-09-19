@@ -140,7 +140,7 @@ ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
 | *(nessun messaggio, solo un segnale acustico)* | Manca uno fra **Mastro**, **Conto**, **Codice** e **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 | *In archivio è già presente un record con lo stesso codice.* | Nel conto indicato c'è già un sottoconto con quel codice. | Cambia codice, o verifica di essere nel conto giusto. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il sottoconto. |
-| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Il sottoconto compare in righe di prima nota, in scadenze pagate o in una causale contabile. | Non è eliminabile: lascialo in archivio. |
+| *Non è possibile eliminare il record poiché utilizzato in alcuni record del database.* | Il sottoconto compare in righe di prima nota, in scadenze pagate o in una causale contabile. | Non è eliminabile: lascialo in archivio. |
 | *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato lo stesso sottoconto mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il sottoconto mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 

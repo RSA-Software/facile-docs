@@ -14,11 +14,13 @@ pubblicato automaticamente a ogni `push` su `main`.
 mkdocs.yml                             configurazione del sito e struttura del menu
 requirements.txt                       dipendenze Python
 templates/documento-maschera.md        template da copiare per ogni nuova maschera
+tools/                                 strumenti di redazione (vedi tools/README.md)
+DOMANDE-APERTE.md                      elenco generato dei marcatori DA VERIFICARE
 docs/                                  il manuale vero e proprio
   index.md                             home page
   introduzione/                        primo accesso, interfaccia, convenzioni
   moduli/<modulo>/<maschera>.md         una scheda per maschera
-  appendici/                           glossario, elenco messaggi di errore
+  appendici/                           glossario, elenco messaggi di errore (generato)
   assets/img/<modulo>/                 screenshot delle maschere
 .claude/skills/manuale-maschere/        skill per Claude Code (vedi sotto)
 .github/workflows/pubblica-manuale.yml  build e deploy su GitHub Pages
@@ -96,6 +98,8 @@ Le regole di stile sono nel template e nella skill. In sintesi:
 - si scrive per l'utente finale: mai nomi di variabili, classi o tabelle;
 - le etichette dei campi si riportano **esatte** come appaiono a video;
 - le procedure sono elenchi numerati, un'azione per passo;
-- i messaggi di errore si riportano con il testo esatto, con causa e rimedio;
+- i messaggi di errore si riportano con il testo esatto, con causa e rimedio,
+  **nella scheda della maschera**: l'appendice si rigenera da quelle con
+  `tools/appendice-messaggi.py` e non si scrive a mano;
 - le sezioni del template non si aggiungono né si tolgono: l'uniformità tra le
   schede è ciò che rende il manuale consultabile.

@@ -301,6 +301,12 @@ nav:
       - Valenze di Lavorazione (Oreficerie): moduli/versioni/oreficerie-valenze.md
       - Tabella Vuoti (Cauzioni): moduli/versioni/cauzioni-vuoti.md
       - Responsabili e Collaboratori (Studio): moduli/versioni/studio-collaboratori.md
+      - Killin: moduli/versioni/killin.md
+      - Office: moduli/versioni/office.md
+      - Procedure Personali:
+          - moduli/versioni/procedure-personali/index.md
+          - Crediti e incassi: moduli/versioni/procedure-personali/crediti-e-incassi.md
+          - Titoli, sospesi e analisi: moduli/versioni/procedure-personali/titoli-e-analisi.md
       - Energy:
           - moduli/versioni/energy/index.md
           - Movimenti: moduli/versioni/energy/movimenti.md

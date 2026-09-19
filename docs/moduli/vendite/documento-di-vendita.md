@@ -223,11 +223,133 @@ il pulsante **F2 - OK** sparisce: resta solo **Esci**.
 
 ## Controlli e messaggi
 
+È la maschera che parla di più di tutto il programma. I messaggi sono
+raccolti qui per **momento in cui si incontrano**, non in ordine alfabetico:
+quasi sempre quello che serve è capire *a che punto* il documento si è
+fermato.
+
+!!! tip "Le domande importanti hanno «No» già selezionato"
+
+    Quasi tutte le domande di questa maschera — fido superato, cliente
+    cessato, righe senza lotto, scadenzario da correggere — arrivano con la
+    risposta **No** preimpostata. Premere Invio per abitudine **non**
+    prosegue: annulla. È voluto, ed è la ragione per cui conviene leggerle
+    invece di scacciarle.
+
+### Quando si indica il cliente
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Il cliente selezionato risulta cessato !<br>Vuoi Continuare ?* | Il cliente ha una data di cessazione nella sua [anagrafica](../anagrafiche/anagrafica-clienti.md). | **Sì** intesta lo stesso il documento. Se il cliente è tornato attivo, la strada giusta è togliere la data di cessazione. |
+| *Attenzione !<br>E' stato superato il Fido concesso al Cliente (Euro …) per l' importo di Euro …<br>Vuoi Continuare ?* | Il documento porta l'esposizione del cliente oltre il fido. | **Sì** prosegue lo stesso. La cifra fra parentesi è il fido, l'altra lo sconfinamento. |
+| *Attenzione !<br>E' stato superato il Fido concesso al Cliente (Euro …) per l' importo di Euro …<br>Impossibile Continuare!* | Lo stesso caso, ma l'installazione è configurata per **non** consentire lo sconfinamento. | Non si prosegue: o si incassa qualcosa, o si alza il fido nell'anagrafica del cliente. |
+| *Non e' stato inserito il destinatario !<br>Vuoi inserirlo ?* | Manca la destinazione della merce. | **Sì** apre la scelta del destinatario. |
+| *Indicare il tipo di pagamento !* | Manca il [tipo di pagamento](../contabilita/tipi-di-pagamento.md). | Va indicato: da lì nascono le scadenze. |
+| *Il tipo di pagamento non e' stato impostato.<br>Sara' richiesto al momento della fatturazione!* | Su un documento che diventerà fattura più avanti. | Non è un errore: il pagamento verrà chiesto all'emissione della fattura. |
+| *Scadenza non indicata!<br>Vuoi Continuare ?* | Il pagamento prevede una scadenza che non è stata scritta. | **Sì** salva senza; la scadenza andrà poi messa a mano nello [scadenzario](../scadenze/gestione-scadenze.md). |
+
+### Quando si scrivono le righe
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Attenzione!<br>Articolo Inesistente<br>Codice … Q.ta …* | Il codice digitato non è in [anagrafica](../anagrafiche/anagrafica-articoli.md). | Controllare il codice o creare l'articolo. |
+| *Codice … non corrispondente ad alcun articolo in archivio!* | Lo stesso caso, leggendo da un lettore o da un file. | Come sopra. |
+| *Riga N. …<br>Esistenza non sufficiente per effettuare la vendita!* | L'esistenza dei depositi che l'utente può vedere non copre la quantità. | Controllare la giacenza: può anche essere un carico non ancora registrato. |
+| *L'articolo selezionato ha superato la Scorta Max impostata!* | La riga porta l'articolo oltre la scorta massima. | È un avviso: si prosegue. |
+| *Non sono ammesse quantità con decimali!* | L'articolo si vende a pezzi interi. | Correggere la quantità. |
+| *Non sono ammesse quantita' con decimali nella gestione delle Matricole!<br>Articolo …* | L'articolo è gestito a matricola: ogni pezzo è un pezzo. | Come sopra. |
+| *Attenzione!<br>Gestione Lotti attiva per l'articolo selezionato.<br>Vuoi Forzare?* | L'articolo vuole il [lotto](../analisi-dati/analisi-lotti.md) e non è stato indicato. | **No** torna sulla riga per indicarlo; **Sì** vende senza lotto, e la tracciabilità si perde. |
+| *Lotto Mancante!<br>Vuoi Continuare ?* | Come sopra, in fase di controllo del documento. | Come sopra. |
+| *Non c'è giacenza sufficiente per il lotto indicato!* | Il lotto scelto non ha abbastanza merce. | Scegliere un altro lotto o dividere la riga. |
+| *GTIN Mancante!<br>Vuoi Continuare ?* | L'articolo non ha il codice a barre, richiesto da questo tipo di documento. | Conviene aggiungerlo in anagrafica. |
+| *Attenzione!<br>Listino di vendita non impostato.<br>Saranno utilizzati i prezzi di acquisto.* | Il documento non ha un listino. | I prezzi proposti saranno quelli di acquisto: è quasi sempre da correggere. |
+| *Impostare l'Aliquota Iva Predefinita prima di Continuare!* | Manca l'[aliquota](../contabilita/aliquote-iva.md) predefinita nelle impostazioni della ditta. | Va impostata una volta per tutte. |
+| *Il tipo di documento selezionato non puo' contenere articoli fiscali!* | Si sta mettendo un articolo fiscale — tabacchi, valori bollati — in un documento che non li ammette. | Serve il tipo di documento giusto. |
+
+### Quando il cliente è una pubblica amministrazione
+
+Questa famiglia di messaggi nasce tutta dallo stesso controllo: la ditta ha
+**un registro, una causale e una sezione dedicati** alle fatture e alle note
+di credito verso la PA, e il documento deve usare quelli.
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Il Cliente e' una pubblica amministrazione!<br>Vuoi utilizzare il registro e la causale per le Fatture PA ?* | Il cliente è marcato come PA. | **Sì** cambia registro e causale da sé: è la risposta giusta quasi sempre. |
+| *Il Destinatario e' una pubblica amministrazione!<br>Vuoi utilizzare il registro e la causale per le Fatture PA ?* | Come sopra, quando è il destinatario a essere una PA. | Come sopra. |
+| *Registro Documento non coincide con Registro Fatture PA impostato sulla Ditta!<br>Vuoi continuare ?* | Il documento usa un registro diverso da quello dedicato. | **No** e si corregge il registro: proseguire porta a una fattura che l'invio rifiuterà. |
+| *Causale Contabile Documento non coincide con Causale Contabile Fatture PA impostata sulla Ditta!<br>Vuoi continuare ?* | Come sopra, per la causale. | Come sopra. |
+| *Sezione Documento non coincide con Sezione Causale Contabile Fatture PA impostata sulla Ditta!<br>Vuoi continuare ?* | Come sopra, per la sezione. | Come sopra. |
+| *Registro Fatture PA non impostato su Ditta!* | Nelle impostazioni della [ditta](../anagrafiche/ditte.md) manca il registro dedicato. | Va impostato prima di emettere fatture alla PA. |
+| *Causale Contabile Fatture PA non impostata su Ditta o non valida!* | Manca la causale dedicata. | Come sopra. |
+| *Sezione Fatture PA non impostata sulla Causale Contabile Fatture PA o non valida!* | La causale dedicata non ha la sezione. | Come sopra. |
+| *Il documento risulta gia' inviato alla PA!<br>Vuoi continuare ?* | Si sta modificando un documento già trasmesso. | **No**. Quello che è stato inviato si corregge con una nota di credito, non riscrivendolo. |
+| *Il documento non contiene righe di dettaglio dei beni/servizi!* | La fattura elettronica non ha righe. | Va compilato il corpo. |
+| *Codice abilitazione per l' invio e il controllo esiti delle Fatture PA non impostato.<br>Contattare la R.S.A. … per ottenere ed impostare il codice.* | Manca il codice di abilitazione al servizio di invio. | È R.S.A. a fornirlo. |
+| *Impostare codice fiscale sulla ditta!* / *Partita iva non impostata sulla ditta!* | Mancano i dati della ditta emittente. | Si completano nella scheda della ditta. |
+| *Identificativo Nazione (ISO alpha-2) non impostato su ditta!* / *Il codice nazione impostato sulla ditta deve essere di due caratteri!* | Il codice nazione della ditta manca o è scritto male. | Deve essere di due lettere, per esempio `IT`. |
+
+Le stesse identiche righe esistono per le **note di credito**, con «Note
+Credito PA» al posto di «Fatture PA».
+
+### Quando si salva, si stampa o si invia
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *IL documento e' ancora bloccato!<br>Vuoi sbloccarlo ?* | Il documento è bloccato — di solito perché aperto altrove, o lasciato aperto da una sessione caduta. | **Sì** lo sblocca, ma solo per gli utenti che ne hanno il permesso. |
+| *Per poter eseguire la stampa il documento deve essere sbloccato!* | Come sopra, al momento della stampa. | Va sbloccato prima. |
+| *Per il documento risultano gia' incassi per … Euro.<br>Se continui con l' operazione e non ristampi il documento, devi correggere manualmente lo scadenzario.<br>Vuoi Continuare ?* | Si sta modificando un documento su cui sono già stati registrati incassi (o pagamenti, per l'autofattura). | Leggerlo bene: proseguendo **senza ristampare**, lo scadenzario resta con i vecchi importi e va sistemato a mano. |
+| *Confermi la stampa della fattura ?* | Conferma prima di stampare. | È il momento in cui il documento **diventa emesso**: magazzino, scadenze e provvigioni si muovono adesso. |
+| *Vuoi Stampare il Documento?* | Proposta di stampa dopo il salvataggio. | **No** lascia il documento salvato ma non emesso. |
+| *Vuoi Contabilizzare il documento ?* | Proposta di [contabilizzazione](contabilizzazione-documenti.md). | **Sì** genera la registrazione di prima nota. |
+| *Impossibile trovare il documento in archivio!* | Il documento non c'è più: qualcuno l'ha eliminato. | Ricaricare l'elenco. |
+| *Il record richiesto non è presente in archivio.* | Un codice richiamato dal documento non esiste più. | Controllare i codici della testata. |
+| *Record di un archivio relazionato non trovato!* | Manca una tabella collegata — pagamento, banca, aliquota. | Va ripristinata la voce mancante. |
+| *SMTP Server non impostato !* | Si è premuto **F9 - Email** senza il server di posta configurato. | Si imposta nella scheda della [ditta](../anagrafiche/ditte.md). |
+| *Mittente Email non impostato !* | Manca l'indirizzo del mittente. | Si imposta sull'[utente](../anagrafiche/utenti.md) o sulla postazione. |
+| *Errore CrystalReport …* | Il modello di stampa non si apre o non trova i dati. | Riportare all'assistenza il testo completo: contiene il nome del report e il codice dell'errore. |
+
+!!! warning "Il messaggio sugli incassi già registrati è il più costoso da ignorare"
+
+    *Per il documento risultano gia' incassi per … Euro* significa che il
+    documento che si sta cambiando ha già una vita nello scadenzario.
+    Rispondendo **Sì** e non ristampando il documento, gli importi in
+    scadenza restano quelli di prima: il cliente risulterà debitore della
+    cifra sbagliata, e la differenza salterà fuori al primo sollecito.
+
+### Le righe che arrivano da fuori
+
+Quando il corpo del documento non si scrive ma si **importa** — da un foglio
+Excel, da un file del fornitore, da un carico merci, da uno scontrino — i
+controlli sono altri.
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Colonna CODICE non trovata nel documento !* | Il foglio Excel non ha la colonna del codice. | È obbligatoria: il foglio va sistemato. |
+| *Colonna PREZZO non trovata nel documento !<br>Continuando nell'importazione saranno inseriti i prezzi del listino associato al documento.<br>Vuoi continuare?* | Manca la colonna del prezzo. | **Sì** prende i prezzi dal listino: va bene se i prezzi sono i propri, non se erano quelli del fornitore. |
+| *Nessuna tra le Colonne QUANTITA o COLLI e' stata trovata nel documento !* | Manca la quantità. | Serve almeno una delle due colonne. |
+| *Nessun codice articolo presente per la riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Una riga del file non ha codice. | La riga **non entra**: va aggiunta a mano. |
+| *Non e' possibile accoppiare l'articolo della riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Il codice della riga non si aggancia a nessun articolo. | Come sopra. |
+| *Impossibile aprire il file excel!* / *Impossibile accedere al foglio!* | Il file è aperto altrove o non è leggibile. | Chiuderlo in Excel e riprovare. |
+| *In archivio non e' stato trovato nessun documento col numero e data corrispondenti al carico merci!<br>Impossibile continuare.* | Si sta generando un'autofattura da un carico che non ha documento. | Il carico va completato prima. |
+| *In archivio sono stati trovati piu' documenti con stesso numero e data!<br>Impossibile continuare.* | Due documenti hanno lo stesso numero e la stessa data. | Vanno distinti prima di procedere. |
+| *Il fornitore del carico non coincide con l' intestatario dell' Autofattura !* | L'autofattura è intestata a un soggetto diverso dal fornitore del carico. | Si corregge l'intestatario. |
+| *La data del carico non coincide con la data dell' Autofattura !<br>Vuoi adeguare la data dell' Autofattura ?* | Le due date non coincidono. | **Sì** allinea la data. |
+| *Data Documento non coincide con data scontrino!* / *La data dello scontrino non coincide con la data della Fattura !<br>Vuoi adeguare la data della Fattura ?* | Si sta emettendo una fattura da uno [scontrino](scontrini.md) di un altro giorno. | **Sì** allinea. |
+| *Al carico sono gia' associati documenti fiscali!<br>Vuoi Continuare ?* | Il carico ha già generato un documento. | **No**, a meno di sapere perché lo si sta rifacendo. |
+
+### Quello che il programma non dice
+
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca un campo obbligatorio. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
 
-<!-- DA VERIFICARE: i messaggi di questa maschera. È la più grande del programma e i controlli sono molti: vanno raccolti in una passata dedicata. -->
+!!! note "I messaggi che non trovi qui"
+
+    Restano fuori quelli delle lavorazioni che hanno una pagina propria — la
+    [fattura elettronica](fatture-elettroniche-attive.md), gli
+    [scontrini](scontrini.md), i [documenti accompagnatori](documenti-accompagnatori-semplificati.md),
+    le [casse e bilance](../casse-bilance/casse.md) — e quelli delle
+    installazioni con gestioni particolari, come i tabacchi o l'ortofrutta.
 
 ## Note
 

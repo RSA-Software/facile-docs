@@ -103,8 +103,8 @@ I dati delle righe si inseriscono e si correggono con **F2 - Modifica** e
 1. Carica il listino del fornitore.
 2. Premi **F6 - Elimina** e rispondi **Sì** a *«Confermi la cancellazione dell'
    intero listino ?»*.
-3. Alla domanda *«Vuoi interrompere la cancellazione ?»* rispondi **No** per
-   proseguire.
+3. Controlla il nome del fornitore nella seconda domanda e rispondi **Sì**
+   per proseguire.
 4. Reimporta il listino nuovo con **F8 - Importa**.
 
 ## Controlli e messaggi
@@ -112,7 +112,7 @@ I dati delle righe si inseriscono e si correggono con **F2 - Modifica** e
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Confermi la cancellazione dell' intero listino ?* | Si è premuto **F6 - Elimina**. | **Sì** cancella **tutte** le righe del listino di quel fornitore. |
-| *Vuoi interrompere la cancellazione ?* | Seconda domanda, subito dopo la prima. | Rispondi **No** per proseguire con la cancellazione, **Sì** per fermarla. |
+| *Saranno cancellate tutte le righe di listino del fornitore …<br>L' operazione non si può annullare.<br>Procedere ?* | Seconda conferma, subito dopo la prima. Nomina il fornitore. | **Sì** cancella. La risposta preimpostata è **No**. |
 | *Deposito principale non impostato!* | Manca il deposito principale nelle impostazioni della [ditta](../anagrafiche/ditte.md). | Impostalo e riprova. |
 | *Formato file non compatibile!* | Il file scelto non è nel formato atteso. | Verifica di aver scelto il foglio giusto. |
 | *File utilizzato da un' altra applicazione o formato file non compatibile!* | Il foglio è aperto in Excel. | Chiudilo e riprova. |
@@ -130,23 +130,22 @@ I dati delle righe si inseriscono e si correggono con **F2 - Modifica** e
     contrario: per cancellare davvero si risponde **Sì** alla prima e **No**
     alla seconda.
 
-!!! danger "Per cancellare il listino si risponde prima Sì e poi No"
+!!! danger "La cancellazione chiede due conferme, e cancella tutto"
 
-    Le due domande sono formulate **al contrario l'una dell'altra**, e
-    rispondere d'istinto porta a non cancellare — o, peggio, a cancellare
-    senza volerlo.
+    **F6 - Elimina** non toglie una riga: toglie **l'intero listino del
+    fornitore**. Per questo le conferme sono due, e vanno date entrambe.
 
-    | | Domanda | Per cancellare | Risposta preimpostata |
-    |---|---|:---:|:---:|
-    | 1 | *Confermi la cancellazione dell' intero listino ?* | **Sì** | No |
-    | 2 | *Vuoi interrompere la cancellazione ?* | **No** | **Sì** |
+    | | Domanda | Risposta preimpostata |
+    |---|---|:---:|
+    | 1 | *Confermi la cancellazione dell' intero listino ?* | No |
+    | 2 | *Saranno cancellate tutte le righe di listino del fornitore … L' operazione non si può annullare. Procedere ?* | No |
 
-    La seconda è una domanda di sicurezza in più, e ha la risposta
-    preimpostata su **Sì**, cioè su *fermati*. Premendo Invio due volte non
-    si cancella niente — ed è il comportamento voluto.
+    Vanno nello stesso verso: **Sì** e **Sì** cancellano, e **entrambe**
+    partono da **No**. Premendo Invio per abitudine non si cancella niente.
 
-    Fatto il secondo **No**, il listino del fornitore viene **cancellato
-    per intero**, senza altri avvisi e senza modo di tornare indietro.
+    La seconda domanda nomina il fornitore: è l'ultima occasione per
+    accorgersi di essere sul listino sbagliato. Dopo, le righe non si
+    recuperano — si ricarica il listino dal foglio del fornitore.
 
 !!! info "Le colonne del foglio Excel, per esteso"
 

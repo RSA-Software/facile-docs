@@ -151,6 +151,7 @@ caratteri e `?` un carattere solo.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Un campo obbligatorio della selezione è vuoto. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
+| *Non ci sono articoli in archivio!* | Si è chiesta una stampa ma l'anagrafica articoli è vuota: succede su un'installazione appena fatta. | Carica gli articoli e ripeti. |
 
 ## Note
 
