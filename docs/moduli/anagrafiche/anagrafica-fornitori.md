@@ -326,9 +326,37 @@ Valgono inoltre in tutta la maschera:
     Nella versione Energy, subito dopo aver salvato un fornitore **nuovo**, si
     apre da sola la finestra **Dati Trasmissione Agenzia Dogane**.
 
-<!-- DA VERIFICARE: dove si imposta l'intervallo di codici riservato ai fornitori (quello che fa comparire il messaggio sulle autorizzazioni)? È un dato dell'azienda: qual è il percorso di menu da citare? -->
+!!! note "Dove si decide l'intervallo dei codici"
 
-<!-- DA VERIFICARE: il campo Nota Trasfert. Dal codice risulta che la nota viene riportata sui documenti in cui compaiono articoli del fornitore, ma non è chiaro in quali casi d'uso reali si compili. -->
+    In **Menu ▸ Archivi ▸ Ditte**, con il comando **F7 - Impo. Prot.**: nei
+    campi **Fornitori Dal** e **Al**. È un'impostazione della ditta, non
+    dell'utente, e quel comando compare solo a chi entra come `ADMIN`.
+
+    Due cose da sapere:
+
+    - se lasci entrambi i campi a zero il controllo non scatta e va bene
+      qualunque codice;
+    - il controllo riguarda **solo l'inserimento**. Un fornitore già in
+      archivio con un codice fuori intervallo si continua a modificare senza
+      che nessuno protesti.
+
+!!! note "A cosa serve Nota Trasfert"
+
+    È il rimando a una voce della tabella
+    [Note Particolari](../altre-tabelle/note-aspetto-trasporto.md): una frase
+    lunga anche mezza pagina, che il programma ripete da solo sui documenti in
+    cui compare merce di questo fornitore.
+
+    Si compila per i fornitori con cui lavori in **trasfert**, **conto
+    servizi** o **delivery** — quelli la cui merce vendi per conto loro. Su
+    quei documenti la nota diventa una riga descrittiva, e sul DDT di trasfert
+    intestato al fornitore finisce nelle annotazioni di piede.
+
+    Su ordini e preventivi non compare mai. Se il fornitore non lavora in
+    nessuna di quelle forme, il campo si lascia a zero.
+
+    La frase viene **copiata** nel documento quando il documento nasce:
+    correggendola in tabella non cambi i documenti già fatti.
 
 ## Vedi anche
 

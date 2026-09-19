@@ -117,11 +117,55 @@ Durante il lavoro compare la finestra di avanzamento, con la scritta
     domanda e **No** alla seconda. La seconda propone **Sì** come risposta
     predefinita, cioè propone di annullare: leggila con attenzione.
 
-<!-- DA VERIFICARE: che ruolo abbia la data indicata nell'azzeramento della campagna attuale — se sia la data di chiusura registrata sul cliente o un filtro sui movimenti. -->
+!!! info "Non esiste una tabella delle campagne"
 
-<!-- DA VERIFICARE: cosa distingue "campagna attuale" da "campagna precedente" negli archivi, e dove si stabilisce quando una campagna finisce. -->
+    Una campagna, per Facile, sono **tre numeri scritti sul cliente**:
+    i bollini della campagna **attuale**, quelli della campagna
+    **precedente**, e la **data di inizio** della campagna in corso. Li
+    trovi sulla scheda del cliente, fra i dati della fidelity.
 
-<!-- DA VERIFICARE: da quali documenti il ricalcolo rilegga i bollini: la finestra di avanzamento cita gli scontrini, ma non è detto siano gli unici. -->
+    Non c'è un archivio delle campagne, non c'è una data di scadenza e il
+    programma non chiude niente da solo: **la campagna finisce quando
+    lanci l'azzeramento**, e ricomincia da quel momento.
+
+!!! info "Che cosa fanno i due azzeramenti"
+
+    **Azzeramento Campagna Attuale** fa tre cose su **tutti** i clienti,
+    in un colpo solo:
+
+    1. copia i bollini attuali in quelli della **campagna precedente**,
+       sovrascrivendo quello che c'era;
+    2. azzera i **bollini attuali**;
+    3. scrive su ogni cliente, come **data di inizio campagna**, la data
+       che hai indicato.
+
+    Quella data non filtra niente e non è la data di chiusura: è il
+    **giorno da cui parte la campagna nuova**, e viene scritta uguale su
+    tutti.
+
+    **Azzeramento Campagna Precedente** azzera soltanto i bollini della
+    campagna vecchia, e non tocca né quelli in corso né la data. Si usa
+    quando i premi della campagna passata sono stati tutti consegnati.
+
+!!! warning "Il ricalcolo legge solo gli scontrini"
+
+    Nient'altro: non fatture, non documenti di trasporto, non movimenti di
+    magazzino. Somma, sugli scontrini del periodo indicato e intestati a un
+    cliente, i bollini **caricati meno quelli scaricati**, e **sostituisce**
+    il totale nei bollini attuali del cliente.
+
+    Attenzione alla differenza fra le due scelte:
+
+    - **azzerando prima**, tutti i clienti partono da zero, quindi chi non
+      ha scontrini nel periodo resta a zero: è la ricostruzione vera;
+    - **senza azzerare**, chi non ha scontrini nel periodo **si tiene il
+      valore che aveva**, e il risultato è un misto fra il vecchio conteggio
+      e quello nuovo.
+
+    Se i bollini vengono caricati anche altrove — a mano sulla scheda del
+    cliente, o da un'integrazione esterna — il ricalcolo **li perde**: per
+    quei clienti sostituisce il totale con il solo conteggio degli
+    scontrini.
 
 ## Vedi anche
 

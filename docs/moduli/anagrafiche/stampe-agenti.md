@@ -113,9 +113,27 @@ descrizione.
     [Tabelle di classificazione](../magazzino/tabelle-di-classificazione.md).
     Produce l'elenco di codici e descrizioni, non i clienti dei giri.
 
-<!-- DA VERIFICARE: se la Stampa Giro Agente riporti le tre sequenze o solo quella del giro indicato. -->
+!!! info "Il giro si cerca in tutte e tre le posizioni"
 
-<!-- DA VERIFICARE: quale formato di etichette usa la stampa delle etichette dei giri. -->
+    Un cliente può stare su **tre giri diversi**, ognuno con la sua
+    sequenza. La stampa non guarda solo il primo: prende i clienti di
+    quell'agente che hanno il giro indicato in **una qualunque** delle tre
+    posizioni.
+
+    Il numero del giro viene passato anche al modulo di stampa, che lo usa
+    per riportare la **sequenza giusta** — quella del giro che hai chiesto,
+    non quella del primo giro del cliente.
+
+    Vale allo stesso modo per la stampa del giro e per le etichette.
+
+!!! note "Le etichette dei giri hanno un formato solo"
+
+    Non c'è un campo per scegliere il tracciato o il tipo di foglio: la
+    stampa usa **un unico modulo**, in orizzontale, uguale per tutte le
+    installazioni.
+
+    Per avere etichette di misura diversa il modulo va rifatto: è un
+    modulo di stampa dell'assistenza, non un'impostazione del programma.
 
 ## Vedi anche
 

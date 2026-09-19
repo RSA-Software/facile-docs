@@ -159,9 +159,37 @@ ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: la Riclassificazione ha cinque caselle affiancate. Corrispondono ai cinque livelli del codice di riclassificazione? Vanno compilate tutte o solo le prime? -->
+!!! info "Le cinque caselle della Riclassificazione"
 
-<!-- DA VERIFICARE: il tipo TRANSITORI. In quali casi si usa? -->
+    Sono i cinque livelli del codice di riclassificazione, nell'ordine: la
+    prima è il livello più alto, la quinta il più basso.
+
+    **Non vanno compilate tutte.** Si scrivono solo i livelli che servono ad
+    arrivare alla voce di riclassificazione voluta, e i rimanenti si lasciano
+    vuoti: un sottoconto agganciato a una voce di secondo livello ha le prime
+    due caselle piene e le altre tre vuote.
+
+    Le cinque caselle insieme devono corrispondere a una voce esistente nella
+    tabella dei [conti per la riclassificazione](conti-riclassificazione.md):
+    appena le compili, accanto compare la sua descrizione. Se non compare,
+    quella combinazione non è in tabella.
+
+!!! info "Quando si usa il tipo TRANSITORI"
+
+    Per i sottoconti che devono **restare fuori dal bilancio**: conti di
+    passaggio, di giro, di appoggio, che si aprono e si chiudono dentro
+    l'esercizio e che non hanno senso né come attività né come passività, né
+    come costi né come ricavi.
+
+    Il programma li tratta così: nella formazione del bilancio un sottoconto
+    di tipo *TRANSITORI* **non viene sommato** a nessuno dei quattro totali e
+    non produce nessuna segnalazione. È l'unico tipo che può restare fuori
+    senza che il programma protesti: un sottoconto con il tipo non impostato,
+    invece, fa comparire *Impostazione tipo conto non valido !* con il suo
+    codice.
+
+    Nella finestra **Riclassificazione Conti** c'è una casella apposta per
+    tenerli fuori dall'elenco.
 
 ## Vedi anche
 

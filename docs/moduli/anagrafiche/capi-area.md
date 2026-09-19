@@ -94,9 +94,25 @@ anagrafici del capo area.
     A differenza degli agenti, i capi area hanno solo **Inserimento** e
     **Modifica**: non esiste una stampa dedicata dell'elenco.
 
-<!-- DA VERIFICARE: dove si collega l'agente al suo capo area — se dall'anagrafica agenti o da questa maschera. -->
+!!! note "Il legame si fa dalla parte dell'agente"
 
-<!-- DA VERIFICARE: se la partita IVA e il codice fiscale siano controllati come su clienti e fornitori. -->
+    Qui non c'è l'elenco degli agenti che dipendono dal capo area. Il
+    collegamento si fa uno per uno, aprendo
+    [l'anagrafica dell'agente](anagrafica-agenti.md) e compilando il campo
+    **Capo Area** della scheda *Generale*.
+
+    Quindi l'ordine è questo: prima si registra il capo area, poi lo si indica
+    sugli agenti che gli fanno capo.
+
+!!! note "Partita IVA e codice fiscale: controllati, ma non bloccanti"
+
+    Tutti e due vengono verificati quando esci dal campo — la partita IVA
+    accetta le sole cifre e ne controlla la cifra finale, il codice fiscale
+    controlla il carattere di controllo.
+
+    Se il dato non torna compare *Input non valido ! Vuoi Correggere ?*:
+    rispondendo **Sì** torni nel campo, rispondendo **No** il valore resta
+    com'è e il salvataggio prosegue. È un avvertimento, non un blocco.
 
 ## Vedi anche
 

@@ -77,7 +77,7 @@ Utenti* — ed è divisa in tre parti:
 |---|:---:|---|---|
 | **Deposito** | | Il [deposito](../magazzino/depositi.md) su cui l'utente opera. A fianco è ricordato **(0 = TUTTI)**. | codice, `0` per tutti |
 | **Sezione** | | La [sezione](../contabilita/sezioni.md) contabile dell'utente. A fianco **(0 = TUTTE)**. | codice, `0` per tutte |
-| **Logo** | | Quale logo aziendale usare nelle sue stampe. A fianco **(0 = PREDEFINITO)**. | codice, `0` per il predefinito |
+| **Logo** | | Quale logo far comparire sulle stampe che questo utente manda in stampa. A fianco **(0 = PREDEFINITO)**: con `0` vale il logo della ditta su cui si sta lavorando. | codice, `0` per il predefinito |
 | **Operatore** | | L'[operatore](../altre-tabelle/operatori.md) di cassa a cui l'utente corrisponde. | codice |
 | **Registro** | | Il registro proposto all'utente nei documenti. | `PREDEFINITO`, oppure uno dei registri della ditta |
 | *(elenco senza etichetta, sotto Registro)* | | Quali record l'utente vede negli elenchi. | `ATTIVI`, `CANCELLATI`, `TUTTI` |
@@ -182,13 +182,74 @@ che contiene; rimettendola a una voce si riaccende il ramo che la ospita.
     [tabelle di classificazione](../magazzino/tabelle-di-classificazione.md) e
     di parecchie voci dei [listini di vendita](../listini-vendita/index.md).
 
-<!-- DA VERIFICARE: se il nuovo menu venga applicato subito o al successivo accesso dell'utente. -->
+!!! warning "I permessi valgono dal prossimo accesso"
 
-<!-- DA VERIFICARE: cosa comportano esattamente i "Privilegi Amministratore" rispetto alle spunte dell'albero: se scavalchino i permessi o si sommino. -->
+    Il menu di ogni utente viene costruito **all'ingresso nel programma**,
+    leggendo quello che trova in archivio in quel momento.
 
-<!-- DA VERIFICARE: che formato deve avere il file allegato con F7 Firma Email e dove viene usato. -->
+    Quindi togliendo o dando un permesso a un utente che sta lavorando non
+    cambia niente sul suo schermo: se ne accorgerà la prossima volta che
+    entra. Se la cosa è urgente, va fatto uscire e rientrare.
 
-<!-- DA VERIFICARE: dove si impostano i loghi a cui fa riferimento il campo Logo. -->
+!!! info "Cosa fanno davvero i Privilegi Amministratore"
+
+    Non scavalcano le spunte dell'albero e non si sommano: sono **un'altra
+    cosa**. L'albero decide quali voci di menu si vedono; questa casella
+    decide una manciata di cose che stanno **dentro** le maschere, e che
+    l'albero non sa nemmeno nominare.
+
+    Un utente senza privilegi di amministratore:
+
+    - non vede le voci **Utenti** (inserimento, modifica, stampa), **Nuovo
+      Esercizio** e quelle di Facile Cloud, che spariscono dal menu
+      indipendentemente dalle spunte;
+    - non può modificare **sconto** e **listino** sull'anagrafica del cliente,
+      né il suo **fido**;
+    - non vede il comando **F7 - Impo. Prot.** sulla scheda della ditta;
+    - non può cancellare una **scadenza** né sbloccarne i campi protetti;
+    - se la ditta ha il **blocco dei prezzi** attivo, non può cambiare il
+      prezzo sulle righe dei documenti;
+    - sulle righe di un documento intestato a un **listino**, non vede il
+      prezzo d'acquisto dell'articolo;
+    - deve digitare la **password dell'assistenza** per entrare nelle funzioni
+      delicate, come la variazione del codice articolo.
+
+    Vale come amministratore anche chi entra con l'utente `ADMIN`, spunta o
+    non spunta.
+
+!!! info "La firma delle email"
+
+    **F7 Firma Email** chiede un file **RTF** o **HTML** — parte dalla
+    cartella `in` dell'utente, ma si può prendere da dove si vuole.
+
+    Il file non resta sul disco: viene **copiato dentro l'archivio**, e da
+    quel momento il programma lo appende in fondo a ogni email che quell'utente
+    compone da Facile. Ognuno ha la sua, e chi non ne ha manda email senza
+    firma.
+
+    Ripetendo il comando la firma viene sostituita, non aggiunta: ce n'è una
+    sola per utente.
+
+    La versione **RTF** conserva grassetti, colori e immagini incorporate; la
+    versione **HTML** serve quando la firma arriva già pronta dal grafico o
+    dal gestionale della posta.
+
+!!! info "Dove stanno i loghi"
+
+    Non c'è una maschera dove caricarli: sono **file su disco**, nella
+    cartella `template` dell'installazione, e si chiamano `dit` seguito dal
+    codice a cinque cifre — `dit00001.bmp` per la ditta 1, `dit00007.bmp` per
+    la ditta 7.
+
+    Il campo **Logo** dice quale di quei file usare. Lasciandolo a `0` viene
+    preso quello della ditta su cui si lavora; scrivendoci un numero, viene
+    preso quello, qualunque ditta sia aperta. Serve a chi tiene più ragioni
+    sociali sulla stessa installazione e vuole che certe stampe escano sempre
+    con la carta intestata di una di esse.
+
+    Il logo compare sull'informativa per il trattamento dei dati, sugli
+    estratti conto, sul calcolo degli interessi di mora e sulle stampe delle
+    scadenze.
 
 ## Vedi anche
 

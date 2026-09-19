@@ -25,8 +25,11 @@ cui le anagrafiche pescano provincia e CAP quando digiti il nome di un comune.
 anagrafica clienti, fornitori o banche scrivi il nome di un comune, il
 programma cerca qui e riempie da solo provincia e CAP.
 
-Serve inoltre il **Cod. Catastale**, che le stampe fiscali e la fatturazione
-elettronica richiedono per identificare il comune di nascita o di residenza.
+Di ogni comune il programma legge **tre cose sole**: il nome, la provincia e
+il CAP. Tutto il resto — codice catastale, codice rifiuti, i codici degli
+uffici, il codice ISTAT, la USL — viene conservato ma non entra in nessun
+documento e in nessuna stampa di Facile: è un promemoria a disposizione di chi
+quei codici li deve cercare.
 
 L'archivio arriva già compilato con i comuni italiani: normalmente si apre
 questa maschera solo per correggere un CAP cambiato o per aggiungere un comune
@@ -127,9 +130,20 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il campo Cod. Catastale non è obbligatorio, ma serve alla fatturazione elettronica. Vale la pena renderlo obbligatorio nel programma, o basta segnalarlo nel manuale? -->
+!!! note "Il solo dato che il programma pretende è il nome"
 
-<!-- DA VERIFICARE: il Codice Ufficio Registro è diviso in due caselle affiancate senza etichette distinte. Che cosa va scritto in ciascuna? -->
+    Nemmeno il **Cod. Catastale** è obbligatorio, e non lo è perché nessuna
+    stampa e nessun documento di Facile lo va a leggere. Un comune registrato
+    con il solo nome, la provincia e il CAP funziona perfettamente per la
+    compilazione automatica delle anagrafiche.
+
+    Lo stesso vale per le due caselle di **Codice Ufficio Registro** e per
+    **Codice Ufficio IVA** e **Codice Ufficio Imposte**: accettano tre
+    caratteri ciascuna, vengono conservate, e da nessun'altra parte del
+    programma vengono rilette. Quello che ci scrivi non cambia il
+    comportamento di niente.
+
+<!-- DA VERIFICARE: il Codice Ufficio Registro ha due caselle uguali, di tre caratteri ciascuna e senza etichetta propria. Nel programma nessuna delle due viene mai riletta, quindi il codice non dice a cosa servano. La seconda era per la sezione staccata dell'ufficio, o per qualcos'altro? Se non servono più, vale la pena toglierle dalla maschera. -->
 
 ## Vedi anche
 

@@ -31,14 +31,15 @@ Esempio: sul contatto del corriere registri *Centralino*, *Magazzino* e
 etichetta, invece di tenerli su un foglio.
 
 Lo stesso menu contiene anche **Cerca**, che apre la consultazione della
-rubrica senza passare dalla scheda, e **Importa**, per caricare i contatti da
-un file.
+rubrica senza passare dalla scheda, e **Importa**, che riversa in rubrica
+clienti, fornitori e agenti già in archivio.
 
 ## Prerequisiti
 
-Prima di inserire il primo contatto occorre aver definito le **categorie della
-rubrica**: la categoria è obbligatoria, e senza almeno una il contatto non si
-salva.
+Prima di inserire il primo contatto occorre aver definito le **categorie
+della rubrica**: la categoria è obbligatoria, e senza almeno una il contatto
+non si salva. Si registrano da **Menu ▸ Archivi ▸ Altre Tabelle ▸ Categorie
+Rubrica ▸ Inserimento**.
 
 ## La maschera
 
@@ -60,7 +61,7 @@ salva.
 | Codice | ● | Identificativo del contatto. In inserimento il programma propone il primo codice libero. | Numero |
 | Descrizione | ● | Nome del contatto, come compare nella consultazione. | Fino a 91 caratteri |
 | Categoria | ● | Categoria a cui il contatto appartiene. Accanto compare la descrizione. Senza categoria il contatto non si salva. | Codice dalla tabella delle categorie rubrica |
-| Aggiornamento Automatico | | Tiene il contatto allineato con l'anagrafica di clienti, fornitori e agenti. | Casella |
+| Aggiornamento Automatico | | Con la casella attiva, salvando un **cliente** che ha lo stesso codice fiscale o la stessa partita IVA di questo contatto, il contatto viene riscritto con i dati del cliente. Vedi le note. | Casella |
 | Indirizzo | | Via e numero civico. | Fino a 100 caratteri |
 | Città | | Comune del contatto. | Fino a 30 caratteri |
 | Cap | | Codice di avviamento postale. | Solo cifre, fino a 5 |
@@ -152,11 +153,43 @@ Valgono inoltre:
     A differenza di clienti e fornitori, un contatto della rubrica si può
     eliminare sempre: non è collegato ad altri archivi.
 
-<!-- DA VERIFICARE: la casella Aggiornamento Automatico. Nel codice il commento che la descrive è troncato e il campo non risulta usato altrove: cosa fa esattamente, e ogni quanto? -->
+!!! info "Importa non legge nessun file"
 
-<!-- DA VERIFICARE: la voce di menu Importa. Da quale formato di file carica i contatti, e con quale corrispondenza di colonne? -->
+    Il nome inganna: **Importa** non chiede un file e non apre nessuna
+    finestra di scelta. Chiede una conferma e poi **percorre i tuoi
+    archivi** — clienti, fornitori, agenti — portando in rubrica nome,
+    indirizzo, città, CAP, provincia, partita IVA, codice fiscale e i
+    recapiti telefonici di ciascuno.
 
-<!-- DA VERIFICARE: dove si inseriscono le categorie della rubrica. Sono una tabella generica: qual è il percorso di menu da citare nei prerequisiti? -->
+    Chi è già in rubrica con lo stesso codice fiscale o la stessa partita
+    IVA **non viene duplicato**: viene saltato.
+
+    I contatti che nascono così vengono divisi in tre categorie, secondo
+    l'archivio da cui arrivano, e nascono con **Aggiornamento Automatico**
+    già attivo.
+
+    Per caricare contatti che vengono da fuori — un file, un altro
+    programma — questa voce non serve.
+
+!!! note "Che cosa fa davvero Aggiornamento Automatico"
+
+    Funziona **in una direzione sola**: dal cliente verso la rubrica.
+
+    Salvando un cliente, il programma cerca in rubrica i contatti che hanno
+    il suo **codice fiscale** o la sua **partita IVA** e, su quelli che
+    hanno la casella attiva, riscrive nome, indirizzo, città, CAP,
+    provincia, nazione, partita IVA, codice fiscale, i quattro telefoni, il
+    primo cellulare, il fax e la prima email. Le etichette dei recapiti e
+    tutto il resto della scheda restano come li hai messi.
+
+    **Il contrario non succede**: correggendo un contatto in rubrica
+    l'anagrafica del cliente non cambia. E i **fornitori** e gli **agenti**
+    non vengono riallineati nemmeno salvandoli: per loro la casella non ha
+    effetto, se non al momento dell'importazione.
+
+    Va quindi lasciata attiva sui contatti che sono anche clienti, e tolta
+    su quelli che vuoi tenere diversi dall'anagrafica — per esempio con il
+    recapito di una persona invece che della sede.
 
 ## Vedi anche
 

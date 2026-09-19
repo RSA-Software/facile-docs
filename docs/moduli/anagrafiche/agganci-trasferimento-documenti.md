@@ -105,9 +105,46 @@ con i soli campi **Fornitore** e **Cliente** per restringere l'elenco.
     Se non si usano i trasferimenti di documenti, questa tabella si lascia
     vuota: nessun'altra parte del programma la richiede.
 
-<!-- DA VERIFICARE: quali trasferimenti di documenti usano questa tabella, e se l'aggancio avvenga sul Cod. Cliente o sul Codice Socio. -->
+!!! info "Che cosa fa da chiave, e che cosa è solo contenuto"
 
-<!-- DA VERIFICARE: dove le competenze al chilo vengono usate: se generino provvigioni o restino un dato di consultazione. -->
+    La riga si trova con **tre dati insieme**: il **fornitore**, il
+    **cliente** e la sua **destinazione**. Sono quelli la chiave.
+
+    **Cod. Cliente**, **Cod. Fornitore** e **Codice Socio** sono invece il
+    contenuto: i codici con cui quel cliente è conosciuto dall'altra parte,
+    che il trasferimento scrive nel file al posto del codice tuo. Non
+    servono a cercare la riga.
+
+    Una riga con la **destinazione a zero** vale per il cliente senza
+    destinazione: la ricerca è esatta, non ci si ricade sopra.
+
+!!! info "Quali trasferimenti la usano"
+
+    Quasi tutti quelli verso le grandi marche e le centrali, dove il
+    documento deve uscire con i codici del destinatario e non con i tuoi:
+    Nestlé — documenti, clienti, banchi, premi, sconti, sellout — Globe
+    premi e sconti, Conad e Filconad, Lactalis, Granarolo, Kraft, Mauri,
+    Sammontana, Fini, Smafin, Sicily Food.
+
+    Il trasferimento che non trova l'aggancio del cliente **si ferma su
+    quel documento**: è il motivo per cui questa tabella va compilata prima
+    del primo invio, e aggiornata quando si aggiunge un cliente.
+
+!!! info "Le competenze al chilo sono provvigioni vere"
+
+    Non sono un promemoria: la **competenza agente** viene usata per
+    calcolare la provvigione sulle righe dei documenti, **a peso invece che
+    a percentuale**.
+
+    Succede quando l'articolo è impostato per prendere la competenza
+    dall'aggancio e la vendita non è una vendita normale: allora la
+    provvigione della riga diventa la **competenza moltiplicata per i chili**
+    — peso per quantità, convertito secondo l'unità di misura del peso, che
+    il programma sa leggere in grammi, ettogrammi, chili, quintali o
+    tonnellate.
+
+    È la forma con cui si pagano gli agenti su certe merci: tanto al chilo
+    venduto, indipendentemente dal prezzo.
 
 ## Vedi anche
 

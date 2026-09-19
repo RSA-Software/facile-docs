@@ -138,9 +138,40 @@ caselle **Cod-1** … **Cod-5** della voce di riclassificazione.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: le cinque caselle del codice vanno compilate tutte, o si lasciano a zero i livelli non usati? E come si costruisce un livello intermedio che raggruppa quelli sotto? -->
+!!! info "Come si costruisce la scala dei livelli"
 
-<!-- DA VERIFICARE: se la griglia della finestra Riclassificazione Conti salvi a ogni cella confermata, come le altre griglie del programma. -->
+    Le cinque caselle si riempiono **da sinistra**, e quante ne riempi decide
+    a che livello sta la voce:
+
+    - solo la **prima**: una voce di primo livello, il titolo che raccoglie
+      tutto quello che sotto ripete quel codice;
+    - **prima e seconda**: una voce di secondo livello dentro la precedente;
+    - e così via fino alla quinta.
+
+    Le caselle non usate si lasciano **vuote**, non a zero.
+
+    Quindi un livello intermedio non si dichiara in nessun modo speciale: è
+    semplicemente una voce registrata con meno caselle piene. Tutte le voci
+    che cominciano con gli stessi codici gli finiscono sotto.
+
+    Il programma pretende due cose sole: la **prima casella** dev'essere
+    compilata, e non si può riempire la **terza** lasciando vuota la seconda.
+    Sui livelli più bassi non c'è controllo, quindi il salto va evitato per
+    disciplina propria.
+
+!!! warning "La finestra Riclassificazione Conti non si scrive"
+
+    È un elenco da consultare: le celle non si modificano e non c'è nessun
+    comando di salvataggio.
+
+    Per cambiare l'aggancio di un sottoconto si fa **doppio clic sulla sua
+    riga**: si apre la scheda del [sottoconto](sottoconti.md), si correggono
+    lì i cinque codici e si salva. Tornando indietro la riga dell'elenco si
+    aggiorna da sola.
+
+    Le due caselle in alto sono **filtri**, non impostazioni: una mostra i
+    soli sottoconti non ancora riclassificati, l'altra tiene fuori quelli di
+    tipo transitorio.
 
 ## Vedi anche
 

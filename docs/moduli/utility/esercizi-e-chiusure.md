@@ -151,6 +151,11 @@ Riapertura Conti** tolgono le scritture e si può rifare.
 | *Non ci sono movimenti contabili per l'anno selezionato!* | Nell'anno indicato non c'è prima nota da chiudere. | Controlla l'anno. |
 | *Chiusura Conti eseguita !<br>E' Necessario Annullare la Chiusura per Continuare.* | I conti dell'anno sono già chiusi. | Usa **Annullamento Chiusura Conti** e ripeti. |
 | *Vuoi Veramente Annullare i Movimenti di Chiusura Conti per l' Anno N?* poi *Confermi l'Annullamento dei Movimenti di Chiusura Conti per l' Anno N ?* | Hai avviato l'annullamento. | Rispondi **Sì** a entrambe. La risposta preimpostata è **No**. |
+| *L'operazione e' consentita solo con gli archivi dell'<br><br>ultimo esercizio gestito !* | Si prova a creare il nuovo esercizio stando su un anno passato. | Torna all'anno corrente con **Scegli Esercizio**. |
+| *Attenzione!<br><br>La procedure cambiera' in modo irreversibile gli archivi.<br>Prima di continuare fare una copia di backup dei dati e<br>accertarsi che nessun altro utente abbia accesso al<br>programma.<br><br>Vuoi Continuare ?* | Conferma richiesta da **Nuovo Esercizio**. | Fai davvero la copia e manda fuori tutti prima di rispondere **Sì**. La risposta preimpostata è **No**. |
+| *Causale Mag. Riporto Esistenze non valida o non impostata!* | Nella [ditta](../anagrafiche/ditte.md) manca la causale con cui scrivere i movimenti di apertura. | Impostala e ripeti il riporto. |
+| *La Causale deve essere di tipo CARICO!* | La causale indicata non è di carico. | Correggi la [causale di magazzino](../magazzino/causali-magazzino.md). |
+| *La Causale deve essere in relazione con Fornitori!* | La causale non è collegata ai fornitori. | Correggi la causale. |
 
 ## Note
 
@@ -171,9 +176,70 @@ Riapertura Conti** tolgono le scritture e si può rifare.
     elaborazioni si ferma con *Operazione disponibile solo su archivi anno
     corrente*.
 
-<!-- DA VERIFICARE: cosa comprende esattamente il riporto delle esistenze di magazzino del nuovo esercizio. -->
+!!! info "Che cosa fa il riporto delle esistenze"
 
-<!-- DA VERIFICARE: i campi di "Seleziona Archivio" e cosa succede agli utenti collegati quando si cambia archivio. -->
+    A fine creazione il programma chiede *Creazione Archivi nuovo anno conclusa
+    regolarmente !  Vuoi Riportare le Esistenze di Magazzino?*. Rispondendo
+    **No** compare *Tutte le esistenze degli articoli sono azzerate!*: l'anno
+    nuovo parte da zero e il riporto non si può più chiedere da qui.
+
+    Rispondendo **Sì** si apre una finestrella con il **Deposito** — vuoto vale
+    `TUTTI` — il **Tipo Calcolo Valore** e la casella **Riporta Colli**. Il
+    valore si sceglie fra:
+
+    - `Costo Medio Ponderato`
+    - `Metodo LIFO`
+    - `Metodo FIFO`
+    - `Ultimo Prezzo di Acquisto`
+
+    Poi il programma lavora per una quindicina di fasi. In sostanza:
+
+    1. **cancella** gli eventuali movimenti di apertura già presenti nell'anno
+       nuovo, anche dallo storico: è il motivo per cui il riporto si può
+       rifare senza raddoppiare le giacenze;
+    2. per ogni articolo che nell'anno vecchio ha un'esistenza diversa da zero,
+       scrive **un movimento di carico datato 1° gennaio**, con la causale di
+       riporto della [ditta](../anagrafiche/ditte.md), quantità pari
+       all'esistenza e prezzo calcolato con il metodo scelto. Il movimento
+       porta il segno di **apertura**;
+    3. il riporto è **per deposito, sezione, taglia e colore**: un articolo
+       presente su due depositi produce due movimenti;
+    4. **azzera** le quantità ordinate da clienti e fornitori e le **ricalcola**
+       sugli ordini ancora aperti;
+    5. **ricalcola le giacenze** e riporta gli impegni di produzione.
+
+    Vengono riportati anche l'**unità di misura**, l'**aliquota IVA**, le
+    **spese** e — solo se la casella è spuntata — i **colli**.
+
+!!! warning "Prima del riporto vanno sistemate causale e conti"
+
+    La causale di riporto è quella impostata nella ditta, e deve essere di tipo
+    **CARICO** e in relazione con i **fornitori**. Se manca o non va bene, il
+    riporto si ferma subito con uno dei tre messaggi elencati sopra e **non
+    scrive niente**.
+
+!!! info "Che cos'è «Seleziona Archivio»"
+
+    Non è una maschera con dei campi: è il modo di ripartire da capo
+    sull'archivio di un'altra installazione.
+
+    Il programma **chiude gli archivi aperti**, svuota il titolo della finestra
+    e poi, secondo com'è installato:
+
+    - se i dati stanno su un **server**, riapre la finestra di accesso, la
+      stessa dell'avvio: si indicano di nuovo server, utente e password;
+    - se i dati sono **locali**, apre un selettore di cartella intitolato
+      *Percorso Archivi*. In sessione remota non chiede niente e usa la
+      cartella dell'utente.
+
+    Poi riapre gli archivi e, se le ditte sono più d'una, chiede quale.
+
+    **Se si annulla, Facile si chiude.** Non si torna all'archivio di prima: a
+    quel punto gli archivi sono già stati chiusi e il programma non ha più
+    niente su cui lavorare.
+
+    La scelta vale **solo per questa postazione** e resta memorizzata: gli altri
+    utenti non se ne accorgono e continuano a lavorare dove stavano.
 
 ## Vedi anche
 

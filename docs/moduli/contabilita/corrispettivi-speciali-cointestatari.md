@@ -146,13 +146,50 @@ IVA** e **Persona**.
     [comunicazioni IVA](comunicazioni-iva.md). Se non si è tenuti a quelle
     comunicazioni, le tre gestioni si lasciano vuote.
 
-<!-- DA VERIFICARE: qual è la soglia oltre la quale un corrispettivo va integrato, e se il programma la controlli. -->
+!!! warning "La soglia la conosci tu, non il programma"
 
-<!-- DA VERIFICARE: cosa contiene il campo "Persona" dei cointestatari. -->
+    Facile **non controlla nessun importo** e non avverte mai che un
+    corrispettivo andrebbe integrato: decidere quali operazioni integrare
+    resta di chi registra.
 
-<!-- DA VERIFICARE: come le operazioni speciali entrano nelle comunicazioni IVA. -->
+    Quello che la finestra offre è un confronto a vista: in alto il **Tot.
+    Corrispettivo** della giornata, in basso il **TOT. INTEGRAZIONI**, che
+    si aggiorna a ogni riga aggiunta. Le integrazioni non possono superare
+    il corrispettivo, ma nemmeno questo viene impedito: i due numeri stanno
+    lì per essere guardati.
 
-<!-- DA VERIFICARE: se le due stampe di Operazioni Speciali e Cointestatari usino davvero la stessa maschera, come sembra dal codice. -->
+!!! note "Il campo Persona"
+
+    Due sole voci, da scegliere: **FISICA** o **GIURIDICA**. Dice se il
+    cointestatario è una persona o una società, ed è il dato che la
+    comunicazione pretende per sapere quali campi anagrafici aspettarsi —
+    cognome e nome da una parte, ragione sociale dall'altra.
+
+    All'inserimento il programma propone **FISICA**.
+
+!!! info "Come finiscono nella comunicazione"
+
+    Le integrazioni **non viaggiano con la registrazione**: vivono in un
+    archivio proprio, legate alla registrazione da cui sono nate.
+
+    Quando prepari la **comunicazione delle operazioni** — lo spesometro —
+    il programma le va a prendere **per data**, con lo stesso periodo della
+    comunicazione, e ne fa righe a sé: codice fiscale del cliente, importo,
+    tipo di pagamento e, per noleggi e leasing, il tipo di veicolo.
+
+    Vale dall'esercizio **2011** in avanti: sugli anni precedenti la
+    comunicazione non le guarda.
+
+!!! note "Le due stampe sono la stessa finestra"
+
+    **Stampa Operazioni Speciali** e **Stampa Cointestatari Fatture**
+    aprono la stessa maschera, con gli stessi quattro campi — intervallo di
+    numeri e intervallo di date.
+
+    Cambiano due cose: il **titolo della finestra**, che dice su quale dei
+    due archivi stai lavorando, e i valori proposti, che sono il primo e
+    l'ultimo numero e la prima e l'ultima data **di quell'archivio**. Il
+    modulo stampato, naturalmente, è diverso.
 
 ## Vedi anche
 

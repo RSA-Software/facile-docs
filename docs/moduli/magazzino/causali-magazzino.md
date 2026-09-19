@@ -96,7 +96,7 @@ I contatori sono questi:
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | Aggiorna Data Inventario | | Il movimento aggiorna la data d'inventario dell'articolo. | Casella |
-| Movimentazione Interna | | Il movimento è un giro interno fra depositi, non un acquisto né una vendita. | Casella |
+| Movimentazione Interna | | Tiene i movimenti di questa causale **fuori dal venduto** delle statistiche. | Casella |
 | Gestione Merce In Transito | | La merce movimentata resta in transito finché non arriva a destinazione. | Casella |
 | Escludi da Statistiche WEB | | I movimenti con questa causale non entrano nelle statistiche del sito. | Casella |
 
@@ -201,9 +201,49 @@ Valgono inoltre:
     perché una causale fuori dagli schemi può essere voluta. La risposta
     preimpostata è **No**.
 
-<!-- DA VERIFICARE: il rapporto fra il campo Causale (contropartita) e la casella Movimentazione Interna. Vanno impostati sempre insieme, o esistono casi in cui si usa l'uno senza l'altra? -->
+!!! info "Contropartita e Movimentazione Interna sono due cose distinte"
 
-<!-- DA VERIFICARE: la differenza operativa fra i contatori Venduta e Venduto Periodo, e a quale periodo si riferisce il secondo. -->
+    Si usano spesso insieme, ma fanno lavori diversi e **si possono usare
+    l'una senza l'altra**.
+
+    Il campo **Causale** — insieme al **Deposito** — è la **contropartita**:
+    registrando un movimento con questa causale, il programma ne scrive
+    automaticamente un secondo sull'altro deposito, con quella causale. È
+    quello che rende un trasferimento un'operazione sola.
+
+    La casella **Movimentazione Interna** non muove niente: dice alle
+    **statistiche** che questi movimenti non sono vendite, e li tiene fuori
+    dal calcolo del venduto.
+
+    Quindi:
+
+    - un **trasferimento fra depositi** vuole tutte e due: la contropartita
+      perché il movimento sia uno solo, la casella perché lo scarico dal
+      primo deposito non venga letto come una vendita;
+    - un **omaggio**, un **autoconsumo**, uno **scarto** vogliono la sola
+      casella: muovono un deposito solo, ma non sono vendite;
+    - una causale con la sola contropartita e senza casella è possibile, ma
+      va valutata: quel movimento finirebbe nel venduto.
+
+!!! info "Venduta e Venduto Periodo sono due contatori indipendenti"
+
+    Funzionano allo stesso identico modo: sono due colonne della griglia, e
+    ogni causale decide per ognuna se lasciarla ferma, aggiungere o
+    sottrarre.
+
+    La differenza è solo nell'uso che se ne fa. **Venduta** è il venduto
+    dell'esercizio, quello che le stampe e le analisi leggono. **Venduto
+    Periodo** è un secondo conteggio, che si guarda e si corregge a mano
+    dalla scheda dell'articolo: serve a misurare un tratto di tempo scelto
+    da te — una promozione, una stagione, un mese — azzerandolo quando
+    quel tratto comincia.
+
+    Nulla obbliga le due colonne a essere uguali: si possono far contare
+    alle due cose diverse, per esempio tenendo gli omaggi dentro l'uno e
+    fuori dall'altro.
+
+    L'**azzeramento dei contatori** di fine esercizio li riporta a zero
+    tutti e due insieme.
 
 <!-- DA VERIFICARE: conviene pubblicare l'elenco delle causali standard fornite con l'installazione, come riferimento? -->
 

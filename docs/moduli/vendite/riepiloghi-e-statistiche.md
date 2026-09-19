@@ -33,8 +33,16 @@ Documenti Emessi a Clienti**, **Riepilogo Documenti Emessi a Fornitori** e
 **Riepilogo Documenti Emessi a Clienti e Fornitori** — e sulle autofatture in
 due: **Riepilogo Autofatture** e **Riepilogo Integrazioni**.
 
-Le **statistiche** sommano il fatturato. Oltre a **Statistiche** e
-**Statistiche Mensili** ci sono sette tagli già pronti:
+Le **statistiche** sommano il fatturato, e sono di tre famiglie:
+
+- **Statistiche** lavora su un **intervallo di numeri di documento** e li
+  somma nel modo che si sceglie;
+- **Statistiche Mensili** lavora su un **periodo** e dà il fatturato mese per
+  mese;
+- i sette **Fatturato Mensile per…** lavorano su **un mese solo** e lo
+  spezzano per una classificazione degli articoli.
+
+I sette tagli già pronti sono:
 
 | Voce di menu | Come spezza il fatturato |
 |---|---|
@@ -63,6 +71,8 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 
 ## Campi
 
+### Riepilogo
+
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | ● | Il periodo da riepilogare. | date |
@@ -72,8 +82,47 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 
 {: .campi }
 
-<!-- DA VERIFICARE: i campi esatti di ciascuna maschera: variano fra riepiloghi e statistiche e non ho potuto estrarli tutti. -->
+### Statistiche
 
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Registro** | | Il registro dei documenti. | da `A` a `Z` |
+| **Da Numero**, **A Numero** | ● | L'intervallo dei numeri di documento. | numeri |
+| **Da Data**, **A Data** | ● | Il periodo. | date |
+| **Agente** | | Restringe a un agente. | codice |
+| **Raggruppamento** | | Come sommare il fatturato. Ogni scelta produce una stampa diversa. | `NESSUNO`, `CLIENTE`, `AGENTE`, `MENSILE` |
+
+{: .campi }
+
+### Statistiche Mensili
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Da Data**, **A Data** | ● | Il periodo. | date |
+| **Cliente** | | Restringe a un cliente. | codice |
+| **Agente** | | Restringe a un agente. | codice |
+| **Zona** | | Restringe a una zona. | codice |
+| **Escludi Resi e Note di Credito** | | Somma il solo venduto, senza sottrarre resi e note di credito. | attivo/non attivo |
+
+{: .campi }
+
+### Fatturato Mensile per…
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Mese** | ● | Il mese da stampare. Arriva già impostato sul mese corrente, con il nome accanto. | da `1` a `12` |
+| **Cliente** | | Restringe a un cliente. | codice |
+| **Agente** | | Restringe a un agente. | codice |
+| **Fatture** | | Includi le fatture. | attivo/non attivo |
+| **Fatture Pro Forma** | | Includi le pro forma. | attivo/non attivo |
+| **D.D.T. Vendita Normale** | | Includi i DDT di vendita normale. | attivo/non attivo |
+| **D.D.T. Vendita Trasfert** | | Includi i DDT di trasferta. | attivo/non attivo |
+| **D.D.T. Vendita Trasfert C.S.** | | Includi i DDT di trasferta a centro servizi. | attivo/non attivo |
+
+{: .campi }
+
+Queste sette stampe lavorano su **un mese per volta** e sull'**anno di
+lavoro**: non c'è un intervallo di date.
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
@@ -95,8 +144,16 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 
 1. Apri **Menu ▸ Vendite ▸ Fatture ▸ Fatturato Mensile per Cat.
    Merceologica**.
-2. Indica il periodo e premi **F2 - OK**: esce il fatturato mese per mese,
-   spezzato per categoria.
+2. Indica il **Mese** e spunta i documenti da contare — almeno **Fatture**.
+3. Premi **F2 - OK**: esce il fatturato di quel mese, spezzato per categoria.
+
+### Confrontare i dodici mesi dell'anno
+
+1. Apri **Menu ▸ Vendite ▸ Fatture ▸ Statistiche Mensili**.
+2. Indica come periodo tutto l'anno.
+3. Premi **F2 - OK**: esce una riga per mese.
+
+Le voci **Fatturato Mensile per…** non servono a questo: danno un mese solo.
 
 ### Controllare i documenti di trasporto emessi a fornitori
 
@@ -118,11 +175,39 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
     si vuole. Le stampe che fanno fede sono i
     [registri IVA](../contabilita/registri-iva.md).
 
-<!-- DA VERIFICARE: cosa distingue "Statistiche" da "Statistiche Mensili". -->
+!!! info "Statistiche e Statistiche Mensili sono due stampe diverse"
 
-<!-- DA VERIFICARE: se le sette voci "Fatturato Mensile per…" aprano la stessa maschera con un parametro, come sembra. -->
+    | | **Statistiche** | **Statistiche Mensili** |
+    |---|---|---|
+    | Cosa si indica | registro, **intervallo di numeri** e periodo | il solo periodo |
+    | Filtri | agente | cliente, agente, **zona** |
+    | Risultato | dipende dal **Raggruppamento** | sempre il fatturato **mese per mese** |
 
-<!-- DA VERIFICARE: la voce di menu dice "Fatturato Mensile per Marchio" ma l'identificativo interno parla di stagione: verificare cosa raggruppa davvero. -->
+    **Statistiche** cambia stampa secondo il raggruppamento scelto: `NESSUNO` dà
+    l'elenco dei documenti con i loro ricavi, `CLIENTE` e `AGENTE` li sommano per
+    soggetto, `MENSILE` li somma per mese. È quest'ultima scelta che la avvicina
+    alle *Statistiche Mensili*, senza però i filtri per cliente e per zona.
+
+    Tutte e due contano solo i documenti **emessi o contabilizzati**: le bozze e
+    gli annullati restano fuori.
+
+!!! note "Le sette voci «Fatturato Mensile per…» sono una maschera sola"
+
+    Aprono tutte la stessa finestra, con lo stesso **Mese**, gli stessi due
+    filtri e le stesse cinque caselle dei documenti: cambia solo la stampa che
+    ne esce, e il titolo della finestra, che diventa *Fatturato Mensile per
+    Gruppo*, *… per Reparto*, e così via.
+
+    Imparata una, sono imparate tutte.
+
+!!! note "«Fatturato Mensile per Marchio» raggruppa davvero per marchio"
+
+    Dentro al programma quella voce porta ancora un nome che parla di
+    *stagione*: è un residuo di quando il campo si chiamava così. La finestra si
+    intitola *Fatturato Mensile per Marchio*, la stampa si intitola
+    *FATTURATO … PER MARCHIO* e il raggruppamento è sul
+    [marchio](../magazzino/marchi.md) dell'articolo. Il nome sul menu è quello
+    giusto.
 
 ## Vedi anche
 

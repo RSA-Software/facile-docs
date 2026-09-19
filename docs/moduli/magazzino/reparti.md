@@ -50,8 +50,8 @@ righe di campi.
 | Codice | ● | Identificativo del reparto in Facile. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome del reparto, come compare in anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Reparto Cassa | | Numero del reparto sul registratore di cassa a cui questo corrisponde. | Numero |
-| Reparto Cassa 2 | | Secondo reparto del registratore, per le installazioni con due casse o due configurazioni. | Numero |
-| Non Fiscale | | Segnala che il reparto non concorre al totale fiscale dello scontrino. | Casella |
+| Reparto Cassa 2 | | Un secondo numero di reparto. Il programma lo registra ma **non lo usa da nessuna parte**: vedi le note. | Numero |
+| Non Fiscale | | Le righe di questo reparto **non vengono mandate al registratore di cassa**: restano fuori dallo scontrino fiscale. | Casella |
 | Cod. Trasf. | | Codice con cui il reparto viene riconosciuto nei trasferimenti verso altre sedi. | Fino a 5 caratteri |
 
 {: .campi }
@@ -116,9 +116,32 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: quando si usa Reparto Cassa 2 invece di Reparto Cassa? Serve un esempio di installazione reale. -->
+!!! warning "Reparto Cassa 2 oggi non serve a niente"
 
-<!-- DA VERIFICARE: la casella Non Fiscale. Che effetto ha esattamente sullo scontrino? -->
+    Il numero si scrive e si salva, ma **nessuna parte del programma lo
+    rilegge**: alla cassa, nelle esportazioni verso i registratori e in
+    tutte le stampe viene usato sempre e solo **Reparto Cassa**.
+
+    Compilarlo non fa danno e non fa niente. Il reparto che conta è il
+    primo.
+
+!!! info "Che cosa fa davvero Non Fiscale"
+
+    Battendo lo scontrino, il programma manda al registratore di cassa le
+    righe una per una. Le righe di un reparto marcato **Non Fiscale**
+    vengono **saltate**: non compaiono sullo scontrino, non entrano nel
+    totale fiscale e non finiscono nei corrispettivi del registratore.
+
+    Restano invece nella vendita di Facile: la riga c'è, muove il
+    magazzino e si vede nelle statistiche.
+
+    Se **tutte** le righe di una vendita sono non fiscali, al registratore
+    non viene mandato niente: lo scontrino non viene proprio emesso.
+
+    Serve per quello che passa dalla cassa ma non è un corrispettivo — per
+    esempio la consegna di merce già fatturata, o movimenti di servizio.
+    Usarlo su un reparto di vendita vera significa incassare senza
+    emettere il documento fiscale.
 
 ## Vedi anche
 

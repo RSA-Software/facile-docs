@@ -130,37 +130,37 @@ casella **Escludi da Spesometro**.
     La **Comunicazione Dati Fatture** parte dal **2017**: su un esercizio
     precedente la maschera avverte e si chiude.
 
-    Il **periodo** cambia forma con l’ anno: per il 2017 sono due semestri, dal
+    Il **periodo** cambia forma con l'anno: per il 2017 sono due semestri, dal
     2018 quattro trimestri più i due semestri.
 
     Lo **Spesometro** porta le soglie di ogni annata: **25.000 € nel 2010**,
     **3.000 € dal 2011** (con **3.600 €** per i corrispettivi), e **dal 2012 in
     poi nessuna soglia sulle fatture**, restando 3.600 € sui corrispettivi.
 
-!!! warning "L’ elenco *Carica* si riempie all’ apertura"
+!!! warning "L'elenco *Carica* si riempie all'apertura"
 
     Non è scritto nelle risorse, quindi non si vede aprendo la maschera nel
     designer: il programma lo costruisce ogni volta. Sono le quindici cariche
-    della codifica dell’ Agenzia — rappresentante legale, curatore fallimentare,
+    della codifica dell'Agenzia — rappresentante legale, curatore fallimentare,
     commissario liquidatore, erede, amministratore di condominio e le altre —
     più una voce vuota, che è quella giusta quando dichiara il titolare stesso.
 
 !!! tip "Dove finisce il file"
 
-    Nella cartella **`out`** dell’ utente — la stessa da cui parte la finestra di
-    salvataggio quando si esporta. È l’ unica cartella coinvolta: da lì il file si
-    prende per darlo all’ intermediario o caricarlo sul sito dell’ Agenzia.
+    Nella cartella **`out`** dell'utente — la stessa da cui parte la finestra di
+    salvataggio quando si esporta. È l'unica cartella coinvolta: da lì il file si
+    prende per darlo all'intermediario o caricarlo sul sito dell'Agenzia.
 
 !!! info "La soglia, e a che cosa servono le aggregazioni"
 
-    La soglia è quella dell’ annata: **25.000 € per il 2010**, **3.000 € dal
+    La soglia è quella dell'annata: **25.000 € per il 2010**, **3.000 € dal
     2011**, **nessuna dal 2012**; per i **corrispettivi** resta **3.600 €**.
 
     Le aggregazioni servono quando lo stesso soggetto è in archivio più volte —
     come cliente e come fornitore, o con più codici. Raggruppandolo, le sue
     operazioni si sommano **prima** del confronto con la soglia, invece di
     restare sotto ciascuna per conto propria. La casella **Controllo Soglia**
-    decide se quell’ aggregazione partecipa al confronto.
+    decide se quell'aggregazione partecipa al confronto.
 
 ### Spesometro
 
@@ -174,7 +174,7 @@ operazioni, e porta:
 - **imponibile**, **imposta** e **totale**;
 - **data**, **numero** e **data** del documento, il **tipo**, il **pagamento**
   e lo **stato**;
-- numero e data del **documento accompagnatorio**, quando c’ è.
+- numero e data del **documento accompagnatorio**, quando c'è.
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
@@ -183,7 +183,7 @@ operazioni, e porta:
 | **F4 - Esporta** | ++f4++ | Esporta la griglia su foglio. |
 | **F5 - Cliente** | ++f5++ | Apre il cliente della riga. |
 | **F6 - Prima Nota** | ++f6++ | Apre la registrazione da cui la riga viene. |
-| **F7 - Aggregaz.** | ++f7++ | Apre l’ aggregazione del soggetto. |
+| **F7 - Aggregaz.** | ++f7++ | Apre l'aggregazione del soggetto. |
 | **F8 - Accoppia** | ++f8++ | Accoppia le operazioni fra loro. |
 
 !!! note "Senza periodo non calcola"

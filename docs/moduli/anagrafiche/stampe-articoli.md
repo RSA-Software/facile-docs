@@ -106,7 +106,7 @@ caratteri e `?` un carattere solo.
 | **Formato** | | L'impaginazione. | `ESISTENZA, SCORTA MIN/MAX`, `ESISTENZA, SCORTA MIN, Q.TA VENDUTA`, `FORNITORI, MARCHIO, GRUPPO, SOTTOG., ULT. PREZZO ACQ., LISTINI`, `LISTINO 2 - LISTINO 3 - ESISTENZE DEPOSITI` |
 | **Solo Articoli con Esistenza Maggiore di** | | Esclude gli articoli sotto la quantità indicata a fianco. | attivo/non attivo, più una quantità |
 | **Somma Esistenza Depositi** | | Somma le giacenze di tutti i depositi invece di fermarsi a quello scelto. | attivo/non attivo |
-| **Solo Articoli Modificati o Movimentati** | | Limita agli articoli toccati nel periodo. | attivo/non attivo |
+| **Solo Articoli Modificati o Movimentati** | | Limita agli articoli che risultano cambiati o movimentati **dall'ultimo trasferimento dati in poi**. Non c'è nessun periodo da indicare. | attivo/non attivo |
 
 {: .campi }
 
@@ -160,7 +160,19 @@ caratteri e `?` un carattere solo.
     aperto la stampa sbagliata è leggere il titolo in alto. La tabella
     all'inizio di questa pagina mette in corrispondenza voce di menu e titolo.
 
-<!-- DA VERIFICARE: quali campi (Formato, Data Riferimento, le tre caselle) compaiano su quali stampe: variano da una voce all'altra. -->
+!!! info "Quali campi compaiono su quali stampe"
+
+    | Campo | Dove compare |
+    |---|---|
+    | **Formato** | Solo nella **stampa delle scorte**. Su tutte le altre è nascosto. |
+    | **Data Riferimento** | Solo dove una data serve davvero: la stampa a una certa data, l'azzeramento, e l'elenco degli articoli **non inventariati prima di** una data. In questi ultimi due casi l'etichetta cambia di conseguenza. |
+    | **Ordinamento** | Su quasi tutte, tranne quelle che hanno un ordine proprio: classificazione, etichette, listini, azzeramenti, e le stampe con foto della versione Taglie e Colori. |
+    | **Somma Esistenza Depositi** | Solo sulla stampa dei **listini**, dove serve a leggere l'esistenza complessiva invece che quella del singolo deposito. |
+    | **Solo Articoli con Esistenza Maggiore di** | Solo dove l'esistenza ha senso, cioè avendo scelto un deposito. |
+
+    Non c'è da preoccuparsi se un campo sparisce cambiando voce di menu: la
+    maschera è una sola per venti stampe, e ogni stampa mostra i campi che
+    le servono.
 
 !!! note "Che cosa è il `PREDEFINITO`"
 
@@ -172,11 +184,30 @@ caratteri e `?` un carattere solo.
 
     In **tutte le altre** non applica nessun ordinamento: le righe escono
     nell'ordine in cui arrivano dall'archivio, che non è casuale ma non è
-    nemmeno prevedibile. Se l’ ordine conta, scegli `CODICE` o `DESCRIZIONE`.
+    nemmeno prevedibile. Se l'ordine conta, scegli `CODICE` o `DESCRIZIONE`.
 
-<!-- DA VERIFICARE: su quale periodo si basa "Solo Articoli Modificati o Movimentati". -->
+!!! note "«Modificati o Movimentati» non guarda le date"
 
-<!-- DA VERIFICARE: se "Stampa Esistenza" nella versione Taglie e Colori apra una maschera diversa, e con quali campi. -->
+    Non c'è un periodo, e non si può indicare: l'articolo entra nella
+    stampa se porta ancora il **segno di «da trasferire»** — quello che il
+    programma mette quando l'articolo viene cambiato — oppure il segno di
+    **movimentato**.
+
+    Quei segni vengono tolti dal **trasferimento dati**. Quindi la casella
+    risponde alla domanda «che cosa è cambiato da quando ho mandato i dati
+    l'ultima volta?», e non «che cosa è cambiato questo mese?».
+
+    Su un'installazione che non fa trasferimenti i segni non vengono mai
+    puliti, e la casella finisce per non escludere quasi nulla.
+
+!!! note "Le stampe con foto della versione Taglie e Colori"
+
+    **Esistenza con foto** e **Riepilogo articoli venduti con foto** usano
+    **la stessa maschera** di tutte le altre stampe articoli: gli stessi
+    filtri, le stesse schede.
+
+    L'unica differenza a video è che **Ordinamento sparisce**, perché
+    quelle due stampe hanno un ordine proprio.
 
 ## Vedi anche
 

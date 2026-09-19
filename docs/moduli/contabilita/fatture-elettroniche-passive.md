@@ -140,15 +140,69 @@ Non applicabile.
     carico di magazzino. Per una fattura di merce servono entrambi; per una
     fattura di servizi basta il primo.
 
-<!-- DA VERIFICARE: dove si acquista il credito per il servizio e come si controlla il residuo. -->
+!!! info "Il credito si controlla qui, non si compra qui"
 
-<!-- DA VERIFICARE: cosa succede alle fatture archiviate: dove si ritrovano. -->
+    Il pulsante **Credito** mostra tre numeri: **credito acquistato**,
+    **credito utilizzato** e **credito residuo**. Se il residuo è a zero
+    risponde *« Credito Esaurito! »* e non fa proseguire.
 
-<!-- DA VERIFICARE: quali colonne mostra l'elenco delle fatture da elaborare: il decodificatore non le ha estratte. -->
+    **Acquistarlo non si fa dal programma**: il credito si ricarica tramite
+    l'assistenza o dal portale del servizio — lo stesso che il
+    [cruscotto delle fatture attive](../vendite/fatture-elettroniche-attive.md)
+    apre con il suo pulsante.
 
-<!-- DA VERIFICARE: se la contabilizzazione apra la prima nota precompilata o registri direttamente. -->
+    Il controllo ha senso **prima** di una sessione di scarico, non dopo:
+    scoprire il credito esaurito a metà del lavoro costa una seconda passata.
 
-<!-- DA VERIFICARE: cosa fa il pulsante "Filtra", che nella barra usa l'icona del calendario. -->
+!!! tip "Le archiviate non spariscono: si nascondono"
+
+    **Archivia** agisce sulle **righe spuntate** — senza spunte risponde
+    *« Non è stata selezionata nessuna riga per l'archiviazione! »*. Le fatture
+    archiviate escono dall'elenco di lavoro, che così resta corto.
+
+    Per rivederle si usa **Filtra**, che oltre al periodo ha la scelta di
+    mostrare anche gli **archiviati**. Non c'è una seconda maschera da cercare:
+    è sempre questa, con il filtro allargato.
+
+La griglia è costruita dal programma, non dalle risorse. Ogni riga è una
+fattura ricevuta e porta:
+
+- la **spunta**, con cui si scelgono le righe su cui agire;
+- due segnalini di stato: se è già andata in **prima nota** e se è già andata
+  in **carico merci**;
+- **numero** e **data** del documento, e la **data SDI**, cioè quella in cui il
+  Sistema di Interscambio l'ha consegnata;
+- **fornitore** con la sua **partita IVA**, e la **descrizione**;
+- **tipo** documento, **divisa**, **imponibile**, **IVA** e **totale**;
+- l'**anno** di competenza e se il file è già stato **caricato**.
+
+!!! note "Le due date non coincidono quasi mai"
+
+    La **data del documento** è quella che il fornitore ha messo in fattura; la
+    **data SDI** è quella della consegna. È la seconda che conta per capire
+    quando è arrivata, ed è su quella che lavora il filtro del periodo.
+
+!!! info "Contabilizza apre la prima nota, non registra da sé"
+
+    **F4 - Contab.** prepara la registrazione e apre la
+    [prima nota](registrazione-prima-nota.md) **già compilata**: la si controlla
+    e si salva. Niente viene scritto senza passare di lì.
+
+    Prima di aprirla il programma cerca il **fornitore** — creandolo se non
+    c'è — e controlla che ci sia il **PDF** allegato: se manca avverte che
+    conviene scaricarlo con *F9 - Visualizza PDF*, così resta allegato alla
+    registrazione. Durante la compilazione può chiedere la **causale contabile**
+    e il **codice IVA** quando non riesce a dedurli.
+
+!!! tip "Filtra decide che cosa si vede, non che cosa si scarica"
+
+    Apre *Seleziona Periodo Acquisizione*: due date e la scelta se mostrare
+    anche gli **archiviati**. L'icona è un calendario perché il filtro è
+    anzitutto sul periodo.
+
+    Non tocca né lo scarico né l'archivio: cambia soltanto l'elenco a video. È
+    il comando da usare quando una fattura « non si trova »: quasi sempre è
+    fuori periodo o è stata archiviata.
 
 ## Vedi anche
 

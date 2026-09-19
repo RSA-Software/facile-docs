@@ -64,7 +64,44 @@ pulsanti **F2 - OK** ed **Esci**.
 
 {: .campi }
 
-<!-- DA VERIFICARE: i campi propri di Stampa Sintesi, Stampa Interessi di Mora e Stampa Estratto Conto per Documento: non ho potuto estrarli tutti. -->
+### Stampa Sintesi
+
+| Campo | Descrizione |
+|---|---|
+| **Data Riferimento** | La data a cui fotografare la situazione. |
+| **Stampa Indirizzo** | Aggiunge l'indirizzo del soggetto. |
+| **Zona** | Restringe a una zona. |
+| **Tipo Pagamento** | Restringe a un [tipo di pagamento](../contabilita/tipi-di-pagamento.md). |
+| **Agente** | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). |
+| **Sezione** | Restringe a una [sezione](../contabilita/sezioni.md). |
+
+{: .campi }
+
+### Stampa Interessi di Mora
+
+| Campo | Descrizione |
+|---|---|
+| **Da Cliente**, **A Cliente** | L'intervallo dei clienti. |
+| **Periodo Emissione Documenti** — **Data Iniziale**, **Data Finale** | Quali documenti considerare, per data di emissione. |
+| **Periodo Calcolo Interessi** — **Data Iniziale**, **Data Finale** | **Entro quali date contare i giorni di ritardo.** È il periodo che determina il conto. |
+| **Sezione** | Restringe a una sezione. |
+
+{: .campi }
+
+I due periodi non sono la stessa cosa: il primo sceglie **quali** scadenze
+guardare, il secondo dice **da quando a quando** contare il ritardo.
+
+### Stampa Estratto Conto per Documento
+
+| Campo | Descrizione |
+|---|---|
+| **Giorni Preavviso** | Quanti giorni prima della scadenza far comparire il cliente. |
+| **Conferma Invio** | Chiede conferma prima di mandare ogni lettera. |
+
+{: .campi }
+
+Sotto c'è la griglia dei clienti da sollecitare, da cui si scelgono quelli a
+cui mandare il sollecito.
 
 ## Pulsanti e comandi
 
@@ -99,7 +136,12 @@ pulsanti **F2 - OK** ed **Esci**.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste stampe. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *(nessun messaggio, solo un segnale acustico)* | Una data manca o è fuori ordine. | Guarda dove si è posizionato il cursore. |
+| *Vuoi Esportare le scadenze in formato CSV?* | Compare prima della stampa dell'elenco scadenze. | **Sì** produce anche un file da aprire in Excel, **No** stampa e basta. |
+| *Esportazione scadenze conclusa con successo* | Il file CSV è stato scritto. | Nessuna azione. |
+| *Impossibile salvare il file* | Non si riesce a scrivere il CSV. | Verifica che la cartella sia scrivibile e che il file non sia già aperto. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -112,9 +154,47 @@ pulsanti **F2 - OK** ed **Esci**.
     **Stampa** e **Stampa Solleciti** aprono la stessa finestra di selezione:
     cambia quello che viene prodotto, non i filtri da compilare.
 
-<!-- DA VERIFICARE: con quale tasso vengono calcolati gli interessi di mora e dove si imposta. -->
+!!! info "Con quale tasso si calcolano gli interessi di mora"
 
-<!-- DA VERIFICARE: se il testo della lettera di sollecito sia modificabile e dove. -->
+    Il tasso è **uno solo per tutta la ditta**: si scrive in **% Interessi di
+    Mora**, nella scheda della [ditta](../anagrafiche/ditte.md), riquadro degli
+    effetti. Non c'è un tasso per cliente né per documento.
+
+    Il conto è l'interesse semplice su base annua:
+
+    ```
+    interesse = importo della rata × tasso / 100 × giorni / 365
+    ```
+
+    arrotondato al centesimo. I **giorni** si contano così:
+
+    - sulle scadenze **già pagate**, dalla data di scadenza alla data di
+      pagamento;
+    - sulle scadenze **ancora aperte**, dalla data di scadenza alla **Data
+      Finale** del periodo di calcolo.
+
+    In tutti e due i casi il conteggio resta dentro al **Periodo Calcolo
+    Interessi**: se la scadenza è anteriore alla data iniziale, si parte da
+    quella.
+
+    Le righe che vengono fuori con zero giorni o zero interessi non compaiono
+    nella stampa.
+
+!!! info "Il testo del sollecito si cambia, ma non dal programma"
+
+    La lettera è un **modello di stampa**, scelto dal campo **Solleciti di
+    Pagamento** nella scheda della ditta: quel numero punta al modello
+    corrispondente fra quelli installati — il modello `3` è il file
+    `sol00003.rpt` nella cartella dei report.
+
+    Dal programma non c'è nessuna maschera in cui riscrivere il testo: per
+    cambiare le frasi, aggiungere il logo o rifare l'impaginazione bisogna
+    intervenire sul modello, e lo fa l'assistenza. Si possono però tenere **più
+    modelli** e cambiare il numero nella ditta per passare dall'uno all'altro.
+
+    Quello che il programma mette nella lettera da sé sono i dati della ditta —
+    logo, telefono, fax, denominazione — e l'elenco delle scadenze aperte del
+    cliente.
 
 ## Vedi anche
 

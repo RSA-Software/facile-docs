@@ -51,7 +51,7 @@ ed **Esci**.
 | **Vettore** | | Solo i fornitori serviti da quel [trasportatore](trasportatori.md). | codice |
 | **Pagamento** | | Solo i fornitori con quel [tipo di pagamento](../contabilita/tipi-di-pagamento.md). | codice |
 | **Cat. Economica** | | Solo i fornitori di quella [categoria economica](categorie-economiche.md). | codice |
-| *(elenco senza etichetta accanto a Ordinamento)* | | Che genere di fornitore includere. | `TUTTI`, `GENERICI`, `BENI`, `SERVIZI` |
+| **Filtra Tipo** | | Che genere di fornitore includere, secondo il campo **Tipo** della sua scheda. | `TUTTI`, `GENERICI`, `BENI`, `SERVIZI` |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `ALFABETICO` |
 | **Formato** | ● | L'impaginazione della stampa. | `SINTETICA`, `DETTAGLIATA`, `ETICHETTE`, `RICHIESTA DATI FISCALI` |
 
@@ -107,9 +107,25 @@ delle corrispondenti [stampe clienti](stampe-clienti.md).
     **Menu ▸ Contabilità** e **Menu ▸ Contabilità ▸ Stampe Contabili**, aprono
     le stesse maschere descritte qui.
 
-<!-- DA VERIFICARE: come si chiama a video l'elenco senza etichetta con i valori TUTTI / GENERICI / BENI / SERVIZI, e dove il fornitore viene classificato in beni o servizi. -->
+!!! note "Dove un fornitore diventa «di beni» o «di servizi»"
 
-<!-- DA VERIFICARE: se Stampa Schede e Stampa Saldi dei fornitori aprano davvero le stesse maschere delle corrispondenti stampe clienti. -->
+    Nella sua scheda, **Generale**, nel campo **Tipo**: `GENERICO`, `BENI`
+    o `SERVIZI`. Non c'è nessun automatismo che lo deduca da quello che
+    compri — lo decidi tu registrando il fornitore.
+
+    È lo stesso campo su cui lavora il filtro **Filtra Tipo**, che trovi
+    anche nella finestra di ricerca dei fornitori.
+
+!!! note "Quali stampe sono davvero le stesse dei clienti"
+
+    **Stampa Schede** è letteralmente la **stessa finestra** di quella dei
+    clienti: cambia solo a quale dei due archivi si riferisce.
+
+    **Stampa Saldi** invece è una finestra a sé, uguale a quella dei
+    clienti **meno tre filtri** che sui fornitori non avrebbero senso:
+    **agente**, **zona** e **gruppo**. Tutto il resto — periodo, sezioni,
+    banca, categoria economica, pagamento, vettore, ordinamento — c'è
+    uguale.
 
 ## Vedi anche
 

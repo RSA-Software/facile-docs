@@ -89,7 +89,7 @@ voce di menu dice *Impostazione*. È divisa in quattro zone:
 | **Web Des. Estesa** | La descrizione lunga, quella della scheda prodotto. |
 | **Meta Tag** | Il meta tag di descrizione per i motori di ricerca. |
 | **Meta Key** | Le parole chiave. |
-| **Immagini** | Le fotografie dell'articolo, con l'indicazione del **Deposito** per ciascuna. |
+| **Immagini** | Le prime tre fotografie dell'articolo, in sola visione. |
 | **Art. Collegati** | Gli articoli da proporre insieme a questo. |
 
 Le cinque schede di testo — **Web Nome**, **Web Des. Breve**, **Web Des.
@@ -187,13 +187,50 @@ tassonomie restano, e riattivandola l'articolo torna com'era.
     [Attribuzione Tassonomie](manutenzione-articoli.md) e
     [Modifica da griglia](modifica-da-griglia.md).
 
-<!-- DA VERIFICARE: come si sceglie la nazione a cui i testi web si riferiscono, e come si passa da una lingua all'altra. -->
+!!! note "Da qui si scrive una lingua sola"
 
-<!-- DA VERIFICARE: quante immagini si possono caricare per articolo e a cosa serve il Deposito indicato accanto a ciascuna. -->
+    L'archivio è predisposto per tenere i testi del sito in più lingue, una
+    per nazione. Questa maschera però **non ha un campo per scegliere la
+    nazione**: qualunque cosa scrivi finisce nei testi della lingua
+    predefinita.
 
-<!-- DA VERIFICARE: come si aggiungono e si tolgono gli articoli collegati. -->
+    Per i testi nelle altre lingue serve un altro strumento: da qui non ci
+    si arriva.
 
-<!-- DA VERIFICARE: se i dati web debbano essere salvati esplicitamente o siano registrati mano a mano. -->
+!!! info "Le immagini si guardano, non si caricano"
+
+    I tre riquadri in basso sono **anteprime**: mostrano le prime tre
+    immagini registrate per l'articolo, e non c'è modo di aggiungerne o
+    toglierne da qui.
+
+    Le immagini si caricano dalla scheda **Immagini** dell'articolo, e sono
+    legate all'**articolo**, non al deposito: il **Deposito** che vedi in
+    alto è quello scelto aprendo la maschera e serve al prezzo e
+    all'esistenza, non alle fotografie.
+
+!!! info "Gli articoli collegati si aggiungono con tre pulsanti"
+
+    Nella scheda **Art. Collegati**:
+
+    | Pulsante | Cosa fa |
+    |---|---|
+    | **Aggiungi Articolo** | Apre l'elenco degli articoli e ne aggiunge **uno**. |
+    | **Aggiungi Selezione** | Apre la ricerca articoli e aggiunge **tutti quelli che hai selezionato**, in un colpo solo. |
+    | **Elimina** | Toglie il collegamento della riga su cui sei. |
+
+    Questi tre comandi scrivono **subito** in archivio: il collegamento è
+    fatto o disfatto nel momento in cui premi, senza bisogno di salvare e
+    senza possibilità di ripensarci.
+
+!!! warning "Il resto invece va salvato"
+
+    Nomi, descrizioni, meta tag e parole chiave restano in memoria finché
+    non premi **F2 - Salva**: uscendo prima si perdono, e il programma non
+    lo chiede.
+
+    Il salvataggio marca inoltre l'articolo come **da ritrasmettere al
+    sito**: è con quel segno che la sincronizzazione sa che cosa è
+    cambiato.
 
 ## Vedi anche
 

@@ -83,9 +83,9 @@ pagamento di codice 1.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | Stampa nota "Assolve agli obblighi di cui all' art. 62 co.1 D.L. 24/1/2012 n. 1, convertito con...." | | Fa comparire la nota di legge sui DDT e sulle fatture che usano questo pagamento. Riguarda la cessione di prodotti alimentari. | Casella |
-| **Tratta IVA** | | Come trattare l'IVA sulle tratte: *No Tratta*, *Si Tratta*, oppure *Prima Rata* per addebitarla tutta sulla prima. | Una sola delle tre |
-| Spese Bolli | | Addebita l'importo indicato a fianco come spese di bollo. | Casella più importo |
-| Commissioni Bancarie | | Addebita l'importo indicato a fianco come commissioni bancarie. | Casella più importo |
+| **Tratta IVA** | | Come ripartire l'IVA fra le rate. Le tre scelte sono spiegate qui sotto. | *No Tratta*, *Si Tratta* o *Prima Rata* |
+| Spese Bolli | | Addebita l'importo indicato a fianco come spese di bollo. Si addebita **una volta per documento**, non per rata. | Casella più importo |
+| Commissioni Bancarie | | Addebita l'importo indicato a fianco come commissioni bancarie. Si addebita **una volta per documento**, non per rata. | Casella più importo |
 
 {: .campi }
 
@@ -186,11 +186,43 @@ ancora vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il riquadro Tratta IVA. Le tre scelte sono chiare come etichette, ma l'effetto sul documento va spiegato con un esempio: quando conviene "Prima Rata"? -->
+!!! info "Le tre scelte di Tratta IVA, con i numeri"
 
-<!-- DA VERIFICARE: gli importi di Spese Bolli e Commissioni Bancarie sono per documento o per rata? -->
+    Il riquadro decide **come l'IVA viene distribuita fra le rate**. Prendiamo
+    una fattura di **1.000 + 220 di IVA = 1.220**, con un pagamento a **due
+    rate**:
 
-<!-- DA VERIFICARE: questa pagina sostituisce la vecchia "Condizioni di pagamento", che portava un nome non presente a video. Se il nome "condizioni di pagamento" è quello che usano i clienti a voce, conviene aggiungerlo come sinonimo nel glossario. -->
+    | Scelta | Prima rata | Seconda rata | Rate in tutto |
+    |---|---:|---:|---:|
+    | **No Tratta** | 610,00 | 610,00 | 2 |
+    | **Prima Rata** | 720,00 | 500,00 | 2 |
+    | **Si Tratta** | 220,00 | 500,00 + 500,00 | **3** |
+
+    Cioè:
+
+    - **No Tratta**: il totale, IVA compresa, si divide in parti uguali. È la
+      scelta normale per chi non deve separare l'imposta.
+    - **Prima Rata**: le rate si calcolano sul solo **imponibile**, e l'IVA
+      intera viene **aggiunta alla prima**. Serve quando ci si vuole assicurare
+      di incassare subito l'imposta che si dovrà versare, senza però
+      aggiungere una scadenza in più.
+    - **Si Tratta**: il programma **aggiunge una rata** a quelle previste, la
+      mette per prima e la fa di importo pari all'IVA; le rate previste si
+      dividono il solo imponibile. È la forma classica della tratta con
+      l'IVA a parte, quella che il cliente vede come un effetto distinto.
+
+    Con una rata sola le tre scelte coincidono.
+
+!!! note "Le spese si addebitano una volta sola"
+
+    **Spese Bolli** e **Commissioni Bancarie** entrano nel totale del
+    documento **una volta**, non a ogni rata. Vengono aggiunte prima che il
+    totale venga diviso, quindi si ripartiscono fra le rate insieme al resto.
+
+    Il bollo del tipo di pagamento **si somma** a quello che il programma
+    calcola da sé sulle fatture con importi esenti o esclusi oltre la soglia
+    di legge: le due cose convivono, e il totale dei bolli può risultare la
+    somma delle due.
 
 ## Vedi anche
 

@@ -165,8 +165,8 @@ lavorando — *Riassortimento da Vendite - Dep. (1) SEDE*.
 | *Confermi la generazione degli ordini a Fornitore ?* | Conferma prima di generare. | **Sì** per procedere. |
 | *Vuoi ordinare solo articoli non disponibili?* | Facile chiede se limitarsi a quello che manca. | **Sì** ordina solo il mancante, **No** ordina tutto, **Annulla** ferma. |
 | *E' stato generato un Ordine a fornitore!* / *Sono stati generati N Ordini a fornitore!* | La generazione è andata a buon fine. | Controlla gli ordini dalla [gestione documenti](../vendite/gestione-documenti.md). |
-| *Non è stato generato nessun Ordine a fornitore!* | Nessuna riga aveva quantità da ordinare, oppure gli articoli non hanno un fornitore. | Rivedi le scelte e i filtri; se il messaggio parla di articoli senza fornitore, completa l’ anagrafica. |
-| *N articoli non hanno un fornitore in anagrafica e non sono stati ordinati.* | Compare in coda al messaggio precedente: quegli articoli non hanno né fornitore abituale né alternativo. | Completa l’ anagrafica, oppure indica il fornitore riga per riga con **F3 - Modifica**. |
+| *Non è stato generato nessun Ordine a fornitore!* | Nessuna riga aveva quantità da ordinare, oppure gli articoli non hanno un fornitore. | Rivedi le scelte e i filtri; se il messaggio parla di articoli senza fornitore, completa l'anagrafica. |
+| *N articoli non hanno un fornitore in anagrafica e non sono stati ordinati.* | Compare in coda al messaggio precedente: quegli articoli non hanno né fornitore abituale né alternativo. | Completa l'anagrafica, oppure indica il fornitore riga per riga con **F3 - Modifica**. |
 | *Non è stato impostato nulla da ordinare!* | Nel riassortimento tutte le quantità sono a zero. | Compila la **Quantità da Ordinare** su almeno una riga. |
 | *Confermi la generazione dell' Ordine?* | Conferma del riassortimento. | **Sì** per procedere. La risposta preimpostata è **No**. |
 | *Attenzione!<br>Non saranno generati movimenti sul deposito principale !<br>Vuoi Continuare ?* | La causale di trasferimento non ha deposito o movimento impostati. | **No**, e sistema la [causale](../magazzino/causali-magazzino.md) nei parametri della ditta. |

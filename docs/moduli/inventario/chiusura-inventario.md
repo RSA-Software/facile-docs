@@ -158,11 +158,49 @@ poi, se serve, il deposito. **Azzeramento Articoli non Inventariati** e
     apposita, **Azzeramento Articoli non Inventariati**, da usare solo dopo
     aver stampato l'elenco e averlo controllato.
 
-<!-- DA VERIFICARE: cosa contiene il file di log della chiusura e dove viene scritto. -->
+!!! info "Il registro delle differenze"
 
-<!-- DA VERIFICARE: se la chiusura sommi le letture ripetute dello stesso articolo o consideri solo l'ultima. -->
+    La chiusura scrive un file di testo nella cartella **`log`**
+    dell'installazione, con la data nel nome:
+    `Differenze_inventario_AAAAMMGG.txt`. Il messaggio finale lo nomina per
+    esteso.
 
-<!-- DA VERIFICARE: quali sono i campi delle maschere di "Azzeramento Articoli non Inventariati" e "Azzeramento Articoli con Esistenza Negativa" nella versione con taglie e colori, dove il percorso è diverso. -->
+    Dentro c'è **una riga per ogni articolo che non torna**, con codice,
+    esistenza calcolata, letture rilevate e differenza:
+
+    ```
+    Articolo : 000123          Esistenza :       48.000   Letture :       45.000   Differenza :       -3.000
+    ```
+
+    Gli articoli che tornano **non compaiono**, e se non c'è nessuna
+    differenza il file **viene cancellato**: trovarlo o non trovarlo è già
+    una risposta.
+
+!!! info "Le letture ripetute si sommano"
+
+    La chiusura non prende l'ultima lettura: **le somma tutte**, raggruppando
+    per articolo, deposito, sezione e — dove ci sono — taglia e colore.
+
+    È il comportamento giusto per un inventario fatto in più passaggi o da
+    più persone, ma vuol dire anche che **riacquisire un conteggio già
+    caricato lo raddoppia**.
+
+!!! note "I due azzeramenti nella versione Taglie e Colori"
+
+    Il percorso è diverso e anche le finestre lo sono. Nelle altre versioni
+    i due comandi aprono la maschera delle
+    [stampe articoli](../anagrafiche/stampe-articoli.md) con i suoi filtri;
+    in Taglie e Colori aprono invece una sequenza di tre passi, senza filtri:
+
+    1. una finestrella intitolata **Seleziona Data**, con **un solo campo
+       Data**: è la data a cui riferire l'azzeramento;
+    2. la domanda *«Vuoi l' azzeramento degli articoli non inventariati per
+       tutti i depositi ?»* — o *«…degli articoli negativi…»* per l'altro
+       comando;
+    3. rispondendo **No**, l'elenco dei depositi da cui sceglierne uno.
+
+    Non c'è modo di restringere per reparto, categoria o fornitore: o tutti i
+    depositi o uno solo.
 
 ## Vedi anche
 

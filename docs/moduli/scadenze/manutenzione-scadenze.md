@@ -48,7 +48,31 @@ Prima di usare queste maschere occorre:
 Sono finestre di selezione con il periodo e i filtri, e i pulsanti **F2 - OK**
 ed **Esci**. Il **Cruscotto Finanziario** si apre invece come un quadro a video.
 
-<!-- DA VERIFICARE: i campi di queste maschere e la struttura del cruscotto: non ho potuto estrarne le etichette dalle risorse. -->
+### Elimina Scadenze
+
+Tre caselle e nient'altro: niente date, niente filtri per soggetto.
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Elimina Scadenze Clienti Incassate** | | Comprende le scadenze dei clienti già incassate. | attivo/non attivo |
+| **Elimina Scadenze Fornitori Pagate** | | Comprende quelle dei fornitori già pagate. | attivo/non attivo |
+| **Elimina anche se non Contabilizzate** | | Allarga la pulizia alle scadenze mai passate in contabilità. | attivo/non attivo |
+
+{: .campi }
+
+### Controllo Scadenze ↔ Schede Contabili
+
+Non ha campi di selezione: appena aperta fa il confronto e riempie una
+griglia. La finestra si chiama **Clienti** o **Fornitori** secondo la voce da
+cui si entra.
+
+### Cruscotto Finanziario
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Periodo da Analizzare** | ● | Quanto avanti guardare. | `30`, `60`, `90`, `120`, `150`, `180 GIORNI` |
+
+{: .campi }
 
 ## Campi
 
@@ -91,7 +115,15 @@ Apri **Menu ▸ Scadenze ▸ Cruscotto Finanziario**.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste maschere. -->
+| Messaggio | Dove | Causa | Cosa fare |
+|---|---|---|---|
+| *Confermi la Cancellazione?* | Elimina Scadenze | Chiesto prima di partire, con **No** già selezionato. | È l'unica rete di sicurezza: leggere le caselle spuntate prima di rispondere. |
+
+!!! note "Sono maschere silenziose"
+
+    A parte quella conferma non dicono quasi niente: il controllo lavora e
+    riempie la griglia, il cruscotto ricalcola e mostra i numeri. Quando
+    qualcosa va storto arriva l'errore SQL della casa, non un messaggio loro.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -106,11 +138,52 @@ Apri **Menu ▸ Scadenze ▸ Cruscotto Finanziario**.
     rimaste senza scadenza. Fallo solo su periodi chiusi e dopo una copia di
     sicurezza.
 
-<!-- DA VERIFICARE: se "Elimina Scadenze" tolga solo le scadenze chiuse o tutte quelle del periodo. -->
+!!! warning "Toglie solo le chiuse, e solo degli anni passati"
 
-<!-- DA VERIFICARE: cosa mostra il Cruscotto Finanziario e su quali dati è costruito. -->
+    Due condizioni valgono **sempre**, spunte o non spunte:
 
-<!-- DA VERIFICARE: come il controllo presenta le discordanze: stampa, griglia o messaggio. -->
+    - la scadenza dev'essere **chiusa** — incassata o pagata;
+    - dev'essere di un **esercizio precedente** a quello in cui si sta
+      lavorando.
+
+    Quindi lo scadenziario aperto non si tocca mai, e nemmeno l'anno in corso.
+
+    Le tre caselle **restringono** da lì: senza la prima i clienti non vengono
+    toccati, senza la seconda i fornitori, e le scadenze **mai contabilizzate**
+    si salvano a meno di spuntare la terza. **Senza nessuna spunta non viene
+    cancellato niente**, e il programma parte lo stesso senza dirlo.
+
+!!! info "Che cosa mette in fila il Cruscotto"
+
+    È una fotografia della liquidità nei prossimi giorni, con due colonne
+    contrapposte. Da entrare:
+
+    - **Saldo Banche**;
+    - **Scadenze Attive**, con il dettaglio *di cui con Data Certa* e *di cui in
+      Sofferenza*;
+    - **Credito Circolante**;
+    - **Ordini Clienti da Evadere** e **Pratiche in Lavorazione**, cioè quello
+      che diventerà fatturato ma non lo è ancora.
+
+    Da uscire: **Scadenze Passive**, con lo stesso dettaglio di data certa e
+    sofferenza, e **Ordini Fornitori da Ricevere**.
+
+    I numeri non sono in tempo reale: si aggiornano con **F2 - Ricalcola**.
+
+    ⚠ Se l'azienda non ha la gestione **multiesercizio**, il cruscotto si apre
+    solo stando sull'**anno corrente**.
+
+!!! tip "Le discordanze sono una griglia, non una stampa"
+
+    Il controllo confronta soggetto per soggetto il saldo dello scadenziario
+    con quello della scheda contabile e mette tutto in una griglia: ci sono
+    anche i soggetti che tornano.
+
+    Il comando che serve davvero è **Solo diff. <> 0**, che nasconde i quadrati
+    e lascia le sole discordanze. Da lì si può **Stampare** o **Esportare**.
+
+    Nessun messaggio a fine controllo: se la griglia filtrata è vuota, vuol
+    dire che torna tutto.
 
 ## Vedi anche
 

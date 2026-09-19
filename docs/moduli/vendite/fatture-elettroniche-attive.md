@@ -54,8 +54,8 @@ fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
 **Cruscotto Fatture PA** ha in alto i filtri e sotto **due griglie**: quella
 grande con le fatture — numero, data, cliente, partita IVA, totale e stato —
-e sotto, per la fattura selezionata, quella degli **esiti**: un’ icona, la data,
-l’ ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
+e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
+l'ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
 della griglia di sopra.
 
 ## Campi
@@ -66,7 +66,7 @@ della griglia di sopra.
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo delle fatture da elencare. | date |
 | **Cliente** | | Restringe a un cliente. | codice |
-| **Visualizza documenti già inviati** | | Mostra anche quelle già trasmesse, che di norma spariscono dall’ elenco. | attivo/non attivo |
+| **Visualizza documenti già inviati** | | Mostra anche quelle già trasmesse, che di norma spariscono dall'elenco. | attivo/non attivo |
 
 {: .campi }
 
@@ -75,13 +75,13 @@ della griglia di sopra.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
-| **Filtra** | | Restringe l’ elenco a quelle andate male. | `TUTTE`, `SCARTATE DIGITHUB`, `SCARTATE SDI` |
+| **Filtra** | | Restringe l'elenco a quelle andate male. | `TUTTE`, `SCARTATE DIGITHUB`, `SCARTATE SDI` |
 
 {: .campi }
 
 !!! tip "I due scarti non sono la stessa cosa"
 
-    **SCARTATE DIGITHUB** sono quelle fermate dall’ intermediario prima di
+    **SCARTATE DIGITHUB** sono quelle fermate dall'intermediario prima di
     partire; **SCARTATE SDI** quelle partite e respinte dal Sistema di
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
@@ -106,12 +106,12 @@ Non applicabile.
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - Sincronizza** | ++f2++ | Scarica gli stati aggiornati. **Non c’ è sempre**: vedi la nota qui sotto. |
+| **F2 - Sincronizza** | ++f2++ | Scarica gli stati aggiornati. **Non c'è sempre**: vedi la nota qui sotto. |
 | **F3 - Credito Residuo** | ++f3++ | Calcola quante trasmissioni restano. |
 | **F4 - Esporta** | ++f4++ | Esporta in XML. |
 | **F5 - Trova** | ++f5++ | Cerca nella griglia. |
 | **F6 - https://fatture.facilecloud.net** | ++f6++ | Apre il portale nel browser. Compare solo se il codice cliente per le fatture PA è impostato sulla ditta. |
-| doppio clic su una riga degli esiti | | Se l’ esito ha un allegato, propone di salvarlo: parte dalla cartella `out` dell’ utente. |
+| doppio clic su una riga degli esiti | | Se l'esito ha un allegato, propone di salvarlo: parte dalla cartella `out` dell'utente. |
 
 Non applicabile.
 
@@ -136,15 +136,15 @@ Non applicabile.
 
 | Messaggio | Dove | Causa | Cosa fare |
 |---|---|---|---|
-| *Nessuna Fattura è stata selezionata per l’ invio dell’ Email!* | Invio | Nessuna riga spuntata. | Spuntare le fatture. |
-| *Impossibile trovare il documento in archivio!* | Invio | Il documento della riga non c’ è più. | Ricaricare l’ elenco. |
-| *Impossibile trovare il cliente in archivio!* | Invio | Il cliente è stato cancellato. | Sistemare l’ anagrafica. |
+| *Nessuna Fattura è stata selezionata per l'invio dell'Email!* | Invio | Nessuna riga spuntata. | Spuntare le fatture. |
+| *Impossibile trovare il documento in archivio!* | Invio | Il documento della riga non c'è più. | Ricaricare l'elenco. |
+| *Impossibile trovare il cliente in archivio!* | Invio | Il cliente è stato cancellato. | Sistemare l'anagrafica. |
 | *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Invio | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
-| *Continuando l’ operazione imposterai questo computer come l’ unico abilitato alla sincronizzazione degli stati.* | Cruscotto | Prima sincronizzazione. | Rispondere **Sì** solo dal computer che deve farlo sempre. |
+| *Continuando l'operazione imposterai questo computer come l'unico abilitato alla sincronizzazione degli stati.* | Cruscotto | Prima sincronizzazione. | Rispondere **Sì** solo dal computer che deve farlo sempre. |
 | *Credito Esaurito!* | Cruscotto | Finite le trasmissioni disponibili. | Acquistare credito. |
-| *Errore di comunicazione! Impossibile contattare l’ Authorization Server.* | Cruscotto | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
+| *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Cruscotto | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
 | *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Cruscotto | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
-| *Esportazione Conclusa!* | entrambe | L’ XML è stato scritto. | — |
+| *Esportazione Conclusa!* | entrambe | L'XML è stato scritto. | — |
 
 Non applicabile.
 
@@ -158,14 +158,14 @@ Non applicabile.
 
 !!! warning "Gli esiti non arrivano da soli, e non da tutti i computer"
 
-    Il cruscotto **non scarica niente all’ apertura**: mostra quello che c’ è in
+    Il cruscotto **non scarica niente all'apertura**: mostra quello che c'è in
     archivio. Per aggiornarlo si preme **F2 - Sincronizza**.
 
     E quel pulsante **non compare dappertutto**. Servono due cose insieme:
 
-    - sull’ utente dev’ essere acceso **Abilita download Stati Fatture Attive**;
-    - il computer dev’ essere **quello designato** sulla ditta — oppure non
-      dev’ essercene ancora nessuno.
+    - sull'utente dev'essere acceso **Abilita download Stati Fatture Attive**;
+    - il computer dev'essere **quello designato** sulla ditta — oppure non
+      dev'essercene ancora nessuno.
 
     La designazione avviene alla prima sincronizzazione, e il programma lo dice
     chiaramente prima di farlo. **Da quel momento gli altri computer vedono il
@@ -176,10 +176,10 @@ Non applicabile.
 
     Selezionando la fattura nella griglia grande, quella in basso mostra la sua
     storia: una riga per esito, con **Stato** e **Messaggio**. Il motivo dello
-    scarto è il testo della colonna **Messaggio** dell’ ultimo esito.
+    scarto è il testo della colonna **Messaggio** dell'ultimo esito.
 
-    Se l’ esito ha un allegato — la ricevuta ufficiale — il **doppio clic** sulla
-    riga propone di salvarlo, partendo dalla cartella `out` dell’ utente.
+    Se l'esito ha un allegato — la ricevuta ufficiale — il **doppio clic** sulla
+    riga propone di salvarlo, partendo dalla cartella `out` dell'utente.
 
 ## Vedi anche
 

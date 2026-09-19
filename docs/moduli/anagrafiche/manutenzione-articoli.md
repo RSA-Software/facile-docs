@@ -259,7 +259,25 @@ La griglia sotto elenca gli articoli del paniere, con **Codice** e
     raggruppare gli articoli in modo del tutto diverso. Un articolo può avere
     più tassonomie: la colonna **N. Taxons** dice quante.
 
-<!-- DA VERIFICARE: cosa fa esattamente il pulsante "Classifica" dell'attribuzione tassonomie. -->
+!!! info "Che cosa fa Classifica"
+
+    È l'attribuzione **di massa** della classificazione: si selezionano le
+    righe nella griglia, si preme **Classifica** e si apre una finestrella
+    con **Reparto**, **Categoria Merceologica**, **Marchio**, **Stagione**
+    e, nella versione Taglie e Colori, **Settore**.
+
+    Si compilano solo i livelli che si vogliono assegnare e si salva:
+    quello che hai scritto viene applicato a **tutti gli articoli
+    selezionati** in una volta.
+
+    La casella **Aggiorna classificazione presente** decide come
+    comportarsi con gli articoli che una classificazione ce l'hanno già:
+
+    - **spuntata**, i valori indicati **sostituiscono** quelli esistenti;
+    - **non spuntata**, vengono riempiti **solo i campi vuoti**, e
+      l'articolo già classificato resta com'è.
+
+    Senza righe selezionate il pulsante è spento.
 
 ## Vedi anche
 

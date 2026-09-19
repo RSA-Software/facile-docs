@@ -8,7 +8,8 @@ maschera_id: nessuna dialog propria
 # Versioni specifiche
 
 Alcuni rami del menu di Facile appartengono a **versioni allestite per un
-settore**: l'oreficeria, la distribuzione di bevande, lo studio professionale.
+settore**: l'oreficeria, la distribuzione di bevande, lo studio professionale,
+il commercio all'ingrosso di ortofrutta.
 Le maschere ci sono in tutte le installazioni, ma **funzionano solo se la
 versione è stata compilata per quel settore**.
 
@@ -28,6 +29,8 @@ versione è stata compilata per quel settore**.
 | [Valenze di lavorazione](oreficerie-valenze.md) | Oreficerie | La tabella dei costi di lavorazione dell'oro e dell'argento. |
 | [Tabella vuoti](cauzioni-vuoti.md) | Bevande | La tabella dei vuoti a rendere, con cauzione e prezzo di vendita. |
 | [Responsabili e collaboratori](studio-collaboratori.md) | Studio | L'anagrafica dei collaboratori dello studio. |
+| [Energy](energy/index.md) | Energy | Un ramo di menu intero: il registro telematico dei prodotti energetici, i flussi per l'Agenzia delle Dogane, accise e ravvedimenti. |
+| [Ortofrutta](ortofrutta/index.md) | Ortofrutta | Un ramo di menu intero: le partite in conto deposito, la chiusura della vendita, gli estratti, gli ordini delle catene e gli imballaggi. |
 
 ## Cosa invece è di tutti
 

@@ -61,7 +61,7 @@ ed **Esci**.
 | **Gruppo Azi.** | | Solo i clienti di quel gruppo aziende. | codice |
 | **Città** | | Solo i clienti di quel comune. Presente in **Stampa**. | testo |
 | **Tipo Attività** | | Solo i clienti con quel tipo di attività. | codice |
-| **Dep. Codifica** | | Il deposito di codifica del cliente. | codice |
+| **Dep. Codifica** | | Il deposito che ha acquisito il cliente. Vedi la nota: è un dato che dentro Facile non si può scrivere. | codice |
 | **Stato Attività** | | Se includere i clienti che hanno cessato. | `TUTTI`, `NON CESSATA`, `CESSATA` |
 | **Tipo Cliente** | | Che genere di soggetto includere. | `TUTTI`, `PERSONE FISICHE`, `PERSONE FISICHE - MASCHI`, `PERSONE FISICHE - FEMMINE`, `PERSONE GIURIDICHE` |
 | **Flag Fatturato** | | Se includere i clienti esclusi dalla fatturazione. | `TUTTI`, `ESCLUSI`, `INCLUSI` |
@@ -82,7 +82,7 @@ ed **Esci**.
 | `SALDO PUNTI` | Il saldo della raccolta punti. |
 | `SCONTO MEDIO` | Lo sconto medio praticato a ciascun cliente. |
 | `LISTINO APPLICATO` | Quale listino si applica a ciascun cliente. |
-| `SENZA ACQUISTI` | I clienti che non hanno comprato nulla. |
+| `SENZA ACQUISTI` | I clienti **inattivi**: nessun movimento in archivio e nessun documento nell'anno di lavoro. |
 
 ### Campi propri di alcune stampe
 
@@ -148,11 +148,45 @@ ed **Esci**.
     **Menu ▸ Contabilità** e **Menu ▸ Contabilità ▸ Stampe Contabili**, aprono
     le stesse maschere descritte qui.
 
-<!-- DA VERIFICARE: quali formati della stampa elenco chiedono "Vuoi la stampa in ordine alfabetico ?" nonostante il campo Ordinamento sia già stato compilato. -->
+!!! note "Chi chiede l'ordine alfabetico, e perché"
 
-<!-- DA VERIFICARE: cosa contiene esattamente il formato SENZA ACQUISTI: su quale periodo è calcolata l'assenza di acquisti. -->
+    Una sola stampa: l'**Elenco IVA Clienti**. Là il campo **Ordinamento**
+    non c'è — la finestra lo nasconde, perché quel modulo ha un ordinamento
+    suo — e l'ordine viene chiesto con la domanda *Vuoi la stampa in ordine
+    alfabetico ?* subito prima di stampare.
 
-<!-- DA VERIFICARE: a cosa serve il filtro "Dep. Codifica" e dove il deposito di codifica si imposta sul cliente. -->
+    Rispondendo **No** l'elenco esce in ordine di codice.
+
+    In tutte le altre stampe l'ordine si sceglie prima, nel campo
+    **Ordinamento**, e la domanda non compare.
+
+!!! info "Che cosa intende il programma per SENZA ACQUISTI"
+
+    Escono i clienti che non hanno **né l'una né l'altra** di queste due
+    cose:
+
+    - **nessun movimento di magazzino** a loro nome, in tutto l'archivio,
+      senza limiti di data;
+    - **nessun documento** intestato a loro **nell'anno di lavoro** —
+      fatture, note, DDT, bolle, ricevute — fra quelli effettivamente
+      emessi.
+
+    Quindi non è «non ha comprato quest'anno»: è «non risulta aver mai
+    comprato niente, e quest'anno non ha nemmeno un documento». È l'elenco
+    delle anagrafiche da ripulire, non quello dei clienti dormienti.
+
+!!! warning "Dep. Codifica filtra un dato che non si può compilare"
+
+    Il filtro lavora sul **deposito di acquisizione** del cliente, cioè il
+    punto vendita dal quale è stato registrato la prima volta.
+
+    Quel dato però **non compare in nessuna maschera**: nella scheda del
+    cliente non c'è un campo per scriverlo. Lo riempie soltanto
+    l'acquisizione automatica dei clienti dal web, quando l'installazione
+    ce l'ha.
+
+    Su un'installazione senza quel collegamento il campo resta a zero per
+    tutti: indicando un deposito, la stampa esce vuota.
 
 ## Vedi anche
 

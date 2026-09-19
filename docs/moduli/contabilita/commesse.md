@@ -210,13 +210,53 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: dove finiscono i due file Excel di Piano Fatt. e Monitoraggio — cartella, nome del file, e se si aprono da soli. Dal codice non risulta alcun messaggio a fine elaborazione. -->
+!!! info "Dove finiscono i due fogli Excel, e perché non c'è nessun messaggio"
 
-<!-- DA VERIFICARE: il pulsante SAL... sulla scheda Subappaltatori apre una maschera a sé (avanzamenti del subappalto). Va documentata separatamente? -->
+    **Piano Fatt.** e **Monitoraggio** scrivono un foglio Excel nella
+    cartella **`out` dell'utente**, e lo **aprono da soli** appena finito:
+    per questo non compare nessun avviso di fine elaborazione — il
+    risultato è il foglio che ti si apre davanti.
 
-<!-- DA VERIFICARE: la differenza operativa fra Varianti e Claims. Le due schede hanno le stesse colonne e la stessa maschera: cosa distingue le une dagli altri nell'uso. -->
+    Il nome porta il numero e il nome della commessa:
 
-<!-- DA VERIFICARE: nella scheda Carichi una colonna si legge "Nnum. Fat." (refuso per "Num. Fat."). Va corretta nel programma? -->
+    - `piano_fatturazione_<numero>_<nome commessa>.xlsx`
+    - `monitoraggio_<numero>_<nome commessa>.xlsx`
+
+    I caratteri che Windows non accetta nei nomi di file vengono sostituiti
+    con un trattino basso. Rilanciando l'elaborazione il foglio viene
+    **riscritto**: se ci hai lavorato sopra, salvalo con un altro nome.
+
+    Se il foglio non si riesce a scrivere — perché è aperto, di solito —
+    compare l'errore della libreria Excel e non viene prodotto niente.
+
+!!! info "Il pulsante SAL dei subappaltatori"
+
+    Mettiti sulla riga del subappaltatore e premi **SAL...**: si apre
+    *SAL Subappaltatore*, l'elenco degli stati avanzamento lavori di
+    **quel** subappalto, con i comandi **Nuovo**, **Modifica** ed
+    **Elimina**.
+
+    È lo stesso meccanismo degli avanzamenti della commessa, ma dalla parte
+    di chi lavora per te: serve a sapere quanto del subappalto è stato
+    eseguito e quanto resta, a fronte dell'importo pattuito.
+
+    Senza una riga selezionata il pulsante non fa niente.
+
+!!! note "Varianti e Claims: per il programma sono la stessa cosa"
+
+    Le due schede sono **la stessa maschera** aperta su due elenchi
+    diversi: stesse colonne, stessi campi, stesso archivio. L'unica
+    differenza è l'etichetta — registrando da *Varianti* la finestra si
+    chiama *Inserimento Variante*, da *Claims* si chiama *Inserimento
+    Claim* — e il fatto che ogni scheda mostra solo le proprie.
+
+    Il programma non tratta le une diversamente dagli altri e non ne fa
+    somme separate altrove: la distinzione è **tua**, e serve a tenere in
+    due elenchi distinti quello che va tenuto distinto.
+
+<!-- DA VERIFICARE: Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale? -->
+
+<!-- DA VERIFICARE: nella scheda Carichi l'intestazione della colonna si legge «Nnum. Fat.», refuso per «Num. Fat.». Sta dentro la definizione della griglia nel .rc, quindi si corregge dal designer delle risorse (oppure con una sostituzione della stessa lunghezza nel DLGINIT). La correggo? -->
 
 ## Vedi anche
 

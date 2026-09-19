@@ -112,11 +112,70 @@ e propria c'è la
     Qui `CHIUSI` vuol dire *esauriti*, non *scaduti*. La scadenza si guarda dalla
     [stampa dei lotti in scadenza](../anagrafiche/stampe-lotti-e-barcode.md).
 
-<!-- DA VERIFICARE: quali colonne mostra la griglia nei due modi, e cosa cambia fra Analisi e Giacenza. -->
+!!! info "Che cosa esce dalle due voci"
 
-<!-- DA VERIFICARE: quale impostazione attiva la gestione dei lotti e cosa mostrano queste analisi se non è attiva. -->
+    Non c'è una griglia a video: tutte e due producono **un foglio Excel**, e
+    il programma chiede dove salvarlo. Cambiano le colonne, e sono il motivo
+    per cui le voci sono due.
 
-<!-- DA VERIFICARE: come viene usato il campo "Listino" nella valorizzazione. -->
+    **Giacenza Lotti** risponde a *quanto me n'è rimasto*:
+
+    | Colonna | Contenuto |
+    |---|---|
+    | `DATA`, `N. CARICO` | Quando il lotto è entrato e con quale carico. |
+    | `CODICE`, `DESCRIZIONE` | L'articolo. |
+    | `FORNITORE` | Da chi è arrivato. |
+    | `LOTTO` | Il numero di lotto. |
+    | `INIZIO VEND.`, `SCADENZA` | Da quando si può vendere e quando scade. |
+    | `U. MIS.` | L'unità di misura. |
+    | `Q.TA CARICATA`, `Q.TA SCARICATA`, `ESISTENZA` | Entrato, uscito, rimasto. |
+    | `REALE` | L'esistenza reale. |
+    | `LISTINO`, `IMPORTO` | Il prezzo unitario e il valore della rimanenza. |
+
+    **Analisi Lotti** risponde a *quanto ci ho guadagnato*:
+
+    | Colonna | Contenuto |
+    |---|---|
+    | `DATA`, `N. CARICO`, `FORNITORE` | L'origine del lotto. |
+    | `CODICE`, `DESCRIZIONE`, `LOTTO` | L'articolo e il lotto. |
+    | `Q.TA CARICATA`, `PREZZO`, `VAL. CARICATO` | Quanto è entrato, a che prezzo, per quanto valore. |
+    | `Q.TA SCARICATA`, `VAL SCARICATO` | Quanto è uscito e per quanto valore. |
+    | `PROVV.` | Le provvigioni maturate su quel venduto. |
+    | `VALORE GIACENZA` | Quanto vale quello che resta. |
+    | `MARGINE` | Il margine del lotto. |
+    | `MARGINE/Q.TA' VENDUTA` | Il margine per pezzo venduto. |
+    | `MARGINE/VALORE VENDUTO` | Il margine in percentuale sul venduto. |
+
+    In breve: **Giacenza** è una fotografia del magazzino lotto per lotto,
+    **Analisi** è il conto economico dello stesso lotto.
+
+!!! info "Le due voci ci sono solo con la gestione dei lotti attiva"
+
+    L'interruttore è **Usa Gestione Lotti**, nella scheda della
+    [ditta](../anagrafiche/ditte.md).
+
+    Se è spento, il programma **toglie le voci dal menu all'avvio** — insieme
+    alla stampa delle etichette dei lotti e a quella dei lotti in scadenza. Non
+    si aprono e mostrano un risultato vuoto: **non ci sono proprio**. Se non le
+    trovi, è lì che va guardato.
+
+!!! info "A che cosa serve il campo Listino"
+
+    A **valorizzare quello che resta**. Il numero indicato sceglie quale dei
+    [listini di vendita](../listini-vendita/gestione-listini.md) usare, e per
+    ogni lotto il programma prende il prezzo che l'articolo ha su quel listino:
+
+    - in **Giacenza Lotti** finisce nella colonna `LISTINO`, e moltiplicato per
+      l'esistenza dà l'`IMPORTO`;
+    - in **Analisi Lotti** è la base del `VALORE GIACENZA`.
+
+    Arriva già impostato con il **listino di vendita della ditta**: cambiandolo
+    si cambia solo il metro con cui la rimanenza viene valutata, non i dati di
+    carico e scarico.
+
+    Se un articolo non ha prezzo su quel listino, il suo valore risulta **zero**
+    e il foglio non lo segnala: una rimanenza che vale zero a fronte di
+    un'esistenza diversa da zero è quasi sempre questo.
 
 ## Vedi anche
 

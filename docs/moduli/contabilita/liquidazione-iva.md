@@ -59,7 +59,7 @@ Prima di usare queste maschere occorre:
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Anno** | ● | L'anno di riferimento. | anno |
-| **Trimestre** | ● | Il periodo da liquidare: l'elenco riporta i dodici mesi, da `01 - GENNAIO` a `12 - DICEMBRE`, e i trimestri. | voce dell'elenco |
+| **Mese** / **Trimestre** | ● | Il periodo da liquidare. L'etichetta e il contenuto dipendono dalla periodicità della ditta: mensile, i dodici mesi da `01 - GENNAIO` a `12 - DICEMBRE`; trimestrale, i quattro trimestri da `I° TRIMESTRE` a `IV° TRIMESTRE`. I due elenchi non convivono. | voce dell'elenco |
 | **Subforniture** | | Segnala la presenza di subforniture. | attivo/non attivo |
 | **Operazioni Straordinarie** | | Segnala operazioni straordinarie nel periodo. | attivo/non attivo |
 | *(elenco senza etichetta accanto a Subforniture)* | | Il codice degli eventi eccezionali previsto dalla normativa. | codice |
@@ -160,13 +160,44 @@ Il prospetto ricalca i righi della dichiarazione:
     anno, pericoloso dopo, perché sovrascrive quello che il programma avrebbe
     calcolato.
 
-<!-- DA VERIFICARE: quali voci contiene esattamente l'elenco "Trimestre": riporta i dodici mesi, ma non ho verificato come vi compaiano i trimestri. -->
+!!! note "Il metodo dell'acconto sta accanto all'acconto"
 
-<!-- DA VERIFICARE: dove si sceglie il metodo di calcolo dell'acconto citato dal messaggio "Indicare il Metodo solo se acconto diverso da Zero!". -->
+    È l'elenco **Metodo**, nella stessa maschera, di fianco alla riga
+    **VP13 - Acconto Dovuto**. Le voci sono quelle previste dalla
+    dichiarazione:
 
-<!-- DA VERIFICARE: in che formato e in quale cartella viene prodotto il file dell'Elenco Clienti e Fornitori. -->
+    - `1 - STORICO`
+    - `2 - PREVISIONALE`
+    - `3 - ANALITICO - EFFETTIVO`
+    - `4 - SOGGETTI OPERANTI NEI SETTORI`
 
-<!-- DA VERIFICARE: se la liquidazione generi anche la registrazione contabile dell'IVA da versare, o solo il prospetto. -->
+    Si lascia vuoto quando l'acconto non c'è. Il messaggio *Indicare il
+    Metodo solo se acconto diverso da Zero!* compare proprio quando hai
+    scelto un metodo ma l'acconto è rimasto a zero.
+
+!!! info "Dove esce l'Elenco Clienti e Fornitori"
+
+    Sempre nella cartella **`out`** dell'installazione, e il nome porta
+    l'anno e il codice della ditta:
+
+    - il file **telematico** è `CLIFORaaaa-nnnnn.TXT`;
+    - l'esportazione in **Excel** produce due fogli,
+      `eleclifor<anno>_<ditta>.xls` con l'elenco vero e proprio e
+      `rsaclifor<anno>_<ditta>.xls` con il dettaglio.
+
+    A differenza di altre esportazioni, qui il programma **dice dove ha
+    scritto**: a fine elaborazione mostra *Esportazione conclusa
+    regolarmente !* con i due percorsi per intero.
+
+!!! warning "La liquidazione non scrive in prima nota"
+
+    Quello che salvi qui è **solo il prospetto**: la liquidazione registra
+    il proprio quadro, periodo per periodo, e niente altro.
+
+    Il **giroconto dell'IVA** — la scrittura che chiude IVA vendite e IVA
+    acquisti e apre il debito o il credito verso l'erario — **va
+    registrata a mano** in [prima nota](registrazione-prima-nota.md), come
+    qualunque altra scrittura. Lo stesso vale per il versamento.
 
 ## Vedi anche
 

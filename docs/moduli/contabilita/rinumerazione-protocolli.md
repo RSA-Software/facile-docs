@@ -102,11 +102,38 @@ Almeno una casella dev'essere spuntata.
     **Rinumera per ultimo.** Registra tutto il periodo, controlla le
     [squadrature](statistiche-e-controlli.md), poi rinumera, poi stampa.
 
-<!-- DA VERIFICARE: con quale criterio vengono riassegnati i protocolli: per data di registrazione, per data documento o per numero di registrazione. -->
+!!! info "Con quale ordine vengono riassegnati"
 
-<!-- DA VERIFICARE: se la rinumerazione riparta da 1 o dal primo protocollo dell'anno. -->
+    Non c'è un criterio solo: i registri d'acquisto e quelli di vendita
+    vengono trattati in due passate diverse.
 
-<!-- DA VERIFICARE: se il programma avvisi quando i registri sono già stati stampati sul bollato. -->
+    | Registri | Ordine con cui si rinumera |
+    |---|---|
+    | Acquisti, Corrispettivi, Acquisti CEE | **Data di registrazione.** |
+    | Fatture Emesse, Fatture in Sospensione, Fatture Emesse CEE | **Data di registrazione**, e a parità di data il **numero del documento**, poi la **data del documento**, poi il numero interno della registrazione. |
+
+    In tutti e due i casi ogni **sezione** ha la sua numerazione: le sezioni
+    non si mescolano.
+
+!!! warning "Riparte da 1, e non chiede conferma"
+
+    Prima di cominciare il programma **azzera i contatori** dei registri che
+    hai spuntato, per ogni sezione interessata. Quindi la numerazione riparte
+    da **1**, non dal primo protocollo già in uso.
+
+    E non c'è nessuna rete di sicurezza: l'unico messaggio che questa
+    finestra sa dare è *Selezionare almeno un registro !* quando non hai
+    spuntato niente. Premendo il comando l'elaborazione parte e basta.
+
+    In particolare **il programma non sa, e non chiede, se i registri siano
+    già stati stampati sul bollato**. Rinumerare dopo la stampa significa
+    ritrovarsi l'archivio che non corrisponde più alla carta, senza modo di
+    tornare indietro.
+
+    Prima di lanciarla: una **copia di sicurezza**, e la certezza che nessuno
+    stia registrando.
+
+<!-- DA VERIFICARE: questa elaborazione riscrive i protocolli di tutto l'anno e non chiede nessuna conferma: basta un clic per distruggere la corrispondenza con i registri gia' stampati. Vale la pena metterci davanti una richiesta di conferma, o un avviso quando le Date Bollati della ditta dicono che il registro e' gia' stato stampato? -->
 
 ## Vedi anche
 

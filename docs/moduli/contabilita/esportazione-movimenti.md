@@ -119,11 +119,55 @@ caselle dei registri e i pulsanti **F2 - OK** ed **Esci**.
     nuovo. Un file vuoto, dopo un'esportazione appena fatta, è il
     comportamento normale.
 
-<!-- DA VERIFICARE: in quale cartella e con quale nome viene prodotto il file, per ciascuno dei quattro tracciati. -->
+!!! info "Dove finisce il file"
 
-<!-- DA VERIFICARE: se il titolo della finestra cambi secondo il tracciato scelto o resti sempre "Esportazione Prima Nota". -->
+    Sempre nella cartella **`out`** dell'installazione. Il nome dipende dal
+    tracciato:
 
-<!-- DA VERIFICARE: come si annulla il segno di "già esportato" su una registrazione, se serve rifare l'esportazione da zero. -->
+    | Tracciato | File prodotto |
+    |---|---|
+    | **SISPAC** | `sispac.zip`, che dentro contiene i quattro file dei movimenti, dell'IVA, dei clienti e dei fornitori. |
+    | **TeamSystem** | `teamsyst.zip`; esportando una sola sezione diventa `teamsyst_NN.zip`, con il numero della sezione. |
+    | **IPSOA** | Tre file separati: `CLIENTI.TXT`, `FORNITORI.TXT`, `MOVIMENTI.TXT`. |
+    | **PROFIS SQL** | Due file con la data del giorno: `CLFOaaaammgg.TXT` per clienti e fornitori, `MOaaaammgg.TXT` per i movimenti. |
+
+    I file intermedi vengono scritti nella cartella `tmp` e, per i due
+    tracciati che producono uno zip, cancellati dopo la compressione.
+
+    Il programma **non dice a fine elaborazione dove ha scritto**: vale la
+    pena aprire la cartella `out` per controllare che il file ci sia e per
+    prenderlo da lì.
+
+!!! note "Il titolo della finestra dice quale tracciato stai usando"
+
+    Diventa *Esportazione Movimenti per SISPAC*, *... per TeamSystem*, *...
+    per IPSOA* o *... per PROFIS SQL* secondo la voce di menu da cui sei
+    entrato.
+
+!!! warning "Il segno di «già esportato» non si toglie"
+
+    Non c'è nessun comando, in nessuna maschera, che riporti indietro quel
+    segno: una volta che una registrazione è stata mandata al consulente
+    resta marcata per sempre.
+
+    Per rimandare un periodo si usa **Includi Movimenti già esportati**: il
+    segno resta, ma la registrazione viene inclusa lo stesso. È l'unico modo
+    previsto.
+
+    Per vedere quali registrazioni portano il segno c'è il **brogliaccio dei
+    movimenti**, che si può limitare ai soli esportati o ai soli non ancora
+    esportati.
+
+!!! warning "Solo due tracciati su quattro mettono il segno"
+
+    A marcare le registrazioni come esportate sono **SISPAC** e
+    **TeamSystem**. **IPSOA** e **PROFIS SQL** leggono il segno per decidere
+    cosa mandare, ma non lo scrivono: usandoli, ogni esportazione rimanda
+    tutto il periodo indicato, e la casella *Includi Movimenti già
+    esportati* non cambia niente.
+
+    Con quei due tracciati il controllo di quello che è già stato mandato
+    resta a chi lo manda: conviene tenere nota delle date.
 
 ## Vedi anche
 

@@ -152,7 +152,7 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | % Sconto | | Sconto abituale concesso al cliente. | Percentuale |
 | Listino Vendita | | Listino applicato nei documenti di vendita. | Da 1 a 3 |
 | Listino Trasfert | | Listino applicato ai trasferimenti. | Da 1 a 3 |
-| Livello | | Livello di prezzo del cliente. Nella versione Studio il campo non compare. | Numero |
+| Livello | | Il gruppo di clienti a cui questo appartiene per le promozioni: una promozione riservata a un livello si applica solo ai clienti che hanno **quel** numero. Nella versione Studio il campo non compare. | da 0 a 100; `0` = nessun livello |
 | Riferimento | | Persona o ufficio da contattare presso il cliente. | Fino a 50 caratteri |
 | Sito Web | | Sito internet del cliente. | Fino a 80 caratteri, in minuscolo |
 
@@ -359,9 +359,38 @@ Valgono inoltre in tutta la maschera:
     sole cifre: punti, spazi, barre e prefissi scritti con il segno più
     vengono tolti al salvataggio.
 
-<!-- DA VERIFICARE: dove si imposta l'intervallo di codici riservato ai clienti (quello che fa comparire il messaggio sulle autorizzazioni)? È un dato dell'azienda: qual è il percorso di menu da citare? -->
+!!! note "Dove si decide l'intervallo dei codici"
 
-<!-- DA VERIFICARE: il campo Livello nella scheda Generale. Esiste una funzione di servizio che lo allinea alla Cat. Economica, ma non è chiaro a cosa serva nell'uso quotidiano. -->
+    In **Menu ▸ Archivi ▸ Ditte**, con il comando **F7 - Impo. Prot.**: nei
+    campi **Clienti Dal** e **Al**. È un'impostazione della ditta, non
+    dell'utente, e quel comando compare solo a chi entra come `ADMIN`.
+
+    Due cose da sapere:
+
+    - se lasci entrambi i campi a zero il controllo non scatta e va bene
+      qualunque codice;
+    - il controllo riguarda **solo l'inserimento**. Un cliente già in archivio
+      con un codice fuori intervallo si continua a modificare senza che
+      nessuno protesti.
+
+!!! note "A cosa serve il Livello"
+
+    È l'unico uso che il programma ne fa: **filtrare le promozioni**.
+
+    Quando crei una promozione puoi riservarla a un livello. Da quel momento
+    la promozione vale solo per i clienti che hanno **esattamente** quel
+    numero in **Livello**; per tutti gli altri non viene applicata. Una
+    promozione con livello `0` non guarda il cliente e vale per tutti.
+
+    Alla vendita al banco lo scarto è silenzioso — semplicemente il prezzo
+    promozionale non viene proposto. Sulle bilance, invece, compare
+    l'avvertimento *Promozione N applicabile solo a Clienti con livello M -
+    Scartata*.
+
+    Molte installazioni tengono il livello **uguale alla Cat. Economica**, e
+    infatti fra gli strumenti di assistenza ce n'è uno che riallinea i due
+    campi su tutto l'archivio in un colpo solo. Non è una funzione di uso
+    quotidiano: chiedila all'assistenza.
 
 ## Vedi anche
 

@@ -58,8 +58,8 @@ stampa, le caselle e i pulsanti **F2 - OK** ed **Esci**.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Mese** | ● | Il mese da stampare. | mese |
-| **Dal**, **Al** | ● | Il periodo da stampare. | date |
+| **Mese** | ● | Il periodo che comparirà **nell'intestazione** del registro. Si scrive il numero e accanto compare il nome. Con la liquidazione trimestrale l'etichetta diventa **Trimestre** e i valori vanno da 1 a 4. | numero del mese, o del trimestre |
+| **Dal**, **Al** | ● | Le date che **selezionano davvero** le registrazioni da stampare. All'apertura sono la prima e l'ultima registrazione in archivio, dentro l'anno di lavoro. | date |
 | **Sezione** | | La [sezione](sezioni.md) contabile. | codice |
 | **Pagina Iniziale** | ● | Da quale pagina riprendere: è così che la stampa si aggancia alla precedente. | numero |
 | **Tipo Stampa** | | `GRAFICA` stampa impaginato sulla stampante di sistema, `TESTO` produce la stampa a caratteri per le stampanti ad aghi. | `GRAFICA`, `TESTO` |
@@ -123,9 +123,31 @@ stampa, le caselle e i pulsanti **F2 - OK** ed **Esci**.
     sul registro atteso, il posto dove guardare è la causale con cui è stata
     registrata.
 
-<!-- DA VERIFICARE: che rapporto c'è fra il campo Mese e i campi Dal/Al: se il mese sia solo l'intestazione o filtri anch'esso. -->
+!!! warning "Il Mese non filtra niente: le date sì"
 
-<!-- DA VERIFICARE: se il titolo della finestra cambi secondo il registro scelto o resti sempre "Stampa Registro". -->
+    Sono due cose indipendenti, e il programma non le confronta.
+
+    **Dal** e **Al** scelgono le registrazioni. **Mese** è solo la parola che
+    viene scritta in testa a ogni pagina del registro.
+
+    Vuol dire che si può stampare un registro intestato *MARZO* contenente le
+    registrazioni di tutto l'anno, e nessuno avverte. Prima di stampare sul
+    bollato conviene rileggere tutti e tre i campi insieme.
+
+    All'apertura il programma propone il mese in corso, ma con una regola sua:
+    **fino al giorno 15** propone il mese **precedente**, perché nella prima
+    metà del mese di solito si sta ancora chiudendo quello prima. Dal 16 in
+    poi propone il mese corrente. Con la liquidazione trimestrale propone il
+    trimestre.
+
+!!! note "Il titolo della finestra dice quale registro stai stampando"
+
+    Non resta mai generico: diventa *Stampa Registro Acquisti*, *Stampa
+    Registro Fatture Emesse*, *Stampa Registro Corrispettivi*, *Stampa
+    Registro Fatt. in Sospensione*, *Stampa Registro Acquisti CEE* o *Stampa
+    Registro Fatture Emesse CEE* secondo la voce di menu da cui sei entrato.
+
+    È il modo più rapido per accorgersi di aver sbagliato voce.
 
 ## Vedi anche
 

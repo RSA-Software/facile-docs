@@ -207,11 +207,68 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
     coefficienti stagionali; su periodi di osservazione fino a 60 giorni la
     scorta minima non scende mai sotto 1.
 
-<!-- DA VERIFICARE: che formato deve avere il file letto da "F3 - Importa" delle ubicazioni. -->
+!!! info "La correzione che scatta a 90 e a 120 giorni di copertura"
 
-<!-- DA VERIFICARE: con quale criterio si applicano i coefficienti stagionali quando la Copertura è 90 o 120 giorni. -->
+    Con **Copertura** esattamente `90` o `120` il programma **ridimensiona
+    la scorta minima** quando la finestra di osservazione — il campo
+    **Giorni** — è troppo corta per reggere quella proiezione.
 
-<!-- DA VERIFICARE: come si sceglie il deposito di partenza e quello di arrivo nella distribuzione automatica. -->
+    | Copertura | Giorni osservati | La scorta minima viene moltiplicata per |
+    |:---:|---|:---:|
+    | 90 | fino a 15 | 0,166 |
+    | 90 | da 16 a 30 | 0,333 |
+    | 90 | da 31 a 60 | 0,666 |
+    | 90 | oltre 60 | nessuna correzione |
+    | 120 | fino a 20 | 0,166 |
+    | 120 | da 21 a 40 | 0,333 |
+    | 120 | da 41 a 80 | 0,666 |
+    | 120 | oltre 80 | nessuna correzione |
+
+    Il senso è questo: se hai guardato due settimane di vendite e chiedi
+    una scorta per tre mesi, il conto proporzionale gonfierebbe il
+    magazzino. I coefficienti — un sesto, un terzo, due terzi — riportano
+    il risultato a una misura prudente, e spariscono quando l'osservazione
+    è abbastanza lunga da essere credibile.
+
+    Con qualunque altra copertura — 30, 60, 180 giorni — **la correzione
+    non c'è**: vale solo per quei due valori esatti. E la **scorta massima**
+    non viene mai corretta.
+
+!!! info "Nella distribuzione non si scelgono partenza e arrivo: si ordina l'elenco"
+
+    Non ci sono due campi «da» e «a». C'è l'elenco dei **depositi**, e
+    quello che conta è **l'ordine in cui stanno**: si cambia con **F3 - Su**
+    e **F4 - Giù**.
+
+    Il programma scorre l'elenco dall'alto. Per ogni deposito che ha
+    **più merce della sua scorta minima** cerca, sempre dall'alto, i
+    depositi che ne hanno **meno**, e sposta quanto basta — fino a
+    esaurire l'eccedenza del primo o a coprire il fabbisogno del secondo.
+
+    Quindi chi sta **in alto dà per primo e riceve per primo**: mettere in
+    cima il deposito centrale significa svuotarlo per primo, metterlo in
+    fondo significa usarlo come ultima riserva.
+
+    Quello che resta scoperto dopo tutti gli spostamenti diventa la
+    proposta di **ordine al fornitore**.
+
+!!! note "Il file delle ubicazioni è la lettura di un terminale"
+
+    **F3 - Importa** compare **solo nella versione Taglie e Colori -
+    Calzature** e legge un file di **testo** prodotto dal terminale
+    portatile, proposto dalla cartella `in` dell'utente.
+
+    Il file è un elenco di codici letti, uno per riga, e il programma li
+    distingue dalla **lunghezza**:
+
+    - una riga di **esattamente tre caratteri** è il codice di
+      un'**ubicazione**;
+    - le righe più lunghe che la seguono sono i **codici a barre** degli
+      articoli che stanno in quell'ubicazione.
+
+    Si lavora quindi così: si legge l'etichetta dello scaffale, poi tutti i
+    prodotti che ci stanno, poi l'etichetta dello scaffale dopo. Non serve
+    nessuna intestazione e nessun separatore.
 
 ## Vedi anche
 

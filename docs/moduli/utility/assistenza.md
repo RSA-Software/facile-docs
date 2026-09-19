@@ -205,7 +205,26 @@ codice attuale e quello nuovo.
 | *Attenzione!<br>Prima di utilizzare la procedura assicurarsi che nessun altro utente stia utilizzando il programma. …* | L'avviso di cautela che precede quasi tutte le procedure. | Leggilo: elenca i tre prerequisiti veri. |
 | *Confermi la Variazione?* | Conferma prima di cambiare i codici. | **Sì** procede. La risposta preimpostata è **No**. |
 
-<!-- DA VERIFICARE: i messaggi finali di riepilogo delle variazioni di codice. -->
+A fine lavoro ogni variazione dice quanto ha toccato. Il testo cambia con la
+procedura:
+
+| Messaggio | Da dove arriva |
+|---|---|
+| *Variazione conclusa regolarmente!<br><br>N records modificati* | Le variazioni semplici: IVA, categorie merceologiche, stagioni, marchi, reparti. |
+| *Variazione deposito conclusa regolarmente!<br><br>Sono stati aggiornati N records* | **Variazione Codici Deposito**. |
+| *Variazione codice conclusa con successo : N records modificati* | **Variazione Codici Articoli**. |
+
+Il numero è la somma delle righe riscritte in **tutti** gli archivi toccati,
+non degli articoli: su una variazione di deposito o di codice articolo è
+normale che sia molto alto.
+
+Le altre risposte della variazione del codice articolo:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Impossibile trovare l' articolo !* | Il codice vecchio non esiste. | Controlla il codice. |
+| *I due codici indicati sono identici!<br><br>Impossibile continuare.* | Vecchio e nuovo codice coincidono. | Correggi il codice nuovo. |
+| *Il codice del nuovo articolo è già presente in archivio !<br><br>Vuoi unificare gli articoli ?* | Il codice di destinazione esiste già. | **Sì** fonde i due articoli in uno: movimenti, listini e giacenze del vecchio passano al nuovo e il vecchio sparisce. È irreversibile. La risposta preimpostata è **No**. |
 
 ## Note
 
@@ -223,11 +242,75 @@ codice attuale e quello nuovo.
     Clienti*, perché è la stessa maschera parametrizzata. Il titolo non è
     aggiornato, ma i campi lavorano sul dato giusto.
 
-<!-- DA VERIFICARE: quali archivi vengono toccati da ciascuna variazione di codice. -->
+!!! info "Quanto lavoro fa ciascuna variazione"
 
-<!-- DA VERIFICARE: cosa fa "Abilita NoSync" e in quali situazioni l'assistenza lo usa. -->
+    Non sono tutte uguali, e il tempo che ci mettono lo dice.
 
-<!-- DA VERIFICARE: che differenza c'è fra "Inversione Modalità IVA" e la coppia "Articoli IVA Inclusa/Esclusa". -->
+    **IVA, categorie merceologiche, stagioni, marchi, reparti** cambiano un solo
+    campo nell'anagrafica articoli, con una sola operazione. Durano un attimo:
+    quei codici stanno solo lì.
+
+    **Deposito** tocca **diciannove archivi**: righe dei documenti, movimenti di
+    magazzino e storico, promozioni, distinte, contatori degli articoli,
+    ubicazioni, inventario elettronico, produzione, scorte, testate dei carichi,
+    scarti, matricole, risorse, manutenzioni, movimenti fiscali, contratti
+    clienti e causali di magazzino.
+
+    **Codice articolo** è la più pesante: tocca una **cinquantina di archivi**
+    dell'anno in corso — tutto quello che nomina un articolo, dalle righe dei
+    documenti ai listini, dai codici a barre alle distinte base, dagli allegati
+    ai lotti — e poi ripete il giro sugli archivi **degli ultimi dieci anni**.
+    Su un archivio grande può durare a lungo, ed è il motivo per cui va lanciata
+    con tutti fuori dal programma.
+
+    Di ogni variazione di codice articolo resta **traccia in archivio**: il
+    programma registra codice vecchio, codice nuovo e data.
+
+!!! info "Che cos'è «Abilita NoSync»"
+
+    È un interruttore che **sospende i controlli di coerenza fra archivi**.
+
+    Normalmente, quando il programma legge un documento che cita un cliente
+    cancellato, un articolo che non c'è più o una causale sparita, si ferma con
+    un errore e non lo fa aprire. Con NoSync acceso non si ferma: al posto della
+    descrizione mancante scrive `*** NOT FOUND ***` e va avanti.
+
+    Serve a **entrare in un archivio rotto per ripararlo**: senza, certe
+    maschere non si aprirebbero nemmeno e non ci sarebbe modo di correggere il
+    dato che manca.
+
+    Due cose da sapere:
+
+    - è un **interruttore**: la stessa voce lo accende e lo spegne, e il
+      programma risponde *Flag NoSync Abilitato !* o *Flag NoSync Disabilitato
+      !*. Quando è acceso, accanto alla voce di menu compare il segno di spunta;
+    - **vale solo per la sessione**: chiudendo Facile torna spento, e vale solo
+      sulla postazione che lo ha acceso.
+
+    Lavorare con NoSync acceso è pericoloso: i controlli che impediscono di
+    salvare dati incoerenti sono spenti. Si accende per la riparazione e si
+    spegne subito dopo.
+
+!!! warning "«Inversione Modalità IVA» e «Articoli IVA Inclusa/Esclusa» fanno cose opposte"
+
+    Si somigliano nel nome e vanno tenute ben distinte.
+
+    **Articoli IVA Inclusa** e **Articoli IVA Esclusa** cambiano solo il
+    **segno**: mettono quel flag su tutti gli articoli e sulla ditta, e **non
+    toccano un prezzo**. Un articolo da 100 resta da 100: cambia solo che adesso
+    quel 100 si legge come lordo invece che come netto. Serve quando
+    l'impostazione è stata sbagliata in partenza e i prezzi caricati erano già
+    giusti.
+
+    **Inversione Modalità IVA** fa la **conversione vera**: gira il flag della
+    ditta e poi ricalcola, aliquota per aliquota, **tutti i prezzi** — i listini
+    di ogni articolo, l'ultimo e il penultimo prezzo di acquisto, e i prezzi, i
+    costi, le spese e i prezzi fornitore di **tutti i movimenti di magazzino**.
+    Un listino da 100 con IVA al 22% diventa 122, o viceversa.
+
+    Sbagliare fra le due è uno degli errori più costosi: la prima lascia i
+    prezzi e cambia il significato, la seconda lascia il significato e cambia i
+    prezzi. Prima di lanciarle, **la copia di sicurezza non è un consiglio**.
 
 ## Vedi anche
 

@@ -47,8 +47,8 @@ quattro campi.
 | Codice | ● | Identificativo dell'unità. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome esteso dell'unità, per esempio *CHILOGRAMMI*. | Fino a 30 caratteri |
 | Abbreviativo | | Sigla breve stampata sui documenti, per esempio *Kg.* | Fino a 4 caratteri |
-| Coef. Moltip. | | Coefficiente con cui convertire la quantità, quando l'unità di acquisto non coincide con quella di vendita. | Numero |
-| Riporta Colli | | Riporta sul documento un numero di colli pari alla quantità. | Casella |
+| Coef. Moltip. | | Per quanto va moltiplicata la quantità scritta sul documento. Lasciandolo a **1** la quantità vale così com'è. | Numero |
+| Riporta Colli | | Scrivendo la quantità su una riga di documento, mette **i colli uguali alla quantità**. | Casella |
 
 {: .campi }
 
@@ -109,9 +109,42 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il Coef. Moltip. converte fra quale coppia di unità? Serve un esempio numerico che oggi non ho. -->
+!!! info "Che cosa moltiplica il Coef. Moltip."
 
-<!-- DA VERIFICARE: la casella Riporta Colli. In quali documenti ha effetto? -->
+    Moltiplica la **quantità che scrivi** per ottenere quella che il
+    programma usa davvero, sia per il magazzino sia per il valore della
+    riga.
+
+    Serve quando si vende **a collo ma si conta a peso o a pezzo**. Un
+    esempio: l'articolo ha prezzo 2,00 al chilo e si vende a cartoni da 12
+    chili. Si registra l'unità `CT` con **Coef. Moltip. = 12**; scrivendo
+    sulla riga **quantità 3**, il programma calcola:
+
+    - valore della riga: 2,00 × 12 × 3 = **72,00**;
+    - movimento di magazzino: **36 chili**.
+
+    Con il coefficiente a **1** — il valore normale — non cambia niente: 3
+    resta 3.
+
+    ⚠️ Cambiare il coefficiente di un'unità già in uso **non ricalcola i
+    documenti fatti**, ma cambia tutti quelli che verranno: se serve
+    un'altra conversione, conviene creare un'unità nuova.
+
+!!! note "Dove ha effetto Riporta Colli"
+
+    Sulle **righe dei documenti di vendita** — fatture, DDT, bolle, ordini,
+    preventivi: appena scrivi la quantità, il numero dei colli della riga
+    diventa uguale a quella quantità. Da lì i colli si sommano nel totale
+    del documento, che è quello che finisce sul documento di trasporto.
+
+    Vale per le unità in cui **un'unità è un collo**: cartone, pallet,
+    cassa.
+
+    C'è però una precedenza da conoscere: se sulla **ditta** è attivo il
+    **calcolo automatico dei colli**, i colli vengono calcolati dividendo
+    la quantità per i pezzi per confezione dell'articolo, e **questa
+    casella non viene nemmeno guardata**. Riporta Colli funziona solo
+    quando quel calcolo automatico è spento.
 
 ## Vedi anche
 

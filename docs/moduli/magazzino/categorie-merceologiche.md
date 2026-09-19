@@ -23,13 +23,15 @@ della categoria sul touch della cassa.
 ## A cosa serve
 
 La categoria merceologica è la classificazione che fa più lavoro di tutte:
-l'anagrafica articoli la richiama nel campo **Cat. Merc.**, le stampe di
-magazzino e le statistiche si leggono per categoria, e il calcolo del prezzo di
-vendita parte dai ricarichi registrati qui.
+l'anagrafica articoli la richiama nel campo **Cat. Merc.**, e le stampe di
+magazzino e le statistiche si leggono per categoria.
 
-Esempio: se sulla categoria *BEVANDE* imposti **%Ricarico 1** = 30, quando si
-carica un articolo di quella categoria il programma propone un prezzo di
-vendita pari al costo aumentato del 30%.
+Da qui dipende anche la **provvigione dell'agente**, quando l'agente è
+impostato per prenderla dalla categoria: il riquadro degli scaglioni in basso
+dice quanta provvigione spetta a fronte dello sconto concesso.
+
+Le percentuali di **ricarico** e i due campi per la generazione dei codici
+sono invece rimasti indietro: vedi le note in fondo.
 
 Sulle installazioni con cassa touch, da qui dipendono anche il colore del tasto
 e la stampante su cui la comanda viene inviata.
@@ -56,12 +58,12 @@ banco, in basso il riquadro degli sconti e delle provvigioni per scaglione.
 | Codice | ● | Identificativo della categoria. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome della categoria, come compare in anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Cod. Trasferimento | | Codice con cui la categoria viene riconosciuta nei trasferimenti verso altre sedi. | Testo |
-| %Ricarico 1, %Ricarico 2, %Ricarico 3 | | Le tre percentuali di ricarico proposte sul costo per ottenere il prezzo di vendita, una per listino. | Percentuali |
+| %Ricarico 1, %Ricarico 2, %Ricarico 3 | | Tre percentuali di ricarico. Il programma le registra ma **non le usa in nessun calcolo**. | Percentuali |
 | Abbreviativo | | Sigla breve della categoria, per le stampe strette. | Testo breve |
 | Escludi WEB | | La categoria non compare sul sito. | Casella |
 | Articoli Monopolio | | Segnala che la categoria raccoglie articoli di monopolio. | Casella |
-| Cod. Articolo | | Prefisso da usare per generare i codici degli articoli della categoria. | Testo |
-| Suffisso | | Suffisso da aggiungere agli stessi codici. | Testo |
+| Cod. Articolo | | Registrato e **non usato**: nessuna generazione di codice lo consulta. | Testo |
+| Suffisso | | Registrato e **non usato**, come il precedente. | Testo |
 
 {: .campi }
 
@@ -80,10 +82,13 @@ banco, in basso il riquadro degli sconti e delle provvigioni per scaglione.
 
 ### Sconti e provvigioni
 
-Il riquadro in basso contiene nove coppie **%Sconto** e **%Provvig.**, disposte
-su tre colonne di tre righe: una coppia per ciascuno scaglione. Lo sconto è
-quello concesso al cliente, la provvigione quella riconosciuta all'agente sugli
-articoli di questa categoria.
+Il riquadro in basso contiene le coppie **%Sconto** e **%Provvig.**: sono
+**scaglioni di sconto**, non scaglioni del cliente o dell'agente. Si leggono
+così: *fino a questo sconto, questa provvigione*.
+
+Contano solo per gli agenti impostati su **Calcolo Provvigione Da =
+CATEG. MERCEOLOGICA**, e solo sulle righe senza sconto merce e senza sconto
+a valore.
 
 ## Pulsanti e comandi
 
@@ -113,7 +118,8 @@ Valgono inoltre:
 1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Categorie Merceologiche ▸
    Inserimento**.
 2. Digita il **Codice** e la **Descrizione**: sono i due dati obbligatori.
-3. Compila i **%Ricarico** che vuoi far proporre sui prezzi di vendita.
+3. Compila gli scaglioni di **%Sconto** e **%Provvig.** se gli agenti
+   prendono la provvigione dalla categoria.
 4. Se usi la cassa touch, imposta **Posizione POS**, i colori e la
    **Stampante**.
 5. Premi **F2 - Salva**.
@@ -145,19 +151,41 @@ Valgono inoltre:
 
 ## Note
 
-!!! warning "Attenzione"
+!!! info "Come si legge la scala sconto-provvigione"
 
-    Cambiare un **%Ricarico** non ricalcola i prezzi degli articoli già
-    caricati: la nuova percentuale vale sui caricamenti successivi.
+    Emettendo un documento, il programma somma **tutti gli sconti della
+    riga** — quello di testata e i sette di riga — e cerca nella scala il
+    primo scaglione che non viene superato: la provvigione è quella.
+
+    Con un esempio. Scaglioni `5 → 4%`, `10 → 3%`, `15 → 1%`:
+
+    | Sconto applicato | Provvigione |
+    |---:|---:|
+    | nessuno | quella del **primo** scaglione |
+    | 3% | 4% |
+    | 10% | 3% |
+    | 12% | 1% |
+    | 20% | **zero** |
+
+    Due cose da tenere a mente: senza sconto vale sempre la provvigione del
+    primo scaglione, e **oltre l'ultimo scaglione la provvigione è zero**.
+    Se non vuoi quel comportamento, l'ultimo scaglione va messo abbastanza
+    alto da coprire lo sconto massimo che concedi.
+
+!!! warning "Tre campi che non servono a niente"
+
+    I tre **%Ricarico** e i due campi **Cod. Articolo** e **Suffisso**
+    vengono registrati e riletti quando riapri la categoria, ma **nessuna
+    parte del programma li consulta**: non propongono nessun prezzo di
+    vendita e non generano nessun codice articolo.
+
+    Compilarli non fa danno e non fa niente.
+
+!!! warning "Attenzione"
 
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: i tre %Ricarico corrispondono ai tre listini di vendita? La corrispondenza va confermata. -->
-
-<!-- DA VERIFICARE: i campi Cod. Articolo e Suffisso servono alla generazione automatica del codice articolo. Come si combinano con la regola generale già descritta nella scheda degli articoli? -->
-
-<!-- DA VERIFICARE: le nove coppie di sconto e provvigione corrispondono agli scaglioni indicati sul cliente o sull'agente? -->
 
 ## Vedi anche
 

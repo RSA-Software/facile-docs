@@ -95,11 +95,43 @@ La griglia ha queste colonne:
     se il listino di un fornitore è vecchio o incompleto, il confronto lo
     riflette. Aggiorna i listini prima di trarne conclusioni.
 
-<!-- DA VERIFICARE: se la maschera consideri tutti gli articoli o solo quelli presenti nel listino del fornitore scelto. -->
+!!! info "Si parte dal listino del fornitore, non dall'anagrafica"
 
-<!-- DA VERIFICARE: se il confronto usi il prezzo di listino o il prezzo netto dopo gli sconti. -->
+    L'elenco contiene **solo gli articoli che stanno nel listino del
+    fornitore scelto**, e di quelli solo i codici che esistono anche in
+    [anagrafica articoli](../anagrafiche/anagrafica-articoli.md).
 
-<!-- DA VERIFICARE: su quale deposito è calcolata la colonna Esistenza. -->
+    Un articolo che quel fornitore non tratta non compare, e non compare
+    nemmeno una riga di listino che non si riesce ad agganciare a nessun
+    articolo. Non è quindi il modo di sapere **cosa non ti ha quotato**: per
+    quello serve il confronto fra listini.
+
+!!! warning "Il confronto è sul prezzo netto, non su quello di listino"
+
+    Facile confronta il **netto** — il prezzo di listino **già decurtato di
+    tutti e sette gli sconti** che la riga porta — e non il prezzo lordo.
+
+    È il confronto giusto, ed è anche il motivo per cui un fornitore con il
+    listino più caro può risultare il migliore: conta quello che si paga
+    davvero.
+
+    Di conseguenza, **se gli sconti di una riga non sono aggiornati il
+    confronto mente**, e mente in silenzio. Prima di decidere su questa
+    schermata vale la pena controllare che i listini siano recenti.
+
+!!! info "Su quali depositi è calcolata l'esistenza"
+
+    Non su uno: su **tutti i depositi e tutte le sezioni che l'utente può
+    vedere**, sommati insieme, per l'anno di lavoro.
+
+    Vuol dire che due persone con permessi diversi vedono **numeri diversi**
+    nella stessa colonna: chi è legato a un solo deposito vede l'esistenza
+    di quello, chi non ha limitazioni vede il totale dell'azienda. Non è un
+    errore, ma va saputo prima di confrontare due schermate.
+
+    Restano fuori le righe per **taglia e colore**: nelle versioni che le
+    gestiscono, l'esistenza di un articolo declinato per taglie qui risulta
+    a zero.
 
 ## Vedi anche
 

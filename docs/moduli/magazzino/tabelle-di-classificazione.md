@@ -140,7 +140,7 @@ Personali**:
 | Codice | ● | Identificativo della voce. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome della voce, come compare nell'anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Capacità (lt) | | **Solo su Tipi Contenitori.** Capacità del contenitore in litri. | Numero con due decimali |
-| %Ric. Spese | | **Solo sui Listini di Vendita.** Percentuale di ricarico per spese applicata al listino. | Numero con due decimali, non negativo |
+| %Ric. Spese | | **Solo sui Listini di Vendita.** Percentuale che il calcolo del ricarico aggiunge al prezzo di questo listino, dopo quella generale della ditta. | Numero con due decimali, non negativo |
 
 {: .campi }
 
@@ -219,11 +219,34 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: la tabella Periodi. Il nome non dice a quale uso siano destinati questi periodi. -->
+!!! info "Periodi e Categorie Fiscali non hanno un significato proprio"
 
-<!-- DA VERIFICARE: la tabella Categorie Fiscali. Come si differenzia dalle Aliquote IVA nell'uso quotidiano? -->
+    Sono due dei nomi che si possono dare alle **tre tabelle di
+    classificazione libere** dell'articolo. Le altre scelte possibili sono
+    colori, settori, calibri, banconi, autori, case editrici, tipi di
+    tessuto, materiali, origine merci e così via.
 
-<!-- DA VERIFICARE: il campo "%Ric. Spese" dei listini di vendita. Dove viene applicato: sul prezzo di vendita, sulle spese del documento, o altro? -->
+    Quale nome portano le tre tabelle di una ditta si decide nelle
+    **Impostazioni Protette** della [ditta](../anagrafiche/ditte.md), e da
+    lì discende come si chiamano nei menu, nei filtri e nelle stampe.
+
+    Quindi la domanda «a cosa servono i Periodi?» non ha una risposta nel
+    programma: servono a quello per cui l'azienda ha deciso di usarli — una
+    stagionalità, un periodo di validità, una campagna. Il programma li
+    tratta come qualunque altra classificazione: li mette sull'articolo e
+    permette di filtrarci sopra.
+
+!!! note "Categorie Fiscali non c'entra con l'IVA"
+
+    Malgrado il nome, non è un'alternativa alle
+    [aliquote IVA](../contabilita/aliquote-iva.md): l'IVA di un articolo
+    resta e rimane l'aliquota indicata sulla sua scheda, e nessun calcolo
+    guarda questa tabella.
+
+    È una classificazione libera come le altre, che qualcuno ha scelto di
+    chiamare così perché gli serviva raggruppare gli articoli per un
+    criterio fiscale suo — per esempio i beni soggetti a un adempimento
+    particolare.
 
 ## Vedi anche
 

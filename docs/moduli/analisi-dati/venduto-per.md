@@ -147,11 +147,10 @@ dalla voce di menu e si filtra dagli altri campi.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi propri di queste analisi. -->
-
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *(nessun messaggio, solo un segnale acustico)* | Manca una delle date o un filtro non è valido. | Guarda dove si è posizionato il cursore. |
+| *(nessun messaggio, solo un segnale acustico)* | Manca la **Data Iniziale**, o la **Data Finale** è anteriore a quella iniziale. | Guarda dove si è posizionato il cursore. |
+| *La data è esterna all' esercizio corrente.* | Una delle due date non cade nell'anno di lavoro. | Queste analisi lavorano **solo sull'anno aperto**. Per gli anni passati, cambia esercizio. L'unica eccezione è **Turnover Articoli**, che accetta qualsiasi data. |
 
 ## Note
 
@@ -175,9 +174,49 @@ dalla voce di menu e si filtra dagli altri campi.
     tutti gli articoli in cui quel dato manca. Se il gruppo senza nome è grosso,
     il problema è in anagrafica, non nell'analisi.
 
-<!-- DA VERIFICARE: quali sono le voci dell'elenco "Tipo Vendita" oltre a TUTTE, e su quali analisi compare. -->
+!!! note "Le voci di «Tipo Vendita»"
 
-<!-- DA VERIFICARE: come viene calcolato il turnover e su quale giacenza media. -->
+    Sono cinque, e sono le stesse su **tutte** le quindici voci, turnover
+    compreso: la maschera è una sola.
+
+    | Voce | Vuol dire |
+    |---|---|
+    | `TUTTE` | Non filtra. |
+    | `N` | Vendita normale. |
+    | `T` | Vendita in trasferta. |
+    | `C` | Vendita a centro servizi. |
+    | `D` | L'altro tipo di vendita a centro servizi. |
+
+    Sono le stesse quattro lettere che si scelgono in testa a un
+    [documento di vendita](../vendite/documento-di-vendita.md), nel campo
+    **Tipo Vendita**.
+
+!!! warning "Sul turnover la Data Iniziale non viene usata"
+
+    Il programma **pretende** che sia compilata e non anteriore alla finale,
+    ma poi la butta via: l'analisi prende **tutti i movimenti dello storico
+    fino alla Data Finale**, dall'inizio degli archivi.
+
+    È voluto — la rotazione si misura sulla storia completa dell'articolo — ma
+    fa un effetto sgradevole: cambiando la data iniziale il risultato non
+    cambia di una riga, e non c'è niente che lo dica.
+
+    Il turnover è anche l'**unica** delle quindici voci che accetta date fuori
+    dall'anno di lavoro: tutte le altre si fermano con *La data è esterna
+    all' esercizio corrente*.
+
+!!! note "Il conto della rotazione sta nel modello di stampa"
+
+    Facile prepara i dati — i movimenti dello storico fino alla data indicata,
+    con i filtri della maschera — e lascia **al modello di stampa** il compito
+    di calcolare la rotazione e presentarla.
+
+    Vuol dire che il criterio esatto, e la giacenza media su cui la rotazione
+    è rapportata, non stanno nel programma ma nel modello: per saperlo con
+    precisione, o per cambiarlo, bisogna guardare il modello con
+    l'assistenza. Quello che si può dire con certezza è **su quali movimenti**
+    il conto viene fatto: quelli dello storico, filtrati per deposito,
+    sezione, tipo di vendita e per le chiavi dell'articolo.
 
 ## Vedi anche
 

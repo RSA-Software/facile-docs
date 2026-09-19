@@ -152,7 +152,32 @@ Valgono inoltre:
     già registrati continuano a puntare a questo stesso codice: la modifica si
     riflette anche su di essi.
 
-<!-- DA VERIFICARE: la maschera non calcola né verifica il CIN a partire da ABI, CAB e numero di conto. È voluto, o va segnalato all'utente che il controllo è a suo carico? -->
+!!! warning "Le coordinate non vengono controllate: copiale, non ricostruirle"
+
+    Il programma non calcola il **CIN** e non verifica l'**IBAN**: quello che
+    scrivi viene registrato così com'è. Un CIN sbagliato o un IBAN a cui manca
+    una cifra non fanno scattare nessun avviso qui.
+
+    Il posto dove poi si vede sono i documenti che escono, e lì i controlli
+    sono di forma, non di correttezza:
+
+    - sulla **fattura elettronica** l'IBAN viene riportato **solo se supera i
+      26 caratteri**. Uno più corto — perché incompleto, o perché è stato
+      scritto solo il numero di conto — viene semplicemente **omesso, senza
+      dirlo**: la fattura parte priva delle coordinate;
+    - se l'IBAN contiene **spazi**, il programma avverte con *Presenza di spazi
+      nell'IBAN : devono essere rimossi!* e lascia scegliere se proseguire;
+    - **ABI** e **CAB** vengono riportati **solo se sono esattamente di cinque
+      cifre**. Con quattro cifre, o con uno zero iniziale perso, non compaiono;
+    - il **CIN** sulla fattura elettronica non viene riportato mai: serve solo
+      dentro Facile.
+
+    La regola pratica è una sola: prendere le coordinate dall'estratto conto o
+    dal sito della banca e incollarle, senza spazi. Ricostruirle a memoria è il
+    modo più facile per mandare fuori una fattura senza IBAN e accorgersene
+    quando il cliente non paga.
+
+<!-- DA VERIFICARE: conviene che la maschera calcoli il CIN da ABI, CAB e numero di conto, e controlli il carattere di controllo dell'IBAN? Oggi non lo fa nessuno dei due, in nessun punto del programma, e l'unico effetto di un IBAN sbagliato e' che sparisce dalla fattura elettronica senza un messaggio. -->
 
 
 ## Vedi anche

@@ -92,7 +92,12 @@ cosa è tornato.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste maschere. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Non è stato selezionato nessun Banco !* | Si è confermato senza aver spuntato nessuna riga nell'elenco. | Spunta le attrezzature da muovere. |
+| *Non possono essere mischiate operazioni di Ritiro da Comodati con Ritiro da Riparazioni!* | Fra le righe spuntate ce ne sono alcune in comodato e alcune in riparazione. | Fai due giri separati: prima le une, poi le altre. |
+| *È stato generato il D.D.T. N. … Vuoi stampare il documento ?* | Il movimento ha prodotto un documento di trasporto. | **Sì** lo manda in stampa; **No** lo lascia in archivio, da ristampare quando serve. |
+| *Vuoi stampare il contratto ?* — *Vuoi stampare i contratti ?* | Chiesto dopo una consegna. | **Sì** stampa il contratto di comodato di ogni attrezzatura consegnata. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -107,11 +112,51 @@ cosa è tornato.
     finestra e la voce da cui si è entrati sono l'unico modo per sapere cosa si
     sta registrando.
 
-<!-- DA VERIFICARE: se il movimento aggiorni da solo lo Stato e il Cliente nella scheda dell'attrezzatura. -->
+!!! info "L'attrezzatura non si digita: si spunta da un elenco"
 
-<!-- DA VERIFICARE: se la consegna generi un documento di trasporto vero o richieda solo di annotarne gli estremi. -->
+    Non c'è un campo in cui scrivere la matricola. La finestra mostra
+    l'**elenco delle attrezzature che possono fare quell'operazione**, e si
+    spuntano le righe.
 
-<!-- DA VERIFICARE: come si sceglie quale attrezzatura consegnare: il campo non compare fra le etichette che ho potuto estrarre. -->
+    Quali compaiano dipende dall'operazione:
+
+    - alla **consegna**, quelle **libere**: senza cliente e non ancora
+      consegnate;
+    - al **ritiro**, quelle che risultano presso **il cliente e la
+      destinazione** che hai indicato.
+
+    È il motivo per cui il cliente si indica **prima**: senza, l'elenco del
+    ritiro resta vuoto.
+
+!!! info "La scheda dell'attrezzatura si aggiorna da sé"
+
+    Non c'è niente da riportare a mano. Registrando il movimento il
+    programma riscrive la scheda dell'attrezzatura:
+
+    - alla **consegna** vi scrive il **cliente** e la **destinazione**, e
+      porta lo **stato** a consegnato — o a *conto vendita*, *riparazione*,
+      *rottamazione* secondo il tipo di movimento;
+    - al **ritiro** azzera cliente e destinazione e riporta lo stato a
+      disponibile.
+
+    La scheda dell'attrezzatura resta quindi sempre la fotografia di dove
+    si trova adesso; lo storico dei passaggi sta nei movimenti.
+
+!!! info "Il documento di trasporto viene generato davvero"
+
+    Dipende da come compili i due campi del documento:
+
+    - **lasciandoli vuoti**, il programma **crea un DDT vero** — intestato
+      al cliente e alla destinazione, con la causale di trasporto scelta,
+      il porto **FRANCO**, data e ora del trasporto, e una riga per ogni
+      attrezzatura, con il richiamo al DDT con cui era stata consegnata. Il
+      numero viene assegnato sul registro indicato, e alla fine il
+      programma chiede se stamparlo;
+    - **compilandoli**, il programma si limita a **prendere nota** degli
+      estremi di un documento fatto altrove, e non crea niente.
+
+    Il DDT non viene creato nemmeno quando la selezione non è omogenea —
+    per esempio ritirando insieme comodati e riparazioni.
 
 ## Vedi anche
 

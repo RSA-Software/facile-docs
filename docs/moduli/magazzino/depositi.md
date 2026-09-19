@@ -54,10 +54,10 @@ stabiliscono dove il deposito deve comparire e dove no.
 | Telefono 1 | | Recapito del deposito. | Fino a 14 cifre |
 | Telefono 2 | | Secondo recapito. Nella versione Taglie e Colori - Calzature accetta anche lettere e segni di punteggiatura, non solo cifre. | Fino a 14 cifre |
 | Registro Doc. | | Registro su cui numerare i documenti emessi da questo deposito. Lasciandolo vuoto vale il registro generale. | (vuoto) o un registro definito in azienda |
-| Fornitore | | Fornitore associato al deposito, per i magazzini in conto deposito. | Codice dall'archivio fornitori |
-| Cod. Destinazione | | Destinazione di consegna associata al deposito. | Numero della destinazione |
-| Escludi Visibilità Web | | Il deposito non compare sul sito. Su un deposito nuovo è già spuntata. | Casella |
-| Escludi Interrogazione da Web | | Le giacenze del deposito non sono interrogabili dal sito. | Casella |
+| Fornitore | | Fornitore associato al deposito. Il programma lo registra ma **non lo rilegge da nessuna parte**. | Codice dall'archivio fornitori |
+| Cod. Destinazione | | La destinazione a cui il fornitore deve consegnare per questo deposito: viene messa sugli ordini generati dalla distribuzione automatica. | Numero di una destinazione di tipo fornitore o ditta |
+| Escludi Visibilità Web | | Le giacenze del deposito **non vengono mandate al negozio online**. Su un deposito nuovo è già spuntata. | Casella |
+| Escludi Interrogazione da Web | | Il deposito **non compare fra quelli interrogabili** nella consultazione delle giacenze. | Casella |
 | Escludi da Esportazione P.V. | | Il deposito resta fuori dall'esportazione verso i punti vendita. | Casella |
 | Escludi da Inventario | | Il deposito non entra nelle stampe e nelle rilevazioni d'inventario. | Casella |
 | Escludi da Magazzino | | Il deposito non entra nelle stampe di magazzino. | Casella |
@@ -144,9 +144,35 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: i campi Fornitore e Cod. Destinazione. Si scrivono a mano, senza elenco da cui scegliere: in quale scenario operativo si compilano (conto deposito? magazzini di terzi?). -->
+!!! info "Le due caselle del web fanno cose diverse"
 
-<!-- DA VERIFICARE: la differenza pratica fra Escludi Visibilità Web e Escludi Interrogazione da Web. -->
+    **Escludi Visibilità Web** riguarda quello che **esce**: le giacenze di
+    quel deposito non entrano nel conteggio della disponibilità che viene
+    mandata al negozio online. Un magazzino di servizio, un deposito di
+    resi, la merce guasta: roba che c'è ma non è vendibile, e che non deve
+    gonfiare la disponibilità del sito.
+
+    **Escludi Interrogazione da Web** riguarda quello che si **guarda**: il
+    deposito sparisce dall'elenco di quelli che si possono interrogare
+    quando si consultano le giacenze di un articolo.
+
+    Le due cose sono indipendenti: un deposito può non alimentare il sito e
+    restare consultabile, o viceversa.
+
+!!! note "A che cosa serve Cod. Destinazione, e perché Fornitore no"
+
+    **Cod. Destinazione** entra in gioco quando la **distribuzione
+    automatica** genera gli ordini ai fornitori: l'ordine per quel deposito
+    nasce con quella destinazione, cioè con l'indirizzo a cui il fornitore
+    deve consegnare. Vale solo se la destinazione indicata è di tipo
+    **fornitore** o **ditta**; altrimenti viene ignorata e l'ordine esce
+    senza destinazione.
+
+    Va scritto a memoria, perché qui non c'è l'elenco da cui sceglierlo: il
+    numero si legge fra le destinazioni del soggetto.
+
+    **Fornitore** invece è un campo che il programma **registra e non
+    usa**: nessuna elaborazione lo consulta. Compilarlo non ha effetto.
 
 ## Vedi anche
 

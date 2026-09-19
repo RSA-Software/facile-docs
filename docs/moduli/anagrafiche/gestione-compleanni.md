@@ -21,8 +21,11 @@ lì si mandano gli auguri per email o SMS, o si stampa l'elenco.
 ## A cosa serve
 
 È una cortesia commerciale che si automatizza: ogni lunedì si guardano i
-compleanni della settimana e si manda un messaggio. Funziona solo per i clienti
-di cui si è registrata la data di nascita.
+compleanni della settimana e si manda un messaggio. Funziona solo per chi ha
+la data di nascita registrata.
+
+L'elenco pesca da **due archivi**: l'anagrafica dei clienti e le tessere
+fidelity. Chi ha la tessera compare anche se non è un cliente codificato.
 
 ## Prerequisiti
 
@@ -52,6 +55,13 @@ La griglia ha queste colonne:
 | **Telefono**, **Telefoni Cellulari**, **Cellulare 2**, **Cellulare 3** | I recapiti telefonici. |
 | **Email** | L'indirizzo di posta. |
 | **Indirizzo**, **Città**, **Cap**, **Prov** | L'indirizzo postale. |
+| **mmdd** | Il compleanno come quattro cifre, mese e giorno. È il campo su cui il programma cerca, e serve alla stampa per raggruppare. |
+| **Cod_Cli** | Il codice del cliente, valorizzato se la riga viene dall'anagrafica clienti. |
+| **Cod_Fid** | Il codice della tessera, valorizzato se la riga viene da una fidelity. |
+| **Data Nas.** | La data di nascita per intero, anno compreso. |
+
+Le ultime quattro colonne non si leggono a video: servono alla stampa
+dell'elenco, che le prende da lì.
 
 ## Campi
 
@@ -109,11 +119,44 @@ confronto.
     periodo. Vale soprattutto per le persone giuridiche, che una data di
     nascita non ce l'hanno.
 
-<!-- DA VERIFICARE: come si compone il testo degli auguri: non ho individuato il punto in cui si scrive. -->
+!!! info "Dove si scrive il testo degli auguri"
 
-<!-- DA VERIFICARE: se il programma tenga traccia degli auguri già mandati, per non ripeterli. -->
+    Non in questa finestra: il testo si scrive nella finestra che si apre
+    **dopo** aver premuto **F4 - Email** o **F5 - SMS**.
 
-<!-- DA VERIFICARE: a cosa servono le colonne mmdd, Cod_Cli, Cod_Fid e Data Nas. che compaiono in coda alla griglia. -->
+    Quella finestra non parte mai vuota. Il testo di partenza sta in due file
+    dentro la cartella `template` del programma:
+
+    - `compleanno_email_template.rtf` per l'email, che si può formattare —
+      grassetto, colori, immagini;
+    - `compleanno_sms_template.txt` per l'SMS, testo semplice.
+
+    Quello che vedi a video lo puoi correggere prima di mandarlo, ma la
+    correzione vale **solo per quell'invio**: la volta dopo ricompare il
+    testo del file. Per cambiarlo una volta per tutte va cambiato il file.
+
+    L'oggetto dell'email è già scritto — *Auguri di Compleanno* — e si può
+    cambiare. Il destinatario non si tocca: lo mette il programma, riga per
+    riga, e il campo è nascosto apposta.
+
+!!! warning "Il programma non ricorda chi ha già ricevuto gli auguri"
+
+    Finito l'invio, ogni riga si colora nella colonna **Mail** o **Sms**:
+    `OK` in verde se il messaggio è partito, `ERR` in rosso se no.
+
+    Quel segno resta **solo a video**: non viene registrato da nessuna parte
+    e sparisce chiudendo la finestra. Rifacendo la stessa ricerca il giorno
+    dopo, i messaggi partono di nuovo.
+
+    Chi manda gli auguri ogni giorno non ha problemi, perché il periodo
+    cambia. Chi li manda una volta a settimana deve fare attenzione a non
+    sovrapporre i periodi.
+
+!!! note "I due pulsanti si spengono da soli"
+
+    **F4 - Email** è spento finché non è configurato il server di posta;
+    **F5 - SMS** è spento finché non è scelto un fornitore di SMS. Sono due
+    impostazioni della ditta, scheda *Server*.
 
 ## Vedi anche
 

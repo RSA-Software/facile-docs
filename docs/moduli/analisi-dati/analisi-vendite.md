@@ -180,11 +180,74 @@ proprio. L'elenco delle misure si chiama **Misure**, i totali **Totali**.
     durare molti minuti. Facile avvisa quando succede, ma il tempo lo si
     risparmia restringendo prima.
 
-<!-- DA VERIFICARE: quali dimensioni e quali misure sono disponibili nel cubo multidimensionale. -->
+!!! info "Le dimensioni e le misure del cubo"
 
-<!-- DA VERIFICARE: cosa mostra esattamente "Analisi Scontrini" — se il dettaglio riga per riga o i totali per operatore. -->
+    Sono fisse: si scelgono e si combinano trascinandole, ma l'elenco è questo.
 
-<!-- DA VERIFICARE: che differenza c'è fra i filtri di "Analisi Vendite Periodo" e quelli di "Venduto per Articolo". -->
+    **Chi ha venduto e a chi**: Agente, Cliente, Destinazione, Operatore, Zona,
+    Cat Economica.
+
+    **Che cosa**: Articolo, Gruppo Art, Sottogruppo, Reparto, Cat
+    Merceologica, Fornitore, Marchio, Stagione, Settore, Aliquota Iva.
+
+    **Dove e come**: Deposito, Causale, Gruppo Mov.
+
+    **Quando**: la data, e da essa il programma ricava da sé **Anno**,
+    **Trimestre**, **Mese**, **Settimana** e **Giorno Settimana**. La data
+    esatta non compare come dimensione: si lavora sui raggruppamenti.
+
+    Nelle versioni con taglie e colori si aggiungono **Taglia** e **Colore**;
+    con la gestione dei lotti attiva, **Lotto**.
+
+    Le **misure** sono tre — **Quantita'**, **Importo** e **Costo** — e
+    all'apertura è visibile il solo **Importo**: le altre due si accendono dal
+    pannello delle misure. Il margine non c'è come misura pronta: si ottiene
+    affiancando Importo e Costo.
+
+!!! info "Che cosa mostra «Analisi Scontrini»"
+
+    **Totali per deposito e per giorno**, non il dettaglio riga per riga e non
+    il riepilogo per operatore — l'operatore è solo un filtro.
+
+    Per ogni deposito e ogni giornata la stampa dà:
+
+    | Dato | Vuol dire |
+    |---|---|
+    | **Quantità** | I pezzi venduti. |
+    | **Importo** | Il venduto in valore. |
+    | **Numero scontrini** | Quanti scontrini sono stati battuti. |
+    | **Pezzi per scontrino** | Quantità diviso numero di scontrini: lo *scontrino medio* in pezzi. |
+    | **Importo per scontrino** | Il valore dello scontrino medio. |
+    | **Importo per pezzo** | Il prezzo medio di quello che si vende. |
+
+    Sono i tre indicatori con cui si legge una giornata di negozio: quanta
+    gente è passata, quanto ha comprato ciascuno, a che prezzo medio.
+
+    Due avvertenze sul conteggio dei **pezzi**: valgono solo i movimenti la cui
+    [causale](../magazzino/causali-magazzino.md) conta come venduto, e **non
+    vengono contati gli articoli esclusi dall'inventario** — quelli con
+    **Escludi da Inventario** spuntato in anagrafica. Sull'**importo** invece
+    entrano tutti. È il motivo per cui, dove si vendono servizi o voci senza
+    giacenza, l'importo per pezzo può risultare più alto del previsto.
+
+!!! note "Perché i filtri non sono gli stessi di «Venduto per…»"
+
+    Sono due strumenti diversi e si vede dai filtri.
+
+    **Venduto per…** è una **stampa**: si decide tutto prima — periodo,
+    deposito, articolo, reparto, categoria, fornitore, marchio, stagione, le
+    tre tabelle libere, gruppo, sottogruppo, sezione, tipo di vendita — si
+    preme **F2 - OK** e si ottiene un foglio già raggruppato. Per cambiare
+    taglio si torna indietro e si rilancia.
+
+    **Analisi Vendite** è un **cubo**: i filtri davanti servono solo a
+    circoscrivere quanto materiale caricare, perché il resto si fa dopo,
+    trascinando le dimensioni. Un filtro in meno qui non è una mancanza: è una
+    scelta che si fa a video invece che prima.
+
+    In pratica: se si sa già che cosa si vuole vedere, *Venduto per…* è più
+    rapido; se si sta cercando, il cubo è l'unico che permette di cambiare idea
+    senza ricominciare.
 
 ## Vedi anche
 

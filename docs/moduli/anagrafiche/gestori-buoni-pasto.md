@@ -131,9 +131,32 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: cosa succede alla cassa se il cliente presenta un buono di un taglio non previsto — viene rifiutato, o solo segnalato? -->
+!!! note "Alla cassa i tagli non si digitano: si scelgono"
 
-<!-- DA VERIFICARE: la % Commissione entra automaticamente nella fattura di rimborso al gestore, o è solo un dato di riferimento? -->
+    Nella finestra del pagamento con buoni ci sono due elenchi: il **tipo** di
+    buono, cioè il gestore, e il **taglio**. L'elenco dei tagli si riempie con
+    quelli registrati per il gestore scelto, e cambia da sé se cambi gestore.
+
+    Quindi la domanda non si pone: un taglio non previsto **non è
+    digitabile**, perché nell'elenco non c'è. Se il cliente presenta un buono
+    di un valore che non hai registrato, va aggiunto qui.
+
+    Se non è stato registrato nessun gestore, o nessun taglio, la finestra non
+    si apre nemmeno: *È necessario impostare il tipo di buoni pasto ed il
+    taglio prima di procedere con il pagamento!*, e il pagamento non parte.
+
+!!! info "La commissione viene applicata da sola"
+
+    Non è un promemoria. Quando emetti il documento di rimborso al gestore, i
+    buoni diventano righe del documento — una per taglio, con la quantità e il
+    valore nominale — e la **% Commissione** viene scritta come **sconto** su
+    ogni riga.
+
+    Il totale del documento risulta quindi già al netto di quanto il gestore
+    trattiene, senza che tu debba calcolarlo.
+
+    Cambiando la percentuale qui, cambiano i documenti **da lì in avanti**:
+    quelli già emessi conservano la percentuale con cui sono nati.
 
 ## Vedi anche
 

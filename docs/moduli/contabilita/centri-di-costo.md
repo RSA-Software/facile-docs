@@ -49,7 +49,7 @@ campi.
 |---|:---:|---|---|
 | Codice | ● | Identificativo del centro. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome del centro, come compare in prima nota e nelle stampe analitiche. | Fino a 30 caratteri |
-| Gruppo | | Raggruppamento a cui il centro appartiene. | Da elenco |
+| Gruppo | | In quale delle tre voci di costo far confluire quello che passa da questo centro. | `FATTURE`, `MANODOPERA`, `ALTRO` |
 
 {: .campi }
 
@@ -111,9 +111,33 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il campo Gruppo. L'elenco viene riempito dal programma: quali valori contiene e a che cosa serve il raggruppamento? -->
+!!! info "A che cosa serve il Gruppo"
 
-<!-- DA VERIFICARE: la maschera si chiama "Centri di Costo/Ricavo" ma non c'è un campo che distingua un centro di costo da uno di ricavo. La distinzione si fa altrove? -->
+    L'elenco non si può estendere: le voci sono **tre e fisse** — `FATTURE`,
+    `MANODOPERA`, `ALTRO`.
+
+    Servono al **monitoraggio della commessa**. Lì i costi presi dalla prima
+    nota vengono sommati mese per mese e divisi in quelle tre voci, secondo il
+    gruppo del centro di costo indicato sulla registrazione: così si legge a
+    colpo d'occhio quanto di una commessa è merce e prestazioni fatturate da
+    terzi, quanto è manodopera propria e quanto il resto.
+
+    Un centro di costo a cui non è stato dato un gruppo viene conteggiato come
+    **ALTRO**.
+
+!!! note "La distinzione fra costo e ricavo non sta qui"
+
+    Il centro di costo è solo un'etichetta: dice **a che cosa** si riferisce un
+    importo, non se è un'entrata o un'uscita.
+
+    A dirlo è il **sottoconto** movimentato nella stessa riga, che ha un suo
+    tipo: *Costi* o *Ricavi*. Il monitoraggio della commessa prende i costi
+    dalle righe sui sottoconti di tipo Costi e i ricavi da quelle sui
+    sottoconti di tipo Ricavi.
+
+    Per questo lo stesso centro può comparire su una riga di costo e su una di
+    ricavo senza contraddizione, e per questo la maschera si chiama *Centri di
+    Costo/Ricavo*.
 
 ## Vedi anche
 

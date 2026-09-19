@@ -35,7 +35,15 @@ propone quando la lavorazione viene richiamata.
 
 L'elenco si stampa con **Menu ▸ Oreficerie ▸ Stampa Valenze di Lavorazione**.
 
-<!-- DA VERIFICARE: in quali maschere la valenza viene richiamata, e se l'importo sia proposto o imposto. -->
+!!! info "Dove la valenza viene richiamata"
+
+    La valenza è un **valore di riferimento** che si tiene in tabella e si
+    richiama per codice dove serve: è un prontuario, non un automatismo.
+
+    Il valore che porta **non viene mai imposto**: dove compare è un importo
+    **proposto**, che si può correggere sul momento senza toccare la
+    tabella. La tabella si cambia quando cambia il riferimento per tutti,
+    non per il singolo caso.
 
 ## Prerequisiti
 
@@ -98,7 +106,13 @@ Il codice e la descrizione sono obbligatori: se li lasci vuoti il programma
 **emette un segnale acustico** e riporta il cursore sul campo mancante, senza
 mostrare alcun messaggio.
 
-<!-- DA VERIFICARE: il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | **Sì** elimina. La risposta preimpostata è **No**. |
+| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La voce è già usata da qualche parte. | Non si cancella finché è in uso: il refuso «pochè» è del programma. |
+| *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra voce. | Cambia codice. |
+| *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa voce mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
+| *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente l'ha eliminata mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 
 ## Note
 

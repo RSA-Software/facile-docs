@@ -93,7 +93,7 @@ quando si scrive il codice.
 | **F4 - Trova** | ++f4++ | Cerca dentro la griglia. |
 | **F5 - Selez.** | ++f5++ | Sceglie quali articoli portare in griglia. È il primo comando da usare. |
 | **Articolo** | | Cerca un articolo e lo aggiunge alla griglia, uno alla volta. |
-| **Carica Articoli da Excel** | | **Non importa modifiche**: legge da un foglio la colonna `codice` e porta in griglia quegli articoli, prendendone i dati dall’ archivio. Alla fine dice quanti ne ha caricati e quanti codici non ha trovato. È il modo di lavorare su una lista preparata fuori. |
+| **Carica Articoli da Excel** | | **Non importa modifiche**: legge da un foglio la colonna `codice` e porta in griglia quegli articoli, prendendone i dati dall'archivio. Alla fine dice quanti ne ha caricati e quanti codici non ha trovato. È il modo di lavorare su una lista preparata fuori. |
 | **Elimina** | | Toglie la riga dalla griglia. L'articolo **non** viene cancellato dall'archivio. |
 | **F6 - Pulisci** | ++f6++ | Svuota la griglia. |
 | **F7 - Frontalini** | ++f7++ | Stampa i [frontalini](../casse-bilance/frontalini.md) degli articoli presenti in griglia. |
@@ -106,10 +106,10 @@ quando si scrive il codice.
 
     **Esporta su Excel** e **Carica Articoli da Excel** non fanno un giro di
     andata e ritorno. Del foglio viene letta **solo la colonna `codice`**: le
-    righe vengono poi riempite con i dati dell’ archivio, quindi **le correzioni
+    righe vengono poi riempite con i dati dell'archivio, quindi **le correzioni
     fatte nel foglio vanno perse**. Per cambiare i dati si lavora in griglia.
 
-    Quello che il caricamento fa bene è un’ altra cosa, ed è utile: **portare in
+    Quello che il caricamento fa bene è un'altra cosa, ed è utile: **portare in
     griglia un elenco di articoli** preparato altrove.
 
 ## Come si fa
@@ -140,8 +140,9 @@ la centrale, un inventario — senza doverlo ribattere.
 1. Porta in griglia gli articoli.
 2. Premi **Cambia Listino** e scegli il listino da guardare: l'intestazione
    della colonna diventa *Listino - N* e i prezzi si rileggono.
-3. Correggi i prezzi nella colonna **Listino**, oppure premi **F8 - Ricarico**
-   sulla riga per lavorare sul ricarico invece che sul prezzo finale.
+3. Mettiti sulla riga da rivedere e premi **F8 - Ricarico**: si apre la
+   finestra del ricarico, dove si lavora sul prezzo o sulla percentuale.
+   Chiudendola il prezzo in griglia si aggiorna.
 4. Alla fine premi **F7 - Frontalini** per rifare i cartellini degli articoli
    toccati.
 
@@ -181,9 +182,41 @@ finché ce n'è, ma sono marcati come non più ordinabili.
     Il deposito si sceglie all'apertura e non si cambia dopo: per vedere le
     esistenze di un altro deposito bisogna chiudere e riaprire la maschera.
 
-<!-- DA VERIFICARE: quali colonne sono modificabili e quali di sola lettura: dalle risorse risulta bloccata solo la colonna delle taglie. -->
+!!! info "Quali colonne si modificano davvero"
 
-<!-- DA VERIFICARE: cosa succede alla colonna NPO quando si spunta: se venga anche registrata la data di non ordinabilità. -->
+    Si scrivono, e la modifica viene registrata subito:
+
+    **Descrizione 1**, **Descrizione 2**, **Ubicazione**, e i codici di
+    **IVA**, **Unità di misura**, **Reparto**, **Categoria merceologica**,
+    **Marchio**, **Stagione**, **Fornitore abituale**, le tre tabelle libere,
+    **Mix**, **Articolo Fornitore**, **Gruppo**, **Sottogruppo**, **Fuori
+    Assortimento** e **NPO**.
+
+    Non si modificano da qui:
+
+    - **Codice**: identifica la riga, e per cambiarlo c'è una funzione
+      apposta;
+    - **Esistenza** e **Listino**: sono lì per guardarli. Quello che ci
+      scrivi non arriva in archivio e sparisce al primo aggiornamento della
+      riga. Il prezzo si cambia con **F8 - Ricarico**;
+    - le colonne di **descrizione** accanto a ogni codice, che si riempiono
+      da sé appena scrivi il codice;
+    - nella versione Taglie e Colori, **Gruppo Taglie**, che è bloccata.
+
+!!! warning "Non c'è un comando Salva, e non c'è un Annulla"
+
+    Ogni cella che lasci dopo averla cambiata viene scritta in archivio in
+    quel momento. Non c'è niente da confermare e non c'è modo di tornare
+    indietro: chiudendo la finestra le modifiche restano tutte.
+
+!!! note "Spuntare NPO non scrive la data"
+
+    La casella **NPO** cambia solo lo stato dell'articolo.
+
+    L'articolo ha anche una **data di non ordinabilità**, ma quella la scrive
+    soltanto l'aggiornamento automatico dei listini quando è il fornitore a
+    dichiarare l'articolo fuori produzione. Mettendo la spunta a mano la data
+    resta come stava — vuota, o quella vecchia se ce n'era una.
 
 ## Vedi anche
 

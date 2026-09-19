@@ -79,7 +79,7 @@ La griglia ha queste colonne:
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
 | **Aggiungi** | ++f8++ | Aggiunge un cliente alla lista. |
-| **Aggiungi Gruppo** | ++f9++ | Aggiunge in blocco i clienti di un gruppo. |
+| **Aggiungi Gruppo** | ++f9++ | Aggiunge alla lista **un gruppo di clienti in blocco**: apre il filtro clienti, e tutti quelli che ne escono entrano nella lista. |
 | **Visualizza** | | Apre l'[anagrafica](anagrafica-clienti.md) del cliente della riga. |
 | **Elimina Riga** | | Toglie dalla lista la riga attiva. |
 | **Elimina Selezionati** | | Toglie le righe spuntate. |
@@ -138,13 +138,73 @@ La griglia ha queste colonne:
     Le voci **Elimina** del menu **Clienti** tolgono i nominativi *dalla
     lista*: l'anagrafica del cliente non viene toccata.
 
-<!-- DA VERIFICARE: dove si configura il servizio di invio SMS e cosa succede se non è configurato. -->
+!!! info "«Aggiungi Gruppo» vuol dire un gruppo di clienti"
 
-<!-- DA VERIFICARE: se l'indirizzo del mittente venga preso dai dati dell'utente o da quelli della ditta. -->
+    Non è il gruppo dell'anagrafica né un raggruppamento della mailing list:
+    è **un blocco di clienti in una volta sola**, in contrapposizione ad
+    **Aggiungi**, che ne porta dentro uno.
 
-<!-- DA VERIFICARE: come si compone il testo del messaggio da inviare: non ho individuato il punto in cui si scrive. -->
+    Premendolo si apre il **filtro clienti**, lo stesso delle stampe: zona,
+    agente, categoria, comune e così via. Confermando, tutti i clienti che
+    rispondono al filtro vengono aggiunti alla lista.
 
-<!-- DA VERIFICARE: cosa significa "Aggiungi Gruppo": se il gruppo aziende, il gruppo mailing o un altro raggruppamento. -->
+    Il filtro sa guardare anche **quello che i clienti hanno comprato**:
+    riempiendone la parte sugli articoli — codice, descrizione, gruppo,
+    sottogruppo, categoria — entrano nella lista solo i clienti che hanno
+    movimenti su quegli articoli. È il modo per scrivere, per esempio, a chi
+    ha comprato una certa linea di prodotti.
+
+    Prima di premerlo bisogna aver scelto una lista: senza, il comando non fa
+    niente e non dice niente.
+
+!!! info "Dove si scrive il testo del messaggio"
+
+    Nella finestra che si apre **dopo** aver dato l'invio: *Invia Email*, con
+    **Oggetto**, **Allegati** e un riquadro di scrittura formattata, oppure
+    *Invio SMS*, con il solo testo.
+
+    Qui il testo parte **vuoto**: la mailing list non ha un testo
+    preconfezionato, a differenza degli
+    [auguri di compleanno](gestione-compleanni.md), che partono da un file di
+    modello.
+
+    Il destinatario non si compila: lo mette il programma riga per riga,
+    scorrendo le righe spuntate della lista.
+
+!!! info "Da quale indirizzo parte l'email"
+
+    Il programma prende il mittente in quest'ordine:
+
+    1. l'indirizzo di posta scritto sulla scheda dell'**utente** che sta
+       lavorando, se c'è;
+    2. altrimenti l'utente del **server di posta della ditta**.
+
+    Se l'utente ha anche server, password e porta suoi, l'invio parte
+    **davvero** dal suo account, non da quello della ditta. È il modo per far
+    sì che ogni operatore scriva con il proprio indirizzo.
+
+    Se alla fine non risulta nessun indirizzo, l'invio si ferma prima di
+    cominciare con *Indirizzo email del mittente non impostato!*.
+
+    Sull'email vengono poi aggiunti da sé, se configurati sulla ditta,
+    l'indirizzo a cui far tornare le risposte e un destinatario in copia
+    nascosta per tenerne traccia.
+
+!!! info "Il servizio SMS"
+
+    Si configura sulla **ditta**, scheda *Server*: si sceglie il fornitore fra
+    quelli previsti e si compilano account, password e mittente. Gli SMS non
+    partono da Facile: li consegna quel fornitore, e vanno pagati a lui.
+
+    Qui il comando di invio resta acceso anche se il fornitore non è stato
+    scelto: te ne accorgi solo al momento di mandare, con *Sms Provider non
+    valido*, e non parte niente.
+
+!!! warning "Un SMS lungo sono più SMS"
+
+    Prima di partire il programma conta quanti messaggi serviranno per il
+    testo che hai scritto. Se ne serve più di uno chiede conferma dicendo
+    quanti sono — e vanno moltiplicati per il numero dei destinatari.
 
 ## Vedi anche
 

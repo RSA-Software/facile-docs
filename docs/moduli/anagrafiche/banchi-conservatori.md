@@ -92,7 +92,7 @@ Attrezzature in Comodato*, divisa in due da una linea:
 | **F4 - Succ.** | ++f4++ | Passa all'attrezzatura successiva. |
 | **F5 - Cerca** | ++f5++ | Apre l'elenco delle attrezzature. |
 | **F6 - Elimina** | ++f6++ | Cancella l'attrezzatura, previa conferma. |
-| **F7 - Stampa** | ++f7++ | Stampa la scheda. Compare solo in **Modifica**. |
+| **F7 - Stampa** | ++f7++ | Stampa il **contratto di comodato** dell'attrezzatura che hai davanti. Compare solo in **Modifica**. |
 | **Ricarica** | | Rilegge l'attrezzatura dall'archivio, abbandonando le modifiche non salvate. |
 | **Consultazione** | ++f11++ | Apre la consultazione. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
@@ -146,13 +146,52 @@ Attrezzature in Comodato*, divisa in due da una linea:
     codice e descrizione, nulla di più. Vanno popolate prima, altrimenti i tre
     campi corrispondenti restano vuoti.
 
-<!-- DA VERIFICARE: quando compare la richiesta di importazione da Excel: all'apertura della maschera o da un comando che non ho individuato. -->
+!!! info "F7 stampa il contratto, non la scheda"
 
-<!-- DA VERIFICARE: quali colonne del foglio Excel vengono lette oltre a MATRICOLA. -->
+    Esce il **contratto di comodato** della singola attrezzatura che hai
+    aperto: non un elenco, e non la scheda.
 
-<!-- DA VERIFICARE: se la Penale venga usata automaticamente in qualche documento o resti un dato di sola consultazione. -->
+    Il modulo non è fisso: è quello indicato fra i moduli di stampa della
+    [ditta](ditte.md), così ogni azienda può avere il suo testo. Il
+    programma vi porta i dati dell'azienda — ragione sociale, indirizzo,
+    città, partita IVA — e quelli del **legale rappresentante**, suo e del
+    cliente.
 
-<!-- DA VERIFICARE: cosa stampa esattamente F7 - Stampa: la scheda della singola attrezzatura o un elenco. -->
+    Il rappresentante del cliente non si scrive qui: viene preso dalla
+    **destinazione di tipo titolare** registrata su quel cliente, con luogo
+    e data di nascita e codice fiscale. Se quella destinazione manca, sul
+    contratto quei dati restano in bianco.
+
+!!! note "La Penale non entra in nessun conto"
+
+    Il programma la registra e la mostra, ma **non la addebita mai da sé**:
+    non genera un documento, non entra in una fattura e non compare in
+    nessun totale. Se l'attrezzatura non torna, la nota di addebito va
+    fatta a mano.
+
+    L'unico posto in cui può comparire è il **modulo del contratto di
+    comodato**, che legge la scheda dell'attrezzatura per intero: se il
+    modulo della tua azienda la riporta, la trovi scritta lì.
+
+!!! info "L'importazione da Excel non sta in questa maschera"
+
+    La domanda *Vuoi importare i Banchi da un foglio Excel ?* non compare
+    aprendo il registro: fa parte della **catena di importazioni** di
+    **Menu ▸ Utility ▸ Importa**, che propone una dopo l'altra le
+    importazioni di tutti gli archivi. Rispondendo **No** a quelle che non
+    servono si arriva a quella dei banchi.
+
+    Del foglio vengono lette **due sole colonne**, riconosciute dal nome
+    scritto nella **prima riga**:
+
+    | Intestazione | Contenuto |
+    |---|---|
+    | `MATRICOLA` | Obbligatoria. Senza di essa il programma si ferma con *Colonna MATRICOLA non trovata nel documento !* |
+    | `DESCRIZIONE` | Facoltativa. |
+
+    I dati cominciano dalla **seconda riga**. Tutto il resto — cliente,
+    stato, date, penale — non viene importato e si compila dopo, dalla
+    scheda.
 
 ## Vedi anche
 

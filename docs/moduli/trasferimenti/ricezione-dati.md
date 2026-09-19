@@ -87,7 +87,21 @@ Lis. 1 - 2**, **Ult. Prezzo Acq.**, **1° Listino %Mar.**, **1° Listino %Ric.**
 
 Si spuntano le righe da accettare: quello che non è spuntato non entra.
 
-<!-- DA VERIFICARE: i campi delle maschere di importazione WinWork e Diamante. -->
+### Importazione comanda da WinWork
+
+*Nessun campo.* La voce apre direttamente la scelta del file: cerca un
+**archivio WinWork `.mag`** e parte dalla cartella `in` dell'utente.
+
+### Acquisizione dati Diamante S.p.A.
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Fornitore** | ● | Il [fornitore](../anagrafiche/anagrafica-fornitori.md) a cui riferire i dati che arrivano. | codice |
+
+{: .campi }
+
+Non si sceglie nessun file: i file li cerca il programma dove è previsto
+(vedi le note).
 
 ## Pulsanti e comandi
 
@@ -175,12 +189,42 @@ ciascuna. Se una delle due non serve, rispondi **No** alla sua domanda.
 
     **Importazione Promozione CDS s.p.a.** usa la stessa funzione delle
     promozioni SIDA, e cerca quindi gli stessi file `off*.TXT`. Le due voci sono
-    tenute distinte apposta, perché ciascuno trovi a menu’ il nome del proprio
+    tenute distinte apposta, perché ciascuno trovi a menù il nome del proprio
     fornitore: scegli la tua e non sbagli.
 
-<!-- DA VERIFICARE: in quale cartella ciascuna procedura cerca il proprio file. -->
+!!! info "Dove ogni procedura cerca il suo file"
 
-<!-- DA VERIFICARE: cosa comprende esattamente "Aggiornamento Dati Agenti" e in che verso viaggiano i dati. -->
+    Sono due comportamenti diversi, e conviene sapere quale è quale.
+
+    **Quelle che chiedono il file** aprono la scelta partendo dalla cartella
+    `in` dell'utente: basta indicare dove sta. È il caso dell'importazione da
+    WinWork, che cerca un file `.mag`.
+
+    **Quelle che non chiedono niente** vanno a colpo sicuro nella cartella
+    **`in`** dell'installazione e cercano un nome fisso: la ricezione Diamante
+    legge `anagr.txt` per le anagrafiche e `listifr.txt` per i listini, e
+    l'aggiornamento dati agenti cerca `datNNNNN.zip`, con il numero della
+    ditta. Se il file non c'è, la procedura si ferma senza fare niente.
+
+    Il file letto viene poi **cancellato**, così non viene ricaricato per
+    sbaglio la volta dopo.
+
+!!! info "Che cos'è «Aggiornamento Dati Agenti»"
+
+    È il verso **di ritorno** del lavoro degli agenti, e va letto al contrario
+    di come suona: non manda dati agli agenti, **li porta dentro**.
+
+    Il programma chiede *«Vuoi collegarti al Server FTP ?»*; rispondendo **Sì**
+    scarica dal server il file compresso `datNNNNN.zip` — il numero è quello
+    della ditta — lo mette nella cartella `in`, lo apre e ne carica il
+    contenuto negli archivi. Rispondendo **No**, lavora sul file che è già
+    lì.
+
+    Prima di caricare chiede conferma: *«Sono presenti dati aggiornati!  Vuoi
+    Caricarli?»*. È l'ultima occasione per fermarsi.
+
+    La voce esiste **solo nella versione per agenti**: nelle altre non compare
+    nel menu.
 
 ## Vedi anche
 

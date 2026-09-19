@@ -123,6 +123,7 @@ nav:
       - introduzione/index.md
       - Primo accesso: introduzione/primo-accesso.md
       - L'interfaccia di Facile: introduzione/interfaccia.md
+      - I menu File e ?: introduzione/menu-file-e-guida.md
       - Convenzioni del manuale: introduzione/convenzioni.md
   - Archivi:
       - moduli/archivi.md
@@ -300,6 +301,18 @@ nav:
       - Valenze di Lavorazione (Oreficerie): moduli/versioni/oreficerie-valenze.md
       - Tabella Vuoti (Cauzioni): moduli/versioni/cauzioni-vuoti.md
       - Responsabili e Collaboratori (Studio): moduli/versioni/studio-collaboratori.md
+      - Energy:
+          - moduli/versioni/energy/index.md
+          - Movimenti: moduli/versioni/energy/movimenti.md
+          - Flussi e riepiloghi: moduli/versioni/energy/flussi-e-riepiloghi.md
+          - Corrispettivi in XML: moduli/versioni/energy/corrispettivi-xml.md
+          - Le tabelle: moduli/versioni/energy/tabelle.md
+      - Ortofrutta:
+          - moduli/versioni/ortofrutta/index.md
+          - Partite: moduli/versioni/ortofrutta/partite.md
+          - Chiusura della vendita: moduli/versioni/ortofrutta/chiusura-vendita.md
+          - Estratti e schede: moduli/versioni/ortofrutta/estratti-e-schede.md
+          - Ordini cumulativi e imballaggi: moduli/versioni/ortofrutta/ordini-e-imballaggi.md
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi di errore: appendici/messaggi-errore.md

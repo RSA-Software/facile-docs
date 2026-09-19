@@ -102,9 +102,45 @@ schema di registrazione.
 
 ### Schema di registrazione
 
-La griglia in basso contiene lo schema dei conti che la causale propone in
-prima nota, con le colonne **Codice**, **Descrizione**, **Registro**,
-**Imputazione** e **D/A** — dare o avere.
+La griglia in basso è lo **scheletro della scrittura**: ogni riga è una riga
+contabile che la causale propone in prima nota, con il conto già indicato e
+l'importo già calcolato.
+
+Le colonne si compilano così:
+
+| Colonna | Come si compila |
+|---|---|
+| **Codice** | I tre codici del conto: mastro, conto e sottoconto. Si scrivono o si scelgono dall'elenco. |
+| **Descrizione** | Si riempie da sé con il nome del conto. |
+| **Registro** | Il registro a cui la riga si riferisce. |
+| **Imputazione** | Un numero che dice **quale importo del documento** finisce su questa riga: la tabella qui sotto. Si digita sulla cella. |
+| **D/A** | Da che parte va l'importo: si preme **D** per Dare — e la riga diventa rossa — oppure **A** per Avere. La barra spaziatrice o il punto svuotano la cella. |
+
+Una riga con l'imputazione a **zero** non prende nessun importo: il conto
+viene proposto e l'importo si scrive a mano.
+
+!!! info "I codici di imputazione"
+
+    | Codice | L'importo della riga diventa |
+    |:---:|---|
+    | `0` | Niente: si scrive a mano. |
+    | `2` | Il **totale imponibile**. |
+    | `3` | Il **totale IVA**. |
+    | `4` | Il **totale della registrazione**. |
+    | `5` | Il totale degli **arrotondamenti**. |
+    | `6` | L'**IVA detraibile**. |
+    | `7` | L'**IVA indetraibile**. |
+    | `8` | Il totale delle **cauzioni consegnate**. |
+    | `9` | Il totale delle **cauzioni rese**. |
+
+    Sulle cauzioni c'è una finezza: se il totale viene negativo, il
+    programma **rovescia da sé il dare con l'avere**, così la scrittura
+    resta corretta senza dover fare due causali.
+
+    Il programma conosce anche altre imputazioni — saldo delle cauzioni,
+    imponibile più IVA indetraibile, commissioni, imponibile e IVA separati
+    fra positivi e negativi, IVA in reverse charge — ma sono codici a due
+    cifre.
 
 ## Pulsanti e comandi
 
@@ -190,9 +226,38 @@ fornitori.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: la griglia dello schema di registrazione. Le colonne sono Codice, Descrizione, Registro, Imputazione e D/A, ma non è chiaro come si compilano le righe né cosa contenga Imputazione. Serve una prova sulla maschera. -->
+!!! note "Le due caselle dell'IVA di cassa fanno la stessa cosa"
 
-<!-- DA VERIFICARE: la differenza fra le due caselle di IVA di cassa (D.L. 185/2008 e D.L. 83/2012) — quando si usa l'una e quando l'altra? -->
+    Le caselle sono due perché due sono stati i regimi di IVA per cassa che
+    si sono succeduti — quello del D.L. 185/2008 e quello, tuttora in
+    vigore, del D.L. 83/2012.
+
+    Dentro Facile però **hanno lo stesso effetto**: l'unico punto che le
+    legge è l'esportazione dei documenti, che con l'una o con l'altra
+    spuntata marca il movimento come a esigibilità differita, senza
+    distinguere quale delle due sia.
+
+    Su una causale nuova si spunta quella del **D.L. 83/2012**. La prima
+    resta per non cambiare il significato delle causali vecchie.
+
+!!! warning "Le imputazioni oltre la 9 non si impostano da qui"
+
+    La colonna **Imputazione** accetta **una cifra sola**: premendo un tasto
+    numerico la casella viene riscritta con quella cifra, e il tasto successivo
+    la sostituisce. Digitare `1` e poi `0` non dà `10`: dà `0`.
+
+    Il programma però **conosce diciotto imputazioni**, e quelle da `10` in su
+    esistono e funzionano: saldo cauzioni, imponibile più IVA indetraibile,
+    commissioni, imponibile e IVA in positivo e in negativo, IVA in reverse
+    charge, totale registrazione al netto del reverse charge.
+
+    Da questa maschera **non c'è modo di sceglierle**. Una causale che ne ha
+    bisogno va impostata dall'assistenza: è il caso, fra gli altri, delle
+    causali del reverse charge e di quelle delle cauzioni.
+
+    Se una causale ha già un'imputazione alta, **attenzione a non passarci
+    sopra**: basta un tasto numerico premuto per sbaglio su quella casella per
+    ridurla a una cifra, e il valore di prima non si può riscrivere.
 
 
 ## Vedi anche

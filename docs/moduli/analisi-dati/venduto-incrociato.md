@@ -144,11 +144,10 @@ predefiniti.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi propri di queste analisi. -->
-
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *(nessun messaggio, solo un segnale acustico)* | Manca una delle date o un filtro non è valido. | Guarda dove si è posizionato il cursore. |
+| *(nessun messaggio, solo un segnale acustico)* | Manca una delle date, o la finale è anteriore a quella iniziale. | Guarda dove si è posizionato il cursore. |
+| *La data è esterna all' esercizio corrente.* | Una data cade fuori dall'anno di lavoro. | Le analisi su un periodo lavorano sull'anno aperto; la comparazione su due anni no. |
 
 ## Note
 
@@ -162,7 +161,7 @@ predefiniti.
     Nelle analisi per cliente la casella dice **dopo ogni Cliente**, in quelle
     per agente **dopo ogni Agente**: in tutti e due i casi il salto cade sul
     **primo** raggruppamento della stampa, cioè sul soggetto che dà il nome
-    all’ analisi. La seconda chiave — articolo, reparto, categoria — non fa
+    all'analisi. La seconda chiave — articolo, reparto, categoria — non fa
     cambiare pagina.
 
     Vale anche per **Venduto Agente/Cliente**, che è il caso in cui viene il
@@ -173,7 +172,32 @@ predefiniti.
     ogni Cliente**, perché la maschera nasce come copia di quella per cliente:
     la didascalia era rimasta indietro. Corretto il 18/09/2026.
 
-<!-- DA VERIFICARE: se la comparazione su due anni richieda che entrambe le annate siano nello storico dei movimenti. -->
+!!! warning "La comparazione su due anni legge solo lo storico"
+
+    Sì: **tutte e due le annate devono essere nello storico dei movimenti**.
+    L'analisi non guarda i movimenti dell'anno in corso né quelli degli
+    archivi degli anni passati: guarda **solo** lo storico.
+
+    Se un anno non è stato portato nello storico, per quell'anno la
+    comparazione mostra **zero**, e non lo dice: sembra semplicemente che quel
+    periodo non si sia venduto niente. È l'errore di lettura più facile da
+    fare su questa analisi.
+
+    Lo storico si alimenta da
+    **[Utility ▸ Aggiungi Movimenti dell' Anno allo Storico](../utility/manutenzione-archivi.md)**,
+    e va fatto **una volta per ogni anno** che si vuole poter confrontare. La
+    procedura prima toglie l'anno e poi lo rimette, quindi si può rilanciare
+    senza creare doppioni.
+
+!!! note "Che cosa conta come venduto"
+
+    Non tutti i movimenti: entrano solo quelli la cui
+    [causale di magazzino](../magazzino/causali-magazzino.md) è segnata come
+    movimento di **venduto**.
+
+    Restano inoltre fuori i clienti marcati come **Escludi Stat. Fatturato - Vendite**
+    nella loro [anagrafica](../anagrafiche/anagrafica-clienti.md): se un
+    cliente non compare in nessuna analisi, è lì che conviene guardare.
 
 ## Vedi anche
 

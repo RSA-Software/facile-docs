@@ -199,7 +199,10 @@ Usa `COMPLETA` solo quando il punto vendita va riallineato da capo.
 | *Impossibile aprire il file !* | Idem, in esportazione SAGI. | Come sopra. |
 | *Non è stato trovato nessun record di vendita !* | Nella data indicata non c'è venduto. | Controlla la data. |
 
-<!-- DA VERIFICARE: i messaggi propri della generazione dati per Facile Mobile e della trasmissione 730. -->
+| *File di configurazione non trovato!<br><br>…\cfg\exp_mobile_NNNNN.ini* | Manca il file di configurazione di Facile Mobile per questa ditta. | Lo prepara l'assistenza: senza, l'esportazione non parte. |
+| *Confermi l' esportazione completa ?* | Si è scelto `COMPLETA`. | **Sì** rimanda tutto da capo. La risposta preimpostata è **No**. |
+| *Confermi l' esportazione di tutte le variazioni dall' inizio dell' anno ?* | Si è scelto `VARIAZIONI DA INIZIO ANNO`. | Come sopra. |
+| *Per il deposito selezionato l' esportazione risulta disabilitata !* | Il [deposito](../magazzino/depositi.md) è marcato come escluso dall'esportazione. | Scegli un altro deposito, o togli il segno sulla scheda del deposito. |
 
 ## Note
 
@@ -215,11 +218,64 @@ Usa `COMPLETA` solo quando il punto vendita va riallineato da capo.
     l'Agenzia delle Entrate. La prima volta conviene fermarsi a `GENERAZIONE`,
     aprire il file e verificarlo.
 
-<!-- DA VERIFICARE: in quale cartella finiscono i file generati da ciascuna di queste esportazioni. -->
+!!! info "Tutti i file finiscono nella cartella out"
 
-<!-- DA VERIFICARE: come Facile ricorda il punto dell'ultima esportazione e come lo si azzera. -->
+    Come per le [esportazioni per tracciato](esportazione-documenti.md), il
+    prodotto di queste procedure esce in **`out`**, sotto la cartella di
+    installazione.
 
-<!-- DA VERIFICARE: che cosa comprende esattamente "Genera Dati per Facile Mobile" e come i dati arrivano ai dispositivi. -->
+    Il **730** fa eccezione per il nome, che porta il periodo:
+    `ts730_AAAAMMGG_AAAAMMGG.zip` per la fornitura e
+    `esito_ts730_AAAAMMGG_AAAAMMGG.xml` per la risposta dell'Agenzia. Di quello
+    che succede durante la trasmissione resta traccia in
+    `log\730WebServices.txt`: è il primo posto da guardare se l'invio non va.
+
+!!! info "Come Facile ricorda dove era arrivato"
+
+    Il segno **non sta in un file**: sta **sulla scheda del
+    [deposito](../magazzino/depositi.md)**, e ce n'è uno per ciascuna delle
+    quattro casse. Ogni volta che l'esportazione finisce, il programma ci
+    scrive **data e ora** di quel momento.
+
+    Scegliendo `VARIAZIONI ULTIMA ESPORTAZIONE` riparte da lì, **tolti cinque
+    minuti**: è una sovrapposizione voluta, perché nessuna modifica fatta
+    mentre l'esportazione girava vada persa. Qualche riga può quindi ripartire
+    due volte, ed è meglio così che il contrario.
+
+    **Non c'è un comando per azzerarlo.** Se serve rimandare tutto si sceglie
+    `COMPLETA` — che chiede conferma — o `VARIAZIONI DA INIZIO ANNO`. Il segno
+    viene comunque riscritto alla fine, quindi il giro seguente riparte
+    normalmente.
+
+    Il segno è **per deposito**: cambiando deposito si riparte dal punto di
+    quel deposito, non da quello di prima.
+
+!!! info "Che cosa comprende «Genera Dati per Facile Mobile»"
+
+    Praticamente **tutto l'archivio che serve a lavorare fuori sede**, un file
+    per ciascuna cosa: ditte, pagamenti, categorie economiche, agenti, tabelle,
+    banche, vettori, zone, unità di misura, canali di vendita, clienti,
+    destinazioni, riferimenti, scadenze, codici IVA, reparti, categorie
+    merceologiche, stagioni, marchi, fornitori, depositi, articoli, codici a
+    barre, lotti, listini, documenti e loro righe, associazioni gruppi,
+    causali di trasporto, agganci e note dei documenti, contatori degli
+    articoli e banchi conservatori.
+
+    Il giro è **per agente**: il programma scorre gli agenti e lavora solo su
+    quelli abilitati, e per ciascuno può applicare **filtri diversi archivio
+    per archivio** — per esempio i soli clienti di quell'agente, i soli
+    listini che lo riguardano.
+
+    Prodotti i file, li **comprime** e li **manda via FTP** nella cartella
+    dell'agente sul server; la copia compressa locale viene poi cancellata. Il
+    dispositivo li scarica da lì: **Facile non parla direttamente con il
+    tablet**.
+
+    Tutta la configurazione — server, utente e password FTP, quali agenti sono
+    abilitati, con quali filtri e in che formato — sta in un file nella
+    cartella `cfg` con il numero della ditta nel nome. **Non si imposta dal
+    programma**: lo prepara l'assistenza, ed è il file che il primo messaggio
+    di errore nomina quando manca.
 
 ## Vedi anche
 

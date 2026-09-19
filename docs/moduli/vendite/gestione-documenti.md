@@ -79,7 +79,7 @@ La griglia ha queste colonne:
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo da mostrare. | date |
-| **Registro** | | Restringe a un registro. | voce dell'elenco |
+| **Registro** | | Restringe a un registro di numerazione. `TUTTI` non filtra. | voce dell'elenco |
 | **Contiene** | | Cerca un testo nei documenti. | testo |
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Agente** | | Restringe a un agente. | codice |
@@ -164,7 +164,29 @@ La griglia ha queste colonne:
     risulta sincronizzato ma dall'altra parte non è arrivato, oppure quando è
     stato corretto dopo l'invio e va rimandato.
 
-<!-- DA VERIFICARE: quali registri compaiono nell'elenco Registro e da dove sono presi. -->
+!!! note "L'elenco Registro contiene sempre tutte le lettere"
+
+    Non è preso da nessun archivio: il programma lo costruisce da sé, con
+    `TUTTI` in testa e poi **tutte le sigle possibili** — da `A` a `Z`, poi da
+    `AA` a `ZZ`. Sono 702 voci, e ci sono anche se non hai mai emesso un
+    documento su quel registro.
+
+    Conviene quindi scorrere solo le prime posizioni: i registri davvero in uso
+    sono di solito uno o due, e sono le prime lettere.
+
+    La sigla non è un dato a parte: **è dentro al numero del documento**. Il
+    programma somma al progressivo 70.000.000 per ogni lettera della prima
+    posizione e 2.500.000 per ogni lettera della seconda, e da quel numero
+    ricava la sigla da mostrare. È il motivo per cui un documento non si può
+    spostare da un registro all'altro: cambiare registro vuol dire cambiare
+    numero.
+
+    Il registro su cui nasce un documento nuovo arriva da due posti, in
+    quest'ordine: se la scheda dell'[utente](../anagrafiche/utenti.md) che sta
+    lavorando porta un registro, vince quello; altrimenti si usa il registro
+    che la [ditta](../anagrafiche/ditte.md) ha impostato **per quel tipo di
+    documento** — uno per le fatture, uno per i DDT, uno per gli ordini, e
+    così via.
 
 ## Vedi anche
 

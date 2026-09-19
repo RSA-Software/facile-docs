@@ -57,7 +57,66 @@ La maggior parte apre la stessa finestra di selezione delle
 diverso; **Interrogazione Articolo**, **Valore Magazzino**, **Movimenti
 Periodo** e i due adempimenti hanno una maschera propria.
 
-<!-- DA VERIFICARE: i campi delle maschere proprie di Interrogazione Articolo, Valore Magazzino, Movimenti Periodo, Registro Sostanze Zuccherine ed Esistenze da Lettore Formula 734. -->
+!!! info "I campi di Valore Magazzino"
+
+    Ha i filtri consueti — deposito, sezione, articolo, aliquota IVA,
+    reparto, categoria merceologica, marchio, stagione, settore, gruppo,
+    sottogruppo, mix, fornitore e le tre tabelle libere — e in più quattro
+    campi suoi:
+
+    | Campo | Cosa decide |
+    |---|---|
+    | **Metodo** | Come valorizzare le giacenze: vedi sotto. |
+    | **Calcolo** | Se i valori escono **IVA esclusa** o **IVA inclusa**. |
+    | **Data Stampa** | La data che compare sul modulo. |
+    | **Ricalcolo Automatico** | Rifà i conteggi prima di stampare, invece di usare quelli già in archivio. |
+
+!!! info "I campi di Movimenti Periodo"
+
+    **Data Iniziale** e **Data Finale**, **Deposito**, **Reparto**,
+    **Sezione**, più due scelte:
+
+    - **Formato**: `TUTTI I MOVIMENTI` oppure `SOLO MOVIMENTI DI VENDITA`;
+    - **Ordinamento**: per deposito e codice, per deposito e descrizione, o
+      per deposito, reparto e descrizione.
+
+### Interrogazione Articolo
+
+Non è una stampa: è una **finestra di consultazione** con la griglia dei
+movimenti dell'articolo.
+
+| Campo | Descrizione |
+|---|---|
+| **Data Iniziale**, **Data Finale** | Il periodo da guardare. |
+| **Articolo** | L'articolo da interrogare. Accanto compare la descrizione. |
+| **Tipo Interrogazione** | Dove cercare i movimenti: `ARCHIVI LOCALI` o `SERVER REMOTO`. |
+
+{: .campi }
+
+`SERVER REMOTO` serve a chi ha più punti vendita collegati: permette di
+vedere i movimenti di un'altra sede senza cambiare archivio.
+
+### Registro Sostanze Zuccherine
+
+| Campo | Descrizione |
+|---|---|
+| **REGISTRAZIONI — Dal**, **Al** | Il periodo da stampare. |
+| **Num. Iniziale**, **Num. Finale** | L'intervallo dei numeri di registrazione. |
+| **Progr. Carico**, **Progr. Scarico** | I due progressivi da cui il registro riparte. |
+| **Pagina Iniziale**, **Rigo Iniziale** | Da quale pagina e da quale riga cominciare a stampare. |
+| **Stampa Definitiva** | Fa la stampa buona invece della prova. |
+
+{: .campi }
+
+È un registro vidimato: **Pagina Iniziale** e **Rigo Iniziale** servono a
+riprendere da dove la stampa precedente si era fermata, e i due progressivi a
+far tornare i totali di carico e scarico con il registro già stampato.
+
+### Esistenze da Lettore Formula 734
+
+*Nessun campo.* Se i depositi sono più d'uno il programma chiede **quale**,
+partendo da quello attivo; con un solo deposito non chiede niente. Poi legge
+il terminale e carica le esistenze.
 
 ## Campi
 
@@ -101,7 +160,14 @@ Periodo** e i due adempimenti hanno una maschera propria.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste stampe. -->
+| Messaggio | Dove | Causa | Cosa fare |
+|---|---|---|---|
+| *Il Deposito è escluso dall'inventario. Impossibile continuare!* | Valore Magazzino | Il deposito indicato ha la casella **Escludi da Inventario** spuntata. | Scegli un altro deposito, o togli quella casella dalla scheda del [deposito](depositi.md) se l'esclusione non serve più. |
+| *Selezionare almeno una Sezione!* — *Selezionare almeno un Deposito!* | Percentuale Sellout | Si è confermato senza aver spuntato niente nei due elenchi. | Spunta almeno una sezione e almeno un deposito. |
+| *SMTP Server non impostato !* — *Mittente Email non impostato !* | Interrogazione Articolo | Si è chiesto l'invio per email senza che la posta sia configurata. | Configura il server di posta sulla [ditta](../anagrafiche/ditte.md), scheda *Server*. |
+
+Per il resto queste stampe sono silenziose: se la selezione non trova
+niente, esce un modulo vuoto.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -115,11 +181,55 @@ Periodo** e i due adempimenti hanno una maschera propria.
     riguardano settori specifici — enologia e alimentare. **Esistenze da
     Lettore Formula 734** serve a chi usa quel terminale per l'inventario.
 
-<!-- DA VERIFICARE: cosa misura la "percentuale di sell-out" e come è calcolata. -->
+!!! info "Il criterio di valorizzazione lo scegli tu"
 
-<!-- DA VERIFICARE: con quale criterio "Valore Magazzino" valorizza le giacenze: ultimo costo, medio o altro. -->
+    **Valore Magazzino** non ha un criterio fisso: il campo **Metodo**
+    offre otto modi di valorizzare la stessa giacenza.
 
-<!-- DA VERIFICARE: che differenza c'è fra "Movimenti Periodo" e "Sintesi Movimenti per Giorno". -->
+    | Metodo | Valorizza a |
+    |---|---|
+    | `COSTO MEDIO PONDERATO` | Media dei costi di acquisto pesata sulle quantità. |
+    | `METODO LIFO` | Ultimi entrati, primi usciti. |
+    | `METODO FIFO` | Primi entrati, primi usciti. |
+    | `ULTIMO PREZZO ACQUISTO` | L'ultimo costo pagato. |
+    | `PRIMO`, `SECONDO`, `TERZO PREZZO LISTINO` | Il prezzo di vendita del listino indicato. |
+    | `PREZZO MEDIO VENDITA` | La media dei prezzi a cui è stato venduto. |
+
+    I primi quattro danno il valore **di costo**, quello che serve al
+    bilancio; gli ultimi quattro danno il valore **a prezzi di vendita**,
+    utile per capire quanto vale il magazzino sullo scaffale. Sono numeri
+    diversi e non vanno confusi.
+
+!!! info "Che cosa misura la percentuale di sell-out"
+
+    Quanta parte della merce che avevi a disposizione è effettivamente
+    uscita nel periodo.
+
+    La stampa mette insieme, articolo per articolo, la **rimanenza
+    iniziale**, quanto è stato **caricato** nel periodo e l'**esistenza
+    attuale**: la percentuale esprime il venduto rispetto al disponibile.
+    Un sell-out basso significa merce ferma; uno alto, merce che gira o che
+    sta per finire.
+
+    La stampa si può ordinare per esistenza, per quantità venduta, per
+    valore o per utile, e limitare ai primi della classifica: è il modo per
+    trovare in fretta i fermi o i più redditizi.
+
+    Il **calcolo dei costi** — e quindi l'utile — segue il metodo scelto
+    nel campo apposta: medio ponderato, FIFO, LIFO o ultimo prezzo
+    d'acquisto.
+
+!!! note "Movimenti Periodo e Sintesi Movimenti per Giorno"
+
+    **Movimenti Periodo** elenca i **movimenti uno per uno** fra due date,
+    con la possibilità di limitarsi ai soli movimenti di vendita. È il
+    dettaglio: una riga per ogni movimento.
+
+    **Sintesi Movimenti per Giorno** non elenca niente: **somma** i
+    movimenti e li presenta **raggruppati per giornata**, per vedere
+    l'andamento giorno per giorno. C'è anche la variante per **giorno della
+    settimana**, che accorpa tutti i lunedì, tutti i martedì e così via:
+    serve a capire quali giorni tirano.
 
 ## Vedi anche
 

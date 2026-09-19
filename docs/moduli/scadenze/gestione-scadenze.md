@@ -111,7 +111,16 @@ La griglia ha queste colonne:
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di questa maschera. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *(nessun messaggio, solo un segnale acustico)* | Manca un campo, o **Fornitore Giro** e **Data Giro** non sono compilati tutti e due. | Guarda dove si è posizionato il cursore. |
+| *Il cliente selezionato risulta cessato !<br><br>Vuoi Continuare ?* | Il cliente indicato è segnato come cessato. | **Sì** registra lo stesso. La risposta preimpostata è **No**. |
+| *Causale Contabile Incassi non Impostata o non Valida.* — *Causale Contabile Pagamenti non Impostata o non Valida.* | Nella [ditta](../anagrafiche/ditte.md) manca la causale con cui registrare incassi o pagamenti. | Impostala: senza, **F7 - Incassa** non funziona. |
+| *Il registro fiscale della causale di contabile per l'incasso deve essere il N° 1.* | La causale è su un registro IVA invece che sul giornale. | Correggi la [causale contabile](../contabilita/causali-contabili.md). |
+| *La Causale non è in relazione con i Clienti.* — *La Causale non è in relazione con i Fornitori.* | La causale è collegata al soggetto sbagliato. | Come sopra. |
+| *La causale non deve essere una causale Iva.* | La causale movimenta l'IVA. | L'incasso non è un'operazione IVA: serve una causale di solo giornale. |
+| *La causale non deve trattare beni destinati alla rivendita.* | La causale ha il segno dei beni da rivendere. | Come sopra. |
+| *Il codice del Fornitore per il giro non è valido o disponibile.* | Il fornitore indicato in **Fornitore Giro** non esiste. | Controlla il codice. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -126,9 +135,76 @@ La griglia ha queste colonne:
     [controllo scadenze ↔ schede contabili](manutenzione-scadenze.md), che
     confronta scadenze e registrazioni. Usala solo quando serve davvero.
 
-<!-- DA VERIFICARE: quali campi si compilano aprendo una scadenza con F2 - Modifica. -->
+!!! info "I campi della singola scadenza"
 
-<!-- DA VERIFICARE: come una scadenza viene marcata come pagata: se dalla distinta o a mano da questa maschera. -->
+    Aprendo una riga si apre la scheda — *Modifica Scadenze Clienti* o
+    *Modifica Scadenze Fornitori*, *Inserimento…* se è nuova — con questi
+    campi:
+
+    | Campo | Descrizione |
+    |---|---|
+    | **Numero** | Il numero della scadenza. Lo assegna il programma e in modifica non si tocca. |
+    | **Descrizione** | Un testo libero. |
+    | **Cliente** / **Fornitore** | Il soggetto. L'etichetta cambia con lo scadenziario. |
+    | **Destinazione** | La destinazione, con tre righe di indirizzo sotto. |
+    | **Agente** | L'[agente](../anagrafiche/anagrafica-agenti.md). |
+    | **N. Documento**, **Data**, **Protocollo**, **Importo** | Gli estremi del documento da cui la scadenza nasce e il suo totale. |
+    | **Pagamento** e **Tipo** | Il [tipo di pagamento](../contabilita/tipi-di-pagamento.md) e la sua natura — rimessa, RI.BA., RID, tratta. |
+    | **Banca Appog.** | La [banca](../contabilita/banche.md) su cui l'effetto è appoggiato. |
+    | **Data Scadenza** | Quando scade. |
+    | **Rata … di …** | Quale rata è, sul totale delle rate. |
+    | *(elenco accanto alla rata)* | `ACCONTO` o `SALDO`. |
+    | **Importo** | L'importo della rata. |
+    | **Emessa il** | La data di emissione. |
+    | **Sezione** | La [sezione](../contabilita/sezioni.md) contabile. |
+    | **Insoluto** | Segna l'effetto tornato indietro. |
+    | **Data Originale** | La scadenza di partenza, quando è stata spostata. |
+    | **Fornitore Giro** e **Data Giro** | Il fornitore a cui l'effetto è stato girato e quando. Vanno compilati tutti e due o nessuno dei due. |
+
+    {: .campi }
+
+    In alto a destra due scritte si accendono quando serve: **I N C A S S A T
+    A** quando la scadenza risulta pagata e **CONTABILIZZATA** quando ne è nata
+    la registrazione di prima nota.
+
+!!! info "Come una scadenza diventa pagata"
+
+    Da qui, una per volta, con il pulsante della scheda: **F7 - Incassa** sui
+    clienti, **F7 - Paga** sui fornitori. Non serve salvare: il pulsante fa
+    tutto.
+
+    Premendolo su una scadenza aperta il programma chiede **la data** — la
+    finestrella si chiama *Incasso Scadenza* o *Pagamento Scadenza* — e poi:
+
+    1. segna la scadenza come **pagata**, con quella data;
+    2. **scrive la registrazione di prima nota** dell'incasso o del pagamento;
+    3. accende le scritte **I N C A S S A T A** e **CONTABILIZZATA** sulla
+       scheda.
+
+    La causale con cui registra la prende dalla [ditta](../anagrafiche/ditte.md):
+    la **causale pagamenti** per i fornitori, la **causale incassi** per i
+    clienti — o la **causale effetti**, se il tipo di pagamento della scadenza è
+    una RI.BA., un RID o una tratta.
+
+    Il conto del cliente o del fornitore viene sostituito nella causale al posto
+    del conto generico, così la registrazione va sul soggetto giusto.
+
+!!! warning "Togliere il pagato non toglie la registrazione"
+
+    Lo stesso **F7** premuto su una scadenza già pagata la **riapre**: toglie il
+    segno di pagata e azzera la data.
+
+    **La registrazione di prima nota però resta.** Va cancellata a mano dalla
+    [gestione prima nota](../contabilita/gestione-prima-nota.md), altrimenti
+    l'incasso risulta due volte quando la scadenza viene chiusa di nuovo.
+
+    E se si richiude la scadenza, la registrazione viene rifatta.
+
+!!! note "Anche le distinte e gli effetti chiudono le scadenze"
+
+    **F7** è la strada per la singola scadenza. Per chiuderne molte insieme ci
+    sono le [distinte di incasso e pagamento](distinte-incasso-pagamento.md) e
+    la gestione degli [effetti](effetti-e-riba.md), che lavorano su un elenco.
 
 ## Vedi anche
 

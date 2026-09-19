@@ -55,7 +55,24 @@ aperta.
 
 {: .campi }
 
-<!-- DA VERIFICARE: i campi esatti della maschera di selezione per le stampe fornitori. -->
+!!! info "I campi della maschera"
+
+    È la **stessa finestra** delle stampe di magazzino clienti — cambia il
+    titolo e qualche campo — con i filtri di periodo, ambito, soggetto e
+    merce:
+
+    **Periodo e ambito**: **Data Iniziale**, **Data Finale**, **Sezione**,
+    **Deposito**, **Causale**, **Operatore**.
+
+    **Che movimenti prendere**: **Tipo Movim.**, che qui parte già su
+    `ACQUISTI + RESI A FORNITORI` e offre anche `CARICHI` e `SCARICHI`.
+
+    **Chi**: **Fornitore** — il campo del soggetto, che qui si chiama così
+    — e la sua **Destinazione**.
+
+    **Che merce**: **Articolo**, **Lotto**, **Cod. Iva**, **Gruppo Mix**,
+    **Reparto**, **Cat. Merceol.**, **Marchio**, **Stagione**, **Gruppo**,
+    **Sottogruppo** e le tre tabelle libere.
 
 ## Pulsanti e comandi
 
@@ -82,7 +99,11 @@ aperta.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste stampe. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Selezionare almeno una Sezione!* | Si è confermato senza aver spuntato nessuna sezione. | Spunta le sezioni da includere. |
+| *Vuoi il raggruppamento per Marchio ?* | Chiesto su alcune sintesi. | **Sì** raggruppa per marchio. |
+| *Vuoi raggruppare i depositi ?* | Chiesto quando la selezione tocca più depositi. | **Sì** li somma; **No** li tiene separati; **Annulla** ferma la stampa. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -97,7 +118,15 @@ aperta.
     [listini fornitori](../listini-fornitori/index.md), e il confronto fra i
     due si fa con l'[analisi fornitore](../listini-fornitori/analisi-fornitore.md).
 
-<!-- DA VERIFICARE: se queste stampe considerino solo i carichi o anche i resi a fornitore. -->
+!!! info "Resi compresi, e lo decidi tu"
+
+    Il campo **Tipo Movim.** si apre già su **acquisti più resi a
+    fornitore**: la stampa considera quindi tutti e due, e i resi si
+    sottraggono da quello che hai comprato.
+
+    Volendo i soli carichi, o i soli resi, si cambia quel campo prima di
+    stampare. È una distinzione che cambia parecchio i totali di fine
+    anno: conviene guardare sempre come è impostato.
 
 ## Vedi anche
 

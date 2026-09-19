@@ -10,4 +10,5 @@ programma fino a sapersi muovere tra i moduli.
 
 - [Primo accesso](primo-accesso.md)
 - [L'interfaccia di Facile](interfaccia.md)
+- [I menu File e ?](menu-file-e-guida.md)
 - [Convenzioni del manuale](convenzioni.md)

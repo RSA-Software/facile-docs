@@ -130,11 +130,64 @@ I dati delle righe si inseriscono e si correggono con **F2 - Modifica** e
     contrario: per cancellare davvero si risponde **Sì** alla prima e **No**
     alla seconda.
 
-<!-- DA VERIFICARE: la seconda domanda ("Vuoi interrompere la cancellazione ?") è formulata al contrario rispetto alla prima: verificare a video che l'ordine delle risposte sia quello descritto. -->
+!!! danger "Per cancellare il listino si risponde prima Sì e poi No"
 
-<!-- DA VERIFICARE: quali altre colonne del foglio Excel vengono lette oltre a CODICE e BARCODE (prezzo, sconti, pezzi per confezione). -->
+    Le due domande sono formulate **al contrario l'una dell'altra**, e
+    rispondere d'istinto porta a non cancellare — o, peggio, a cancellare
+    senza volerlo.
 
-<!-- DA VERIFICARE: come una riga del listino fornitore viene collegata all'articolo di anagrafica. -->
+    | | Domanda | Per cancellare | Risposta preimpostata |
+    |---|---|:---:|:---:|
+    | 1 | *Confermi la cancellazione dell' intero listino ?* | **Sì** | No |
+    | 2 | *Vuoi interrompere la cancellazione ?* | **No** | **Sì** |
+
+    La seconda è una domanda di sicurezza in più, e ha la risposta
+    preimpostata su **Sì**, cioè su *fermati*. Premendo Invio due volte non
+    si cancella niente — ed è il comportamento voluto.
+
+    Fatto il secondo **No**, il listino del fornitore viene **cancellato
+    per intero**, senza altri avvisi e senza modo di tornare indietro.
+
+!!! info "Le colonne del foglio Excel, per esteso"
+
+    Il programma riconosce le intestazioni **in maiuscolo**, in qualsiasi
+    ordine. Oltre a `CODICE` e `BARCODE`:
+
+    | Intestazione | Contenuto |
+    |---|---|
+    | `DESCRIZIONE` | La descrizione dell'articolo sul listino del fornitore. |
+    | `PREZZO` | Il prezzo di listino, al lordo degli sconti. |
+    | `SCO1` … `SCO7` | I sette sconti in cascata. |
+    | `SELL_PRICE` | Il prezzo di vendita al pubblico consigliato, IVA inclusa. |
+    | `PEZZICONF` | I pezzi per confezione. |
+    | `CODREP`, `CODMER`, `CODMAR`, `CODSTA`, `CODMIS`, `CODIVA` | Reparto, categoria merceologica, marchio, stagione, unità di misura e aliquota IVA. |
+    | `CODTA1`, `CODTA2`, `CODTA3` | Le tre tabelle di classificazione libera. |
+    | `GRUPPO`, `SOTTOG` | Gruppo e sottogruppo. |
+    | `MARCHIO` | Il marchio in chiaro. |
+
+    Le colonne che mancano vengono semplicemente ignorate: non è un errore
+    mandare un foglio con il solo codice e il prezzo.
+
+!!! info "Come una riga trova il suo articolo"
+
+    Il programma ci prova **tre volte, in quest'ordine**, e si ferma alla
+    prima che riesce:
+
+    1. con il **codice articolo** già scritto sulla riga, se c'è;
+    2. con il **codice a barre**: trovato l'articolo, il programma **scrive
+       il collegamento sulla riga** e non dovrà più cercarlo;
+    3. con il **codice fornitore**, confrontandolo con il campo *Cod.
+       Fornitore* dell'anagrafica articoli.
+
+    È il motivo per cui il primo caricamento di un listino nuovo è lento e i
+    successivi no: al primo giro gli abbinamenti per codice a barre vengono
+    registrati.
+
+    Le righe che **non si agganciano a niente** restano nel listino del
+    fornitore ma non hanno articolo: compaiono o spariscono dall'elenco
+    secondo la casella che filtra gli articoli non trovati. Per sistemarle si
+    aggiunge all'articolo il codice a barre o il codice fornitore che il
+    listino usa — e da lì in avanti si agganciano da sole.
 
 ## Vedi anche
 

@@ -233,8 +233,8 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Mancano i dati del titolare/legale rappresentante!* | Cli | Si sta stampando il modulo di fidejussione e il titolare non è registrato. | Registrarlo dal menu **F7 - Altri**. |
 | *Nel file deve essere presente almeno un cliente o un fornitore !* | Liq | La selezione dell'elenco clienti e fornitori non ha prodotto nominativi. | Allarga la selezione. |
 | *Nessun ordine evaso con data fra il … e il …* / *Nessun ordine ricevuto con data fra il … e il …* | Ocl, Olr | Nel periodo indicato non ci sono ordini già evasi da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
-| *Non ci sono articoli in archivio!* | Art | Si è chiesta una stampa articoli ma l’ anagrafica è vuota: succede su un' installazione appena fatta. | Carica gli articoli e ripeti. |
-| *Non ci sono fatture in archivio!* | Prv | Si è chiesta l’ attribuzione automatica delle provvigioni ma non c’ è nessuna fattura da cui ricavare il periodo. | Emetti le fatture, poi ripeti. |
+| *Non ci sono articoli in archivio!* | Art | Si è chiesta una stampa articoli ma l'anagrafica è vuota: succede su un'installazione appena fatta. | Carica gli articoli e ripeti. |
+| *Non ci sono fatture in archivio!* | Prv | Si è chiesta l'attribuzione automatica delle provvigioni ma non c'è nessuna fattura da cui ricavare il periodo. | Emetti le fatture, poi ripeti. |
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Tutte tranne Rub | Il record è richiamato da documenti, scadenze, prima nota, movimenti o altri archivi. | Non è eliminabile: lasciarlo in archivio. |
 | *Non è stata digitata la Partita IVA! Vuoi Continuare?* | Cli, For | Si sta salvando un nominativo senza partita IVA. | Rispondere **No** e inserirla, oppure **Sì** per salvare comunque. |
 | *Non hai l' Autorizzazioni sufficienti per completare l' operazione.* | Cli, For | Il codice digitato è fuori dall'intervallo riservato a clienti o fornitori. | Usare un codice compreso nell'intervallo, o lasciare quello proposto dal programma. |

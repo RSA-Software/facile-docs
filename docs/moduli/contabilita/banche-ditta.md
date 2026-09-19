@@ -59,8 +59,8 @@ riquadri **CASTELLETTI** e **TASSI**.
 | Codice | ● | Identificativo della banca. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Denominazione della banca. | Testo |
 | Indirizzo, Citta, Provincia, Cap, Telefono | | Recapiti della filiale. | Testo |
-| Prestiti Gruppo Interno | | Segnala che il conto riguarda prestiti interni al gruppo. | Casella |
-| Ultimo Movimento | | Data dell'ultimo movimento registrato sul conto. | Data |
+| Prestiti Gruppo Interno | | Segnala che il rapporto non è un conto bancario ordinario ma un prestito interno al gruppo. Serve alla stampa, che tiene i due tipi in elenchi separati. | Casella |
+| Ultimo Movimento | | Data dell'ultimo movimento sul conto. **Si scrive a mano**: nessuna registrazione la aggiorna. | Data |
 | Cod. Azienda, Dipendenza, ABI, CAB, Num. Conto, Sportello | | Le coordinate bancarie del conto. | Testo |
 
 {: .campi }
@@ -69,7 +69,7 @@ riquadri **CASTELLETTI** e **TASSI**.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| Saldo Attuale | | Saldo del conto. | Importo |
+| Saldo Attuale | | Saldo del conto. **Si scrive a mano**: nessuna registrazione lo aggiorna. | Importo |
 | Scopertura Concessa | | Fido concesso dalla banca. | Importo |
 | Fuori Scopertura | | Quanto si è oltre il fido. Calcolato dal programma. | Sola lettura |
 
@@ -83,8 +83,8 @@ una per **RI.BA.**, con tre colonne:
 | Colonna | Descrizione |
 |---|---|
 | **Disp. Iniziale** | Il castelletto concesso dalla banca. |
-| **Utilizzato** | Quanto ne è già stato impegnato. |
-| **Disp. Residua** | Quanto resta. Calcolato dal programma. |
+| **Utilizzato** | Quanto ne è già impegnato. Lo tiene il programma: sale registrando un titolo su questa banca e scende cancellandolo. |
+| **Disp. Residua** | Quanto resta: disponibilità iniziale meno utilizzato. Lo ricalcola il programma a ogni titolo. |
 
 ### Tassi
 
@@ -153,11 +153,35 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: Saldo Attuale e Ultimo Movimento si aggiornano da soli con le registrazioni, o si scrivono a mano? -->
+!!! warning "Cosa si aggiorna da sé e cosa no"
 
-<!-- DA VERIFICARE: le quattro righe dei tassi bastano sempre? Cosa succede quando si esauriscono. -->
+    Di tutta la maschera il programma tiene aggiornate **due sole colonne**:
+    **Utilizzato** e **Disp. Residua** dei castelletti. Si muovono quando
+    registri un titolo su questa banca — una cambiale, una tratta o una
+    ricevuta bancaria — e tornano indietro se lo cancelli. Ogni riga del
+    castelletto corrisponde al tipo scelto sul titolo.
 
-<!-- DA VERIFICARE: la casella Prestiti Gruppo Interno. -->
+    Tutto il resto **si scrive a mano e resta com'è**: **Saldo Attuale**,
+    **Ultimo Movimento**, **Scopertura Concessa**, **Fuori Scopertura**, la
+    **Disp. Iniziale** dei castelletti e i quattro scaglioni dei tassi. Le
+    registrazioni di prima nota non li toccano.
+
+    Vuol dire che il saldo qui è una fotografia che vale quanto l'ultima volta
+    che è stata aggiornata: per il saldo vero c'è la
+    [scheda contabile](schede-contabili.md) del conto.
+
+!!! note "I tassi sono quattro, e sono uno storico"
+
+    Le quattro righe non sono quattro tassi diversi in vigore insieme: sono
+    quattro **scaglioni nel tempo**, ciascuno con la sua **Decorrenza** e i
+    tre tassi di quel periodo — scoperto, effetti, RI.BA.
+
+    Quando la banca cambia le condizioni per la quinta volta non succede
+    niente di automatico: bisogna **riscrivere la riga più vecchia**. Il
+    programma non le fa scorrere e non avverte.
+
+    I tassi non entrano in nessun calcolo: sono un promemoria delle condizioni
+    concordate.
 
 ## Vedi anche
 

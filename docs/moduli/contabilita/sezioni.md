@@ -116,7 +116,41 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: in quali casi reali si usano più sezioni? Un esempio concreto renderebbe la pagina molto più utile. -->
+!!! info "Perché tenere più di una sezione"
+
+    La ragione pratica è **la numerazione dei registri IVA**. I progressivi dei
+    sei registri — acquisti, fatture emesse, corrispettivi, fatture in
+    sospensione, acquisti CEE, fatture emesse CEE — sono tenuti **per sezione e
+    per anno**, ciascuno con il suo contatore.
+
+    Vuol dire che due sezioni hanno due numerazioni di protocollo che corrono
+    in parallelo: la prima fattura d'acquisto della sezione 2 prende il
+    protocollo 1 anche se la sezione 1 è già arrivata a trecento.
+
+    Da qui i casi in cui servono davvero:
+
+    - **attività con contabilità separate** dentro la stessa partita IVA, che
+      per legge devono tenere registri distinti;
+    - **più punti vendita o più rami d'azienda** che vogliono registri e
+      liquidazioni leggibili separatamente;
+    - un'attività che **ventila i corrispettivi** accanto a una che non li
+      ventila: si separano, e sulla seconda si spunta *Ventilazione
+      Corrispettivi*;
+    - una sezione di **comodo per le scritture interne** — giroconti,
+      assestamenti, riclassificazioni — che non deve sporcare né le
+      liquidazioni né lo spesometro. È il caso in cui si spuntano quasi tutte
+      e quattro le caselle.
+
+    Se l'azienda ha una contabilità sola, **una sezione basta** e non c'è
+    nessun vantaggio ad aggiungerne.
+
+!!! warning "La sezione si sceglie quando si registra, non dopo"
+
+    Il protocollo viene assegnato dal contatore della sezione al momento della
+    registrazione. Spostare dopo una registrazione da una sezione all'altra
+    lascia un buco nella numerazione di partenza e un protocollo fuori sequenza
+    in quella d'arrivo: se i registri sono già stati stampati sul bollato, non
+    si rimedia.
 
 ## Vedi anche
 

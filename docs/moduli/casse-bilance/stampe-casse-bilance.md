@@ -98,7 +98,8 @@ bilance.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi propri di queste stampe. -->
+Oltre a quelli qui sotto, queste stampe non hanno messaggi propri: i
+controlli sui filtri sono silenziosi.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -126,9 +127,67 @@ bilance.
     merce esce dal negozio ma resta a magazzino. Finché gli scarti non sono a
     zero, le esistenze sono più alte del vero e l'inventario non tornerà.
 
-<!-- DA VERIFICARE: dove si vedono gli scarti oltre che in stampa, e se si possano correggere senza reinserire il venduto a mano. -->
+!!! warning "Gli scarti si vedono solo in stampa"
 
-<!-- DA VERIFICARE: quali campi dell'articolo attivano il flag variazioni, e se lo attivi anche una modifica non di prezzo. -->
+    Non c'è nessuna maschera da cui consultarli o correggerli: l'archivio degli
+    scarti si legge **unicamente** con **Stampa Scarti su Ricezione da Casse**.
+
+    Nella stampa c'è però tutto quello che serve per rimediare: **data**,
+    **deposito**, **codice letto**, **quantità**, **importo** e il **numero
+    dello scontrino** su cui la riga è passata. Si sceglie il periodo, il
+    deposito e, con **Raggruppamento per Codice**, si ottiene l'elenco dei
+    codici sconosciuti con i loro totali invece della riga per riga: è la forma
+    utile, perché di solito lo stesso codice manca molte volte.
+
+    La correzione **non si fa dagli scarti**. Sono due passaggi:
+
+    1. **sistemare l'anagrafica** — creare l'articolo che manca, oppure
+       aggiungere all'articolo esistente il codice a barre che la cassa ha
+       battuto;
+    2. **recuperare il venduto**, in uno dei due modi:
+       - **ricaricare lo stesso file** con *Acquisizione Manuale File Vendite*,
+         se il file della giornata c'è ancora: adesso il codice viene
+         riconosciuto;
+       - oppure registrare a mano un [movimento di
+         magazzino](../magazzino/movimenti-magazzino.md) con le quantità che la
+         stampa riporta.
+
+    L'archivio degli scarti **non si svuota da sé** e non viene riletto: resta
+    lì come registro di quello che è successo. Conviene stamparlo e tenerne
+    nota, perché non c'è modo di sapere quali righe sono già state recuperate.
+
+!!! info "Che cosa accende il flag delle variazioni"
+
+    Non basta toccare l'articolo: il segno «da mandare» si accende in casi
+    precisi.
+
+    **Sempre**, quando l'articolo è **nuovo**.
+
+    **Modificando l'articolo**, solo se cambia uno di questi tre:
+
+    - il **Cod. IVA**;
+    - il modo di vendita, cioè se l'articolo si vende **a peso o a pezzo**;
+    - la **Descrizione 1**.
+
+    Cambiare la **Descrizione 2**, il reparto, la categoria, il fornitore o
+    qualunque altro campo **non accende niente**: sono dati che alla cassa non
+    arrivano.
+
+    **Fuori dall'anagrafica**, il segno si accende anche quando cambia:
+
+    - il **prezzo di listino**;
+    - un **codice a barre** dell'articolo;
+    - il collegamento **articolo-fornitore**;
+    - l'**immagine** dell'articolo.
+
+    È il motivo per cui una variazione di prezzo fatta con le
+    [variazioni di massa](../listini-vendita/variazioni-di-massa.md) si ritrova
+    puntualmente nel prossimo invio, mentre una correzione di descrizione
+    secondaria no.
+
+    Lo stesso vale per il segno dei **frontalini**, che si accende negli stessi
+    casi: è per questo che dopo un cambio prezzo compaiono insieme i cartellini
+    da ristampare e gli articoli da mandare alle casse.
 
 ## Vedi anche
 

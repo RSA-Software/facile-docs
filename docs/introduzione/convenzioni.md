@@ -20,9 +20,13 @@ Due avvertenze:
   del magazzino e per diverse maschere dei
   [listini di vendita](../moduli/listini-vendita/index.md). In quei casi
   l'etichetta dell'indice non coincide con una singola voce di menu.
-- **Il riferimento è il menu completo.** Facile mostra un menu più ridotto
-  nelle licenze Standard e Lite: alcune voci descritte qui possono non
-  comparire. <!-- DA VERIFICARE: come si chiamano a video i livelli di licenza (Lite, Standard, Professional) e se il manuale debba dichiararlo esplicitamente. -->
+- **Il riferimento è il menu completo.** I livelli di licenza sono quattro —
+  `LIGHT`, `SMALL`, `PROFESSIONAL` ed `EVOLUTION` — e mostrano menu via via
+  più ampi. Questo manuale descrive **il menu completo**: nelle licenze
+  inferiori alcune voci descritte qui non compaiono affatto. Il livello della
+  propria installazione si legge in **Menu ▸ Utility ▸
+  [Gestione Licenza](../moduli/utility/gestione-licenza.md)**, campo *Tipo
+  Licenza*.
 
 ## Percorsi di menu
 

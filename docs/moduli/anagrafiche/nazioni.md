@@ -54,7 +54,7 @@ giusto: quello che si registra qui è la nazionalità, non il paese.
 | Nazione | | Il nome del **paese**: *ITALIA*, *FRANCIA*, *SVIZZERA*. Facile non lo riporta sui documenti — per quelli usa la **Descrizione** — ma tienilo compilato per leggibilità. | Fino a 30 caratteri |
 | ISO Alpha-2 | | Sigla ISO di due lettere, quella trasmessa in fattura elettronica. | 2 caratteri |
 | Codice ISO | | Codice ISO numerico del paese. | Numero |
-| Codice UNICO | | Codice del paese per il modello Unico. | Fino a 3 caratteri |
+| Codice UNICO | | Il codice numerico con cui l'Agenzia delle Entrate identifica lo Stato estero nelle comunicazioni telematiche. San Marino, per esempio, è `037`. | Fino a 3 caratteri |
 | Fiscalità Privilegiata | | Segnala che il paese è a fiscalità privilegiata. | Casella |
 | Nazione UE | | Segnala che il paese appartiene all'Unione europea. Da questa spunta dipende il trattamento delle operazioni intracomunitarie. | Casella |
 
@@ -128,7 +128,19 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il Codice UNICO. È il codice del paese per il modello Unico, ma andrebbe confermato a chi cura la modulistica fiscale. -->
+!!! note "A che cosa serve il Codice UNICO"
+
+    Non è il codice ISO che si usa nei documenti: è il **codice numerico
+    dello Stato estero** della tabella dell'Agenzia delle Entrate, e serve
+    alla **comunicazione delle operazioni con l'estero** — lo spesometro.
+
+    Quando prepari quella comunicazione, il programma lo cerca per ogni
+    cliente o fornitore estero. Se manca, la riga viene segnalata in rosso con
+    *Codice Stato Estero … assente* e la comunicazione non è completa.
+
+    Su **San Marino** il codice `037` fa anche un'altra cosa: rende
+    obbligatoria la partita IVA del soggetto, perché il tracciato la
+    pretende.
 
 ## Vedi anche
 

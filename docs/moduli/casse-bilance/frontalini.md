@@ -124,11 +124,76 @@ Stampa**. L'ultima dice quando quel frontalino è stato stampato l'ultima volta:
     stampati e ad aggiornare la colonna **Ultima Stampa**. Se la carta si
     inceppa, rispondi **No**: le righe restano in lista e si ristampano.
 
-<!-- DA VERIFICARE: dove si configurano i formati dei frontalini e quali sono quelli standard. -->
+!!! info "Il formato del frontalino si imposta nella ditta"
 
-<!-- DA VERIFICARE: cosa contiene la colonna "Cod. Bat." e a cosa serve. -->
+    Il disegno del cartellino è un **modello di stampa**, scelto dal campo
+    **Modulo Frontalini** nella scheda della [ditta](../anagrafiche/ditte.md).
+    Quel numero punta al modello corrispondente fra quelli installati: il
+    modello `4` è il file `frn00004.rpt` nella cartella dei report.
 
-<!-- DA VERIFICARE: quali terminalini sono supportati da "F8 - Acquisisci". -->
+    Non c'è un elenco di formati standard fra cui scegliere dal programma: i
+    modelli sono quelli che l'installazione ha, e per averne uno nuovo — un
+    formato di cartellino diverso, un logo, un prezzo più grande — si passa
+    dall'assistenza.
+
+    La **stampante** invece è quella impostata come stampante dei frontalini in
+    [Impostazione Stampanti](../utility/impostazioni-postazione.md): la stampa
+    ci passa da sola e poi rimette a posto la stampante predefinita.
+
+!!! info "Che cos'è il «Cod. Bat.»"
+
+    È il **codice che finisce stampato sul cartellino**, e non è sempre il
+    codice dell'articolo.
+
+    Il programma lo riempie con il **codice a barre dell'articolo** — l'ultimo
+    registrato, se ce n'è più d'uno — perché è quello che il cliente e il
+    lettore devono trovare sullo scaffale. Se l'articolo non ha codici a barre,
+    e si è acquisito il frontalino leggendo un codice diverso da quello
+    dell'articolo, ci finisce il codice letto.
+
+    Accanto viaggia la **quantità del codice a barre**: serve per i codici che
+    valgono per una confezione e non per il pezzo singolo, così il prezzo sul
+    cartellino resta quello giusto.
+
+    In pratica: se su un cartellino compare un codice che non riconosci, è il
+    codice a barre, non il codice interno.
+
+!!! info "I terminalini che F8 - Acquisisci riconosce"
+
+    Il pulsante apre un menu, e in fondo ci sono i terminali:
+
+    | Voce | Terminale |
+    |---|---|
+    | **Terminale Formula 734** | Formula 734 |
+    | **Terminale EIA Thunder - Solaris** | EIA Thunder / Solaris |
+    | **Terminale TYSSO BCP8000** | Tysso BCP8000 |
+    | **Terminale DENSO N661** | Denso N661 |
+    | **Terminale Meteor 486** | Meteor ECO 486 |
+    | **Terminale Unitech PT630D** | Unitech PT630D |
+    | **Terminale Symbol PDT3011** | Symbol PDT3011 |
+
+    Tre di questi lasciano il file in una posizione fissa, che vale la pena
+    conoscere quando la lettura non arriva:
+
+    | Terminale | File letto |
+    |---|---|
+    | Tysso BCP8000 | `in\letture.txt` |
+    | Denso N661 | `in\dati.dat` |
+    | Formula 734 | i file `in\term*.dat` |
+
+    Lo stesso menu porta anche le voci che non riguardano i terminali —
+    **Data Variazione Listino**, **Flag Variazione Listino**, **Flag Variazione
+    Frontalini**, **Flag Variazione Articoli** e **Selezione Multipla
+    Articoli** — con cui si sceglie che cosa mettere in elenco invece di
+    leggerlo da un terminale.
+
+!!! note "Solo l'Unitech manda anche il prezzo"
+
+    Degli altri terminali arriva il **codice e basta**: il prezzo del cartellino
+    lo prende Facile dal listino. Dall'Unitech PT630D arriva anche il prezzo
+    letto, e viene usato quello — ma se è a zero, o se il listino indicato non è
+    quello della ditta, il programma torna comunque a prendere il prezzo dal
+    listino.
 
 ## Vedi anche
 

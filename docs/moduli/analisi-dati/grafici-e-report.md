@@ -105,7 +105,8 @@ fatturato può crescere mentre il ricavo cala, ed è quello il dato che conta.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste due maschere. -->
+Queste due maschere **non hanno messaggi propri**: i controlli sono
+silenziosi, con il solo segnale acustico.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -119,17 +120,48 @@ fatturato può crescere mentre il ricavo cala, ed è quello il dato che conta.
     nello storico. Si rimedia da
     [Manutenzione degli archivi](../utility/manutenzione-archivi.md).
 
-!!! note "I report personalizzati sono file, non funzioni del programma"
+!!! info "I report personalizzati stanno in una cartella a sé"
 
-    Sono report Crystal (`.rpt`) installati nella cartella dei report: se ne
-    manca uno che avevi, è un problema di installazione, non del menu. Per
-    averne di nuovi si passa dall'assistenza.
+    Sono report Crystal (`.rpt`) e il programma li cerca in **`rptcustom`**,
+    sotto la cartella di installazione. Non nella cartella dei report
+    ordinari: è una cartella dedicata, apposta per non confondere i report su
+    misura con quelli di serie.
 
-<!-- DA VERIFICARE: in quale cartella vengono cercati i file .rpt dei report personalizzati. -->
+    Dentro si possono fare **sottocartelle**: l'albero a sinistra le mostra, e
+    serve a tenere in ordine i report per argomento.
 
-<!-- DA VERIFICARE: che aspetto ha il grafico prodotto e se sia esportabile o solo stampabile. -->
+    Se un report che avevi non compare, è un problema di installazione — il
+    file non è in quella cartella — non del menu. Per averne di nuovi si passa
+    dall'assistenza.
 
-<!-- DA VERIFICARE: come le dieci caselle Anno_01…Anno_10 si associano agli anni di gestione presenti in archivio. -->
+!!! info "Il grafico è una stampa, e si esporta come le altre"
+
+    Non è un grafico interattivo: è un **modello di stampa** che esce
+    nell'anteprima come qualsiasi altra stampa di Facile, con il suo
+    andamento mese per mese e una riga per ciascuna annata scelta.
+
+    Da lì valgono i comandi dell'anteprima: si stampa, si sfoglia, si
+    ingrandisce e **si esporta** nei formati che l'anteprima offre — PDF, Excel
+    e gli altri. Non serve nessun comando speciale di questa maschera.
+
+!!! info "Le dieci caselle degli anni si riempiono da sole"
+
+    Non sono dieci anni fissi: all'apertura il programma **guarda nello
+    storico** partendo dall'anno di lavoro e andando indietro di dieci anni, e
+    per ogni anno che ci trova dei movimenti accende una casella scrivendoci
+    sopra l'anno.
+
+    Quindi:
+
+    - le caselle compaiono **in ordine dal più recente al più vecchio**;
+    - un anno **senza movimenti nello storico non compare affatto** — non è
+      una casella spenta, è una casella che non c'è;
+    - arrivano **già spuntate le prime tre**, cioè gli ultimi tre anni
+      disponibili; le altre si spuntano a mano;
+    - oltre i dieci anni indietro non si va.
+
+    Se manca un'annata che dovrebbe esserci, va portata nello storico da
+    [Manutenzione degli archivi](../utility/manutenzione-archivi.md).
 
 ## Vedi anche
 

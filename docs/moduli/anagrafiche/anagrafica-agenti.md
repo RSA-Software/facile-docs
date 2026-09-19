@@ -93,7 +93,7 @@ Le schede sono queste:
 | Calcolo Provvigione Da | | Stabilisce dove Facile va a prendere la percentuale da applicare. | LISTINO, SCAGLIONE ARTICOLO, SCAGLIONE CLIENTE, CLIENTE, CATEG. MERCEOLOGICA |
 | Zona | | Zona di competenza dell'agente. Accanto compare la descrizione. | Codice dall'archivio zone |
 | Calcola maturato al saldo | | La provvigione matura quando la fattura è incassata per intero, non quando è emessa. | Casella |
-| % TABELLA PROVVIGIONI, da **1 )** a **15 )** | | Le quindici percentuali di provvigione dell'agente. Quale delle quindici si applica lo decide **Calcolo Provvigione Da**. | Percentuali |
+| % TABELLA PROVVIGIONI, da **1 )** a **15 )** | | Le quindici percentuali di provvigione dell'agente. Contano solo con **Calcolo Provvigione Da** impostato su *SCAGLIONE ARTICOLO* o *SCAGLIONE CLIENTE*: a quel punto è lo scaglione scritto sull'articolo o sul cliente a dire quale delle quindici prendere. | Percentuali |
 
 {: .campi }
 
@@ -221,9 +221,50 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     I valori della scheda *Totali* sono legati all'**anno di lavoro**: cambiando
     esercizio l'agente riparte con totali e ritenute da reimpostare.
 
-<!-- DA VERIFICARE: la corrispondenza fra le quindici percentuali della tabella provvigioni e i cinque modi di Calcolo Provvigione Da. Quale delle quindici viene usata in ciascun caso? Dal codice della maschera non si ricava: il calcolo avviene altrove. -->
+!!! info "Quale delle quindici percentuali viene usata"
 
-<!-- DA VERIFICARE: il campo Password e la casella Escludi da ricezione ordini riguardano il palmare degli agenti. È un modulo da documentare a parte? -->
+    Le quindici percentuali servono **solo a due** dei cinque modi. Negli
+    altri tre il programma non le guarda nemmeno.
+
+    | Calcolo Provvigione Da | Da dove prende la percentuale |
+    |---|---|
+    | **LISTINO** | Dal listino di vendita dell'articolo. La percentuale cambia con il tipo di vendita: normale, trasfert, delivery o conto servizi hanno ciascuno la propria. |
+    | **SCAGLIONE ARTICOLO** | Dalla tabella qui sotto: la riga è quella che l'**articolo** indica nel suo campo *Scaglione Agente*. Scaglione 3 sull'articolo significa percentuale **3 )** dell'agente. |
+    | **SCAGLIONE CLIENTE** | Dalla tabella qui sotto: la riga è quella che il **cliente** indica nel suo campo *Scaglione*. |
+    | **CLIENTE** | Dalle quattro percentuali scritte sull'anagrafica del cliente, una per tipo di vendita. |
+    | **CATEG. MERCEOLOGICA** | Dalla categoria merceologica dell'articolo, che tiene una percentuale diversa per fascia di sconto applicato. |
+
+    Perché una percentuale della tabella venga presa, lo scaglione dev'essere
+    un numero **da 1 a 15**. Con lo scaglione a zero, o fuori da
+    quell'intervallo, la riga resta **senza provvigione**: non viene applicato
+    nessun valore di ripiego.
+
+!!! warning "Il capo area guadagna solo nel modo LISTINO"
+
+    La provvigione del capo area viene calcolata **soltanto** quando l'agente
+    è impostato su **LISTINO**, e viene presa anch'essa dal listino.
+
+    Con gli altri quattro modi la quota del capo area risulta **zero**, anche
+    se l'agente ha un capo area assegnato.
+
+!!! note "Il modo CATEG. MERCEOLOGICA si arrende sugli sconti merce"
+
+    Vale solo per le righe senza **sconto merce** e senza **sconto a valore**.
+    Se la riga ne ha uno, il calcolo ricade sul modo LISTINO.
+
+!!! note "I due campi che riguardano il palmare"
+
+    **Escludi da ricezione ordini** ha un effetto preciso dentro Facile:
+    quando lanci **Menu ▸ Ordini ▸ Ricezione Ordini dal Server FTP**, il
+    programma scorre gli agenti uno per uno e **salta** quelli che hanno
+    questa casella spuntata. Si spunta agli agenti che non lavorano con il
+    palmare, per non far perdere tempo alla procedura.
+
+    **Password** invece Facile non la controlla mai: nessuna maschera la
+    chiede. È la password con cui l'agente entra nella **sua** applicazione, e
+    da qui viaggia verso il palmare insieme al resto dei suoi dati.
+
+<!-- DA VERIFICARE: il palmare degli agenti. Dal lato Facile si vedono solo i due campi qui sopra, la ricezione ordini via FTP e la data dell'ultimo invio al tablet; l'applicazione che gira sul palmare è un programma a sé. Il manuale deve avere una pagina che racconti il giro completo — cosa si manda, quando, che cosa torna indietro — o l'applicazione dell'agente ha un manuale suo e qui basta il rimando? -->
 
 ## Vedi anche
 

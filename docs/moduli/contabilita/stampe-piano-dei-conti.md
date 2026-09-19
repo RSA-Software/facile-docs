@@ -123,9 +123,35 @@ Gli stessi tre campi della stampa precedente, più:
     le due stampe del piano dei conti chiedono se includerli. Con **Includi
     Clienti** su `SI` la stampa può diventare di centinaia di pagine.
 
-<!-- DA VERIFICARE: se "Stampa Piano dei Conti con Totali" mostri i saldi del periodo o quelli progressivi a fine periodo. -->
+!!! info "I totali sono il movimentato del periodo, non il saldo a fine periodo"
 
-<!-- DA VERIFICARE: cosa stampa "Stampa Schede Conti" lasciando vuoti Mastro, Conto e Sottoconto. -->
+    **Stampa Piano dei Conti con Totali** somma **solo le registrazioni che
+    cadono fra Dal e Al**. Non parte da nessun saldo d'apertura.
+
+    Non ci si accorge della differenza perché all'apertura la finestra propone
+    **dal 1° gennaio dell'anno di lavoro a oggi**, e su quel periodo il
+    movimentato coincide con il progressivo. Ma restringendo le date — per
+    esempio a un solo mese — si ottiene quello che è successo **in quel mese**,
+    non il saldo alla fine del mese.
+
+    I sottoconti di tipo *transitorio* restano fuori dal conteggio.
+
+!!! info "Stampa Schede Conti con i codici vuoti"
+
+    I tre campi sono filtri indipendenti, e ognuno lasciato vuoto toglie il
+    suo livello di selezione:
+
+    - **Sottoconto** vuoto: tutti i sottoconti del conto indicato;
+    - **Conto** vuoto: tutti i conti del mastro indicato;
+    - **Mastro** vuoto: **tutti i mastri tranne quelli di clienti e
+      fornitori**, che restano sempre esclusi da questa stampa.
+
+    Lasciandoli vuoti tutti e tre si ottiene quindi la scheda di **ogni conto
+    della contabilità generale**, uno dopo l'altro. Su un archivio di qualche
+    anno sono parecchie pagine: conviene guardarla in anteprima prima di
+    mandarla in stampa.
+
+    Per clienti e fornitori ci sono le loro stampe dedicate.
 
 ## Vedi anche
 

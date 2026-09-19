@@ -338,7 +338,32 @@ Valgono inoltre in tutta la maschera:
     emette un segnale acustico e sposta il cursore. Se il salvataggio si rifiuta
     senza spiegazioni, guarda dov'è finito il cursore.
 
-<!-- DA VERIFICARE: quali chiavi ammette la sezione [CHECK] di articoli_check.ini. -->
+!!! info "I campi che l'installazione può rendere obbligatori"
+
+    Oltre a quelli che il programma pretende sempre, ogni installazione può
+    renderne obbligatori altri. La scelta sta in un file di configurazione
+    — `cfgrticoli_check.ini` — dove sotto la voce `[CHECK]` si mette a
+    `1` il campo che si vuole richiedere e a `0` quello che si vuole
+    lasciare libero.
+
+    I campi che si possono chiedere sono questi:
+
+    **Classificazione** — unità di misura, reparto, categoria
+    merceologica, marchio, stagione, le tre tabelle libere, gruppo,
+    sottogruppo, gruppo mix.
+
+    **Fornitori** — fornitore abituale, fornitore alternativo (che nella
+    versione Taglie e Colori diventa il settore), codice articolo del
+    fornitore.
+
+    **Magazzino** — ubicazione, peso, pezzi per confezione, scorta minima,
+    scorta massima.
+
+    Quando uno di questi campi è richiesto e resta vuoto, il salvataggio si
+    ferma con *Il campo … e' obbligatorio.* e il cursore si posiziona sul
+    campo.
+
+    Il file lo prepara l'assistenza: non c'è una maschera per cambiarlo.
 
 ## Vedi anche
 

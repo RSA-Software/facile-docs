@@ -93,7 +93,15 @@ In alto la testata del movimento, sotto le righe della merce.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di questa maschera. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | La causale scelta è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](causali-magazzino.md), o scegline un'altra. |
+| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | La causale scelta è di carico ma non aggiunge all'esistenza. | Come sopra. |
+| *Data fuori dall'Esercizio Corrente ! Vuoi Continuare ?* | La data del movimento non cade nell'anno di lavoro. | **No** per correggerla. **Sì** registra lo stesso: il movimento finisce in un altro esercizio. |
+| *Commessa obbligatoria!* | La causale pretende la commessa e il campo è vuoto. | Indica la commessa. |
+| *Centro Cost/Ricavo obbligatorio!* | La causale pretende il centro di costo e il campo è vuoto. | Indica il centro. |
+| *Non sono ammesse quantità con decimali nella gestione delle matricole!* | L'articolo è gestito a matricola e hai scritto una quantità con la virgola. | Le matricole si contano a pezzi interi. |
+| *Impossibile Continuare ! Il movimento contiene articoli fiscali.* | Si sta salvando o cancellando un movimento che tocca articoli soggetti a registro fiscale. | Quei movimenti non si toccano da qui: si correggono dalla gestione dei registri fiscali. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -108,9 +116,30 @@ In alto la testata del movimento, sotto le righe della merce.
     dall'esistenza, se è stata impostata così. Prima di usare una causale nuova,
     controlla come è fatta.
 
-<!-- DA VERIFICARE: se esista una causale di trasferimento che muove entrambi i depositi in un colpo solo. -->
+!!! info "Sì: un movimento solo può muovere due depositi"
 
-<!-- DA VERIFICARE: se il movimento generi una registrazione contabile. -->
+    È il caso del **trasferimento fra depositi**, e si imposta sulla
+    causale: la [causale di magazzino](causali-magazzino.md) ha un
+    **deposito** e una **causale di contropartita**. Scegliendola, la
+    maschera compila da sé i due campi **Al Deposito** e **Causale 2°
+    Dep.**, che restano modificabili.
+
+    Salvando, il programma scrive **due movimenti**: quello che hai davanti
+    e il suo gemello sull'altro deposito, con la causale di contropartita e
+    la nota *PROVIENE DAL DEPOSITO N*.
+
+    Il gemello nasce **solo al primo salvataggio**, e solo se il secondo
+    deposito esiste ed è diverso dal primo. Modificando dopo il movimento,
+    il gemello **non viene aggiornato**: va corretto a mano.
+
+!!! note "Il movimento non tocca la contabilità"
+
+    Registrando un movimento non nasce nessuna scrittura di prima nota: il
+    magazzino e la contabilità restano due cose separate.
+
+    Se il movimento ha un riflesso contabile — un omaggio, un ammanco, un
+    autoconsumo — la scrittura va fatta a parte in
+    [prima nota](../contabilita/registrazione-prima-nota.md).
 
 ## Vedi anche
 

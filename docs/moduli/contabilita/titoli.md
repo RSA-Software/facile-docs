@@ -55,13 +55,13 @@ del titolo.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | Numero | | Numero del titolo. Lo assegna il programma e non si modifica. | Sola lettura |
-| Data | | Data di acquisizione del titolo. | Data |
+| Data | ● | Data di acquisizione del titolo. | Data |
 | **Tipo** | | Che titolo è. Si sceglie fra le tre voci del riquadro. | Cambiali, Tratte, Ric. Bancarie |
-| Scadenza | | Data di scadenza del titolo. | Data |
-| Importo | | Valore del titolo. | Importo |
-| Cliente | | Cliente che ha emesso il titolo. Accanto compare la ragione sociale. | Codice dall'archivio clienti |
+| Scadenza | ● | Data di scadenza del titolo. Non può essere anteriore alla **Data**. | Data |
+| Importo | ● | Valore del titolo. Dev'essere maggiore di zero. | Importo |
+| Cliente | ● | Cliente che ha emesso il titolo. Accanto compare la ragione sociale. | Codice dall'archivio clienti |
 | Banca | | Banca su cui il titolo è appoggiato. Accanto compare la descrizione. | Codice dall'archivio banche |
-| Versato il | | Data in cui il titolo è stato versato. | Data |
+| Versato il | | Data in cui il titolo è stato versato. Diventa obbligatoria se compili la **Banca**, e deve cadere nell'anno di lavoro. | Data |
 | Cod. Rinnovo | | Numero del titolo che sostituisce questo, quando viene rinnovato. | Numero di un altro titolo |
 
 {: .campi }
@@ -112,6 +112,21 @@ Valgono inoltre:
 2. Carica il titolo vecchio e scrivi quel numero in **Cod. Rinnovo**.
 3. Premi **F2 - Salva**.
 
+### Chiudere i titoli scaduti
+
+1. Apri **Menu ▸ Archivi ▸ Contabilità ▸ Titoli ▸ Gestione Titoli Scaduti**.
+2. Su ogni riga spunta **una sola** delle tre colonne, secondo com'è andata.
+3. Premi **F2 - OK**.
+4. Le righe spuntate vengono registrate con quell'esito e **spariscono dalla
+   griglia**. In basso, in **Saldo**, resta il totale di quelle che hai
+   lasciato in sospeso.
+
+Si può ripetere più volte: la finestra si chiude da sé quando la griglia
+rimane vuota. Le righe non spuntate restano come stanno e le ritrovi la volta
+dopo.
+
+<!-- DA VERIFICARE: il titolo della finestra è "Acquisizione Titoli", mentre la voce di menu dice "Titoli ▸ Inserimento". Quale nome usare nel manuale? -->
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
@@ -122,16 +137,50 @@ Valgono inoltre:
 
 ## Note
 
+!!! info "Le altre due voci del menu: titoli scaduti e titoli attivi"
+
+    Nello stesso menu ci sono altre due voci — **Gestione Titoli Scaduti** e
+    **Gestione Titoli Attivi** — che aprono **la stessa finestra**, con un
+    contenuto diverso: la prima mostra i soli titoli **scaduti**, la seconda
+    mostra anche quelli **ancora in corso**.
+
+    Tutte e due, prima di aprirsi, fanno una pulizia: i titoli scaduti che non
+    sono stati presentati in banca vengono **tolti dal castelletto**, così la
+    disponibilità residua torna a dire il vero.
+
+    La finestra è una griglia con **Data**, **Numero**, **Importo**, **Tipo**,
+    **Cliente** e **Banca**, e tre colonne da spuntare:
+
+    | Colonna | Vuol dire |
+    |---|---|
+    | **Pag** | Il titolo è stato pagato. |
+    | **Ins** | È tornato insoluto. |
+    | **Rin** | È stato rinnovato. |
+
 !!! warning "Attenzione"
 
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: quali campi sono obbligatori. La maschera non fa i controlli tipici delle altre tabelle, e il numero è assegnato dal programma: va provata per capire cosa succede salvando un titolo incompleto. -->
+!!! note "Cosa il programma pretende prima di salvare"
 
-<!-- DA VERIFICARE: le voci di menu Gestione Titoli Scaduti e Gestione Titoli Attivi sono due maschere a sé, da documentare separatamente. -->
+    I controlli ci sono, ma sono silenziosi: niente messaggi, solo un segnale
+    acustico e il cursore che si posiziona sul campo che manca.
 
-<!-- DA VERIFICARE: il titolo della finestra è "Acquisizione Titoli", mentre la voce di menu dice "Titoli ▸ Inserimento". Quale nome usare nel manuale? -->
+    Sono, nell'ordine in cui vengono fatti:
+
+    - la **Data** dev'essere compilata;
+    - la **Data Scadenza** dev'essere compilata e **non anteriore** alla data
+      del titolo;
+    - l'**Importo** dev'essere maggiore di zero;
+    - il **Cliente** dev'essere indicato.
+
+    La **Banca** invece si può lasciare vuota: un titolo senza banca è un
+    titolo in portafoglio, non ancora presentato. Ma **se la indichi**,
+    diventa obbligatoria anche la **Data Versamento**, e quella data deve
+    cadere nell'anno di lavoro: altrimenti arriva l'errore sull'esercizio.
+
+    Il **Codice** non si tocca: lo assegna il programma.
 
 ## Vedi anche
 

@@ -186,11 +186,61 @@ per le stampanti ad aghi dei moduli continui.
     La regola è: prima una prova con le caselle spente, poi la stampa buona con
     le caselle accese.
 
-<!-- DA VERIFICARE: dove si leggono i progressivi (pagina, rigo, dare, avere) da riportare nella stampa successiva: presumibilmente nelle Date Bollati della ditta. -->
+!!! info "Dove stanno i progressivi, e chi li aggiorna"
 
-<!-- DA VERIFICARE: cosa cambia fra "Tipo Stampa" GRAFICA e TESTO in termini di stampanti supportate. -->
+    Non nelle Date Bollati: stanno in **Archivi ▸ Ditte**, nella scheda
+    **Progressivi**, sotto *Progressivi Libro Giornale* — **PAGINA**,
+    **RIGO** e i due totali di dare e avere.
 
-<!-- DA VERIFICARE: come si indicano più sezioni nel libro giornale, visto che il messaggio parla di "troppe sezioni selezionate". -->
+    Aprendo la stampa, **Pagina Iniziale** e **Rigo Iniziale** arrivano già
+    compilati con quei valori **più uno**, e **DARE** e **AVERE** con i due
+    totali. Non c'è da ricopiarli a mano dal registro: basta controllare che
+    corrispondano all'ultima pagina stampata.
+
+    A fine stampa il programma li riscrive, ma **solo quelli per cui hai
+    lasciato attiva la relativa opzione**: aggiorna pagina, aggiorna rigo,
+    aggiorna totali. Togliendole, la stampa non lascia traccia e la volta
+    dopo riparte dagli stessi numeri — utile per le prove.
+
+!!! warning "In GRAFICA il rigo finale te lo chiede"
+
+    Le due modalità non si comportano allo stesso modo sui progressivi.
+
+    In **TESTO** il programma compone la pagina riga per riga, quindi sa
+    dove è arrivato: pagina, rigo e totali li aggiorna da sé.
+
+    In **GRAFICA** l'impaginazione la fa il motore di stampa: il programma
+    ricava il **numero di pagine** stampate, ma il rigo e i totali no.
+    Perciò, se hai chiesto di aggiornarli, a fine stampa si apre una
+    finestrella che chiede di **digitare rigo, dare e avere** leggendoli
+    dall'ultima pagina uscita. Se la chiudi con Esci, quei tre valori
+    restano come stavano.
+
+!!! note "GRAFICA e TESTO: quali stampanti"
+
+    **GRAFICA** produce un documento impaginato e lo manda a una qualunque
+    stampante di Windows — laser, a getto, PDF. È la scelta normale, ed è
+    quella che il programma propone.
+
+    **TESTO** scrive **caratteri in colonne fisse**, a larghezza di pagina
+    decisa: è il modo con cui si stampava sui moduli continui, e serve a chi
+    usa ancora una **stampante ad aghi** con il registro bollato a modulo
+    continuo. Su una stampante moderna funziona, ma l'impaginazione resta
+    quella a caratteri.
+
+    Quale delle due venga proposta all'apertura dipende dalla **postazione**:
+    dove le stampe a caratteri sono abilitate, la finestra si apre già su
+    *TESTO*. In ogni caso si può cambiare prima di stampare.
+
+!!! note "Come si scelgono più sezioni"
+
+    Con il comando di **selezione delle sezioni**, che apre un elenco a
+    spunte: quelle scelte finiscono nel campo accanto, separate da virgola.
+    Non spuntandone nessuna vale **TUTTE**.
+
+    Il messaggio *Troppe sezioni selezionate. Le ultime saranno scartate !*
+    compare solo se l'elenco dei numeri supera i 254 caratteri — parecchie
+    decine di sezioni. Su una contabilità normale non si incontra.
 
 ## Vedi anche
 

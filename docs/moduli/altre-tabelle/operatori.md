@@ -37,17 +37,18 @@ L'operatore si collega poi all'utente nel campo **Operatore** della
 
 ![Operatori](../../assets/img/altre-tabelle/operatori.png)
 
-È una maschera a finestra unica, senza schede: la barra dei comandi e quattro
-campi.
+È una maschera a finestra unica, senza schede: la barra dei comandi, quattro
+campi e una casella.
 
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Codice** | ● | Identificativo dell'operatore. In modifica non è modificabile. | numero |
-| **Descrizione** | ● | Nome dell'operatore, come compare sugli scontrini e nelle stampe. | testo |
-| **Tessera** | | Il codice della tessera con cui l'operatore si identifica alla cassa. | testo |
-| **Password** | | La password con cui l'operatore si identifica quando non usa la tessera. | testo |
+| **Descrizione** | ● | Nome dell'operatore, come compare sugli scontrini e nelle stampe. | testo, fino a 30 caratteri |
+| **Tessera** | | Il codice della tessera con cui l'operatore si identifica alla cassa. Quello che scrivi diventa maiuscolo. | testo, fino a 15 caratteri |
+| **Password** | | Il codice che l'operatore digita per farsi riconoscere alla cassa touch. Si scrive coperto, a pallini, sia qui sia alla cassa. Distingue maiuscole e minuscole. | testo, fino a 16 caratteri |
+| **Supervisore** | | Dà a questo operatore il permesso di usare i tasti riservati della cassa touch. | attivo/non attivo |
 
 {: .campi }
 
@@ -70,9 +71,11 @@ campi.
 
 1. Apri **Menu ▸ Archivi ▸ Altre Tabelle ▸ Operatori ▸ Inserimento**.
 2. Digita **Codice** e **Descrizione**.
-3. Compila **Tessera** se l'operatore si identifica passando un badge, oppure
-   **Password** se digita un codice.
-4. Premi **F2 - Salva**.
+3. Compila **Tessera** se l'operatore si identifica passando un badge.
+4. Compila **Password** se lavora alla cassa touch: lì il codice gli viene
+   chiesto, e senza password non entra.
+5. Spunta **Supervisore** solo a chi deve poter usare i tasti riservati.
+6. Premi **F2 - Salva**.
 
 ## Controlli e messaggi
 
@@ -89,9 +92,39 @@ campi.
     già registrati: non riciclare il suo codice per un'altra persona, o le
     statistiche di cassa risulteranno confuse.
 
-<!-- DA VERIFICARE: se la password dell'operatore sia digitata in chiaro o coperta, e dove venga richiesta durante il lavoro alla cassa. -->
+!!! note "Quando viene chiesta la password"
 
-<!-- DA VERIFICARE: quale lettore di tessere è previsto e in che formato va scritto il codice in "Tessera". -->
+    Soltanto alla **cassa touchscreen**, e in due momenti:
+
+    - **all'apertura della cassa**, nella finestra dove si dice chi sta per
+      lavorare: si indica l'operatore e si digita la sua password;
+    - quando qualcuno preme un **tasto riservato** e l'operatore in turno non
+      è un **Supervisore**. Allora si apre la finestra *Operatore
+      Supervisore*, che chiede codice e password di chi autorizza. Se
+      l'operatore in turno è già Supervisore non viene chiesto niente, e il
+      permesso vale per tutto il resto della sessione.
+
+    Se l'impostazione dei tasti riservati è disattivata sulla postazione, la
+    seconda richiesta non compare mai.
+
+    In tutte le altre maschere — documenti, vendita al banco, fatturazione —
+    l'operatore si sceglie soltanto per codice o per tessera, **senza**
+    password.
+
+    La password sbagliata non produce nessun messaggio: solo un segnale
+    acustico e il cursore che resta dov'è.
+
+!!! note "La tessera: quale lettore"
+
+    Nessuno in particolare. Il programma non dialoga con il lettore: la
+    tessera si legge nello **stesso campo** dove si digita il codice
+    dell'operatore. Prima prova a leggere quello che c'è scritto come numero
+    di operatore e, se non lo trova, lo cerca fra le tessere.
+
+    Va quindi bene qualunque lettore — badge a barre o banda magnetica — che
+    si comporti come una tastiera e finisca con un invio. In **Tessera** si
+    scrive **esattamente la stessa sequenza che il lettore trasmette**: fino a
+    quindici caratteri, che il programma rende maiuscoli.
 
 ## Vedi anche
 

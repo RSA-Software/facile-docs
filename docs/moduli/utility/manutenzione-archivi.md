@@ -39,12 +39,12 @@ movimenti, che restano l'unica verità.
 | **Riporto Esistenze Magazzino Anno Precedente** | Porta nell'anno in corso le esistenze finali dell'anno prima. La finestra si chiama *Riporto esistenze magazzino anno precedente*. |
 | **Ricalcolo Movimenti di Magazzino** | Ricostruisce esistenze e progressivi a partire dai [movimenti](../magazzino/movimenti-magazzino.md). |
 | **Valorizzazione Costi Movimenti** | Attribuisce ai movimenti il costo secondo il metodo scelto. |
-| **Aggiorna Catalogo Dati** | Aggiorna la struttura degli archivi. È il passo che alcune procedure di assistenza richiedono prima di poter partire. |
+| **Aggiorna Catalogo Dati** | Rifà il catalogo che permette di interrogare gli archivi come se fossero tabelle SQL. È il passo che alcune procedure di assistenza richiedono prima di poter partire. |
 | **Aggiungi Movimenti dell' Anno allo Storico** | Porta i movimenti dell'anno nello storico, da cui pescano le statistiche pluriennali. |
 | **Rimuovi Movimenti dell' Anno dallo Storico** | Li toglie. |
 | **Rinumerazione Scontrini** | Rinumera un intervallo di [scontrini](../vendite/scontrini.md). |
-| **Importa** | Carica le tabelle di base — banche, pagamenti, zone, categorie economiche, vettori, agenti, codici IVA — da un'installazione GESA. Serve nei passaggi da un programma precedente. |
-| **Importa Foto** | Carica le fotografie degli articoli. |
+| **Importa** | Carica gli archivi da **fogli Excel**, uno alla volta: clienti, fornitori, articoli, listini e altri diciotto. Serve nel primo popolamento di un'installazione nuova. |
+| **Importa Foto** | Carica le fotografie degli articoli da una cartella. **Solo Calzature.** |
 | **Installazione Software su PocketPC** | Installa il programma sul palmare collegato. |
 
 ## Prerequisiti
@@ -151,7 +151,19 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 | *La procedura permette la rimozioni dei dati dell' anno dallo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | Hai avviato la rimozione dallo storico. | **Sì** procede. |
 | *Impossibile Caricare RAPI.DLL !<br>Controllare presenza installazione ActiveSync.* | Manca ActiveSync per parlare con il palmare. | Installalo sulla postazione. |
 
-<!-- DA VERIFICARE: i messaggi propri dei ricalcoli e della valorizzazione. -->
+A questi si aggiungono i messaggi dei singoli ricalcoli:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Con questa procedura vengono azzerati e ricalcolati tutti i saldi contabili.<br>Si raccomanda di fare una copia degli archivi prima di procedere e di lavorare con un  solo terminale collegato al programma per tutta la durata dell' operazione.<br><br> Scegliere Si per Continuare.* | Conferma richiesta dal **Ricalcolo Saldi Contabili**. | Fai davvero la copia. La risposta preimpostata è **No**. |
+| *Errore su Movimento N. n* | Una registrazione di prima nota non si riesce a rileggere. | È un archivio danneggiato: chiama l'assistenza. |
+| *Errore su Movimento N. n !<br><br>Correggere il movimento e ricalcolare i saldi.<br><br>Vuoi Continuare ?* | Una registrazione non si riesce a riscrivere. | Prendi nota del numero. **Sì** va avanti con le altre, **No** si ferma. In ogni caso quel movimento va sistemato e il ricalcolo rifatto. |
+| *Vuoi effettuare il ricalcolo per deposito ?<br><br>Consigliata per archivi di grandi dimensioni.* | Il **Ricalcolo Movimenti di Magazzino** su più depositi. | **Sì** lavora un deposito per volta, più lento ma più leggero; **No** li fa tutti insieme. |
+| *Ricalcolo Magazzino Concluso Regolarmente.* | Il ricalcolo del magazzino è finito. | Nessuna azione. |
+| *Vuoi importare i clienti da un foglio EXCEL ?* e le domande analoghe | **Importa**: una domanda per ciascun archivio. | **Sì** apre la scelta del file, **No** passa all'archivio seguente. |
+| *Formato file non compatibile!* | Il foglio Excel scelto non ha le colonne attese. | Controlla il tracciato con l'assistenza. |
+| *Impossibile Creare la tabella* | Non si riesce a leggere il foglio. | Verifica che il file non sia aperto in Excel. |
+| *Impossibile caricare le DLL di Imagekit!* | **Importa Foto** non trova i componenti per leggere le immagini. | Chiama l'assistenza: manca un pezzo dell'installazione. |
 
 ## Note
 
@@ -167,16 +179,66 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
     sbagliato o mancante, il ricalcolo lo conferma invece di risolverlo: prima
     si sistema il movimento, poi si ricalcola.
 
-!!! note "«Aggiorna Catalogo Dati» è un prerequisito, non una riparazione"
+!!! info "Che cosa fa «Aggiorna Catalogo Dati»"
 
-    Diverse procedure del menu [Assistenza](assistenza.md) chiedono che sia
-    stato eseguito su tutti gli anni di gestione prima di poter partire.
+    **Non tocca i dati.** Riscrive il file che descrive gli archivi al driver
+    ODBC — il *catalogo* — cioè l'elenco delle tabelle e dei campi con cui
+    Crystal e le stampe in modalità SQL riescono a interrogare gli archivi.
 
-<!-- DA VERIFICARE: cosa fa esattamente "Aggiorna Catalogo Dati" sugli archivi. -->
+    Il file sta nella cartella del programma e si chiama `FDATI001.DB` per
+    l'anno corrente della ditta 1, `F2025001.DB` per un anno passato: uno per
+    ditta e per anno. È per questo che le procedure di assistenza chiedono di
+    lanciarlo **su tutti gli anni** e non solo su quello corrente.
 
-<!-- DA VERIFICARE: da dove vengono lette le fotografie di "Importa Foto" e con quale criterio sono associate agli articoli. -->
+    Il programma lo rifà anche da sé quando si accorge che il catalogo è più
+    vecchio del programma, e lo rifà sempre alla creazione di un
+    [nuovo esercizio](esercizi-e-chiusure.md).
 
-<!-- DA VERIFICARE: se "Importa" da GESA sia ancora utilizzabile e in quali passaggi. -->
+    Serve **solo con gli archivi c-tree**: su PostgreSQL la voce non fa niente,
+    perché il catalogo lo tiene il server.
+
+!!! info "Come «Importa Foto» trova le fotografie"
+
+    È una funzione della **versione Calzature**: nelle altre la voce c'è nel
+    menu ma non fa niente.
+
+    Le immagini si mettono tutte in **una cartella sola**. La prima volta il
+    programma la chiede con un selettore intitolato *Percorso Foto* e poi se la
+    ricorda; in sessione remota usa la cartella `in` dell'utente.
+
+    L'abbinamento è **per nome del file**, non per codice articolo. Il nome si
+    compone di tre pezzi, tutti minuscoli e senza spazi:
+
+    1. i **primi cinque caratteri del sottogruppo** dell'articolo;
+    2. il **codice fornitore** dell'articolo **senza le ultime cinque cifre**;
+    3. l'**ultimo carattere** del codice fornitore.
+
+    Il tutto con estensione `.jpg`. Per lo stesso articolo si possono mettere
+    fino a **quindici immagini**, aggiungendo al nome `_01`, `_02` e così via
+    fino a `_14`.
+
+    Vengono guardati solo gli articoli che hanno almeno un movimento nello
+    storico. Di quello che è stato caricato resta il registro in `log\foto.txt`.
+
+!!! warning "«Importa» non importa più da GESA"
+
+    Il nome tradisce l'origine, ma il pezzo che leggeva gli archivi GESA **non
+    è più nel programma**: resta nel sorgente disattivato e non viene nemmeno
+    compilato.
+
+    Quello che la voce fa davvero è una **catena di importazioni da fogli
+    Excel**. Il programma chiede, uno dopo l'altro: clienti, punti fidelity,
+    fornitori, scadenze, marchi, stagioni, reparti, categorie merceologiche,
+    gruppi, sottogruppi, articoli, codici a barre, esistenze, codici IVA,
+    listino, banchi, note degli articoli e ubicazioni.
+
+    A ogni domanda si risponde **No** per saltare quell'archivio, oppure **Sì**
+    e si sceglie il file `.xls`. È una sequenza lunga: per caricare un solo
+    archivio bisogna rispondere No a tutti gli altri.
+
+    **Ogni foglio deve avere il tracciato che il programma si aspetta**, ed è
+    diverso per ciascun archivio: prima di usarla, fatti dare i tracciati
+    dall'assistenza.
 
 ## Vedi anche
 

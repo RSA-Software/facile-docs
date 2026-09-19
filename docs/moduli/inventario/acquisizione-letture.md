@@ -186,7 +186,7 @@ versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
 |---|---|---|
 | *Operazione disponibile solo su archivi anno corrente.* | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro e riprova. |
 | *Codice Articolo non trovato in archivio !* | Il codice battuto non esiste. | Controlla il codice, o inserisci l'articolo in anagrafica. |
-| *Carico Merci non trovato in archivio !<br>Vuoi indicarne un altro ?* | Il numero di carico indicato non esiste. | **Sì** torna a chiedere il numero, **No** annulla l’ acquisizione. |
+| *Carico Merci non trovato in archivio !<br>Vuoi indicarne un altro ?* | Il numero di carico indicato non esiste. | **Sì** torna a chiedere il numero, **No** annulla l'acquisizione. |
 | *Acquisizione dati conclusa regolarmente !* | L'acquisizione da carico merci è finita. | Controlla le letture da **Modifica Dati Acquisiti**. |
 | *E' obbligatorio indicare la matricola!* | Con la gestione matricole attiva il campo è vuoto. | Compila la **Matricola**. |
 | *La quantità indicata deve essere obbligatoriamente pari a uno!* | Con le matricole ogni lettura vale un pezzo. | Metti `1` e registra una lettura per matricola. |
@@ -210,10 +210,38 @@ versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
     volte lo stesso scaffale raddoppia le quantità. Per ripartire da zero c'è
     **Azzeramento Letture**, in [Chiusura dell'inventario](chiusura-inventario.md).
 
-<!-- DA VERIFICARE: se le letture dello stesso articolo e deposito vengano sommate in chiusura o se contino come righe distinte. -->
+!!! info "Le letture ripetute si sommano"
+
+    Passare due volte lo stesso articolo non è un errore da correggere: alla
+    chiusura il programma **somma tutte le letture** dello stesso articolo,
+    deposito, sezione e — nelle versioni che le hanno — taglia e colore, e
+    ottiene una quantità sola.
+
+    È quello che serve davvero: due persone che contano due scaffali dello
+    stesso articolo possono passare ciascuna le proprie letture, e alla fine
+    tornano.
+
+    Attenzione al rovescio: **rifare un conteggio già acquisito raddoppia**.
+    Se un conteggio va rifatto, prima vanno tolte le letture vecchie.
 
 
-<!-- DA VERIFICARE: quali sono i nomi esatti delle colonne facoltative del foglio Excel di importazione. -->
+!!! info "Le colonne del foglio Excel, per esteso"
+
+    Il programma cerca le intestazioni **in maiuscolo**, in una riga
+    qualsiasi del foglio, e non importa in che ordine stiano:
+
+    | Intestazione | Obbligatoria | Contenuto |
+    |---|:---:|---|
+    | `CODICE` | ● | Il codice dell'articolo. |
+    | `QUANTITA` | ● | La quantità contata. Senza accento. |
+    | `DEPOSITO` | | Il deposito. Se manca, vale quello attivo. |
+    | `SEZIONE` | | La sezione. |
+    | `IDXTAG` | | La taglia, nelle versioni con taglie e colori. |
+    | `COLORE` | | Il colore, nelle versioni con taglie e colori. |
+
+    `CODICE` e `QUANTITA` sono le uniche indispensabili: se ne manca una, il
+    programma lo dice e non importa niente. Nelle versioni con taglie e
+    colori serve inoltre **almeno una** fra `IDXTAG` e `COLORE`.
 
 ## Vedi anche
 

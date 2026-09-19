@@ -175,13 +175,96 @@ variazioni, che è molto più rapido.
     `RSABrainpos_EOD.BAT` nelle rispettive cartelle. Se il trasferimento non
     avviene, il problema è quasi sempre lì e non in Facile.
 
-<!-- DA VERIFICARE: quale famiglia usa quale cartella e quale tracciato di file. -->
+!!! info "Tutte le famiglie usano gli stessi file, in due cartelle sole"
 
-<!-- DA VERIFICARE: come si configura il collegamento fisico alle casse Ditron oltre alla scelta delle porte. -->
+    Non c'è un tracciato per marca: **SysPC, Brainpos 8, Aladino EPOS e Custom
+    Retail scrivono e leggono gli stessi file**, nelle cartelle `out` e `in`
+    dell'installazione.
 
-<!-- DA VERIFICARE: cosa cambia fra i sei livelli di "PARZIALE" nella cancellazione promozioni. -->
+    | File | Dove | Che cosa contiene |
+    |---|---|---|
+    | `out\articoli.txt` | in uscita | gli articoli da programmare sulle casse |
+    | `out\offerte.txt` | in uscita | le promozioni |
+    | `out\clienti.txt` | in uscita | l'anagrafica fidelity |
+    | `out\fidelity.txt` | in uscita | i saldi punti |
+    | `in\VENDITE.TXT` | in entrata | il venduto della giornata |
+    | `in\DC*.TXT` | in entrata | il dettaglio degli scontrini |
 
-<!-- DA VERIFICARE: se l'invio dei clienti e dei saldi fidelity esista anche per le altre famiglie di casse. -->
+    A cambiare è **chi porta il file alla cassa**. Facile scrive il file e poi
+    lancia un comando di sistema, diverso per famiglia, che sta in una cartella
+    con il nome della marca:
+
+    | Famiglia | Comando per gli articoli | Comando di fine giornata |
+    |---|---|---|
+    | **SysPC** | `SYSPC\RSASyspc_PLU.BAT` | `Syspc\RSASyspc_EOD.BAT` |
+    | **Aladino EPOS** | `EPOS\RSAEpos_PLU.BAT` | `Epos\RSAEpos_EOD.BAT` |
+    | **Brainpos 8** | `BRAINPOS\RSABrainpos_PLU.BAT` | `Brainpos\RSABrainpos_EOD.BAT` |
+
+    Per i saldi fidelity il comando è `SYSPC\RSASyspc_FIDELITY.BAT`.
+
+    È il motivo per cui un invio può "riuscire" senza che la cassa cambi
+    niente: Facile ha scritto il suo file, ma il comando non l'ha portato a
+    destinazione. Quando qualcosa non torna, la prima cosa da guardare è se il
+    file in `out` è aggiornato.
+
+!!! note "La fine giornata aspetta il segnale della cassa"
+
+    Lanciato il comando di fine giornata, Facile **non legge subito**: aspetta
+    che sparisca il file di blocco `in\RSA_EOD.LCK`, che la procedura della
+    cassa crea mentre lavora e cancella quando ha finito. Solo allora cerca
+    `VENDITE.TXT` e i `DC*.TXT`.
+
+    Se la procedura della cassa si pianta lasciando il file di blocco,
+    **Facile resta in attesa**: in quel caso va chiuso e il file `RSA_EOD.LCK`
+    va tolto a mano dalla cartella `in`.
+
+!!! info "Le casse Ditron non usano i file"
+
+    Sono l'eccezione: con i registratori Ditron e compatibili Facile **parla
+    direttamente sulla porta seriale**, senza passare da un file di scambio e
+    senza comandi esterni. È il motivo per cui quella famiglia ha una voce in
+    più, **Impostazione Porte ECR**, e non ha né *Invio Globale* né
+    *Acquisizione Manuale File Vendite*.
+
+    **Impostazione Porte ECR** è tutto quello che c'è da configurare dal
+    programma: si dice quanti registratori ci sono e su quale porta sta
+    ciascuno. Il resto — velocità, parità, cavo — si imposta **sul
+    registratore**, non qui: i due lati devono corrispondere, e i valori li dà
+    il tecnico che installa la cassa.
+
+!!! info "I sei «PARZIALE» sono sei intervalli di numeri di offerta"
+
+    La scelta dice **fino a quale numero di promozione cancellare** sulle
+    casse:
+
+    | Voce | Cancella le offerte |
+    |---|---|
+    | `COMPLETA` | tutte |
+    | `PARZIALE (1-31999)` | dalla 1 alla 31999 |
+    | `PARZIALE (1-998)` | dalla 1 alla 998 |
+    | `PARZIALE (1-2000)` | dalla 1 alla 2000 |
+    | `PARZIALE (1-3000)` | dalla 1 alla 3000 |
+    | `PARZIALE (1-4000)` | dalla 1 alla 4000 |
+    | `PARZIALE (1-5000)` | dalla 1 alla 5000 |
+
+    Non è un ordine crescente: la prima delle parziali è la più larga di tutte.
+    Il numero da scegliere dipende da **come sono numerate le promozioni sulle
+    casse**, e va concordato con chi le ha configurate: cancellare oltre il
+    necessario toglie anche offerte che devono restare.
+
+    La scelta **resta memorizzata**, e separatamente per ogni famiglia di
+    casse: riaprendo la finestra si ritrova quella dell'ultima volta.
+
+!!! warning "Clienti e saldi fidelity si mandano solo alle SysPC"
+
+    **Invio Clienti Fidelity** e **Invio Saldi Fidelity** esistono soltanto
+    sotto SysPC, e non è una dimenticanza del menu: il comando che porta il
+    file alla cassa è scritto solo per quella famiglia.
+
+    Sulle altre casse il programma **scrive comunque** `out\clienti.txt`
+    insieme agli articoli, ma non ha modo di consegnarlo. Chi tiene la raccolta
+    punti su casse diverse dalle SysPC deve farsi fare il trasferimento
+    dall'assistenza.
 
 ## Vedi anche
 

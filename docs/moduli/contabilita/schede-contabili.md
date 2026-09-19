@@ -112,9 +112,32 @@ La griglia ha queste colonne:
     righe del periodo scelto: è utile per leggere il movimentato del mese, ma
     non è il saldo vero del conto.
 
-<!-- DA VERIFICARE: se la Sezione filtri anche il saldo iniziale o solo le righe del periodo. -->
+!!! note "La Sezione filtra tutto, saldo iniziale compreso"
 
-<!-- DA VERIFICARE: a cosa serve la colonna Sel. oltre che alla stampa: F5 e F6 spuntano tutto, ma non ho individuato quale comando usi la selezione. -->
+    Indicando una sezione la scheda diventa per intero la scheda di quella
+    sezione: non solo le righe del periodo, ma anche il **saldo iniziale**
+    viene calcolato sui soli movimenti di quella sezione.
+
+    La scheda torna quindi quadrata in sé, e non c'è il rischio di leggere un
+    saldo d'apertura di tutta la ditta con un movimentato di una sola
+    sezione.
+
+    Se l'utente con cui sei entrato ha una sezione assegnata, il campo è già
+    compilato con quella e **non si può cambiare**.
+
+!!! info "La colonna Sel. non serve solo a stampare"
+
+    Togliendo la spunta a una riga, i tre totali in fondo alla scheda —
+    **Dare**, **Avere** e **Saldo** — si **ricalcolano subito** sulle sole
+    righe rimaste spuntate, sempre a partire dal saldo iniziale.
+
+    È il modo pratico per rispondere a *«quanto sarebbe il saldo se questa
+    fattura non ci fosse?»*: si toglie la spunta, si legge il saldo, si
+    rimette. Niente viene modificato in archivio.
+
+    Le righe non spuntate restano fuori anche dalla **stampa** della scheda,
+    e i comandi che spuntano o tolgono la spunta a tutte servono a partire
+    dall'uno o dall'altro estremo.
 
 ## Vedi anche
 

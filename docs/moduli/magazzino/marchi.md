@@ -114,7 +114,21 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: le due voci dell'elenco Stock Ecommerce non hanno un'etichetta leggibile nel disegno della maschera. Quali sono, e quale delle due espone le giacenze sul sito? -->
+!!! info "Le due voci di Stock Ecommerce"
+
+    Sono **SI** e **NO**, e la voce proposta è **SI**.
+
+    Con **SI** la sincronizzazione con il negozio online manda, per gli
+    articoli di questo marchio, la **disponibilità reale** — esistenza meno
+    impegnato e meno ordinato dai clienti — e il sito la mostra.
+
+    Con **NO** la quantità **non viene pubblicata**: gli articoli restano
+    disponibili sul sito senza che il cliente veda quanti ce ne sono. Si usa
+    per i marchi che si riforniscono a richiesta, dove la giacenza del
+    momento non è un'informazione utile.
+
+    Su un'installazione senza negozio online la scelta non ha nessun
+    effetto.
 
 ## Vedi anche
 

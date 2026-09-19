@@ -87,7 +87,9 @@ Gli stessi campi, più:
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Data** | ● | La data a cui riferire i rapporti. | data |
+| **Data** | ● | La data a cui riferire i rapporti. Dev'essere dentro l'anno di lavoro. | data |
+| **Mostra Anteprima di Stampa** | | Fa vedere ogni rapporto a video prima di mandarlo alla stampante. | attivo/non attivo |
+| **Includi nella stampa** | | Le caselle dei rapporti da produrre: vedi sotto. | una o più caselle |
 
 {: .campi }
 
@@ -140,11 +142,55 @@ Gli stessi campi, più:
     **Squadrature Movimenti** prima di stampare il libro giornale, i registri
     IVA e il bilancio di verifica.
 
-<!-- DA VERIFICARE: cosa contengono esattamente i "rapporti contabili" di Stampa Rapporti. -->
+!!! info "Quali rapporti produce Stampa Rapporti"
 
-<!-- DA VERIFICARE: se la compensazione fra i due saldi vada poi registrata a mano o esista una funzione che la genera. -->
+    Non è un rapporto solo: nel riquadro **Includi nella stampa** si spunta
+    quello che serve, e premendo **F2 - OK** escono uno dopo l'altro.
 
-<!-- DA VERIFICARE: quali colonne mostra la griglia dei Saldi Compensazione: il decodificatore delle etichette non le ha estratte. -->
+    | Casella | Che cosa stampa |
+    |---|---|
+    | **Movimenti Cassa** | La scheda contabile dei conti di cassa. |
+    | **Movimenti Banche** | La scheda contabile dei conti di banca. |
+    | **Saldi Clienti** | La sintesi delle scadenze dei clienti. |
+    | **Saldi Fornitori** | La sintesi delle scadenze dei fornitori. |
+    | **Credito Generato** | Il credito maturato verso i clienti. |
+    | **Debito Generato** | Il debito maturato verso i fornitori. |
+
+    C'è anche una casella **Documenti Emessi**, ma è **spenta**: compare
+    nella finestra e non si può spuntare.
+
+    Spuntandole tutte si ottiene la fotografia della situazione a quella
+    data in sei stampe, che è il modo veloce di preparare il fascicolo per
+    il titolare o per il consulente.
+
+!!! info "Le colonne dei Saldi Compensazione"
+
+    Nove colonne, in tre gruppi:
+
+    | Gruppo | Colonne |
+    |---|---|
+    | Il cliente | **Codice**, **Descrizione**, **P. IVA**, **Saldo** |
+    | Il fornitore | **Codice**, **Descrizione**, **P. IVA**, **Saldo** |
+    | La differenza | **Saldo**, cioè quanto resta dopo aver compensato i due |
+
+    L'ultima riga è il **TOTALE** delle tre colonne di saldo.
+
+    Quando allo stesso cliente corrispondono **più fornitori**, al posto del
+    nome compare *MULTIPLI FORNITORI* e al posto della partita IVA una fila
+    di `X`: il saldo è la somma di tutti.
+
+!!! warning "L'abbinamento lo fai tu, e la compensazione la registri tu"
+
+    La finestra mette insieme cliente e fornitore **solo se sono stati
+    collegati a mano**: sull'anagrafica del cliente c'è il campo con il
+    codice del fornitore corrispondente, e viceversa. Senza quel
+    collegamento il soggetto non compare qui, per quanto la partita IVA sia
+    la stessa.
+
+    E la finestra **non registra niente**: mostra i due saldi e la
+    differenza, e li stampa. La scrittura che compensa il credito con il
+    debito va fatta a mano in
+    [prima nota](registrazione-prima-nota.md).
 
 ## Vedi anche
 

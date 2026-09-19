@@ -115,7 +115,7 @@ Non applicabile.
 | **F8 - Annulla** | ++f8++ | Ricarica il documento scartando le modifiche. |
 | **F9 - Esporta** | ++f9++ | Esporta il documento. |
 
-!!! note "In Inserimento c’ è solo Salva"
+!!! note "In Inserimento c'è solo Salva"
 
     Aprendo da **Inserimento** la barra ha il solo **F2 - Salva**: gli altri
     comandi compaiono entrando da **Modifica**, che è la stessa maschera aperta
@@ -142,7 +142,7 @@ Non applicabile.
 |---|---|---|
 | *Nessuna riga valida per la compilazione del DAS !* | Nessuna riga ha i dati fiscali completi. | Aprire le righe e completarle. |
 | *la durata presunta del trasporto deve essere tra 1 e 18!* | **Durata Presunta** fuori intervallo. | Indicare un valore da 1 a 18. |
-| *Valore Densita’ a temperatura ambiente non indicato !* | Manca la densità sulla riga. | Aprire la riga e compilarla. |
+| *Valore Densita' a temperatura ambiente non indicato !* | Manca la densità sulla riga. | Aprire la riga e compilarla. |
 | *Codice Registro Non Valido !* / *Codice Causale Movimentazione Non Valido !* / *Codice Posizione Fiscale Non Valido !* | Un codice fiscale della riga non esiste in archivio. | Correggerlo nella riga o nel prodotto energetico. |
 | *La causale deve essere di Scarico !* | La causale indicata non è di scarico. | Il DAS accompagna merce in uscita: serve una causale di scarico. |
 | *Vuoi stampare il Documento di Accompagnamento Semplificato (DAS) ?* | Chiesto dopo il salvataggio. | Rispondere **Sì** per stampare subito. |
@@ -165,17 +165,17 @@ Non applicabile.
     Se l'azienda non tratta alcolici o prodotti energetici, questo sottomenu
     non serve.
 
-!!! info "I dati non vengono dall’ anagrafica articoli"
+!!! info "I dati non vengono dall'anagrafica articoli"
 
-    La riga del DAS si compila dall’ archivio dei **prodotti energetici**, non
+    La riga del DAS si compila dall'archivio dei **prodotti energetici**, non
     dagli articoli: digitando il codice, il programma propone descrizione,
     **Codice NC**, **Registro** e **Pos. Fiscale** presi da lì.
 
     Si impostano da **Menu ▸ Archivi ▸ Prodotti Energetici ▸ Inserimento** (o
-    *Modifica*); c’ è anche **Importa (TA13)** per caricarli da file.
+    *Modifica*); c'è anche **Importa (TA13)** per caricarli da file.
     Senza quei dati la riga resta incompleta e il DAS non si può emettere.
 
-!!! note "Non c’ è rapporto con il Registro Sostanze Zuccherine"
+!!! note "Non c'è rapporto con il Registro Sostanze Zuccherine"
 
     Sono due cose separate, anche se vivono nello stesso mondo degli
     adempimenti. Il DAS è un **documento di trasporto** e sta nel suo archivio;

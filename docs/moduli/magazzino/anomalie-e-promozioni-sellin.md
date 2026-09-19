@@ -175,9 +175,37 @@ Per le **promozioni sellin**:
     Sell-Out**, vedi
     [Stampe dei movimenti di magazzino](stampe-movimenti-magazzino.md).
 
-<!-- DA VERIFICARE: come l'anomalia si collega al carico su cui è stata riscontrata. -->
+!!! info "L'anomalia è un documento, e il carico ne porta il numero"
 
-<!-- DA VERIFICARE: cosa produce la contabilizzazione di un'anomalia. -->
+    Verificando un carico, se quello che è arrivato non corrisponde a
+    quello che era stato ordinato o bollettato, il programma **genera un
+    documento di anomalie**, con una riga per ogni scostamento, e lo
+    annuncia: *È stato generato un documento di Anomalie! Doc. N. …*.
+
+    Il numero di quel documento viene **scritto sulla testata del carico**.
+    È quello il collegamento: da un carico si risale alla sua anomalia con
+    il comando **Anomalia**, che apre il documento; e la ricerca dei
+    carichi permette di chiedere i soli carichi **verificati con anomalie**
+    o i soli **verificati senza**.
+
+    Un carico ha **una sola** anomalia: rifacendo la verifica il documento
+    viene rigenerato.
+
+!!! info "Contabilizzare non è un'elaborazione: apre la prima nota"
+
+    Il comando **Contabilizza** prende i carichi che hai spuntato e apre la
+    maschera di **registrazione di prima nota** già compilata con quello
+    che sa: il fornitore, il numero e la data della fattura, gli imponibili
+    e le imposte che risultano dai carichi.
+
+    Da lì la registrazione si completa e si salva come qualunque altra: il
+    programma non registra niente da solo, e finché non salvi non è stato
+    scritto nulla.
+
+    Si possono contabilizzare più carichi insieme **solo se hanno lo stesso
+    numero e la stessa data di fattura**; altrimenti il programma si ferma
+    con *Non si possono contabilizzare carichi con numeri fattura
+    differenti.*
 
 !!! note "Dove finiscono le promozioni sellin"
 

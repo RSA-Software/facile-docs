@@ -54,7 +54,7 @@ La griglia ha queste colonne:
 | **Cau.** | La [causale](causali-contabili.md) usata. |
 | **Analitica** | Se la registrazione ha imputazioni di contabilità analitica. |
 | **Registro** | Il registro IVA su cui è finita. |
-| **Verif.** | Segna le registrazioni marcate come da verificare. |
+| **Verif.** | È spuntata sulle registrazioni **a posto**. Resta vuota su quelle marcate come *da verificare*. |
 | **Descrizione** | La descrizione della registrazione. |
 | **Rel.** | La relazione: cliente, fornitore o conto. |
 | **Cliente/Fornitore** | Il nominativo. |
@@ -102,8 +102,11 @@ La griglia ha queste colonne:
 ### Controllare le registrazioni da verificare
 
 1. Imposta il periodo.
-2. Guarda la colonna **Verif.**: sono le registrazioni marcate come da
-   ricontrollare al momento in cui sono state fatte.
+2. Guarda la colonna **Verif.**: le righe con la casella **vuota** sono
+   quelle che qualcuno ha marcato come da ricontrollare.
+3. Aprile una per una con **F2 - Modifica**, sistema quello che c'è da
+   sistemare e togli la spunta a **Registrazione da Verificare** prima di
+   salvare.
 
 ## Controlli e messaggi
 
@@ -120,11 +123,42 @@ La griglia ha queste colonne:
     dicembre registrata a gennaio si trova con `DATA DOCUMENTO` cercando in
     dicembre, e con `DATA REGISTRAZIONE` cercando in gennaio.
 
-<!-- DA VERIFICARE: dove vengono salvati i file allegati con F7 - Allegati e se ci sia un limite di dimensione. -->
+!!! info "Gli allegati stanno dentro l'archivio, non su disco"
 
-<!-- DA VERIFICARE: come si marca una registrazione come "da verificare" e chi toglie poi la spunta. -->
+    Il file scelto con **F7 - Allegati** viene **copiato dentro il
+    database**, insieme al nome e alla dimensione: da quel momento il file
+    originale sul disco non serve più, e spostarlo o cancellarlo non fa
+    perdere l'allegato. Chiunque apra quella registrazione da un'altra
+    postazione lo vede.
 
-<!-- DA VERIFICARE: cosa stampa esattamente F9 - Stampa: l'elenco a video o un brogliaccio completo. -->
+    La finestra di scelta parte dalla cartella `in` dell'utente, ma il file
+    si può prendere da dove si vuole; per riaverlo si usa il comando di
+    salvataggio, che propone la cartella `out`.
+
+    **Non c'è nessun limite di dimensione**, e non c'è nessun avviso. Ma
+    ogni allegato pesa sull'archivio e su ogni copia di sicurezza: per le
+    fatture conviene il PDF, non la scansione a piena risoluzione.
+
+!!! note "Chi marca e chi smarca una registrazione"
+
+    Non da qui: la casella **Registrazione da Verificare** sta sulla
+    [maschera di registrazione](registrazione-prima-nota.md), sotto i dati
+    di testata.
+
+    La si spunta mentre si registra, quando un dato non torna e si vuole
+    tornarci sopra. La toglie chi riapre la registrazione e la sistema. Non
+    c'è nessun automatismo: né il programma la mette da solo, né la toglie.
+
+!!! note "Che cosa stampa F9"
+
+    Stampa **esattamente la selezione che hai davanti**: lo stesso
+    intervallo di numeri, lo stesso periodo, la stessa sezione e la stessa
+    causale dei filtri in alto, ordinati per data e poi per numero di
+    registrazione.
+
+    Non è il brogliaccio contabile e non è il libro giornale: è l'elenco
+    che stai guardando, messo su carta in orizzontale. Non tiene conto di
+    eventuali righe selezionate: conta solo il filtro.
 
 ## Vedi anche
 

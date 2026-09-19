@@ -172,13 +172,78 @@ Bilance**.
     Sotto **Bilance HELMAC** c'è la sola voce **Invio Articoli**: il venduto di
     quelle bilance non torna in Facile. Non è un errore di installazione.
 
-<!-- DA VERIFICARE: la differenza fra le due voci di invio delle bilance DIBAL, "- CS" e "- D900". -->
+!!! info "DIBAL: «CS» e «D900» cambiano solo come viene scritta la descrizione"
 
-<!-- DA VERIFICARE: in quale cartella ciascuna marca di bilance scrive e legge i file di scambio. -->
+    Le due voci producono **lo stesso file**, nella stessa cartella, con gli
+    stessi campi. L'unica differenza è **da dove prendono i due nomi**
+    dell'articolo che la bilancia mostra:
 
-<!-- DA VERIFICARE: se i tre modi della maschera Elga (invio, ricezione, ricezione da file) mostrino campi diversi. -->
+    | Voce | Nome 1 | Nome 2 |
+    |---|---|---|
+    | **- CS** | la **Descrizione 1** dell'articolo, per intero | la **Descrizione 2** dell'articolo, per intero |
+    | **- D900** | i **primi 20 caratteri** della Descrizione 1 | quello che **avanza** della Descrizione 1, fino a 20 caratteri |
 
-<!-- DA VERIFICARE: cosa distingue la "ricezione scontrini" dalla "ricezione totali vendite" nel risultato in Facile. -->
+    Il modello D900 vuole due righe da venti caratteri e Facile gliele ricava
+    spezzando la descrizione; i modelli CS accettano due nomi liberi e prendono
+    le due descrizioni come sono. **Sui D900 la Descrizione 2 dell'articolo non
+    viene mandata affatto.**
+
+    Scegliere la voce sbagliata non dà errore: le bilance si programmano lo
+    stesso, con le descrizioni tagliate o duplicate male.
+
+!!! info "Dove ogni marca scrive e legge"
+
+    | Bilancia | Invio articoli | Ricezione |
+    |---|---|---|
+    | **DIBAL** | `C:\DIBAL\articoli.txt` | tutti i `.txt` in `C:\DIBAL\scontrini` |
+    | **Elga** | `out\elgAAMMGG_NN.txt` nella cartella del programma, con data e numero di bancone | lo stesso file, che dopo il caricamento viene spostato in `backup` |
+    | **Zenith** | `out\zenart.txt` | `in\zentotart.txt` per i totali, `zenith\DC-AAAAMMGG.TXT` per gli scontrini |
+    | **Macchi** | `out\macchiart.txt` | `in\totplu.txt` |
+    | **Omega** | `C:\omega\manbil.dat` | i file `.tot` in `C:\omega` |
+
+    Due avvertenze pratiche:
+
+    - **DIBAL e Omega usano percorsi fissi su `C:`**, non configurabili: la
+      cartella deve esistere e deve essere scrivibile, anche se il programma è
+      installato altrove;
+    - **Zenith, Macchi e Omega non parlano direttamente con le bilance**: Facile
+      scrive il file e poi lancia un comando di sistema — `invio_art.bat`,
+      `ricevi_tot.bat` e simili, nella cartella della marca — che è quello che
+      fa il trasferimento vero. Se l'invio non arriva alla bilancia ma il file
+      c'è, il problema è in quel comando, non in Facile.
+
+!!! note "I tre modi della maschera Elga"
+
+    È **la stessa finestra**, con gli stessi campi: cambia solo il verso del
+    lavoro, e il titolo lo dice. Non c'è niente da compilare di diverso fra
+    invio e ricezione.
+
+    **Ricezione da file** si distingue per una cosa sola: invece di cercare il
+    file del giorno nella cartella prevista, apre la scelta del file — serve
+    quando il file è stato salvato altrove, o quando si rilegge un giorno
+    passato già finito in `backup`.
+
+!!! info "Scontrini o totali: cambia il dettaglio, non il risultato"
+
+    Tutte e due le ricezioni producono in Facile **le stesse tre cose**: uno
+    scontrino, i movimenti di magazzino che scaricano gli articoli venduti e,
+    per gli articoli che non si riesce ad abbinare, una riga di **scarto**.
+
+    A cambiare è **quanto dettaglio arriva**:
+
+    | | **Totali vendite** | **Scontrini** |
+    |---|---|---|
+    | Cosa legge | una riga per articolo, con il venduto della giornata | le singole battute, una per una |
+    | Che scontrino nasce | **uno solo**, che raccoglie tutti i totali | **uno solo**, che raccoglie tutte le righe |
+    | Orari | tutto con l'ora del caricamento | tutto con l'ora del caricamento |
+    | A che serve | scaricare il magazzino e basta | avere anche il dettaglio del venduto |
+
+    In tutti e due i casi **lo scontrino che nasce in Facile porta la data e
+    l'ora del caricamento**, non quella della vendita: non è uno scontrino
+    fiscale ma il contenitore con cui il venduto entra in archivio.
+
+    La scelta fra le due dipende da come è impostata la bilancia: se produce
+    solo i totali, l'altra voce non trova niente da leggere.
 
 ## Vedi anche
 

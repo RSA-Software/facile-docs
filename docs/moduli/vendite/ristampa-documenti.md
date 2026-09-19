@@ -36,8 +36,10 @@ arriva già attiva: normalmente serve rifare tutto.
 Prima di ristampare occorre avere i documenti in archivio, che si consultano
 dalla [gestione documenti](gestione-documenti.md).
 
-L'opzione **Solo Esportazione** compare soltanto se l'esportazione è abilitata
-nei [parametri della ditta](../anagrafiche/ditte.md).
+L'opzione **Solo Esportazione** non c'è su tutti i documenti: sulle fatture
+c'è sempre, sugli ordini solo se l'esportazione è abilitata nei
+[parametri della ditta](../anagrafiche/ditte.md), e su DDT, bolle e buoni di
+consegna non compare mai.
 
 ## La maschera
 
@@ -57,7 +59,7 @@ OK** ed **Esci**.
 | **Cliente** | | Restringe a un cliente. Vuoto significa `TUTTI`. | codice |
 | **Agente** | | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). Vuoto significa `TUTTI`. | codice |
 | **Trasportatore** | | Restringe a un [trasportatore](../anagrafiche/trasportatori.md). Vuoto significa `TUTTI`. | codice |
-| **Num. Copie** | | Quante copie stampare di ciascun documento. | numero |
+| **Num. Copie** | | Quante copie stampare di ciascun documento. Arriva già impostato con il numero di copie della [ditta](../anagrafiche/ditte.md). | numero |
 | **Includi Documenti non Stampati** | | Comprende anche i documenti mai stampati prima. Sugli ordini arriva già attiva. | attivo/non attivo |
 | **Solo Esportazione** | | Non stampa: produce solo il file di esportazione. Compare solo se l'esportazione è abilitata. | attivo/non attivo |
 
@@ -110,9 +112,56 @@ OK** ed **Esci**.
     lo distingua dall'originale. Se serve una copia riconoscibile, va gestita
     fuori dal programma.
 
-<!-- DA VERIFICARE: se la ristampa aggiorni la data o il contatore di stampa del documento. -->
+!!! warning "Sulle fatture la ristampa può emettere davvero il documento"
 
-<!-- DA VERIFICARE: dove viene prodotto il file quando è attiva "Solo Esportazione". -->
+    Con **Includi Documenti non Stampati** attiva, una fattura ancora
+    *salvata* non viene solo stampata: il programma **ne rifà i calcoli e la
+    porta allo stato EMESSA**, come se la si fosse emessa dalla sua maschera.
+    Da quel momento non è più una bozza.
+
+    Con la casella spenta le fatture salvate vengono **saltate**: la ristampa
+    riguarda solo quelle già emesse o già contabilizzate.
+
+    Sugli ordini funziona diversamente: quelli ancora salvati vengono
+    ricalcolati e riscritti, ma **lo stato non cambia**. Gli ordini annullati
+    vengono sempre saltati.
+
+!!! note "Non esiste un contatore delle stampe"
+
+    Il documento non porta né il numero di volte che è stato stampato né la
+    data dell'ultima stampa, e la ristampa non tocca la sua data. Ristampare
+    dieci volte la stessa fattura lascia l'archivio identico.
+
+    L'unica traccia è sugli **ordini**, che portano un segno di «mandato in
+    stampa»: si accende alla prima stampa — anche se fatta da qui — e non si
+    spegne più. Non è un conteggio: è un sì o no.
+
+!!! info "Dove finisce il file di Solo Esportazione"
+
+    Esce un **PDF per ogni documento**, e niente va alla stampante.
+
+    La cartella è quella che il programma si è annotato la prima volta. Se non
+    ce n'è ancora una, si apre una finestra per sceglierla e la scelta viene
+    ricordata per le volte successive; lavorando in sessione remota il
+    programma non chiede niente e usa la cartella `out` dell'utente.
+
+    Il nome del file può avere due forme, secondo come l'assistenza ha
+    configurato l'esportazione:
+
+    | Forma | Esempio |
+    |---|---|
+    | Estesa | `doc_fatture_N_125_A_04-09-26 - ROSSI MARIO S.R.L..pdf` |
+    | Compatta | `fat001202600125a.pdf` — sigla, ditta, anno, numero, registro |
+
+    Le sigle sono `fat` per fatture e acconti, `ord` per gli ordini e `pre`
+    per i preventivi.
+
+!!! note "Perché DDT, bolle e buoni non hanno l'esportazione"
+
+    Il PDF viene prodotto solo per **fatture e acconti** già emessi o
+    contabilizzati e per **ordini e preventivi** già stampati. Per gli altri
+    documenti la funzione non è prevista, ed è il motivo per cui su quelle tre
+    ristampe la casella **Solo Esportazione** non compare affatto.
 
 ## Vedi anche
 

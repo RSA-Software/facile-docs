@@ -55,7 +55,7 @@ viene comunicato ad alcuni fornitori.
 | **del Canale Specifico** | | Prende il costo dal canale indicato invece che da quello generale. | attivo/non attivo |
 | **No Agg. se in offerta** | | Non aggiorna il prezzo quando l'articolo è in offerta. | attivo/non attivo |
 | **Ribalt. Sconti F.Ft.** | | Ribalta sulle righe gli sconti di fine fattura. Attivandolo compare **Totale**. | attivo/non attivo |
-| **Totale** | | Compare solo con **Ribalt. Sconti F.Ft.** attivo: ribalta l'intero sconto anziché la sola quota di competenza. | attivo/non attivo |
+| **Totale** | | Compare **solo** quando **Ribalt. Sconti F.Ft.** è attivo, e scompare se lo togli. | attivo/non attivo |
 | **Globe Nestlé** | | Codice con cui questo canale è identificato nei trasferimenti verso Nestlé. | testo |
 | **Froneri** | | Codice del canale per i trasferimenti Froneri. | testo |
 | **Udial** | | Codice del canale per i trasferimenti Udial. | testo |
@@ -100,11 +100,26 @@ viene comunicato ad alcuni fornitori.
     di vendita con quei fornitori: sono i codici con cui loro identificano il
     canale. Se non fai quei trasferimenti, lasciali vuoti.
 
-<!-- DA VERIFICARE: la differenza pratica fra i quattro costi di "Cess. da Costo" (ULTIMO, MEDIO, NETTO, FINITO). -->
+!!! note "Dove si assegna il canale"
 
-<!-- DA VERIFICARE: dove il canale viene assegnato: sul cliente, sul contratto fornitore, o su entrambi. -->
+    Su **entrambi**, e non solo:
 
-<!-- DA VERIFICARE: cosa cambia esattamente la casella "Totale" rispetto al solo "Ribalt. Sconti F.Ft.". -->
+    - sul **cliente**, nella sua anagrafica: è il canale con cui quel cliente
+      viene classificato nelle vendite;
+    - sul **contratto fornitore**, che è intestato a fornitore, anno e canale:
+      lo stesso fornitore può avere condizioni diverse per canale;
+    - sulle regole di **disponibilità** degli articoli, dove il canale a zero
+      vale «tutti i canali»;
+    - nella versione Ristorazione, anche sui **menu** e sulle **sale**.
+
+    In tutti questi punti il canale dev'essere già in tabella: se non c'è, il
+    salvataggio si ferma con *Codice Canale non presente in tabella*.
+
+    Un cliente **senza canale** blocca alcuni trasferimenti dati verso i
+    fornitori, che si fermano con *Canale vendita non impostato per il
+    cliente …*.
+
+<!-- DA VERIFICARE: le quattro voci di "Cess. da Costo" (ULTIMO, MEDIO, NETTO, FINITO) e le quattro caselle accanto (del Canale Specifico, No Agg. se in offerta, Ribalt. Sconti F.Ft., Totale). Il programma le registra sul canale e le rilegge quando riapri la maschera, ma nessun'altra parte del programma le consulta: del canale, altrove, si usano solo il codice, la descrizione e i tre codici dei trasferimenti. Sono impostazioni che serviranno a un modulo esterno, o sono rimaste indietro rispetto al calcolo dei prezzi di cessione? -->
 
 ## Vedi anche
 

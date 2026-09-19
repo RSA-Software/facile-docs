@@ -33,7 +33,19 @@ Serve ad avere sotto mano chi fa cosa: il collaboratore si richiama dove va
 attribuito il lavoro, e i suoi dati anagrafici stanno qui una volta sola
 invece che ripetuti su ogni pratica.
 
-<!-- DA VERIFICARE: in quali maschere dello studio il collaboratore viene richiamato, e se l'attribuzione influisca su compensi o statistiche. -->
+!!! info "A che cosa serve il collaboratore"
+
+    È un'**anagrafica di appoggio della versione Studio**: si registrano i
+    collaboratori con i loro dati, e li si richiama per codice dove serve
+    annotare **chi ha seguito una pratica**.
+
+    L'attribuzione è **un'annotazione**, non un calcolo: il programma non
+    ricava dal collaboratore nessun compenso e non lo usa in nessuna
+    elaborazione. Serve a ritrovare il lavoro di ciascuno, non a pagarlo.
+
+    Per le provvigioni della rete di vendita la strada è un'altra: gli
+    [agenti](../anagrafiche/anagrafica-agenti.md) e le
+    [provvigioni](../vendite/provvigioni-agenti.md).
 
 ## Prerequisiti
 
@@ -112,7 +124,13 @@ se non tornano, il campo non viene accettato.
 Se lasci vuoto il nominativo il programma **emette un segnale acustico** e
 riporta il cursore sul campo, senza mostrare alcun messaggio.
 
-<!-- DA VERIFICARE: il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | **Sì** elimina. La risposta preimpostata è **No**. |
+| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La voce è già usata da qualche parte. | Non si cancella finché è in uso: il refuso «pochè» è del programma. |
+| *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra voce. | Cambia codice. |
+| *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa voce mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
+| *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente l'ha eliminata mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 
 ## Vedi anche
 

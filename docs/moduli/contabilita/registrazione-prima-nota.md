@@ -134,11 +134,17 @@ Sotto compare la ripartizione calcolata, **Anno** per **Importo**.
 | **F6 - Elimina** | ++f6++ | Cancella la registrazione, previa conferma. |
 | **F7 - Allegati** | ++f7++ | Allega il documento scansionato alla registrazione. |
 | **F8 - Causale** | ++f8++ | Apre la [causale contabile](causali-contabili.md) in uso, per controllarne le impostazioni. |
-| **F9 - Integr.** | ++f9++ | Apre le integrazioni della registrazione. |
-| **Fatture Elettroniche** | | Apre le [fatture elettroniche passive](fatture-elettroniche-passive.md) da cui prelevare il documento. |
+| **F9 - Integr.** | ++f9++ | Apre le integrazioni, che cambiano secondo il registro della causale: vedi sotto. Sul libro giornale il comando è spento. |
 | Elenco di scelta | ++f10++ o ++space++ | Sul campo con il codice, apre l'elenco da cui scegliere. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
 | **Consultazione** | ++f11++ | Apre la consultazione. |
+
+!!! note "Tre comandi si vedono solo in modifica"
+
+    **F6 - Elimina**, **F7 - Allegati** e **F9 - Integr.** compaiono nella
+    barra **solo riaprendo una registrazione già fatta**. Mentre ne stai
+    inserendo una nuova la barra ha il salvataggio e **F8 - Causale**, e
+    basta: allegati e integrazioni si aggiungono dopo aver salvato.
 
 ## Come si fa
 
@@ -160,9 +166,11 @@ Sotto compare la ripartizione calcolata, **Anno** per **Importo**.
 ### Registrare un costo di competenza dell'anno prossimo
 
 1. Registra il documento come sopra.
-2. Sulla riga contabile del costo indica la **Comp.** diversa, oppure apri le
-   competenze e imposta **Tipologia** `RISCONTO ATTIVO`, il periodo e il
-   **Calcolo** a `GIORNI`.
+2. Sulla riga contabile del costo fai **clic sulla cella della colonna
+   Comp.**: si apre la finestra delle competenze.
+3. Imposta **Tipologia** `RISCONTO ATTIVO`, il periodo e il **Calcolo** a
+   `GIORNI`.
+4. Confermando, nella colonna **Comp.** compare `SI`.
 
 ### Imputare una registrazione a una commessa
 
@@ -194,13 +202,66 @@ Sotto compare la ripartizione calcolata, **Anno** per **Importo**.
     **La causale comanda.** Cambiarla dopo aver compilato la registrazione può
     cambiare registro IVA, conti e campi visibili. Sceglila per prima.
 
-<!-- DA VERIFICARE: quali campi della testata compaiono o spariscono secondo la causale scelta. -->
+!!! info "La maschera cambia forma secondo la causale"
 
-<!-- DA VERIFICARE: cosa apre esattamente "F9 - Integr." e a cosa servono le integrazioni. -->
+    Finché non hai scelto la **Causale** quasi tutto è bloccato: è lei a
+    dire che registrazione stai facendo, e la maschera si adatta.
 
-<!-- DA VERIFICARE: da dove si aprono le competenze (ratei e risconti): non ho individuato il comando nella maschera. -->
+    Dipende da **tre cose** scritte sulla causale:
 
-<!-- DA VERIFICARE: cosa fa il pulsante "Fatture Elettroniche" nella registrazione: se prelevi i dati dalla fattura ricevuta o apra solo l'elenco. -->
+    **Se ha una relazione con cliente o fornitore.** In quel caso compaiono
+    il campo del soggetto — con l'etichetta che diventa *Cliente* o
+    *Fornitore* — le tre righe di descrizione, il **Pagamento** e la **Data
+    pagamento**. Con una causale senza relazione quei campi **spariscono**,
+    non si limitano a bloccarsi; e se ci avevi già scritto qualcosa,
+    cambiando causale viene azzerato.
+
+    **Se è una causale IVA.** Solo allora si possono scrivere il **Totale
+    documento** e la **griglia dell'IVA**, e si può spuntare l'esclusione
+    dallo spesometro. Con una causale non IVA la griglia resta bloccata.
+
+    **Quale registro usa.** Il **Protocollo** si scrive su tutti i registri
+    tranne il **libro giornale**, dove non esiste. La **Valuta** si sblocca
+    solo sui due registri **CEE** e solo con una causale IVA. Nella griglia
+    dell'IVA, la colonna dell'**imposta** si apre o resta bloccata secondo
+    il registro e il tipo di aliquota della riga.
+
+!!! info "Che cosa apre F9 - Integr."
+
+    Non è una finestra sola: il comando apre **l'integrazione che serve a
+    quel registro**.
+
+    | Registro della causale | F9 apre |
+    |---|---|
+    | Corrispettivi | La finestra delle **operazioni speciali** dei corrispettivi. |
+    | Acquisti, Acquisti CEE | Le **integrazioni per lo spesometro**. Confermando, la registrazione viene anche salvata. |
+    | Fatture Emesse, Fatture in Sospensione | Un menu con due voci: **Cointestatari** e **Spesometro**. Se però la causale è una **nota di variazione**, il menu non compare e si va dritti allo spesometro. |
+    | Libro giornale | Niente: il comando è spento. |
+
+    Sono tutti dati che il documento non porta con sé ma che le
+    comunicazioni fiscali pretendono: da qui si aggiungono senza uscire
+    dalla registrazione.
+
+!!! note "Le competenze si aprono dalla griglia, non dalla barra"
+
+    Non c'è un pulsante: si fa **clic sulla cella della colonna Comp.**
+    della riga contabile, e si apre la finestra dei ratei e risconti per
+    quella riga.
+
+    La riga dev'essere già compilata almeno con il mastro: su una riga vuota
+    il clic non fa niente. A competenza impostata, nella colonna compare
+    `SI`.
+
+    Allo stesso modo si apre la **contabilità analitica**, dalla cella
+    accanto.
+
+!!! note "Il pulsante Fatture Elettroniche non c'è"
+
+    Nelle versioni attuali quel comando **non compare** nella barra della
+    registrazione. Le fatture ricevute si registrano partendo dalla loro
+    maschera — [Fatture elettroniche
+    passive](fatture-elettroniche-passive.md) — che porta i dati in prima
+    nota, non il contrario.
 
 ## Vedi anche
 

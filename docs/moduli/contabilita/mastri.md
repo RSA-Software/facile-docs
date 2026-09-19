@@ -47,7 +47,7 @@ descrizione del mastro, e sotto la griglia dei saldi.
 |---|:---:|---|---|
 | Codice | ● | Identificativo del mastro. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome del mastro, come compare nel piano dei conti e nelle stampe. | Fino a 30 caratteri |
-| Iva Esente | | Segnala che il mastro raccoglie operazioni esenti da IVA. | Casella |
+| Iva Esente | | Segnala che il mastro raccoglie operazioni esenti da IVA. **Conta solo nella versione Studio.** | Casella |
 
 {: .campi }
 
@@ -122,7 +122,20 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: la casella Iva Esente. Che effetto ha sulle registrazioni e sui registri IVA? -->
+!!! note "Iva Esente vale solo nella versione Studio"
+
+    Nelle altre versioni la casella si spunta, si salva e non succede niente:
+    nessuna registrazione e nessun registro IVA la guardano.
+
+    Nella versione **Studio** invece il programma, mentre registra, controlla
+    se il mastro della riga — **o quello della sua contropartita** — ha questa
+    spunta. Se ce l'ha, marca come esente **tutte** le righe di quella
+    registrazione, non solo quella. Il segno resta attaccato al movimento e
+    viaggia con lui.
+
+    Quindi il mastro va spuntato solo se **tutto** quello che ci passa è
+    esente: bastando la contropartita a contagiare l'intera scrittura, una
+    spunta di troppo marca esenti anche registrazioni che non lo sono.
 
 ## Vedi anche
 

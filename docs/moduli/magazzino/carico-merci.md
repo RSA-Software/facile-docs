@@ -109,7 +109,20 @@ costo si è mosso, con il prezzo che servirebbe per tenere il margine.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di questa maschera e delle voci che la accompagnano. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Troppe aliquote IVA. Il Max Consentito è 7 !* | Il documento ha più di sette aliquote diverse. | Spezzare il carico in due documenti. |
+| *Vuoi chiudere le partite aperte ?* | Chiesto al salvataggio quando restano partite aperte. | Rispondere **Sì** se il fornitore ha finito di consegnare. |
+| *Vuoi applicare il costo degli imballaggi?* | Il fornitore ha imballaggi a costo. | **Sì** li somma al costo della merce. |
+| *Stampante Etichette colli non impostata!* | Manca la stampante delle etichette. | Impostarla nelle [impostazioni della postazione](../utility/impostazioni-postazione.md). |
+| *Vuoi Stampare solo la Rimanenza?* | Chiesto stampando. | Sceglie fra il documento intero e la sola rimanenza. |
+
+!!! note "I messaggi sono tanti e quasi tutti domande"
+
+    È la maschera più grande del programma e la maggior parte dei suoi avvisi
+    sono richieste di conferma, non errori: la regola è che **rispondere Sì
+    prosegue e rispondere No riporta al campo**. Quelli che bloccano davvero
+    sono pochi, e sono in tabella.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -125,13 +138,54 @@ costo si è mosso, con il prezzo che servirebbe per tenere il margine.
     [conferma dei listini](../listini-vendita/controllo-listini.md): un prezzo
     sbagliato sul carico si propaga.
 
-<!-- DA VERIFICARE: come si ripartisce la "% Spese" sulle righe: in proporzione al valore, al peso o alla quantità. -->
+!!! info "La % Spese va sul valore netto, riga per riga"
 
-<!-- DA VERIFICARE: cosa cambia nel comportamento del programma secondo lo Stato del carico. -->
+    Non è una ripartizione di un totale: è una **percentuale applicata al
+    prezzo netto di ogni riga**, cioè al prezzo dopo lo sconto di testata e i
+    sette sconti di riga. Il risultato finisce nella colonna **Spese** della
+    riga, come importo unitario, e da lì entra nel costo.
 
-<!-- DA VERIFICARE: che rapporto c'è fra il carico e la registrazione di prima nota citata da "Prima Nota. N.". -->
+    Quindi **non c'entrano né il peso né la quantità**: due righe di pari valore
+    prendono la stessa quota di spese anche se una pesa il doppio.
 
-<!-- DA VERIFICARE: cosa sono i "Carichi Fiscali" e in cosa la loro maschera differisce da questa. -->
+    Cambiando lo **sconto di testata** le spese si ricalcolano da sole, perché
+    cambia la base su cui la percentuale si applica.
+
+!!! info "Lo Stato è una nota, non un comando"
+
+    Lo **Stato** non cambia quello che il programma fa: non blocca il
+    salvataggio, non altera i calcoli, non impedisce la contabilizzazione. È
+    un'**etichetta per chi legge dopo**, e si ritrova nella colonna *Stato* del
+    [Controllo Carichi](stampe-magazzino-fornitori.md).
+
+    Le voci sono dodici: `NORMALE`, `PREZZI DA CONTROLLARE`, `MERCE ACCETTATA
+    CON RISERVA`, `PREZZI NON CONFORMI ALL' ORDINE`, `PREZZI NON CONFORMI AI
+    LISTINI`, `SCONTISTICA PATTUITA NON RISPETTATA`, `CONFEZIONI DANNEGGIATE`,
+    `QUANTITA' NON CONFORMI ALL' ORDINE`, `PAGATO ALLA CONSEGNA`, `PARZIALMENTE
+    PAGATO ALLA CONSEGNA`, `RESO RIPARAZIONE` e `SOSTITUZIONE`.
+
+    Serve a segnalare al collega, o a sé stessi fra un mese, perché quel carico
+    va guardato: il posto dove lo si rilegge è il Controllo Carichi, non questa
+    maschera.
+
+!!! tip "Prima Nota. N. è il collegamento, non una copia"
+
+    Il campo tiene il **numero della registrazione** nata da questo carico:
+    finché è vuoto il documento non è stato contabilizzato.
+
+    Il carico e la registrazione restano **due cose distinte**: correggere il
+    carico non corregge la prima nota, e viceversa. Se cambiano gli importi
+    dopo la contabilizzazione, la registrazione va sistemata a parte.
+
+!!! warning "Modifica Carichi Fiscali non c'è in tutte le installazioni"
+
+    È una maschera **diversa** da questa e vive solo nella versione allestita
+    per la gestione fiscale: dove quella versione non c'è, la voce di menu non
+    fa niente.
+
+    Dove c'è, **chiede una password prima di aprirsi**: è il segno di che cosa
+    serve — intervenire sui movimenti già fiscalmente rilevanti, cosa che non si
+    fa nel lavoro di tutti i giorni. Il carico merci normale resta questo.
 
 ## Vedi anche
 

@@ -65,7 +65,7 @@ evidenza, e la barra dei pulsanti.
 | **Numero** | ● | Numero dell'ordine. | numero |
 | **Data Ordine** | ● | La data dell'ordine. | data |
 | **Data Consegna** | | Quando la merce è attesa. | data |
-| **Tipo** | | Il genere di ordine. Sono le **sigle dell’ ordine Logista**, quelle che il tabaccaio già conosce: **O** ordinario, **S** straordinario, **SPECIALE**, **M** modifica, **URGENTE**. | `O`, `S`, `SPECIALE`, `M`, `URGENTE` |
+| **Tipo** | | Il genere di ordine. Sono le **sigle dell'ordine Logista**, quelle che il tabaccaio già conosce: **O** ordinario, **S** straordinario, **SPECIALE**, **M** modifica, **URGENTE**. | `O`, `S`, `SPECIALE`, `M`, `URGENTE` |
 | **Fornitore** | ● | Il soggetto dell'ordine. Nell'ordine patentini l'etichetta è **Cliente**. | codice |
 | **Filtro** | | Quali righe della griglia restare a vedere. Non cambia l'ordine, solo la vista. | `TUTTE LE RIGHE`, `SOLO RIGHE CON QUANTITA'`, `SOLO RIGHE SOTTOSCORTA`, `SOLO RIGHE SOPRASCORTA` |
 
@@ -155,7 +155,21 @@ quantità ordinata più esistenza non arrivano alla scorta minima.
     nell'ordine con la quantità che hanno: metti `TUTTE LE RIGHE` prima di
     salvare se vuoi essere sicuro di cosa stai mandando.
 
-<!-- DA VERIFICARE: che aspetto ha il fax U88 e come viene inviato — se in stampa, per posta o su file. -->
+!!! info "Il «fax U88» è una stampa, non un invio"
+
+    **F6 - Fax U88** riproduce il **modulo U88**, quello che il fornitore di
+    tabacchi vuole compilato: esce nell'anteprima di stampa come qualsiasi
+    altra stampa di Facile, con il numero e la data dell'ordine, il numero e il
+    comune della rivendita, il titolare, e la tabella dei prodotti con
+    chilogrammi e grammi.
+
+    Il programma **non manda niente**: non fa partire fax, non apre la posta e
+    non scrive un file da trasmettere. Il modulo si stampa e si spedisce fuori
+    da Facile, come si è sempre fatto — il nome del pulsante viene da lì.
+
+    Il modulo stampato **cambia se l'ordine è urgente**: con **Tipo Ordine** su
+    `URGENTE` esce la versione apposita del modulo, con le altre quattro voci
+    — `O`, `S`, `SPECIALE`, `M` — esce quella ordinaria.
 
 !!! note "Dove finisce il foglio per il logista"
 

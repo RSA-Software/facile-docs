@@ -107,9 +107,39 @@ più, descritto qui sotto.
 
 Non applicabile.
 
-<!-- DA VERIFICARE: quale impostazione attiva la gestione dei lotti, e cosa mostra la stampa se i lotti non sono gestiti. -->
+!!! info "I lotti si accendono in due punti"
 
-<!-- DA VERIFICARE: cosa si intende per "spostamento" di un codice a barre e da quale maschera si effettua. -->
+    Perché un lotto venga chiesto e registrato servono **tutte e due**
+    queste cose:
+
+    1. sulla **ditta**, la casella **Usa Gestione Lotti**, che sta fra le
+       *Impostazioni Protette* — il comando **F7 - Impo. Prot.** della
+       scheda ditta, visibile solo a chi entra come `ADMIN`;
+    2. sul singolo **articolo**, la sua casella di gestione lotti.
+
+    Manca una delle due e il lotto non viene né chiesto né registrato.
+
+    Di conseguenza, se i lotti non sono in uso questa stampa **esce vuota**:
+    non c'è niente da elencare, e il programma non avverte che la gestione
+    è spenta.
+
+!!! info "Che cos'è lo spostamento di un codice a barre"
+
+    È il caso in cui **lo stesso codice a barre passa da un articolo a un
+    altro**: succede quando un fornitore riusa un codice su un prodotto
+    nuovo, o quando ci si accorge che era stato attribuito all'articolo
+    sbagliato.
+
+    Non c'è un comando apposta. Lo spostamento avviene quando, nella
+    scheda **Barcode** dell'articolo, si cambia **l'articolo** di una riga
+    lasciando lo stesso codice: in quel momento il programma scrive da sé
+    una riga in un registro a parte, con la **data**, il **codice a barre**,
+    l'**articolo di prima** e quello **nuovo**.
+
+    È quel registro che questa stampa mette in fila. Serve a ricostruire
+    perché un barcode letto oggi porta a un articolo diverso da quello di
+    ieri — la domanda che nasce ogni volta che un vecchio scontrino non
+    torna.
 
 ## Vedi anche
 

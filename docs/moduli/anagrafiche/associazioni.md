@@ -1,6 +1,6 @@
 ---
 title: Associazione gruppi e giri
-description: Come si assegnano a un cliente il gruppo, l'agente, il vettore, il pagamento e i giri di visita, senza aprirne l'anagrafica.
+description: Le regole che, per un cliente e un gruppo di articoli, dicono quale agente, vettore e pagamento usare, e su quali giri di visita sta il cliente.
 modulo: Archivi
 maschera_id: IDD_CLI_ASSOCIAZIONI
 ---
@@ -23,10 +23,16 @@ passare dall'anagrafica completa.
 
 ## A cosa serve
 
-Aprire la scheda di un cliente per cambiargli l'agente è lento, e la scheda ha
-molti campi che in quel momento non interessano. Queste due maschere fanno una
-cosa sola: prendono un cliente, o una sua destinazione, e gli assegnano quello
-che serve.
+Un cliente può essere servito da un agente quando ordina i surgelati e da un
+altro quando ordina il secco, e farsi consegnare da vettori diversi a seconda
+della merce. L'anagrafica del cliente ha un agente solo e un vettore solo:
+queste due maschere servono a dire **«per questo cliente, su questa merce, vale
+invece quest'altro»**.
+
+Ogni riga che registri qui è una regola a sé, identificata da tre cose:
+il **cliente**, la sua **destinazione** e il **gruppo di articoli**. Le regole
+non toccano l'anagrafica del cliente: restano in un archivio loro, e il
+programma le va a leggere quando serve.
 
 **Associazione Clienti - Gruppi** copre gruppo, agente, vettore, pagamento e i
 tre giri. **Associazione Giri Agenti** si limita ad agente e giri.
@@ -61,7 +67,7 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Cliente** | ● | Il [cliente](anagrafica-clienti.md) a cui assegnare le condizioni. | codice |
-| **Destinazione** | | Una destinazione merce del cliente, se l'assegnazione riguarda solo quella. | codice |
+| **Destinazione** | | Una destinazione merce del cliente. Lasciandola vuota la regola vale per i documenti **senza** destinazione; indicandola vale **solo** per quella. | codice |
 
 {: .campi }
 
@@ -69,7 +75,7 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Gruppo** | | Il gruppo a cui assegnare il cliente. | codice |
+| **Gruppo** | | Il **gruppo di articoli** a cui la regola si riferisce — la stessa tabella *Gruppi* che si indica sull'articolo, non il gruppo del cliente. Lasciandolo vuoto la regola vale per i documenti senza gruppo prevalente. | codice |
 | **Trasportatore** | | Il [vettore](trasportatori.md) che lo serve. | codice |
 | **Pagamento** | | Il [tipo di pagamento](../contabilita/tipi-di-pagamento.md) da proporgli. | codice |
 
@@ -108,11 +114,15 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
    numero d'ordine con cui va visitato.
 5. Premi **F2 - Salva**.
 
-### Cambiare vettore a un cliente
+### Far consegnare da un vettore diverso la merce di un gruppo
 
 1. Apri **Menu ▸ Archivi ▸ Clienti ▸ Associazione Gruppi**.
-2. Indica il **Cliente**.
-3. Compila il **Trasportatore** e premi **F2 - Salva**.
+2. Indica il **Cliente** e, se la regola riguarda una sola destinazione, la
+   **Destinazione**.
+3. Indica il **Gruppo** di articoli a cui la regola si riferisce.
+4. Compila il **Trasportatore** e premi **F2 - Salva**.
+5. D'ora in poi, gli ordini di quel cliente fatti in prevalenza di articoli di
+   quel gruppo nascono con quel trasportatore, se non ne hanno già uno.
 
 ## Controlli e messaggi
 
@@ -122,19 +132,45 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 
 ## Note
 
-!!! warning "Attenzione"
+!!! note "L'anagrafica del cliente non viene toccata"
 
-    Queste maschere **scrivono nell'anagrafica del cliente**: quello che si
-    assegna qui è la stessa cosa che si vedrebbe aprendo la scheda del cliente.
-    Non è un'assegnazione temporanea.
+    Queste maschere **non scrivono nella scheda del cliente**: registrano una
+    riga in un archivio proprio. Aprendo il cliente dopo aver salvato qui non
+    troverai niente di cambiato, ed è giusto così.
 
-    **F6 - Canc.** cancella l'associazione, non il cliente.
+    **F6 - Canc.** cancella la riga di associazione, non il cliente.
 
-<!-- DA VERIFICARE: se compilando la Destinazione l'assegnazione valga solo per quella o sovrascriva anche il cliente. -->
+!!! info "Chi legge queste regole, e come"
 
-<!-- DA VERIFICARE: cosa succede lasciando vuoto un campo in salvataggio: se azzeri il valore che il cliente aveva o lo lasci com'è. -->
+    Le regole entrano in gioco quando da un **ordine in lavorazione** si
+    genera il documento. Il programma guarda le righe dell'ordine, stabilisce
+    qual è il **gruppo di articoli prevalente** — quello con più righe — e
+    cerca la regola del cliente, della destinazione del documento e di quel
+    gruppo.
 
-<!-- DA VERIFICARE: a quale "Gruppo" si riferisca il campo omonimo: gruppo aziende, gruppo mailing o altro. -->
+    Se la trova, **completa i campi rimasti vuoti** sul documento: l'agente se
+    il documento non ne ha, il pagamento se non ne ha, il trasportatore se non
+    ne ha. Quello che il documento ha già **non viene mai sovrascritto**.
+
+    I giri e le sequenze non servono ai documenti: servono alle stampe e alle
+    etichette dei giri dell'agente.
+
+!!! warning "La ricerca è a corrispondenza esatta, senza ripieghi"
+
+    Cliente, destinazione e gruppo devono coincidere **tutti e tre**. Non
+    esiste una regola generale a cui ricadere:
+
+    - una regola registrata **senza destinazione** non vale per i documenti
+      con destinazione, e viceversa;
+    - una regola registrata **su un gruppo** non vale se nell'ordine prevale
+      un altro gruppo.
+
+    Se la regola non si trova, semplicemente non succede niente — nessun
+    messaggio.
+
+    I campi lasciati **vuoti** dentro una regola non azzerano niente: valgono
+    come «su questo non dico nulla», e il documento si tiene quello che
+    aveva.
 
 ## Vedi anche
 

@@ -53,7 +53,27 @@ Prima di usare queste stampe occorre avere movimentato il magazzino, con i
 deposito e classificazioni, e i pulsanti **F2 - OK** ed **Esci**. Il titolo
 della finestra dice quale stampa si è aperta.
 
-<!-- DA VERIFICARE: i campi esatti della maschera di selezione: cambiano secondo la stampa e non ho potuto estrarli tutti. -->
+!!! info "I campi della maschera"
+
+    È una maschera sola per tutte queste stampe: cambia il **titolo della
+    finestra**, che dice quale stai facendo, e qualche campo si spegne dove
+    non serve.
+
+    **Periodo e ambito**: **Data Iniziale**, **Data Finale**, **Sezione**,
+    **Deposito**, **Causale**, **Operatore**.
+
+    **Che movimenti prendere**: **Tipo Movim.** — `CARICHI`, `SCARICHI`,
+    `VENDITE`, `RESI`, `VENDITE+RESI` — e, dove l'installazione lo
+    prevede, **Tipo Vendita** per distinguere normale, trasfert, conto
+    servizi e delivery.
+
+    **Chi**: **Cliente**, **Destinazione**, **Agente**, **Gruppo**.
+
+    **Che merce**: **Articolo**, **Lotto**, **Cod. Iva**, **Gruppo Mix**,
+    **Reparto**, **Cat. Merceol.**, **Marchio**, **Stagione**,
+    **Fornitore**, **Gruppo**, **Sottogruppo** e le tre tabelle libere.
+
+    Lasciare un filtro a zero significa «tutti».
 
 ## Campi
 
@@ -101,7 +121,12 @@ della finestra dice quale stampa si è aperta.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste stampe. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Selezionare almeno una Sezione!* | Si è confermato senza aver spuntato nessuna sezione. | Spunta le sezioni da includere. |
+| *Vuoi Stampare Margine, Ricarico e Costo ?* | Chiesto prima di stampare, dove la stampa li sa calcolare. | **Sì** aggiunge le colonne economiche; **No** lascia le sole quantità e i valori di vendita. |
+| *Vuoi il raggruppamento per Marchio ?* | Chiesto su alcune sintesi. | **Sì** raggruppa per marchio invece che per l'ordinamento consueto. |
+| *Vuoi raggruppare i depositi ?* | Chiesto quando la selezione tocca più depositi. | **Sì** somma i depositi in un totale unico; **No** li tiene separati; **Annulla** ferma la stampa. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -114,9 +139,34 @@ della finestra dice quale stampa si è aperta.
     Poiché la maschera di selezione è la stessa, l'unico modo per accorgersi di
     aver aperto la stampa sbagliata è leggere il titolo in alto.
 
-<!-- DA VERIFICARE: cosa distingue "Analisi Vendite" dalle varie sintesi. -->
+!!! info "Che cosa fa Analisi Vendite in più delle sintesi"
 
-<!-- DA VERIFICARE: cosa sono le "sostituzioni" a cui due voci fanno riferimento. -->
+    Le **sintesi** sommano quello che è stato movimentato: quantità e
+    valore, raggruppati per cliente, per articolo, per reparto, per mese.
+
+    **Analisi Vendite** aggiunge il **conto economico**: prima di stampare
+    chiede con quale criterio valorizzare il costo — medio ponderato,
+    FIFO, LIFO, ultimo prezzo d'acquisto — e accanto al venduto mette il
+    **costo**, il **margine** e il **ricarico**.
+
+    È la stampa da usare per rispondere a «quanto ci ho guadagnato», non a
+    «quanto ho venduto».
+
+!!! note "Che cosa sono le sostituzioni"
+
+    Sulla riga di un documento di vendita c'è una casella
+    **Sostituzione**: si spunta quando quella riga non è una vendita nuova
+    ma merce data **in sostituzione** di altra — un prodotto difettoso
+    cambiato, una consegna rifatta.
+
+    La stampa *Scheda Movimenti Cliente - Sostituzioni* è la stessa scheda
+    movimenti del cliente, limitata alle sole righe con quella spunta:
+    serve a vedere quanto di quello che è uscito verso un cliente non era
+    merce venduta.
+
+    La stampa gemella **Omaggi e Sconti Merce** lavora in modo diverso: non
+    guarda una casella ma i numeri, e prende le righe con **sconto al cento
+    per cento** o **prezzo a zero**.
 
 ## Vedi anche
 

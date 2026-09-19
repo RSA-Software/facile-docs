@@ -131,9 +131,49 @@ l'avanzamento.
     l'importazione non va a buon fine, quel file non si riscarica. Controlla
     subito che gli ordini siano arrivati.
 
-<!-- DA VERIFICARE: cosa contiene esattamente il file di configurazione imp_mobile e chi lo prepara. -->
+!!! info "Che cosa c'è nel file di configurazione"
 
-<!-- DA VERIFICARE: quale tracciato hanno i file .rsa degli ordini e se è documentato altrove. -->
+    Sta nella cartella **`cfg`** dell'installazione e porta il numero della
+    ditta nel nome — `imp_mobile_00001.ini` per la ditta 1. È il gemello del
+    file `exp_mobile_…` usato per [mandare i dati ai
+    dispositivi](../trasferimenti/esportazioni-specifiche.md).
+
+    Dentro ci sono due cose:
+
+    - i **parametri del server FTP** — indirizzo, utente, password, modo
+      passivo — validi per tutti;
+    - una **sezione per ogni agente**, che dice se è abilitato e in che
+      formato lavora il suo dispositivo.
+
+    Gli agenti non abilitati vengono semplicemente saltati: è così che si
+    esclude un agente senza toccare la sua anagrafica.
+
+    **Non si imposta dal programma**: non c'è nessuna maschera che lo scriva,
+    lo prepara l'assistenza quando installa i dispositivi. Senza, la ricezione
+    non parte.
+
+!!! info "Come sono fatti i file che arrivano"
+
+    Sul server ogni agente ha **una cartella con il suo numero**, e dentro due
+    sottocartelle: **`in`** per quello che Facile gli manda e **`out`** per
+    quello che lui rimanda indietro. La ricezione guarda in `out`, scarica
+    quello che trova e poi **lo cancella dal server**.
+
+    I file scaricati finiscono nella cartella `in` dell'installazione, con un
+    nome che comincia per `AGE` seguito dal numero dell'agente, e a caricamento
+    fatto vengono **spostati in `log`** con data e ora nel nome: è l'unico
+    archivio di quello che è arrivato, e su di esso si può tornare se qualcosa
+    non torna.
+
+    I dispositivi recenti mandano **documenti e incassi in formato JSON**;
+    quelli più vecchi usano il formato proprio di Facile, i file `.rsa`. È un
+    formato binario con un'intestazione che dice versione, numero di record,
+    periodo, identificativo della postazione, anno e ditta: **non è un
+    tracciato da produrre a mano**, e lo scrive solo Facile o il programma del
+    dispositivo. Non è documentato altrove perché non c'è motivo di
+    scriverlo dall'esterno.
+
+    Quale dei due formati un agente usi lo dice il file di configurazione.
 
 ## Vedi anche
 

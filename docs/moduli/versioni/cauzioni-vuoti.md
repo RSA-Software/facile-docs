@@ -39,7 +39,28 @@ Ogni vuoto ha due prezzi che servono a cose diverse:
 Il resto del ramo **Cauzioni** lavora su questa tabella: il caricamento dei
 vuoti, il reso da bolla, l'interrogazione e la stampa della situazione.
 
-<!-- DA VERIFICARE: in quale documento la cauzione viene addebitata, e se il reso generi una riga di accredito automatica. -->
+!!! info "La cauzione si addebita sul documento di vendita"
+
+    Non c'è un documento a parte: i vuoti si indicano **dentro al
+    [documento di vendita](../vendite/documento-di-vendita.md)** — il DDT, la
+    bolla o la fattura — in una sezione sua, dove per ogni vuoto si scrive
+    **quanti se ne consegnano** e **quanti ne tornano indietro**.
+
+    Il conto lo fa il programma: la cauzione dei consegnati si aggiunge al
+    totale, quella dei resi si sottrae, e nei **Totali** del documento il
+    risultato compare in **Totale Cauzioni**. Non serve quindi nessuna riga
+    di accredito: **il reso si scrive sullo stesso documento** e il netto
+    viene da sé.
+
+    L'importo entra sotto l'**aliquota di esenzione** della ditta, perché la
+    cauzione non è un corrispettivo: è un deposito che va reso.
+
+!!! note "Quando i vuoti si muovono davvero"
+
+    Come per la merce, non al salvataggio ma **all'emissione del
+    documento**. In quel momento il programma scrive il movimento dei vuoti
+    e aggiorna il **saldo del cliente** per quel contenitore — consegnati
+    meno resi. Annullando il documento il saldo torna indietro.
 
 ## Prerequisiti
 
@@ -103,7 +124,13 @@ Il codice e la descrizione sono obbligatori: se li lasci vuoti il programma
 **emette un segnale acustico** e riporta il cursore sul campo mancante, senza
 mostrare alcun messaggio.
 
-<!-- DA VERIFICARE: il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera. -->
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | **Sì** elimina. La risposta preimpostata è **No**. |
+| *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La voce è già usata da qualche parte. | Non si cancella finché è in uso: il refuso «pochè» è del programma. |
+| *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra voce. | Cambia codice. |
+| *Il record è stato modificato da un altro nodo della rete.* | Un altro utente ha salvato la stessa voce mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
+| *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente l'ha eliminata mentre la modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 
 ## Note
 
@@ -113,7 +140,19 @@ mostrare alcun messaggio.
     fatte restano con la cauzione applicata allora: prima di ritoccare un
     prezzo conviene controllare la situazione dei vuoti in giro.
 
-<!-- DA VERIFICARE: confermare che i movimenti già registrati conservino la cauzione applicata al momento della consegna. -->
+!!! warning "Cambiare il prezzo di cauzione non tocca il passato"
+
+    Il movimento dei vuoti registra **le quantità**, non l'importo: la
+    cauzione viene calcolata e scritta **sul documento** nel momento in cui
+    lo si emette, e lì resta.
+
+    Modificando il prezzo in questa tabella cambiano quindi **solo i
+    documenti da qui in avanti**. Quelli già emessi conservano l'importo con
+    cui sono stati fatti, ed è giusto così: al cliente si restituisce quello
+    che gli è stato addebitato.
+
+    Il **saldo dei vuoti** del cliente, invece, è un conteggio di pezzi: non
+    risente del cambio di prezzo.
 
 ## Vedi anche
 

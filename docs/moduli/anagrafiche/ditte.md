@@ -410,7 +410,68 @@ Le stampanti delle comande: **Comanda Cassa**, **Comanda Bar**, **Comanda
 Cucina**, **Comanda Pizzeria**, **Comanda Pasticceria** e cinque **Comanda
 Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
 
-<!-- DA VERIFICARE: i campi delle schede Parametri Hotel e CRM, che nella copia in uso non sono state esaminate. -->
+!!! warning "La scheda CRM non esiste"
+
+    Nel programma **non c'è nessuna scheda CRM** nella maschera delle ditte:
+    era stata preparata e poi disattivata, e quello che resta nel sorgente è
+    escluso dalla compilazione. Se la si cercava, non si trova perché non c'è.
+
+!!! info "La scheda Parametri Hotel"
+
+    Compare **solo nella versione alberghiera**. Raccoglie i valori
+    predefiniti della struttura e i moduli di stampa che le servono.
+
+    **La struttura**
+
+    | Campo | Descrizione |
+    |---|---|
+    | **Tipologia Struttura**, **Codice Struttura** | Come la struttura è classificata e con che codice è registrata. |
+    | **Stelle** | La classificazione alberghiera. |
+    | **Settore Base** | `VILLAGGIO`, `HOTEL`, `CAMEGGIO` o `TUTTI`. |
+
+    {: .campi }
+
+    **I valori proposti**
+
+    | Campo | Descrizione |
+    |---|---|
+    | **Cod. IVA Clienti**, **Cod. IVA Agenzie** | Le due [aliquote](../contabilita/aliquote-iva.md) di partenza. |
+    | **Trattamento** | Il trattamento proposto — pensione completa, mezza pensione e così via. |
+    | **Listino** | Il listino di partenza. |
+    | **Stagionalità** | La stagionalità di riferimento. |
+    | **Banca** | La [banca](../contabilita/banche.md) proposta. |
+
+    {: .campi }
+
+    **Modulistica** — i modelli di stampa di **Voucher**, **Estratto Conto**,
+    **Mod. ISTAT** e **Schedine P.S.**, ciascuno con il suo numero di modello,
+    più le due caselle **Stampa Modulo Schedine** e **Stampa Dati Schedine**.
+
+    **ISTAT e pubblica sicurezza**
+
+    | Campo | Descrizione |
+    |---|---|
+    | **Istat Telematico** | Il modulo per l'invio telematico. |
+    | **Ultimo ISTAT Stampato** | Il segno dell'ultima emissione. |
+    | **Agenzia da Isolare nel Frazionamento Pax** | L'agenzia da tenere fuori dal frazionamento. |
+    | **Numerazione Unica Registro P.S.** | Un solo progressivo per il registro di pubblica sicurezza. |
+    | **Disabilita Automatismi Schedine P.S.** | Toglie la compilazione automatica delle schedine. |
+    | **Emissione modello ISTAT senza Raggruppamento** | Stampa il modello riga per riga. |
+
+    {: .campi }
+
+    **Comportamento del conto**
+
+    | Campo | Descrizione |
+    |---|---|
+    | **Emissione Automatica Addebiti** | Gli addebiti nascono da soli. |
+    | **Disabiita Prelievo Automatico Addebiti** | Toglie il prelievo automatico. L'etichetta è scritta così nel programma. |
+    | **Prelievo importo da Prenotazioni per Ric. Fiscali** | Prende l'importo dalla prenotazione. |
+    | **Ragguppa Addebiti per Reparto su Conto** | Raggruppa gli addebiti per reparto. Anche qui l'etichetta è scritta così. |
+    | **Nascondi Arrivi con Checkout sul Tableau** | Toglie dal tableau gli arrivi già partiti. |
+    | **Imposta di Soggiorno — Dal … Al** | Il periodo in cui l'imposta si applica. |
+
+    {: .campi }
 
 ## Pulsanti e comandi
 
@@ -548,11 +609,60 @@ articoli classificati secondo un significato che non c'è più.
     nei filtri degli articoli, nelle [analisi](../analisi-dati/venduto-per.md) —
     il nome vero è quello scelto nelle Impostazioni Protette.
 
-<!-- DA VERIFICARE: quale password protegge l'inserimento di una ditta nuova e le Impostazioni Protette, e chi la possiede. -->
+!!! warning "La password delle Impostazioni Protette è dell'assistenza"
 
-<!-- DA VERIFICARE: cosa succede alla ditta duplicata quando, dopo il cambio, il programma propone la copia degli archivi. -->
+    Premendo **F7 - Impo. Prot.** si apre una finestra intitolata *Service
+    Password*. Non è la password dell'utente e non è la password della
+    ditta: è **la chiave dell'assistenza R.S.A.**, che non si imposta e non
+    si cambia dal programma.
 
-<!-- DA VERIFICARE: se i moduli di stampa della scheda Modulistica si scelgano da un elenco o si scrivano a mano. -->
+    Sbagliandola compare *Password non Valida!* e la finestra si chiude
+    senza un secondo tentativo. Indovinata, prima di entrare il programma
+    ricorda che **cambiare quelle impostazioni può bloccare il
+    funzionamento del programma** e invita a chiamare l'assistenza.
+
+    Quel comando compare del resto solo a chi ha i **privilegi di
+    amministratore**: due sbarramenti in fila.
+
+    **Inserire una ditta nuova invece non chiede nessuna password**: basta
+    avere la voce di menu abilitata. La password sul salvataggio esiste
+    solo in una versione particolare del programma.
+
+!!! info "Che cosa propone di copiare una ditta appena creata"
+
+    La ditta nasce **vuota**: senza piano dei conti, senza causali, senza
+    aliquote. La prima volta che ci si entra, il programma se ne accorge e
+    apre da sé la finestra della **copia degli archivi**.
+
+    In alto si sceglie da quale **ditta esistente** copiare; sotto ci sono
+    le caselle di quello che si vuole portare: piano dei conti, causali
+    contabili e di magazzino, aliquote IVA, tipi di pagamento, tabelle di
+    base, categorie economiche e merceologiche, unità di misura, reparti,
+    stagioni, marchi, e anche archivi più pesanti come articoli, clienti e
+    fornitori.
+
+    Si spunta quello che serve e si conferma: gli archivi scelti vengono
+    **copiati** nella ditta nuova, quelli non spuntati restano vuoti. Alla
+    fine compare *La procedura di impostazione della Ditta è stata conclusa
+    regolarmente!*.
+
+    La finestra si presenta **una volta sola**: è legata al fatto che la
+    ditta sia appena nata. Dopo, per portare altri archivi, bisogna
+    chiamare l'assistenza.
+
+!!! note "I moduli di stampa si scrivono a numero"
+
+    Nella scheda *Modulistica* non c'è nessun elenco da cui scegliere: ogni
+    tipo di documento ha una casella in cui si scrive **il numero del
+    modulo**.
+
+    Quel numero corrisponde a un file di stampa installato insieme al
+    programma: cambiarlo significa far uscire il documento con un altro
+    impaginato. Scrivendo un numero a cui non corrisponde nessun modulo, la
+    stampa non esce.
+
+    I moduli disponibili dipendono dall'installazione: l'elenco lo dà
+    l'assistenza, che è anche chi ne prepara di nuovi.
 
 ## Vedi anche
 

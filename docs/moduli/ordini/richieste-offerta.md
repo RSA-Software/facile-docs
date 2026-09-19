@@ -106,7 +106,16 @@ griglia.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi propri delle richieste offerta. -->
+La richiesta di offerta si compila nella stessa maschera del
+[documento di vendita](../vendite/documento-di-vendita.md) e ne condivide i
+messaggi. Quelli che si incontrano generando l'ordine:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Il documento richiesto non esiste in archivio!* | Il numero della richiesta non corrisponde a niente. | Controlla anno, numero e registro. |
+| *Il documento indicato è già presente in archivio!* | Il numero da dare all'ordine è già di un altro documento. | Scegli un numero libero. |
+| *Ordine a Fornitore generato regolarmente!* | L'ordine è stato creato. | Nessuna azione. |
+| *Confermi la rimozione del documento di riferimento ?* | Era attiva **Rimuovi Documento di Riferimento**. | **Sì** cancella la richiesta di offerta. La risposta preimpostata è **No**. |
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -120,9 +129,34 @@ griglia.
     tipo diverso. La richiesta originale resta in archivio, e se la generi due
     volte ottieni due ordini.
 
-<!-- DA VERIFICARE: se la richiesta offerta venga marcata in qualche modo dopo che ne è stato generato l'ordine. -->
+!!! warning "La richiesta non viene marcata quando ne nasce l'ordine"
 
-<!-- DA VERIFICARE: se le richieste offerta compaiano nelle stampe degli ordini per articolo. -->
+    **Genera Ordine a Fornitore** crea l'ordine e finisce lì: la richiesta di
+    offerta resta **esattamente com'era**. Non cambia stato, non prende una data
+    e non porta nessun riferimento all'ordine che ne è uscito.
+
+    Vuol dire che **rigenerando la stessa richiesta si ottiene un secondo
+    ordine**, e il programma non avverte: l'unico controllo è sul numero
+    dell'ordine, che non può essere già usato.
+
+    Tenere il conto di quali richieste sono già diventate ordini è quindi
+    lavoro di chi le gestisce. Due strade pratiche:
+
+    - spuntare **Rimuovi Documento di Riferimento**, che **cancella la
+      richiesta** appena l'ordine è nato — netto, ma si perde la storia;
+    - oppure lasciarla e annullarla a mano dalla sua maschera, così resta in
+      archivio ma si distingue.
+
+!!! note "Le richieste di offerta non entrano nelle stampe degli ordini"
+
+    **Stampa Ordini per Articolo** esiste in due versioni — una per gli ordini
+    dei clienti e una per gli ordini ai fornitori — e ciascuna guarda **solo
+    il proprio tipo di documento**. Le richieste di offerta sono un tipo a
+    sé e non compaiono in nessuna delle due.
+
+    Per sapere che cosa si è chiesto e non è ancora diventato ordine, la
+    strada è la [gestione documenti](../vendite/gestione-documenti.md) filtrata
+    sulle richieste.
 
 ## Vedi anche
 

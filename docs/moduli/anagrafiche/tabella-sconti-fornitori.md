@@ -21,12 +21,13 @@ sconti si combinano con gli altri.
 
 ## A cosa serve
 
-Un fornitore concede sconti diversi secondo il prodotto, il periodo o il volume
-concordato. Invece di ripetere le percentuali su ogni riga di contratto, si
-definisce qui una tabella con un nome e la si richiama dove serve.
+Un fornitore concede sconti diversi secondo il prodotto, il periodo o il
+volume concordato. Questa tabella è l'elenco dei **nomi** di quegli sconti:
+*premio di fine anno*, *contributo espositori*, *sconto logistico*.
 
-Il **Metodo Calcolo** stabilisce il posto che la tabella occupa quando più
-sconti concorrono sullo stesso acquisto.
+Qui **non si scrivono percentuali**: si registra solo il codice e il nome, e
+i numeri veri si mettono poi sul contratto del singolo fornitore — vedi
+sotto.
 
 ## Prerequisiti
 
@@ -46,7 +47,7 @@ campi. Il titolo in modifica è *Modifica Sconti Fornitore*.
 |---|:---:|---|---|
 | **Codice** | ● | Identificativo della tabella. In modifica non è modificabile. | numero |
 | **Descrizione** | ● | Nome della tabella, come compare quando la si richiama sul contratto. | testo |
-| **Metodo Calcolo** | ● | Come gli sconti di questa tabella si combinano con gli altri. | `NORMALE`, `PRIMARIO`, `SECONDARIO` |
+| **Metodo Calcolo** | | Classifica lo sconto. Il programma la registra e la mostra nell'elenco, ma non la usa in nessun calcolo. | `NORMALE`, `PRIMARIO`, `SECONDARIO` |
 
 {: .campi }
 
@@ -84,11 +85,33 @@ campi. Il titolo in modifica è *Modifica Sconti Fornitore*.
 
 Non applicabile.
 
-<!-- DA VERIFICARE: cosa distingue i tre metodi di calcolo NORMALE, PRIMARIO e SECONDARIO nell'applicazione degli sconti. -->
+!!! info "Dove si scrivono le percentuali"
 
-<!-- DA VERIFICARE: dove si inseriscono le percentuali vere e proprie della tabella: questa maschera contiene solo la testata. -->
+    Sul **contratto fornitore**, nel riquadro degli **sconti extra**
+    fattura. Il contratto ha **otto righe**, e ogni riga comincia con il
+    **codice dello sconto**, che si prende da questa tabella; accanto
+    compare il nome, e poi si scrivono i numeri veri:
 
-<!-- DA VERIFICARE: dove la tabella viene richiamata sul contratto fornitore. -->
+    - la **percentuale** e l'eventuale **importo** dello sconto;
+    - la percentuale di **ribaltamento** sul listino di vendita;
+    - gli **obiettivi** a valore e a quantità, se lo sconto è a target;
+    - il **periodo** di validità, la **liquidazione** — annuale,
+      trimestrale o mensile — e il **documento** con cui si chiude:
+      nessuno, fattura o nota di credito.
+
+    Così lo stesso sconto — per esempio *premio di fine anno* — si chiama
+    allo stesso modo per tutti i fornitori, ma ha la percentuale e le
+    condizioni di ciascuno.
+
+!!! note "I tre metodi di calcolo oggi non calcolano niente"
+
+    `NORMALE`, `PRIMARIO` e `SECONDARIO` vengono registrati sulla tabella e
+    compaiono nella colonna **Metodo** dell'elenco, ma **nessuna parte del
+    programma li consulta**: l'ordine con cui gli sconti si applicano è
+    quello delle otto righe del contratto, dalla prima all'ottava.
+
+    Restano quindi un modo per classificare le tabelle e ritrovarle
+    nell'elenco, non un'impostazione di calcolo.
 
 ## Vedi anche
 

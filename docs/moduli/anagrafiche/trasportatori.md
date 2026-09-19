@@ -54,7 +54,7 @@ recapiti e i dati del mezzo.
 | Città | | Comune della sede. | Fino a 30 caratteri |
 | Prov. | | Sigla della provincia. | 2 caratteri |
 | Cap | | Codice di avviamento postale. | Fino a 5 caratteri |
-| Naz. | | Codice della nazione. | Fino a 4 caratteri |
+| Naz. | | Codice della nazione del vettore. Si scrive a mano: qui non c'è l'elenco da cui sceglierlo e il codice non viene controllato. Lasciandolo vuoto, oppure scrivendo `IT` o `ITA`, il vettore è considerato italiano. | Fino a 4 caratteri |
 | P. IVA | | Partita IVA del vettore. Se non supera il controllo, il programma chiede se salvare comunque. | Fino a 28 caratteri |
 | Cod. Fiscale | | Codice fiscale del vettore. | Fino a 16 caratteri |
 | Telefono | | Recapito telefonico. | Fino a 13 caratteri |
@@ -139,7 +139,16 @@ trasportatore dall'archivio e abbandona le modifiche non salvate. Se l'archivio
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il campo Naz. non ha l'elenco da cui scegliere, a differenza degli stessi campi in clienti e fornitori. È voluto? -->
+!!! warning "La nazione qui si scrive a memoria"
+
+    Su clienti e fornitori il campo **Naz.** ha l'elenco delle nazioni — si
+    apre con ++f10++ o con un doppio clic — e quello che scrivi viene
+    confrontato con la tabella.
+
+    Qui no: l'elenco non c'è e il codice non viene verificato. Scrivendo
+    `FRA` invece di `FR` il programma non protesta, ma il vettore risulterà
+    estero e i documenti si comporteranno di conseguenza. Tieni sott'occhio
+    la tabella [Nazioni](nazioni.md) e ricopia il codice da lì.
 
 ## Vedi anche
 

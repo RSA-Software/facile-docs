@@ -128,9 +128,36 @@ pulsanti **F2 - OK** ed **Esci**.
     avere e quello che è stato trovato. Stampalo **prima** della chiusura: dopo,
     le esistenze sono già state allineate e la differenza non si vede più.
 
-<!-- DA VERIFICARE: se "Stampa Articoli Inventariati" consideri inventariato l'articolo per la data ultimo inventario o per la presenza di una lettura. -->
+!!! info "«Inventariato» vuol dire che ha una data di inventario"
 
-<!-- DA VERIFICARE: su quale criterio il "Raggruppamento" per GRUPPO e SOTTOGRUPPO aggrega le righe. -->
+    La stampa **non guarda le letture**: elenca gli articoli la cui
+    **ubicazione porta una data di inventario**, qualunque essa sia, e li
+    ordina proprio per quella data.
+
+    Due conseguenze pratiche:
+
+    - un articolo **contato ma non ancora chiuso** non compare: la data la
+      mette la chiusura;
+    - un articolo **inventariato l'anno scorso e non toccato quest'anno**
+      compare lo stesso, con la sua vecchia data. È per questo che la stampa
+      è ordinata per data: le righe in fondo sono quelle appena fatte,
+      quelle in testa gli inventari vecchi.
+
+    L'unico filtro è il **deposito**.
+
+!!! info "Che cosa sono «GRUPPO» e «SOTTOGRUPPO»"
+
+    Sono i due campi di classificazione libera che ogni
+    [articolo](../anagrafiche/anagrafica-articoli.md) porta in anagrafica —
+    **Gruppo** e **Sottogruppo** — non il reparto e non la categoria
+    merceologica.
+
+    Con `NESSUNO` la stampa è un elenco piatto ordinato per descrizione; con
+    `GRUPPO` o `SOTTOGRUPPO` le righe vengono raccolte sotto quel valore, con
+    i totali di ciascun raggruppamento.
+
+    Gli articoli in cui quel campo è vuoto finiscono tutti insieme sotto una
+    voce senza nome: se quel blocco è grosso, il problema è in anagrafica.
 
 ## Vedi anche
 

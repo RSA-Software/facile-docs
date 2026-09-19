@@ -129,7 +129,9 @@ Per fare il passo successivo in automatico, vedi
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi propri di queste stampe. -->
+Queste stampe **non hanno messaggi propri**: i controlli sui filtri sono
+silenziosi, con il solo segnale acustico e il cursore che torna sul campo da
+correggere.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -162,7 +164,35 @@ Per fare il passo successivo in automatico, vedi
     guardare per decidere cosa comprare, perché mette a confronto quello che
     serve con quello che c'è già.
 
-<!-- DA VERIFICARE: quali colonne distinguono nel concreto le due stampe (ordxart.rpt e ordxarts.rpt). -->
+!!! info "Estesa e sintetica: che cosa cambia davvero"
+
+    Il filtro è **identico**: le due voci di **Tipo Stampa** scelgono due
+    impaginazioni diverse degli stessi dati.
+
+    | Voce | Che cosa dà |
+    |---|---|
+    | `ESTESA` | il **dettaglio**: per ogni articolo, gli ordini riga per riga — documento, data, cliente, ordinato ed evaso |
+    | `SINTETICA` | i **totali**: una riga per articolo, con quanto è stato ordinato in tutto e quanto resta |
+
+    L'estesa serve a sapere *chi* aspetta quella merce, la sintetica a sapere
+    *quanta* comprarne. Il layout esatto delle due sta nei rispettivi modelli
+    di stampa.
+
+    Due cose che si vedono solo provandole:
+
+    - **La scelta sparisce sugli ordini a fornitore**: lì la stampa è una sola,
+      e al suo posto la casella cambia nome in *Includi Ordini Totalmente
+      Ricevuti*.
+    - **Indicando un solo articolo** — stesso codice in partenza e in arrivo —
+      la stampa passa in modalità dettaglio anche se si è chiesta la sintetica:
+      su un articolo solo il riepilogo non avrebbe senso.
+
+!!! note "Senza la casella, gli ordini chiusi restano fuori"
+
+    Lasciando spenta **Includi Ordini Totalmente Evasi** la stampa prende solo
+    le righe con dell'ordinato ancora da consegnare, e salta gli ordini già
+    segnati come evasi. È il comportamento che serve quasi sempre: l'elenco di
+    quello che resta da fare.
 
 ## Vedi anche
 

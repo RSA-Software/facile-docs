@@ -169,7 +169,24 @@ quelli che gli servono.
 
 {: .campi }
 
-<!-- DA VERIFICARE: quali campi compaiono per ciascun tracciato: la maschera ne nasconde una parte a seconda del formato scelto. -->
+Questi sono **tutti** i campi che la maschera può mostrare. Quali si vedano
+dipende dal tracciato: il programma nasconde quelli che quel destinatario non
+usa.
+
+| Campo | Quando compare |
+|---|---|
+| **Da Data**, **A Data** | quasi sempre. Alcuni tracciati di anagrafica clienti nascondono **A Data** e lavorano su una data sola |
+| **Num. Riferimento** | sui tracciati EDI, dove il numero finisce dentro al file come identificativo della trasmissione |
+| **Fornitore** | quando il tracciato riguarda un fornitore preciso |
+| **Deposito** | quando l'esportazione si può limitare a un deposito |
+| **Creati/Var. Dal … Al** e **Cessati Dal … Al** | sulle esportazioni di **anagrafica clienti**, per mandare solo i clienti nuovi o cessati nel periodo |
+| **Cod. Aggancio** | sui due tracciati che lo prevedono: `ELLEMME` e `SANT' ANGELO SRL` |
+| **Cod. Concess.** | sui tracciati che vogliono il codice del concessionario |
+
+{: .campi }
+
+Non c'è da imparare quale campo serve a quale tracciato: **si vede quello che
+va compilato**, e basta riempirlo.
 
 ## Pulsanti e comandi
 
@@ -212,7 +229,20 @@ concordata, senza saltare periodi né ripeterli.
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di questa maschera: il file EsportazioneDocumenti.cpp supera le 24.000 righe e i messaggi sono specifici per tracciato. -->
+Ogni tracciato ha i suoi controlli e i suoi messaggi — sono diverse centinaia
+in tutto, uno per ciascun dato che quel destinatario pretende. Quelli comuni
+a tutti:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Il file è stato esportato nella cartella<br>…\out<br>con N segnalazione.* | L'esportazione è finita, ma durante il lavoro sono comparsi N avvisi. | È il riepilogo di quello che è già passato a video: vedi la nota in fondo. |
+| *(nessun messaggio, solo un segnale acustico)* | Un campo obbligatorio per quel tracciato non è compilato. | Guarda dove si è posizionato il cursore. |
+
+I messaggi specifici dei singoli tracciati dicono quasi sempre la stessa cosa
+in modi diversi: **manca un dato che il destinatario pretende** — il suo
+codice sul cliente, il suo codice sull'articolo, la partita IVA, un recapito
+della ditta. Il messaggio nomina il documento o l'articolo: si corregge il
+dato e si riesporta.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
@@ -239,11 +269,81 @@ concordata, senza saltare periodi né ripeterli.
     stesso periodo può raddoppiare i dati dalla loro parte. Tieni traccia di
     cosa è già stato mandato.
 
-<!-- DA VERIFICARE: in quale cartella e con quale nome viene scritto il file di ciascun tracciato. -->
+!!! info "Tutti i tracciati scrivono nella cartella out"
 
-<!-- DA VERIFICARE: dove si impostano i codici del destinatario su clienti e articoli per ciascun tracciato. -->
+    Senza eccezioni: il file esce in **`out`**, sotto la cartella di
+    installazione del programma, e il messaggio finale lo ripete.
 
-<!-- DA VERIFICARE: se esista un registro delle esportazioni già effettuate. -->
+    Il **nome è fisso per tracciato** e porta quasi sempre il nome del
+    destinatario: `FILCONAD.TXT`, `EURITMO.TXT`, `GIESSE.TXT`, `valsoia.txt`,
+    `mantua.txt`, `mauri.txt`, `sicilyfood.txt`, `SMAFIN.TXT`, `DKBONB.TXT`,
+    `ELLEMME.TXT`, `SANTANGELO.TXT`, `FATEDI.TXT`, `vegio.dat`, e così via.
+
+    Alcuni tracciati producono **più file**: FILCONAD separa fatture e note di
+    credito in `FILCONAD_FAT.TXT` e `FILCONAD_CRE.TXT`, le bolle escono in
+    `tesbolle.txt` e `detbolle.txt` — testate e dettaglio — e i sellout hanno
+    il loro `sellout.txt` o `sellout.csv`.
+
+!!! warning "Le «segnalazioni» vanno lette mentre passano"
+
+    Il numero che compare alla fine **non rimanda a nessun elenco**: non viene
+    scritto nessun file di registro e non c'è una maschera dove ritrovarli.
+
+    Ogni segnalazione è un messaggio che è già comparso **durante**
+    l'esportazione, uno per volta, e che è stato chiuso con **OK**: dice quale
+    dato mancava e su quale documento o articolo. Il numero finale serve solo a
+    sapere quanti ne sono passati.
+
+    E soprattutto: **la riga viene scritta lo stesso**, con il campo vuoto. Il
+    file esce, sembra a posto e lo scarto lo trova il destinatario. Su
+    un'esportazione con segnalazioni conviene quindi fermarsi, sistemare i dati
+    e rifarla, invece di mandare il file così com'è.
+
+!!! warning "Il nome non cambia mai: una esportazione sovrascrive la precedente"
+
+    Non c'è la data nel nome e non c'è un progressivo: rilanciando lo stesso
+    tracciato, il file di prima **sparisce**.
+
+    Il file va quindi preso dalla cartella `out` e mandato **subito**, o almeno
+    spostato altrove, prima di fare un'altra esportazione.
+
+!!! info "Dove si mettono i codici del destinatario"
+
+    Sono in due posti, e servono tutti e due.
+
+    **Sul cliente**, nella maschera
+    [Agganci](../anagrafiche/agganci-trasferimento-documenti.md): si collega il
+    cliente — ed eventualmente una sua destinazione — a un **fornitore**, e si
+    scrive con quali codici quel fornitore lo conosce: **Cod. Cliente**,
+    **Codice Socio** e **Codice Fornitore**. È lì che va guardato quando un
+    tracciato si lamenta di un cliente.
+
+    **Sull'articolo**, nel campo **Cod. Fornitore** dell'anagrafica: è il
+    codice con cui il destinatario chiama quell'articolo, ed è il dato che
+    quasi tutti i tracciati mandano **al posto del codice interno**. Un
+    articolo senza codice fornitore non passa.
+
+    Qualche tracciato usa in più il **codice attività** e il **codice
+    cessazione** del cliente, e il suo **canale di vendita**: sono campi
+    dell'anagrafica clienti che di solito non si compilano, e che in quei casi
+    diventano obbligatori.
+
+!!! warning "Non c'è nessun registro delle esportazioni fatte"
+
+    A differenza dell'[esportazione dei movimenti al
+    consulente](../contabilita/esportazione-movimenti.md), qui i documenti
+    **non vengono marcati**: non c'è un segno di «già esportato», non c'è una
+    data di ultimo invio e non c'è una casella per escludere quello che è già
+    partito.
+
+    Ogni esportazione riparte dalle date che si indicano, e manda tutto quello
+    che ci sta dentro. Sta a chi la lancia **tenere nota del periodo già
+    mandato**: sbagliare le date significa rimandare documenti già inviati, e
+    il programma non se ne accorge.
+
+    L'unico appiglio è il **Num. Riferimento** dei tracciati EDI, che finisce
+    dentro al file come numero della trasmissione — ma è un numero che si
+    scrive a mano, non uno che il programma tiene.
 
 ## Vedi anche
 

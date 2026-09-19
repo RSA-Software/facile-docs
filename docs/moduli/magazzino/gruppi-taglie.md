@@ -125,9 +125,28 @@ Valgono inoltre:
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: l'avvertenza sull'ordine delle righe è dedotta da come le giacenze per taglia sono organizzate. Va confermata con una prova prima di pubblicarla. -->
+!!! info "Perché conta la posizione e non il testo"
 
-<!-- DA VERIFICARE: il campo Rifer. a che cosa serve nell'uso quotidiano — è il codice taglia del fornitore, o un riferimento interno? -->
+    Tutto quello che il programma tiene per taglia — le **giacenze**, i
+    **codici a barre**, i **prezzi per taglia**, gli allegati — è legato al
+    **numero della riga** nel gruppo, non alla misura scritta.
+
+    La terza riga del gruppo è «la taglia numero 3»: se domani scrivi un
+    altro valore su quella riga, tutta la giacenza che era della vecchia
+    misura diventa della nuova, senza che nessuno avverta.
+
+!!! note "A che cosa serve Rifer."
+
+    È un **secondo modo di chiamare la stessa taglia**, più corto o più
+    comodo da digitare.
+
+    Lo usa il programma quando bisogna **indicare una taglia scrivendola**:
+    nell'inventario e nella gestione dei codici a barre si batte il
+    riferimento e il programma risale alla taglia. Nelle stampe dei listini
+    per taglia compare accanto alla misura.
+
+    Non è legato a un fornitore: è un codice tuo, e conviene tenerlo breve
+    e senza spazi, perché si digita spesso da terminale.
 
 ## Vedi anche
 

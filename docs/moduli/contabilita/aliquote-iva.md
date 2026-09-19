@@ -78,7 +78,7 @@ La maschera è divisa in tre parti:
 | Calcola Enasarco | | Applica il contributo Enasarco. | Casella |
 | Calcola Enasarco su valori anno Precedente | | Prende a base i valori dell'anno precedente anziché quelli in corso. | Casella |
 | Reparto Cassa | | Reparto del registratore di cassa a cui il codice corrisponde. | Numero |
-| Beni non Destinati Rivendita | | Segnala che il codice riguarda beni non destinati alla rivendita. | 1 carattere |
+| Beni non Destinati Rivendita | | Con `S` gli acquisti registrati con questa aliquota finiscono fra gli **altri acquisti**; con `N` fra i **beni destinati alla rivendita**. | `S` o `N` |
 | Cod. Aggancio | | Codice con cui l'aliquota viene riconosciuta nei tracciati esterni. | Fino a 6 caratteri |
 | Omaggi | | Segnala che il codice si usa per gli omaggi. | Casella |
 | Codice Iva Principale per l'aliquota | | Fra più codici con la stessa percentuale, indica quello da preferire nelle ricerche per aliquota. | Casella |
@@ -189,7 +189,20 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
 
-<!-- DA VERIFICARE: il campo Beni non Destinati Rivendita accetta un solo carattere. Quali valori sono previsti? -->
+!!! note "Beni non Destinati Rivendita: si risponde `S` o `N`"
+
+    È una casella da una lettera sola, e accetta soltanto quelle due: quello
+    che scrivi diventa maiuscolo, e qualunque altra lettera viene rifiutata.
+
+    Conta solo sugli **acquisti** — registro acquisti e registro acquisti CEE.
+    Registrando una fattura d'acquisto, il programma divide imponibile e
+    imposta in due colonne: *beni destinati alla rivendita* e *altri
+    acquisti*. È questa lettera a decidere in quale delle due finiscono.
+
+    Con `N` — o lasciandola vuota — vanno fra i beni per la rivendita; con
+    `S` fra gli altri acquisti. Sulle vendite non cambia niente.
+
+    Nella versione RistoFacile il campo non compare.
 
 ## Vedi anche
 
