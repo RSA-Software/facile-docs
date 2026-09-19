@@ -104,7 +104,7 @@ un valore preceduto da `<=`. Valgono solo quelle attivate:
 |---|---|
 | **Esistenza** `<=` | l'esistenza è minore o uguale al valore indicato. Mettendo `0` si prendono gli articoli finiti. |
 | **Data Ultimo Acquisto** `<=` | l'ultimo acquisto è anteriore o uguale alla data indicata. |
-| **Data Ultimo Vendita** `<=` | l'ultima vendita è anteriore o uguale alla data indicata. L'etichetta è scritta *Ultimo* invece di *Ultima*. |
+| **Data Ultima Vendita** `<=` | l'ultima vendita è anteriore o uguale alla data indicata. |
 
 Le tre condizioni si sommano: attivandone più d'una, l'articolo viene cancellato
 solo se le soddisfa **tutte**.

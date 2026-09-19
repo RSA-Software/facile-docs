@@ -54,7 +54,7 @@ Aggregazioni** hanno una forma propria.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Cod. Fisc. Dichiarante** | ● | Il codice fiscale di chi trasmette. | codice fiscale |
-| **Carica** | | La carica rivestita dal dichiarante, secondo la codifica dell'Agenzia. | `0 - NESSUNA`, `1 - TEST`, … |
+| **Carica** | | La carica rivestita dal dichiarante, secondo la codifica dell'Agenzia. Quindici voci, da `01 - Rappresentante legale, negoziale o di fatto, socio amministratore` a `15 - Commissario liquidatore di una pubblica amministrazione`, più la voce vuota. | vedi elenco |
 | **Anno** | ● | L'anno di riferimento. | anno |
 | **Periodo** | ● | Il periodo da comunicare. | periodo |
 | *(elenco senza etichetta)* | ● | Quali fatture comunicare. | `EMESSE`, `RICEVUTE` |
@@ -123,15 +123,73 @@ casella **Escludi da Spesometro**.
     volte: alcune delle voci di menu possono riferirsi ad adempimenti non più
     in vigore. Verifica con il commercialista quale ti serve davvero.
 
-<!-- DA VERIFICARE: quali di questi adempimenti siano ancora in vigore e quali restino per gli anni pregressi. -->
+<!-- DA CHIEDERE ALL'AUTORE: quali di questi adempimenti siano ancora in vigore e quali restino solo per gli anni pregressi. Non e' deducibile dal codice: e' materia fiscale. Quello che il codice dice e' nella nota qui sotto. -->
 
-<!-- DA VERIFICARE: quali valori contiene l'elenco "Carica" oltre a 0 - NESSUNA e 1 - TEST. -->
+!!! note "Quello che il programma sa degli anni"
 
-<!-- DA VERIFICARE: in quale cartella vengono prodotti i file da trasmettere. -->
+    La **Comunicazione Dati Fatture** parte dal **2017**: su un esercizio
+    precedente la maschera avverte e si chiude.
 
-<!-- DA VERIFICARE: come le aggregazioni entrano nel calcolo della soglia e quale soglia sia. -->
+    Il **periodo** cambia forma con l’ anno: per il 2017 sono due semestri, dal
+    2018 quattro trimestri più i due semestri.
 
-<!-- DA VERIFICARE: i campi della maschera Spesometro: il decodificatore non ne ha estratti. -->
+    Lo **Spesometro** porta le soglie di ogni annata: **25.000 € nel 2010**,
+    **3.000 € dal 2011** (con **3.600 €** per i corrispettivi), e **dal 2012 in
+    poi nessuna soglia sulle fatture**, restando 3.600 € sui corrispettivi.
+
+!!! warning "L’ elenco *Carica* si riempie all’ apertura"
+
+    Non è scritto nelle risorse, quindi non si vede aprendo la maschera nel
+    designer: il programma lo costruisce ogni volta. Sono le quindici cariche
+    della codifica dell’ Agenzia — rappresentante legale, curatore fallimentare,
+    commissario liquidatore, erede, amministratore di condominio e le altre —
+    più una voce vuota, che è quella giusta quando dichiara il titolare stesso.
+
+!!! tip "Dove finisce il file"
+
+    Nella cartella **`out`** dell’ utente — la stessa da cui parte la finestra di
+    salvataggio quando si esporta. È l’ unica cartella coinvolta: da lì il file si
+    prende per darlo all’ intermediario o caricarlo sul sito dell’ Agenzia.
+
+!!! info "La soglia, e a che cosa servono le aggregazioni"
+
+    La soglia è quella dell’ annata: **25.000 € per il 2010**, **3.000 € dal
+    2011**, **nessuna dal 2012**; per i **corrispettivi** resta **3.600 €**.
+
+    Le aggregazioni servono quando lo stesso soggetto è in archivio più volte —
+    come cliente e come fornitore, o con più codici. Raggruppandolo, le sue
+    operazioni si sommano **prima** del confronto con la soglia, invece di
+    restare sotto ciascuna per conto propria. La casella **Controllo Soglia**
+    decide se quell’ aggregazione partecipa al confronto.
+
+### Spesometro
+
+La finestra è fatta di una **griglia sola**, riempita premendo *Calcola*:
+non ha campi di selezione propri. Ogni riga è un soggetto con le sue
+operazioni, e porta:
+
+- la **spunta** con cui si sceglie che cosa comunicare;
+- **codice**, **descrizione**, **indirizzo**, **nazione**, **partita IVA** e
+  **codice fiscale** del soggetto, e se è **persona fisica**;
+- **imponibile**, **imposta** e **totale**;
+- **data**, **numero** e **data** del documento, il **tipo**, il **pagamento**
+  e lo **stato**;
+- numero e data del **documento accompagnatorio**, quando c’ è.
+
+| Comando | Scorciatoia | Effetto |
+|---|---|---|
+| **F2 - Calcola** | ++f2++ | Riempie la griglia con le operazioni del periodo. |
+| **F3 - File Agenzia** | ++f3++ | Produce il file da trasmettere. |
+| **F4 - Esporta** | ++f4++ | Esporta la griglia su foglio. |
+| **F5 - Cliente** | ++f5++ | Apre il cliente della riga. |
+| **F6 - Prima Nota** | ++f6++ | Apre la registrazione da cui la riga viene. |
+| **F7 - Aggregaz.** | ++f7++ | Apre l’ aggregazione del soggetto. |
+| **F8 - Accoppia** | ++f8++ | Accoppia le operazioni fra loro. |
+
+!!! note "Senza periodo non calcola"
+
+    Premendo *Calcola* senza aver scelto il periodo risponde *« Selezionare il
+    periodo! »*.
 
 ## Vedi anche
 

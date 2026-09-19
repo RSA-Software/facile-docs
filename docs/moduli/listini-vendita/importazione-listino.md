@@ -68,6 +68,38 @@ BIONDAN*, *Aggiornamento Listini FLEX*, *Aggiornamento Listini Monthblanc*,
 posizione fissa. Le due importazioni **Tabacchi** aprono direttamente la
 finestra di scelta del file.
 
+### Da dove ciascuna prende i dati
+
+| Importazione | Da dove legge |
+|---|---|
+| **Angaisa** | Chiede quale file aprire, partendo dalla cartella `in` di Facile e mostrando i file di testo. |
+| **Ariete** | Un file fisso, `in\ariete.csv`. **A importazione riuscita il file viene cancellato**, per non rileggerlo due volte. |
+| **Biondan** | Chiede quale file aprire, un testo `.txt`, partendo dalla cartella `in` dei documenti utente. |
+| **Fenapro** | Un file `.mrc`. |
+| **Flex** | Non da un file: da un'**origine dati ODBC** chiamata `FLEX`, di cui legge la tabella `FLEX`. |
+| **Monthblanc** | Non da un file: da un'**origine dati ODBC** chiamata `MONTHBLANC`, di cui legge la tabella `articoli`. |
+| **Renault** | Un file fisso, `in\renault.txt`, e solo quello. |
+| **Tabacchi** (i due formati) | Il foglio Excel scaricato dal portale, scelto con la finestra dei file. |
+
+**Flex** e **Monthblanc** hanno quindi un prerequisito in più: l'origine dati
+ODBC va configurata sul computer, con esattamente quel nome. Se manca,
+l'importazione non parte.
+
+### Come si prepara il file Renault
+
+Il listino arriva da Renault come foglio Excel e va convertito:
+
+1. apri il foglio **con le macro disattivate**;
+2. spostati sul foglio dei dati;
+3. **Salva con nome**, chiamalo `renault` e scegli il tipo *testo delimitato da
+   tabulazioni*;
+4. copia `renault.txt` nella cartella `in` di Facile;
+5. lancia **Menu ▸ Archivi ▸ Listini Vendita ▸ Importazione Listino RENAULT**.
+
+Il file deve avere la **virgola** come separatore dei decimali. Se non si trova
+in quella posizione, l'importazione si ferma con *File non trovato o impossibile
+da aprire!*: non c'è modo di indicarne un altro.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -159,13 +191,25 @@ La finestra di **Fenapro** ha il solo campo **Listino**.
     l'aliquota IVA, l'unità di misura e il reparto predefiniti della ditta: se
     quelle impostazioni sono sbagliate, gli articoli nascono sbagliati.
 
-<!-- DA VERIFICARE: per ciascun formato, quale estensione e quale tracciato il file deve avere; ho potuto accertare solo il .mrc di Fenapro, il renault.txt di Renault e i file Excel dei due formati Tabacchi. -->
+!!! note "Quali creano articoli nuovi e quali no"
 
-<!-- DA VERIFICARE: quali importazioni inseriscono articoli nuovi e quali si limitano ad aggiornare i prezzi degli articoli già presenti. -->
+    **Angaisa**, **Ariete**, **Biondan**, **Flex** e **Monthblanc** inseriscono
+    gli articoli che non trovano in archivio. **Renault** no: lavora solo sugli
+    articoli già presenti, e quelli che non riconosce li salta.
 
-<!-- DA VERIFICARE: se le importazioni scrivano i prezzi con effetto immediato o li mettano fra le variazioni programmate. -->
+    **Monthblanc** arriva a creare anche la **categoria merceologica**, se quella
+    indicata dal listino non c'è.
 
-<!-- DA VERIFICARE: se l'importazione Renault possa leggere un file scelto dall'utente invece del solo "in\renault.txt". -->
+!!! warning "I prezzi entrano in vigore subito, tranne che in Angaisa"
+
+    Le importazioni scrivono direttamente sul listino scelto: i prezzi valgono
+    da quel momento, senza passare dalle [variazioni
+    programmate](variazione-listini.md).
+
+    L'eccezione è **Angaisa**: il suo tracciato può portare una data di
+    decorrenza, e in quel caso il prezzo non viene applicato subito ma messo
+    fra le variazioni programmate per quel giorno.
+
 
 ## Vedi anche
 

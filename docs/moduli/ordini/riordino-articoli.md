@@ -155,7 +155,7 @@ fornitore abituale?* rispondi **Sì** per allineare gli
 |---|---|---|
 | *E' necessario selezionare almeno un fornitore!* | Hai premuto **F2 - Cerca** senza aver scelto i fornitori. | Premi prima **F4 - Sel. Fornitori**. |
 | *Ci sono righe con presente la quantita' ma senza fornitore!* | Una riga ha la quantità ma **For. Sel.** vuoto. | Facile si posiziona sulla riga: indica il fornitore. |
-| *Non ci sono ordini da generare!* | Nessuna riga ha una quantità da ordinare. | Compila le quantità. |
+| *Non ci sono ordini da generare!* | Nessuna riga ha una quantità da ordinare, oppure nessuna di quelle che ce l’ hanno ha un fornitore selezionato. | Compila le quantità e il **For. Sel.**. |
 | *Sono stati correttamente generati N ordini!* | La generazione è andata a buon fine. | Controlla gli ordini dalla [gestione documenti](../vendite/gestione-documenti.md). |
 | *Confermi la pulizia della tabella ?* | Hai premuto **F6 - Pulisci tabella**. | **Sì** svuota la griglia e perde quanto hai impostato. |
 | *Confermi la rimozione del fornitore …?* | Hai premuto **Rimuovi Forn.**. | **Sì** toglie la colonna dal confronto. |
@@ -196,13 +196,13 @@ fornitore abituale?* rispondi **Sì** per allineare gli
     **Miglior Prezzo** e **compila da sé For. Sel.**: la scelta è già fatta, e
     va corretta solo dove non la si vuole seguire.
 
-!!! warning "Se «F7 - Genera Ordini» sembra non fare nulla"
+!!! tip "Se «F7 - Genera Ordini» non genera quello che ti aspetti"
 
-    Quando nessuna riga ha una quantità da ordinare il programma avvisa con
-    *Non ci sono ordini da generare!*. C'è però un caso in cui **non compare
-    alcun messaggio** e la maschera resta com'è: succede quando la generazione
-    non trova fornitori da servire. Se premendo **F7** non accade niente,
-    controlla che le righe con quantità abbiano il **For. Sel.** compilato.
+    A fine generazione il programma dice sempre come è andata: *Non ci sono
+    ordini da generare!* se non c’ era niente da fare, altrimenti quanti ordini
+    ha scritto. Se il numero è più basso di quanto ti aspettavi, controlla che
+    le righe con quantità abbiano il **For. Sel.** compilato: quelle senza
+    fornitore non generano niente.
 
 ## Vedi anche
 

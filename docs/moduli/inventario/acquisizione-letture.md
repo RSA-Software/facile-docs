@@ -84,6 +84,12 @@ pulsante: dice da dove leggere e dove mettere quello che arriva.
 
 {: .campi }
 
+!!! note "**EIA THUNDER** e **EIA SOLARIS** sono la stessa scelta"
+
+    I due terminali parlano lo stesso protocollo, quindi le due voci fanno la
+    stessa cosa. Sono tenute distinte apposta, perché chi ha un Solaris non
+    debba scegliere *Thunder* e viceversa: scegli quella del terminale che hai.
+
 ## Pulsanti e comandi
 
 ### Acquisizione Dati
@@ -180,7 +186,7 @@ versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
 |---|---|---|
 | *Operazione disponibile solo su archivi anno corrente.* | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro e riprova. |
 | *Codice Articolo non trovato in archivio !* | Il codice battuto non esiste. | Controlla il codice, o inserisci l'articolo in anagrafica. |
-| *Carico Merci non trovato in archivio !* | Il numero di carico indicato non esiste. | Controlla il numero: vedi la nota qui sotto. |
+| *Carico Merci non trovato in archivio !<br>Vuoi indicarne un altro ?* | Il numero di carico indicato non esiste. | **Sì** torna a chiedere il numero, **No** annulla l’ acquisizione. |
 | *Acquisizione dati conclusa regolarmente !* | L'acquisizione da carico merci è finita. | Controlla le letture da **Modifica Dati Acquisiti**. |
 | *E' obbligatorio indicare la matricola!* | Con la gestione matricole attiva il campo è vuoto. | Compila la **Matricola**. |
 | *La quantità indicata deve essere obbligatoriamente pari a uno!* | Con le matricole ogni lettura vale un pezzo. | Metti `1` e registra una lettura per matricola. |
@@ -198,14 +204,6 @@ versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
 
 ## Note
 
-!!! warning "Il carico merci inesistente non ferma la procedura"
-
-    Se il numero indicato in **Acquisizione Dati da Carico Merci** non esiste,
-    Facile avvisa con *Carico Merci non trovato in archivio !* ma **prosegue lo
-    stesso**, non acquisisce nulla e conclude con *Acquisizione dati conclusa
-    regolarmente !*. I due messaggi insieme vogliono dire che non è stato
-    caricato niente: ricontrolla il numero e ripeti.
-
 !!! note "Le letture si sommano"
 
     Ogni acquisizione **aggiunge** righe a quelle già presenti: contare due
@@ -214,7 +212,6 @@ versione con taglie e colori si aggiungono **IDXTAG** e **COLORE**.
 
 <!-- DA VERIFICARE: se le letture dello stesso articolo e deposito vengano sommate in chiusura o se contino come righe distinte. -->
 
-<!-- DA VERIFICARE: le voci "EIA THUNDER" e "EIA SOLARIS" dell'elenco Origine puntano allo stesso tipo di terminale: verificare se è voluto. -->
 
 <!-- DA VERIFICARE: quali sono i nomi esatti delle colonne facoltative del foglio Excel di importazione. -->
 

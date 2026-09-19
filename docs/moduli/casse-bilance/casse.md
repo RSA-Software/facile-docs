@@ -42,7 +42,7 @@ Le voci che esistono solo per alcune famiglie:
 |---|---|---|
 | **Invio Clienti Fidelity** | SysPC | Manda alle casse l'anagrafica dei clienti con la tessera fedeltà. |
 | **Invio Saldi Fidelity** | SysPC | Manda il saldo punti, di un cliente o di tutti. La finestra si chiama *Invio Saldo Punti Fidelity*. |
-| **Cancellazione Promozioni** | SysPC | Cancella dalle casse le offerte vecchie. Apre la finestra *Invio Dati Brainpos*, dove si sceglie quanto cancellare. |
+| **Cancellazione Promozioni** | SysPC | Cancella dalle casse le offerte vecchie. Apre la finestra *Cancellazione Promozioni SysPC*, dove si sceglie quanto cancellare. |
 | **Impostazione Porte ECR** | Ditron | Dice a quali registratori di cassa parlare e come. La finestra si chiama *Impostazione ECR Ditron*. |
 
 ## Prerequisiti
@@ -174,12 +174,6 @@ variazioni, che è molto più rapido.
     lanciato dai file di comando `RSASyspc_EOD.BAT`, `RSAEpos_EOD.BAT` o
     `RSABrainpos_EOD.BAT` nelle rispettive cartelle. Se il trasferimento non
     avviene, il problema è quasi sempre lì e non in Facile.
-
-!!! note "«Cancellazione Promozioni» apre una finestra che si chiama Brainpos"
-
-    La voce sta sotto SysPC, ma la finestra che compare porta il titolo *Invio
-    Dati Brainpos*: è la stessa maschera, riusata. Il contenuto è quello
-    giusto.
 
 <!-- DA VERIFICARE: quale famiglia usa quale cartella e quale tracciato di file. -->
 

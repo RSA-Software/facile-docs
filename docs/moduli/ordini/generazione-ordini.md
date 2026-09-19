@@ -15,7 +15,7 @@ maschere di questa pagina: si parte da un elenco, si sceglie, si genera.
 
     - **Percorso:**
         - Menu ▸ Ordini ▸ Generazione Ordini a Fornitori da Ordini Clienti
-        - Menu ▸ Ordini ▸ Ordini da Clienti ▸ Rissortimento Punti Vendita da Vendite
+        - Menu ▸ Ordini ▸ Ordini da Clienti ▸ Riassortimento Punti Vendita da Vendite
         - Menu ▸ Ordini ▸ Ordini da Clienti ▸ Genera DDT per Ordini Centro Servizi
     - **Scorciatoia:** ++f2++ genera, ++f3++ modifica la riga, ++f4++ genera singoli, ++f5++ cerca, ++esc++ esce
     - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
@@ -27,7 +27,7 @@ maschere di questa pagina: si parte da un elenco, si sceglie, si genera.
 | Voce di menu | A cosa serve |
 |---|---|
 | **Generazione Ordini a Fornitori da Ordini Clienti** | Legge gli ordini dei clienti di un periodo e genera gli ordini ai fornitori corrispondenti. Si sceglie riga per riga cosa comprendere. |
-| **Rissortimento Punti Vendita da Vendite** | Calcola cosa riassortire nei punti vendita partendo dal venduto. La voce di menu contiene un refuso: si legge *Rissortimento* invece di *Riassortimento*; la finestra si chiama correttamente **Riassortimento da Vendite**. |
+| **Riassortimento Punti Vendita da Vendite** | Calcola cosa riassortire nei punti vendita partendo dal venduto. La finestra si chiama **Riassortimento da Vendite**. |
 | **Genera DDT per Ordini Centro Servizi** | Trasforma in documenti di trasporto gli ordini destinati al centro servizi. |
 
 ## Prerequisiti
@@ -78,13 +78,13 @@ per articolo, quanto ordinare e a chi.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Da Iniziale** | ● | Inizio del periodo di vendita da esaminare. L'etichetta a video dice *Da Iniziale*: si intende *Data Iniziale*. | data |
+| **Data Iniziale** | ● | Inizio del periodo di vendita da esaminare. | data |
 | **Data Finale** | ● | Fine del periodo. | data |
 
 {: .campi }
 
 Le colonne sono **Codice**, **Descrizione**, **Quantità da Ordinare**,
-**Disponibilita**, **Esistenza**, **Scorta Min**, **Esistenza Centrale**,
+**Disponibilità**, **Esistenza**, **Scorta Min**, **Esistenza Centrale**,
 **Q.tà Ordinata**, **Q.ta Venduta**, **Scorta Max** e **Assort.**. Si scrive
 nella **Quantità da Ordinare**; il resto serve a decidere.
 
@@ -141,9 +141,9 @@ lavorando — *Riassortimento da Vendite - Dep. (1) SEDE*.
 
 ### Riassortire un punto vendita
 
-1. Apri **Menu ▸ Ordini ▸ Ordini da Clienti ▸ Rissortimento Punti Vendita da
+1. Apri **Menu ▸ Ordini ▸ Ordini da Clienti ▸ Riassortimento Punti Vendita da
    Vendite**.
-2. Indica il periodo in **Da Iniziale** e **Data Finale**.
+2. Indica il periodo in **Data Iniziale** e **Data Finale**.
 3. Premi **F5 - Cerca Vendite** e scegli il deposito nella finestra dei filtri.
 4. Controlla la griglia: **Q.ta Venduta**, **Esistenza** e **Scorta Min** danno
    la misura; correggi la **Quantità da Ordinare** dove serve.
@@ -165,7 +165,8 @@ lavorando — *Riassortimento da Vendite - Dep. (1) SEDE*.
 | *Confermi la generazione degli ordini a Fornitore ?* | Conferma prima di generare. | **Sì** per procedere. |
 | *Vuoi ordinare solo articoli non disponibili?* | Facile chiede se limitarsi a quello che manca. | **Sì** ordina solo il mancante, **No** ordina tutto, **Annulla** ferma. |
 | *E' stato generato un Ordine a fornitore!* / *Sono stati generati N Ordini a fornitore!* | La generazione è andata a buon fine. | Controlla gli ordini dalla [gestione documenti](../vendite/gestione-documenti.md). |
-| *Non è stato generato nessun Ordine a fornitore!* | Nessuna riga aveva quantità da ordinare. | Rivedi le scelte e i filtri. |
+| *Non è stato generato nessun Ordine a fornitore!* | Nessuna riga aveva quantità da ordinare, oppure gli articoli non hanno un fornitore. | Rivedi le scelte e i filtri; se il messaggio parla di articoli senza fornitore, completa l’ anagrafica. |
+| *N articoli non hanno un fornitore in anagrafica e non sono stati ordinati.* | Compare in coda al messaggio precedente: quegli articoli non hanno né fornitore abituale né alternativo. | Completa l’ anagrafica, oppure indica il fornitore riga per riga con **F3 - Modifica**. |
 | *Non è stato impostato nulla da ordinare!* | Nel riassortimento tutte le quantità sono a zero. | Compila la **Quantità da Ordinare** su almeno una riga. |
 | *Confermi la generazione dell' Ordine?* | Conferma del riassortimento. | **Sì** per procedere. La risposta preimpostata è **No**. |
 | *Attenzione!<br>Non saranno generati movimenti sul deposito principale !<br>Vuoi Continuare ?* | La causale di trasferimento non ha deposito o movimento impostati. | **No**, e sistema la [causale](../magazzino/causali-magazzino.md) nei parametri della ditta. |
@@ -189,17 +190,18 @@ partono affatto e compare uno dei messaggi elencati nell'
     anche con un messaggio, ma non blocca: se confermi, il secondo ordine viene
     creato lo stesso.
 
-!!! warning "Gli articoli senza fornitore spariscono dalla generazione"
+!!! note "Gli articoli senza fornitore restano fuori dalla generazione"
 
     Per decidere a chi ordinare, Facile guarda in quest'ordine:
 
     1. il **fornitore abituale** dell'articolo;
     2. se manca, il **fornitore alternativo**;
-    3. se mancano entrambi, **l'articolo viene tolto** dalla generazione, senza
-       messaggio.
+    3. se mancano entrambi, **l'articolo resta fuori** dalla generazione.
 
-    È il motivo più comune per cui negli ordini generati manca qualcosa: il
-    programma non lo segnala. Prima di generare, controlla che gli
+    È il motivo più comune per cui negli ordini generati manca qualcosa. Il
+    messaggio finale te lo dice — *« N articoli non hanno un fornitore in
+    anagrafica e non sono stati ordinati »* — ma non elenca quali: per evitare
+    il problema a monte, controlla che gli
     [articoli](../anagrafiche/anagrafica-articoli.md) del periodo abbiano il
     fornitore compilato — la
     [Stampa Articoli per Fornitore](../anagrafiche/stampe-articoli.md) serve

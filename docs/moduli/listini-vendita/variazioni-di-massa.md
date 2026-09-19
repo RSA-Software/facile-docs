@@ -101,7 +101,8 @@ Il nuovo prezzo si calcola così:
 - con **Tipo** `PERCENTUALE`: *prezzo di riferimento × (1 + variazione ÷ 100)*;
 - con **Tipo** `VALORE`: *prezzo di riferimento + variazione*.
 
-Per ridurre un prezzo si scrive la variazione con il segno meno.
+Per ridurre un prezzo si scrive la variazione con il segno meno: il campo
+accetta i valori negativi, e l'unico rifiutato è lo zero.
 
 Il **Riferimento** decide da quale prezzo si parte:
 
@@ -145,9 +146,26 @@ che non si vuole toccare, o si interrompe tutto.
 
 !!! note "Un solo campo se non si distinguono i tipi di vendita"
 
-    **Trasfert**, **C.S. Vendita** e **C.S. Trasfert** compaiono solo se nelle
-    impostazioni del programma è attiva la gestione dei tipi di vendita.
-    Altrimenti resta il solo campo **Normale**.
+    **Trasfert**, **C.S. Vendita** e **C.S. Trasfert** compaiono solo se in
+    **Utility ▸ Impostazioni** è spuntata la casella **Abilita Scelta Tipo
+    Vendita**. Altrimenti resta il solo campo **Normale**.
+
+    È un'impostazione **della postazione**, non della ditta: si attiva su ogni
+    computer per conto suo, e due postazioni della stessa azienda possono
+    vedere questa maschera in modo diverso.
+
+!!! warning "I messaggi chiamano due campi con un altro nome"
+
+    Se una provvigione è rimasta a zero, il programma lo segnala prima di
+    procedere — ma nel messaggio due dei quattro campi hanno un nome diverso da
+    quello dell'etichetta:
+
+    | Campo sulla maschera | Come lo chiama il messaggio |
+    |---|---|
+    | **Normale** | non viene controllato |
+    | **Trasfert** | *Vendite Trasfert* |
+    | **C.S. Vendita** | *Vendite **Concessionario*** |
+    | **C.S. Trasfert** | *Vendite **Delivery*** |
 
 ## Pulsanti e comandi
 
@@ -230,13 +248,16 @@ che non si vuole toccare, o si interrompe tutto.
     quel listino; gli altri vengono saltati senza avviso. **Varia Listini**
     invece crea la riga mancante.
 
-<!-- DA VERIFICARE: con Riferimento "PREZZO MEDIO D'ACQUISTO", se il medio è calcolato solo sul deposito attivo o su tutti i depositi. -->
+!!! note "Come si calcola il prezzo medio d'acquisto"
 
-<!-- DA VERIFICARE: se il campo della variazione, in Varia Listini, accetta valori negativi come mi aspetto. -->
+    Il medio non guarda tutti i depositi: prende i contatori del **solo deposito
+    attivo** e del **solo esercizio in corso**, e fa
 
-<!-- DA VERIFICARE: i nomi esatti con cui i tipi di vendita "C.S. Vendita" e "C.S. Trasfert" sono chiamati altrove nel programma: i messaggi di conferma li chiamano "Concessionario" e "Delivery". -->
+    *(valore della rimanenza iniziale + valore caricato) ÷ (quantità della
+    rimanenza iniziale + quantità caricata)*
 
-<!-- DA VERIFICARE: quale impostazione del programma fa comparire i tipi di vendita oltre a "Normale", e come si chiama a video. -->
+    Se quella quantità è zero — articolo mai caricato nell'esercizio e senza
+    rimanenza — non c'è un medio da cui partire e l'articolo resta com'è.
 
 ## Vedi anche
 

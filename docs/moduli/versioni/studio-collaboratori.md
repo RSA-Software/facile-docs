@@ -62,7 +62,7 @@ anagrafici.
 | **Cellulari** | | Due numeri di cellulare. | Fino a 14 caratteri ciascuno |
 | **Sesso** | | Il sesso della persona. | `MASCHILE`, `FEMMINILE` |
 | **Stato Civile** | | Lo stato civile. | `CONIUGATO`, `CONIUGATA`, `CELIBE`, `NUBILE` |
-| **Titolo di Sudio** | | Il titolo di studio. L'etichetta a video contiene un refuso. | Fino a 30 caratteri |
+| **Titolo di Studio** | | Il titolo di studio. | Fino a 30 caratteri |
 | **Data di Nascita** | | La data di nascita. | Data |
 | **Data Inizio Rapporto** | | Da quando la persona collabora con lo studio. | Data |
 
@@ -113,13 +113,6 @@ Se lasci vuoto il nominativo il programma **emette un segnale acustico** e
 riporta il cursore sul campo, senza mostrare alcun messaggio.
 
 <!-- DA VERIFICARE: il testo esatto della conferma di cancellazione e degli altri messaggi di questa maschera. -->
-
-## Note
-
-!!! note "«Titolo di Sudio» è un refuso a video"
-
-    L'etichetta del campo del titolo di studio è scritta **Titolo di Sudio**,
-    senza la t. È un refuso dell'etichetta, non un campo diverso.
 
 ## Vedi anche
 

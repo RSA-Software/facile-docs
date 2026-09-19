@@ -117,7 +117,7 @@ Ha inoltre i filtri **Taglie** e **Sezione**.
 | **F7 - Stampa** | ++f7++ | Stampa quello che si vede. |
 | **Ordina Col.** | | Ordina per colonna. |
 | **Rimuovi Ord. Col.** | | Toglie l'ordinamento di colonna. |
-| **Ordina Row.** | | Ordina per riga. L'etichetta è metà in inglese. |
+| **Ordina Riga** | | Ordina per riga. |
 | **Rimuovi Ord. Riga** | | Toglie l'ordinamento di riga. |
 
 Nel cubo si lavora anche con il mouse: le dimensioni si trascinano fra righe,

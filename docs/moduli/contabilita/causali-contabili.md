@@ -69,7 +69,7 @@ schema di registrazione.
 | Registro Fiscale | | Il registro IVA su cui l'operazione viene stampata. | 1 - SOLO LIBRO GIORNALE, 2 - REG. ACQUISTI, 3 - REG. FATTURE EMESSE, 4 - REG. CORRISPETTIVI, 5 - REG. FATTURE IN SOSPENSIONE, 6 - REG. ACQUISTI CEE, 7 - REG. FATTURE EMESSE CEE |
 | Codice Sezione | | Sezione contabile su cui la causale registra. | Codice dall'archivio sezioni |
 | Relazione | | Con chi ha a che fare l'operazione: determina se il programma chiede un cliente, un fornitore o nessuno dei due. | CLIENTI, FORNITORI, NESSUNO |
-| Richiesta Allegati su Registrazone | | Chiede di allegare un documento alla registrazione. | Casella |
+| Richiesta Allegati su Registrazione | | Chiede di allegare un documento alla registrazione. | Casella |
 
 {: .campi }
 
@@ -194,7 +194,6 @@ fornitori.
 
 <!-- DA VERIFICARE: la differenza fra le due caselle di IVA di cassa (D.L. 185/2008 e D.L. 83/2012) — quando si usa l'una e quando l'altra? -->
 
-<!-- DA VERIFICARE: l'etichetta "Richiesta Allegati su Registrazone" ha un refuso (manca la "i" di Registrazione). Va corretta nel programma? -->
 
 ## Vedi anche
 

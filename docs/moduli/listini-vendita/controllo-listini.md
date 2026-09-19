@@ -87,7 +87,7 @@ Si apre con **F4 - Filtro** e sceglie i documenti da esaminare:
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Stato** | | Se mostrare tutti i documenti o solo quelli ancora da controllare. | `TUTTI`, `DA VERIFICARE`, `VERIFICATI` |
+| **Stato** | | Se mostrare tutti i documenti o solo quelli ancora da controllare. Vedi la nota in fondo su quando un documento diventa verificato. | `TUTTI`, `DA VERIFICARE`, `VERIFICATI` |
 | **Tipo** | | Se guardare i carichi, gli ordini o entrambi. | `TUTTI`, `CARICHI`, `ORDINI` |
 | **Dal**, **Al** | | Periodo dei documenti. | date |
 | **Fornitore** | | Limita ai documenti di un fornitore. | codice, oppure vuoto per tutti |
@@ -179,11 +179,39 @@ dati, e la **Differenza** fra i due.
     **Il confronto guarda solo il netto.** Due listini con lo stesso prezzo
     netto ma sconti diversi non compaiono fra le differenze.
 
-<!-- DA VERIFICARE: come un documento diventa "VERIFICATO" nel filtro di Conferma Listini — se basta il salvataggio o serve un'azione esplicita. -->
+!!! note "Quando un documento diventa «verificato»"
 
-<!-- DA VERIFICARE: se in Conferma Listini il salvataggio scriva sempre sul listino 1 o sul listino indicato nel campo in alto. -->
+    Basta il salvataggio: non c'è un comando apposta. Alla fine di
+    **F2 - Salva**, Conferma Listini marca come verificati tutti i documenti
+    che ha appena lavorato — i carichi e gli ordini a fornitore — e da quel
+    momento spariscono dall'elenco se il filtro **Stato** è su `DA VERIFICARE`.
 
-<!-- DA VERIFICARE: da dove Conferma Listini prende il "Miglior Listino Fornitore": presumibilmente dai listini di acquisto, ma va confermato. -->
+    Il segno resta sul documento, per esercizio: riaprendo la maschera l'anno
+    dopo, i documenti del nuovo esercizio ripartono da *da verificare*.
+
+!!! note "Su quale listino si scrive"
+
+    Sul listino indicato nel campo in alto, non sempre sul primo. Insieme al
+    prezzo il salvataggio **azzera i sette sconti** di quella riga e conserva il
+    prezzo precedente, che resta consultabile come prezzo vecchio.
+
+    Una riga viene riscritta solo se il suo prezzo non è già stato cambiato
+    dopo l'inizio del periodo in esame: se qualcuno l'ha toccata nel frattempo,
+    Conferma Listini la lascia stare.
+
+!!! note "Da dove viene il «Miglior Listino Fornitore»"
+
+    Da due posti, messi a confronto:
+
+    - i [listini dei fornitori](../listini-fornitori/gestione-listini-fornitori.md),
+      di cui vengono presi i **due prezzi netti più bassi** per quell'articolo,
+      con il nome del fornitore;
+    - le **promozioni d'acquisto** in corso, il cui prezzo netto entra nel
+      confronto e può scalzare i due di listino. Sono considerate in corso anche
+      quelle scadute da pochi giorni, per non perderle a ridosso della fine.
+
+    Le due colonne sono quindi il primo e il secondo miglior prezzo
+    d'acquisto disponibile, non solo quelli di listino.
 
 ## Vedi anche
 

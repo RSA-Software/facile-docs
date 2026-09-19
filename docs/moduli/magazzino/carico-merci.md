@@ -114,6 +114,7 @@ costo si è mosso, con il prezzo che servirebbe per tenere il margine.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca un campo obbligatorio. | Compila il campo su cui si è posizionato il cursore. |
+| *Cancellazioni non abilitate per l' utente !* | L'utente ha il **Blocco Cancellazioni Dati**. | Serve un utente abilitato, o va tolto il blocco da [Archivi ▸ Utenti](../anagrafiche/utenti.md). |
 
 ## Note
 

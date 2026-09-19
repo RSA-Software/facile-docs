@@ -70,7 +70,7 @@ Le schede sono queste:
 | **Contatori** | Ultimi acquisti, quantità caricate, scaricate, ordinate e impegnate. |
 | **Statistici** | Rimanenze e valori per anno e per sezione. |
 | **Barcode** | I codici a barre associati all'articolo. |
-| **Alterntaivi** | Gli articoli che possono sostituire questo. |
+| **Alternativi** | Gli articoli che possono sostituire questo. |
 | **Collegati** | Gli articoli da proporre insieme a questo. |
 | **Componenti** | Gli articoli di cui questo è composto. |
 | **Fornitori** | I prezzi di acquisto dei diversi fornitori. |
@@ -91,11 +91,17 @@ Le schede sono queste:
 ## Campi
 
 Il programma richiede sempre la **Descrizione** e il **Cod. Iva**. Il
-**Reparto** è obbligatorio se così è stato impostato nei dati dell'azienda. Su
-ogni installazione l'assistenza può rendere obbligatori anche altri campi della
-scheda *Generale*: in quel caso, premendo **F2 - Salva**, il programma non
-mostra alcun messaggio — emette un segnale acustico e porta il cursore sul
-campo da compilare.
+**Reparto** è obbligatorio se così è stato impostato nei dati dell'azienda.
+
+!!! note "I campi obbligatori non sono gli stessi dappertutto"
+
+    Oltre ai campi che il programma richiede sempre, su ogni installazione
+    l'assistenza può renderne obbligatori altri. In quel caso **F2 - Salva** si
+    ferma, dice quale campo manca — *Il campo Partita IVA è obbligatorio.* — e
+    porta il cursore sul campo, aprendo la scheda in cui si trova.
+
+    L'elenco lo decide l'assistenza, installazione per installazione: due
+    aziende possono avere obblighi diversi sulla stessa maschera.
 
 ### Testata
 
@@ -175,7 +181,7 @@ il documento che l'ha generata.
 | **Listini** | Codice, Descrizione, Prezzo, Prezzo Netto |
 | **Contatori** | Data Ultimo Acquisto, Ultimo Prezzo d' Acquisto, Data Penultimo Acquisto, Penult. Prezzo d' Acquisto, Q.ta Carichi e Scarichi N/V Clienti e Fornitori, Q.ta Ordinata da Clienti e a Fornitori, Q.ta Cali e Scarti, Q.ta in Lavorazione, %Ric., %Marg. e i tre listini |
 | **Statistici** | Rimanenza Iniziale, Caricata, Scaricata, Resi a Fornitore, Resa da Clienti, Impegnato, in quantità e valore |
-| **Alterntaivi** | Cod. Principale, Cod. Alternativo, Descrizione |
+| **Alternativi** | Cod. Principale, Cod. Alternativo, Descrizione |
 | **Collegati** | Codice, Descrizione |
 | **Componenti** | Codice, Descrizione, Mis., Quantità |
 | **Fornitori** | Cod.For., Fornitore, Prezzo, Netto, Codice Art.For. |
@@ -277,7 +283,7 @@ Valgono inoltre in tutta la maschera:
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *(nessun messaggio, solo un segnale acustico)* | Manca la **Descrizione**, manca il **Cod. Iva**, manca il **Reparto** quando è richiesto, oppure è vuoto uno dei campi resi obbligatori su questa installazione. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
+| *Il campo … è obbligatorio.* | È vuoto un campo che il salvataggio pretende: la **Descrizione**, il **Cod. Iva**, il **Reparto** quando è richiesto, o uno di quelli resi obbligatori su questa installazione. | Il messaggio nomina il campo, e alla chiusura il cursore è già lì, nella scheda giusta. |
 | *La descrizione articolo in italiano e' obbligatoria!* | Stai lavorando in una lingua diversa dall'italiano e la descrizione italiana è vuota. | Torna all'italiano con **Seleziona Lingua** e scrivi la descrizione. |
 | *Codice Articolo Presente in Archivio.* | Il codice digitato è già di un altro articolo. | Usa un codice diverso, o lascialo vuoto per farlo generare al programma. |
 | *Codice Articolo inferiore al minimo consentito (…)!* — *Codice Articolo superiore al massimo consentito (…)!* | Il codice è fuori dall'intervallo previsto per la generazione automatica dei codici. | Usa un codice compreso nell'intervallo indicato dal messaggio. |
@@ -308,11 +314,6 @@ Valgono inoltre in tutta la maschera:
     Esistenza, disponibilità, contatori e progressivi si riferiscono **al solo
     deposito indicato in testata**. Per il quadro di tutti i depositi usa
     **F7 - Altri ▸ Riepilogo Depositi**.
-
-!!! note "Nota"
-
-    La linguetta della settima scheda si legge **Alterntaivi**: è un refuso del
-    programma, la scheda contiene gli articoli *alternativi*.
 
 !!! note "Da dove viene il codice generato in automatico"
 

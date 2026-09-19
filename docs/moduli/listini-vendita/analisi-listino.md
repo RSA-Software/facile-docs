@@ -70,7 +70,7 @@ Le colonne che si possono scrivere sono queste; le altre sono di sola lettura.
 | **Esistenza** | | Scrivendo una quantità diversa da quella in archivio, il programma genera un movimento di rettifica per pareggiare. | quantità |
 | **Scorta Minima**, **Scorta Massima** | | Cambiano le scorte dell'articolo su quel deposito. | quantità |
 | **Assortimento** | | Include o esclude l'articolo dall'assortimento del deposito. | attivo/non attivo |
-| **Nuovo Prezzo** | | Scrive il nuovo prezzo sul listino in esame. | importo |
+| **Nuovo Prezzo** | | Scrive il nuovo prezzo sul listino in esame, che è sempre il listino principale della ditta. | importo |
 
 {: .campi }
 
@@ -114,7 +114,7 @@ Scaricata da Inizio Anno**.
 | **F4 - Trova** | ++f4++ | Cerca un testo nella griglia. |
 | **F5 - Selez.** | ++f5++ | Apre la ricerca articoli da cui sceglierne molti in una volta e aggiungerli alla griglia. |
 | **Articolo** | | Aggiunge alla griglia un singolo articolo. |
-| **Importa da Excel** | | Aggiunge alla griglia gli articoli elencati in un foglio Excel. |
+| **Carica Articoli da Excel** | | Aggiunge alla griglia gli articoli elencati in un foglio Excel. Del foglio legge **solo la colonna CODICE**. |
 | **Esporta su Excel** | | Salva la griglia in un foglio Excel. |
 | **Elimina** | | Toglie dalla griglia la riga attiva. L'articolo **non** viene cancellato dall'archivio. |
 | **F6 - Pulisci** | ++f6++ | Svuota la griglia, previa conferma. |
@@ -149,13 +149,13 @@ Scaricata da Inizio Anno**.
 
 1. Prepara un foglio con una colonna intestata `CODICE` e sotto i codici degli
    articoli.
-2. Premi **Importa da Excel** e scegli il file.
+2. Premi **Carica Articoli da Excel** e scegli il file.
 
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Confermi lo pulizia della griglia?* | Richiesta di conferma di **F6 - Pulisci**. | **Sì** svuota la griglia. Gli articoli restano in archivio. |
+| *Confermi la pulizia della griglia?* | Richiesta di conferma di **F6 - Pulisci**. | **Sì** svuota la griglia. Gli articoli restano in archivio. |
 | *Impossibile inizializzare il file excel!* | Il programma non riesce a preparare il foglio Excel. | Segnala all'assistenza. |
 | *Impossibile aprire il file excel!* | Il file scelto non si apre: è aperto in Excel, spostato o danneggiato. | Chiudi il file in Excel, poi riprova. |
 | *Colonna CODICE non trovata nel file excel!* / *Impossibile continuare* | Il foglio da importare non ha l'intestazione `CODICE`. | Aggiungi la riga di intestazione con la colonna `CODICE`. |
@@ -182,11 +182,33 @@ Scaricata da Inizio Anno**.
     diventa anche il prezzo netto, e i sette sconti di quel listino vengono
     portati a zero.
 
-<!-- DA VERIFICARE: come si chiama a video, nelle impostazioni della ditta, la causale di rettifica inventario usata dalla colonna Esistenza. -->
+!!! note "Qual è la causale di rettifica"
 
-<!-- DA VERIFICARE: su quale listino agisce la colonna "Nuovo Prezzo" e come si sceglie: non ho individuato un campo nella maschera che lo indichi. -->
+    La causale con cui vengono scritti i movimenti è quella indicata come
+    **Inventario da Lettore** nella scheda **Magazzino** della
+    [ditta](../anagrafiche/ditte.md), insieme alle altre causali di servizio
+    (Vendite, Acquisti, Carico su Palmari…). È la stessa che usa la
+    [chiusura dell'inventario](../inventario/chiusura-inventario.md), ed è per
+    questo che i due messaggi sul CARICO e sullo SCARICO sono gli stessi.
 
-<!-- DA VERIFICARE: quali colonne del foglio Excel di importazione vengono lette oltre a CODICE. -->
+!!! note "Su quale listino si lavora"
+
+    Non c'è un campo per sceglierlo perché non si sceglie: la maschera lavora
+    sempre sul **listino principale** indicato nella scheda *Magazzino* della
+    [ditta](../anagrafiche/ditte.md). Le intestazioni delle colonne
+    **Listino** e **Nuovo Prezzo** prendono infatti il nome di quel listino
+    dalla tabella dei listini; se il listino non è in tabella, si leggono
+    semplicemente *Listino*.
+
+!!! note "Del foglio Excel si legge solo il codice"
+
+    **Carica Articoli da Excel** non importa prezzi: cerca nella prima riga una cella
+    intestata `codice` — maiuscole e minuscole sono indifferenti — e poi legge
+    **solo quella colonna**, riga per riga, per caricare in griglia gli
+    articoli corrispondenti. Qualunque altra colonna del foglio viene ignorata.
+
+    Se un codice del foglio non esiste in archivio l'importazione si ferma con
+    un errore.
 
 ## Vedi anche
 

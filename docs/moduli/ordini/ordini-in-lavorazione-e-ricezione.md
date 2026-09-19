@@ -92,11 +92,11 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2- Modifica** | ++f2++ | Apre l'ordine della riga corrente. |
+| **F2 - Modifica** | ++f2++ | Apre l'ordine della riga corrente. |
 | **Sel. Tutti** | | Spunta tutte le righe. |
 | **Desel. Tutti** | | Toglie la spunta da tutte. |
-| **F3- Lotti** *(o* **F3- Partite** *)* | ++f3++ | Attribuisce automaticamente lotti o partite agli ordini scelti. L'etichetta dipende da come è configurata la gestione. |
-| **F4- Documenti** | ++f4++ | Emette i documenti di vendita dagli ordini scelti. |
+| **F3 - Lotti** *(o* **F3 - Partite** *)* | ++f3++ | Attribuisce automaticamente lotti o partite agli ordini scelti. L'etichetta dipende da come è configurata la gestione. |
+| **F4 - Documenti** | ++f4++ | Emette i documenti di vendita dagli ordini scelti. |
 | **F5- Prezzi** | ++f5++ | Apre il controllo dei prezzi dell'ordine. |
 | **F6- Scomponi** | ++f6++ | Apre *Scomposizione Ordine per Fornitore*: divide un ordine in più ordini, uno per fornitore. Vale su **un solo** ordine per volta, e solo se è ancora in stato *salvato*. |
 | **F7- Stampa** | ++f7++ | Stampa quello che si vede. |
@@ -118,7 +118,7 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 2. Restringi per **Cliente** o per **Registro** se serve.
 3. Spunta gli ordini da evadere, o premi **Sel. Tutti**.
 4. Se la merce è a lotti o a partite, premi prima **F3** per attribuirli.
-5. Premi **F4- Documenti**: Facile genera i documenti di vendita.
+5. Premi **F4 - Documenti**: Facile genera i documenti di vendita.
 
 ### Vedere cosa deve ancora arrivare da un fornitore
 
@@ -146,12 +146,12 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 | *Devi selezionare un solo ordine!* | Il comando lavora su una riga sola e ne hai spuntate più d'una. | Lascia la spunta su una sola riga. |
 | *Devi selezionare almeno un ordine!* | Nessuna riga è spuntata. | Spunta le righe su cui vuoi agire. |
 | *Ordine non Trovato in Archivio!* | La riga della griglia non corrisponde più a un ordine. | Premi **Ricarica** e riprova. |
-| *L'ordine non é stato ancora confermato!* | Si stanno emettendo documenti da un ordine non confermato. | Apri l'ordine e confermalo. |
+| *L'ordine non è stato ancora confermato!* | Si stanno emettendo documenti da un ordine non confermato. | Apri l'ordine e confermalo. |
 | *Non possono essere elaborati ordini non confermati!* | Fra le righe scelte c'è un ordine non confermato. | Togli la spunta a quelle righe o conferma gli ordini. |
 | *Non possono essere elaborati ordini confermati o parzialmente evasi!* | Il comando vale solo su ordini ancora intatti. | Scegli altre righe. |
 | *Operazione non consentita su Ordine parzialmente evaso!* | L'ordine è già stato evaso in parte. | Lavora sul documento già emesso. |
 | *Operazione non consentita per lo stato dell' Ordine!* | Lo stato dell'ordine non ammette il comando. | Guarda la colonna **Stato**. |
-| *Non é possibile emettere documenti per questo tipo di ordine!* | L'ordine è di un genere che non genera documenti. | Nessuna azione: è così per costruzione. |
+| *Non è possibile emettere documenti per questo tipo di ordine!* | L'ordine è di un genere che non genera documenti. | Nessuna azione: è così per costruzione. |
 | *Quantità inferiori a zero escluse dal corpo del documento!* | L'ordine ha righe con quantità negativa. | Sono state saltate: controlla il documento generato. |
 | *Documento non modificabile !* | Il documento generato è già chiuso. | Non si corregge da qui. |
 | *Impossibile elaborare i documenti!* / *Impossibile elaborare il documento!* | L'elaborazione non è andata a buon fine. | Riprova; se insiste, segnala all'assistenza. |

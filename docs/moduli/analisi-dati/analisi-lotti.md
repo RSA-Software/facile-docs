@@ -27,10 +27,10 @@ pagina rispondono all'una e all'altra, con la stessa maschera.
 
 ## A cosa serve
 
-| Voce di menu | A cosa serve | Titolo della finestra |
-|---|---|---|
-| **Analisi Lotti** | L'andamento di ciascun lotto: quanto è entrato, quanto è uscito, a che prezzi. | *Analisi Lotti* |
-| **Giacenza Lotti** | Quanto resta di ciascun lotto. | *Giacenze Lotti* |
+| Voce di menu | A cosa serve |
+|---|---|
+| **Analisi Lotti** | L'andamento di ciascun lotto: quanto è entrato, quanto è uscito, a che prezzi. |
+| **Giacenza Lotti** | Quanto resta di ciascun lotto. |
 
 È la stessa maschera con due modi: cambia il titolo e cambia quello che la
 griglia mostra.
@@ -56,7 +56,7 @@ con l'esportazione.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Data Carico Dal**, **Data Carico al** | ● | Il periodo in cui i lotti sono stati caricati. L'etichetta della seconda ha l'iniziale minuscola. | date |
+| **Data Carico Dal**, **Data Carico Al** | ● | Il periodo in cui i lotti sono stati caricati. | date |
 | **Deposito** | | Restringe a un [deposito](../magazzino/depositi.md). Vuoto significa `TUTTI`. | codice |
 | **Listino** | | Il listino con cui valorizzare. | codice |
 | **Stato** | | Quali lotti mostrare. | `TUTTI`, `APERTI`, `CHIUSI` |

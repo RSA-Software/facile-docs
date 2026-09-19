@@ -17,7 +17,7 @@ la pulizia, i totali e il quadro d'insieme.
         - Menu ▸ Scadenze ▸ Scadenziario Fornitori ▸ Controllo Scadenze <-> Schede Contabili
         - Menu ▸ Scadenze ▸ Elimina Scadenze
         - Menu ▸ Scadenze ▸ Totali Scadenze
-        - Menu ▸ Scadenze ▸ Cruscotto Finaziario
+        - Menu ▸ Scadenze ▸ Cruscotto Finanziario
     - **Scorciatoia:** ++f2++ avvia, ++esc++ esce
     - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
@@ -30,7 +30,7 @@ la pulizia, i totali e il quadro d'insieme.
 | **Controllo Scadenze <-> Schede Contabili** | Confronta lo scadenziario con le schede contabili e segnala le discordanze. Esiste in due copie, una per lo scadenziario clienti e una per quello fornitori. |
 | **Elimina Scadenze** | Toglie dall'archivio le scadenze chiuse, per non trascinarsele dietro. |
 | **Totali Scadenze** | I totali dello scadenziario. |
-| **Cruscotto Finaziario** | Il quadro d'insieme di incassi e pagamenti attesi. La voce di menu contiene un refuso: si legge *Finaziario* invece di *Finanziario*. |
+| **Cruscotto Finanziario** | Il quadro d'insieme di incassi e pagamenti attesi. |
 
 ## Prerequisiti
 
@@ -46,7 +46,7 @@ Prima di usare queste maschere occorre:
 ![Elimina scadenze](../../assets/img/scadenze/manutenzione-scadenze.png)
 
 Sono finestre di selezione con il periodo e i filtri, e i pulsanti **F2 - OK**
-ed **Esci**. Il **Cruscotto Finaziario** si apre invece come un quadro a video.
+ed **Esci**. Il **Cruscotto Finanziario** si apre invece come un quadro a video.
 
 <!-- DA VERIFICARE: i campi di queste maschere e la struttura del cruscotto: non ho potuto estrarne le etichette dalle risorse. -->
 
@@ -87,7 +87,7 @@ ed **Esci**. Il **Cruscotto Finaziario** si apre invece come un quadro a video.
 
 ### Avere il quadro di incassi e pagamenti
 
-Apri **Menu ▸ Scadenze ▸ Cruscotto Finaziario**.
+Apri **Menu ▸ Scadenze ▸ Cruscotto Finanziario**.
 
 ## Controlli e messaggi
 
@@ -108,7 +108,7 @@ Apri **Menu ▸ Scadenze ▸ Cruscotto Finaziario**.
 
 <!-- DA VERIFICARE: se "Elimina Scadenze" tolga solo le scadenze chiuse o tutte quelle del periodo. -->
 
-<!-- DA VERIFICARE: cosa mostra il Cruscotto Finaziario e su quali dati è costruito. -->
+<!-- DA VERIFICARE: cosa mostra il Cruscotto Finanziario e su quali dati è costruito. -->
 
 <!-- DA VERIFICARE: come il controllo presenta le discordanze: stampa, griglia o messaggio. -->
 

@@ -75,7 +75,7 @@ quella del gruppo agenti ha i filtri sull'anagrafica dei clienti.
 | **Data Iniziale**, **Data Finale** | ● | Il periodo. | date |
 | **Sezione** | | Restringe a una [sezione](../contabilita/sezioni.md). | codice |
 | **Ordinamento** | | Come ordinare le righe. | `CODICE`, `ALFABETICO` |
-| **Salto Pagina dopo ogni Cliente** | | Manda ogni cliente su una pagina propria: comodo per consegnare a ciascuno il suo foglio. | attivo/non attivo |
+| **Salto Pagina dopo ogni Cliente** | | Manda ogni cliente su una pagina propria: comodo per consegnare a ciascuno il suo foglio. Il salto segue il **primo** raggruppamento, non il secondo. | attivo/non attivo |
 
 {: .campi }
 
@@ -92,7 +92,7 @@ quella del gruppo agenti ha i filtri sull'anagrafica dei clienti.
 | **Tipo Attività** | | Restringe a un tipo di attività. | codice |
 | **Sezione** | | Restringe a una sezione. | codice |
 | **Ordinamento** | | Come ordinare. | `CODICE`, `ALFABETICO` |
-| **Salto Pagina dopo ogni Cliente** | | Manda ogni raggruppamento su una pagina propria. | attivo/non attivo |
+| **Salto Pagina dopo ogni Agente** | | Manda ogni agente su una pagina propria: comodo per consegnare a ciascuno il suo foglio. | attivo/non attivo |
 
 {: .campi }
 
@@ -152,18 +152,26 @@ predefiniti.
 
 ## Note
 
-!!! note "Il titolo resta quello della prima voce del gruppo"
-
-    Aprendo *Venduto Agente/Reparto* la finestra si chiama comunque **Venduto
-    per Agente/Articolo**: è la stessa maschera, e il titolo non viene adattato
-    alla seconda chiave. Il risultato è però quello giusto.
-
 !!! note "Chi non ha agente finisce insieme"
 
     Le analisi per agente raggruppano sotto una voce vuota tutti i clienti senza
     agente assegnato. Se quel gruppo è grosso, va sistemata l'anagrafica.
 
-<!-- DA VERIFICARE: perché la casella si chiama "Salto Pagina dopo ogni Cliente" anche nelle analisi raggruppate per agente. -->
+!!! note "La casella del salto nomina il primo raggruppamento"
+
+    Nelle analisi per cliente la casella dice **dopo ogni Cliente**, in quelle
+    per agente **dopo ogni Agente**: in tutti e due i casi il salto cade sul
+    **primo** raggruppamento della stampa, cioè sul soggetto che dà il nome
+    all’ analisi. La seconda chiave — articolo, reparto, categoria — non fa
+    cambiare pagina.
+
+    Vale anche per **Venduto Agente/Cliente**, che è il caso in cui viene il
+    dubbio: lì i clienti ci sono, ma come *seconda* chiave, e il foglio cambia
+    lo stesso a ogni agente — non a ogni cliente.
+
+    Fino alla versione precedente anche le analisi per agente dicevano **dopo
+    ogni Cliente**, perché la maschera nasce come copia di quella per cliente:
+    la didascalia era rimasta indietro. Corretto il 18/09/2026.
 
 <!-- DA VERIFICARE: se la comparazione su due anni richieda che entrambe le annate siano nello storico dei movimenti. -->
 

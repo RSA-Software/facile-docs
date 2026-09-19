@@ -116,7 +116,7 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
 | **F5 - Selez.** | ++f5++ | Sceglie gli articoli da portare in griglia. |
 | **F6 - Pulisci** | ++f6++ | Svuota la griglia. |
 | **Periodo** | | Imposta il periodo su cui calcolare il venduto. |
-| **Importa da Excel** | | Aggiunge gli articoli elencati in un foglio. |
+| **Carica Articoli da Excel** | | Aggiunge gli articoli elencati in un foglio. Del foglio legge **solo la colonna CODICE**. |
 | **Elimina** | | Toglie la riga dalla griglia. |
 
 ### Aggiornamento Ubicazione

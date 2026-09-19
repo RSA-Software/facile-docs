@@ -55,6 +55,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 **Ope** = [Operatori](../moduli/altre-tabelle/operatori.md),
 **Pag** = [Tipi di pagamento](../moduli/contabilita/tipi-di-pagamento.md),
 **Pno** = [Registrazione di prima nota](../moduli/contabilita/registrazione-prima-nota.md),
+**Prv** = [Provvigioni agenti](../moduli/vendite/provvigioni-agenti.md),
 **Rcl** = [Conti per la riclassificazione](../moduli/contabilita/conti-riclassificazione.md),
 **Rep** = [Reparti](../moduli/magazzino/reparti.md),
 **Rnp** = [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md),
@@ -97,7 +98,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Attenzione! I movimenti di apertura e di chiusura non possono essere modificati.* | Pno | Si è aperta una registrazione di apertura o chiusura dell'esercizio. | Non è modificabile: le scritture di apertura e chiusura si rifanno con le procedure di fine anno. |
 | *Attenzione! Il movimento contiene incassi/rettifiche e non può essere modificato.* | Pno | Alla registrazione sono già agganciati incassi o rettifiche. | Vanno tolti prima quelli, poi la registrazione si può modificare. |
 | *Attenzione! Il movimento risulta esportato al consulente. Prendere nota delle modifiche apportate* | Pno | La registrazione è già stata mandata al commercialista. | Annota la modifica: il consulente ha già la versione precedente. |
-| *Attenzione! Non é stato impostato alcun listino. Nelle vendite sarà preso come prezzo di riferimento il prezzo di acquisto. Vuoi Continuare?* | Cli | Il listino di vendita è a zero. | Rispondere **No** e impostare un listino, salvo che si voglia davvero vendere al prezzo di acquisto. |
+| *Attenzione! Non è stato impostato alcun listino. Nelle vendite sarà preso come prezzo di riferimento il prezzo di acquisto. Vuoi Continuare?* | Cli | Il listino di vendita è a zero. | Rispondere **No** e impostare un listino, salvo che si voglia davvero vendere al prezzo di acquisto. |
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | Ali | Si è scritta un'esistenza, ma la causale di rettifica inventario non aggiorna la data di inventario. | Attivare l'opzione sulla causale di magazzino. |
 | *Cambio ditta non permesso!* | Dit | Il cambio ditta è stato bloccato per questa installazione. | Se serve, chiedi all'assistenza di abilitarlo. |
 | *Cancellati … documenti.* | Ocl, Olr | Resoconto finale della cancellazione degli ordini evasi o ricevuti. | Nulla: è una conferma. |
@@ -144,7 +145,7 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Confermi la variazione dei Listini ?* | Vpr | Richiesta di conferma di **Apporta Variazioni**. | **Sì** rende effettive le variazioni programmate a quella data. |
 | *Confermi la Variazione del Listino?* | Vdm | Richiesta di conferma di **Varia Listini**. | **Sì** ricalcola i prezzi su tutti gli articoli selezionati. |
 | *Confermi la Variazione delle Provvigioni ?* | Vdm | Richiesta di conferma di **Varia Provvigioni**. | **Sì** riscrive le provvigioni su tutti gli articoli selezionati. |
-| *Confermi lo pulizia della griglia?* | Ali | Richiesta di conferma dello svuotamento della griglia. | **Sì** svuota la griglia; gli articoli restano in archivio. |
+| *Confermi la pulizia della griglia?* | Ali | Richiesta di conferma dello svuotamento della griglia. | **Sì** svuota la griglia; gli articoli restano in archivio. |
 | *Connessione al server conclusa con errore n …* | Iml | Il controllo della licenza per l'importazione dei tabacchi non è andato a buon fine. | Verificare il collegamento a Internet e riprovare. |
 | *Continuando l'operazione imposterai questo computer come l'unico abilitato allo scarico...* | Fep | Lo scarico delle fatture elettroniche si lega a una sola postazione. | Prosegui solo se è la postazione da cui si scaricheranno sempre le fatture. |
 | *Credito Esaurito! E' necessario acquistare del credito per poter effettuare l' invio.* | Fep | Il credito sul servizio di invio è finito. | Come sopra. |
@@ -168,10 +169,10 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Il cliente selezionato risulta cessato ! Vuoi Continuare ?* | Pno | Il cliente è marcato come cessato. | Verifica di aver scelto il nominativo giusto. |
 | *Il codice del Capo Area non è valido o disponibile.* | Age | Il codice digitato in **Capo Area** non esiste. | Premere ++f10++ sul campo e scegliere dall'elenco, oppure inserire prima il capo area. |
 | *Il codice del Deposito non è valido o disponibile.* | Cau | Il codice digitato in **Al Deposito** non esiste. | Premere ++f10++ sul campo e scegliere dall'elenco. |
-| *Il codice del Sottoconto non é valido o disponibile.* | Ban | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggere il sottoconto, o lasciare il campo a zero. |
-| *Il codice del Tipo di Pagamento non é valido o disponibile.* | Age, Cli, For | Il codice digitato non esiste in archivio. Lo stesso messaggio, con il nome dell'archivio corrispondente, vale per banche, categorie economiche, trasportatori, agenti, note, gruppi, tipi di attività, nature giuridiche, listini, causali, canali di vendita e nazioni. | Premere ++f10++ sul campo e scegliere dall'elenco. |
+| *Il codice del Sottoconto non è valido o disponibile.* | Ban | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggere il sottoconto, o lasciare il campo a zero. |
+| *Il codice del Tipo di Pagamento non è valido o disponibile.* | Age, Cli, For | Il codice digitato non esiste in archivio. Lo stesso messaggio, con il nome dell'archivio corrispondente, vale per banche, categorie economiche, trasportatori, agenti, note, gruppi, tipi di attività, nature giuridiche, listini, causali, canali di vendita e nazioni. | Premere ++f10++ sul campo e scegliere dall'elenco. |
 | *Il codice della Causale di Magazzino richiesto non è valido o disponibile.* | Cau | La causale indicata nel campo **Causale** non esiste. | Correggerla, oppure lasciare il campo a zero. |
-| *Il codice della zona non é valido o disponibile.* | Age, Cli, For | Il codice digitato in **Zona** non esiste. | Premere ++f10++ sul campo e scegliere dall'elenco. |
+| *Il codice della zona non è valido o disponibile.* | Age, Cli, For | Il codice digitato in **Zona** non esiste. | Premere ++f10++ sul campo e scegliere dall'elenco. |
 | *Il codice deve essere compreso tra 1 e 999.* — *Il codice deve essere compreso tra 1 e 9999.* | Tab | **Solo Taglie e Colori.** Il codice di un colore interno è fuori dall'intervallo consentito. | Usare un codice compreso nell'intervallo indicato dal messaggio. |
 | *Il codice deve essere compreso tra 1 e 99999.* | Tab | Sui listini di vendita il codice è fuori dall'intervallo consentito. | Usare un codice compreso fra 1 e 99999. |
 | *Hai cambiato il modo in cui questa causale muove i contatori di magazzino… Vuoi salvare ?* | Cau | Si stanno modificando i contatori di una causale già usata nei movimenti: quelli registrati restano contabilizzati con le impostazioni di prima. | **Sì** salva; subito dopo eseguire **Utility ▸ Ricalcolo Movimenti di Magazzino**. |
@@ -215,8 +216,8 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *Indirizzo Domicilio Legale Azienda non impostato!* | Cli, For | Manca l'indirizzo del domicilio legale della propria azienda. | Completare i dati dell'azienda e ripetere la stampa. |
 | *Indirizzo email del mittente non impostato! Impossibile procedere* | Mal, Cmp | Manca l'indirizzo da cui inviare la posta. | Impostalo nei dati dell'utente o della ditta e riprova. |
 | *Indirizzo non impostato!* | For | Manca l'indirizzo del fornitore. | Completare la scheda *Generale* e ripetere la stampa. |
-| *L'annullamento della Ventilazione dei corrispettivi é stata conclusa in modo errato!* | Liq | L'annullamento della ventilazione non è riuscito. | Ripeti; se il problema resta, segnala all'assistenza. |
-| *L'annullamento della Ventilazione dei corrispettivi é stata conclusa regolarmente!* | Liq | L'annullamento della ventilazione è riuscito. | Nulla: è una conferma. |
+| *L'annullamento della Ventilazione dei corrispettivi è stata conclusa in modo errato!* | Liq | L'annullamento della ventilazione non è riuscito. | Ripeti; se il problema resta, segnala all'assistenza. |
+| *L'annullamento della Ventilazione dei corrispettivi è stata conclusa regolarmente!* | Liq | L'annullamento della ventilazione è riuscito. | Nulla: è una conferma. |
 | *L'articolo fa parte di un Gruppo Mix! Vuoi aggiornare tutti gli altri articoli del gruppo ?* | Ali | Si è cambiato il prezzo di un articolo che appartiene a un gruppo mix. | **Sì** allinea tutto il gruppo. |
 | *L'articolo fa parte di un Gruppo Mix! Vuoi inserire tutti gli altri articoli del gruppo ?* | Ali | L'articolo aggiunto alla griglia appartiene a un gruppo mix. | **Sì** porta in griglia tutto il gruppo. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | Cli, For | Primo dei due avvisi che precedono la cancellazione. | Rispondere **Sì** solo se si è certi che il record non serva negli esercizi precedenti. |
@@ -225,13 +226,15 @@ qualunque maschera che registra dei dati. Le sigle sono queste:
 | *La causale contabile deve essere in relazione con i fornitori!* | For | La causale indicata è impostata sui clienti. | Scegliere una causale collegata ai fornitori. |
 | *La descrizione articolo in italiano e' obbligatoria!* | Art | Si sta lavorando in una lingua diversa dall'italiano e la descrizione italiana è vuota. | Tornare all'italiano con **Seleziona Lingua** e scrivere la descrizione. |
 | *La Partita IVA digitata risulta già presente in archivio! Vuoi Continuare?* | Cli, For, Rub | La stessa partita IVA è già assegnata a un altro nominativo. Il controllo vale solo in inserimento. | Verificare di non stare creando un doppione. |
-| *La Ventilazione dei corrispettivi é stata conclusa in modo errato! Ripetere l'operazione* | Liq | La ventilazione non è riuscita. | Ripeti; se il problema resta, segnala all'assistenza. |
-| *La Ventilazione dei corrispettivi é stata conclusa regolarmente!* | Liq | La ventilazione è andata a buon fine. | Nulla: è una conferma. |
+| *La Ventilazione dei corrispettivi è stata conclusa in modo errato! Ripetere l'operazione* | Liq | La ventilazione non è riuscita. | Ripeti; se il problema resta, segnala all'assistenza. |
+| *La Ventilazione dei corrispettivi è stata conclusa regolarmente!* | Liq | La ventilazione è andata a buon fine. | Nulla: è una conferma. |
 | *Le due password digitate non corrispondono !* | Uti | **Password** e **Conf. Password** dell'utente sono diverse. | Ridigita le due password facendo attenzione al blocco maiuscole. |
 | *Listino non trovato in archivio!* | Cfl | Il codice indicato come listino di riferimento o target non esiste. | Correggere il codice o creare il listino nella tabella dei listini. |
 | *Mancano i dati del titolare/legale rappresentante!* | Cli | Si sta stampando il modulo di fidejussione e il titolare non è registrato. | Registrarlo dal menu **F7 - Altri**. |
 | *Nel file deve essere presente almeno un cliente o un fornitore !* | Liq | La selezione dell'elenco clienti e fornitori non ha prodotto nominativi. | Allarga la selezione. |
 | *Nessun ordine evaso con data fra il … e il …* / *Nessun ordine ricevuto con data fra il … e il …* | Ocl, Olr | Nel periodo indicato non ci sono ordini già evasi da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
+| *Non ci sono articoli in archivio!* | Art | Si è chiesta una stampa articoli ma l’ anagrafica è vuota: succede su un' installazione appena fatta. | Carica gli articoli e ripeti. |
+| *Non ci sono fatture in archivio!* | Prv | Si è chiesta l’ attribuzione automatica delle provvigioni ma non c’ è nessuna fattura da cui ricavare il periodo. | Emetti le fatture, poi ripeti. |
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | Tutte tranne Rub | Il record è richiamato da documenti, scadenze, prima nota, movimenti o altri archivi. | Non è eliminabile: lasciarlo in archivio. |
 | *Non è stata digitata la Partita IVA! Vuoi Continuare?* | Cli, For | Si sta salvando un nominativo senza partita IVA. | Rispondere **No** e inserirla, oppure **Sì** per salvare comunque. |
 | *Non hai l' Autorizzazioni sufficienti per completare l' operazione.* | Cli, For | Il codice digitato è fuori dall'intervallo riservato a clienti o fornitori. | Usare un codice compreso nell'intervallo, o lasciare quello proposto dal programma. |

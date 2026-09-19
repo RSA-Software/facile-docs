@@ -130,7 +130,7 @@ Lasciando i campi liberi si copia il listino di **tutti** gli articoli.
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | Manca uno dei due codici, oppure **A Listino** è uguale a **Da Listino**, oppure **Da Ditta** è la ditta in cui si sta già lavorando. | Correggi il campo su cui si è posizionato il cursore. |
 | *Errore Selezione Ditta !* | La ditta indicata in **Da Ditta** non è stata trovata. | Controlla il codice della ditta. |
 | *Impossibile Aprire i Files necessari !* | Gli archivi della ditta di partenza non si aprono. | Verifica che la ditta esista e che i suoi archivi siano raggiungibili; se il problema resta, segnala all'assistenza. |
-| *Operazione non necessaria per archivi con gestione comune!* | Si è chiesta la copia da un'altra ditta, ma l'installazione tiene gli archivi in comune fra le ditte. | Non c'è nulla da fare: gli articoli e i listini sono già condivisi. |
+| *Operazione non necessaria per archivi con gestione comune!* | La copia da un'altra ditta è prevista solo sugli archivi locali. | Non c'è nulla da fare: dove compare questo messaggio gli archivi sono già condivisi fra le ditte. |
 
 ## Note
 
@@ -145,9 +145,12 @@ Lasciando i campi liberi si copia il listino di **tutti** gli articoli.
     hanno un prezzo sul listino di origine vengono saltati senza avviso: sul
     listino di arrivo restano con i valori che avevano.
 
-<!-- DA VERIFICARE: come si chiama a video l'impostazione che rende gli archivi "a gestione comune" fra le ditte, per poterla citare nel messaggio corrispondente. -->
+!!! note "La copia da un'altra ditta porta anche le variazioni programmate"
 
-<!-- DA VERIFICARE: se la copia da altra ditta riporti anche le variazioni di listino programmate, oltre ai prezzi in vigore. -->
+    Oltre ai prezzi in vigore vengono copiate le [variazioni di listino
+    programmate](variazione-listini.md) dell'articolo, con le loro date di
+    decorrenza: sul listino di arrivo si ritrovano sia il prezzo di oggi sia
+    quelli già fissati per il futuro.
 
 ## Vedi anche
 

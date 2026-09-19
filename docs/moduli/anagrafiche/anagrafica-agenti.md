@@ -203,7 +203,7 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o il **Cognome e Nome**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
-| *Il codice della zona non é valido o disponibile.* | Il codice digitato in **Zona** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. |
+| *Il codice della zona non è valido o disponibile.* | Il codice digitato in **Zona** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. |
 | *Il codice del Capo Area non è valido o disponibile.* | Il codice digitato in **Capo Area** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco, oppure inserisci prima il capo area. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare l'agente. |
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | L'agente è assegnato a dei clienti, oppure compare in documenti, movimenti, scadenze o provvigioni. | Non è eliminabile: lascialo in archivio. |

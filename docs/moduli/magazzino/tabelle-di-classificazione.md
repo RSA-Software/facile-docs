@@ -67,7 +67,6 @@ Queste sono le diciannove voci di menu, con il titolo che compare in alto:
 | **Settori** | Inserimento Settore | Settore merceologico |
 | **Tipi di Fondo** | Inserimento Tipi Fondo | Calzature |
 | **Colori Interni** | Inserimento Colori Interni | Il colore come lo chiami tu |
-| **Toni** | Inserimento Colori Interni | **È la stessa tabella di Colori Interni** |
 | **Gruppi Calibri** | Inserimento Calibri | Ortofrutta |
 | **Gruppi Articoli** | Inserimento Gruppi Articoli | Raggruppamento principale degli articoli |
 | **Sottogruppi** | Inserimento Sottogruppi Articoli | Secondo livello sotto i gruppi |
@@ -79,12 +78,6 @@ Queste sono le diciannove voci di menu, con il titolo che compare in alto:
 | **Tipi Contenitori** | Inserimento Tipo Contenitore | Contenitori, con la capacità in litri |
 | **Tipi Involucro** | Inserimento Tipo Involucro | Involucri e imballaggi. La voce di menu è scritta **Inseimento**, con un refuso |
 | **Materiali** | Inserimento Materiale | Materiale di cui l'articolo è fatto |
-
-!!! warning "Attenzione"
-
-    **Toni** e **Colori Interni** sono due voci di menu diverse che scrivono
-    sulla **stessa tabella**: quello che inserisci da una lo ritrovi
-    nell'altra. Non sono due classificazioni distinte.
 
 ### Nel resto del menu Archivi
 
@@ -225,8 +218,6 @@ Valgono inoltre:
 
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
-
-<!-- DA VERIFICARE: le voci di menu Toni e Colori Interni scrivono sulla stessa tabella. È voluto (due nomi per lo stesso elenco) o è un errore nel menu da correggere? -->
 
 <!-- DA VERIFICARE: la tabella Periodi. Il nome non dice a quale uso siano destinati questi periodi. -->
 

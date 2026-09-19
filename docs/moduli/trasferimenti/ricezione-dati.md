@@ -171,12 +171,12 @@ ciascuna. Se una delle due non serve, rispondi **No** alla sua domanda.
     riga. Le altre caricano tutto quello che trovano nel file: se una parte non
     va bene, va corretta dopo, a mano.
 
-!!! note "SIDA e CDS caricano le promozioni con la stessa procedura"
+!!! note "SIDA e CDS sono due voci per la stessa procedura, ed è voluto"
 
     **Importazione Promozione CDS s.p.a.** usa la stessa funzione delle
-    promozioni SIDA, e cerca quindi gli stessi file `off*.TXT`.
-
-<!-- DA VERIFICARE: se l'uso della stessa procedura per le promozioni CDS e SIDA sia voluto o un residuo. -->
+    promozioni SIDA, e cerca quindi gli stessi file `off*.TXT`. Le due voci sono
+    tenute distinte apposta, perché ciascuno trovi a menu’ il nome del proprio
+    fornitore: scegli la tua e non sbagli.
 
 <!-- DA VERIFICARE: in quale cartella ciascuna procedura cerca il proprio file. -->
 

@@ -89,7 +89,7 @@ inseriscono nuovi articoli ma si correggono quelli esistenti.
     aggiorna da sé.
 
     Per cambiare molti prezzi in un colpo solo ci sono le [variazioni di
-    massa](variazioni-di-massa.md) o il giro da [Excel](#lavorare-i-prezzi-su-excel).
+    massa](variazioni-di-massa.md) o il passaggio da [Excel](#portare-i-listini-su-excel).
 
 !!! note "Colonne che cambiano nome o spariscono"
 
@@ -117,12 +117,17 @@ inseriscono nuovi articoli ma si correggono quelli esistenti.
 | **Consultazione** | ++f11++ | Apre la consultazione. |
 | **Guida** | ++f1++ | Apre la guida in linea sulla pagina della maschera. |
 
-!!! warning "In Taglie e Colori - Calzature il doppio clic è invertito"
+!!! note "In Taglie e Colori - Calzature il doppio clic apre l'altra finestra"
 
-    In **Taglie e Colori - Calzature** il doppio clic (e ++enter++ /
-    ++space++) apre la finestra del **singolo listino**, e serve ++ctrl++ per
-    aprire quella dei ricarichi. Nelle altre versioni vale quanto scritto in
-    tabella.
+    In **Taglie e Colori - Calzature** il doppio clic (e ++enter++ / ++space++)
+    apre la finestra del **singolo listino**, e serve ++ctrl++ per aprire quella
+    dei ricarichi: l'opposto di quanto scritto in tabella. È una
+    personalizzazione chiesta da chi usa quella versione, dove il lavoro normale
+    è su un listino per volta.
+
+    In nessuna delle due versioni si perde qualcosa: le due finestre restano
+    comunque a portata di **F3 - Tutti Listini** e **F4 - Singolo Listino**. Il
+    doppio clic decide solo quale delle due è la più veloce da aprire.
 
 ### La finestra Impostazione Filtro
 
@@ -158,7 +163,7 @@ campo resta senza etichetta e non si può compilare.
    indicando anche la data di **Decorrenza**.
 3. Chiudendo la finestra la riga della griglia si aggiorna da sola.
 
-### Lavorare i prezzi su Excel
+### Portare i listini su Excel
 
 1. Carica gli articoli con **F2 - Filtro**.
 2. Premi **F5 - Esporta su Foglio Excel**: il programma propone la cartella
@@ -167,10 +172,19 @@ campo resta senza etichetta e non si può compilare.
    tutte le colonne che si vedono a video, con le stesse intestazioni, gli
    stessi colori e la griglia dei bordi; restano fuori **Trovato** e le colonne
    nascoste. La griglia non si muove: resta caricata com'era.
-3. Modifica il foglio fuori da Facile.
-4. Premi **F6 - Importa da Foglio Excel** e scegli il file: il programma parte
+
+Il foglio che ne esce serve a **guardare, stampare e far girare** i prezzi: ha i
+tre listini affiancati, come la maschera. Non è il foglio che si reimporta —
+vedi la nota in fondo.
+
+### Aggiornare i prezzi da un foglio Excel
+
+1. Prepara il foglio con le intestazioni della tabella qui sotto: una riga per
+   ogni articolo **e per ogni listino** da aggiornare.
+2. Carica gli articoli con **F2 - Filtro**.
+3. Premi **F6 - Importa da Foglio Excel** e scegli il file: il programma parte
    dalla cartella `in` dei documenti utente.
-5. Controlla la colonna **Trovato**, poi rispondi alla domanda sugli articoli
+4. Controlla la colonna **Trovato**, poi rispondi alla domanda sugli articoli
    non trovati.
 
 L'importazione aggiorna **solo gli articoli caricati nella griglia**: se nel
@@ -203,17 +217,23 @@ decimali**, sia che la cella sia formattata come numero sia che contenga del
 testo. Nelle celle di testo la **virgola** va bene come separatore decimale: il
 programma la converte da sé.
 
-!!! warning "Il foglio esportato non si reimporta così com'è"
+!!! note "Esportare e importare sono due mestieri diversi"
 
-    L'esportazione e l'importazione non sono l'una l'inverso dell'altra.
-    L'export scrive **tutti e tre i listini** affiancati, con le intestazioni
-    della griglia (`Codice`, `1° Listino`, `%Sc1`…); l'import lavora su **un
-    listino per volta** e cerca intestazioni diverse (`CODICE`, `COD_LIS`,
-    `PREZZO`, `SCONTO1`…). Reimportando il foglio appena esportato, il
-    programma riconosce solo la colonna del codice e i prezzi non si aggiornano.
+    Non sono l'una l'inverso dell'altra, ed è voluto.
 
-    Per fare il giro completo, il foglio da importare va preparato con le
-    intestazioni della tabella qui sopra, una riga per articolo e per listino.
+    L'**esportazione** fotografa la maschera: **più listini** affiancati sulla
+    stessa riga, con le intestazioni che si leggono a video (`Codice`,
+    `1° Listino`, `%Sc1`…). Serve a leggere, stampare, mandare i prezzi a
+    qualcuno.
+
+    L'**importazione** aggiorna **un listino per riga**, e per sapere quale lo
+    chiede alla colonna `COD_LIS`. Serve a caricare un aggiornamento, tipicamente
+    quello che arriva dal fornitore.
+
+    Di conseguenza **il foglio appena esportato non si reimporta**: le sue
+    intestazioni non sono quelle che l'importazione cerca, e reimportandolo il
+    programma riconosce solo la colonna del codice, senza toccare i prezzi. Il
+    foglio da importare si prepara con le intestazioni della tabella qui sopra.
 
 ## Controlli e messaggi
 

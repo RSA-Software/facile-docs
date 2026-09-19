@@ -16,7 +16,7 @@ quella ditta. Da qui si passa anche da un'azienda all'altra.
 
     - **Percorso:** Menu ▸ Archivi ▸ Ditte ▸ Inserimento *(oppure* Modifica *o* Cambio Ditta*)*
     - **Scorciatoia:** ++f2++ salva, ++f3++ precedente, ++f4++ successiva, ++f5++ cerca, ++f6++ elimina
-    - **Permessi richiesti:** l'inserimento chiede una password di amministrazione; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md). I due comandi **F7** e **F8** compaiono **solo all'utente `ADMIN`**
+    - **Permessi richiesti:** l'inserimento chiede una password di amministrazione; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](utenti.md). I due comandi **F7** e **F8** compaiono **solo agli amministratori**
 
 ---
 
@@ -184,7 +184,7 @@ usare.
 | **Carico su Palmari**, **Cau. Trasp. Carico Palmari** | Carichi provenienti dai palmari. |
 | **Inventario da Lettore** | La causale delle rettifiche di [inventario](../inventario/menu-inventario.md). |
 | **Rifatturazione** | La rifatturazione. |
-| **Carico da Produzione**, **Scarico da Produzione**, **Scarico Sfido di Produzione**, **Impegno di Produzione**, **Avvio Produzione** | Le cinque causali della [produzione](../magazzino/produzione.md). |
+| **Carico da Produzione**, **Scarico da Produzione**, **Scarico Sfrido di Produzione**, **Impegno di Produzione**, **Avvio Produzione** | Le cinque causali della [produzione](../magazzino/produzione.md). |
 | **Trasferimento Tra Depositi**, **Causale Trasporto**, **Cau. Trasp. Rimanenze** | I trasferimenti fra depositi e i documenti che li accompagnano. |
 | **Riporto Esistenze Anno Prec.** | La causale del [riporto esistenze](../utility/manutenzione-archivi.md). |
 | **Rimanenze Magazzino** | Le rimanenze. |
@@ -261,8 +261,8 @@ registro: **Battenti**, **RI.BA.**, **Comodato Banchi**, **Solleciti di
 Pagamento**, **Etichette**, **Tracciabilità (L/C)**, **Preconti**, **Resi da
 Clienti**.
 
-Il riquadro *Fatture Eletrroniche - Pubblica Amministrazione / Privati* — con un
-refuso nel titolo — contiene:
+Il riquadro *Fatture Elettroniche - Pubblica Amministrazione / Privati*
+contiene:
 
 | Campo | Descrizione |
 |---|---|
@@ -323,7 +323,7 @@ Due riquadri. **FIDELITY**:
 | **Formato Stampa** | Il modulo del buono. |
 | **Codice Organizzazione**, **Codice Punto Vendita** | I codici del circuito. |
 | **Num Buoni Emessi** | Il contatore dei buoni. |
-| **Abilità Circolarità** | Rende i buoni spendibili in tutti i punti vendita del circuito. L'etichetta è scritta *Abilità* invece di *Abilita*. |
+| **Abilita Circolarità** | Rende i buoni spendibili in tutti i punti vendita del circuito. |
 
 {: .campi }
 
@@ -422,8 +422,8 @@ Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
 | **F5 - Cerca** | ++f5++ | Apre l'elenco delle ditte, con **Codice**, **Descrizione** e **Anno**. |
 | **F6 - Elimina** | ++f6++ | Cancella la ditta, previa conferma. |
 | **Ricarica** | | Rilegge la ditta dall'archivio, abbandonando le modifiche non salvate. |
-| **F7 - Impo. Prot.** | ++f7++ | Apre le **Impostazioni Protette**. Compare **solo all'utente `ADMIN`** e chiede una password. |
-| **F8 - Intestaz. Doc.** | ++f8++ | Apre **Intestazione per Fatturazione**. Compare **solo all'utente `ADMIN`**. |
+| **F7 - Impo. Prot.** | ++f7++ | Apre le **Impostazioni Protette**. Compare **solo agli amministratori** e chiede una password. |
+| **F8 - Intestaz. Doc.** | ++f8++ | Apre **Intestazione per Fatturazione**. Compare **solo agli amministratori**. |
 | **Consultazione** | ++f11++ | Apre la consultazione. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
 
@@ -471,7 +471,7 @@ stampata sui documenti, con **F2 - Salva** ed **Esci**.
 
 ### Decidere cosa rappresentano le tre tabelle libere
 
-1. Entra come utente `ADMIN`.
+1. Entra come amministratore.
 2. Apri la ditta e premi **F7 - Impo. Prot.**, poi inserisci la password.
 3. In **Tabella 1**, **Tabella 2** e **Tabella 3** scegli cosa devono
    rappresentare.
@@ -489,7 +489,7 @@ articoli classificati secondo un significato che non c'è più.
 
 ### Cambiare l'intestazione stampata sui documenti
 
-1. Entra come `ADMIN`, apri la ditta e premi **F8 - Intestaz. Doc.**.
+1. Entra come amministratore, apri la ditta e premi **F8 - Intestaz. Doc.**.
 2. Compila le dieci righe.
 3. Premi **F2 - Salva**.
 
@@ -503,7 +503,7 @@ articoli classificati secondo un significato che non c'è più.
 | *Il numero delle cifre non può essere pari a 0!* | Nel formato seriale da contatore manca il numero di cifre. | Compila **Cifre**. |
 | *Il codice finale non può avere valore pari a 0!* | Manca il codice finale del contatore. | Compila **Cod. Finale**. |
 | *Il codice finale non può avere valore inferiore o pari al valore iniziale!* | L'intervallo del contatore è a rovescio. | Metti **Cod. Finale** maggiore di **Cod. Iniziale**. |
-| *Indicare la data di inizio di applicazione del regima Iva per Cassa. …* | È stata attivata l'IVA per cassa senza indicare la decorrenza. | Indica la data. Il messaggio contiene i refusi *regima* e *d' annno*. |
+| *Indicare la data di inizio di applicazione del regime Iva per Cassa. …* | È stata attivata l'IVA per cassa senza indicare la decorrenza. | Indica la data. |
 | *Attenzione !<br>La data può essere differente dal 1° Gennaio solo in caso di inizio attività in corso d' anno.* | La decorrenza indicata non è il 1° gennaio. | Conferma solo se l'attività è iniziata in corso d'anno. |
 | *Attenzione !<br>Si ricorda che l' opzione è vincolante per almeno un triennio, salvo che venga superata in corso d' anno la soglia di fatturato di 2 milioni di euro.* | Si sta disattivando o attivando l'IVA per cassa. | Conferma solo se sei sicuro. |
 | *Se il mittente è un numero di telefono, deve iniziare con il prefisso internazionale (es. +39 Italia)* | Il mittente SMS è un numero senza prefisso. | Aggiungi `+39`. |
@@ -528,11 +528,13 @@ articoli classificati secondo un significato che non c'è più.
     significato delle tabelle libere: cambiarli su un archivio già popolato
     genera collisioni di codici difficili da districare.
 
-!!! note "F7 e F8 esistono solo per l'utente ADMIN"
+!!! note "F7 e F8 esistono solo per gli amministratori"
 
-    I due comandi compaiono nella barra soltanto se si è entrati con l'utente
-    `ADMIN`. Con un altro utente non sono disabilitati: **non ci sono proprio**.
-    Se un collega dice di vederli e tu no, è questo il motivo.
+    I due comandi compaiono nella barra soltanto per un utente amministratore:
+    o quello che si chiama `ADMIN`, o uno con il permesso di amministratore
+    spuntato in [Archivi ▸ Utenti](utenti.md). Con un altro utente non sono
+    disabilitati: **non ci sono proprio**. Se un collega dice di vederli e tu
+    no, è questo il motivo.
 
 !!! note "Il cambio ditta chiude e riapre gli archivi"
 

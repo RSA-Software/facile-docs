@@ -59,7 +59,7 @@ fondo. Le altre due voci non hanno maschera: chiedono conferma e lavorano.
 | **Nome Computer** | | Il nome della macchina su cui si sta attivando. Lo propone il programma. | testo |
 | **Rag. Soc. Ditta** | ● | La ragione sociale dell'intestatario della licenza. | testo |
 | **Indirizzo** | ● | L'indirizzo. | testo |
-| **Citta** | ● | Il comune. L'etichetta è senza accento. | testo |
+| **Città** | ● | Il comune. | testo |
 | **Cap** | ● | Il codice di avviamento postale. | numero |
 | **Prov** | ● | La sigla della provincia. | due lettere |
 | **Telefono**, **Fax** | | I recapiti. | testo |

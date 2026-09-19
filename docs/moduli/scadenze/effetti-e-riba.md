@@ -30,7 +30,7 @@ all'istituto.
 
 | Voce di menu | A cosa serve |
 |---|---|
-| **Stampa Portafoglio Effetti** | Gli effetti attivi in portafoglio. La finestra si chiama *Stampa Poratfoglio Effetti Attivi*, con un refuso. |
+| **Stampa Portafoglio Effetti** | Gli effetti attivi in portafoglio. |
 | **Stampa RI.BA.** | Stampa le ricevute bancarie da presentare. |
 | **Contabilizza Effetti** | Genera le registrazioni contabili degli effetti presentati. |
 | **Generazione File Flusso RI.BA.** | Produce il file elettronico da mandare alla banca. |

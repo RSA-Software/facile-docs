@@ -73,7 +73,7 @@ La maschera è divisa in tre parti:
 | % Aliquota | | Percentuale d'imposta. | Percentuale |
 | % Indeducibile | | Quota d'imposta che non si può detrarre. | Percentuale |
 | % Rit. Acconto | | Percentuale di ritenuta d'acconto. | Percentuale |
-| !% Imponibile Calcolo Rit. Acconto | | Percentuale dell'imponibile su cui si calcola la ritenuta. | Percentuale |
+| % Imponibile Calcolo Rit. Acconto | | Percentuale dell'imponibile su cui si calcola la ritenuta. | Percentuale |
 | % Cassa Prof. | | Percentuale del contributo alla cassa professionale. | Percentuale |
 | Calcola Enasarco | | Applica il contributo Enasarco. | Casella |
 | Calcola Enasarco su valori anno Precedente | | Prende a base i valori dell'anno precedente anziché quelli in corso. | Casella |
@@ -188,7 +188,6 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     ++esc++ chiude la maschera senza chiedere conferma e senza salvare: le
     modifiche fatte dopo l'ultimo **F2 - Salva** vanno perse.
 
-<!-- DA VERIFICARE: il campo "!% Imponibile Calcolo Rit. Acconto" ha un punto esclamativo iniziale nell'etichetta a video. È voluto o è un refuso da correggere nel programma? -->
 
 <!-- DA VERIFICARE: il campo Beni non Destinati Rivendita accetta un solo carattere. Quali valori sono previsti? -->
 

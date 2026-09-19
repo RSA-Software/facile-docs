@@ -62,7 +62,7 @@ Non ci sono campi di testata: si lavora nelle celle. Le colonne, nell'ordine:
 | **Listino** | Il prezzo del listino corrente. Quale listino sia lo dice l'intestazione, che riporta *Listino - N*, e si cambia con **Cambia Listino**. |
 | **Fuori Ass.** | Se l'articolo è fuori assortimento. |
 | **Ubicazione** | Dove si trova a magazzino. |
-| **Codive IVA** e **Descrizione** | L'[aliquota IVA](../contabilita/aliquote-iva.md). L'intestazione contiene un refuso: si legge *Codive* invece di *Codice*. |
+| **Codice IVA** e **Descrizione** | L'[aliquota IVA](../contabilita/aliquote-iva.md). |
 | **Unità di Misura** | L'unità di misura. Nelle versioni con taglie e colori la colonna diventa **Gruppo Taglie** e non è modificabile. |
 | **Reparto** | Il [reparto](../magazzino/reparti.md). |
 | **Categoria Merceologica** | La [categoria](../magazzino/categorie-merceologiche.md). |
@@ -93,7 +93,7 @@ quando si scrive il codice.
 | **F4 - Trova** | ++f4++ | Cerca dentro la griglia. |
 | **F5 - Selez.** | ++f5++ | Sceglie quali articoli portare in griglia. È il primo comando da usare. |
 | **Articolo** | | Cerca un articolo e lo aggiunge alla griglia, uno alla volta. |
-| **Importa da Excel** | | **Non importa modifiche**: legge da un foglio la colonna `codice` e porta in griglia quegli articoli. È il modo di lavorare su una lista preparata fuori. |
+| **Carica Articoli da Excel** | | **Non importa modifiche**: legge da un foglio la colonna `codice` e porta in griglia quegli articoli, prendendone i dati dall’ archivio. Alla fine dice quanti ne ha caricati e quanti codici non ha trovato. È il modo di lavorare su una lista preparata fuori. |
 | **Elimina** | | Toglie la riga dalla griglia. L'articolo **non** viene cancellato dall'archivio. |
 | **F6 - Pulisci** | ++f6++ | Svuota la griglia. |
 | **F7 - Frontalini** | ++f7++ | Stampa i [frontalini](../casse-bilance/frontalini.md) degli articoli presenti in griglia. |
@@ -101,6 +101,16 @@ quando si scrive il codice.
 | **Cambia Listino** | | Cambia il listino mostrato nella colonna **Listino**: si sceglie dall'elenco dei listini e la griglia si rilegge. |
 | **Esporta su Excel** | | Esporta la griglia su un foglio. |
 | **Esci** | ++esc++ | Chiude la maschera. |
+
+!!! warning "Il foglio esportato non si rimanda indietro con le correzioni"
+
+    **Esporta su Excel** e **Carica Articoli da Excel** non fanno un giro di
+    andata e ritorno. Del foglio viene letta **solo la colonna `codice`**: le
+    righe vengono poi riempite con i dati dell’ archivio, quindi **le correzioni
+    fatte nel foglio vanno perse**. Per cambiare i dati si lavora in griglia.
+
+    Quello che il caricamento fa bene è un’ altra cosa, ed è utile: **portare in
+    griglia un elenco di articoli** preparato altrove.
 
 ## Come si fa
 
@@ -119,7 +129,7 @@ quando si scrive il codice.
 
 1. Prepara un foglio Excel con una colonna intestata `codice` e sotto i codici
    degli articoli.
-2. Apri la maschera e premi **Importa da Excel**.
+2. Apri la maschera e premi **Carica Articoli da Excel**.
 3. Gli articoli di quella lista entrano in griglia, pronti da correggere.
 
 È il modo di lavorare su un elenco che arriva da qualcun altro — il fornitore,
@@ -172,8 +182,6 @@ finché ce n'è, ma sono marcati come non più ordinabili.
     esistenze di un altro deposito bisogna chiudere e riaprire la maschera.
 
 <!-- DA VERIFICARE: quali colonne sono modificabili e quali di sola lettura: dalle risorse risulta bloccata solo la colonna delle taglie. -->
-
-<!-- DA VERIFICARE: se "Esporta su Excel" produca un foglio reimportabile da "Importa da Excel". -->
 
 <!-- DA VERIFICARE: cosa succede alla colonna NPO quando si spunta: se venga anche registrata la data di non ordinabilità. -->
 

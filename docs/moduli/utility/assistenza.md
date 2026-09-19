@@ -17,7 +17,7 @@ R.S.A., e non a caso.
     Non esiste annullamento. Prima di ciascuna, il programma stesso avvisa:
     *«Prima di utilizzare la procedura assicurarsi che nessun altro utente stia
     utilizzando il programma. Per la vostra sicurezza si consiglia di fare una
-    copia di dei dati prima di continuare. Prima di procedere è necessario
+    copia dei dati prima di continuare. Prima di procedere è necessario
     effettuare un accesso ai dati di tutti gli anni di gestione presenti negli
     archivi e concludere con successo la funzione Aggiorna Catalogo Dati.»*
 
@@ -54,7 +54,7 @@ stato usato.
 | **Variazione Registro Scontrini** | Il registro degli [scontrini](../vendite/scontrini.md). | *Varia Registro Scontrini* |
 | **Variazione Registro Carichi** | Il registro dei [carichi](../magazzino/carico-merci.md). | *Varia Registro Scontrini* |
 | **Varia Conto** | Un [conto](../contabilita/conti.md) del piano dei conti. | *Variazione Conto* |
-| **Variazione Sottoconti** | I [sottoconti](../contabilita/sottoconti.md). | — |
+| **Variazione Sottoconti** | I [sottoconti](../contabilita/sottoconti.md). **Solo Studio:** nelle altre versioni la voce non compare. | — |
 | **Spostamento Codici Clienti** | Sposta i codici dei [clienti](../anagrafiche/anagrafica-clienti.md). | — |
 
 ### Correzioni sugli articoli

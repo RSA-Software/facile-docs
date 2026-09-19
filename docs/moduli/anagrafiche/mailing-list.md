@@ -78,9 +78,9 @@ La griglia ha queste colonne:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **Aggiungi** | ++f9++ | Aggiunge un cliente alla lista. |
-| **Aggiungi Gruppo** | | Aggiunge in blocco i clienti di un gruppo. |
-| **Visualizza** | ++f8++ | Apre l'[anagrafica](anagrafica-clienti.md) del cliente della riga. |
+| **Aggiungi** | ++f8++ | Aggiunge un cliente alla lista. |
+| **Aggiungi Gruppo** | ++f9++ | Aggiunge in blocco i clienti di un gruppo. |
+| **Visualizza** | | Apre l'[anagrafica](anagrafica-clienti.md) del cliente della riga. |
 | **Elimina Riga** | | Toglie dalla lista la riga attiva. |
 | **Elimina Selezionati** | | Toglie le righe spuntate. |
 | **Elimina non Selezionati** | | Toglie le righe **non** spuntate, tenendo solo quelle scelte. |
@@ -104,8 +104,8 @@ La griglia ha queste colonne:
 
 1. Apri **Menu ▸ Archivi ▸ Clienti ▸ Mailing list**.
 2. Da **Liste ▸ Inserimento** crea la lista e dalle un nome.
-3. Con **Clienti ▸ Aggiungi Gruppo** porta dentro i clienti che ti servono,
-   oppure aggiungili uno a uno con ++f9++.
+3. Con **Clienti ▸ Aggiungi Gruppo** — o ++f9++ — porta dentro i clienti che
+   ti servono, oppure aggiungili uno a uno con ++f8++.
 4. Guarda la colonna **Email**: chi non ce l'ha non riceverà nulla.
 5. Premi ++f7++ per spuntare tutti, poi togli la spunta a chi vuoi escludere.
 6. Premi ++f2++ per l'invio.
@@ -132,13 +132,6 @@ La griglia ha queste colonne:
 | *Confermi l' eliminazione di tutte le righe ?* | Si è scelto **Elimina Tutti**. | **Sì** svuota la lista. |
 
 ## Note
-
-!!! warning "Le scorciatoie del menu non corrispondono"
-
-    Le voci **Aggiungi** e **Aggiungi Gruppo** riportano nel menu i tasti
-    ++f8++ e ++f9++, ma i tasti che funzionano davvero sono altri: ++f8++ apre
-    **Visualizza** e ++f9++ esegue **Aggiungi**; **Aggiungi Gruppo** non ha
-    scorciatoia. La tabella qui sopra riporta i tasti che funzionano.
 
 !!! note "Eliminare non cancella il cliente"
 

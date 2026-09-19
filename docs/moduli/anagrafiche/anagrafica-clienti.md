@@ -97,12 +97,16 @@ una di queste schede non c'è, non è un guasto.
 ## Campi
 
 Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
-Su ogni installazione l'assistenza può rendere obbligatori anche altri campi
-della scheda *Generale*: in quel caso, premendo **F2 - Salva**, il programma
-non mostra alcun messaggio — emette un segnale acustico e porta il cursore sul
-campo da compilare.
 
-<!-- DA VERIFICARE: l'elenco dei campi resi obbligatori è in un file di configurazione dell'installazione. Va documentato in una pagina per l'amministratore, o basta dire all'utente che l'elenco lo decide l'assistenza? -->
+!!! note "I campi obbligatori non sono gli stessi dappertutto"
+
+    Oltre ai campi che il programma richiede sempre, su ogni installazione
+    l'assistenza può renderne obbligatori altri. In quel caso **F2 - Salva** si
+    ferma, dice quale campo manca — *Il campo Partita IVA è obbligatorio.* — e
+    porta il cursore sul campo, aprendo la scheda in cui si trova.
+
+    L'elenco lo decide l'assistenza, installazione per installazione: due
+    aziende possono avere obblighi diversi sulla stessa maschera.
 
 ### Testata
 
@@ -177,7 +181,7 @@ campo da compilare.
 | Trasporto a Cura | | Chi si occupa del trasporto. | (vuoto), VETTORE, MITTENTE, DESTINATARIO |
 | Lingua Doc. | | Nazione che determina la lingua dei documenti. | Fino a 4 caratteri, dall'archivio nazioni |
 | Codice IVA | | Aliquota IVA proposta nei documenti. | Codice dall'archivio aliquote |
-| Scagione Provvog. | | Scaglione di provvigione applicato all'agente. | Numero |
+| Scaglione Provvig. | | Scaglione di provvigione applicato all'agente. | Numero |
 | Password | | Password del cliente per l'accesso ai servizi web. | Fino a 20 caratteri |
 | Cod. Aggancio | | Codice con cui il cliente viene riconosciuto nei tracciati esterni. | Fino a 6 caratteri |
 | Aggancio Fornitore | | Codice del fornitore corrispondente, quando lo stesso soggetto è anche fornitore. | Codice dall'archivio fornitori |
@@ -191,7 +195,7 @@ campo da compilare.
 | Canale Vendita | | Canale commerciale a cui il cliente appartiene. | Codice dall'archivio canali |
 | Spese Stoccaggio, Spese Trasporto, Altre Spese | | Spese addebitate al cliente. Nella versione Ortofrutta i tre campi si chiamano **% Incid. Stoccaggio**, **% Incid. Trasporto** e **% Incid. Contratto** e si esprimono in percentuale, da 0 a 100. | Importi |
 | Normale, Transfert, C.S. Vendita, C.S. Trasfert | | Le quattro percentuali di provvigione, nel riquadro **% Provvigioni**. | Percentuali |
-| Crediti Acquistati, Crediti Utilizzati, Crediti Utilizzabili Offilne, Num. Crediti Omaggio, Data Crediti Omaggio, Fine Data Xml -> PDF | | **Solo RSA Office.** I crediti del servizio di invio delle fatture elettroniche, nel riquadro **Crediti Invia Fatture Elettroniche**. Nelle altre versioni il riquadro non compare. | Numeri e date |
+| Crediti Acquistati, Crediti Utilizzati, Crediti Utilizzabili Offline, Num. Crediti Omaggio, Data Crediti Omaggio, Fine Data Xml -> PDF | | **Solo RSA Office.** I crediti del servizio di invio delle fatture elettroniche, nel riquadro **Crediti Invia Fatture Elettroniche**. Nelle altre versioni il riquadro non compare. | Numeri e date |
 
 {: .campi }
 
@@ -311,9 +315,10 @@ Valgono inoltre in tutta la maschera:
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice**, manca la **Rag. Sociale 1/Cognome**, oppure è vuoto uno dei campi resi obbligatori su questa installazione. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
+| *Il campo … è obbligatorio.* | È vuoto un campo che il salvataggio pretende: il **Codice**, la **Rag. Sociale 1/Cognome**, o uno di quelli resi obbligatori su questa installazione. | Il messaggio nomina il campo, e alla chiusura il cursore è già lì, nella scheda giusta. |
+| *Il Codice non può superare …* | Il codice scritto è fuori dall'intervallo ammesso. | Usa un codice più basso. |
 | *Sono entrambi presenti sia il codice IPA che il codice Destinatario, Indicarne solo uno.* | Nella scheda *Impostazioni* sono compilati tutti e due. | Cancella quello che non serve: IPA per la Pubblica Amministrazione, Destinatario per i privati. |
-| *Attenzione! Non é stato impostato alcun listino. Nelle vendite sarà preso come prezzo di riferimento il prezzo di acquisto. Vuoi Continuare?* | **Listino Vendita** è a zero. | Rispondi **No** e imposta un listino, a meno che tu non voglia davvero vendere al prezzo di acquisto. |
+| *Attenzione! Non è stato impostato alcun listino. Nelle vendite sarà preso come prezzo di riferimento il prezzo di acquisto. Vuoi Continuare?* | **Listino Vendita** è a zero. | Rispondi **No** e imposta un listino, a meno che tu non voglia davvero vendere al prezzo di acquisto. |
 | *Non è stata digitata la Partita IVA! Vuoi Continuare?* | Stai salvando un cliente senza partita IVA. | Rispondi **No** e inseriscila, oppure **Sì** per salvare comunque. |
 | *La Partita IVA digitata risulta già presente in archivio! Vuoi Continuare?* | La stessa partita IVA è già di un altro cliente. | Verifica di non stare duplicando un cliente già presente. |
 | *Il Codice Fiscale digitato risulta già presente in archivio! Vuoi Continuare?* | Lo stesso codice fiscale è già di un altro cliente. | Come sopra. |
@@ -322,7 +327,7 @@ Valgono inoltre in tutta la maschera:
 | *Partita IVA non Valida ! Vuoi Continuare?* | Su un soggetto italiano il codice di controllo della partita IVA non torna. | Rispondi **No** e ricontrolla il numero. |
 | *Codice Fiscale non Valido ! Vuoi Continuare?* | Su un soggetto italiano il codice di controllo del codice fiscale non torna. | Rispondi **No** e ricontrolla il codice. |
 | *Data Nascita Incongruente con Codice Fiscale ! Vuoi Aggiornare la Data di Nascita ?* | La data di nascita registrata non corrisponde a quella contenuta nel codice fiscale. | Rispondi **Sì** per farla correggere dal programma. |
-| *Il codice del Tipo di Pagamento non é valido o disponibile.* | Il codice digitato in **Pagamento** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. Lo stesso messaggio, con il nome dell'archivio corrispondente, compare per Banca, Cat. Eco., Trasportatore, Agente, Zona, Gruppo Azi., Tipo Attività, Natura Giur., Listino, causali e canale di vendita. |
+| *Il codice del Tipo di Pagamento non è valido o disponibile.* | Il codice digitato in **Pagamento** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. Lo stesso messaggio, con il nome dell'archivio corrispondente, compare per Banca, Cat. Eco., Trasportatore, Agente, Zona, Gruppo Azi., Tipo Attività, Natura Giur., Listino, causali e canale di vendita. |
 | *Non hai l' Autorizzazioni sufficienti per completare l' operazione.* | Il codice digitato è fuori dall'intervallo riservato ai clienti. | Usa un codice compreso nell'intervallo, o lascia quello proposto dal programma. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un altro cliente. | Cambia codice. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | Primo dei due avvisi che precedono la cancellazione. | Rispondi **Sì** solo se sei certo che il cliente non serva negli esercizi precedenti. |

@@ -72,7 +72,7 @@ La finestra *Stampa Listini* è divisa in due:
 |---|:---:|---|---|
 | **Listino** | ● | Quale dei listini stampare; a fianco compare il nome. | codice del listino |
 | **IVA** | ● | Se i prezzi vanno stampati con o senza IVA. | `ESCLUSA`, `INCLUSA` |
-| **Ordinamento** | ● | Come ordinare gli articoli nella stampa. | `CASUALE`, `CODICE`, `DESCRIZIONE` |
+| **Ordinamento** | ● | Come ordinare gli articoli nella stampa. Vedi la nota in fondo su `PREDEFINITO`. | `PREDEFINITO`, `CODICE`, `DESCRIZIONE` |
 | **Formato** | ● | L'impaginazione della stampa. L'elenco dipende dai formati installati: vedi sotto. | voce dell'elenco |
 | **Includi non più Ordinabili** | | Se stampare anche gli articoli marcati come non più ordinabili. All'apertura è attivo. | attivo/non attivo |
 | **Includi Fuori Assortimento** | | Se stampare anche gli articoli fuori assortimento. | attivo/non attivo |
@@ -150,11 +150,14 @@ versione.
     *«con esistenza deposito»* riportano le quantità del deposito attivo,
     quelli *«con esistenza totale»* la somma di tutti i depositi.
 
-<!-- DA VERIFICARE: cosa fa esattamente l'ordinamento "CASUALE": presumibilmente lascia l'ordine dell'archivio, ma va confermato con una prova. -->
+!!! note "Sul listino `PREDEFINITO` coincide con `DESCRIZIONE`"
 
-<!-- DA VERIFICARE: se "Filtro su Desc." accetti davvero i caratteri jolly come gli altri filtri sugli articoli. -->
+    Sulla **stampa del listino** il programma ordina per descrizione in tutti i
+    casi tranne `CODICE`: scegliere `PREDEFINITO` o `DESCRIZIONE` dà lo stesso
+    risultato.
 
-<!-- DA VERIFICARE: se il formato "COSTI RICARICO E MAGINE" compaia a video proprio così (il nome del modello di stampa contiene un refuso). -->
+    Sulla **stampa delle variazioni** è diverso: lì `PREDEFINITO` non aggiunge
+    nessun ordinamento, e le righe escono ordinate solo per data di decorrenza.
 
 ## Vedi anche
 

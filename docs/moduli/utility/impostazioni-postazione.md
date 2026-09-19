@@ -93,7 +93,7 @@ Sono caselle da attivare o disattivare. Le principali:
 | **Blocca Scarico Senza Doc. su Vendita** | Impedisce di scaricare merce senza documento. |
 | **Fatture da Scontrino su Vendita** | Permette di emettere fattura da uno scontrino. |
 | **Stampa Scontrino Sintetico** | Scontrino in forma breve. |
-| **Abilita Preferenza Stampe Motalità Testo** | Preferisce le stampe in modalità testo. L'etichetta contiene un refuso: *Motalità*. |
+| **Abilita Preferenza Stampe Modalità Testo** | Preferisce le stampe in modalità testo. |
 | **Stampa Prezzo Scontato su Etichette** | Sulle etichette compare il prezzo già scontato. |
 | **Utilizza Server SQL ove Possibile** | Fa passare dal server SQL le operazioni che lo consentono. |
 | **Abilita Modalità TouchScreen** | Interfaccia a sfioramento per la [vendita al banco](../vendite/vendita-al-banco.md). |

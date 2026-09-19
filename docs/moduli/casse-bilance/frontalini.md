@@ -75,7 +75,7 @@ Stampa**. L'ultima dice quando quel frontalino è stato stampato l'ultima volta:
 | **F3 - Apri** | ++f3++ | Apre la riga corrente. |
 | **F4 - Seleziona** | ++f4++ | Spunta le righe. |
 | **F5 - Deselez. Tutti** | ++f5++ | Toglie la spunta da tutte. |
-| **F6 - Elimina** | ++f6++ | Toglie dalla lista le righe scelte. |
+| **F6 - Elimina** | ++f6++ | Toglie dalla lista le righe **spuntate**, previa conferma. Non cancella gli articoli: solo le righe da stampare. |
 | **F7 - Stampa** | ++f7++ | Stampa i frontalini spuntati. |
 | **F8 - Acquisisci** | ++f8++ | Riempie la lista con i codici letti da un terminalino. |
 | **Esci** | ++esc++ | Chiude la maschera. |
@@ -108,6 +108,9 @@ Stampa**. L'ultima dice quando quel frontalino è stato stampato l'ultima volta:
 |---|---|---|
 | *Nessun formato di stampa disponibile!* | Non è configurato alcun modello di frontalino. | Chiedi all'assistenza di installarne uno. |
 | *Nessuna riga selezionata per la stampa!* | Non hai spuntato nulla. | Spunta le righe, o usa **F4 - Seleziona**. |
+| *Nessuna riga selezionata per la cancellazione!* | Hai premuto **F6 - Elimina** senza spuntare niente. | Spunta le righe da togliere. |
+| *Frontalini selezionati : n* — *Confermi la cancellazione ?* | Hai premuto **F6 - Elimina**. | Il numero dice quante righe stai per togliere: se non torna, **No** e ricontrolla le spunte. La risposta preimpostata è **No**. |
+| *Cancellazioni non abilitate per l' utente !* | L'utente ha il **Blocco Cancellazioni Dati**. | Solo chi può cancellare può usare **F6 - Elimina**. Il blocco si toglie da [Archivi ▸ Utenti](../anagrafiche/utenti.md). |
 | *Tipo Stampante Barcode non Impostato.* / *Stampante Barcode non impostata !* | Manca la stampante nei parametri della ditta. | Impostala prima di stampare. |
 | *Impossibile Inizializzare la Stampa !* | La stampante non risponde. | Controlla collegamento e driver. |
 | *Vuoi confermare le etichette ?* | La stampa è finita. | **Sì** se sono uscite bene: le righe risultano stampate. **No** le lascia da rifare, **Annulla** ferma. |

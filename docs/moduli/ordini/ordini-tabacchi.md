@@ -65,7 +65,7 @@ evidenza, e la barra dei pulsanti.
 | **Numero** | ● | Numero dell'ordine. | numero |
 | **Data Ordine** | ● | La data dell'ordine. | data |
 | **Data Consegna** | | Quando la merce è attesa. | data |
-| **Tipo** | | Il genere di ordine. | `O`, `S`, `SPECIALE`, `M`, `URGENTE` |
+| **Tipo** | | Il genere di ordine. Sono le **sigle dell’ ordine Logista**, quelle che il tabaccaio già conosce: **O** ordinario, **S** straordinario, **SPECIALE**, **M** modifica, **URGENTE**. | `O`, `S`, `SPECIALE`, `M`, `URGENTE` |
 | **Fornitore** | ● | Il soggetto dell'ordine. Nell'ordine patentini l'etichetta è **Cliente**. | codice |
 | **Filtro** | | Quali righe della griglia restare a vedere. Non cambia l'ordine, solo la vista. | `TUTTE LE RIGHE`, `SOLO RIGHE CON QUANTITA'`, `SOLO RIGHE SOTTOSCORTA`, `SOLO RIGHE SOPRASCORTA` |
 
@@ -77,7 +77,6 @@ Le colonne della griglia sono **Codice**, **Descrizione**, **Q.tà (Kg)**,
 **Esistenza (Kg.)**, **D INS** e **T INS**. Si scrive nelle due colonne delle
 quantità; le altre sono di lettura.
 
-<!-- DA VERIFICARE: cosa significano le voci "O", "S" e "M" dell'elenco Tipo: a video compaiono come lettere sole, accanto a SPECIALE e URGENTE che sono per esteso. -->
 
 !!! note "«Min Riord.» e «Scorta Min» non sono la stessa cosa"
 
@@ -140,7 +139,7 @@ quantità ordinata più esistenza non arrivano alla scorta minima.
 | *Se vuoi adeguare alla Scorta Minima scegli SI.<br>Se Vuoi adeguare alla Scorta Massima scegli NO.* | Hai premuto **F4 - Scorta**. | Scegli il livello a cui adeguare, oppure **Annulla**. |
 | *Impossibile allocare la memoria!* | Il foglio per il logista non si è potuto creare. | Chiudi qualche programma e riprova. |
 | *Impossibile allocare il foglio di lavoro!* | Il modello `logista.xls` non ha il foglio atteso. | Controlla il modello nella cartella `template`. |
-| *Codice articolo non valido all riga N !<br>Generazione file interrotta.* | Una riga dell'ordine ha un codice che il tracciato del logista non accetta. | Correggi il codice dell'articolo. Il messaggio contiene un refuso: *all riga* invece di *alla riga*. |
+| *Codice articolo non valido alla riga N !<br>Generazione file interrotta.* | Una riga dell'ordine ha un codice che il tracciato del logista non accetta. | Correggi il codice dell'articolo. |
 
 ## Note
 

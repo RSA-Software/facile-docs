@@ -28,7 +28,7 @@ negli effetti, e come conto dell'azienda in contabilità, attraverso il campo
 **Sottoconto**.
 
 Esempio: se registri qui la banca su cui presenti le RI.BA. e ne compili
-**ABI**, **CAB** e **Nun. Conto**, il flusso RI.BA. esce già con le coordinate
+**ABI**, **CAB** e **Num. Conto**, il flusso RI.BA. esce già con le coordinate
 giuste, senza doverle riscrivere a ogni presentazione.
 
 ## Prerequisiti
@@ -56,7 +56,7 @@ recapiti, coordinate bancarie e collegamento contabile.
 | Codice | ● | Identificativo della banca. In inserimento il programma propone il primo codice libero; puoi sostituirlo. | Numero |
 | Descrizione | ● | Denominazione della banca, come compare nelle altre maschere e nelle stampe. | Fino a 84 caratteri |
 | Indirizzo | | Via e numero civico della filiale. | Fino a 30 caratteri |
-| Citta | | Comune della filiale. Digitando un comune presente in archivio, provincia e CAP si compilano da soli. | Fino a 30 caratteri |
+| Città | | Comune della filiale. Digitando un comune presente in archivio, provincia e CAP si compilano da soli. | Fino a 30 caratteri |
 | Provincia | | Sigla della provincia. | 2 caratteri |
 | Cap | | Codice di avviamento postale. | Solo cifre, fino a 5 |
 | Telefono | | Numero di telefono della filiale. | Fino a 13 cifre |
@@ -65,7 +65,7 @@ recapiti, coordinate bancarie e collegamento contabile.
 | ABI | | Codice ABI dell'istituto. | Solo cifre, fino a 5 |
 | CAB | | Codice CAB della filiale. | Solo cifre, fino a 5 |
 | CIN | | Carattere di controllo delle coordinate. | 1 carattere |
-| Nun. Conto | | Numero di conto corrente. | Fino a 12 caratteri |
+| Num. Conto | | Numero di conto corrente. | Fino a 12 caratteri |
 | Sportello | | Denominazione dello sportello o della filiale. | Fino a 30 caratteri |
 | Cod. IBAN | | Coordinata bancaria internazionale. | Fino a 34 caratteri |
 | Swift (BIC) | | Codice identificativo dell'istituto per i pagamenti esteri. | Fino a 11 caratteri |
@@ -75,7 +75,7 @@ recapiti, coordinate bancarie e collegamento contabile.
 
 !!! note "Nota"
 
-    Il campo **Nun. Conto** accetta 12 caratteri, non 15: il limite è stato
+    Il campo **Num. Conto** accetta 12 caratteri, non 15: il limite è stato
     ridotto per rispettare il tracciato del flusso RI.BA.
 
 ## Pulsanti e comandi
@@ -107,9 +107,9 @@ Valgono inoltre:
 1. Apri **Menu ▸ Archivi ▸ Banche ▸ Inserimento**.
 2. Lascia il **Codice** proposto, oppure digitane uno diverso.
 3. Scrivi la **Descrizione**: è l'unico altro dato che il programma pretende.
-4. Compila **Citta**: alla conferma del comune, **Provincia** e **Cap** si
+4. Compila **Città**: alla conferma del comune, **Provincia** e **Cap** si
    compilano da soli.
-5. Inserisci le coordinate: **ABI**, **CAB**, **CIN**, **Nun. Conto** e
+5. Inserisci le coordinate: **ABI**, **CAB**, **CIN**, **Num. Conto** e
    **Cod. IBAN**.
 6. Premi **F2 - Salva**. La maschera si svuota per la banca successiva.
 
@@ -134,7 +134,7 @@ Valgono inoltre:
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
-| *Il codice del Sottoconto non é valido o disponibile.* | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggi il sottoconto, oppure lascia il campo a zero se la banca non è dell'azienda. |
+| *Il codice del Sottoconto non è valido o disponibile.* | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggi il sottoconto, oppure lascia il campo a zero se la banca non è dell'azienda. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra banca. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la banca. |
 | *Non è possibile eliminare il record pochè utilizzato in alcuni record del database.* | La banca è indicata in un cliente, un fornitore, un documento o una scadenza. | Non è eliminabile: lasciala in archivio. |
@@ -154,7 +154,6 @@ Valgono inoltre:
 
 <!-- DA VERIFICARE: la maschera non calcola né verifica il CIN a partire da ABI, CAB e numero di conto. È voluto, o va segnalato all'utente che il controllo è a suo carico? -->
 
-<!-- DA VERIFICARE: due etichette della maschera hanno un refuso — "Citta" senza accento e "Nun. Conto" invece di "Num. Conto". Vanno corrette nel programma o riportate così come sono anche nelle prossime versioni del manuale? -->
 
 ## Vedi anche
 

@@ -29,13 +29,12 @@ scade, su quale banca è appoggiato e quando è stato versato.
 Lo stesso menu contiene anche **Gestione Titoli Scaduti** e **Gestione Titoli
 Attivi**, che sono le due viste da cui si lavora sul portafoglio.
 
-!!! warning "Solo nella versione Studio, e il menu non lo dice"
+!!! info "Solo nella versione Studio"
 
     Queste maschere esistono **solo nella versione Studio**. Nelle altre
-    versioni le voci **Inserimento**, **Modifica**, **Stampa** e **Gestione
-    Titoli Scaduti** restano nel menu ma non aprono nulla: premendole non
-    succede niente e non compare alcun messaggio. Sparisce invece **Gestione
-    Titoli Attivi**, che il programma toglie all'avvio.
+    versioni il programma toglie all'avvio tutte e cinque le voci, e con esse
+    il sottomenu **Titoli**, che resterebbe vuoto: se non lo trovi in
+    **Archivi ▸ Contabilità**, è perché la tua versione non lo prevede.
 
 ## Prerequisiti
 

@@ -189,13 +189,28 @@ I campi sono quelli della [stampa del listino](stampa-listini.md), meno il
     effettive le variazioni con decorrenza esattamente alla data indicata. Se
     ne sono rimaste indietro di giorni diversi, va ripetuta per ciascun giorno —
     oppure si lascia fare al programma, che all'avvio propone di applicare tutto
-    l'arretrato.
+    l'arretrato in una volta.
 
-<!-- DA VERIFICARE: se le variazioni già applicate restino consultabili da qualche parte, o spariscano dall'elenco di Variazioni Listini. -->
+    **La data può essere futura.** Indicando un giorno non ancora arrivato si
+    mettono in vigore in anticipo le variazioni previste per quel giorno. La
+    data deve però cadere nell'esercizio aperto.
 
-<!-- DA VERIFICARE: in quale momento esatto il programma propone di apportare le variazioni scadute (all'avvio, al cambio ditta, o entrambi). -->
+!!! note "Le variazioni applicate non si perdono"
 
-<!-- DA VERIFICARE: se "Apporta Variazioni" accetti anche una data futura, applicando in anticipo variazioni non ancora scadute. -->
+    Mettere in vigore una variazione non la cancella: la riga resta in archivio
+    e si porta dietro la **data in cui è stata applicata**, che prima era vuota.
+    Sparisce solo dall'elenco di quelle *in attesa*, che mostra le righe non
+    ancora applicate.
+
+    È anche il motivo per cui la stessa variazione non viene applicata due
+    volte: quella data è il segno che il lavoro è già stato fatto.
+
+!!! note "Quando compare la proposta delle variazioni arretrate"
+
+    All'**avvio del programma** e a ogni **cambio ditta**. Il controllo riguarda
+    tutte le variazioni non ancora applicate con decorrenza fino a oggi, ed è
+    fatto sugli archivi dell'azienda su cui si sta entrando: chi lavora su più
+    aziende se lo vede proporre per ciascuna, man mano che ci entra.
 
 ## Vedi anche
 

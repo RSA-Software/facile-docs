@@ -95,8 +95,7 @@ l'avanzamento.
 ### Caricare un ordine da un file
 
 1. Apri **Carica Ordini da Files**.
-2. Alla domanda *Hai un Floppy?* rispondi **No** se il file è sul disco: la
-   finestra di scelta si apre allora nella cartella `in` del programma.
+2. La finestra di scelta si apre nella cartella `in` del programma.
 3. Scegli il file: il nome deve cominciare per `ORD` o `OFO`.
 
 ### Portare dentro gli ordini di Facile Mobile
@@ -111,7 +110,6 @@ l'avanzamento.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Vuoi Collegarti al server FTP ?* | Inizio della ricezione FTP. | **Sì** scarica dal server, **No** chiede un file da disco. |
-| *Hai un Floppy?* | Inizio del caricamento da file. | **No** apre la cartella `in` del programma, **Sì** cerca sull'unità `A:`. |
 | *File non Valido!* | Il nome del file non comincia per `ORD` né per `OFO`. | Scegli il file giusto o rinominalo. |
 | *Path Name Troppo Lungo!* | Il percorso del file supera il limite. | Sposta il file in una cartella dal nome più breve. |
 | *Livello Importazioni non Valido!* | Il livello di importazione configurato non è ammesso. | Chiama l'assistenza: è un parametro di configurazione. |

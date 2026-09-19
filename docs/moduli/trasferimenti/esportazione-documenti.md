@@ -65,7 +65,7 @@ ITALSTUDIO*, e così via. Quello che si compila sono sempre gli stessi campi.
 ### Fatture
 
 - **Esportazione Fatture Tracciato FILCONAD**
-- **Esportazione Fatture Tracciato FILCOND SIDIS** *(il refuso «FILCOND» è nel menu)*
+- **Esportazione Fatture Tracciato FILCONAD SIDIS**
 - **Esportazione Fatture Tracciato FILCONAD CAMBRIA**
 - **Esportazione Fatture Tracciato FILCONAD PREZZEMOLO E VITALE**
 - **Esportazione Fatture Tracciato FILCONAD CONAD NORD OVEST**
@@ -91,7 +91,7 @@ ITALSTUDIO*, e così via. Quello che si compila sono sempre gli stessi campi.
 - **Esportazione Sellout - FRONERI**
 - **Esportazione Sellout - GDS EXPERT**
 - **Esportazione Sellout - GLOBE NESTLE'**
-- **EsportazioneSellout - MONTBLANC** *(nel menu manca lo spazio dopo «Esportazione»)*
+- **Esportazione Sellout - MONTBLANC**
 - **Esportazione Sellout - PEPSI**
 - **Esportazione Sellout - U.DI.AL**
 - **Esportazione Sellout - UVE CAMPARI**
@@ -114,7 +114,7 @@ Sotto **Esportazione Inventario Banchi**:
 
 Sotto **Esportazione Anagrafica Clienti**:
 
-- **Anagarfica Clienti - FRONERI** *(il refuso «Anagarfica» è nel menu)*
+- **Anagrafica Clienti - FRONERI**
 - **Anagrafica Clienti - GLOBE NESTLE'**
 - **Sconti Contrattuali - GLOBE NESTLE'**
 

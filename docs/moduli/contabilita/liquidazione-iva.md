@@ -113,13 +113,13 @@ Il prospetto ricalca i righi della dichiarazione:
 2. Apri **Menu ▸ Contabilità ▸ Ventilazione Corrispettivi**.
 3. Indica **Anno** e il mese.
 4. Premi **F2 - Calcola** e attendi il messaggio *«La Ventilazione dei
-   corrispettivi é stata conclusa regolarmente!»*.
+   corrispettivi è stata conclusa regolarmente!»*.
 
 ### Rifare una ventilazione sbagliata
 
 1. Apri la maschera sullo stesso periodo.
 2. Premi **F3 - Elimina** e attendi *«L'annullamento della Ventilazione dei
-   corrispettivi é stata conclusa regolarmente!»*.
+   corrispettivi è stata conclusa regolarmente!»*.
 3. Correggi le registrazioni e ricalcola con **F2 - Calcola**.
 
 ### Liquidare l'IVA del mese
@@ -134,10 +134,10 @@ Il prospetto ricalca i righi della dichiarazione:
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *La Ventilazione dei corrispettivi é stata conclusa regolarmente!* | La ventilazione è andata a buon fine. | Nulla: è una conferma. |
-| *La Ventilazione dei corrispettivi é stata conclusa in modo errato!* / *Ripetere l'operazione* | La ventilazione non è riuscita. | Ripeti; se il problema resta, segnala all'assistenza. |
-| *L'annullamento della Ventilazione dei corrispettivi é stata conclusa regolarmente!* | L'annullamento è riuscito. | Nulla: è una conferma. |
-| *L'annullamento della Ventilazione dei corrispettivi é stata conclusa in modo errato!* | L'annullamento non è riuscito. | Ripeti; se il problema resta, segnala all'assistenza. |
+| *La Ventilazione dei corrispettivi è stata conclusa regolarmente!* | La ventilazione è andata a buon fine. | Nulla: è una conferma. |
+| *La Ventilazione dei corrispettivi è stata conclusa in modo errato!* / *Ripetere l'operazione* | La ventilazione non è riuscita. | Ripeti; se il problema resta, segnala all'assistenza. |
+| *L'annullamento della Ventilazione dei corrispettivi è stata conclusa regolarmente!* | L'annullamento è riuscito. | Nulla: è una conferma. |
+| *L'annullamento della Ventilazione dei corrispettivi è stata conclusa in modo errato!* | L'annullamento non è riuscito. | Ripeti; se il problema resta, segnala all'assistenza. |
 | *Indicare il Metodo solo se acconto diverso da Zero!* | Si è indicato il metodo di calcolo dell'acconto senza avere un acconto. | Azzera il metodo, oppure indica l'acconto. |
 | *Ci sono segnalazioni di errore!* / *Le vuoi visualizzare ?* | L'elenco clienti e fornitori ha trovato dati incompleti. | **Sì** per vedere quali nominativi vanno corretti. |
 | *Ci sono ancora segnalazioni di errore!* / *Vuoi continuare ?* | Restano errori non corretti. | **No** e correggi prima i dati, salvo che tu sappia che sono ininfluenti. |

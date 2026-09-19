@@ -52,16 +52,51 @@ modifica. **Riepilogo** e **Contabilizza** sono quelli descritti in
 [Riepiloghi](../vendite/riepiloghi-e-statistiche.md) e
 [Contabilizzazione](../vendite/contabilizzazione-documenti.md).
 
-Le **Promozioni Sellin** hanno una maschera propria.
+Le **Promozioni Sellin** hanno una maschera propria, fatta come un documento:
+in alto la testata — di chi è la promozione e per quanto vale — e sotto la
+griglia degli articoli, uno per riga, con prezzo, sconti e prezzo netto
+calcolato.
 
-<!-- DA VERIFICARE: la struttura della maschera delle promozioni sellin e i suoi campi. -->
+Ogni riga si apre in una finestra a parte, *Inserimento Riga Promozione
+Sellin*, dove si indicano articolo, prezzo e le condizioni.
 
 ## Campi
 
-<!-- DA VERIFICARE: i campi delle promozioni sellin. -->
-
 Per le anomalie valgono i campi del
 [documento di vendita](../vendite/documento-di-vendita.md).
+
+### Promozioni Sellin — testata
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Registro** | ● | Il registro su cui la promozione è numerata. | `A` … `Z` |
+| **Codice** | ● | Il numero della promozione dentro il registro. Proposto dal programma. | numero |
+| **Descrizione** | ● | Il nome della promozione. | testo |
+| **Dal**, **Al** | ● | Il periodo in cui la promozione vale **sugli acquisti**: è questo che Facile guarda quando propone il prezzo su un ordine a fornitore. La fine non può precedere l'inizio. | date |
+| **Inizio Cessione**, **Fine Cessione** | | Il periodo di cessione concordato con il fornitore. È questo, e non l'altro, che il [controllo listini](../listini-vendita/controllo-listini.md) e l'analisi fornitore guardano per decidere se la promozione è in corso a una certa data. La fine non può precedere l'inizio. | date |
+| **Fornitore** | ● | Il fornitore che concede la promozione. | codice |
+
+{: .campi }
+
+### Promozioni Sellin — riga
+
+| Campo | Obbl. | Descrizione | Valori ammessi |
+|---|:---:|---|---|
+| **Articolo** | ● | L'articolo in promozione. | codice |
+| **Prezzo** | | Il prezzo di acquisto concordato, al lordo degli sconti. | importo |
+| **%Sco.1** … **%Sco.7** | | I sette sconti percentuali, applicati **a cascata**: ciascuno agisce su quello che resta dopo il precedente. | percentuali |
+| **Sconto Merce** | | Lo sconto in merce, cioè i pezzi in omaggio. Non entra nel prezzo netto: viaggia a parte, come quantità. | quantità |
+| **Sconto Valore** | | Uno sconto a importo fisso, sottratto dopo i sette percentuali. | importo |
+| **Prezzo Netto** | | Calcolato dal programma: prezzo meno i sette sconti a cascata meno lo sconto valore. Non modificabile. | — |
+
+{: .campi }
+
+!!! note "Lo sconto merce non abbassa il prezzo netto"
+
+    Gli sconti percentuali e lo sconto valore riducono il prezzo; lo **sconto
+    merce** no, perché non è uno sconto sul prezzo ma dei pezzi in più a parità
+    di importo. Nel documento finisce nella sua colonna, accanto alla
+    quantità.
 
 ## Pulsanti e comandi
 
@@ -72,7 +107,29 @@ Per le anomalie valgono i campi del
 | **F6 - Elimina** | ++f6++ | Cancella, previa conferma. |
 | **Esci** | ++esc++ | Chiude senza salvare. |
 
-<!-- DA VERIFICARE: i comandi effettivi della maschera delle promozioni sellin. -->
+Le **Promozioni Sellin**, oltre a questi, hanno:
+
+| Comando | Scorciatoia | Effetto |
+|---|---|---|
+| **F7 - Aggiungi** | ++f7++ | Aggiunge una riga alla promozione. |
+| **F8 - Stampa** | ++f8++ | Stampa la promozione, con il suo periodo e il fornitore. |
+| **Excel** | | **Importa** articoli e condizioni da un foglio Excel. Non esporta. |
+| **Trova** | | Cerca un testo in qualunque colonna della griglia. |
+
+I comandi si accendono dopo il primo salvataggio della testata.
+
+#### Il foglio Excel da importare
+
+Il file è un `.xls` e l'intestazione sta sulla **prima riga**:
+
+| Colonna | Obbl. | Contenuto |
+|---|:---:|---|
+| `CODICE` | ● | Il codice dell'articolo. |
+| `PREZZO` | ● | Il prezzo di acquisto. |
+| `DESCRIZIONE` | | La descrizione, a titolo di controllo. |
+| `SCONTO1` … `SCONTO7` | | I sette sconti percentuali. |
+| `SCONTOMER` | | Lo sconto merce. |
+| `SCONTOVAL` | | Lo sconto a valore. |
 
 ## Come si fa
 
@@ -91,9 +148,22 @@ Per le anomalie valgono i campi del
 
 ## Controlli e messaggi
 
-<!-- DA VERIFICARE: i messaggi di queste maschere. -->
+Per le **anomalie** valgono i messaggi del
+[documento di vendita](../vendite/documento-di-vendita.md).
 
-Non applicabile.
+Per le **promozioni sellin**:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *(nessun messaggio, solo un segnale acustico)* | Manca la descrizione, il fornitore o una data, oppure una data di fine precede la sua data di inizio. | Guarda dove si è posizionato il cursore: è il campo da correggere. |
+| *Cancellazioni non abilitate per l' utente !* | L'utente ha il **Blocco Cancellazioni Dati**. | Serve un utente abilitato, o va tolto il blocco da [Archivi ▸ Utenti](../anagrafiche/utenti.md). |
+| *Vuoi Cancellare tutte le righe della promozione ?* | Hai premuto **F6 - Elimina**. | **Sì** cancella testata e righe. La risposta preimpostata è **No**. |
+| *L'articolo fa parte di un Gruppo Mix!* — *Vuoi inserire tutti gli altri articoli del gruppo ?* | L'articolo appena inserito appartiene a un gruppo mix. | **Sì** aggiunge in blocco gli altri articoli del gruppo. |
+| *Vuoi importare gli articoli per la promozione sellin da un foglio Excel ?* | Hai premuto **Excel**. | **Sì** apre la scelta del file. |
+| *Colonna CODICE non trovata nel documento !* | Il foglio non ha l'intestazione `CODICE` sulla prima riga. | Correggi l'intestazione. |
+| *Colonna OFFERTA non trovata nel documento !* | Manca la colonna del prezzo. **Il messaggio nomina una colonna che non esiste:** quella cercata si chiama `PREZZO`. | Intitola la colonna `PREZZO`. |
+| *Formato file non compatibile!* | Il file scelto non è un foglio Excel. | Scegli un `.xls`. |
+| *File utilizzato da un' altra applicazione o formato file non compatibile!* | Il foglio è aperto in Excel. | Chiudilo e riprova. |
 
 ## Note
 
@@ -109,7 +179,30 @@ Non applicabile.
 
 <!-- DA VERIFICARE: cosa produce la contabilizzazione di un'anomalia. -->
 
-<!-- DA VERIFICARE: come le promozioni sellin entrano nel calcolo dei costi e dei margini. -->
+!!! note "Dove finiscono le promozioni sellin"
+
+    Registrata, la promozione lavora da sola in quattro posti:
+
+    - **sugli ordini a fornitore**: inserendo un articolo di quel fornitore,
+      Facile prende prima le condizioni del
+      [listino fornitore](../listini-fornitori/gestione-listini-fornitori.md)
+      e poi, se c'è una sellin valida alla data del documento, ci scrive sopra
+      le sue — prezzo, sette sconti, sconto merce e sconto valore. Vince la
+      promozione, non il listino;
+    - nel [controllo listini](../listini-vendita/controllo-listini.md), dove il
+      prezzo netto della sellin concorre al **miglior prezzo d'acquisto** e può
+      scalzare i due migliori di listino;
+    - nell'[analisi fornitore](../listini-fornitori/analisi-fornitore.md) e nella
+      **proposta di riordino**, con lo stesso
+      criterio;
+    - nella [scheda articolo](../anagrafiche/anagrafica-articoli.md), alla
+      linguetta *Promo Sellin*, che elenca tutte le sellin di quell'articolo
+      per fornitore.
+
+    Attenzione al periodo: gli ordini guardano **Dal / Al**, il controllo
+    listini e l'analisi fornitore guardano **Inizio / Fine Cessione**. Se le
+    due coppie di date non coincidono, i due posti possono dare risposte
+    diverse sullo stesso giorno.
 
 ## Vedi anche
 

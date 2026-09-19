@@ -147,7 +147,7 @@ Riapertura Conti** tolgono le scritture e si può rifare.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Creazione Archivi nuovo anno conclusa regolarmente !<br>Vuoi Riportare le Esistenze di Magazzino?* | Il nuovo esercizio è stato creato. | **Sì** riporta le esistenze, **No** parte da zero. |
-| *Tutti le esistenze degli articoli sono azzerate!* | Hai scelto di non riportare le esistenze. | Nessuna azione. Il messaggio contiene un refuso: *Tutti le* invece di *Tutte le*. |
+| *Tutte le esistenze degli articoli sono azzerate!* | Hai scelto di non riportare le esistenze. | Nessuna azione. |
 | *Non ci sono movimenti contabili per l'anno selezionato!* | Nell'anno indicato non c'è prima nota da chiudere. | Controlla l'anno. |
 | *Chiusura Conti eseguita !<br>E' Necessario Annullare la Chiusura per Continuare.* | I conti dell'anno sono già chiusi. | Usa **Annullamento Chiusura Conti** e ripeti. |
 | *Vuoi Veramente Annullare i Movimenti di Chiusura Conti per l' Anno N?* poi *Confermi l'Annullamento dei Movimenti di Chiusura Conti per l' Anno N ?* | Hai avviato l'annullamento. | Rispondi **Sì** a entrambe. La risposta preimpostata è **No**. |
