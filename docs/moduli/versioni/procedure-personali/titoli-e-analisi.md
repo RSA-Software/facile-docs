@@ -106,7 +106,7 @@ rovescia il filtro: invece dei sette indicati, tutti tranne quelli.
 |---|---|
 | **Categoria** | Le [categorie economiche](../../anagrafiche/categorie-economiche.md). |
 | **Responsabile** | I [responsabili](../studio-collaboratori.md). |
-| **Tipo Cantab.** | I tipi di contabilità. L'etichetta è scritta così nel programma: è *Tipo Contab.* |
+| **Tipo Contab.** | I tipi di contabilità. |
 
 {: .campi }
 
@@ -133,11 +133,12 @@ Crea i sottoconti dell'anno nuovo sotto i conti di **crediti**, **rettifiche** e
 
 {: .campi }
 
-!!! warning "La generazione non chiede conferma"
+!!! note "Prima di partire dice quali anni farà"
 
-    ++f2++ e parte. Indicare un intervallo di anni sbagliato crea sottoconti che
-    poi vanno tolti con la voce seguente. L'unico controllo è che l'anno finale
-    non sia precedente all'iniziale: fuori da questo, il programma esegue.
+    ++f2++ chiede conferma nominando l'intervallo — *«Saranno generati i
+    sottoconti dall' anno … all' anno …»* — con **No** preimpostato. È
+    l'occasione per accorgersi di un intervallo sbagliato prima di doverlo
+    disfare con la voce seguente.
 
 ### Rimozione Sottoconti Annuali
 

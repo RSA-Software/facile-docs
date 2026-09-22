@@ -62,7 +62,7 @@ del movimento e la controparte**.
 | *Dati Cliente non trovati in archivio !* / *Dati Fornitore non trovati in archivio !* | L'anagrafica richiamata dal movimento non esiste più. |
 | *Mancano Cod. Fiscale e P.IVA !* | La controparte non ha né codice fiscale né partita IVA: non si può trasmettere. |
 | *ID Ufficio Dogane non valido !* | L'ID dell'ufficio non ha la forma prevista — otto caratteri, gli ultimi sei numerici. |
-| *Codice Accisa non valido !* | Il codice accisa della controparte non è valido. |
+| *Codice Accisa non valido !* | Il codice accisa della controparte non è valido. Il messaggio dice se si tratta del cliente o del fornitore. |
 | *Tipo cliente non valido per prodotti in sospensione di imposta !* | A quel tipo di cliente non si può cedere merce in sospensione d'imposta. |
 | *Targa non valida !* | La targa del mezzo non è nella forma attesa. |
 | *Ufficio Dogana non trovato in archivio !* | L'ufficio indicato sul flusso non esiste in tabella. |
@@ -74,12 +74,6 @@ del movimento e la controparte**.
     fornitore**: si sistemano nella loro anagrafica, nella sezione dei dati per
     l'Agenzia delle Dogane, e poi si rigenera il flusso.
 
-!!! warning "Due messaggi dicono «Cliente» anche quando è un fornitore"
-
-    Controllando i movimenti di carico, due segnalazioni — quella sul **codice
-    accisa** — cominciano con *Cliente N.* anche se il soggetto in questione è
-    un fornitore. Il numero è comunque quello giusto: va cercato fra i
-    fornitori.
 
 ## Riepilogo Accise e Imposte di Consumo
 

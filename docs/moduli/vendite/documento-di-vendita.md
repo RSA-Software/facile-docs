@@ -391,13 +391,13 @@ controlli sono altri.
     |---|---|---|
     | Fattura | Num. Fattura / Data Fattura | Numero Scontrino / Data Scontrino |
     | Fattura pro forma | Numero Doc. / Data Doc. | Doc. Riferimento / Data Doc. Rif. |
-    | Documento di trasporto | Num. D.D.T. / Data D.D.T. | Nun. Fattura / Data Fattura |
-    | Bolla | Num. Bolla / Data Bolla | Nun. Fattura / Data Fattura |
-    | Buono di consegna | Num. Buono / Data Buono | Nun. Fattura / Data Fattura |
-    | Ricevuta fiscale | Num. Ricevuta / Data Ricevuta | Nun. Doc. Rif. / Data Doc. Rif. |
-    | Autofattura | Num. Autofat. / Data Autofat. | Nun. Doc.Rif. / Data Doc.Rif. |
-    | Ordine cliente e ordine ricorrente | Num. Ordine / Data Ordine | Nun. Doc.Rif. / Data Doc.Rif. |
-    | Ordine a fornitore | Num. Ordine / Data Ordine | Nun. Doc.Rif. / Data Doc.Rif. |
+    | Documento di trasporto | Num. D.D.T. / Data D.D.T. | Num. Fattura / Data Fattura |
+    | Bolla | Num. Bolla / Data Bolla | Num. Fattura / Data Fattura |
+    | Buono di consegna | Num. Buono / Data Buono | Num. Fattura / Data Fattura |
+    | Ricevuta fiscale | Num. Ricevuta / Data Ricevuta | Num. Doc. Rif. / Data Doc. Rif. |
+    | Autofattura | Num. Autofat. / Data Autofat. | Num. Doc. Rif. / Data Doc. Rif. |
+    | Ordine cliente e ordine ricorrente | Num. Ordine / Data Ordine | Num. Doc. Rif. / Data Doc. Rif. |
+    | Ordine a fornitore | Num. Ordine / Data Ordine | Num. Doc. Rif. / Data Doc. Rif. |
     | Richiesta di offerta | Num. Richiesta / Data Rich. | V/S Offerta / Data Offerta |
     | Reso da cliente | Num. Reso / Data Reso | Numero Nota Cre. / Data Nota Cre. |
     | Anomalia | Num. Anomalia / Data Anomalia | Doc. Riferimento / Data Doc. Rif. |
@@ -412,14 +412,6 @@ controlli sono altri.
     - sulle **anomalie** spariscono anche **Tipo Documento**, **Cau.
       Magazzino** e **Add. Spese**, e **Cau. Contabile** diventa *Oggetto*.
 
-!!! warning "Nelle etichette c'è scritto «Nun.» invece di «Num.»"
-
-    Non è un errore di questo manuale: su quasi tutti i tipi di documento il
-    riferimento in basso a sinistra porta la scritta **Nun. Fattura**, **Nun.
-    Doc. Rif.**, **Nun. Autofat.**. Sulla sola fattura è scritto giusto.
-
-    Allo stesso modo il titolo della finestra dei buoni di consegna in modifica
-    dice *Modifica Buono Conssegna*.
 
 !!! note "Che cosa stampa il pulsante Tracc."
 

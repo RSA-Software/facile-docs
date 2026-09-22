@@ -132,15 +132,10 @@ L'elenco dei canoni da incassare.
 | **Software** | Un programma solo, o `TUTTI`. |
 | **Anno** | L'anno. |
 | **Cliente**, **Rivenditore**, **Agente**, **Zona** | I soliti filtri. |
-| **Rinnovo** | `TUTTE`, `NO`, `SI`, `CHIEDERE` o `CESSATE`. |
+| **Rinnovo** | `TUTTE`, `NO`, `SI`, `CHIAMARE` o `CESSATA` — le stesse voci della scheda della licenza. |
 
 {: .campi }
 
-!!! note "Due elenchi per la stessa cosa"
-
-    Il filtro di questa stampa dice `CHIEDERE` e `CESSATE`, mentre la scheda
-    della licenza dice `CHIAMARE` e `CESSATA`. Sono le stesse due condizioni,
-    scritte in due modi diversi.
 
 ## Emissione Fatture
 

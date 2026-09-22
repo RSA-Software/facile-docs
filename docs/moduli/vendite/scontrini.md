@@ -125,7 +125,8 @@ La griglia ha queste colonne:
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Un campo del filtro non è valido. | Guarda dove si è posizionato il cursore. |
 | *Codice a barre non valido!* | Nel **Controllo Conferimento**, il codice letto non ha la forma prevista. | Rileggi il buono; se il messaggio torna, quel buono non è del formato di Facile. |
-| *Conferimento Scontrino non valido!* — *Conferimento scontrino non valido!* | Nel codice a barre manca il numero o il registro dello scontrino. | Come sopra. Le due forme del messaggio sono la stessa cosa. |
+| *Conferimento: numero dello scontrino non valido!* | Nel codice a barre il numero dello scontrino manca o è zero. | Rileggi il buono; se il messaggio torna, quel buono non è del formato di Facile. |
+| *Conferimento: registro dello scontrino non valido!* | Nel codice a barre manca il registro. | Come sopra. |
 | *Conferimento non trovato in archivio!* | Lo scontrino indicato dal buono non esiste nell'anno di lavoro. | Controlla di essere nell'anno giusto. |
 | *Punti rientrati superiori ai punti erogati!* | Su quello scontrino sono già rientrati più punti di quanti ne fossero stati dati. | I punti vengono sommati lo stesso: verifica se il buono è stato letto due volte. |
 | *Cliente sul barcode diverso da cliente su Conferimento!* | Il cliente scritto sul buono non è quello dello scontrino. | I punti vengono sommati lo stesso: controlla che il buono sia di quel cliente. |

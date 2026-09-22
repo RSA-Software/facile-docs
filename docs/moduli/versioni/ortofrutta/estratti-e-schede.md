@@ -61,7 +61,7 @@ Il conto di un cliente, movimento per movimento.
 
 | Campo | Descrizione |
 |---|---|
-| **Date Iniziale**, **Data Finale** | Il periodo. L'etichetta del primo campo è scritta così nel programma. |
+| **Data Iniziale**, **Data Finale** | Il periodo. |
 | **Cliente** | Di chi si vuole la scheda. |
 | **Tipo Stampa** | `TUTTI`, `FATTURATI` o `NON FATTURATI`. |
 | **Stampa Iva** | Aggiunge l'IVA alla stampa. |

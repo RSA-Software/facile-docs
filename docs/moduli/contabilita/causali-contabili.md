@@ -240,24 +240,17 @@ fornitori.
     Su una causale nuova si spunta quella del **D.L. 83/2012**. La prima
     resta per non cambiare il significato delle causali vecchie.
 
-!!! warning "Le imputazioni oltre la 9 non si impostano da qui"
+!!! tip "Le imputazioni a due cifre si scrivono digitando le due cifre"
 
-    La colonna **Imputazione** accetta **una cifra sola**: premendo un tasto
-    numerico la casella viene riscritta con quella cifra, e il tasto successivo
-    la sostituisce. Digitare `1` e poi `0` non dà `10`: dà `0`.
-
-    Il programma però **conosce diciotto imputazioni**, e quelle da `10` in su
-    esistono e funzionano: saldo cauzioni, imponibile più IVA indetraibile,
+    Le imputazioni previste sono **diciotto**, e quelle da `10` in su servono
+    ai casi meno comuni: saldo cauzioni, imponibile più IVA indetraibile,
     commissioni, imponibile e IVA in positivo e in negativo, IVA in reverse
     charge, totale registrazione al netto del reverse charge.
 
-    Da questa maschera **non c'è modo di sceglierle**. Una causale che ne ha
-    bisogno va impostata dall'assistenza: è il caso, fra gli altri, delle
-    causali del reverse charge e di quelle delle cauzioni.
-
-    Se una causale ha già un'imputazione alta, **attenzione a non passarci
-    sopra**: basta un tasto numerico premuto per sbaglio su quella casella per
-    ridurla a una cifra, e il valore di prima non si può riscrivere.
+    Nella colonna **Imputazione** si scrivono **una cifra dopo l'altra**:
+    digitando `1` e poi `0` la casella passa da `1` a `10`. Oltre `18` — che è
+    l'ultima prevista — il conteggio riparte dalla cifra appena premuta, così
+    non si resta bloccati su un valore impossibile.
 
 
 ## Vedi anche

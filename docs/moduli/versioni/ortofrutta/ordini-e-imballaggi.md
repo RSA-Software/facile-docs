@@ -95,6 +95,8 @@ Produce la stampa **Movimentazione Imballaggi**.
     `IMBALLAGGI`. Se non c'è, all'apertura risponde
 
     *Reparto IMBALLAGGI non trovato in archivio !*
+    *La maschera riconosce gli imballi dal reparto descritto esattamente
+    IMBALLAGGI: creane uno da Archivi - Magazzino - Reparti.*
 
     e si chiude subito. Il codice del reparto non conta — conta la descrizione,
     quindi una sigla diversa o un'abbreviazione non vengono riconosciute.

@@ -28,7 +28,7 @@ niente perché l'impianto era fermo.
 | **Data Iniziale**, **Ora Iniziale** | L'inizio del periodo. |
 | **Data Finale**, **Ora Finale** | La fine. |
 | **Sezione** | La [sezione](../../contabilita/sezioni.md) — cioè l'impianto — a cui il file si riferisce. |
-| **Motivazione** | Solo per l'inattività: `1 - FERIE`, `2 - MANUTENZIONE`, `3 - EVENTI STRAORDINARI`, ` 4- ALTRO`. |
+| **Motivazione** | Solo per l'inattività: `1 - FERIE`, `2 - MANUTENZIONE`, `3 - EVENTI STRAORDINARI`, `4 - ALTRO`. |
 | **Descrizione** | Il testo che accompagna la motivazione. |
 
 {: .campi }
@@ -82,7 +82,7 @@ Valgono gli stessi campi, con due regole in più:
 
 - se l'inattività comincia e finisce **nello stesso giorno**, l'**Ora Finale**
   deve essere successiva all'**Ora Iniziale**;
-- scegliendo la motivazione ` 4- ALTRO` la **Descrizione** diventa
+- scegliendo la motivazione `4 - ALTRO` la **Descrizione** diventa
   obbligatoria: bisogna dire di che cosa si è trattato.
 
 In entrambi i casi il programma non spiega: **emette un segnale acustico** e

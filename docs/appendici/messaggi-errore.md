@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-19 — **861 messaggi**.
+Aggiornato al 2026-09-22 — **862 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -139,7 +139,8 @@ Aggiornato al 2026-09-19 — **861 messaggi**.
 | *Comando non supportato dal modello della Cassa !* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Quel modello non sa fare quell'operazione. | Non tutte le casse fanno tutto. |
 | *Commessa obbligatoria!* | [Movimenti di magazzino](../moduli/magazzino/movimenti-magazzino.md) | La causale pretende la commessa e il campo è vuoto. | Indica la commessa. |
 | *Conferimento non trovato in archivio!* | [Scontrini](../moduli/vendite/scontrini.md) | Lo scontrino indicato dal buono non esiste nell'anno di lavoro. | Controlla di essere nell'anno giusto. |
-| *Conferimento Scontrino non valido!* — *Conferimento scontrino non valido!* | [Scontrini](../moduli/vendite/scontrini.md) | Nel codice a barre manca il numero o il registro dello scontrino. | Come sopra. Le due forme del messaggio sono la stessa cosa. |
+| *Conferimento: numero dello scontrino non valido!* | [Scontrini](../moduli/vendite/scontrini.md) | Nel codice a barre il numero dello scontrino manca o è zero. | Rileggi il buono; se il messaggio torna, quel buono non è del formato di Facile. |
+| *Conferimento: registro dello scontrino non valido!* | [Scontrini](../moduli/vendite/scontrini.md) | Nel codice a barre manca il registro. | Come sopra. |
 | *Confermi la Cancellazione....* | [Aliquote IVA](../moduli/contabilita/aliquote-iva.md) | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare il codice IVA. |
 | *Confermi la Cancellazione....* | [Anagrafica agenti](../moduli/anagrafiche/anagrafica-agenti.md) | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare l'agente. |
 | *Confermi la cancellazione...* | [Anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md) | Conferma richiesta da **F6 - Elimina** sulla prima eliminazione. | Rispondi **Sì** per marcare l'articolo come cancellato. |

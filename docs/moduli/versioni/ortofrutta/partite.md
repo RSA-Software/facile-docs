@@ -160,7 +160,8 @@ mercato, già intestati con i dati della partita.
     riferimento e avverte il modello di stampa che non è una partita vera. Che
     cosa compaia sul foglio in quel caso lo decide il modello.
 
-    Con **Numero Copie** a zero non succede niente: solo un segnale acustico.
+    Con **Numero Copie** a zero non si stampa: il programma emette un segnale
+    acustico e riporta il cursore sul campo.
 
 ## Esportazione e Importazione Partite Aperte
 
