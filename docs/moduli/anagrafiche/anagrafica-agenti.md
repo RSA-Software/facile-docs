@@ -320,7 +320,30 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     Quindi non usarla per sapere quando è stata fatta l’ ultima
     generazione: non te lo dice.
 
-<!-- DA VERIFICARE: Facile Mobile non ha un manuale suo, quindi il lato app va scritto qui. Dai sorgenti di Facile non si ricava - e i sorgenti dell' app non sono su questo computer. Servono: cosa vede l' agente all' apertura, cosa puo' fare senza campo, come si accorge che i dati scaricati sono vecchi, e cosa succede se rientra due volte lo stesso ordine. Da raccogliere a voce, oppure dando accesso ai sorgenti dell' app. -->
+!!! abstract "Che cosa fa l’ agente con Facile Mobile"
+
+    Scaricati i dati, l’ app **lavora sul telefono**: l’ agente ha con
+    sé clienti, articoli, listini e scadenze, e non gli serve essere
+    collegato a Facile per consultarli.
+
+    Quello che può fare in giro:
+
+    - **prendere ordini**;
+    - emettere **documenti di trasporto** e **fatture**;
+    - gestire la **tentata vendita**, cioè vendere dal furgone quello che
+      ha caricato;
+    - registrare **incassi**;
+    - consultare la situazione di un cliente: anagrafica, listini che gli
+      si applicano e **scadenze aperte**.
+
+    Tutto quello che produce - ordini, DDT, fatture - rientra poi in
+    Facile con le quattro voci di ricezione viste sopra.
+
+    Le scadenze che l’ agente ha sotto gli occhi sono quelle **dell’
+    ultimo scarico**: se un cliente ha pagato dopo, l’ app non lo sa
+    finché non si rigenerano i dati.
+
+<!-- DA VERIFICARE: due dettagli operativi di Facile Mobile, per la parte «cosa puo' andare storto» del manuale. 1) L' app avvisa l' agente quando i dati che ha in mano sono vecchi, o se ne accorge solo dalla data dello scarico? 2) Se lo stesso ordine rientra due volte in Facile - per esempio perche' la ricezione e' stata lanciata due volte - viene riconosciuto come gia' importato o si duplica? -->
 
 ## Vedi anche
 

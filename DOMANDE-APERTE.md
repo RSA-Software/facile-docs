@@ -13,4 +13,4 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/anagrafica-agenti.md`
 
-- [ ] Facile Mobile non ha un manuale suo, quindi il lato app va scritto qui. Dai sorgenti di Facile non si ricava - e i sorgenti dell' app non sono su questo computer. Servono: cosa vede l' agente all' apertura, cosa puo' fare senza campo, come si accorge che i dati scaricati sono vecchi, e cosa succede se rientra due volte lo stesso ordine. Da raccogliere a voce, oppure dando accesso ai sorgenti dell' app.
+- [ ] due dettagli operativi di Facile Mobile, per la parte «cosa puo' andare storto» del manuale. 1) L' app avvisa l' agente quando i dati che ha in mano sono vecchi, o se ne accorge solo dalla data dello scarico? 2) Se lo stesso ordine rientra due volte in Facile - per esempio perche' la ricezione e' stata lanciata due volte - viene riconosciuto come gia' importato o si duplica?
