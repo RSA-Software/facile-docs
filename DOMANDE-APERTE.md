@@ -13,7 +13,7 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/anagrafica-agenti.md`
 
-- [ ] il palmare degli agenti. Dal lato Facile si vedono solo i due campi qui sopra, la ricezione ordini via FTP e la data dell'ultimo invio al tablet; l'applicazione che gira sul palmare è un programma a sé. Il manuale deve avere una pagina che racconti il giro completo — cosa si manda, quando, che cosa torna indietro — o l'applicazione dell'agente ha un manuale suo e qui basta il rimando?
+- [ ] il giro di Facile Mobile dal lato Facile e' scritto qui sopra (JSON su FTP, l' app lo scarica, quattro voci di rientro). Facile Mobile ha un manuale suo a cui rimandare? Se si', basta il link; se no, serve una pagina che racconti anche il lato dell' app - cosa vede l' agente, cosa puo' fare offline, come si accorge che i dati sono vecchi.
 
 ## Codici catastali comuni
 

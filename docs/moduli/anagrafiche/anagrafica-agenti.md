@@ -264,7 +264,42 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     chiede. È la password con cui l'agente entra nella **sua** applicazione, e
     da qui viaggia verso il palmare insieme al resto dei suoi dati.
 
-<!-- DA VERIFICARE: il palmare degli agenti. Dal lato Facile si vedono solo i due campi qui sopra, la ricezione ordini via FTP e la data dell'ultimo invio al tablet; l'applicazione che gira sul palmare è un programma a sé. Il manuale deve avere una pagina che racconti il giro completo — cosa si manda, quando, che cosa torna indietro — o l'applicazione dell'agente ha un manuale suo e qui basta il rimando? -->
+!!! abstract "Come arrivano i dati sul palmare, e cosa torna indietro"
+
+    L’ applicazione che l’ agente usa in giro si chiama **Facile
+    Mobile**, ed è un programma a sé: un’ app per **Android e iOS**,
+    di solito su smartphone. Facile non le parla direttamente - fra i due
+    c’ è un **server FTP**.
+
+    **In uscita**, da ▸ Trasferimenti ▸ **Genera Dati per Facile Mobile**:
+    il programma estrae i dati degli agenti in formato **JSON** e li
+    deposita sul server FTP. Da lì li scarica l’ app, quando l’ agente
+    ha campo.
+
+    **In entrata** ci sono quattro voci, perché l’ agente non raccoglie
+    solo ordini:
+
+    | Voce di menu | Cosa rientra |
+    |---|---|
+    | Ordini ▸ **Ricezione Ordini da Facile Mobile** | gli ordini raccolti dall’ app |
+    | Ordini ▸ **Ricezione Ordini dal Server FTP** | gli ordini depositati sul server |
+    | Vendite ▸ **Ricezione Fatture da Palmare** | le fatture emesse in giro |
+    | Vendite ▸ **Ricezione D.D.T. da Palmare** | i documenti di trasporto emessi in giro |
+
+    La casella **Escludi da ricezione ordini** dell’ agente agisce sulla
+    seconda di queste: gli agenti spuntati vengono saltati.
+
+!!! warning "La data dell’ ultimo invio al tablet non si aggiorna da sola"
+
+    Sull’ agente c’ è una **data dell’ ultimo invio al tablet**, ma
+    **Genera Dati per Facile Mobile non la scrive**: nessuna parte del
+    programma la aggiorna. O la tieni tu a mano, o resta ferma a quello
+    che c’ era.
+
+    Quindi non usarla per sapere quando è stata fatta l’ ultima
+    generazione: non te lo dice.
+
+<!-- DA VERIFICARE: il giro di Facile Mobile dal lato Facile e' scritto qui sopra (JSON su FTP, l' app lo scarica, quattro voci di rientro). Facile Mobile ha un manuale suo a cui rimandare? Se si', basta il link; se no, serve una pagina che racconti anche il lato dell' app - cosa vede l' agente, cosa puo' fare offline, come si accorge che i dati sono vecchi. -->
 
 ## Vedi anche
 
