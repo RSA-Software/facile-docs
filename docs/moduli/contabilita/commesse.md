@@ -69,7 +69,7 @@ Le schede sono queste:
 | **Ricavi - Analitica** | Le registrazioni di prima nota di ricavo attribuite alla commessa. |
 | **Ordini a Fornitore** | Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**, **Fornitore**, **Centro di Costo**, **Importo**, **Stato**. |
 | **Carichi** | I carichi di merce sulla commessa, con deposito, documento di trasporto e fattura. |
-| **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. |
+| **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, **Totale Costi Diretti** somma quello che resta, e i pulsanti **Stampa** ed **Excel** portano fuori la stessa cosa. |
 | **Varianti** | Le varianti concordate: **Codice**, **Data**, **Descrizione**, **Importo**, **Giorni**. |
 | **Claims** | Le riserve, con le stesse colonne delle varianti. |
 | **Note** | Una nota libera, di lunghezza non prefissata. |
@@ -77,9 +77,9 @@ Le schede sono queste:
 
 Le schede *Contratti*, *Subappaltatori*, *Milestone/SAL*, *Varianti* e *Claims*
 hanno i propri pulsanti **Nuovo**, **Modifica** ed **Elimina**; su
-*Subappaltatori* c'è in più **SAL...**, e su *Costi - Centri di Costo* un
-pulsante **Stampa**. Le altre schede sono di sola consultazione: raccolgono
-quello che è stato registrato altrove.
+*Subappaltatori* c'è in più **SAL...**, e su *Costi - Centri di Costo* i due
+pulsanti **Stampa** ed **Excel**. Le altre schede sono di sola consultazione:
+raccolgono quello che è stato registrato altrove.
 
 ## Campi
 
@@ -174,7 +174,10 @@ Valgono inoltre:
 3. Apri le schede dei costi — *Costi - Analitica*, *Ordini a Fornitore*,
    *Carichi*, *Costi - Centri di Costo* — per vedere dove il budget si sta
    consumando.
-4. Premi **Monitoraggio** per averne il quadro in Excel.
+4. Su *Costi - Analitica* e *Costi - Centri di Costo* restringi il periodo con
+   **Data Doc. Dal** e **Data Doc. Al** se vuoi guardare un tratto di lavoro
+   invece di tutta la commessa.
+5. Premi **Monitoraggio** per averne il quadro in Excel.
 
 ### Produrre il piano di fatturazione
 
@@ -286,6 +289,40 @@ Valgono inoltre:
     trattativa non risulterà acquisito.
 
 
+!!! note "Il periodo dei costi va per data del documento"
+
+    Le schede *Costi - Analitica*, *Ricavi - Analitica* e *Costi - Centri di
+    Costo* hanno in alto due date, **Data Doc. Dal** e **Data Doc. Al**, che
+    restringono il periodo.
+
+    Il confronto è sulla **data del documento** — quella scritta sulla fattura
+    del fornitore — non sulla data in cui la registrazione è stata scritta in
+    prima nota. Le due quasi mai coincidono: una fattura di dicembre registrata
+    a gennaio rientra in dicembre. La regola è la stessa su tutte e tre le
+    schede, così i totali si possono confrontare fra loro.
+
+    All'apertura le due date coprono tutto l'arco delle registrazioni presenti,
+    quindi la scheda parte mostrando l'intera commessa. Cambiandone una, il
+    totale e la griglia si rifanno appena lasci il campo, e la **Stampa** esce
+    con lo stesso periodo che vedi a video: quello che c'è nella griglia è
+    quello che finisce sul foglio.
+
+!!! tip "Excel, su Costi - Centri di Costo"
+
+    Il pulsante **Excel** salva quello che hai davanti in un foglio di calcolo
+    e lo apre subito. Il file finisce nella cartella `out` del programma e
+    prende il nome dalla commessa, così le esportazioni di commesse diverse non
+    si sovrascrivono.
+
+    Il foglio riporta in testa **ditta**, **commessa** e il **periodo** con cui
+    la griglia è stata riempita, poi le tre colonne come le vedi e in fondo il
+    **Totale Costi Diretti**. Sono esportati **tutti** i centri di costo
+    presenti a video, compresi quelli a zero: il foglio è la fotografia della
+    scheda, non una selezione.
+
+    Scrivere il periodo in testa non è un vezzo: un elenco di importi
+    aggregati, riletto a distanza di giorni, senza le date non si sa a cosa si
+    riferisca.
 
 ## Vedi anche
 
