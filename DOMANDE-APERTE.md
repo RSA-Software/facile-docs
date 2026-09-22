@@ -13,7 +13,7 @@ Per rigenerare questo elenco:
 
 `docs/moduli/anagrafiche/anagrafica-agenti.md`
 
-- [ ] il giro di Facile Mobile dal lato Facile e' scritto qui sopra (JSON su FTP, l' app lo scarica, quattro voci di rientro). Facile Mobile ha un manuale suo a cui rimandare? Se si', basta il link; se no, serve una pagina che racconti anche il lato dell' app - cosa vede l' agente, cosa puo' fare offline, come si accorge che i dati sono vecchi.
+- [ ] Facile Mobile non ha un manuale suo, quindi il lato app va scritto qui. Dai sorgenti di Facile non si ricava - e i sorgenti dell' app non sono su questo computer. Servono: cosa vede l' agente all' apertura, cosa puo' fare senza campo, come si accorge che i dati scaricati sono vecchi, e cosa succede se rientra due volte lo stesso ordine. Da raccogliere a voce, oppure dando accesso ai sorgenti dell' app.
 
 ## Codici catastali comuni
 

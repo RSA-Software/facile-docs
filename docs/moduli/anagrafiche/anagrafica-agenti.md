@@ -289,6 +289,27 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     La casella **Escludi da ricezione ordini** dell’ agente agisce sulla
     seconda di queste: gli agenti spuntati vengono saltati.
 
+!!! info "Che cosa viene mandato, e come"
+
+    La generazione produce **un file JSON per tabella** nella cartella
+    `out` di Facile, lo comprime in uno **zip** e lo carica sul server
+    FTP **agente per agente**. Se nella configurazione è attivo
+    `single_file`, i dati viaggiano invece in un unico file.
+
+    Le tabelle esportate sono ventidue: agenti, articoli, banche,
+    barcode, clienti, depositi, destinazioni, ditte, documenti,
+    fornitori, listini, lotti, marchi, misure, pagamenti, reparti,
+    riferimenti, scadenze, stagioni, tabelle, vettori e zone. Ognuna
+    ha un **filtro** proprio, così a ciascun agente arriva solo la
+    parte che lo riguarda.
+
+    Insieme ai dati partono anche le **immagini degli articoli**, che
+    hanno un intervallo di aggiornamento loro.
+
+    Tutto questo si regola nella sezione `[FACILEMOBILE]` del file di
+    configurazione: non c’ è una maschera che lo faccia, e i filtri
+    li imposta l’ assistenza.
+
 !!! warning "La data dell’ ultimo invio al tablet non si aggiorna da sola"
 
     Sull’ agente c’ è una **data dell’ ultimo invio al tablet**, ma
@@ -299,7 +320,7 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     Quindi non usarla per sapere quando è stata fatta l’ ultima
     generazione: non te lo dice.
 
-<!-- DA VERIFICARE: il giro di Facile Mobile dal lato Facile e' scritto qui sopra (JSON su FTP, l' app lo scarica, quattro voci di rientro). Facile Mobile ha un manuale suo a cui rimandare? Se si', basta il link; se no, serve una pagina che racconti anche il lato dell' app - cosa vede l' agente, cosa puo' fare offline, come si accorge che i dati sono vecchi. -->
+<!-- DA VERIFICARE: Facile Mobile non ha un manuale suo, quindi il lato app va scritto qui. Dai sorgenti di Facile non si ricava - e i sorgenti dell' app non sono su questo computer. Servono: cosa vede l' agente all' apertura, cosa puo' fare senza campo, come si accorge che i dati scaricati sono vecchi, e cosa succede se rientra due volte lo stesso ordine. Da raccogliere a voce, oppure dando accesso ai sorgenti dell' app. -->
 
 ## Vedi anche
 
