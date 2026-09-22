@@ -119,7 +119,20 @@ viene comunicato ad alcuni fornitori.
     fornitori, che si fermano con *Canale vendita non impostato per il
     cliente …*.
 
-<!-- DA VERIFICARE: le quattro voci di "Cess. da Costo" (ULTIMO, MEDIO, NETTO, FINITO) e le quattro caselle accanto (del Canale Specifico, No Agg. se in offerta, Ribalt. Sconti F.Ft., Totale). Il programma le registra sul canale e le rilegge quando riapri la maschera, ma nessun'altra parte del programma le consulta: del canale, altrove, si usano solo il codice, la descrizione e i tre codici dei trasferimenti. Sono impostazioni che serviranno a un modulo esterno, o sono rimaste indietro rispetto al calcolo dei prezzi di cessione? -->
+!!! warning "Cess. da Costo e le quattro caselle non fanno ancora niente"
+
+    **Cess. da Costo** (ULTIMO, MEDIO, NETTO, FINITO) e le caselle **del Canale
+    Specifico**, **No Agg. se in offerta**, **Ribalt. Sconti F.Ft.** e
+    **Totale** vengono salvate sul canale e rilette quando riapri la maschera,
+    ma **nessuna parte del programma le consulta**: sono predisposte per uno
+    sviluppo futuro.
+
+    Finche' non servono, quello che imposti qui non cambia nessun prezzo e
+    nessun calcolo. Non vale la pena compilarle sperando in un effetto, e non
+    c'e' rischio a lasciarle come sono.
+
+    Del canale, oggi, si usano il **codice**, la **descrizione** e i **tre
+    codici dei trasferimenti**.
 
 ## Vedi anche
 

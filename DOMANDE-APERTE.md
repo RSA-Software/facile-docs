@@ -1,19 +1,13 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-19 — **9 domande** su 8 pagine.
+Aggiornato al 2026-09-22 — **8 domande** su 7 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
 Per rigenerare questo elenco:
 
     .venv/Scripts/python.exe tools/domande-aperte.py
-
-## Canali di vendita
-
-`docs/moduli/altre-tabelle/canali-di-vendita.md`
-
-- [ ] le quattro voci di "Cess. da Costo" (ULTIMO, MEDIO, NETTO, FINITO) e le quattro caselle accanto (del Canale Specifico, No Agg. se in offerta, Ribalt. Sconti F.Ft., Totale). Il programma le registra sul canale e le rilegge quando riapri la maschera, ma nessun'altra parte del programma le consulta: del canale, altrove, si usano solo il codice, la descrizione e i tre codici dei trasferimenti. Sono impostazioni che serviranno a un modulo esterno, o sono rimaste indietro rispetto al calcolo dei prezzi di cessione?
 
 ## Anagrafica agenti
 
