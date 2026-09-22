@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-22 — **864 messaggi**.
+Aggiornato al 2026-09-22 — **865 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -832,6 +832,7 @@ Aggiornato al 2026-09-22 — **864 messaggi**.
 | *Vuoi applicare il costo degli imballaggi?* | [Carico merci](../moduli/magazzino/carico-merci.md) | Il fornitore ha imballaggi a costo. | **Sì** li somma al costo della merce. |
 | *Vuoi applicare la stessa promozione a tutti gli articoli selezionati?* | [Promozioni](../moduli/vendite/promozioni.md) | Hai selezionato più articoli con **F9 - Dati** e la prima offerta è a percentuale o a regalo. | **Sì** ripete la stessa condizione su tutti senza più chiedere. La risposta preimpostata è **No**. |
 | *Vuoi attribuire la tassonomia a tutti gli articoli nella tabella ?* | [Manutenzione degli articoli](../moduli/anagrafiche/manutenzione-articoli.md) | Si sta attribuendo una tassonomia senza aver scelto righe. | **Sì** la dà a tutti gli articoli in griglia. |
+| *Vuoi azzerare anche le date di stampa bollata dei registri rinumerati ?* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Chiesto subito dopo, e **solo** se almeno un registro era bollato. | **Sì** se quelle stampe non valgono più e vuoi che la prossima stampa bollata riparta pulita; **No** se preferisci conservare la data come dato storico. In entrambi i casi la rinumerazione viene fatta. |
 | *Vuoi azzerare il flag delle variazioni su tutti gli articoli ?* | [Stampe e manutenzione di casse e bilance](../moduli/casse-bilance/stampe-casse-bilance.md) | Richiesta di conferma di **Azzera Flag Variazioni Articoli**. | **Sì** toglie il segno «da mandare» da tutti gli articoli; la risposta predefinita è **No**. |
 | *Vuoi azzerare i valori iniziali ?* | [Bollini](../moduli/anagrafiche/bollini.md) | Il ricalcolo chiede se ripartire da zero. | **Sì** azzera anche i saldi di partenza. |
 | *Vuoi Azzerare la Data Ultimo Inventario sugli Articoli ?* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | Hai avviato **Azzeramento Data Ultimo Inventario**. | **Sì** procede. |

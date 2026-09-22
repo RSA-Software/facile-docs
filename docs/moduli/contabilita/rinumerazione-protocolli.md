@@ -91,6 +91,7 @@ Almeno una casella dev'essere spuntata.
 | *Selezionare almeno un registro !* | Nessuna delle sei caselle è spuntata. | Spunta il registro o i registri da rinumerare. |
 | *I protocolli di … verranno riscritti da capo. Registri: … Vuoi procedere ?* | Conferma prima di partire, quando nessuno dei registri scelti risulta ancora stampato in via definitiva. | Controlla la sezione e i registri elencati, poi rispondi **Sì**. |
 | *Questi registri risultano già stampati in via definitiva: … Rinumerando, i protocolli non corrisponderanno più a quanto è stato stampato. Vuoi procedere lo stesso ?* | Almeno uno dei registri scelti ha una data in **Ditte ▸ Date Bollati**: quel registro è già stato stampato in via definitiva, e il messaggio dice quale e quando. | Fermati e leggi le date. Se il registro è già stato stampato, rinumerare rompe la corrispondenza con la carta: prosegui solo se sai perché lo stai facendo. |
+| *Vuoi azzerare anche le date di stampa bollata dei registri rinumerati ?* | Chiesto subito dopo, e **solo** se almeno un registro era bollato. | **Sì** se quelle stampe non valgono più e vuoi che la prossima stampa bollata riparta pulita; **No** se preferisci conservare la data come dato storico. In entrambi i casi la rinumerazione viene fatta. |
 
 ## Note
 
@@ -145,6 +146,11 @@ Almeno una casella dev'essere spuntata.
     Se invece nessuno dei registri scelti è ancora stato stampato in via
     definitiva, la conferma è quella breve: rinumerare prima della stampa
     è normale.
+
+    Quando hai confermato, il programma chiede anche se azzerare quelle
+    date. Non decide da solo: la data conservata resta la verità di
+    quello che è stato stampato, azzerarla fa ripartire pulita la
+    prossima stampa bollata.
 
 ## Vedi anche
 
