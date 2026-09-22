@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-22 — **3 domande** su 3 pagine.
+Aggiornato al 2026-09-22 — **2 domande** su 2 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -20,9 +20,3 @@ Per rigenerare questo elenco:
 `docs/moduli/anagrafiche/codici-catastali-comuni.md`
 
 - [ ] le due caselle del Codice Ufficio Registro sono identiche e senza etichetta propria. Verificato che nessuna delle due viene mai riletta (ne' per campo, ne' per nome di colonna SQL, ne' nei report). La seconda era per la sezione staccata dell' ufficio? E vale la pena togliere dalla maschera tutti i codici che non servono, o restano per gli archivi storici?
-
-## Commesse di contabilità analitica
-
-`docs/moduli/contabilita/commesse.md`
-
-- [ ] Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale?

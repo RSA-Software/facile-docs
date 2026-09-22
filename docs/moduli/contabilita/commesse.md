@@ -242,6 +242,30 @@ Valgono inoltre:
 
     Senza una riga selezionata il pulsante non fa niente.
 
+!!! abstract "Cosa va fra le Varianti e cosa fra i Claims"
+
+    Una **variante** è concordata prima: nasce da una nuova esigenza del
+    committente o da una miglioria, e per esistere ha bisogno di un
+    accordo formale, l' ordine di modifica. Si gestisce prima o durante
+    l' esecuzione dell' opera.
+
+    Un **claim** - una riserva, una rivendicazione - è unilaterale e
+    arriva dopo: lo apri tu a fronte di un imprevisto, di un ritardo o di
+    un' inadempienza della controparte. Non c' è un accordo alle spalle ma
+    una trattativa da fare, e spesso un contenzioso. Si formalizza a
+    consuntivo o mentre l' evento critico è in corso.
+
+    | | Varianti | Claims |
+    |---|---|---|
+    | **Natura** | concordata e preventiva | unilaterale e successiva all' evento |
+    | **Approvazione** | accordo formale, ordine di modifica | trattativa o accertamento, spesso contenzioso |
+    | **Causale tipica** | nuove esigenze del committente, migliorie | imprevisti, ritardi, inadempienze della controparte |
+    | **Tempistica** | prima o durante l' esecuzione | a consuntivo, o durante l' evento critico |
+
+    In due parole: la variante è un importo **pattuito**, il claim è un
+    importo **preteso**. Il primo è acquisito, il secondo è ancora da
+    ottenere.
+
 !!! note "Varianti e Claims: per il programma sono la stessa cosa"
 
     Le due schede sono **la stessa maschera** aperta su due elenchi
@@ -261,7 +285,6 @@ Valgono inoltre:
     stampa, quindi oggi non ha conseguenze - ma se un giorno servisse,
     sommerebbe le due cose.
 
-<!-- DA VERIFICARE: Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale? -->
 
 
 ## Vedi anche
