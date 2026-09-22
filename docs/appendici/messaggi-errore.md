@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-22 — **862 messaggi**.
+Aggiornato al 2026-09-22 — **864 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -535,6 +535,7 @@ Aggiornato al 2026-09-22 — **862 messaggi**.
 | *In modalita' RT non e' possibile fare vendite e resi nello stesso scontrino!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra, con il registratore telematico. | Come sopra. |
 | *Inserire il codice del cliente !* / *E' necessario selezionare un cliente!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | L'operazione richiede un cliente intestatario. | Va scelto. |
 | *I Pezzi per Confezione sono Nulli!<br>Impossibile Continuare!* | [Etichette codici a barre](../moduli/utility/etichette-barcode.md) | Manca il numero di pezzi per confezione sull'articolo. | Compilalo in [anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md). |
+| *I protocolli di … verranno riscritti da capo. Registri: … Vuoi procedere ?* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Conferma prima di partire, quando nessuno dei registri scelti risulta ancora stampato in via definitiva. | Controlla la sezione e i registri elencati, poi rispondi **Sì**. |
 | *I Totali per la Fattura N. … e per il movimento Contabile N. … non coincidono.<br>Totale Fattura …   Totale Doc. …* | [Contabilizzazione dei documenti](../moduli/vendite/contabilizzazione-documenti.md) | Il totale del documento e quello della registrazione sono diversi. | Quasi sempre il documento è stato corretto dopo la contabilizzazione: allinea la registrazione dalla [gestione prima nota](../moduli/contabilita/gestione-prima-nota.md). |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Primo dei due avvisi che precedono la cancellazione. | Rispondi **Sì** solo se sei certo che il cliente non serva negli esercizi precedenti. |
 | *La cancellazione puo' compromettere il corretto funzionamento sugli altri esercizi ! Vuoi Continuare ?* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | Primo dei due avvisi che precedono la cancellazione. | Rispondi **Sì** solo se sei certo che il fornitore non serva negli esercizi precedenti. |
@@ -768,6 +769,7 @@ Aggiornato al 2026-09-22 — **862 messaggi**.
 | *%Provvig. per Vendite Trasfert Uguale a Zero* / *Confermi la Variazione delle Provvigioni ?* | [Variazioni di massa dei listini](../moduli/listini-vendita/variazioni-di-massa.md) | Il campo **Trasfert** è rimasto a zero. | Come sopra. |
 | *Punti rientrati superiori ai punti erogati!* | [Scontrini](../moduli/vendite/scontrini.md) | Su quello scontrino sono già rientrati più punti di quanti ne fossero stati dati. | I punti vengono sommati lo stesso: verifica se il buono è stato letto due volte. |
 | *Quantità inferiori a zero escluse dal corpo del documento!* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | L'ordine ha righe con quantità negativa. | Sono state saltate: controlla il documento generato. |
+| *Questi registri risultano già stampati in via definitiva: … Rinumerando, i protocolli non corrisponderanno più a quanto è stato stampato. Vuoi procedere lo stesso ?* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Almeno uno dei registri scelti ha una data in **Ditte ▸ Date Bollati**: quel registro è già stato stampato in via definitiva, e il messaggio dice quale e quando. | Fermati e leggi le date. Se il registro è già stato stampato, rinumerare rompe la corrispondenza con la carta: prosegui solo se sai perché lo stai facendo. |
 | *Raggiunto il numero massimo di sconti applicabili!<br>Lo sconto della promozioni non e' stato applicato!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La riga ha già tutti gli sconti che può avere. | La [promozione](../moduli/vendite/promozioni.md) **non entra**: se deve valere, va tolto uno degli sconti manuali. |
 | *Raggiunto limite massimo di righe nella promozione!* | [Promozioni](../moduli/vendite/promozioni.md) | La promozione ha raggiunto il numero massimo di righe. | Dividi gli articoli su più promozioni. |
 | *Record di un archivio relazionato non trovato!* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | Il fornitore richiama un pagamento, una banca o un'altra tabella che non esiste più. | Segnala l'anomalia all'assistenza: manca un record in una tabella di base. |

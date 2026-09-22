@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-22 — **5 domande** su 5 pagine.
+Aggiornato al 2026-09-22 — **4 domande** su 4 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -32,9 +32,3 @@ Per rigenerare questo elenco:
 `docs/moduli/contabilita/commesse.md`
 
 - [ ] Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale?
-
-## Rinumerazione protocolli
-
-`docs/moduli/contabilita/rinumerazione-protocolli.md`
-
-- [ ] questa elaborazione riscrive i protocolli di tutto l'anno e non chiede nessuna conferma: basta un clic per distruggere la corrispondenza con i registri gia' stampati. Vale la pena metterci davanti una richiesta di conferma, o un avviso quando le Date Bollati della ditta dicono che il registro e' gia' stato stampato?
