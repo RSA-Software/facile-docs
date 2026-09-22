@@ -154,7 +154,9 @@ Valgono inoltre:
     niente. Del comune si usano davvero il **codice catastale**, la
     **descrizione**, il **CAP** e la **provincia**.
 
-<!-- DA VERIFICARE: le due caselle del Codice Ufficio Registro sono identiche e senza etichetta propria. Verificato che nessuna delle due viene mai riletta (ne' per campo, ne' per nome di colonna SQL, ne' nei report). La seconda era per la sezione staccata dell' ufficio? E vale la pena togliere dalla maschera tutti i codici che non servono, o restano per gli archivi storici? -->
+    Quelli che trovi già compilati arrivano da una **importazione del
+    2005**: sono rimasti in archivio, e restano dove sono. Non c’ è
+    motivo di aggiornarli, e nemmeno di cancellarli.
 
 ## Vedi anche
 
