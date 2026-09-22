@@ -245,7 +245,15 @@ Valgono inoltre:
     L'**azzeramento dei contatori** di fine esercizio li riporta a zero
     tutti e due insieme.
 
-<!-- DA VERIFICARE: conviene pubblicare l'elenco delle causali standard fornite con l'installazione, come riferimento? -->
+!!! note "Non esiste un elenco di causali standard"
+
+    Facile non porta con se' un insieme di causali gia' pronte: non le
+    crea all' installazione e non c' e' nessuno script che le inserisca.
+    Le causali che trovi sono quelle create per quella ditta, quindi un
+    elenco pubblicato qui descriverebbe un' installazione e non il
+    programma.
+
+    Per sapere quali hai, guarda la tabella: e' l' unico elenco vero.
 
 ## Vedi anche
 

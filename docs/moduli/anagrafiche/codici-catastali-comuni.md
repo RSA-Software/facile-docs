@@ -143,7 +143,18 @@ Valgono inoltre:
     programma vengono rilette. Quello che ci scrivi non cambia il
     comportamento di niente.
 
-<!-- DA VERIFICARE: il Codice Ufficio Registro ha due caselle uguali, di tre caratteri ciascuna e senza etichetta propria. Nel programma nessuna delle due viene mai riletta, quindi il codice non dice a cosa servano. La seconda era per la sezione staccata dell'ufficio, o per qualcos'altro? Se non servono più, vale la pena toglierle dalla maschera. -->
+!!! warning "I codici degli uffici non li legge nessuno"
+
+    **Ufficio IVA**, **Ufficio Imposte**, le due caselle del **Codice
+    Ufficio Registro**, **USL**, **Cod. Schps** e **Rifiuti** vengono
+    salvati e rimostrati quando riapri il comune, ma nessuna parte del
+    programma li consulta: ne' il codice, ne' una query, ne' un report.
+
+    Compilarli non produce nessun effetto, e lasciarli vuoti non toglie
+    niente. Del comune si usano davvero il **codice catastale**, la
+    **descrizione**, il **CAP** e la **provincia**.
+
+<!-- DA VERIFICARE: le due caselle del Codice Ufficio Registro sono identiche e senza etichetta propria. Verificato che nessuna delle due viene mai riletta (ne' per campo, ne' per nome di colonna SQL, ne' nei report). La seconda era per la sezione staccata dell' ufficio? E vale la pena togliere dalla maschera tutti i codici che non servono, o restano per gli archivi storici? -->
 
 ## Vedi anche
 

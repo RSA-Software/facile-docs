@@ -256,7 +256,6 @@ Valgono inoltre:
 
 <!-- DA VERIFICARE: Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale? -->
 
-<!-- DA VERIFICARE: nella scheda Carichi l'intestazione della colonna si legge «Nnum. Fat.», refuso per «Num. Fat.». Sta dentro la definizione della griglia nel .rc, quindi si corregge dal designer delle risorse (oppure con una sostituzione della stessa lunghezza nel DLGINIT). La correggo? -->
 
 ## Vedi anche
 

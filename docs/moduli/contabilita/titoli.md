@@ -125,7 +125,11 @@ Si può ripetere più volte: la finestra si chiude da sé quando la griglia
 rimane vuota. Le righe non spuntate restano come stanno e le ritrovi la volta
 dopo.
 
-<!-- DA VERIFICARE: il titolo della finestra è "Acquisizione Titoli", mentre la voce di menu dice "Titoli ▸ Inserimento". Quale nome usare nel manuale? -->
+!!! note "La finestra si chiama diversamente dal menu"
+
+    La voce di menu dice **Titoli**, la didascalia della finestra dice
+    **Acquisizione Titoli**. Sono la stessa cosa: qui si usa il nome del
+    menu, che e' quello che cerchi quando vuoi aprirla.
 
 ## Controlli e messaggi
 
