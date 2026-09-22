@@ -278,12 +278,12 @@ Valgono inoltre:
     distinzione è **tua**, e serve a tenere in due elenchi distinti quello
     che va tenuto distinto.
 
-    Una cosa da sapere se ti aspetti due conti separati: quando la
-    commessa viene salvata, il programma calcola **un totale solo**, che
-    somma gli importi e i giorni di Varianti **e** Claims insieme, senza
-    distinguerli. Quel totale non compare in nessuna maschera e in nessuna
-    stampa, quindi oggi non ha conseguenze - ma se un giorno servisse,
-    sommerebbe le due cose.
+    I conti invece restano separati: quando la commessa viene salvata, il
+    programma calcola **due totali distinti** - importi e giorni delle
+    Varianti da una parte, dei Claims dall’ altra. Nessuno dei due
+    compare ancora in una maschera o in una stampa, ma il giorno che
+    servissero la distinzione è già fatta, e un importo ancora in
+    trattativa non risulterà acquisito.
 
 
 
