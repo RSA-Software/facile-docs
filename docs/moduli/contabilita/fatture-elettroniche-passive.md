@@ -74,7 +74,7 @@ Non applicabile.
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - Carica** | ++f2++ | Carica le fatture da file. |
+| **F2 - Carica** | ++f2++ | Carica le fatture da uno o più file scelti a mano, e alla fine rende conto di ognuno. |
 | **F3 - Sinc.** | ++f3++ | Si collega al servizio e scarica le fatture nuove. |
 | **Filtra** | | Restringe l'elenco a un periodo. |
 | **F4 - Contab.** | ++f4++ | Genera la [registrazione di prima nota](registrazione-prima-nota.md) dalla fattura selezionata. |
@@ -104,8 +104,14 @@ Non applicabile.
 
 ### Caricare una fattura ricevuta per altra via
 
-1. Salva il file XML sul computer.
-2. Premi **F2 - Carica** e scegli il file.
+1. Salva sul computer il file della fattura: l'XML, oppure il file firmato con
+   estensione `.p7m`.
+2. Premi **F2 - Carica** e seleziona **uno o più file** nella cartella dove li
+   hai messi.
+3. Leggi il riepilogo finale: dice quante fatture sono state **importate**,
+   quante **scartate**, quante erano **già presenti** e quante **ignorate**.
+4. Se qualcuna non è entrata, apri il resoconto indicato dal riepilogo: c'è una
+   riga per ogni file, con l'esito e il motivo.
 
 ## Controlli e messaggi
 
@@ -121,6 +127,13 @@ Non applicabile.
 | *Il documento non contiene righe di dettaglio dei beni/servizi!* | La fattura non ha righe da cui generare il carico. | Non si può caricare a magazzino: registrala solo in contabilità. |
 | *File in PDF del documento non trovato in archivio!* | Il PDF di cortesia non c'è. | Non tutte le fatture ne hanno uno: consulta il **Dettaglio Linee**. |
 | *Impossibile caricare i dati del documento!* | Il file non si legge. | Verifica che sia una fattura elettronica valida. |
+| *Partita iva non impostata sulla ditta!* | Manca la partita IVA nei dati della ditta. | Impostala nella [ditta](../anagrafiche/ditte.md): è quella che il programma confronta con l'intestatario della fattura. |
+| *Impostare codice fiscale sulla ditta!* | Manca il codice fiscale nei dati della ditta. | Impostalo nella [ditta](../anagrafiche/ditte.md): serve per le fatture intestate al codice fiscale invece che alla partita IVA. |
+| *Il file contiene una firma digitale non valida e non puo' essere aperto!* | Il file firmato `.p7m` ha una firma che il programma non riesce a verificare, e non si riesce a estrarne la fattura. | Chiedi al fornitore l'XML non firmato, oppure riscarica la fattura. Il file risulta **scartato** nel riepilogo. |
+| *Impossibile caricare l'xml dal file :* seguito dal nome del file e dal motivo | Il file non è una fattura elettronica leggibile. Il motivo è scritto sotto il nome: *Manca l' elemento …* quando nella fattura non c'è un dato obbligatorio, *File xml non leggibile …* quando il file è rovinato o non è un XML. | Se manca un elemento, la fattura va richiesta di nuovo al fornitore: è incompleta. Se il file non è leggibile, riscaricalo. |
+| *Partita Iva/Codice fiscale non corrispondenti per il file :* seguito dal nome del file / *Vuoi Continuare ?* | La fattura è intestata a una partita IVA o a un codice fiscale diversi da quelli della ditta su cui stai lavorando. | **No** se hai sbagliato ditta o file: il file risulta **ignorato** nel riepilogo. **Sì** solo se sai perché l'intestazione è diversa. |
+| *Importati … di … files* / *Scartati … files - Presenti … files - Ignorati … files* | È il riepilogo di fine caricamento. **Presenti** sono le fatture già in archivio, che non vengono importate una seconda volta. | Se i numeri non tornano, apri il resoconto indicato sotto il riepilogo: spiega file per file. |
+| *Impossibile aprire il file di log : l' importazione prosegue senza il dettaglio per file.* | Il programma non riesce a scrivere il resoconto dell'importazione. | Il caricamento funziona lo stesso, ma senza dettaglio. Segnala all'assistenza. |
 | *Impossibile esportare il file!* / *Formato file non corretto.* | L'esportazione non riesce. | Verifica il file di partenza. |
 | *Impossibile convertire il file!* / *Impossibile contattare il servizio di conversione!* | La conversione del file non riesce. | Riprova; se il problema resta, contatta l'assistenza. |
 | *Impossibile accoppiare il file!* | Il programma non riesce ad abbinare la fattura. | Verifica che il fornitore sia in archivio con la partita IVA giusta. |
@@ -203,6 +216,40 @@ fattura ricevuta e porta:
     Non tocca né lo scarico né l'archivio: cambia soltanto l'elenco a video. È
     il comando da usare quando una fattura « non si trova »: quasi sempre è
     fuori periodo o è stata archiviata.
+
+    **All'apertura il periodo è già impostato sugli ultimi quindici giorni**, e
+    l'elenco aggiunge quello che è stato scaricato o modificato negli ultimi
+    sette. Una fattura ricevuta prima — anche se è in archivio e non è stata
+    archiviata — **non compare finché non allarghi le date**. È il motivo più
+    comune per cui una fattura sembra non essere mai entrata.
+
+!!! info "Il caricamento manuale rende conto di ogni file"
+
+    **F2 - Carica** accetta anche più file in una volta, e alla fine dice
+    quanti ne ha **importati**, **scartati**, trovati **già presenti** e
+    **ignorati**.
+
+    Le quattro parole non sono sinonimi:
+
+    - **importato** — la fattura è entrata in archivio adesso;
+    - **presente** — c'era già, riconosciuta dal nome del file, e non viene
+      duplicata. Non è un errore: è la risposta normale quando si ricarica per
+      sbaglio qualcosa di già acquisito;
+    - **scartato** — il file non si è potuto leggere, o non si è potuto
+      scrivere in archivio;
+    - **ignorato** — il file era leggibile, ma hai risposto **No** alla domanda
+      sull'intestazione diversa.
+
+    Sotto il riepilogo il programma indica un **resoconto**, un file di testo
+    nella cartella `log` del programma, con una riga per ogni file caricato:
+    l'esito, e per le fatture scartate il motivo preciso. È lì che si guarda
+    quando i numeri non tornano.
+
+    !!! warning "Il nome del file è la chiave"
+
+        Il riconoscimento di « già presente » si basa sul **nome del file**,
+        non sul contenuto. Un file rinominato rientra come nuovo, e la stessa
+        fattura finisce in archivio due volte.
 
 ## Vedi anche
 
