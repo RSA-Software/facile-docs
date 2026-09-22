@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-22 — **865 messaggi**.
+Aggiornato al 2026-09-22 — **866 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -588,6 +588,7 @@ Aggiornato al 2026-09-22 — **865 messaggi**.
 | *Le due password digitate non corrispondono !* | [Utenti](../moduli/anagrafiche/utenti.md) | **Password** e **Conf. Password** sono diverse. | Ridigita le due password facendo attenzione al blocco maiuscole. |
 | *Le funzionalità per i lettori Formula sono fornite a richiesta.<br>Contattare la R.S.A. per l' installazione dei componenti necessari.* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Manca il componente per i lettori Datalogic Formula. | Chiedi all'assistenza l'installazione. |
 | *Lettura terminali fallita!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | **F4 - Cerca** non ha ottenuto l'elenco. | Come sopra. |
+| *L' IBAN non supera il controllo del carattere di verifica: potrebbe esserci un errore di battitura. Vuoi salvare lo stesso ?* | [Banche](../moduli/contabilita/banche.md) | L' **IBAN** è compilato ma non torna: quasi sempre è una cifra sbagliata o persa. Il controllo non viene fatto se il campo è vuoto. | Rileggi l' IBAN. Se sei certo che sia giusto - può capitare con banche estere - rispondi **Sì**: il salvataggio non viene impedito. |
 | *Licenza non ancora attivata !* | [Gestione della licenza](../moduli/utility/gestione-licenza.md) | Si prova a rimuovere o trasferire una licenza mai attivata. | Non c'è nulla da rimuovere. |
 | *L' importo indicato è superiore al totale delle scadenze !* | [Distinte di incasso e di pagamento](../moduli/scadenze/distinte-incasso-pagamento.md) | L'importo dell'incasso supera quello che c'è da incassare. | Correggi l'importo. |
 | *L'intervallo di date selezionato non sembra essere congruo con la data di emissione delle fatture!.<br>Vuoi continuare?* | [Emissione fatture da documenti](../moduli/vendite/emissione-fatture-da-documenti.md) | Le date sono insolite ma ammesse. | Controlla prima di rispondere **Sì**. |

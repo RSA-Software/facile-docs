@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-22 — **4 domande** su 4 pagine.
+Aggiornato al 2026-09-22 — **3 domande** su 3 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.
@@ -20,12 +20,6 @@ Per rigenerare questo elenco:
 `docs/moduli/anagrafiche/codici-catastali-comuni.md`
 
 - [ ] le due caselle del Codice Ufficio Registro sono identiche e senza etichetta propria. Verificato che nessuna delle due viene mai riletta (ne' per campo, ne' per nome di colonna SQL, ne' nei report). La seconda era per la sezione staccata dell' ufficio? E vale la pena togliere dalla maschera tutti i codici che non servono, o restano per gli archivi storici?
-
-## Banche
-
-`docs/moduli/contabilita/banche.md`
-
-- [ ] conviene che la maschera calcoli il CIN da ABI, CAB e numero di conto, e controlli il carattere di controllo dell'IBAN? Oggi non lo fa nessuno dei due, in nessun punto del programma, e l'unico effetto di un IBAN sbagliato e' che sparisce dalla fattura elettronica senza un messaggio.
 
 ## Commesse di contabilità analitica
 

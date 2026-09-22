@@ -134,6 +134,7 @@ Valgono inoltre:
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca il **Codice** o la **Descrizione**. | Guarda dove si è posizionato il cursore: è il campo da compilare. |
+| *L' IBAN non supera il controllo del carattere di verifica: potrebbe esserci un errore di battitura. Vuoi salvare lo stesso ?* | L' **IBAN** è compilato ma non torna: quasi sempre è una cifra sbagliata o persa. Il controllo non viene fatto se il campo è vuoto. | Rileggi l' IBAN. Se sei certo che sia giusto - può capitare con banche estere - rispondi **Sì**: il salvataggio non viene impedito. |
 | *Il codice del Sottoconto non è valido o disponibile.* | Il sottoconto indicato non esiste, o non appartiene al mastro e conto delle banche definiti nei dati dell'azienda. | Correggi il sottoconto, oppure lascia il campo a zero se la banca non è dell'azienda. |
 | *In archivio è già presente un record con lo stesso codice.* | Il codice digitato è già di un'altra banca. | Cambia codice. |
 | *Confermi la Cancellazione....* | Conferma richiesta da **F6 - Elimina**. | Rispondi **Sì** per eliminare la banca. |
@@ -177,7 +178,32 @@ Valgono inoltre:
     modo più facile per mandare fuori una fattura senza IBAN e accorgersene
     quando il cliente non paga.
 
-<!-- DA VERIFICARE: conviene che la maschera calcoli il CIN da ABI, CAB e numero di conto, e controlli il carattere di controllo dell'IBAN? Oggi non lo fa nessuno dei due, in nessun punto del programma, e l'unico effetto di un IBAN sbagliato e' che sparisce dalla fattura elettronica senza un messaggio. -->
+!!! tip "Il controllo dell' IBAN, e cosa non controlla"
+
+    Al salvataggio l' IBAN viene verificato con il calcolo previsto dallo
+    standard (ISO 7064): prende praticamente ogni errore di battitura e
+    ogni cifra persa. Il controllo vale per gli IBAN di qualunque paese,
+    che hanno lunghezze diverse.
+
+    Dice che il **numero è scritto bene**, non che sia il conto giusto:
+    un IBAN valido ma di un' altra banca passa il controllo senza
+    obiezioni.
+
+!!! warning "Un IBAN incompleto non finisce nella fattura elettronica"
+
+    Nella fattura elettronica l' IBAN viene scritto solo se è lungo almeno
+    27 caratteri, che è la misura di quelli italiani. Se è più corto
+    l' esportazione lo segnala e la fattura parte **senza IBAN**.
+
+    Riguarda anche gli IBAN esteri più corti di 27 caratteri, che sono
+    validi ma non vengono inseriti lo stesso.
+
+!!! note "Il CIN e il codice SWIFT non li usa nessuno"
+
+    **CIN** e **SWIFT** vengono salvati e rimostrati, ma nessuna parte del
+    programma li consulta. Della banca si usano davvero la
+    **descrizione**, **ABI**, **CAB**, il **numero di conto** e
+    l' **IBAN**.
 
 
 ## Vedi anche
