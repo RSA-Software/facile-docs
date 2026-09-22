@@ -250,9 +250,16 @@ Valgono inoltre:
     chiama *Inserimento Variante*, da *Claims* si chiama *Inserimento
     Claim* — e il fatto che ogni scheda mostra solo le proprie.
 
-    Il programma non tratta le une diversamente dagli altri e non ne fa
-    somme separate altrove: la distinzione è **tua**, e serve a tenere in
-    due elenchi distinti quello che va tenuto distinto.
+    Il programma non tratta le une diversamente dagli altri: la
+    distinzione è **tua**, e serve a tenere in due elenchi distinti quello
+    che va tenuto distinto.
+
+    Una cosa da sapere se ti aspetti due conti separati: quando la
+    commessa viene salvata, il programma calcola **un totale solo**, che
+    somma gli importi e i giorni di Varianti **e** Claims insieme, senza
+    distinguerli. Quel totale non compare in nessuna maschera e in nessuna
+    stampa, quindi oggi non ha conseguenze - ma se un giorno servisse,
+    sommerebbe le due cose.
 
 <!-- DA VERIFICARE: Varianti e Claims sono due elenchi identici distinti solo dall'etichetta. C'e' una regola di casa su cosa va nell'uno e cosa nell'altro, da scrivere nel manuale? -->
 
