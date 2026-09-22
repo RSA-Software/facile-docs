@@ -339,11 +339,26 @@ vuoto la voce **Modifica** non apre nulla e non dà alcun messaggio.
     Tutto quello che produce - ordini, DDT, fatture - rientra poi in
     Facile con le quattro voci di ricezione viste sopra.
 
-    Le scadenze che l’ agente ha sotto gli occhi sono quelle **dell’
-    ultimo scarico**: se un cliente ha pagato dopo, l’ app non lo sa
-    finché non si rigenerano i dati.
+    Quello che l’ agente vede - scadenze comprese - è la fotografia
+    dell’ ultimo scarico che ha fatto. Ma non deve aspettare nessuno:
+    **può riscaricare quando vuole**, perché sul server FTP resta
+    sempre l’ ultima copia inviata, finché un nuovo invio non la
+    sostituisce.
 
-<!-- DA VERIFICARE: due dettagli operativi di Facile Mobile, per la parte «cosa puo' andare storto» del manuale. 1) L' app avvisa l' agente quando i dati che ha in mano sono vecchi, o se ne accorge solo dalla data dello scarico? 2) Se lo stesso ordine rientra due volte in Facile - per esempio perche' la ricezione e' stata lanciata due volte - viene riconosciuto come gia' importato o si duplica? -->
+    Quindi, se un cliente dice di aver già pagato una scadenza che
+    all’ agente risulta aperta, la prima cosa da fare è riscaricare; se
+    la scadenza resta, vuol dire che in Facile il pagamento non è ancora
+    stato registrato.
+
+!!! note "Un documento inviato non si tocca più, e rientra una volta sola"
+
+    Ordini, documenti di trasporto e fatture, **una volta inviati**, non
+    sono più modificabili da Facile Mobile: l’ agente non può
+    correggerli dopo averli spediti.
+
+    E l’ acquisizione avviene **una volta sola**: rilanciare la ricezione
+    non duplica niente, quindi se hai il dubbio di averla già lanciata
+    puoi rifarla senza conseguenze.
 
 ## Vedi anche
 
