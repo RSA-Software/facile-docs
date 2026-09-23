@@ -322,7 +322,17 @@ def regione_titolo(immagine, titolo: str, alt_banda: int, regole: dict) -> list:
                if any(px[x, y] < 170 for y in range(alto, basso))]
     if not colonne:
         return []
-    sinistra, destra = colonne[0], colonne[-1]
+    # ci si ferma al primo vuoto largo: dopo la didascalia, sulla destra, ci
+    # sono i pulsanti di sistema, e quando la finestra e' attiva la X e'
+    # abbastanza scura da passare per testo. Contandola, la didascalia
+    # risultava lunga il triplo e il taglio cadeva nel vuoto: la regione non
+    # copriva piu' niente e, non avendo inchiostro, veniva pure scartata.
+    sinistra = destra = colonne[0]
+    salto = max(int(alt_banda * 1.2), 24)
+    for c in colonne[1:]:
+        if c - destra > salto:
+            break
+        destra = c
 
     quota = _quota_del_prefisso(titolo, prefisso)
     x = sinistra + int((destra - sinistra) * quota) if quota is not None else sinistra

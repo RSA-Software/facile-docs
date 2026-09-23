@@ -61,6 +61,11 @@ alla prima, nascondendola: in alto i tre dati del SAL, al centro le **fatture
 collegate**, in basso quelle **non ancora utilizzate**, e fra i due elenchi i
 comandi per spostare una fattura dall'uno all'altro.
 
+![Inserimento SAL Subappaltatore](../../assets/img/contabilita/sal-subappaltatore-inserimento.png)
+
+Appena aperta è come nell'immagine: i due elenchi sono spenti e al posto
+dell'intestazione si legge l'invito a salvare.
+
 ## Campi
 
 ### L'elenco dei SAL
