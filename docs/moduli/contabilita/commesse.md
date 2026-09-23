@@ -69,7 +69,7 @@ Le schede sono queste:
 | **Ricavi - Analitica** | Le registrazioni di prima nota di ricavo attribuite alla commessa. |
 | **Ordini a Fornitore** | Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**, **Fornitore**, **Centro di Costo**, **Importo**, **Stato**. |
 | **Carichi** | I carichi di merce sulla commessa, con deposito, documento di trasporto e fattura. |
-| **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, **Totale Costi Diretti** somma quello che resta, e i pulsanti **Stampa** ed **Excel** portano fuori la stessa cosa. |
+| **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, **Totale Costi Diretti** somma quello che resta, e i pulsanti **Stampa** ed **Excel** portano fuori la stessa cosa. Doppio clic su una riga apre i movimenti che compongono quell'importo. |
 | **Varianti** | Le varianti concordate: **Codice**, **Data**, **Descrizione**, **Importo**, **Giorni**. |
 | **Claims** | Le riserve, con le stesse colonne delle varianti. |
 | **Note** | Una nota libera, di lunghezza non prefissata. |
@@ -178,6 +178,20 @@ Valgono inoltre:
    **Data Doc. Dal** e **Data Doc. Al** se vuoi guardare un tratto di lavoro
    invece di tutta la commessa.
 5. Premi **Monitoraggio** per averne il quadro in Excel.
+
+### Risalire ai movimenti di un centro di costo
+
+1. Carica la commessa e apri la scheda *Costi - Centri di Costo*.
+2. Se ti serve un tratto di lavoro invece di tutta la commessa, restringi il
+   periodo con **Data Doc. Dal** e **Data Doc. Al**.
+3. Fai doppio clic sulla riga del centro di costo che vuoi esaminare, oppure
+   selezionala e premi ++enter++.
+4. Si apre **Movimenti del centro di costo**: il **Totale** in fondo coincide
+   con l'importo della riga da cui sei partito.
+5. Per vedere una registrazione per intero, fai doppio clic sul movimento: si
+   apre la [prima nota](registrazione-prima-nota.md) già caricata.
+6. Chiudi con **Chiudi** o con ++esc++. Se hai modificato qualcosa, l'elenco e
+   la griglia sotto si sono già rifatti da soli.
 
 ### Produrre il piano di fatturazione
 
@@ -306,6 +320,53 @@ Valgono inoltre:
     totale e la griglia si rifanno appena lasci il campo, e la **Stampa** esce
     con lo stesso periodo che vedi a video: quello che c'è nella griglia è
     quello che finisce sul foglio.
+
+!!! info "La finestra «Movimenti del centro di costo»"
+
+    Su *Costi - Centri di Costo* la griglia mostra **un totale per centro di
+    costo**, e basta. Il doppio clic su una riga — o ++enter++ con la riga
+    selezionata — risponde alla domanda che segue sempre: *da quali
+    registrazioni arriva questo importo?*
+
+    La finestra occupa gran parte dello schermo, si centra da sola e non si
+    ridimensiona. Il titolo riporta **centro di costo, commessa e periodo**,
+    così si sa a cosa si riferisce quello che si sta guardando anche dopo
+    averla spostata o averne aperte due di seguito.
+
+    | Colonna | Cosa contiene |
+    |---|---|
+    | **Num. Movimento** | Il numero della registrazione di prima nota: è quello da citare all'assistenza. |
+    | **Data** | La data di registrazione in prima nota. |
+    | **Data Doc.** | La data scritta sul documento del fornitore. È questa che il periodo confronta. |
+    | **Numero Doc.** | Il numero del documento del fornitore. |
+    | **Cod. Fornitore** | Il codice del fornitore in [anagrafica](../anagrafiche/anagrafica-fornitori.md). Resta a zero sulle registrazioni senza controparte. |
+    | **Descrizione Fornitore** | La ragione sociale come è stata registrata. |
+    | **Importo** | Positivo o negativo secondo che la riga sia in **dare** o in **avere**. |
+
+    Le righe con **importo negativo sono scritte in rosso**, per intero e non
+    solo nella colonna dell'importo: sono storni e rettifiche, e in un elenco
+    lungo devono saltare all'occhio senza doverli cercare.
+
+    Il **Totale** in fondo somma quello che vedi e coincide con l'importo della
+    riga da cui sei partito. Coincide **sempre**, perché la finestra usa il
+    periodo con cui la griglia è stata riempita e non quello scritto nei campi:
+    se hai cambiato una data senza uscire dal campo, i due numeri non si
+    scollano comunque.
+
+    Un doppio clic su un movimento apre la
+    [registrazione di prima nota](registrazione-prima-nota.md) già caricata. Se
+    la modifichi, al ritorno si rifanno **sia l'elenco sia la griglia dei centri
+    di costo** sotto: nessuno dei due resta a mostrare un importo vecchio.
+
+    Si chiude con **Chiudi** o con ++esc++.
+
+    !!! warning "La riga «NON ATTRIBUITO» di norma si apre vuota"
+
+        È la riga che raccoglie i costi a cui nessuno ha assegnato un centro di
+        costo. Aprendola si ottiene quasi sempre un elenco vuoto, perché in
+        pratica tutte le registrazioni di commessa il centro di costo ce
+        l'hanno. Non è un difetto: è la conferma che non è rimasto fuori
+        niente.
 
 !!! tip "Excel, su Costi - Centri di Costo"
 
