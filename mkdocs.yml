@@ -43,7 +43,10 @@ theme:
     - navigation.instant        # navigazione senza ricaricare la pagina
     - navigation.tracking
     - navigation.tabs           # moduli come schede in alto
-    - navigation.sections
+    # navigation.sections renderebbe i sottomenu come gruppi: titolo in
+    # grassetto e figli NON rientrati. Serve invece l'albero, perche' il
+    # menu del manuale ricalca quello di Facile e il rientro e' l'unica
+    # cosa che dice cosa sta dentro cosa.
     - navigation.top
     - navigation.indexes        # index.md come pagina della sezione
     - navigation.footer
