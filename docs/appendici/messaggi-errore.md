@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-23 — **874 messaggi**.
+Aggiornato al 2026-09-23 — **875 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -673,6 +673,7 @@ Aggiornato al 2026-09-23 — **874 messaggi**.
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | [Variazioni di massa dei listini](../moduli/listini-vendita/variazioni-di-massa.md) | Manca il **Listino**, oppure in **Varia Listini** la variazione è a zero. | Compila il campo su cui si è posizionato il cursore. |
 | *Nessun ordine evaso con data fra il … e il …* | [Ordini clienti](../moduli/vendite/ordini-clienti.md) | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
 | *Nessun ordine ricevuto con data fra il … e il …* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
+| *Nessun PDF allegato a questa registrazione.* | [SAL Subappaltatore](../moduli/contabilita/sal-subappaltatore.md) | Hai premuto **PDF** su una fattura che in prima nota non ha allegati in formato PDF. | Nessun rimedio dalla maschera: l'allegato va aggiunto alla registrazione di prima nota. |
 | *Non ci sono articoli in archivio!* | [Stampe articoli](../moduli/anagrafiche/stampe-articoli.md) | Si è chiesta una stampa ma l'anagrafica articoli è vuota: succede su un'installazione appena fatta. | Carica gli articoli e ripeti. |
 | *Non ci sono dati da esportare!* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Si è chiesta l'esportazione ma in archivio non c'è nessuna lettura. | Acquisisci le letture prima di esportarle. |
 | *Non ci sono fatture in archivio!* | [Provvigioni agenti e capi area](../moduli/vendite/provvigioni-agenti.md) | Si è chiesta l'attribuzione automatica delle provvigioni ma non c'è nessuna fattura da cui ricavare il periodo. | Emetti le fatture, poi ripeti. |

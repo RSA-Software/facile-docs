@@ -27,8 +27,9 @@ dell'ordine, l'attività — così che la commessa sappia quanto è stato dato
 fuori e a chi.
 
 È l'anagrafica del subappalto, non il suo avanzamento: quanto è stato
-riconosciuto al subappaltatore si registra con i **SAL**, che si raggiungono
-dal pulsante **SAL...** della stessa scheda.
+riconosciuto al subappaltatore si registra con i
+[SAL](sal-subappaltatore.md), che si raggiungono dal pulsante **SAL...**
+della stessa scheda.
 
 ## Prerequisiti
 
@@ -126,11 +127,12 @@ può lasciare in bianco e completare più avanti.
 !!! note "Il subappalto è una cosa, il suo avanzamento un'altra"
 
     Qui si registra l'affidamento. Quanto è stato via via riconosciuto al
-    subappaltatore si annota nei **SAL**, dal pulsante **SAL...** della scheda
+    subappaltatore si annota nei [SAL](sal-subappaltatore.md), dal pulsante **SAL...** della scheda
     *Subappaltatori*: sono due elenchi distinti, e l'importo scritto qui è
     quello pattuito, non quello già maturato.
 
 ## Vedi anche
 
 - [Commesse di Contabilità Analitica](commesse.md)
+- [SAL Subappaltatore](sal-subappaltatore.md)
 - [Anagrafica fornitori](../anagrafiche/anagrafica-fornitori.md)

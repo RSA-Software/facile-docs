@@ -249,9 +249,9 @@ Valgono inoltre:
 !!! info "Il pulsante SAL dei subappaltatori"
 
     Mettiti sulla riga del subappaltatore e premi **SAL...**: si apre
-    *SAL Subappaltatore*, l'elenco degli stati avanzamento lavori di
-    **quel** subappalto, con i comandi **Nuovo**, **Modifica** ed
-    **Elimina**.
+    [SAL Subappaltatore](sal-subappaltatore.md), l'elenco degli stati
+    avanzamento lavori di **quel** subappalto, con i comandi **Nuovo**,
+    **Modifica** ed **Elimina**.
 
     È lo stesso meccanismo degli avanzamenti della commessa, ma dalla parte
     di chi lavora per te: serve a sapere quanto del subappalto è stato
@@ -416,6 +416,7 @@ Valgono inoltre:
 ## Vedi anche
 
 - [Subappaltatore](subappaltatore.md)
+- [SAL Subappaltatore](sal-subappaltatore.md)
 - [Centri di costo/ricavo](centri-di-costo.md)
 - [Causali contabili](causali-contabili.md)
 - [Anagrafica clienti](../anagrafiche/anagrafica-clienti.md)
