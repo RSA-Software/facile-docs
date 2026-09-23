@@ -37,6 +37,8 @@ finestra si apre dalla sua scheda.
 
 ## La maschera
 
+![Variante / Claim](../../assets/img/contabilita/variante.png)
+
 Una finestra sola, piccola, senza schede: la data e il codice sulla prima
 riga, la descrizione sulla seconda, le due variazioni sulla terza, e i due
 pulsanti in fondo.

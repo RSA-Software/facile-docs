@@ -40,6 +40,8 @@ Prima di usare questa maschera occorre:
 
 ## La maschera
 
+![Avanzamento lavori](../../assets/img/contabilita/avanzamento.png)
+
 Una finestra sola. In alto i dati dell'avanzamento — numero, percentuale,
 descrizione, ritenuta e i totali; al centro le **fatture collegate**, in basso
 quelle **non ancora utilizzate**, e fra i due elenchi i comandi per spostare

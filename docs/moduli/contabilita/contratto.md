@@ -38,6 +38,8 @@ finestra si apre dalla sua scheda.
 
 ## La maschera
 
+![Contratto](../../assets/img/contabilita/contratto.png)
+
 Una finestra sola, piccola, senza schede: cinque campi incolonnati e i due
 pulsanti in fondo.
 
