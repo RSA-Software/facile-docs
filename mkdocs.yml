@@ -195,6 +195,9 @@ nav:
           - Conti per la Riclassificazione: moduli/contabilita/conti-riclassificazione.md
           - Stampe del piano dei conti: moduli/contabilita/stampe-piano-dei-conti.md
       - Commesse di Contabilità Analitica: moduli/contabilita/commesse.md
+      - Contratto: moduli/contabilita/contratto.md
+      - Avanzamento lavori: moduli/contabilita/avanzamento.md
+      - Variante / Claim: moduli/contabilita/variante.md
       - Subappaltatore: moduli/contabilita/subappaltatore.md
       - SAL Subappaltatore: moduli/contabilita/sal-subappaltatore.md
       - Banchi Conservatori - Attrezzature in Comodato: moduli/anagrafiche/banchi-conservatori.md

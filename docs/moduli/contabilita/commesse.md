@@ -62,15 +62,15 @@ Le schede sono queste:
 | Scheda | Contenuto |
 |---|---|
 | **Budget** | Le voci di budget previsto, con **Codice**, **Descrizione**, **Importo** e **Previsione**. La somma alimenta il **Budget Previsto** in testata. |
-| **Contratti** | I contratti che compongono la commessa: **Codice**, **Nome Contratto**, **Importo**, **Tipo Pag.** La somma degli importi è il **Valore** della commessa. |
+| **Contratti** | I contratti che compongono la commessa: **Codice**, **Nome Contratto**, **Importo**, **Tipo Pag.** Si inseriscono e si correggono dalla finestra [Contratto](contratto.md). La somma degli importi è il **Valore** della commessa. |
 | **Subappaltatori** | I subappalti affidati: **Codice**, **Fornitore**, **Importo**, **Data Contratto**, **Num. Contratto**, **Data Ord.**, **Num.- Ord.**, **Attività**. Si inseriscono e si correggono dalla finestra [Subappaltatore](subappaltatore.md). |
-| **Milestone/SAL** | Gli avanzamenti da fatturare, per contratto: **Codice**, **N. SAL**, **Descrizione SAL**, **Importo Fat.**, **Importo Iva**, **Importo Rit.**, **Tot. Fattura**, **Fatture**, **Data Fattura**. |
+| **Milestone/SAL** | Gli avanzamenti da fatturare, per contratto: **Codice**, **N. SAL**, **Descrizione SAL**, **Importo Fat.**, **Importo Iva**, **Importo Rit.**, **Tot. Fattura**, **Fatture**, **Data Fattura**. Si inseriscono e si correggono dalla finestra [Avanzamento lavori](avanzamento.md). |
 | **Costi - Analitica** | Le registrazioni di prima nota di costo attribuite alla commessa. |
 | **Ricavi - Analitica** | Le registrazioni di prima nota di ricavo attribuite alla commessa. |
 | **Ordini a Fornitore** | Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**, **Fornitore**, **Centro di Costo**, **Importo**, **Stato**. In alto **Dal**, **Al** e **Centro di Costo** restringono l'elenco. |
 | **Carichi** | I carichi di merce sulla commessa, con deposito, documento di trasporto e fattura. |
 | **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, **Totale Costi Diretti** somma quello che resta, e i pulsanti **Stampa** ed **Excel** portano fuori la stessa cosa. Doppio clic su una riga apre i movimenti che compongono quell'importo. |
-| **Varianti** | Le varianti concordate: **Codice**, **Data**, **Descrizione**, **Importo**, **Giorni**. |
+| **Varianti** | Le varianti concordate: **Codice**, **Data**, **Descrizione**, **Importo**, **Giorni**. Si inseriscono e si correggono dalla finestra [Variante / Claim](variante.md). |
 | **Claims** | Le riserve, con le stesse colonne delle varianti. |
 | **Note** | Una nota libera, di lunghezza non prefissata. |
 | **Allegati** | I file collegati alla commessa. |
@@ -80,6 +80,8 @@ hanno i propri pulsanti **Nuovo**, **Modifica** ed **Elimina**; su
 *Subappaltatori* c'è in più **SAL...**, e su *Costi - Centri di Costo* i due
 pulsanti **Stampa** ed **Excel**. Le altre schede sono di sola consultazione:
 raccolgono quello che è stato registrato altrove.
+
+Ogni scheda è descritta una per una più avanti, sotto *Campi*.
 
 ## Campi
 
@@ -110,6 +112,136 @@ raccolgono quello che è stato registrato altrove.
     contratti con importo diverso da zero: un contratto a importo zero non
     entra nel valore, e per coerenza i suoi avanzamenti non entrano nel
     fatturato. Se il **Valore** è zero, la percentuale resta a zero.
+
+### Scheda Budget
+
+Il budget previsto, una riga per ogni [centro di costo](centri-di-costo.md)
+dell'anagrafica, più una riga **NON ATTRIBUITO** che raccoglie i costi
+registrati senza centro.
+
+| Colonna | Descrizione |
+|---|---|
+| **Codice**, **Descrizione** | Il centro di costo. Non si digitano: l'elenco è l'anagrafica. |
+| **Importo** | Quanto è stato **davvero speso** su quel centro: la somma dei movimenti di costo della commessa, dare meno avere. Non si digita. |
+| **Previsione** | Quanto **prevedi** di spendere. È l'unica colonna che si scrive. |
+| **%Scostamento** | Di quanto lo speso si discosta dal previsto. Calcolata. |
+
+La somma delle previsioni è il **Budget Previsto** della testata. Sulla riga
+*NON ATTRIBUITO* la previsione è bloccata e si vede grigia: un costo senza
+centro non si può prevedere, semmai si corregge la registrazione che lo ha
+generato.
+
+### Scheda Contratti
+
+I contratti che compongono la commessa: **Codice**, **Nome contratto**,
+**Importo**, **Tipo**, **Termini pag.** La somma degli importi è il **Valore**
+della commessa.
+
+Con **Nuovo**, **Modifica** ed **Elimina** — o con un doppio clic sulla riga —
+si apre la finestra [Contratto](contratto.md).
+
+### Scheda Subappaltatori
+
+I subappalti affidati: **Codice**, **Fornitore**, **Importo**, **Data
+Contratto**, **Num. Contratto**, **Data Ord.**, **Num.- Ord.**, **Attività**.
+
+Con **Nuovo**, **Modifica** ed **Elimina** — o con un doppio clic sulla riga —
+si apre la finestra [Subappaltatore](subappaltatore.md). Il quarto pulsante,
+**SAL...**, apre gli avanzamenti di quel subappalto: vedi
+[SAL Subappaltatore](sal-subappaltatore.md).
+
+### Scheda Milestone/SAL
+
+Gli avanzamenti da fatturare al committente. In cima c'è la tendina
+**Contratto**: l'elenco mostra gli avanzamenti **di quel contratto**, e il
+nuovo apparterrà a quello. Cambiando contratto cambia l'elenco.
+
+| Colonna | Descrizione |
+|---|---|
+| **Codice** | Assegnato dal programma. |
+| **N. SAL**, **Descrizione SAL** | Come hai chiamato e descritto l'avanzamento. |
+| **Importo Fat.**, **Importo Iva** | Imponibile e IVA delle fatture collegate. |
+| **% Rit.**, **Importo Rit.** | La ritenuta a garanzia, in percentuale e in valore. |
+| **Tot. Fattura** | Imponibile più IVA, meno la ritenuta. |
+| **Fatture**, **Data Fattura** | I documenti collegati e la data del primo. |
+
+Con **Nuovo**, **Modifica** ed **Elimina** — o con un doppio clic sulla riga —
+si apre la finestra [Avanzamento lavori](avanzamento.md). Gli **Importo Fat.**
+di questa scheda sono ciò da cui si ricava la **% Fatturato** in testata.
+
+### Scheda Costi - Analitica
+
+Le registrazioni di prima nota di costo attribuite alla commessa:
+**Codice**, **Data**, **Cliente / Fornitore**, **Importo**, **Data Doc.**,
+**Num. Doc.**, **Descrizione**.
+
+In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, il campo
+**Fornitore** restringe a un solo fornitore — si digita il codice o si apre
+l'elenco con un doppio clic, e a zero vale *TUTTI* — e **Totale Costi
+Diretti** somma quello che resta.
+
+I quattro pulsanti a destra sono icone senza scritta: **Stampa**, **Esp.
+PDF**, **Email**, **Excel**. La stampa è il report *Stampa Costi Diretti
+Commessa*; l'esportazione PDF chiede una cartella e vi estrae i PDF allegati
+alle registrazioni elencate; l'email manda quell'elenco con gli stessi
+allegati.
+
+**Doppio clic su una riga apre la registrazione di prima nota** che l'ha
+generata; chiudendola l'elenco si ricarica.
+
+### Scheda Ricavi - Analitica
+
+La stessa scheda dei costi, dal lato dei ricavi, con le stesse colonne e lo
+stesso doppio clic. Tre differenze: il filtro **Fornitore** non c'è — sui
+ricavi non avrebbe senso —, l'etichetta del totale dice **Totale Ricavi**, e
+restano i soli pulsanti **Stampa** ed **Excel**.
+
+### Scheda Ordini a Fornitore
+
+Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**,
+**Fornitore**, **Centro di Costo**, **Importo**, **Stato**. In alto **Dal**,
+**Al** e **Centro di Costo** restringono l'elenco: come funzionano è spiegato
+nella nota *I filtri di Ordini a Fornitore*, più avanti in questa pagina.
+
+### Scheda Carichi
+
+I carichi di merce sulla commessa: **Deposito**, **Anno**, **Codice**,
+**Numero**, **Data**, **Fornitore**, **N. Ordine**, **Data Ord.**, **Num.
+DDT**, **Data DDT**, **Num. Fat.**, **Data Fat.**
+
+**Doppio clic su una riga apre il carico merci**; chiudendolo l'elenco si
+ricarica.
+
+### Scheda Costi - Centri di Costo
+
+I costi raggruppati per centro di costo: **Codice**, **Descrizione**,
+**Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il
+periodo e **Totale Costi Diretti** somma quello che resta; **Stampa** ed
+**Excel** portano fuori la stessa cosa che vedi.
+
+**Doppio clic su una riga apre i movimenti** che compongono quell'importo:
+vedi la nota *La finestra «Movimenti del centro di costo»*, più avanti.
+
+### Schede Varianti e Claims
+
+Due schede identiche nella forma — **Codice**, **Data**, **Descrizione**,
+**Importo**, **Giorni** — e distinte solo nel significato di quello che ci
+metti.
+
+Con **Nuovo**, **Modifica** ed **Elimina** — o con un doppio clic sulla riga —
+si apre la finestra [Variante / Claim](variante.md), che cambia titolo secondo
+la scheda da cui l'hai aperta.
+
+### Scheda Note
+
+Una nota libera sulla commessa, su più righe e senza lunghezza prefissata. Si
+scrive direttamente nella scheda e viene registrata con la commessa, premendo
+**F2 - Salva** nella barra in alto.
+
+### Scheda Allegati
+
+I file collegati alla commessa: contratti firmati, computi, corrispondenza.
+Funziona come l'analogo delle altre maschere di Facile.
 
 ## Pulsanti e comandi
 
@@ -415,6 +547,9 @@ Valgono inoltre:
 
 ## Vedi anche
 
+- [Contratto](contratto.md)
+- [Avanzamento lavori](avanzamento.md)
+- [Variante / Claim](variante.md)
 - [Subappaltatore](subappaltatore.md)
 - [SAL Subappaltatore](sal-subappaltatore.md)
 - [Centri di costo/ricavo](centri-di-costo.md)
