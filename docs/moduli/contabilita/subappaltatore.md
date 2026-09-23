@@ -1,7 +1,7 @@
 ---
 title: Subappaltatore
 description: "La finestra con cui si registra un subappalto su una commessa: fornitore, importo, contratto, ordine e attività affidata."
-modulo: Contabilità
+modulo: Archivi
 maschera_id: IDD_TCN_SUBAPPALTATORE
 ---
 
@@ -13,7 +13,7 @@ apre dalla scheda *Subappaltatori* della commessa.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Contabilità ▸ Commesse di Contabilità Analitica ▸ scheda **Subappaltatori** ▸ **Nuovo**
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ scheda **Subappaltatori** ▸ **Nuovo**
     - **Scorciatoia:** ++f2++ salva, ++esc++ esce, ++f1++ apre questa pagina
     - **Permessi richiesti:** quelli della [commessa](commesse.md) da cui si apre; non ha un profilo suo
 

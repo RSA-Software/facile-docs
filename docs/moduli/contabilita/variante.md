@@ -1,7 +1,7 @@
 ---
 title: Variante e Claim
 description: "La finestra con cui si registra una variante concordata o un claim su una commessa: data, descrizione, variazione di importo e di giorni."
-modulo: Contabilità
+modulo: Archivi
 maschera_id: IDD_TCN_VARIANTE
 ---
 
@@ -13,7 +13,7 @@ e *Claims* della commessa.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Contabilità ▸ Commesse di Contabilità Analitica ▸ scheda **Varianti** *(oppure* **Claims***)* ▸ **Nuovo** *(oppure* **Modifica***)*
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ scheda **Varianti** *(oppure* **Claims***)* ▸ **Nuovo** *(oppure* **Modifica***)*
     - **Scorciatoia:** ++f2++ salva, ++esc++ esce
     - **Permessi richiesti:** quelli della [commessa](commesse.md) da cui si apre; non ha un profilo suo
 

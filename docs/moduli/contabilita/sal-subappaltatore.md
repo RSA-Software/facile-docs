@@ -1,7 +1,7 @@
 ---
 title: SAL Subappaltatore
 description: "Gli stati avanzamento lavori di un subappalto: quanto è stato eseguito, con quali fatture del fornitore, e a che punto è la verifica."
-modulo: Contabilità
+modulo: Archivi
 maschera_id: IDD_TCN_SUB_SAL_GEST
 ---
 
@@ -14,7 +14,7 @@ commessa.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Contabilità ▸ Commesse di Contabilità Analitica ▸ scheda **Subappaltatori** ▸ riga del subappaltatore ▸ **SAL...**
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ scheda **Subappaltatori** ▸ riga del subappaltatore ▸ **SAL...**
     - **Scorciatoia:** ++enter++ o doppio clic aprono la riga, ++esc++ esce
     - **Permessi richiesti:** quelli della [commessa](commesse.md) da cui si apre; non ha un profilo suo
 

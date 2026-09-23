@@ -1,7 +1,7 @@
 ---
 title: Avanzamento lavori (Milestone / SAL)
 description: La finestra con cui si registra un avanzamento di un contratto di commessa e gli si collegano le fatture emesse al cliente.
-modulo: Contabilità
+modulo: Archivi
 maschera_id: IDD_TCN_AVANZAMENTI
 ---
 
@@ -13,7 +13,7 @@ che lo fatturano. Si apre dalla scheda *Milestone/SAL* della commessa.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Contabilità ▸ Commesse di Contabilità Analitica ▸ scheda **Milestone/SAL** ▸ **Nuovo** *(oppure* **Modifica***)*
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ scheda **Milestone/SAL** ▸ **Nuovo** *(oppure* **Modifica***)*
     - **Scorciatoia:** ++f2++ salva, ++esc++ esce
     - **Permessi richiesti:** quelli della [commessa](commesse.md) da cui si apre; non ha un profilo suo
 

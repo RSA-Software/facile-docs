@@ -1,7 +1,7 @@
 ---
 title: Contratto di commessa
 description: "La finestra con cui si registra un contratto della commessa: nome, importo, tipo di pagamento a milestone o a SAL, e termini."
-modulo: Contabilità
+modulo: Archivi
 maschera_id: IDD_TCN_CONTRATTO
 ---
 
@@ -13,7 +13,7 @@ Si apre dalla scheda *Contratti* della commessa.
 
 !!! info "In sintesi"
 
-    - **Percorso:** Menu ▸ Contabilità ▸ Commesse di Contabilità Analitica ▸ scheda **Contratti** ▸ **Nuovo** *(oppure* **Modifica***)*
+    - **Percorso:** Menu ▸ Archivi ▸ Commesse di Contabilità Analitica ▸ scheda **Contratti** ▸ **Nuovo** *(oppure* **Modifica***)*
     - **Scorciatoia:** ++f2++ salva, ++esc++ esce
     - **Permessi richiesti:** quelli della [commessa](commesse.md) da cui si apre; non ha un profilo suo
 

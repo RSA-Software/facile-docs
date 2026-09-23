@@ -127,23 +127,26 @@ nav:
       - Convenzioni del manuale: introduzione/convenzioni.md
   - Archivi:
       - moduli/archivi.md
-      - Clienti: moduli/anagrafiche/anagrafica-clienti.md
-      - Mailing list: moduli/anagrafiche/mailing-list.md
-      - Associazione Gruppi e Giri: moduli/anagrafiche/associazioni.md
-      - Agganci Trasferimento Documenti: moduli/anagrafiche/agganci-trasferimento-documenti.md
-      - Gestione Compleanni: moduli/anagrafiche/gestione-compleanni.md
-      - Bollini: moduli/anagrafiche/bollini.md
-      - Stampe clienti: moduli/anagrafiche/stampe-clienti.md
-      - Fornitori: moduli/anagrafiche/anagrafica-fornitori.md
-      - Tabella Sconti Fornitori: moduli/anagrafiche/tabella-sconti-fornitori.md
-      - Stampe fornitori: moduli/anagrafiche/stampe-fornitori.md
-      - Articoli: moduli/anagrafiche/anagrafica-articoli.md
-      - Modifica da Griglia: moduli/anagrafiche/modifica-da-griglia.md
-      - Impostazione Dati Web: moduli/anagrafiche/impostazione-dati-web.md
-      - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md
-      - Scorte, assortimento e ubicazioni: moduli/anagrafiche/scorte-e-assortimento.md
-      - Stampe articoli: moduli/anagrafiche/stampe-articoli.md
-      - Stampa lotti e spostamenti barcode: moduli/anagrafiche/stampe-lotti-e-barcode.md
+      - Clienti:
+          - Inserimento e Modifica: moduli/anagrafiche/anagrafica-clienti.md
+          - Mailing list: moduli/anagrafiche/mailing-list.md
+          - Associazione Gruppi e Giri: moduli/anagrafiche/associazioni.md
+          - Agganci Trasferimento Documenti: moduli/anagrafiche/agganci-trasferimento-documenti.md
+          - Gestione Compleanni: moduli/anagrafiche/gestione-compleanni.md
+          - Bollini: moduli/anagrafiche/bollini.md
+          - Stampe clienti: moduli/anagrafiche/stampe-clienti.md
+      - Fornitori:
+          - Inserimento e Modifica: moduli/anagrafiche/anagrafica-fornitori.md
+          - Tabella Sconti Fornitori: moduli/anagrafiche/tabella-sconti-fornitori.md
+          - Stampe fornitori: moduli/anagrafiche/stampe-fornitori.md
+      - Articoli:
+          - Inserimento e Modifica: moduli/anagrafiche/anagrafica-articoli.md
+          - Modifica da Griglia: moduli/anagrafiche/modifica-da-griglia.md
+          - Impostazione Dati Web: moduli/anagrafiche/impostazione-dati-web.md
+          - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md
+          - Scorte, assortimento e ubicazioni: moduli/anagrafiche/scorte-e-assortimento.md
+          - Stampe articoli: moduli/anagrafiche/stampe-articoli.md
+          - Stampa lotti e spostamenti barcode: moduli/anagrafiche/stampe-lotti-e-barcode.md
       - Listini Vendita:
           - moduli/listini-vendita/index.md
           - Gestione: moduli/listini-vendita/gestione-listini.md
@@ -158,9 +161,10 @@ nav:
           - moduli/listini-fornitori/index.md
           - Gestione: moduli/listini-fornitori/gestione-listini-fornitori.md
           - Analisi Fornitore: moduli/listini-fornitori/analisi-fornitore.md
-      - Agenti: moduli/anagrafiche/anagrafica-agenti.md
-      - Capi Area: moduli/anagrafiche/capi-area.md
-      - Stampe agenti: moduli/anagrafiche/stampe-agenti.md
+      - Agenti:
+          - Inserimento e Modifica: moduli/anagrafiche/anagrafica-agenti.md
+          - Capi Area: moduli/anagrafiche/capi-area.md
+          - Stampe agenti: moduli/anagrafiche/stampe-agenti.md
       - Rubrica: moduli/anagrafiche/rubrica.md
       - Buoni Pasto - Buoni Celiachia: moduli/anagrafiche/gestori-buoni-pasto.md
       - Banche: moduli/contabilita/banche.md
@@ -194,12 +198,13 @@ nav:
           - Titoli: moduli/contabilita/titoli.md
           - Conti per la Riclassificazione: moduli/contabilita/conti-riclassificazione.md
           - Stampe del piano dei conti: moduli/contabilita/stampe-piano-dei-conti.md
-      - Commesse di Contabilità Analitica: moduli/contabilita/commesse.md
-      - Contratto: moduli/contabilita/contratto.md
-      - Avanzamento lavori: moduli/contabilita/avanzamento.md
-      - Variante / Claim: moduli/contabilita/variante.md
-      - Subappaltatore: moduli/contabilita/subappaltatore.md
-      - SAL Subappaltatore: moduli/contabilita/sal-subappaltatore.md
+      - Commesse di Contabilità Analitica:
+          - Inserimento e Modifica: moduli/contabilita/commesse.md
+          - Contratto: moduli/contabilita/contratto.md
+          - Avanzamento lavori: moduli/contabilita/avanzamento.md
+          - Variante / Claim: moduli/contabilita/variante.md
+          - Subappaltatore: moduli/contabilita/subappaltatore.md
+          - SAL Subappaltatore: moduli/contabilita/sal-subappaltatore.md
       - Banchi Conservatori - Attrezzature in Comodato: moduli/anagrafiche/banchi-conservatori.md
       - Altre Tabelle:
           - moduli/altre-tabelle/index.md
@@ -220,8 +225,9 @@ nav:
       - Comunicazione Operazioni IVA: moduli/contabilita/comunicazioni-iva.md
       - Dettagli Corrispettivi, Operazioni Speciali e Cointestatari: moduli/contabilita/corrispettivi-speciali-cointestatari.md
       - Rinumerazione Protocolli: moduli/contabilita/rinumerazione-protocolli.md
-      - Stampe Contabili: moduli/contabilita/stampe-contabili.md
-      - Registri IVA: moduli/contabilita/registri-iva.md
+      - Stampe Contabili:
+          - Brogliaccio, mastro, giornale e bilancio: moduli/contabilita/stampe-contabili.md
+          - Registri IVA: moduli/contabilita/registri-iva.md
       - Esportazione Movimenti: moduli/contabilita/esportazione-movimenti.md
   - Vendite:
       - moduli/vendite/index.md
