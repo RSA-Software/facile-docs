@@ -232,6 +232,85 @@ def regioni_da_etichette(controlli, regole, maschera_id="", scala=None) -> list:
     return regioni
 
 
+# ----------------------------------------------------------- barra del titolo
+
+
+def _quota_del_prefisso(intero: str, prefisso: str):
+    """Che frazione della didascalia occupa la sua parte fissa.
+
+    La misura del font di sistema non coincide con i pixel della cattura — la
+    barra del titolo la disegna il tema, a una scala sua — ma il RAPPORTO fra
+    le due lunghezze si', ed e' quello che serve. None quando non si riesce a
+    misurare: allora si copre tutto il titolo, che e' la scelta prudente.
+    """
+    if not prefisso or not intero.startswith(prefisso):
+        return None
+    try:
+        import win32con
+        import win32gui
+        import win32ui
+
+        lf = win32gui.SystemParametersInfo(win32con.SPI_GETNONCLIENTMETRICS)["lfCaptionFont"]
+        hdc = win32gui.GetDC(0)
+        try:
+            dc = win32ui.CreateDCFromHandle(hdc)
+            dc.SelectObject(win32ui.CreateFont({"name": lf.lfFaceName,
+                                                "height": lf.lfHeight,
+                                                "weight": lf.lfWeight}))
+            tutto = dc.GetTextExtent(intero)[0]
+            parte = dc.GetTextExtent(prefisso)[0]
+        finally:
+            win32gui.ReleaseDC(0, hdc)
+        return parte / tutto if tutto else None
+    except Exception:
+        return None
+
+
+def regione_titolo(immagine, titolo: str, alt_banda: int, regole: dict) -> list:
+    """Copre i dati che Facile scrive nella barra del titolo.
+
+    La barra non e' un controllo, quindi nessuna delle regole per etichetta la
+    guardava. Ma diverse maschere ci attaccano un dato del cliente dopo un
+    separatore — `SAL Subappaltatore - <ragione sociale>`, scritto a mano con
+    SetWindowText quando la finestra si apre — e quel nome finiva nel manuale
+    in chiaro (trovato il 23/09/2026 su IDD_TCN_SUB_SAL_GEST).
+
+    Si copre solo cio' che segue il separatore: la didascalia fissa e' quella
+    che identifica la maschera e deve restare leggibile. `alt_banda` e'
+    l'altezza della zona non-client in cima alla finestra; a zero non si copre
+    niente, perche' non si saprebbe dove guardare.
+    """
+    titolo = (titolo or "").strip()
+    if not titolo or alt_banda <= 0:
+        return []
+
+    prefisso = ""
+    for sep in (regole.get("titolo_separatori") or []):
+        taglio = titolo.find(sep)
+        if taglio > 0 and (not prefisso or taglio + len(sep) < len(prefisso)):
+            prefisso = titolo[:taglio + len(sep)]
+    if not prefisso or prefisso == titolo:
+        return []
+
+    # colonne della banda che contengono testo: la didascalia e' scura sul
+    # fondo chiaro, mentre i pulsanti di sistema sono troppo chiari per contare
+    grigia = immagine.convert("L")
+    px = grigia.load()
+    alto, basso = int(alt_banda * 0.30), int(alt_banda * 0.85)
+    if basso <= alto or basso > grigia.height:
+        return []
+    colonne = [x for x in range(6, grigia.width - 6)
+               if any(px[x, y] < 170 for y in range(alto, basso))]
+    if not colonne:
+        return []
+    sinistra, destra = colonne[0], colonne[-1]
+
+    quota = _quota_del_prefisso(titolo, prefisso)
+    x = sinistra + int((destra - sinistra) * quota) if quota is not None else sinistra
+    x = max(min(x, destra), sinistra)
+    return [(max(x - 2, 0), max(alto - 2, 0), destra - x + 6, basso - alto + 4)]
+
+
 # ------------------------------------------------------------------- griglie
 
 def _senza_barre(rett, controlli) -> tuple:

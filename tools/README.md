@@ -148,6 +148,18 @@ perdeva un dato utile. Chi rielabora uno screenshot catturato **altrove** puo'
 passare la scala di quella cattura come quarto argomento di
 `regioni_da_etichette`.
 
+C'e' poi la **barra del titolo**, che non e' un controllo e che nessuna delle
+regole sopra vedeva. Diverse maschere ci attaccano un dato del cliente dopo un
+separatore — *SAL Subappaltatore - <ragione sociale>*, scritto quando la
+finestra si apre — e quel nome finiva nell'immagine in chiaro (trovato il
+23/09/2026 su `IDD_TCN_SUB_SAL_GEST`). Si copre cio' che segue il separatore,
+lasciando leggibile la didascalia fissa che identifica la maschera; i
+separatori sono in `titolo_separatori`, e a elenco vuoto la copertura e'
+spenta. Il punto esatto dove tagliare si ricava misurando la didascalia con il
+font di sistema: il valore assoluto non coincide con i pixel della cattura,
+perche' la barra la disegna il tema, ma il **rapporto** fra le due lunghezze
+si'.
+
 La copertura e' sfocatura **piu'** pixelatura, perche' la sola sfocatura si
 puo' in parte invertire.
 

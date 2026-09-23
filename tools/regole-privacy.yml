@@ -86,6 +86,14 @@ colonne_sensibili:
   - "piva*"
   - "codfiscale*"
 
+# --- barra del titolo -------------------------------------------------------
+# Diverse maschere attaccano al titolo un dato del cliente dopo un separatore
+# ("SAL Subappaltatore - <ragione sociale>"): la barra non e' un controllo e
+# nessuna delle regole qui sopra la vedeva. Si copre cio' che segue il
+# separatore; la didascalia fissa resta leggibile. Elenco vuoto = spento.
+titolo_separatori:
+  - " - "
+
 # --- eccezioni per singola maschera ----------------------------------------
 per_maschera:
   # IDD_CLI_COMPLEANNI:

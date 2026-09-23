@@ -219,6 +219,18 @@ def controlli_di(hwnd: int) -> list:
     return elenco
 
 
+def banda_titolo(hwnd: int) -> int:
+    """Quanto e' alta la zona non-client in cima alla finestra, cioe' dove sta
+    la barra del titolo: e' lo scarto fra l'angolo della finestra e l'angolo
+    dell'area client. Serve a offusca.regione_titolo, che li' dentro cerca il
+    testo."""
+    try:
+        _, alto, _, _ = win32gui.GetWindowRect(hwnd)
+        return max(win32gui.ClientToScreen(hwnd, (0, 0))[1] - alto, 0)
+    except Exception:
+        return 0
+
+
 def porta_in_primo_piano(hwnd: int) -> None:
     """Windows concede il primo piano solo al processo che ha l'input: senza
     agganciarsi al suo thread, SetForegroundWindow fallisce in silenzio e la
@@ -519,6 +531,9 @@ def main() -> None:
                 maschera_id = s.get("maschera_id", "")
                 regioni = offusca.regioni_da_etichette(elenco, regole, maschera_id)
                 regioni += offusca.regioni_da_griglia(img, elenco, regole, maschera_id)
+                regioni += offusca.regione_titolo(
+                    img, win32gui.GetWindowText(nuova), banda_titolo(nuova), regole
+                )
                 if regole.get("usa_nomi_controllo"):
                     regioni += offusca.regioni_da_controlli(
                         elenco, regole, mappa_nomi, maschera_id
