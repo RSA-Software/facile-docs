@@ -120,8 +120,38 @@ email.
 ## `offusca.py` e `regole-privacy.yml`
 
 Il manuale e' pubblico: ragioni sociali, nomi, partite IVA, codici fiscali,
-telefoni ed email vengono coperti prima del salvataggio. Il riconoscimento e'
-per **nome del controllo** (`IDC_..._RAGSOC`), letto dai `resource.h` dei
-sorgenti, non per contenuto: vale anche a campo vuoto. La copertura e'
-sfocatura piu' pixelatura, perche' la sola sfocatura si puo' in parte
-invertire.
+telefoni ed email vengono coperti prima del salvataggio.
+
+Il riconoscimento e' per **etichetta**, cioe' per la scritta che il lettore
+vede accanto al campo, elencata in `regole-privacy.yml`. Non per nome del
+controllo: in Facile lo stesso numero ricompare in maschere diverse con nomi
+diversi — l'id 295 e' insieme `IDC_CLI_D_START` e `IDC_CLI_FIRST_VAL2` —
+quindi una regola sui nomi copre cose a caso. Non per contenuto: vale anche a
+campo vuoto.
+
+Un'etichetta si riconosce dalla **classe**, dal **testo** e dal fatto che sta
+sulla stessa riga del campo. **Non dall'identificatore:** con le vecchie
+PVTEXT3D era un controllo senza id e il filtro si basava su quello, ma le
+maschere convertite a `CRSALabel` hanno bisogno di un id vero per il
+`DDX_Control`. Finche' il filtro ha guardato l'id, quelle maschere
+risultavano senza etichette e non veniva coperto **niente, in silenzio**
+(trovato il 23/09/2026 su `IDD_TCN_SUBAPPALTATORE`: la ragione sociale del
+fornitore sarebbe finita nel manuale in chiaro).
+
+`larghezza_minima` serve a non sfocare il campicino del codice accanto alla
+descrizione. E' in **pixel a 96 DPI**, e viene riportata alla scala della
+cattura da `fattore_dpi()`: al 150% la soglia predefinita di 70 diventa 105,
+e un campo da 45 unita' di dialog — che a quella scala misura 101 — resta
+giustamente fuori. Senza la correzione la soglia non escludeva piu' niente e
+veniva coperto anche il codice: innocuo per la riservatezza, ma la schermata
+perdeva un dato utile. Chi rielabora uno screenshot catturato **altrove** puo'
+passare la scala di quella cattura come quarto argomento di
+`regioni_da_etichette`.
+
+La copertura e' sfocatura **piu'** pixelatura, perche' la sola sfocatura si
+puo' in parte invertire.
+
+C'e' anche una seconda rete, per **testo**: riconosce email, partite IVA,
+codici fiscali e telefoni per forma, ed e' pensata per griglie ed elenchi dove
+i dati non stanno in un controllo per campo. Richiede Tesseract e si attiva
+con `--ocr`.

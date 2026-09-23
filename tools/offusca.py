@@ -148,7 +148,31 @@ def _sigla(testo: str) -> str:
     return re.sub(r"[^a-z0-9*]", "", testo.lower())
 
 
-def regioni_da_etichette(controlli, regole, maschera_id="") -> list:
+def fattore_dpi() -> float:
+    """Di quanto lo schermo e' scalato rispetto ai 96 DPI di riferimento.
+
+    Le soglie in pixel di regole-privacy.yml sono tarate al 100%. Le catture
+    invece seguono il DPI: al 150% un campo da 45 unita' di dialog ne misura
+    101, e una soglia fissa a 70 smette di distinguere il campicino del codice
+    dal campo del nome. Fuori da Windows, o se la chiamata non riesce, 1.0 —
+    cioe' il comportamento di prima.
+    """
+    try:
+        import ctypes
+
+        utente = ctypes.windll.user32
+        if hasattr(utente, "GetDpiForSystem"):
+            punti = utente.GetDpiForSystem()
+        else:
+            dc = utente.GetDC(0)
+            punti = ctypes.windll.gdi32.GetDeviceCaps(dc, 88)  # LOGPIXELSX
+            utente.ReleaseDC(0, dc)
+        return (punti or 96) / 96.0
+    except Exception:
+        return 1.0
+
+
+def regioni_da_etichette(controlli, regole, maschera_id="", scala=None) -> list:
     """Riconosce i campi da coprire dall'etichetta che il lettore vede a video.
 
     Il numero del controllo non serve: in Facile lo stesso numero ricompare in
@@ -157,17 +181,29 @@ def regioni_da_etichette(controlli, regole, maschera_id="") -> list:
     etichette invece sono quelle stampate accanto al campo: 'Telefono' e'
     'Telefono' in tutte le maschere.
 
-    Nelle dialog di Facile l'etichetta e' un controllo senza identificatore che
-    precede il campo sulla stessa riga; i campi che seguono la ereditano finche'
-    non ne arriva un'altra.
+    Nelle dialog di Facile l'etichetta precede il campo sulla stessa riga, e i
+    campi che seguono la ereditano finche' non ne arriva un'altra.
+
+    L'etichetta NON si riconosce dall'identificatore. Con le vecchie PVTEXT3D
+    era un controllo senza id, e per un periodo il filtro si e' basato su
+    quello; ma le maschere convertite a CRSALabel hanno bisogno di un id vero
+    per il DDX_Control, quindi le loro etichette ne hanno uno (in
+    IDD_TCN_SUBAPPALTATORE sono gli 8475-8482). Filtrando su id == 0 quelle
+    maschere risultavano senza etichette e non veniva coperto NIENTE, in
+    silenzio: il 23/09/2026 la ragione sociale del fornitore sarebbe finita nel
+    manuale in chiaro. Conta la classe, il testo e la riga, non il numero.
     """
     motivi = [_sigla(e) for e in (regole.get("etichette_sensibili") or [])]
     per_maschera = (regole.get("per_maschera") or {}).get(maschera_id) or {}
     motivi += [_sigla(e) for e in (per_maschera.get("aggiungi_etichette") or [])]
     esclusi = [_sigla(e) for e in (regole.get("etichette_escluse") or [])
                + (per_maschera.get("escludi_etichette") or [])]
+    # la soglia e' in pixel a 96 DPI: va portata alla scala della cattura,
+    # altrimenti su uno schermo scalato non esclude piu' niente
+    if scala is None:
+        scala = fattore_dpi()
     larghezza_minima = int(per_maschera.get("larghezza_minima",
-                                            regole.get("larghezza_minima", 70)))
+                                            regole.get("larghezza_minima", 70)) * scala)
 
     def sensibile(testo: str) -> bool:
         s = _sigla(testo)
@@ -179,7 +215,7 @@ def regioni_da_etichette(controlli, regole, maschera_id="") -> list:
     etichetta = None
     for c in controlli:
         testo = (c.get("testo") or "").strip()
-        if c["id"] == 0 and c["classe"] in CLASSI_ETICHETTA and testo:
+        if c["classe"] in CLASSI_ETICHETTA and testo:
             etichetta = c
             continue
         if c["classe"] not in CLASSI_CAMPO or not etichetta:
