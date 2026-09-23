@@ -63,7 +63,7 @@ Le schede sono queste:
 |---|---|
 | **Budget** | Le voci di budget previsto, con **Codice**, **Descrizione**, **Importo** e **Previsione**. La somma alimenta il **Budget Previsto** in testata. |
 | **Contratti** | I contratti che compongono la commessa: **Codice**, **Nome Contratto**, **Importo**, **Tipo Pag.** La somma degli importi è il **Valore** della commessa. |
-| **Subappaltatori** | I subappalti affidati: **Codice**, **Fornitore**, **Importo**, **Data Contratto**, **Num. Contratto**, **Data Ord.**, **Num.- Ord.**, **Attività**. |
+| **Subappaltatori** | I subappalti affidati: **Codice**, **Fornitore**, **Importo**, **Data Contratto**, **Num. Contratto**, **Data Ord.**, **Num.- Ord.**, **Attività**. Si inseriscono e si correggono dalla finestra [Subappaltatore](subappaltatore.md). |
 | **Milestone/SAL** | Gli avanzamenti da fatturare, per contratto: **Codice**, **N. SAL**, **Descrizione SAL**, **Importo Fat.**, **Importo Iva**, **Importo Rit.**, **Tot. Fattura**, **Fatture**, **Data Fattura**. |
 | **Costi - Analitica** | Le registrazioni di prima nota di costo attribuite alla commessa. |
 | **Ricavi - Analitica** | Le registrazioni di prima nota di ricavo attribuite alla commessa. |
@@ -415,6 +415,7 @@ Valgono inoltre:
 
 ## Vedi anche
 
+- [Subappaltatore](subappaltatore.md)
 - [Centri di costo/ricavo](centri-di-costo.md)
 - [Causali contabili](causali-contabili.md)
 - [Anagrafica clienti](../anagrafiche/anagrafica-clienti.md)

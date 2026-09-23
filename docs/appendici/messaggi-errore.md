@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-22 — **873 messaggi**.
+Aggiornato al 2026-09-23 — **874 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -537,6 +537,7 @@ Aggiornato al 2026-09-22 — **873 messaggi**.
 | *Indicare la data di inizio di applicazione del regime Iva per Cassa. …* | [Ditte](../moduli/anagrafiche/ditte.md) | È stata attivata l'IVA per cassa senza indicare la decorrenza. | Indica la data. |
 | *Indicare solo uno tra articolo regalo e paniere articoli!* | [Promozioni](../moduli/vendite/promozioni.md) | Su un'offerta a regalo sono stati indicati sia l'articolo omaggio sia il paniere. | Lascia uno solo dei due. |
 | *Indirizzo email del mittente non impostato!* / *Impossibile procedere* | [Gestione compleanni](../moduli/anagrafiche/gestione-compleanni.md), [Mailing list](../moduli/anagrafiche/mailing-list.md) | Manca l'indirizzo da cui inviare. | Impostalo nei dati dell'[utente](../moduli/anagrafiche/utenti.md) o della [ditta](../moduli/anagrafiche/ditte.md) e riprova. |
+| *\*\*\* INESISTENTE \*\*\** al posto della ragione sociale | [Subappaltatore](../moduli/contabilita/subappaltatore.md) | Il codice fornitore digitato non è in archivio. Il programma emette anche un segnale acustico. | Controlla il codice, oppure apri l'elenco con un doppio clic sul campo e scegli il fornitore. |
 | *In modalita' RT non e' possibile fare vendite e resi nello stesso scontrino!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra, con il registratore telematico. | Come sopra. |
 | *Inserire il codice del cliente !* / *E' necessario selezionare un cliente!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | L'operazione richiede un cliente intestatario. | Va scelto. |
 | *I Pezzi per Confezione sono Nulli!<br>Impossibile Continuare!* | [Etichette codici a barre](../moduli/utility/etichette-barcode.md) | Manca il numero di pezzi per confezione sull'articolo. | Compilalo in [anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md). |
