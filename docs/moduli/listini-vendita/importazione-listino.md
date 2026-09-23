@@ -1,6 +1,6 @@
 ---
 title: Importazione listino
-description: Le nove importazioni di listino dai tracciati dei fornitori: Angaisa, Ariete, Biondan, Fenapro, Flex, Monthblanc, Renault e i due formati Tabacchi.
+description: "Le nove importazioni di listino dai tracciati dei fornitori: Angaisa, Ariete, Biondan, Fenapro, Flex, Monthblanc, Renault e i due formati Tabacchi."
 modulo: Archivi ▸ Listini Vendita
 maschera_id: IDD_ART_ANGAISA
 ---

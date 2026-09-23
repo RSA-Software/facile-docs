@@ -1,6 +1,6 @@
 ---
 title: Variante e Claim
-description: La finestra con cui si registra una variante concordata o un claim su una commessa: data, descrizione, variazione di importo e di giorni.
+description: "La finestra con cui si registra una variante concordata o un claim su una commessa: data, descrizione, variazione di importo e di giorni."
 modulo: Contabilità
 maschera_id: IDD_TCN_VARIANTE
 ---

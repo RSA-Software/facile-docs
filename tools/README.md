@@ -43,6 +43,22 @@ Raccoglie i marcatori `DA VERIFICARE` sparsi nelle schede e rigenera
 .venv/Scripts/python.exe tools/domande-aperte.py
 ```
 
+## `controlla-intestazioni.py`
+
+Verifica che il blocco fra i due `---` in cima a ogni scheda sia YAML valido.
+Non e' un vezzo: MkDocs da li' ricava il titolo della pagina e la descrizione
+per i motori di ricerca, e se il blocco non si legge **non da' errore** — lo
+stampa come testo in cima alla pagina, dove lo vede il lettore. Nemmeno
+`mkdocs build --strict` se ne accorge.
+
+La causa e' quasi sempre un **due punti seguito da spazio** dentro al valore,
+che in YAML apre una mappa; il rimedio e' racchiudere il valore fra
+virgolette. Il 23/09/2026 il difetto era su venti schede.
+
+```
+.venv/Scripts/python.exe tools/controlla-intestazioni.py
+```
+
 ## `segnaposto-schermata.ps1`
 
 Disegna il segnaposto di una schermata, nello stile delle altre. Ogni scheda

@@ -1,6 +1,6 @@
 ---
 title: Subappaltatore
-description: La finestra con cui si registra un subappalto su una commessa: fornitore, importo, contratto, ordine e attività affidata.
+description: "La finestra con cui si registra un subappalto su una commessa: fornitore, importo, contratto, ordine e attività affidata."
 modulo: Contabilità
 maschera_id: IDD_TCN_SUBAPPALTATORE
 ---

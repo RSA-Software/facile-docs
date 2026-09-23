@@ -1,6 +1,6 @@
 ---
 title: Causali contabili
-description: Le causali contabili di Facile: registro fiscale, trattamento IVA, contabilità analitica e schema di registrazione.
+description: "Le causali contabili di Facile: registro fiscale, trattamento IVA, contabilità analitica e schema di registrazione."
 modulo: Archivi ▸ Contabilità
 maschera_id: IDD_TCN_CAUCONT
 ---

@@ -1,6 +1,6 @@
 ---
 title: Rubrica
-description: La rubrica dei contatti di Facile: nominativi, recapiti telefonici e indirizzi di posta.
+description: "La rubrica dei contatti di Facile: nominativi, recapiti telefonici e indirizzi di posta."
 modulo: Archivi
 maschera_id: IDD_TBC_RUBRICA
 ---

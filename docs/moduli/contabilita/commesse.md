@@ -1,6 +1,6 @@
 ---
 title: Commesse di contabilità analitica
-description: Le commesse di Facile: valore, budget, contratti, avanzamenti e costi, con il piano di fatturazione e il monitoraggio in Excel.
+description: "Le commesse di Facile: valore, budget, contratti, avanzamenti e costi, con il piano di fatturazione e il monitoraggio in Excel."
 modulo: Archivi
 maschera_id: IDD_TCN_COMMESSE
 ---

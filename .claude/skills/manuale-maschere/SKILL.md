@@ -100,6 +100,11 @@ Prima di considerare finito il lavoro:
 
 - `mkdocs build --strict` non deve segnalare errori (link interni rotti,
   pagine fuori dal `nav`);
+- `tools/controlla-intestazioni.py` non deve segnalare niente: se il front
+  matter non è YAML valido — e basta un «due punti seguito da spazio» dentro
+  la `description` — MkDocs lo stampa come testo in cima alla pagina senza
+  dare errore, e nemmeno `--strict` se ne accorge. I valori che contengono i
+  due punti vanno fra virgolette;
 - ogni link `Vedi anche` punta a un file esistente;
 - il front matter ha `title`, `description`, `modulo`, `maschera_id`
   valorizzati; la `description` è una frase di senso compiuto, perché è quella

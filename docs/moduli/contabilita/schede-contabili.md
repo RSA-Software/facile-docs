@@ -1,6 +1,6 @@
 ---
 title: Scheda cliente, fornitore e conto
-description: La consultazione a video della scheda contabile: tutte le registrazioni di un conto in un periodo, con dare, avere e saldo progressivo.
+description: "La consultazione a video della scheda contabile: tutte le registrazioni di un conto in un periodo, con dare, avere e saldo progressivo."
 modulo: Contabilità
 maschera_id: IDD_CON_SCHEDA_CONTO
 ---

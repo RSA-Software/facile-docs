@@ -1,6 +1,6 @@
 ---
 title: Office
-description: Il ramo di menu per chi vende e assiste software: licenze, canoni di assistenza, fatturazione mensile e crediti per la fattura elettronica.
+description: "Il ramo di menu per chi vende e assiste software: licenze, canoni di assistenza, fatturazione mensile e crediti per la fattura elettronica."
 modulo: Office
 maschera_id: IDD_OFF_LICENZE
 ---

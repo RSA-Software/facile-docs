@@ -1,6 +1,6 @@
 ---
 title: Gruppi taglie
-description: I gruppi di taglie di Facile: fino a cinquanta taglie per gruppo, con sigla, riferimento e nome per il sito.
+description: "I gruppi di taglie di Facile: fino a cinquanta taglie per gruppo, con sigla, riferimento e nome per il sito."
 modulo: Archivi ▸ Magazzino
 maschera_id: IDD_TBM_TAGLIE
 ---

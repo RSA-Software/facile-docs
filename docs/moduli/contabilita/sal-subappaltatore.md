@@ -1,6 +1,6 @@
 ---
 title: SAL Subappaltatore
-description: Gli stati avanzamento lavori di un subappalto: quanto è stato eseguito, con quali fatture del fornitore, e a che punto è la verifica.
+description: "Gli stati avanzamento lavori di un subappalto: quanto è stato eseguito, con quali fatture del fornitore, e a che punto è la verifica."
 modulo: Contabilità
 maschera_id: IDD_TCN_SUB_SAL_GEST
 ---

@@ -1,6 +1,6 @@
 ---
 title: Ortofrutta
-description: Il ramo di menu della versione per il commercio all'ingrosso di ortofrutta: partite in conto deposito, chiusura della vendita, imballaggi e resa al produttore.
+description: "Il ramo di menu della versione per il commercio all'ingrosso di ortofrutta: partite in conto deposito, chiusura della vendita, imballaggi e resa al produttore."
 modulo: Ortofrutta
 maschera_id: nessuna dialog propria
 ---

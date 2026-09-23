@@ -1,6 +1,6 @@
 ---
 title: Procedure Personali
-description: Il ramo di menu della versione per lo studio professionale: crediti verso i clienti, incassi, titoli, sospesi e analisi.
+description: "Il ramo di menu della versione per lo studio professionale: crediti verso i clienti, incassi, titoli, sospesi e analisi."
 modulo: Procedure Personali
 maschera_id: nessuna dialog propria
 ---

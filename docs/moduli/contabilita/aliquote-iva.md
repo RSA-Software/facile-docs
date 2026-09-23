@@ -1,6 +1,6 @@
 ---
 title: Aliquote IVA
-description: La tabella delle aliquote IVA di Facile: tipo di operazione, natura per la fattura elettronica, percentuali e progressivi mensili.
+description: "La tabella delle aliquote IVA di Facile: tipo di operazione, natura per la fattura elettronica, percentuali e progressivi mensili."
 modulo: Archivi
 maschera_id: IDD_TBC_CODIVA
 ---

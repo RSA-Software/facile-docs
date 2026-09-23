@@ -1,6 +1,6 @@
 ---
 title: Sottoconti
-description: Il terzo livello del piano dei conti di Facile: è su questo che le registrazioni di prima nota si appoggiano.
+description: "Il terzo livello del piano dei conti di Facile: è su questo che le registrazioni di prima nota si appoggiano."
 modulo: Archivi ▸ Contabilità
 maschera_id: IDD_TCN_SOTTOCON
 ---

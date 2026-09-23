@@ -1,6 +1,6 @@
 ---
 title: Anagrafica articoli
-description: Inserimento e gestione degli articoli di magazzino in Facile: codici, listini, giacenze, barcode e dati per la vendita.
+description: "Inserimento e gestione degli articoli di magazzino in Facile: codici, listini, giacenze, barcode e dati per la vendita."
 modulo: Archivi
 maschera_id: IDD_ART_ARTICOLI
 ---

@@ -1,6 +1,6 @@
 ---
 title: Contratto di commessa
-description: La finestra con cui si registra un contratto della commessa: nome, importo, tipo di pagamento a milestone o a SAL, e termini.
+description: "La finestra con cui si registra un contratto della commessa: nome, importo, tipo di pagamento a milestone o a SAL, e termini."
 modulo: Contabilità
 maschera_id: IDD_TCN_CONTRATTO
 ---

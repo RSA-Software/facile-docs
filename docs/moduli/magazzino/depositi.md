@@ -1,6 +1,6 @@
 ---
 title: Depositi
-description: Definizione dei depositi di magazzino di Facile: codice, registro documenti e visibilità su inventario, magazzino e web.
+description: "Definizione dei depositi di magazzino di Facile: codice, registro documenti e visibilità su inventario, magazzino e web."
 modulo: Archivi ▸ Magazzino
 maschera_id: IDD_TBM_DEPOSITI
 ---

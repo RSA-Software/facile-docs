@@ -1,6 +1,6 @@
 ---
 title: Causali magazzino
-description: Definizione delle causali di magazzino di Facile: come ogni movimento aggiorna esistenze, quantità e valori.
+description: "Definizione delle causali di magazzino di Facile: come ogni movimento aggiorna esistenze, quantità e valori."
 modulo: Archivi ▸ Magazzino
 maschera_id: IDD_TBM_CAUMAGA
 ---

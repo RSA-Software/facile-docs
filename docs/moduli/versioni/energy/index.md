@@ -1,6 +1,6 @@
 ---
 title: Energy
-description: Il ramo di menu della versione per i depositi di prodotti energetici: registro telematico, flussi all'Agenzia delle Dogane, accise, ravvedimenti e tabelle ministeriali.
+description: "Il ramo di menu della versione per i depositi di prodotti energetici: registro telematico, flussi all'Agenzia delle Dogane, accise, ravvedimenti e tabelle ministeriali."
 modulo: Energy
 maschera_id: nessuna dialog propria
 ---

@@ -1,6 +1,6 @@
 ---
 title: Tipi di pagamento
-description: Definizione dei tipi di pagamento di Facile: rate, scadenze, mesi esclusi, spese di rivalsa e tratta IVA.
+description: "Definizione dei tipi di pagamento di Facile: rate, scadenze, mesi esclusi, spese di rivalsa e tratta IVA."
 modulo: Archivi
 maschera_id: IDD_TBC_PAGAMENTI
 ---
