@@ -148,6 +148,25 @@ def _sigla(testo: str) -> str:
     return re.sub(r"[^a-z0-9*]", "", testo.lower())
 
 
+def _aggancia(sigla: str, motivo: str) -> bool:
+    """I motivi dicono CHE COSA contiene il campo, non come comincia la sua
+    etichetta.
+
+    fnmatch ancora il confronto a entrambi i capi, quindi 'fornitore*' non
+    vedeva 'Descrizione Fornitore' ed 'email' non vedeva 'Contatto Email': due
+    colonne di ragioni sociali e un indirizzo di posta sarebbero finiti nel
+    manuale in chiaro (trovato il 23/09/2026 sulla finestra dei movimenti di
+    centro di costo). Un motivo che non comincia gia' con * viene percio'
+    cercato anche preceduto da altro; le eccezioni di etichette_escluse
+    restano ancorate, perche' allargarle toglierebbe protezione invece di
+    darne.
+    """
+    if fnmatch.fnmatch(sigla, motivo):
+        return True
+    nucleo = motivo.strip("*")
+    return bool(nucleo) and fnmatch.fnmatch(sigla, f"*{nucleo}*")
+
+
 def fattore_dpi() -> float:
     """Di quanto lo schermo e' scalato rispetto ai 96 DPI di riferimento.
 
@@ -209,7 +228,7 @@ def regioni_da_etichette(controlli, regole, maschera_id="", scala=None) -> list:
         s = _sigla(testo)
         if not s or any(fnmatch.fnmatch(s, m) for m in esclusi):
             return False
-        return any(fnmatch.fnmatch(s, m) for m in motivi)
+        return any(_aggancia(s, m) for m in motivi)
 
     regioni = []
     etichetta = None
@@ -445,7 +464,7 @@ def _colonne_da_ocr(immagine, rett, motivi) -> list:
             testo = pytesseract.image_to_string(cella, config="--psm 7").strip()
         except Exception:
             continue
-        if not any(fnmatch.fnmatch(_sigla(testo), m) for m in motivi):
+        if not any(_aggancia(_sigla(testo), m) for m in motivi):
             continue
         if basso > fondo:
             regioni.append((x + x0, y + fondo, x1 - x0, basso - fondo))

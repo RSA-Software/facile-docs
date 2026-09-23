@@ -96,6 +96,12 @@ titolo_separatori:
 
 # --- eccezioni per singola maschera ----------------------------------------
 per_maschera:
+  # La descrizione di una commessa e' il nome del lavoro, e quello del cliente
+  # si legge dentro; "Tecnico" e' una persona. Nessuna delle due e' sensibile
+  # come etichetta generica, quindi valgono solo qui.
+  IDD_TCN_COMMESSE:
+    aggiungi_etichette: ["descrizione", "tecnico", "contratto"]
+
   # IDD_CLI_COMPLEANNI:
   #   # colonne come frazioni della larghezza della griglia, da sinistra
   #   colonne: [[0.22, 0.52], [0.52, 0.62], [0.62, 0.86]]
