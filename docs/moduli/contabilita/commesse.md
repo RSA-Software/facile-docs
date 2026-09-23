@@ -67,7 +67,7 @@ Le schede sono queste:
 | **Milestone/SAL** | Gli avanzamenti da fatturare, per contratto: **Codice**, **N. SAL**, **Descrizione SAL**, **Importo Fat.**, **Importo Iva**, **Importo Rit.**, **Tot. Fattura**, **Fatture**, **Data Fattura**. |
 | **Costi - Analitica** | Le registrazioni di prima nota di costo attribuite alla commessa. |
 | **Ricavi - Analitica** | Le registrazioni di prima nota di ricavo attribuite alla commessa. |
-| **Ordini a Fornitore** | Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**, **Fornitore**, **Centro di Costo**, **Importo**, **Stato**. |
+| **Ordini a Fornitore** | Gli ordini emessi per la commessa: **Anno**, **Numero**, **Data**, **Fornitore**, **Centro di Costo**, **Importo**, **Stato**. In alto **Dal**, **Al** e **Centro di Costo** restringono l'elenco. |
 | **Carichi** | I carichi di merce sulla commessa, con deposito, documento di trasporto e fattura. |
 | **Costi - Centri di Costo** | I costi raggruppati per centro di costo: **Codice**, **Descrizione**, **Importo**. In alto **Data Doc. Dal** e **Data Doc. Al** restringono il periodo, **Totale Costi Diretti** somma quello che resta, e i pulsanti **Stampa** ed **Excel** portano fuori la stessa cosa. Doppio clic su una riga apre i movimenti che compongono quell'importo. |
 | **Varianti** | Le varianti concordate: **Codice**, **Data**, **Descrizione**, **Importo**, **Giorni**. |
@@ -367,6 +367,34 @@ Valgono inoltre:
         pratica tutte le registrazioni di commessa il centro di costo ce
         l'hanno. Non è un difetto: è la conferma che non è rimasto fuori
         niente.
+
+!!! info "I filtri di Ordini a Fornitore"
+
+    La scheda elenca tutti gli ordini emessi per la commessa. Quando sono
+    tanti, in alto ci sono tre filtri che lavorano insieme: **Dal**, **Al** e
+    **Centro di Costo**.
+
+    Le due date si applicano alla **data del documento** dell'ordine, quella
+    che la griglia mostra nella colonna **Data** e su cui l'elenco è già
+    ordinato. All'apertura coprono **dal primo all'ultimo ordine a fornitore
+    presenti in archivio**, non solo quelli di questa commessa: così passando
+    da una commessa all'altra il periodo resta quello che hai impostato e non
+    si riazzera sotto le mani.
+
+    La tendina **Centro di Costo** porta tutti i centri dell'anagrafica in
+    ordine alfabetico, con **TUTTI** come prima voce. Finché è su **TUTTI** il
+    centro di costo non entra nel filtro: scegliendone uno restano solo gli
+    ordini che vi sono attribuiti.
+
+    !!! warning "Gli ordini senza centro di costo escono dall'elenco"
+
+        Scegliendo un centro specifico spariscono anche gli ordini a cui **non
+        è stato attribuito alcun centro** — e non sono pochi: su un archivio
+        reale erano 79 su 482. Non è un difetto, ma se i conti non tornano è
+        la prima cosa da guardare: rimetti **TUTTI** e li ritrovi.
+
+    Il pulsante **Stampa** non è toccato dai filtri: stampa l'ordine della riga
+    selezionata, non l'elenco.
 
 !!! tip "Excel, su Costi - Centri di Costo"
 
