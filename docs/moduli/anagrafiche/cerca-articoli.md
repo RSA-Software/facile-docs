@@ -154,7 +154,7 @@ le righe.
 |---|---|---|
 | **F2 - OK** | ++f2++, ++enter++ o doppio clic sulla riga | Sceglie l'articolo della riga evidenziata. Aperto da **Archivi ▸ Articoli ▸ Modifica** o dall'[anagrafica](anagrafica-articoli.md), carica l'articolo nell'anagrafica; aperto da un campo, riporta lì il codice. |
 | **F3 - Nuovo** | ++f3++ | Apre l'[anagrafica articoli](anagrafica-articoli.md) per inserire un articolo nuovo. Quando la chiudi, l'elenco si riposiziona sull'ultimo articolo inserito. Compare solo a chi ha il permesso **Archivi ▸ Articoli ▸ Inserimento**, e mai quando l'elenco mostra gli articoli cancellati. |
-| **F4 - Modifica** | ++f4++ | Apre la scheda dell'articolo evidenziato per modificarlo, senza chiudere l'elenco. Quando la chiudi, l'elenco si riposiziona sull'articolo e i campi di ricerca si svuotano; sugli archivi PostgreSQL torna anche in ordine di descrizione. Compare solo a chi ha il permesso **Archivi ▸ Articoli ▸ Modifica**. |
+| **F4 - Modifica** | ++f4++ | Apre la scheda dell'articolo evidenziato per modificarlo, senza chiudere l'elenco. Quando la chiudi, l'elenco si riposiziona sull'articolo e i campi di ricerca si svuotano. Sugli archivi PostgreSQL l'elenco resta in ordine di codice se lo era, altrimenti torna in ordine di descrizione. Compare solo a chi ha il permesso **Archivi ▸ Articoli ▸ Modifica**. |
 | **F5 - Vendite** | ++f5++ | Apre *Ultime Vendite Art.*: le ultime vendite dell'articolo evidenziato. Pulsante e tasto ci sono solo per chi ha il permesso **Vendite ▸ Vendita** o **Vendite ▸ Pos Touchscreen**. |
 | **F6 - Acquisti** | ++f6++ | Apre *Ultimi Acquisti Art.*: gli ultimi acquisti dell'articolo evidenziato. Pulsante e tasto ci sono solo per chi ha il permesso **Magazzino ▸ Nuovo Carico Merci** o **Modifica Carico Merci**; per gli utenti a cui i costi sono preclusi il comando non fa nulla. |
 | **F7 - Foto** | ++f7++ | Apre la *Gestione immagini articoli* dell'articolo evidenziato. |
@@ -240,13 +240,12 @@ Le note di un articolo sono un documento Word, uno per articolo.
 
 ## Note
 
-L'ordine in cui l'elenco si apre lo decide, sugli archivi c-tree,
-l'impostazione **Preval. Ricerca Codice** dei [dati
-dell'azienda](ditte.md#scheda-parametri-magazzino): con `SI` in ordine di
-codice, con `NO` in ordine di descrizione. Sugli archivi PostgreSQL l'elenco
-parte in ordine di descrizione, e rispetta l'impostazione solo quando lo apri
-dalla **Vendita** al banco.
-<!-- DA VERIFICARE: su PostgreSQL l'elenco ignora Preval. Ricerca Codice e parte per descrizione (tranne che dalla Vendita al banco), mentre su c-tree la rispetta ovunque. È voluto? -->
+L'ordine in cui l'elenco si apre lo decide l'impostazione **Preval. Ricerca
+Codice** dei [dati dell'azienda](ditte.md#scheda-parametri-magazzino): con
+`SI` in ordine di codice, con `NO` in ordine di descrizione. Qualche maschera
+lo sceglie da sé: la **Vendita** al banco, per esempio, apre l'elenco in
+ordine di descrizione se nella riga hai già cominciato a scrivere la
+descrizione dell'articolo.
 
 ## Vedi anche
 
