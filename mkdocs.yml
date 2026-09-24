@@ -2,7 +2,7 @@ site_name: Manuale Facile
 site_description: Manuale utente del gestionale Facile — guida operativa maschera per maschera
 site_author: R.S.A. S.a.s. di Capizzi, Furnari & C.
 site_url: https://rsa-software.github.io/facile-docs/   # <-- sostituire con il dominio definitivo
-copyright: © R.S.A. S.a.s. — Tutti i diritti riservati
+copyright: © R.S.A. S.a.s. — Tutti i diritti riservati · Manuale aggiornato a Facile 2026 B08.00
 
 # ---------------------------------------------------------------------------
 # Repository (mostra il link "Modifica questa pagina" su ogni documento)
@@ -100,7 +100,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.keys       # rende i tasti come F2 in stile tastiera
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      check_paths: true   # un frammento mancante ferma la build invece di sparire
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -122,6 +123,7 @@ markdown_extensions:
 # ---------------------------------------------------------------------------
 nav:
   - Home: index.md
+  - Novità: novita/index.md
   - Guida introduttiva:
       - introduzione/index.md
       - Primo accesso: introduzione/primo-accesso.md

@@ -59,6 +59,26 @@ virgolette. Il 23/09/2026 il difetto era su venti schede.
 .venv/Scripts/python.exe tools/controlla-intestazioni.py
 ```
 
+## `versione-facile.py`
+
+Porta nel manuale la versione corrente del programma. La fonte e' una sola:
+le costanti `RELEASE_YEAR`, `RELEASE_DBVER` e `RELEASE_BUILD` di
+`RSAFacile\RSAFacileDB.h`, le stesse con cui Facile scrive «C/S 2026 B08.00»
+nella barra di stato.
+
+```
+.venv\Scripts\python.exe tools\versione-facile.py [percorso di RSAFacileDB.h]
+```
+
+Aggiorna `includes/versione-facile.md`, il riquadro che la home e la pagina
+Novità includono con `--8<--`, e la riga `copyright` di `mkdocs.yml`, che il
+tema stampa a piede di ogni pagina. Va lanciato a ogni cambio di versione; se
+non c'e' niente da cambiare lo dice e non tocca nulla.
+
+Le voci della pagina Novità invece si scrivono a mano, versione per versione,
+leggendo i commit di Facile: solo quello che cambia a video, niente modifiche
+interne, niente Hotel e RistoFacile, che hanno un manuale loro.
+
 ## `segnaposto-schermata.ps1`
 
 Disegna il segnaposto di una schermata, nello stile delle altre. Ogni scheda

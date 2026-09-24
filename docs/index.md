@@ -12,6 +12,10 @@ Il manuale è organizzato **una scheda per ogni maschera** del programma: per
 ciascuna trovi a cosa serve, il significato di ogni campo, i comandi
 disponibili e le procedure passo passo per le operazioni più frequenti.
 
+--8<-- "includes/versione-facile.md"
+
+Cosa è cambiato nelle ultime versioni lo trovi nelle [Novità](novita/index.md).
+
 ## Da dove iniziare
 
 <div class="grid cards" markdown>
