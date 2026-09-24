@@ -190,7 +190,7 @@ usare.
 | **Rimanenze Magazzino** | Le rimanenze. |
 | **Resi Polymer** | Resi nel circuito Polymer. |
 
-Infine le quattro scelte di comportamento:
+Infine le scelte di comportamento:
 
 | Campo | Descrizione | Valori ammessi |
 |---|---|---|
@@ -198,6 +198,7 @@ Infine le quattro scelte di comportamento:
 | **Prezzi Ivati** | Se i prezzi degli articoli si intendono IVA inclusa. | `NO`, `SI` |
 | **Scontrino Parlante Auto.** | Se lo scontrino parlante viene proposto da solo. | `NO`, `SI` |
 | **Conferma Dati** | Se il programma chiede conferma prima di salvare. | `NO`, `SI` |
+| **Preval. Ricerca Codice** | Se l'elenco [Cerca articoli](cerca-articoli.md) si apre in ordine di codice (`SI`) o di descrizione (`NO`), e da quale articolo parte **Archivi ▸ Articoli ▸ Modifica**. | `NO`, `SI` |
 
 {: .campi }
 

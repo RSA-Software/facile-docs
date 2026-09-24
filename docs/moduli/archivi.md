@@ -35,6 +35,8 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
       saldi ed elenco IVA.
 - [Articoli](anagrafiche/anagrafica-articoli.md) — classificazione, listini,
   scorte e codici a barre degli articoli di magazzino.
+    - [Cerca articoli](anagrafiche/cerca-articoli.md) — l'elenco da cui si
+      ritrova un articolo, con esistenza, disponibilità e prezzo.
     - [Manutenzione degli articoli](anagrafiche/manutenzione-articoli.md) —
       modifica da griglia, caricamento prezzi, duplica, cancellazione, panieri.
     - [Scorte, assortimento e ubicazioni](anagrafiche/scorte-e-assortimento.md)

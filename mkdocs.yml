@@ -144,6 +144,7 @@ nav:
           - Stampe fornitori: moduli/anagrafiche/stampe-fornitori.md
       - Articoli:
           - Inserimento e Modifica: moduli/anagrafiche/anagrafica-articoli.md
+          - Cerca articoli: moduli/anagrafiche/cerca-articoli.md
           - Modifica da Griglia: moduli/anagrafiche/modifica-da-griglia.md
           - Impostazione Dati Web: moduli/anagrafiche/impostazione-dati-web.md
           - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md

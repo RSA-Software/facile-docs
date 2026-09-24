@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-23 — **875 messaggi**.
+Aggiornato al 2026-09-24 — **878 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -229,6 +229,8 @@ Aggiornato al 2026-09-23 — **875 messaggi**.
 | *Conto Cassa Inesistente* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Il conto di cassa impostato non esiste nel [piano dei conti](../moduli/contabilita/conti.md). | Correggi il parametro o crea il sottoconto. |
 | *Conto Cassa non Impostato* / *Conto Banche non Impostato* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Mancano i conti nei parametri contabili. | Impostali prima di importare da Facile Mobile. |
 | *Controllare Totali RIBA!* / *Controllare Totali TRATTE!* / *Controllare Totali SPESE!* | [Ditte](../moduli/anagrafiche/ditte.md) | Gli scaglioni dei bolli non quadrano. | Rivedi gli importi nella scheda **Bolli - Spese**. |
+| *Corrispondenza Bancone/Plu non trovata !* | [Cerca articoli](../moduli/anagrafiche/cerca-articoli.md) | **Solo Megastore**, sugli archivi c-tree. Nessun articolo ha il bancone e il PLU scritti in **Banco - PLU**: l'elenco si è posizionato sul più vicino. | Controlla i due numeri. |
+| *Corrispondenza univoca non trovata !* | [Cerca articoli](../moduli/anagrafiche/cerca-articoli.md) | Solo sugli archivi c-tree. Nessun articolo ha esattamente il **Cod. Fornitore** scritto: l'elenco si è posizionato sul codice più vicino. | Controlla le righe vicine, oppure cerca con una parte del codice. |
 | *Creazione Archivi nuovo anno conclusa regolarmente !<br>Vuoi Riportare le Esistenze di Magazzino?* | [Esercizi, ditte e chiusure contabili](../moduli/utility/esercizi-e-chiusure.md) | Il nuovo esercizio è stato creato. | **Sì** riporta le esistenze, **No** parte da zero. |
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare la ricezione.* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Il credito sul servizio è finito. | Acquista il credito; il pulsante **Credito** mostra il residuo. |
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare l' invio.* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Come sopra, per l'invio. | Come sopra. |
@@ -741,6 +743,7 @@ Aggiornato al 2026-09-23 — **875 messaggi**.
 | *Non è stato selezionato nessun documento!* | [Emissione fatture da documenti](../moduli/vendite/emissione-fatture-da-documenti.md) | Nessuna riga è spuntata. | Spunta le righe, o usa **F3 - Seleziona Tutti**. |
 | *Non è stato trovato nessun record di vendita !* | [Esportazioni con maschera propria](../moduli/trasferimenti/esportazioni-specifiche.md) | Nella data indicata non c'è venduto. | Controlla la data. |
 | *Note non presenti! Le vuoi creare ?* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Hai aperto **F7 - Altri ▸ Note** su un cliente che non ne ha. | Rispondi **Sì** per aprire la nota vuota. |
+| *Note non presenti! Le vuoi creare?* | [Cerca articoli](../moduli/anagrafiche/cerca-articoli.md) | Hai premuto ++f9++ su un articolo che non ha ancora il documento delle note. | Rispondi **Sì** per crearlo dal modello, **No** per lasciar perdere. |
 | *Numero cassa non valido!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La postazione non ha un numero di cassa. | Come sopra. |
 | *Numero di telefono gia' presente in archivio! Cliente … Vuoi Continuare ?* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Il numero è già di un altro cliente, indicato nel messaggio. | Come sopra. |
 | *Obbligo Selezione Reparto!* / *Impostare reparto predefinito prima della conversione!* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Manca il [reparto](../moduli/magazzino/reparti.md) da assegnare agli articoli nuovi. | Scegli il reparto, o impostane uno predefinito nelle opzioni della ditta. |

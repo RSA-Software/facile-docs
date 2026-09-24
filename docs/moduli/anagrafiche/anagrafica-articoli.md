@@ -200,7 +200,7 @@ permette di vedere i dati di una sola sezione anziché di tutte.
 | **F2 - Salva** | ++f2++ | Registra l'articolo dopo i controlli. |
 | **F3 - Prec.** | ++f3++ | Passa all'articolo precedente nell'ordinamento in uso. |
 | **F4 - Succ.** | ++f4++ | Passa all'articolo successivo. |
-| **F5 - Cerca** | ++f5++ | Apre la finestra **Cerca Articoli**. |
+| **F5 - Cerca** | ++f5++ | Apre l'elenco [Cerca articoli](cerca-articoli.md), da cui scegliere l'articolo da caricare. |
 | **F6 - Elimina** | ++f6++ | Marca l'articolo come cancellato; su un articolo già marcato lo elimina definitivamente. |
 | **Ricarica** | | Rilegge l'articolo dall'archivio, abbandonando le modifiche non salvate. |
 | **Nuovo** | | Solo in inserimento: svuota la maschera per l'articolo successivo. |
@@ -247,13 +247,16 @@ Valgono inoltre in tutta la maschera:
 
 ### Ritrovare e modificare un articolo
 
-1. Apri **Menu ▸ Archivi ▸ Articoli ▸ Modifica**.
-2. Premi **F5 - Cerca**.
-3. Nella finestra **Cerca Articoli** digita quello che sai: **Codice**,
+1. Apri **Menu ▸ Archivi ▸ Articoli ▸ Modifica**: si apre prima l'elenco
+   [Cerca articoli](cerca-articoli.md).
+2. Scrivi quello che sai in uno dei campi di ricerca — **Codice**,
    **Descrizione**, **Cod. Fornitore**, **Fornitore**, **Cat. Merc.**,
-   **Stagione**, **Gruppo**, **Peso** o **Banco - PLU**.
-4. Scegli la riga e conferma: l'articolo viene caricato nella maschera.
-5. Correggi i dati e premi **F2 - Salva**.
+   **Stagione**, **Gruppo** — e premi ++enter++.
+3. Evidenzia la riga e premi **F2 - OK**: l'articolo viene caricato nella
+   maschera.
+4. Correggi i dati e premi **F2 - Salva**.
+
+Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 
 ### Scrivere la descrizione in un'altra lingua
 
@@ -367,6 +370,7 @@ Valgono inoltre in tutta la maschera:
 
 ## Vedi anche
 
+- [Cerca articoli](cerca-articoli.md)
 - [Anagrafica clienti](anagrafica-clienti.md)
 - [Anagrafica fornitori](anagrafica-fornitori.md)
 - [Documento di vendita](../vendite/documento-di-vendita.md)
