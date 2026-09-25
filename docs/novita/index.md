@@ -220,6 +220,11 @@ cartella `log`.
   PostgreSQL.
 - Cancellando un cliente mentre si scorre per numero di tessera non compare
   più un errore.
+- Passando da un archivio c-tree a PostgreSQL, i record scartati
+  dall'importazione di contratti e SAL delle commesse e degli abbinamenti con
+  Shopify non fanno più comparire un messaggio a video per ciascuno: come per
+  le altre tabelle, finiscono nel registro della tabella nella cartella `log`,
+  che resta solo se qualcosa è stato scartato.
 
 **Trasferimenti e altro**
 
