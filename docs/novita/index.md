@@ -136,6 +136,18 @@ cartella `log`.
   invece di lasciare il programma in attesa. Riaprendo le impostazioni, il
   terminale salvato risulta selezionato.
 - **Bilance Zenith**: il PLU può arrivare fino a 9999.
+- **[Promozioni](../moduli/vendite/promozioni.md)**: l'importazione da Excel
+  legge anche i file `.xlsx`. Un articolo ripetuto nel foglio, o presente con
+  due codici a barre diversi, non ferma più l'importazione: entra la prima
+  riga, le altre vengono scartate. Anche gli articoli non trovati non
+  interrompono più il lavoro con un messaggio per ciascuno. Alla fine un
+  riepilogo dice quante righe sono entrate, e l'elenco delle righe scartate,
+  con il motivo, si apre in un file di testo. Una percentuale scritta in una
+  cella con formato percentuale vale quella che si vede: `20%` è uno sconto
+  del venti per cento. Una riga senza offerta né sconto viene scartata:
+  prima, in un foglio con entrambe le colonne, l'articolo entrava con uno
+  sconto pari all'intero prezzo. Il manuale spiega come preparare il foglio e
+  mette a disposizione un modello.
 
 ### Correzioni
 

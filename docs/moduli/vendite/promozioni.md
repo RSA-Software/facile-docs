@@ -87,12 +87,32 @@ quelle della testata.
 ### Le righe della promozione
 
 Ogni riga della promozione si apre in una finestra propria, dove si stabilisce
-che cosa viene offerto e a quali condizioni.
+che cosa viene offerto e a quali condizioni. Il doppio clic su una riga della
+griglia la apre in modifica.
+
+![Modifica Promozione Articolo](../../assets/img/vendite/promozioni-riga.png)
+
+In alto l'articolo con il suo prezzo di listino. A sinistra la forma
+dell'offerta e, nel riquadro **Altri Dati**, limiti, frontalino e codice mix.
+A destra, nel riquadro **Soglie Effetti**, le dieci soglie: per ciascuna la
+quantità (**Soglia Q.tà**), l'importo (**Soglia Ammont.**) e l'effetto. Le
+intestazioni cambiano con il tipo di offerta:
+
+| Tipo Offerta | Colonna dell'effetto | Colonna accanto |
+|---|---|---|
+| `02 - Ammontare Articolo` | **Sconto €**: quanto si toglie dal prezzo | **Prezzo Netto**: il prezzo che resta |
+| `04 - Percentuale Articolo` | **Sconto %**: la percentuale | **Prezzo Netto**: il prezzo che resta |
+| `05 - MxN` | **Valore N**, con **Valore M** al posto di **Soglia Q.tà** | — |
+| `07 - Bollino` | **Bollini** | — |
+| gli altri | **Esito** | — |
+
+Nell'esempio l'articolo costa 11,90 a listino: con uno sconto di 0,90 il
+prezzo netto in promozione è 11,00.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Articolo** | ● | L'articolo in promozione. | codice |
-| **Listino** | | Il listino su cui la promozione agisce. | codice |
+| **Listino** | | Il prezzo dell'articolo nel listino della promozione. Non si modifica: è il punto di partenza su cui si calcola lo sconto. | importo, solo lettura |
 | **Tipo Offerta** | ● | La forma dell'offerta: sconto in valore o in percentuale, sul singolo articolo o sul subtotale, prendi M paghi N, regalo, bollino, coupon, fascia di prezzo, netto reparto, punti di pagamento e le varianti a più soglie. | 17 voci, da `01 - Ammontare Subtotale` a `23 - Regalo Articolo su Subtotale`: la numerazione salta dal 13 al 20 |
 | **Offerta Cumulativa** | | Come si comporta l'offerta quando l'articolo compare più volte nello scontrino. | `(Si) - Più Articoli Stessa Offerta`, `(No) - Articoli Autonomi`, `(Set) - Più Articoli Stessa Q.tà`, `(Pan) - Paniere` |
 | **Applicabilità** | | Quante volte l'offerta può scattare. | `Contingentata`, `Una Volta nello Scontrino`, `Sempre`, `In Continuo dopo la Soglia`, `n Volte Nello Scontrino` |
@@ -149,7 +169,7 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
     | Regalo al raggiungimento di una soglia | `06 - Regalo Articolo` | `(Set)` | `In Continuo dopo la Soglia` |
     | Sconto su un insieme di articoli diversi | `10` o `11` — gruppo articoli | `(Pan) - Paniere` | `Sempre` |
 
-    Le soglie in fondo alla finestra sono gli scaglioni: la prima è quella da
+    Le soglie del riquadro **Soglie Effetti** sono gli scaglioni: la prima è quella da
     cui l'offerta parte, le altre nove servono alle offerte **multisoglia**
     (tipi `20`, `21`, `22`). Vanno compilate in ordine crescente: una soglia
     non può essere minore o uguale alla precedente.
@@ -171,7 +191,7 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 | **F7 - Aggiungi** | ++f7++ | Aggiunge **una** riga. Apre un menu con due voci: *Promozione Standard*, che chiede l'articolo, e *Promozione con Filtro*, che al posto dell'articolo chiede marchio, reparto o categoria merceologica. |
 | **F9 - Dati** | ++f9++ | Aggiunge **molte** righe: apre la ricerca articoli, dove se ne selezionano quanti servono. Per il primo si compila la finestra della riga; se l'offerta è a percentuale o a regalo, il programma chiede se applicare la stessa condizione a tutti gli altri. |
 | **F8 - Stampa** | ++f8++ | Apre un menu con le stampe: elenco della promozione, frontalini, frontalini di fine promozione *(solo a promozione scaduta)*, promozione d'acquisto, e due formati di andamento. |
-| **Excel** | | **Importa** articoli da un foglio Excel. Non esporta. |
+| **Excel** | | **Importa** articoli da un foglio Excel, `.xlsx` o `.xls`. Non esporta. Le righe che non si possono importare vengono scartate senza fermare l'importazione: vedi [Il foglio Excel da importare](#il-foglio-excel-da-importare). |
 | **Lettori** | | **Importa** le letture fatte con un terminale portatile: EIA Thunder, BCP8000/ET8000, DENSO N661 o palmare Android. Non manda niente alle casse. |
 | **Duplica** | | Crea una copia completa della promozione — testata e righe, periodo compreso — con un codice nuovo, e ci si posiziona sopra. |
 | **Trova** | | Cerca un testo in **qualunque** colonna della griglia, anche parziale. Ripremendo **F2 - Trova** passa all'occorrenza successiva. |
@@ -206,6 +226,136 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 1. Apri l'[analisi listino](../listini-vendita/analisi-listino.md).
 2. Guarda **Margine Promo %** accanto a **Margine %**.
 
+### Importare gli articoli da un foglio Excel
+
+Quando gli articoli sono tanti, per esempio il listino promozionale mandato da
+un fornitore, conviene prepararli in un foglio Excel e caricarli in un colpo
+solo.
+
+1. Prepara il foglio come spiegato in
+   [Il foglio Excel da importare](#il-foglio-excel-da-importare). Puoi partire
+   dal [modello già impostato](../../assets/modelli/promozioni-importazione.xlsx).
+2. Chiudi il foglio in Excel: un file ancora aperto non si può leggere.
+3. Apri **Menu ▸ Vendite ▸ Promozioni ▸ Inserimento** oppure **Modifica** e
+   posizionati sulla promozione. Se è nuova, compila la testata e salvala con
+   **F2**: il pulsante **Excel** si accende solo dopo il primo salvataggio.
+4. Premi **Excel**. Alla domanda *Vuoi importare gli articoli in promozione da
+   un foglio Excel ?* rispondi **Sì**.
+5. Scegli il file, `.xlsx` o `.xls`. La ricerca parte dalla cartella `in`.
+6. Attendi la fine dell'importazione. La finestra di avanzamento mostra a che
+   punto è; **Esci** la interrompe, e le righe già importate restano.
+7. Leggi il riepilogo: *Righe importate* e *Righe scartate*. Se ci sono righe
+   scartate, si apre da solo il loro elenco, con il motivo di ciascuna.
+8. Correggi nel foglio le righe scartate e ripeti l'importazione. Le righe già
+   entrate la prima volta vengono scartate come già presenti, quindi entrano
+   solo quelle corrette.
+
+Gli articoli importati compaiono nella griglia della promozione, una riga per
+articolo, come quelli inseriti a mano.
+
+### Il foglio Excel da importare
+
+Il programma legge il **primo foglio** del file. La **prima riga** contiene
+le intestazioni delle colonne, dalla seconda in giù un articolo per riga.
+
+| CODICE | DESCRIZIONE | OFFERTA | SCONTO_PERC |
+|---|---|--:|--:|
+| 000123 | PASTA DI SEMOLA 500 G | 0,89 | |
+| 8001234567890 | OLIO EXTRAVERGINE 1 L | | 20% |
+| ART-45 | DETERSIVO PIATTI 750 ML | | 15% |
+
+Le colonne sono riconosciute dal **nome** scritto nell'intestazione, non dalla
+posizione: l'ordine non conta, e non conta se il nome è scritto in maiuscolo o
+in minuscolo.
+
+| Colonna | Obbl. | Contenuto |
+|---|:---:|---|
+| `CODICE` | ● | Il codice dell'articolo, uno dei suoi codici a barre o il codice che gli dà il fornitore. |
+| `OFFERTA` | ◐ | Il **prezzo promozionale** a cui vendere l'articolo. |
+| `SCONTO_PERC` | ◐ | La **percentuale di sconto** sul prezzo di listino. |
+| `DESCRIZIONE` | | Non viene registrata: serve a te per riconoscere l'articolo, e compare nell'elenco degli scarti. |
+
+◐ Fra `OFFERTA` e `SCONTO_PERC` deve esserci **almeno una** delle due colonne.
+Qualunque altra colonna viene ignorata, compresa un'eventuale `LISTINO`.
+
+**Come viene calcolata l'offerta.** Il punto di partenza è sempre il prezzo
+dell'articolo nel **listino della promozione**, quello indicato in testata.
+Riga per riga:
+
+- se la cella `OFFERTA` è compilata, la riga diventa di tipo
+  `02 - Ammontare Articolo` e lo sconto è la differenza fra prezzo di listino
+  e offerta. Per esempio, listino 11,90 e offerta 11,00 danno sconto 0,90:
+  nella griglia la colonna **Esito** mostra lo **sconto**, non il prezzo;
+- altrimenti, se la cella `SCONTO_PERC` è compilata, la riga diventa di tipo
+  `04 - Percentuale Articolo` con quella percentuale;
+- se sono vuote tutte e due, la riga viene scartata.
+
+Aprendo una riga importata con **OFFERTA** trovi in **Sconto €** lo sconto
+calcolato e in **Prezzo Netto** il prezzo che avevi scritto nel foglio; con
+**SCONTO_PERC** trovi la percentuale in **Sconto %**. Vedi
+[Le righe della promozione](#le-righe-della-promozione).
+
+Nello stesso foglio puoi mescolare righe a prezzo e righe a percentuale.
+Le righe importate hanno offerta cumulativa `(No) - Articoli Autonomi`,
+applicabilità **Sempre**, la prima soglia a un pezzo e il frontalino `GRANDE`.
+Periodo, giorni, deposito e listino vengono dalla testata, come per le righe
+inserite a mano. Per ritoccarne una, aprila dalla griglia.
+
+**Come scrivere i valori.**
+
+- **Codici con zeri iniziali**: la colonna `CODICE` va formattata come
+  **Testo** prima di scrivere i codici. Altrimenti Excel trasforma `000123` in
+  `123`, e l'articolo non viene trovato. Nel modello la colonna è già
+  impostata così.
+- **Codici a barre**: vanno bene anche come numeri. Excel li può mostrare
+  abbreviati, per esempio `8,00123E+12`, ma il valore resta intero.
+- **Percentuali**: una cella con il formato percentuale vale quello che vedi.
+  `20%` significa venti per cento, anche se Excel lo registra come `0,2`. In
+  una cella senza formato percentuale scrivi semplicemente `20`.
+- **Decimali**: sia la virgola sia il punto vanno bene.
+- **Righe vuote**: una riga senza codice viene saltata e non conta fra le
+  scartate.
+
+!!! warning "Un articolo, una riga"
+
+    Una promozione non può avere due righe sullo stesso articolo. Se il foglio
+    ripete un codice, o porta lo stesso articolo con due codici a barre
+    diversi, entra **solo la prima riga** e le altre vengono scartate. Lo
+    stesso vale per gli articoli che erano già nella promozione prima
+    dell'importazione: per cambiarne l'offerta si corregge la riga nella
+    griglia, non la si reimporta.
+
+### Leggere l'elenco delle righe scartate
+
+Una riga del foglio che non si può importare non ferma il lavoro: viene
+messa da parte e l'importazione passa alla successiva. Alla fine, se ce ne sono
+di scartate, il programma salva il loro elenco in un file di testo nella
+cartella `out` e lo apre. Il file si chiama `ScartiPromozione` seguito dal
+numero della promozione, per esempio `ScartiPromozione1.txt`, e viene
+sovrascritto a ogni importazione nella stessa promozione.
+
+![Elenco delle righe scartate](../../assets/img/vendite/promozioni-scarti.png)
+
+In testa trovi la promozione, il file importato, la data e l'ora e i due
+totali. Sotto, una riga per ogni scarto, con:
+
+- **Riga**: il numero di riga nel foglio Excel, quello che Excel mostra a
+  sinistra. La riga 1 è l'intestazione, quindi il primo articolo è la 2;
+- **Codice** e **Descrizione**: come sono scritti nel foglio;
+- **Motivo**: perché la riga non è entrata.
+
+| Motivo | Cosa significa | Cosa fare |
+|---|---|---|
+| *Articolo non trovato in archivio* | Il codice non corrisponde a nessun articolo, codice a barre o codice del fornitore. | Controlla il codice. Se ha perso gli zeri iniziali, formatta la colonna come testo e riscrivilo. Se l'articolo è nuovo, crealo nell'[anagrafica articoli](../anagrafiche/anagrafica-articoli.md) prima di reimportare. |
+| *Articolo … già importato dalla riga …* | Lo stesso articolo è già entrato con una riga precedente del foglio, anche con un codice diverso. | Nessuna azione, se è un doppione. Se le due righe avevano offerte diverse, decidi quale vale e correggi la riga nella griglia. |
+| *Articolo … già presente nella promozione* | L'articolo era nella promozione prima dell'importazione. | Se l'offerta va cambiata, correggila nella griglia. |
+| *Raggiunto il limite massimo di righe nella promozione* | La promozione è arrivata a 2.500 righe. | Metti gli articoli restanti in una seconda promozione. |
+| *Manca il valore in OFFERTA o in SCONTO_PERC* | Sulla riga sono vuote sia l'offerta sia lo sconto. | Compila una delle due celle e reimporta. |
+| altri messaggi | La riga non ha superato i controlli di salvataggio, gli stessi dell'inserimento a mano. | Il testo del motivo dice che cosa manca o non va. |
+
+Il file è testo semplice: si stampa o si salva dal programma che lo apre, di
+solito il Blocco note.
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
@@ -219,27 +369,16 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 | *Vuoi Cancellare tutte le righe della promozione ?* | Hai premuto **F6 - Elimina**. | **Sì** cancella testata e righe. La risposta preimpostata è **No**. |
 | *Confermi la duplicazione della promozione ?* | Hai premuto **Duplica**. | **Sì** crea subito la copia. La risposta preimpostata è **No**. |
 | *Vuoi applicare la stessa promozione a tutti gli articoli selezionati?* | Hai selezionato più articoli con **F9 - Dati** e la prima offerta è a percentuale o a regalo. | **Sì** ripete la stessa condizione su tutti senza più chiedere. La risposta preimpostata è **No**. |
-| *Colonna CODICE non trovata nel documento !* | Il foglio Excel da importare non ha l'intestazione `CODICE` sulla prima riga. | Correggi l'intestazione del foglio. |
+| *Vuoi importare gli articoli in promozione da un foglio Excel ?* | Hai premuto **Excel**. | **Sì** fa scegliere il file e avvia l'importazione. Vedi [Importare gli articoli da un foglio Excel](promozioni.md#importare-gli-articoli-da-un-foglio-excel). |
+| *Colonna CODICE non trovata nel documento !* | Il foglio Excel da importare non ha l'intestazione `CODICE` sulla prima riga del primo foglio. | Correggi l'intestazione: vedi [Il foglio Excel da importare](promozioni.md#il-foglio-excel-da-importare). |
 | *Colonna OFFERTA e/o SCONTO_PERC non trovata nel documento !* | Il foglio non ha né la colonna `OFFERTA` né `SCONTO_PERC`. | Ne serve almeno una delle due. |
-| *Formato file non compatibile!* | Il file scelto non è un foglio Excel. | Scegli un `.xls`. |
-| *File utilizzato da un' altra applicazione o formato file non compatibile!* | Il foglio è aperto in Excel. | Chiudilo e riprova. |
+| *Impossibile aprire il file excel!* — *Il file potrebbe essere in uso da un'altra applicazione o in un formato non compatibile.* | Il foglio è aperto in Excel, oppure il file scelto non è un foglio Excel. | Chiudi il foglio in Excel e riprova; se il problema resta, salvalo di nuovo da Excel come `.xlsx`. |
+| *Impossibile inizializzare il file excel!* | Il programma non riesce a preparare la lettura del foglio. | Riprova; se si ripete, chiama l'assistenza. |
+| *Il file excel non contiene fogli di lavoro!* | Il file non ha nessun foglio. | Scegli il file giusto. |
+| *Righe importate : …* — *Righe scartate : …* | Fine dell'importazione da Excel. Se ci sono righe scartate, il messaggio aggiunge *L'elenco delle righe scartate, con il motivo, è stato salvato nel file* e il nome del file, che si apre subito dopo. | Leggi l'elenco, correggi il foglio e reimporta: le righe già importate vengono scartate come già presenti, quindi entrano solo quelle corrette. |
+| *Importazione interrotta dall'utente alla riga … del foglio.* | Hai premuto **Esci** nella finestra di avanzamento durante l'importazione. | Le righe precedenti restano importate. Rilanciando l'importazione, verranno scartate come già presenti. |
+| *Impossibile salvare l'elenco delle righe scartate nel file …* | Il file dell'elenco non si può scrivere nella cartella `out`. | Il messaggio elenca lui stesso le prime venti righe scartate. Controlla che la cartella `out` sia accessibile. |
 | *Vuoi controllare gli orari di inizio e fine promozioni?* | Solo in assistenza: compare all'apertura della maschera. | È una manutenzione, non un'operazione di tutti i giorni: rimette dentro le 24 ore gli orari fuori scala. La risposta preimpostata è **No**. |
-
-### Il foglio Excel da importare
-
-Il file è un `.xls` e va cercato nella cartella `in`. L'intestazione sta sulla
-**prima riga** e i nomi delle colonne sono riconosciuti così:
-
-| Colonna | Obbl. | Contenuto |
-|---|:---:|---|
-| `CODICE` | ● | Il codice dell'articolo. |
-| `OFFERTA` |  | Il valore dell'offerta. |
-| `SCONTO_PERC` |  | La percentuale di sconto. |
-| `DESCRIZIONE` | | Ignorata nella scrittura: serve solo a rileggere il foglio. |
-| `LISTINO` | | Il prezzo di listino di partenza. |
-
-Fra `OFFERTA` e `SCONTO_PERC` **almeno una** deve esserci. L'ordine delle
-colonne non conta: contano i nomi.
 
 ## Note
 
