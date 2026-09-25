@@ -188,6 +188,15 @@ righe già elaborate, che vengono saltate.
     in una fattura, e usa la maschera della
     [duplicazione](esporta-duplica-documenti.md).
 
+!!! note "Chi scarica il magazzino"
+
+    Le fatture generate da DDT, bolle e buoni **non scaricano il magazzino**:
+    lo ha già fatto il documento di partenza. Quelle generate dagli ordini lo
+    scaricano, perché l'ordine non muove la merce. Per le pro forma decide la
+    [ditta](../anagrafiche/ditte.md): con **Abilita Movimentazione Fatture Pro
+    Forma** attivo lo scarico lo fa la pro forma e la fattura no; senza, lo fa
+    la fattura.
+
 ## Vedi anche
 
 - [Documento di vendita](documento-di-vendita.md)

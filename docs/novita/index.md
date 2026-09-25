@@ -162,6 +162,10 @@ cartella `log`.
   lavorazione o dal banco) e recuperando un ordine da file, le righe non
   ereditano più dall'ordine il segno «già movimentato»: il documento che ne
   nasce scarica il magazzino come deve.
+- [Fatturazione differita](../moduli/vendite/emissione-fatture-da-documenti.md)
+  delle pro forma (**Fatture Pro Forma ▸ Emissione Fatture**): se la ditta non
+  fa movimentare le pro forma, la fattura ora scarica il magazzino. Prima non
+  lo scaricava né la pro forma né la fattura.
 - [Duplica](../moduli/vendite/esporta-duplica-documenti.md): la copia scarica
   il magazzino anche quando l'originale non lo faceva, per esempio duplicando
   una fattura nata da un DDT. La fattura da pro forma resta com'era.
