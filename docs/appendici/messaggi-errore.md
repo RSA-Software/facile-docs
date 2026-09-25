@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-24 — **878 messaggi**.
+Aggiornato al 2026-09-25 — **879 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -40,6 +40,7 @@ Aggiornato al 2026-09-24 — **878 messaggi**.
 | *Attenzione!<br><br>La procedure cambiera' in modo irreversibile gli archivi.<br>Prima di continuare fare una copia di backup dei dati e<br>accertarsi che nessun altro utente abbia accesso al<br>programma.<br><br>Vuoi Continuare ?* | [Esercizi, ditte e chiusure contabili](../moduli/utility/esercizi-e-chiusure.md) | Conferma richiesta da **Nuovo Esercizio**. | Fai davvero la copia e manda fuori tutti prima di rispondere **Sì**. La risposta preimpostata è **No**. |
 | *Attenzione!<br><br>Non e' stato impostato il listino di vendita.<br>Saranno riportati per la vendita i prezzi<br>di acquisto.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La [ditta](../moduli/anagrafiche/ditte.md) non ha un listino di vendita. | Impostalo: altrimenti si vende al prezzo di acquisto. Il messaggio compare all'apertura della schermata. |
 | *Attenzione!<br><br>Non e' stato impostato il listino di vendita per i trasfert.<br>Saranno riportati per la vendita i prezzi<br>di acquisto.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra, per le vendite in trasferta. | Impostalo nella ditta. |
+| *Attenzione!<br><br>Su una riga il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>La riga scarichera' il magazzino.* / *Attenzione!<br><br>Su … righe il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>Le righe scaricheranno il magazzino.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Premendo **F4 - Documenti**, il programma controlla il segno che dice se una riga ha già scaricato il magazzino. Quel segno può essere solo acceso o spento: qui aveva un valore diverso, e il programma lo ha spento. | Niente: le righe scaricheranno il magazzino come quelle battute a mano, che è il comportamento normale. Il messaggio non dovrebbe comparire: se lo vedi, segnalalo all'assistenza. |
 | *Attenzione!<br>Ci sono righe con prezzi pari a zero dovuti al cambio del listino applicato.<br>Controllare prima di emettere lo scontrino.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Cambiando listino, alcune righe sono rimaste senza prezzo. | Vanno controllate una per una prima di chiudere. |
 | *Attenzione!<br>Cliente con aliquota iva preimpostata.<br>Saranno ricalcolati i prezzi di vendita.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il cliente ha un'aliquota fissa. | I prezzi vengono rifatti su quell'aliquota. |
 | *Attenzione !<br>E' stato superato il Fido concesso al Cliente.<br>Vuoi Continuare ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La vendita porta il cliente oltre il fido. | **Sì** prosegue lo stesso. |

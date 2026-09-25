@@ -254,6 +254,12 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
     magazzino più pieno di quello che è, e l'errore si scopre solo
     all'inventario.
 
+### Quando si emette un documento
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Attenzione!<br><br>Su una riga il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>La riga scarichera' il magazzino.* / *Attenzione!<br><br>Su … righe il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>Le righe scaricheranno il magazzino.* | Premendo **F4 - Documenti**, il programma controlla il segno che dice se una riga ha già scaricato il magazzino. Quel segno può essere solo acceso o spento: qui aveva un valore diverso, e il programma lo ha spento. | Niente: le righe scaricheranno il magazzino come quelle battute a mano, che è il comportamento normale. Il messaggio non dovrebbe comparire: se lo vedi, segnalalo all'assistenza. |
+
 ### Quando la cassa o la bilancia non rispondono
 
 | Messaggio | Causa | Cosa fare |

@@ -153,6 +153,11 @@ cartella `log`.
 
 **Vendite e magazzino**
 
+- [Vendita al banco](../moduli/vendite/vendita-al-banco.md): lavorando con il
+  secondo cliente o con uno dei successivi, i documenti emessi con **F4 -
+  Documenti** potevano avere righe che non scaricavano il magazzino. Il difetto
+  era comparso nella B07. Ora, se il segno di una riga ha un valore non valido,
+  il programma lo azzera e lo dice.
 - Sugli archivi c-tree il salvataggio degli scontrini non viene più
   rifiutato.
 - **Valorizza Doc. Trasfert e Concessionario**: il costo medio del mese entra
