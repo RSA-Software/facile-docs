@@ -204,6 +204,15 @@ documento di partenza.
     che cambia è il numero, il registro e la data; il resto arriva identico e si
     corregge dopo.
 
+!!! note "La copia scarica sempre il magazzino"
+
+    Alcune righe non scaricano il magazzino perché lo ha già fatto un altro
+    documento: per esempio le righe di una fattura nata da un DDT, o da uno
+    scontrino. La copia quell'altro documento non ce l'ha, quindi le sue righe
+    **scaricano il magazzino** come quelle battute a mano. Fa eccezione la
+    **fattura da pro forma**, che non è una copia ma prende il posto della pro
+    forma: le sue righe si comportano come quelle della pro forma.
+
 !!! note "«Riezione D.D.T. da Palmare» è scritto così davvero"
 
     Il refuso è nella voce di menu del programma, in tutte le versioni: si legge

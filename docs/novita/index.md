@@ -158,6 +158,16 @@ cartella `log`.
   Documenti** potevano avere righe che non scaricavano il magazzino. Il difetto
   era comparso nella B07. Ora, se il segno di una riga ha un valore non valido,
   il programma lo azzera e lo dice.
+- Evadendo un ordine (dalla fatturazione degli ordini, dagli ordini in
+  lavorazione o dal banco) e recuperando un ordine da file, le righe non
+  ereditano più dall'ordine il segno «già movimentato»: il documento che ne
+  nasce scarica il magazzino come deve.
+- [Duplica](../moduli/vendite/esporta-duplica-documenti.md): la copia scarica
+  il magazzino anche quando l'originale non lo faceva, per esempio duplicando
+  una fattura nata da un DDT. La fattura da pro forma resta com'era.
+- [Vendita al banco](../moduli/vendite/vendita-al-banco.md): le righe prese da
+  un DDT conto vendita si possono emettere solo in fattura, fattura
+  accompagnatoria, ricevuta fiscale o pro forma.
 - Sugli archivi c-tree il salvataggio degli scontrini non viene più
   rifiutato.
 - **Valorizza Doc. Trasfert e Concessionario**: il costo medio del mese entra

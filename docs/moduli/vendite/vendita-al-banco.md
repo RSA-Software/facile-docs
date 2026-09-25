@@ -154,6 +154,13 @@ Sul **Pos Touchscreen** lo stesso si fa con il tasto **Cliente**.
 4. Il documento nasce già con le righe del banco e si completa come un
    [documento di vendita](documento-di-vendita.md) qualsiasi.
 
+!!! note "Le righe del conto vendita vanno solo in fattura"
+
+    Le righe prese da un **DDT conto vendita** non scaricano il magazzino, perché
+    la merce è uscita con il DDT. Per questo si possono emettere solo in
+    fattura, fattura accompagnatoria, ricevuta fiscale o pro forma: scegliendo
+    un altro documento il programma si ferma e lo dice.
+
 ## Controlli e messaggi
 
 Sono molti, e quasi tutti si capiscono meglio sapendo **in che momento**
@@ -259,6 +266,7 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Attenzione!<br><br>Su una riga il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>La riga scarichera' il magazzino.* / *Attenzione!<br><br>Su … righe il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>Le righe scaricheranno il magazzino.* | Premendo **F4 - Documenti**, il programma controlla il segno che dice se una riga ha già scaricato il magazzino. Quel segno può essere solo acceso o spento: qui aveva un valore diverso, e il programma lo ha spento. | Niente: le righe scaricheranno il magazzino come quelle battute a mano, che è il comportamento normale. Il messaggio non dovrebbe comparire: se lo vedi, segnalalo all'assistenza. |
+| *Attenzione!<br><br>Sul banco ci sono righe prese da un DDT conto vendita.<br>Si possono emettere solo in fattura, fattura accompagnatoria, ricevuta fiscale o pro forma.* | Con **F4 - Documenti** si è scelto un DDT, una bolla, un buono di consegna, un ordine o un preventivo, ma sul banco ci sono righe prese con **F6 - Dati ▸ DDT Conto Vendita**. Quella merce è già uscita con il DDT. | Premi di nuovo **F4** e scegli la fattura: le righe sono ancora sul banco. |
 
 ### Quando la cassa o la bilancia non rispondono
 
