@@ -166,6 +166,11 @@ cartella `log`.
   delle pro forma (**Fatture Pro Forma ▸ Emissione Fatture**): se la ditta non
   fa movimentare le pro forma, la fattura ora scarica il magazzino. Prima non
   lo scaricava né la pro forma né la fattura.
+- [Fatturazione differita](../moduli/vendite/emissione-fatture-da-documenti.md)
+  con il raggruppamento per articoli: due righe dello stesso articolo restano
+  separate se una scarica il magazzino e l'altra no (per esempio una presa da
+  un DDT conto vendita e una battuta a mano). Prima si fondevano, e la
+  quantità dell'una scaricava il magazzino come l'altra.
 - [Duplica](../moduli/vendite/esporta-duplica-documenti.md): la copia scarica
   il magazzino anche quando l'originale non lo faceva, per esempio duplicando
   una fattura nata da un DDT. La fattura da pro forma resta com'era.
