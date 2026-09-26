@@ -94,6 +94,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      permalink_title: Collegamento a questa sezione
       title: In questa pagina
   - pymdownx.details    # blocchi richiudibili
   - pymdownx.superfences
