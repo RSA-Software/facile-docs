@@ -63,8 +63,6 @@ cui sei entrato.
 | **Garanzia** | | La garanzia offerta. | testo, 130 caratteri |
 | **Note** | | Le note libere che compaiono sul preventivo. | testo, 130 caratteri |
 
-{: .campi }
-
 I sei campi di testo sono liberi e **partono vuoti**: il programma non propone
 niente, non c'è una tabella di frasi da cui pescare e la ditta non ha un testo
 predefinito. Vanno riscritti ogni volta — o, più comodamente, si duplica un
@@ -80,8 +78,6 @@ preventivo che li ha già (vedi *Come si fa*).
 | **Gruppo** | | Sigla libera per raggruppare i preventivi. | testo |
 | **Agente** | | L'[agente](../anagrafiche/anagrafica-agenti.md) che segue l'offerta. | codice |
 | **Registro** | | Il registro di numerazione. Sparisce se la ditta è impostata a registro unico. | da `A` a `Z` |
-
-{: .campi }
 
 ### Documento
 
@@ -99,8 +95,6 @@ preventivo che li ha già (vedi *Come si fa*).
 | **Tipo Offerta** | | Che genere di offerta è. | `VENDITA`, `RIPARAZIONE`, `MANUTENZIONE`, `INSTALLAZIONE` |
 | **Esito** | | Com'è andata. **Si mette a mano**: il programma non lo aggiorna mai da sé. | `APERTO`, `NEGATIVO`, `POSITIVO` |
 | **Totale Documento** | | Il totale. Lo calcola il programma e compare solo dopo la prima stampa. | Sola lettura |
-
-{: .campi }
 
 Le righe della merce si compilano come nel
 [documento di vendita](documento-di-vendita.md).

@@ -57,16 +57,12 @@ descrizione.
 | **Codice Zona** | | Solo gli agenti di quella [zona](zone.md). | codice |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `ALFABETICO` |
 
-{: .campi }
-
 ### Stampa Giro Agente ed Etichette Giri Agenti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Agente** | ● | Di quale agente stampare il giro; a fianco compare il nome. | codice |
 | **Giro** | ● | Quale giro stampare; a fianco compare la descrizione. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

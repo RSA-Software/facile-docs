@@ -57,8 +57,6 @@ documento, e a che titolo.
 | **Num. D.D.T.**, **Data. D.D.T.** | | Gli estremi del documento di trasporto che accompagna l'attrezzatura. | numero e data |
 | **Registro** | | Il registro del documento. | voce dell'elenco |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

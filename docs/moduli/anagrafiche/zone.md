@@ -48,8 +48,6 @@ anagrafiche.
 | Codice | ● | Identificativo della zona. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome della zona, come compare nelle anagrafiche e nelle stampe. | Fino a 30 caratteri |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -63,8 +63,6 @@ lo scrive a chiare lettere.
 | **Tipo Doc.** | | Quali documenti portare in griglia. | `TUTTI`, `FATTURE`, `ORDINI`, `DDT` |
 | **Ubicazione** | | Stampa solo gli articoli in quella posizione di magazzino. Accetta i caratteri jolly `*` e `?`. | testo |
 
-{: .campi }
-
 La griglia elenca un documento per riga: **Sel.**, tipo e numero, data, stato,
 cliente, totale, totale da pagare, destinatario e operatore. Si spunta la colonna
 **Sel.** per scegliere che cosa stampare.
@@ -79,8 +77,6 @@ cliente, totale, totale da pagare, destinatario e operatore. Si spunta la colonn
 | **Reparto** | | Un reparto solo, guardando il reparto dell'articolo. | codice |
 | **Agente** | | Un agente solo. | codice |
 
-{: .campi }
-
 ### Stampa Distinta Trasportatori
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -90,8 +86,6 @@ cliente, totale, totale da pagare, destinatario e operatore. Si spunta la colonn
 | **Agente** | | Un agente solo. | codice |
 | **Tipo Vendite** | | Restringe a un tipo di vendita. | `TUTTE`, `NORMALI`, `TRASFERT`, `C.S. VENDITA`, `C.S. TRASFERT` |
 | **Ordinamento** | | Come ordinare la stampa. | `NUM. DOCUMENTO + DATA`, `CLIENTE + DESTINAZIONE` |
-
-{: .campi }
 
 ### Stampa Kg. Venduti
 
@@ -105,8 +99,6 @@ Venduti*: è la stessa cosa.
 | **Agente** | | Un agente solo. | codice |
 | **Tipo Vendite** | | Restringe a un tipo di vendita. | `TUTTE`, `NORMALI`, `TRASFERT`, `C.S. VENDITA`, `C.S. TRASFERT` |
 
-{: .campi }
-
 ### Stampa Rapporto Cassa
 
 In alto i tre filtri, sotto i totali, che il programma riempie da solo:
@@ -116,8 +108,6 @@ In alto i tre filtri, sotto i totali, che il programma riempie da solo:
 | **Data** | ● | Il giorno da esaminare. | data |
 | **Registro** | | Il registro di cassa. | voce dell'elenco |
 | **Operatore** | | Chi era alla cassa. | codice |
-
-{: .campi }
 
 I totali in sola lettura sono due gruppi. Il primo conta i documenti:
 **N. Scontrini** e **Totale Scontrini**, **N. Fatture** e **Totale Fatture**,
@@ -135,8 +125,6 @@ Credito**, **Bancomat**, **Buoni Pasto**, **A Credito**, e il **Totale**.
 | **Totale** | | La somma dei netti dei documenti trovati. Non modificabile. | — |
 | **Ricavo** | | **Totale meno costo**. Non modificabile, e **visibile solo agli amministratori**. | — |
 
-{: .campi }
-
 Nella griglia, un documento per riga: tipo e numero, tipo documento, data, stato,
 codice e ragione sociale del cliente o del fornitore.
 
@@ -148,8 +136,6 @@ codice e ragione sociale del cliente o del fornitore.
 | **Cliente** | | Un cliente solo. | codice |
 | **Fornitore** | | Un fornitore solo. | codice |
 | **Agente** | | Un agente solo. | codice |
-
-{: .campi }
 
 ### Valorizza Doc. Trasfert e Concessionario
 

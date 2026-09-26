@@ -58,8 +58,6 @@ giusto: quello che si registra qui è la nazionalità, non il paese.
 | Fiscalità Privilegiata | | Segnala che il paese è a fiscalità privilegiata. | Casella |
 | Nazione UE | | Segnala che il paese appartiene all'Unione europea. Da questa spunta dipende il trattamento delle operazioni intracomunitarie. | Casella |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -63,8 +63,6 @@ scelto.
 | **Sezione** | | Restringe a una [sezione](../contabilita/sezioni.md). | codice |
 | **Anno_01** … **Anno_10** | ● | Le annate da mettere nel grafico: se ne possono confrontare fino a dieci. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 ### Vendite / Ricavi Pluriennali

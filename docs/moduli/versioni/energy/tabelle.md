@@ -30,8 +30,6 @@ Chi risponde all'Agenzia per quel deposito.
 | **Cod. UA** | Il codice dell'unità amministrativa, che finisce nel nome del file di flusso. |
 | **Ultimo Flusso** | Numero e data dell'ultimo flusso trasmesso. Lo aggiorna il programma. |
 
-{: .campi }
-
 ### Registri
 
 I registri su cui si scrive.
@@ -48,8 +46,6 @@ I registri su cui si scrive.
 | **Calcola Giacenza KG**, **Calcola Giacenza LT** | Se il registro deve produrre la giacenza di fine giornata, e in quale misura. |
 | **Ultimo Rigo Registro Inviato** | Fin dove si è arrivati con le trasmissioni. |
 | **Ultimo Rigo Registro Attribuito** | L'ultimo rigo numerato. |
-
-{: .campi }
 
 !!! warning "Le due caselle «Calcola Giacenza» decidono chi riceve le giacenze"
 
@@ -138,8 +134,6 @@ Oltre a codice e descrizione, questa tabella ha l'**ID Ufficio**.
 | **Categoria** | La categoria ministeriale: `E410-BENZINA CON PIOMBO`, `E420-BENZINA SENZA PIOMBO`, `E430-GASOLIO NON COLORATO`, `E440-GASOLIO COLORATO`, `E910-FAMAE`, oppure vuota. |
 | **Non Attivo** | Lo mette da parte. |
 
-{: .campi }
-
 ### Causali Movimenti
 
 | Campo | Descrizione |
@@ -150,8 +144,6 @@ Oltre a codice e descrizione, questa tabella ha l'**ID Ufficio**.
 | **Normativa** | Il riferimento di legge della causale. |
 | **Mov. Interna**, **Mov. Esterna** | `SI` o `NO`: se la causale riguarda movimenti interni al deposito, esterni, o entrambi. |
 | **Non Attiva** | La mette da parte. |
-
-{: .campi }
 
 Le causali si importano **in due passaggi distinti** — prima quelle di scarico,
 poi quelle di carico — perché l'Agenzia le pubblica in due fogli separati.

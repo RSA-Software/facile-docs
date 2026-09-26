@@ -76,8 +76,6 @@ Provvigioni*.
 | **Gruppo** | | Limita agli articoli del gruppo indicato. | testo, oppure `TUTTI` |
 | **Sottogruppo** | | Limita agli articoli del sottogruppo indicato. | testo, oppure `TUTTI` |
 
-{: .campi }
-
 Lasciando un campo vuoto — o con scritto `TUTTI` — quel criterio non filtra
 nulla. **Se non si compila niente l'elaborazione tocca tutti gli articoli in
 archivio.** Su ogni campo con codice il tasto ++f10++ (o ++space++, o il doppio
@@ -93,8 +91,6 @@ clic) apre l'elenco da cui scegliere.
 | **Riferimento** | ● | Il prezzo di partenza su cui si applica la variazione. | vedi la tabella qui sotto |
 | **Arrotondamento** | | A quante cifre arrotondare il prezzo che ne risulta. | `NESSUNO`, `MILLESIMI`, `CENTESIMI`, `DECIMI`, `EURO` |
 | **Conferma Manuale** | | Se attivo, il programma si ferma su ogni articolo e mostra il nuovo prezzo prima di scriverlo. | attivo/non attivo |
-
-{: .campi }
 
 Il nuovo prezzo si calcola così:
 
@@ -130,8 +126,6 @@ che non si vuole toccare, o si interrompe tutto.
 | **Listino** | ● | Il listino su cui riscrivere gli sconti. | codice del listino |
 | **1° Sconto** … **7° Sconto** | | I sette sconti in cascata, sotto il titolo **% S C O N T O**. | percentuali |
 
-{: .campi }
-
 ### Varia Provvigioni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -141,8 +135,6 @@ che non si vuole toccare, o si interrompe tutto.
 | **Trasfert** | | Provvigione sulle vendite in trasfert. | percentuale |
 | **C.S. Vendita** | | Provvigione sulle vendite in conto sconto. | percentuale |
 | **C.S. Trasfert** | | Provvigione sulle vendite in conto sconto trasfert. | percentuale |
-
-{: .campi }
 
 !!! note "Un solo campo se non si distinguono i tipi di vendita"
 

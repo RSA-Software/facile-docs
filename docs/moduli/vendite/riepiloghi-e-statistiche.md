@@ -80,8 +80,6 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Agente** | | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). | codice |
 
-{: .campi }
-
 ### Statistiche
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -92,8 +90,6 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 | **Agente** | | Restringe a un agente. | codice |
 | **Raggruppamento** | | Come sommare il fatturato. Ogni scelta produce una stampa diversa. | `NESSUNO`, `CLIENTE`, `AGENTE`, `MENSILE` |
 
-{: .campi }
-
 ### Statistiche Mensili
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -103,8 +99,6 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 | **Agente** | | Restringe a un agente. | codice |
 | **Zona** | | Restringe a una zona. | codice |
 | **Escludi Resi e Note di Credito** | | Somma il solo venduto, senza sottrarre resi e note di credito. | attivo/non attivo |
-
-{: .campi }
 
 ### Fatturato Mensile per…
 
@@ -118,8 +112,6 @@ Sono finestre di selezione: il periodo, i filtri e i pulsanti **F2 - OK** ed
 | **D.D.T. Vendita Normale** | | Includi i DDT di vendita normale. | attivo/non attivo |
 | **D.D.T. Vendita Trasfert** | | Includi i DDT di trasferta. | attivo/non attivo |
 | **D.D.T. Vendita Trasfert C.S.** | | Includi i DDT di trasferta a centro servizi. | attivo/non attivo |
-
-{: .campi }
 
 Queste sette stampe lavorano su **un mese per volta** e sull'**anno di
 lavoro**: non c'è un intervallo di date.

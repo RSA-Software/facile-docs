@@ -61,8 +61,6 @@ con l'esportazione.
 | **Listino** | | Il listino con cui valorizzare. | codice |
 | **Stato** | | Quali lotti mostrare. | `TUTTI`, `APERTI`, `CHIUSI` |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

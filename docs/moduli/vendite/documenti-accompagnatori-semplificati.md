@@ -59,8 +59,6 @@ Riga**, che è dove stanno i dati fiscali del prodotto.
 | **Cliente** | ● | Il destinatario della fattura. | codice |
 | **Destinatario** | | Dove va la merce, se diverso dal cliente. | codice |
 
-{: .campi }
-
 ### Il trasporto
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -75,8 +73,6 @@ Riga**, che è dove stanno i dati fiscali del prodotto.
 | **Durata Presunta** | | Quanto dura il viaggio. | **da 1 a 18** |
 | **Stampato** | | Segnala che il documento è già stato stampato. | |
 
-{: .campi }
-
 ### La riga (finestra *Modifica Riga*)
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -90,8 +86,6 @@ Riga**, che è dove stanno i dati fiscali del prodotto.
 | **Num. Doc.** | | Il documento della riga. | |
 | **Densità** e **Quantità (Lt)** | ● | Due coppie: a **temperatura ambiente** e a **15°**. | numero |
 | **Kilogrammi** | | Il peso corrispondente. | numero |
-
-{: .campi }
 
 Non applicabile.
 

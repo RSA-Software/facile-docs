@@ -66,8 +66,6 @@ l'avanzamento.
 | **Ordini**, **Fatture**, **D.D.T.**, **Preventivi**, **Incassi** | | Quali tipi di documento comprendere nell'invio. | attivo/non attivo |
 | **Messaggi** | | Comprende anche i messaggi. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

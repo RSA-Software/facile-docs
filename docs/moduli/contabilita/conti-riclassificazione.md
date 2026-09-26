@@ -50,8 +50,6 @@ cinque caselle del codice affiancate e la descrizione.
 | Codice | ● | Il codice del conto riclassificato, su cinque caselle affiancate: sono i livelli dello schema, dal più generale al più particolare. | Cinque numeri |
 | Descrizione | ● | Nome della voce, come compare nelle stampe riclassificate. | Testo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

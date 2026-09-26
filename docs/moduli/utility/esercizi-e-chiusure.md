@@ -72,8 +72,6 @@ lavora.
 |---|:---:|---|---|
 | **Anno** | ● | L'anno di gestione su cui lavorare. A fianco l'etichetta ricorda **( 0 = Dati Anno Corrente)**. | anno, `0` per l'anno corrente |
 
-{: .campi }
-
 ### Chiusura Conti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -86,8 +84,6 @@ lavora.
 | **Anno Chiusura** | ● | L'anno da chiudere. | anno |
 | **Data Registr. Movimenti** | ● | La data con cui vengono registrate le scritture. | data |
 
-{: .campi }
-
 ### Riapertura Conti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -98,8 +94,6 @@ lavora.
 | **Codice Causale Apertura** | ● | La causale con cui registrare le scritture. | codice |
 | **Anno Apertura Conti** | ● | L'anno da aprire. | anno |
 | **Data Registr. Movimenti** | ● | La data delle scritture. | data |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

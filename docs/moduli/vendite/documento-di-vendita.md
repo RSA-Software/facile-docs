@@ -84,8 +84,6 @@ basso:
 | **Consegna** | | La data di consegna. Compare **solo sugli ordini**, clienti e fornitori. | data |
 | **Totale Documento** | | Il totale. Lo calcola il programma. | Sola lettura |
 
-{: .campi }
-
 ### Corpo
 
 Il corpo si apre con **F8 - Corpo** ed è la griglia delle righe:
@@ -132,8 +130,6 @@ compare **Allegati**.
 | **Annotazioni** | | Una riga di note. | testo |
 | **VARIE** | | Quattro righe libere che finiscono sul documento stampato. | testo |
 
-{: .campi }
-
 ### Totali
 
 Si apre con il pulsante **Totali**. È il riepilogo economico del documento:
@@ -164,8 +160,6 @@ piede.
 | **Totale da Pagare** | | Quello che il cliente deve. |
 | **Ricavo Lordo**, **%Ric.**, **%Mar.**, **Totale Provvigione** | | Margine e provvigione del documento. Non compaiono su richieste offerta, autofatture e ordini a fornitore. |
 | **N. Pedane**, **Costo Pedane** | ● | Le pedane, dove sono gestite. |
-
-{: .campi }
 
 A documento emesso le voci che si scrivono a mano diventano di sola lettura e
 il pulsante **F2 - OK** sparisce: resta solo **Esci**.

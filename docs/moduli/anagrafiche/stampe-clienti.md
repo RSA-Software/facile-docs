@@ -67,8 +67,6 @@ ed **Esci**.
 | **Flag Fatturato** | | Se includere i clienti esclusi dalla fatturazione. | `TUTTI`, `ESCLUSI`, `INCLUSI` |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `ALFABETICO`, `CAP + ALFABETICO` |
 
-{: .campi }
-
 ### Formato della stampa elenco
 
 | Formato | Cosa contiene |

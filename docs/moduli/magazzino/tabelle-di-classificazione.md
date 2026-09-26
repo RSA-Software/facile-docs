@@ -142,8 +142,6 @@ Personali**:
 | Capacità (lt) | | **Solo su Tipi Contenitori.** Capacità del contenitore in litri. | Numero con due decimali |
 | %Ric. Spese | | **Solo sui Listini di Vendita.** Percentuale che il calcolo del ricarico aggiunge al prezzo di questo listino, dopo quella generale della ditta. | Numero con due decimali, non negativo |
 
-{: .campi }
-
 Su **Sottogruppi**, nella versione Taglie e Colori - Calzature, compaiono
 in più un campo **%Sconto** e una casella **Barcode**.
 

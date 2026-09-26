@@ -65,8 +65,6 @@ Stampa**. L'ultima dice quando quel frontalino è stato stampato l'ultima volta:
 | **Formato** | ● | Il modello di frontalino da stampare. | voce dell'elenco |
 | **Ordine** | | Come ordinare la stampa: conviene farla seguire il giro che si fa in negozio. | `NUMERO ACQUISIZIONE`, `DATA ACQUISIZIONE`, `CATEGORIA MERCEOLOGICA` |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

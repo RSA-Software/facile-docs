@@ -64,8 +64,6 @@ DDT per Ordini Centro Servizi** è invece una finestrella con due soli campi.
 | **Data Iniziale**, **Data Finale** | ● | Il periodo degli ordini clienti da leggere. | date |
 | **Registro** | | Restringe a un registro di numerazione. | voce dell'elenco |
 
-{: .campi }
-
 Le colonne della griglia sono **Sel**, **Num. Ordine**, **Data Ordine**,
 **Cliente**, **Ord.Gen.**, **N.DOC.** e **Anno**. Aprendo una riga con **F3 -
 Modifica** si scende al dettaglio, con le colonne **Codice**,
@@ -81,8 +79,6 @@ per articolo, quanto ordinare e a chi.
 | **Data Iniziale** | ● | Inizio del periodo di vendita da esaminare. | data |
 | **Data Finale** | ● | Fine del periodo. | data |
 
-{: .campi }
-
 Le colonne sono **Codice**, **Descrizione**, **Quantità da Ordinare**,
 **Disponibilità**, **Esistenza**, **Scorta Min**, **Esistenza Centrale**,
 **Q.tà Ordinata**, **Q.ta Venduta**, **Scorta Max** e **Assort.**. Si scrive
@@ -97,8 +93,6 @@ lavorando — *Riassortimento da Vendite - Dep. (1) SEDE*.
 |---|:---:|---|---|
 | **Data** | ● | La data degli ordini da trasformare, e quella dei documenti generati. | data |
 | **Cliente** | | Restringe a un cliente. A fianco compare la ragione sociale. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

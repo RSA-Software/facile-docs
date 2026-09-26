@@ -76,8 +76,6 @@ Per le anomalie valgono i campi del
 | **Inizio Cessione**, **Fine Cessione** | | Il periodo di cessione concordato con il fornitore. È questo, e non l'altro, che il [controllo listini](../listini-vendita/controllo-listini.md) e l'analisi fornitore guardano per decidere se la promozione è in corso a una certa data. La fine non può precedere l'inizio. | date |
 | **Fornitore** | ● | Il fornitore che concede la promozione. | codice |
 
-{: .campi }
-
 ### Promozioni Sellin — riga
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -88,8 +86,6 @@ Per le anomalie valgono i campi del
 | **Sconto Merce** | | Lo sconto in merce, cioè i pezzi in omaggio. Non entra nel prezzo netto: viaggia a parte, come quantità. | quantità |
 | **Sconto Valore** | | Uno sconto a importo fisso, sottratto dopo i sette percentuali. | importo |
 | **Prezzo Netto** | | Calcolato dal programma: prezzo meno i sette sconti a cascata meno lo sconto valore. Non modificabile. | — |
-
-{: .campi }
 
 !!! note "Lo sconto merce non abbassa il prezzo netto"
 

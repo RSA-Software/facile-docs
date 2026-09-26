@@ -54,8 +54,6 @@ righe di campi.
 | Non Fiscale | | Le righe di questo reparto **non vengono mandate al registratore di cassa**: restano fuori dallo scontrino fiscale. | Casella |
 | Cod. Trasf. | | Codice con cui il reparto viene riconosciuto nei trasferimenti verso altre sedi. | Fino a 5 caratteri |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

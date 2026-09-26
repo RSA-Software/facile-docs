@@ -50,8 +50,6 @@ finestrella con gli intervalli di selezione.
 | **Importo** | | Quanto è stato versato. | importo |
 | **Cliente** | ● | Chi ha versato. Accanto compare la ragione sociale, che non si modifica. | codice |
 
-{: .campi }
-
 Nella stampa si indicano **Da Codice** e **A Codice**, **Da Data** e **A
 Data**, e il **Cliente**. I quattro estremi arrivano già compilati con il primo
 e l'ultimo codice e la prima e l'ultima data presenti in archivio; il

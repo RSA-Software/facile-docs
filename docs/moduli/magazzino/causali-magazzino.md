@@ -71,8 +71,6 @@ ne indica uno, e il codice deve esistere.
 | Dettaglio | | Se il dettaglio va chiesto sul movimento. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Matricole | | Se il movimento gestisce le matricole. | NON GESTITE, FACOLTATIVE, OBBLIGATORIE |
 
-{: .campi }
-
 ### Contatori
 
 Ogni contatore ha tre valori possibili, sempre gli stessi:
@@ -99,8 +97,6 @@ I contatori sono questi:
 | Movimentazione Interna | | Tiene i movimenti di questa causale **fuori dal venduto** delle statistiche. | Casella |
 | Gestione Merce In Transito | | La merce movimentata resta in transito finché non arriva a destinazione. | Casella |
 | Escludi da Statistiche WEB | | I movimenti con questa causale non entrano nelle statistiche del sito. | Casella |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

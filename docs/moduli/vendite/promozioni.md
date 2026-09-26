@@ -75,8 +75,6 @@ quelle della testata.
 | **Seleziona Depositi** | | Apre *Depositi Associati alla Promozione*, dove si scelgono gli altri depositi oltre a quello indicato sopra — fino a cinquanta. | elenco |
 | **Listino** | ● | Il listino di vendita su cui la promozione agisce. | codice |
 
-{: .campi }
-
 !!! warning "Deposito e listino si scelgono una volta sola"
 
     Dopo il primo salvataggio **Registro**, **Codice**, **Deposito** e
@@ -121,8 +119,6 @@ prezzo netto in promozione è 11,00.
 | **Casualità** | | La quota di casualità nell'applicazione dell'offerta. La usano **solo le casse SysPC**. | da `0` a `32767` |
 | **Frontalino** | | Il formato del frontalino da stampare per questa riga. | `PICCOLO`, `MEDIO`, `GRANDE`, `NESSUNO` |
 | **Codice Mix** | | Il codice che lega fra loro le righe di un'offerta mista. | codice |
-
-{: .campi }
 
 Aprendo una riga nuova, i campi non partono vuoti: **periodo, ora, giorni,
 deposito, listino, livello clienti e la spunta Abilitata** sono quelli della

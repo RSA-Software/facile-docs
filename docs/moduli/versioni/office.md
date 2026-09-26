@@ -39,8 +39,6 @@ La scheda di una licenza installata.
 | **Data** | La data della licenza. |
 | **Versione** | La versione per esteso. |
 
-{: .campi }
-
 ### Chi la usa e chi l'ha venduta
 
 | Campo | Descrizione |
@@ -49,8 +47,6 @@ La scheda di una licenza installata.
 | **Rivenditore** | Chi gliel'ha venduto, quando non è una vendita diretta. |
 | **Agente** | L'[agente](../anagrafiche/anagrafica-agenti.md) che segue il cliente. |
 | **Zona** | La [zona](../anagrafiche/zone.md). |
-
-{: .campi }
 
 ### L'assistenza
 
@@ -61,8 +57,6 @@ La scheda di una licenza installata.
 | **Max Attivabile** | Fino a quale anno e build il cliente può aggiornarsi con questa licenza. |
 | **Fatturazione** | `RIVENDITORE` o `DIRETTA`: a chi si fattura il canone. |
 | **Periodicità** | `ANNUALE`, `SEMESTRALE`, `QUADRIMESTRALE`, `TRIMESTRALE`, `BIMESTRALE` o `MENSILE`. |
-
-{: .campi }
 
 !!! tip "«Chiamare» è una lista di lavoro"
 
@@ -85,8 +79,6 @@ Un quadro di conteggi su quattro colonne, una per **livello di licenza**:
 | **Attivate** | Quante risultano attivate. |
 | **Da Attivare** | Quante restano da attivare. |
 
-{: .campi }
-
 A parte, **Mobile** e **WEB** contano i dispositivi mobili e gli accessi web.
 
 !!! note "«Concesse» non scende mai sotto la somma"
@@ -107,8 +99,6 @@ A parte, **Mobile** e **WEB** contano i dispositivi mobili e gli accessi web.
 | **Stato Licenza** | `UTILIZZO NORMALE`, `DISATTIVAZIONE` o `BLOCCO`. |
 | **Blocca Attivazione OnLine** | Impedisce che la licenza si attivi da sé via Internet. |
 | **Blocca Accesso Web** | Chiude l'accesso web. |
-
-{: .campi }
 
 !!! danger "«Blocco» ferma il programma dal cliente"
 
@@ -134,8 +124,6 @@ L'elenco dei canoni da incassare.
 | **Cliente**, **Rivenditore**, **Agente**, **Zona** | I soliti filtri. |
 | **Rinnovo** | `TUTTE`, `NO`, `SI`, `CHIAMARE` o `CESSATA` — le stesse voci della scheda della licenza. |
 
-{: .campi }
-
 
 ## Emissione Fatture
 
@@ -147,8 +135,6 @@ Emette in una volta le fatture dei canoni del mese.
 | **Accorpa Fatture Stesso Cliente** | Un cliente con più licenze riceve **una fattura sola** invece di una per licenza. |
 | **Registro Emissione Fatture** | La lettera del registro su cui emettere. |
 | **Cliente**, **Rivenditore** | Restringono l'emissione. |
-
-{: .campi }
 
 Sotto, la griglia elenca quello che verrà fatturato. ++f2++ chiede conferma —
 *Confermi l' emissione delle Fatture ?*, con **No** preimpostato — e alla fine

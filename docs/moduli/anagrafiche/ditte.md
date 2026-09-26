@@ -92,8 +92,6 @@ impostazioni:
 | **Rag. Soc./ Cognome** | ● | Ragione sociale, oppure il cognome se l'azienda è una ditta individuale. | testo |
 | **Rag. Soc./ Nome** | | Seconda riga della ragione sociale, oppure il nome. | testo |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -113,8 +111,6 @@ impostazioni:
 | **Iva D.L.83/2012** | | Se l'azienda applica l'IVA per cassa. Attivandola il programma chiede la data di inizio. | `NO`, `SI` |
 | **In Liquidazione** | | L'azienda è in liquidazione. | attivo/non attivo |
 
-{: .campi }
-
 ### Scheda Progressivi
 
 La scheda è una griglia con una riga per registro — colonne **Codice**,
@@ -127,8 +123,6 @@ sotto i progressivi degli altri bollati:
 | **Progressivi Libro Giornale** — **PAGINA**, **RIGO** | | A che pagina e a che riga è arrivata la stampa del libro giornale. | numeri |
 | **Progressivi Sostanze Zuccherine** — **CARICO**, **SCARICO** | | I progressivi del registro delle sostanze zuccherine. | numeri |
 | **Progressivi Registri Articoli Fiscali** | | I progressivi dei registri degli articoli fiscali. **Solo nella versione Fiscali.** | numeri |
-
-{: .campi }
 
 ### Scheda Date Bollati
 
@@ -145,8 +139,6 @@ già bollato.
 | **Registro Fatture In Sospensione** | | Ultima data sul registro delle fatture in sospensione. | data |
 | **Registro Acquisti CEE**, **Registro fatture Emesse CEE** | | I due registri intracomunitari. | date |
 | **Registro Sostanze Zuccherine** | | Ultima data sul registro delle sostanze zuccherine. | data |
-
-{: .campi }
 
 ### Scheda Parametri Magazzino
 
@@ -168,8 +160,6 @@ parte sono i riferimenti fissi:
 | **Max Righe su Carico** | | Quante righe può avere al massimo un [carico merci](../magazzino/carico-merci.md). | numero |
 | **Quotazione Attuale** | | La quotazione corrente, per chi lavora a quotazione. | importo |
 | **% Incidenza Costi Fissi** | | La percentuale di costi fissi da caricare sul costo. | percentuale |
-
-{: .campi }
 
 La seconda parte è il gruppo **C A U S A L I**: per ciascuna operazione
 automatica si indica quale [causale di magazzino](../magazzino/causali-magazzino.md)
@@ -200,8 +190,6 @@ Infine le scelte di comportamento:
 | **Conferma Dati** | Se il programma chiede conferma prima di salvare. | `NO`, `SI` |
 | **Preval. Ricerca Codice** | Se l'elenco [Cerca articoli](cerca-articoli.md) si apre in ordine di codice (`SI`) o di descrizione (`NO`), e da quale articolo parte **Archivi ▸ Articoli ▸ Modifica**. | `NO`, `SI` |
 
-{: .campi }
-
 ### Scheda Codici Articoli
 
 Governa i codici a barre che Facile genera per gli articoli nuovi.
@@ -213,8 +201,6 @@ Governa i codici a barre che Facile genera per gli articoli nuovi.
 | **Codice Produttore** | | Nel formato EAN, il codice assegnato all'azienda. | cifre |
 | **Prefisso**, **Cifre**, **Suffisso** | | Nel formato seriale da contatore: cosa mettere prima, quante cifre e cosa mettere dopo. | testo, numero |
 | **Cod. Iniziale**, **Cod. Finale** | | L'intervallo entro cui il contatore si muove. | numeri |
-
-{: .campi }
 
 ### Scheda Parametri Contabili
 
@@ -249,8 +235,6 @@ E le scelte di comportamento:
 | **Più Esercizi in Linea** | Se tenere più esercizi aperti insieme. | `NO`, `SI` |
 | **Contabilizzazione Immediata Docum.** | Se il documento va in contabilità appena emesso, senza passare dalla [contabilizzazione](../vendite/contabilizzazione-documenti.md). | `NO`, `SI` |
 | **Nota Split Payment** | Il testo da riportare sui documenti in split payment. | testo |
-
-{: .campi }
 
 ### Scheda Modulistica
 
@@ -293,8 +277,6 @@ TRASPORTO**. Sotto:
 | **Codice Banca Ditta**, **Codice SIA Banca** | La [banca](../contabilita/banche-ditta.md) di presentazione e il suo codice SIA, usati dal [file di flusso RI.BA.](../scadenze/effetti-e-riba.md) |
 | **Massimale Enasarco**, **% Enasarco**, **Totale Enasarco** | I parametri Enasarco, ripetuti per due scaglioni. |
 
-{: .campi }
-
 ### Scheda Destinazioni
 
 Una griglia con le destinazioni merce dell'azienda — colonne **Codice**,
@@ -326,8 +308,6 @@ Due riquadri. **FIDELITY**:
 | **Num Buoni Emessi** | Il contatore dei buoni. |
 | **Abilita Circolarità** | Rende i buoni spendibili in tutti i punti vendita del circuito. |
 
-{: .campi }
-
 ### Scheda Fatture Elettroniche
 
 Il collegamento al servizio di trasmissione, nel riquadro *F T P D I G I T H U B*:
@@ -338,8 +318,6 @@ Il collegamento al servizio di trasmissione, nel riquadro *F T P D I G I T H U B
 | **Usa FTP Passive Mode**, **Abilita Log FTP**, **Usa TLS** | Le opzioni di connessione. |
 | **Computer abilitato download Stati Fatture Attive** | Quale postazione scarica gli esiti delle [fatture emesse](../vendite/fatture-elettroniche-attive.md). |
 | **Computer abilitato download Fatture Passive** | Quale postazione scarica le [fatture ricevute](../contabilita/fatture-elettroniche-passive.md). |
-
-{: .campi }
 
 ### Scheda Comunicazioni
 
@@ -388,8 +366,6 @@ commercialisti, geometri, ingegneri e architetti, notai, ragionieri — oppure
 | **Numero Rivendita** | Il numero della rivendita. |
 | **Fido Ordine Tabacchi** | Il limite di spesa per gli [ordini tabacchi](../ordini/ordini-tabacchi.md). |
 
-{: .campi }
-
 ### Scheda E-Commerce
 
 | Campo | Descrizione |
@@ -402,8 +378,6 @@ commercialisti, geometri, ingegneri e architetti, notai, ragionieri — oppure
 | **Max Dimensione Immagini** | Il limite di dimensione delle immagini caricate. |
 | **Applica sconti listino** | Se applicare gli sconti del listino. |
 | **Esporta Cat. Merc.**, **Esporta Reparti**, **Esporta Settori**, **Esporta Marchi**, **Esporta Stagioni** | Quali classificazioni pubblicare sul sito. |
-
-{: .campi }
 
 ### Scheda Parametri Ristorazione
 
@@ -430,8 +404,6 @@ Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
     | **Stelle** | La classificazione alberghiera. |
     | **Settore Base** | `VILLAGGIO`, `HOTEL`, `CAMEGGIO` o `TUTTI`. |
 
-    {: .campi }
-
     **I valori proposti**
 
     | Campo | Descrizione |
@@ -441,8 +413,6 @@ Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
     | **Listino** | Il listino di partenza. |
     | **Stagionalità** | La stagionalità di riferimento. |
     | **Banca** | La [banca](../contabilita/banche.md) proposta. |
-
-    {: .campi }
 
     **Modulistica** — i modelli di stampa di **Voucher**, **Estratto Conto**,
     **Mod. ISTAT** e **Schedine P.S.**, ciascuno con il suo numero di modello,
@@ -459,8 +429,6 @@ Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
     | **Disabilita Automatismi Schedine P.S.** | Toglie la compilazione automatica delle schedine. |
     | **Emissione modello ISTAT senza Raggruppamento** | Stampa il modello riga per riga. |
 
-    {: .campi }
-
     **Comportamento del conto**
 
     | Campo | Descrizione |
@@ -471,8 +439,6 @@ Opzionale-1** … **-5**, più **Modulo Preconto** e **% Maggioraz. Servizio**.
     | **Ragguppa Addebiti per Reparto su Conto** | Raggruppa gli addebiti per reparto. Anche qui l'etichetta è scritta così. |
     | **Nascondi Arrivi con Checkout sul Tableau** | Toglie dal tableau gli arrivi già partiti. |
     | **Imposta di Soggiorno — Dal … Al** | Il periodo in cui l'imposta si applica. |
-
-    {: .campi }
 
 ## Pulsanti e comandi
 
@@ -507,8 +473,6 @@ dopo la password e dopo un avviso esplicito. Contiene i parametri più delicati:
 | **Key SmartCard**, **Pin**, **Utilizzo SmartC.** | La smart card. |
 | **Ultima Fattura su Cassa**, **Ultima Scontrino Emesso** | Gli ultimi numeri emessi. |
 | **Categoria Premi** | La categoria dei premi fidelity. |
-
-{: .campi }
 
 ### Intestazione per Fatturazione
 

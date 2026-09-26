@@ -57,8 +57,6 @@ e i pulsanti **F2 - OK** ed **Esci**.
 | **Registro Acquisti CEE** | | Rinumera il registro degli acquisti intracomunitari. | attivo/non attivo |
 | **Registro Fatture Emesse CEE** | | Rinumera il registro delle cessioni intracomunitarie. | attivo/non attivo |
 
-{: .campi }
-
 Almeno una casella dev'essere spuntata.
 
 ## Pulsanti e comandi

@@ -29,8 +29,6 @@ scandisce il lavoro del modulo, e va fatta **tutti i giorni**.
 | **Formato Stampa Partite Chiuse** | `SINTETICO` o `DETTAGLIATO`, per l'ultima delle cinque. |
 | **Partita**, **Fornitore** | Restringono la stampa delle partite chiuse a una sola partita o a un solo produttore. |
 
-{: .campi }
-
 Sotto, la griglia mostra le partite interessate dalla chiusura.
 
 ## Che cosa fa, nell'ordine

@@ -61,8 +61,6 @@ più, descritto qui sotto.
 | **Deposito** | | Su quale [deposito](../magazzino/depositi.md) guardare. | codice |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `DESCRIZIONE` |
 
-{: .campi }
-
 ### Stampa Spostamenti Codici a Barre
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -70,8 +68,6 @@ più, descritto qui sotto.
 | **Data Iniziale** | ● | Primo giorno del periodo da esaminare. | data |
 | **Data Finale** | ● | Ultimo giorno del periodo. | data |
 | **Deposito** | | Su quale [deposito](../magazzino/depositi.md) guardare. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

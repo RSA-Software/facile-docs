@@ -84,8 +84,6 @@ tassonomie ha già l'articolo — **Web**, **Nome Web**, **Rep.**, **Cat.**,
 | **Esistenza** | | Quanto ce n'è. Solo lettura. | — |
 | **Cod. Iva**, **Un. Misura**, **Cat. Merc.**, **Reparto**, **Stagione**, **Marchio**, **Gruppo**, **Sottogruppo** | | La classificazione dell'articolo, mostrata per aiutare a decidere. Solo lettura. | — |
 
-{: .campi }
-
 ### Cancellazione Articoli
 
 La parte alta è la selezione degli articoli:
@@ -94,8 +92,6 @@ La parte alta è la selezione degli articoli:
 |---|:---:|---|---|
 | **Deposito** | | Su quale [deposito](../magazzino/depositi.md) valutare le condizioni. | codice |
 | **Articolo**, **Cod. Iva**, **Reparto**, **Marchio**, **Cat. Merc.**, **Fornitore**, **Stagione**, **Gruppo**, **Sottogruppo** | | I filtri con cui restringere. | codici |
-
-{: .campi }
 
 La parte bassa sono **tre condizioni**, ciascuna con una casella da attivare e
 un valore preceduto da `<=`. Valgono solo quelle attivate:
@@ -116,15 +112,11 @@ solo se le soddisfa **tutte**.
 | **Articolo** | ● | L'articolo da copiare. | codice |
 | **Nuovo Articolo** | ● | Il codice del nuovo articolo. Si può farlo generare al programma. | codice |
 
-{: .campi }
-
 ### Gestione Panieri
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Paniere** | ● | Quale paniere si sta componendo. | codice |
-
-{: .campi }
 
 La griglia sotto elenca gli articoli del paniere, con **Codice** e
 **Descrizione**.

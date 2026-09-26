@@ -91,8 +91,6 @@ Riferimento** e alcune caselle si vedono solo dove hanno senso.
 | **Web** | | Se includere gli articoli pubblicati sul web. | `TUTTI`, `INCLUSI WEB`, `ESCLUSI WEB` |
 | *(tre campi con il nome delle tabelle di classificazione)* | | Le tre tabelle libere della ditta. Portano a video il nome che hanno nelle impostazioni; se la ditta non le usa restano senza etichetta e non si compilano. | codici |
 
-{: .campi }
-
 Nei campi di testo valgono i caratteri jolly: `*` sostituisce un gruppo di
 caratteri e `?` un carattere solo.
 
@@ -107,8 +105,6 @@ caratteri e `?` un carattere solo.
 | **Solo Articoli con Esistenza Maggiore di** | | Esclude gli articoli sotto la quantità indicata a fianco. | attivo/non attivo, più una quantità |
 | **Somma Esistenza Depositi** | | Somma le giacenze di tutti i depositi invece di fermarsi a quello scelto. | attivo/non attivo |
 | **Solo Articoli Modificati o Movimentati** | | Limita agli articoli che risultano cambiati o movimentati **dall'ultimo trasferimento dati in poi**. Non c'è nessun periodo da indicare. | attivo/non attivo |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

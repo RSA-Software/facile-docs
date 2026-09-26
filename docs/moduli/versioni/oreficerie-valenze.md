@@ -63,8 +63,6 @@ L'elenco si stampa con **Menu ▸ Oreficerie ▸ Stampa Valenze di Lavorazione**
 | **Descrizione** | ● | Il nome della lavorazione, come compare negli elenchi e nelle stampe. | Fino a 30 caratteri, convertiti in maiuscolo |
 | **Importo** | | Il costo della lavorazione. | Numero con due decimali |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

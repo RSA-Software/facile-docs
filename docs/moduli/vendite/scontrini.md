@@ -69,8 +69,6 @@ La griglia ha queste colonne:
 | **Tipologia** | | Restringe a un tipo di scontrino. | voce dell'elenco |
 | **Operatore** | | Restringe a chi ha battuto. | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

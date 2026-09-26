@@ -75,8 +75,6 @@ poi, se serve, il deposito. **Azzeramento Articoli non Inventariati** e
 | **Data Chiusura** | ● | La data con cui vengono scritti i movimenti di rettifica. | data |
 | **Deposito** | | Il [deposito](../magazzino/depositi.md) da chiudere. Lasciandolo a zero si chiudono tutti. | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

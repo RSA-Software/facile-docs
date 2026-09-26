@@ -91,8 +91,6 @@ movimenti dell'articolo.
 | **Articolo** | L'articolo da interrogare. Accanto compare la descrizione. |
 | **Tipo Interrogazione** | Dove cercare i movimenti: `ARCHIVI LOCALI` o `SERVER REMOTO`. |
 
-{: .campi }
-
 `SERVER REMOTO` serve a chi ha più punti vendita collegati: permette di
 vedere i movimenti di un'altra sede senza cambiare archivio.
 
@@ -105,8 +103,6 @@ vedere i movimenti di un'altra sede senza cambiare archivio.
 | **Progr. Carico**, **Progr. Scarico** | I due progressivi da cui il registro riparte. |
 | **Pagina Iniziale**, **Rigo Iniziale** | Da quale pagina e da quale riga cominciare a stampare. |
 | **Stampa Definitiva** | Fa la stampa buona invece della prova. |
-
-{: .campi }
 
 È un registro vidimato: **Pagina Iniziale** e **Rigo Iniziale** servono a
 riprendere da dove la stampa precedente si era fermata, e i due progressivi a
@@ -126,8 +122,6 @@ il terminale e carica le esistenze.
 | **Articolo** | | Restringe a un articolo. | codice |
 | **Deposito** | | Restringe a un [deposito](depositi.md). | codice |
 | **Reparto**, **Cat. Merc.** | | Restringono alla classificazione. | codici |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

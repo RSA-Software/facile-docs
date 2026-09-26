@@ -62,8 +62,6 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Sezione** | | Restringe a una [sezione](../contabilita/sezioni.md) contabile. | codice |
 | **Tipo Pagam.** | | Quale modalità di pagamento includere. | `TUTTI`, `RIMESSA DIRETTA`, `RI.BA.`, e le altre dell'elenco |
 
-{: .campi }
-
 ### Stampa Sintesi
 
 | Campo | Descrizione |
@@ -75,8 +73,6 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Agente** | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). |
 | **Sezione** | Restringe a una [sezione](../contabilita/sezioni.md). |
 
-{: .campi }
-
 ### Stampa Interessi di Mora
 
 | Campo | Descrizione |
@@ -85,8 +81,6 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Periodo Emissione Documenti** — **Data Iniziale**, **Data Finale** | Quali documenti considerare, per data di emissione. |
 | **Periodo Calcolo Interessi** — **Data Iniziale**, **Data Finale** | **Entro quali date contare i giorni di ritardo.** È il periodo che determina il conto. |
 | **Sezione** | Restringe a una sezione. |
-
-{: .campi }
 
 I due periodi non sono la stessa cosa: il primo sceglie **quali** scadenze
 guardare, il secondo dice **da quando a quando** contare il ritardo.
@@ -97,8 +91,6 @@ guardare, il secondo dice **da quando a quando** contare il ritardo.
 |---|---|
 | **Giorni Preavviso** | Quanti giorni prima della scadenza far comparire il cliente. |
 | **Conferma Invio** | Chiede conferma prima di mandare ogni lettera. |
-
-{: .campi }
 
 Sotto c'è la griglia dei clienti da sollecitare, da cui si scelgono quelli a
 cui mandare il sollecito.

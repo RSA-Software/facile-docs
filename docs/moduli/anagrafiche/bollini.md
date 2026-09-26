@@ -60,8 +60,6 @@ Durante il lavoro compare la finestra di avanzamento, con la scritta
 |---|:---:|---|---|
 | **Data Azzeramento Bollini** | ● | La data a cui azzerare i bollini. Compare solo per la campagna attuale. | data |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

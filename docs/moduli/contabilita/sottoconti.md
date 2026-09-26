@@ -69,8 +69,6 @@ dei saldi.
 | Codice IVA | | Aliquota IVA proposta sulle registrazioni. Accanto compare la descrizione. | Codice dall'archivio aliquote IVA |
 | Codici per Trasferimento | | I tre codici — mastro, conto e sottoconto — con cui il sottoconto viene riconosciuto nei trasferimenti verso altre sedi. | Codici |
 
-{: .campi }
-
 La griglia in basso non si compila: mostra i saldi del sottoconto con le
 colonne **Sezione**, **Anno**, **Dare**, **Avere** e **Saldo**.
 

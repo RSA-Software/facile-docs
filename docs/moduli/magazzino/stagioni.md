@@ -46,8 +46,6 @@ campi.
 | Descrizione | ● | Nome della stagione, come compare in anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Cod. Trasferimento | | Codice con cui la stagione viene riconosciuta nei trasferimenti verso altre sedi. | Testo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

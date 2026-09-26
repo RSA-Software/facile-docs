@@ -73,8 +73,6 @@ OK** ed **Esci**.
 | **Registro** | | Restringe a un registro di numerazione. | `TUTTI` o una voce dell'elenco |
 | **Includi Ordini Totalmente Evasi** | | Se attivo stampa anche gli ordini già chiusi. Negli ordini a fornitori l'etichetta è **Includi Ordini Totalmente Ricevuti**. | attivo/non attivo |
 
-{: .campi }
-
 ### Stampa Ordini per Articolo
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -87,8 +85,6 @@ OK** ed **Esci**.
 | **Includi Ordini Totalmente Evasi** | | Se attivo stampa anche gli ordini già chiusi. Negli ordini a fornitori l'etichetta è **Includi Ordini Totalmente Ricevuti**. | attivo/non attivo |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `DESCRIZIONE` |
 | **Tipo Stampa** | | Quanto dettaglio mostrare. | `ESTESA`, `SINTETICA` |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

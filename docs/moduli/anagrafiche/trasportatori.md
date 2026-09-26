@@ -62,8 +62,6 @@ recapiti e i dati del mezzo.
 | Targa | | Targa dell'automezzo abituale. | Fino a 11 caratteri |
 | N. Albo | | Numero di iscrizione all'albo degli autotrasportatori, da riportare sui documenti di trasporto. | Fino a 10 caratteri |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

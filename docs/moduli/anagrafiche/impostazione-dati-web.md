@@ -76,8 +76,6 @@ voce di menu dice *Impostazione*. È divisa in quattro zone:
 | **Includi WEB** | | **Se l'articolo va pubblicato sul sito.** È l'interruttore principale: senza questa spunta tutto il resto non serve. | attivo/non attivo |
 | **Esistenza** | | Quanto ce n'è nel deposito scelto. | quantità |
 
-{: .campi }
-
 ### Le schede
 
 | Scheda | Cosa contiene |

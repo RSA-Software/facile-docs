@@ -58,8 +58,6 @@ clic su una riga apre la finestrella con cui la si compila.
 | **Tipo Fatturazione** | | Se il periodo indicato sulla fattura va avanti o indietro rispetto al mese di emissione. | `POSTICIPATA`, `ANTICIPATA`, `NESSUNA DATA` |
 | **Blocca Fatturazione** | | Sospende il contratto: le sue righe compaiono ancora nell'emissione, ma in evidenza e **già deselezionate**. | attivo/non attivo |
 
-{: .campi }
-
 ### La riga da fatturare
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -72,7 +70,6 @@ clic su una riga apre la finestrella con cui la si compila.
 | **Prezzo Unitario** | | Il prezzo da applicare. | importo |
 | **% Sco. Rivenditore** | | Sconto sulla riga. | percentuale |
 
-{: .campi }
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

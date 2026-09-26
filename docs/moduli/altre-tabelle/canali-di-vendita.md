@@ -60,8 +60,6 @@ viene comunicato ad alcuni fornitori.
 | **Froneri** | | Codice del canale per i trasferimenti Froneri. | testo |
 | **Udial** | | Codice del canale per i trasferimenti Udial. | testo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

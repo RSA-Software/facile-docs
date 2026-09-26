@@ -63,8 +63,6 @@ riquadri **CASTELLETTI** e **TASSI**.
 | Ultimo Movimento | | Data dell'ultimo movimento sul conto. **Si scrive a mano**: nessuna registrazione la aggiorna. | Data |
 | Cod. Azienda, Dipendenza, ABI, CAB, Num. Conto, Sportello | | Le coordinate bancarie del conto. | Testo |
 
-{: .campi }
-
 ### Disponibilità
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -72,8 +70,6 @@ riquadri **CASTELLETTI** e **TASSI**.
 | Saldo Attuale | | Saldo del conto. **Si scrive a mano**: nessuna registrazione lo aggiorna. | Importo |
 | Scopertura Concessa | | Fido concesso dalla banca. | Importo |
 | Fuori Scopertura | | Quanto si è oltre il fido. Calcolato dal programma. | Sola lettura |
-
-{: .campi }
 
 ### Castelletti
 

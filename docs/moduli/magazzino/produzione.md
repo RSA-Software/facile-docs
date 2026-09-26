@@ -79,8 +79,6 @@ ed è il programma a comporre la griglia dei componenti dalla distinta.
 | **Codice Articolo** | ● | Il prodotto finito di cui si sta scrivendo la distinta. | codice |
 | **Q.tà Prodotta** | ● | A quante unità di prodotto finito si riferiscono le quantità dei componenti. Con `100` si scrive la distinta di un lotto da cento pezzi. Deve essere maggiore di zero. | numero |
 
-{: .campi }
-
 Nella griglia, una riga per componente:
 
 | Colonna | Descrizione |
@@ -129,8 +127,6 @@ La griglia in basso è il risultato del calcolo e non si tocca:
 | **Sezione** | ● | La sezione del deposito. | codice |
 | **Codice Articolo** | ● | Il prodotto finito da produrre. Deve avere una distinta, altrimenti la griglia resta vuota e il salvataggio non passa. | codice |
 
-{: .campi }
-
 Nella griglia, prima del salvataggio, ci sono i componenti presi dalla distinta;
 dopo, i movimenti di magazzino veri della commessa, con data, causale, anno e
 numero di movimento. I componenti che hanno **a loro volta una distinta** sono
@@ -149,8 +145,6 @@ La finestra che si apre con **Aggiungi** su una commessa:
 | **Lotto** | | Il lotto da cui si preleva, se l'articolo è a lotti. Un lotto chiuso non è utilizzabile. | codice |
 | **Causale** | ● | *Scarico da Produzione* o *Scarico Sfrido di Produzione*. | due voci |
 
-{: .campi }
-
 ### Carico da Produzione
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -160,8 +154,6 @@ La finestra che si apre con **Aggiungi** su una commessa:
 | **Quantità** | ● | Quanti pezzi si sono prodotti. Diversa da zero. | numero |
 | **Lotto** | | Il lotto del finito, obbligatorio se l'articolo è a lotti. Se non esiste, il programma propone di crearlo. | codice |
 | **Scadenza** | | La scadenza del lotto. | data |
-
-{: .campi }
 
 La griglia sotto, intitolata *Articoli Componenti per Quantità Unitaria di
 Prodotto*, si riempie da sola dalla distinta: accanto a **Q.ta** e **Sfrido**

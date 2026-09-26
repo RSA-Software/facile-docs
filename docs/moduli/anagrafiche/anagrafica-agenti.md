@@ -70,8 +70,6 @@ Le schede sono queste:
 | Codice | ● | Identificativo dell'agente. In modifica non è modificabile. | Numero |
 | Cognome e Nome | ● | Nominativo dell'agente, come compare sui documenti e nelle stampe. | Fino a 91 caratteri |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -95,8 +93,6 @@ Le schede sono queste:
 | Calcola maturato al saldo | | La provvigione matura quando la fattura è incassata per intero, non quando è emessa. | Casella |
 | % TABELLA PROVVIGIONI, da **1 )** a **15 )** | | Le quindici percentuali di provvigione dell'agente. Contano solo con **Calcolo Provvigione Da** impostato su *SCAGLIONE ARTICOLO* o *SCAGLIONE CLIENTE*: a quel punto è lo scaglione scritto sull'articolo o sul cliente a dire quale delle quindici prendere. | Percentuali |
 
-{: .campi }
-
 ### Scheda Totali
 
 I valori di questa scheda si riferiscono all'**anno di lavoro in corso** e si
@@ -112,8 +108,6 @@ salvano insieme all'agente.
 | % Ritenuta Acconto | | Ritenuta d'acconto applicata all'agente. | Percentuale |
 | % Ritenuta Enasarco | | Ritenuta Enasarco applicata all'agente. | Percentuale |
 | Massimale Enasarco | | Tetto annuo oltre il quale la ritenuta Enasarco non si applica. | Importo |
-
-{: .campi }
 
 ### Schede delle provvigioni
 

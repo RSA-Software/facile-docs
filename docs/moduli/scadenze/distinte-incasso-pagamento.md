@@ -64,8 +64,6 @@ richiamano le scadenze da chiudere, e sotto l'elenco su cui si sceglie.
 | **Conto** | | Il conto su cui registrare l'incasso o il pagamento — la cassa, la banca. | codice |
 | **Sezione** *(la seconda)* | | La sezione della registrazione. | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

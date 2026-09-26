@@ -78,8 +78,6 @@ anagrafici.
 | **Data di Nascita** | | La data di nascita. | Data |
 | **Data Inizio Rapporto** | | Da quando la persona collabora con lo studio. | Data |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -61,8 +61,6 @@ con i soli campi **Fornitore** e **Cliente** per restringere l'elenco.
 | **Competenze Nostre al KG.** | | Quanto spetta all'azienda per ogni chilo. | importo |
 | **Competenze Agente al KG.** | | Quanto spetta all'agente per ogni chilo. | importo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

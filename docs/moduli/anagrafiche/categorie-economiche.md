@@ -55,8 +55,6 @@ codice e descrizione, e in fondo le caselle di classificazione.
 | Gen. Crediti Sospesa | | **Solo Studio.** Sospende la generazione dei crediti per chi appartiene a questa categoria. | Casella |
 | Pagamento con Bonifico | | **Solo Studio.** Segnala che chi appartiene a questa categoria paga con bonifico. | Casella |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

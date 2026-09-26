@@ -74,8 +74,6 @@ Le quattro finestre sono diverse fra loro:
 | **Dal** | ● | Prima data di decorrenza da mostrare. All'apertura è proposta la data di oggi. | data |
 | **Al** | ● | Ultima data di decorrenza da mostrare. | data |
 
-{: .campi }
-
 La griglia mostra una riga per variazione:
 
 | Colonna | Contenuto |
@@ -102,8 +100,6 @@ Le variazioni in perdita rispetto al prezzo attuale sono evidenziate a colore.
 |---|:---:|---|---|
 | **Data Variazioni** | ● | Il giorno di decorrenza delle variazioni da rendere effettive. | data |
 
-{: .campi }
-
 ### Cancella Variazioni Listini
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -112,8 +108,6 @@ Le variazioni in perdita rispetto al prezzo attuale sono evidenziate a colore.
 | **Dal** | ● | Prima data di decorrenza da cancellare. | data |
 | **Al** | ● | Ultima data di decorrenza da cancellare, non anteriore a **Dal**. | data |
 | **Articolo**, **Cod. Iva**, **Reparto**, **Cat. Merc.**, **Fornitore**, **Stagione**, **Gruppo**, **Marchio**, **Sottogruppo** | | Il riquadro di selezione degli articoli, uguale a quello delle [variazioni di massa](variazioni-di-massa.md). Lasciandolo libero si cancellano le variazioni di tutti gli articoli. | codici, oppure `TUTTI` |
-
-{: .campi }
 
 ### Stampa Variazioni Listini
 

@@ -41,8 +41,6 @@ i campi per entrare.
 | **Password** | La password dell'utente. |
 | **Crea struttura directory** | Riservata all'installazione: crea le cartelle di lavoro. Su archivi SQL l'etichetta diventa **Crea/Aggiorna Database**. |
 
-{: .campi }
-
 !!! note "I primi tre campi non sempre si vedono"
 
     **Server**, **Host** e **Archivio** riguardano il collegamento al server dei

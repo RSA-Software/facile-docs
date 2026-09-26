@@ -64,8 +64,6 @@ del titolo.
 | Versato il | | Data in cui il titolo è stato versato. Diventa obbligatoria se compili la **Banca**, e deve cadere nell'anno di lavoro. | Data |
 | Cod. Rinnovo | | Numero del titolo che sostituisce questo, quando viene rinnovato. | Numero di un altro titolo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

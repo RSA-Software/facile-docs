@@ -49,8 +49,6 @@ descrizione del mastro, e sotto la griglia dei saldi.
 | Descrizione | ● | Nome del mastro, come compare nel piano dei conti e nelle stampe. | Fino a 30 caratteri |
 | Iva Esente | | Segnala che il mastro raccoglie operazioni esenti da IVA. **Conta solo nella versione Studio.** | Casella |
 
-{: .campi }
-
 La griglia in basso non si compila: mostra i saldi del mastro con le colonne
 **Sezione**, **Anno**, **Dare**, **Avere** e **Saldo**.
 

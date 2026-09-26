@@ -57,8 +57,6 @@ dieci. Ogni riga ha tre caselle.
 | Rifer. | | Riferimento interno della taglia, per allinearla a una codifica propria o del fornitore. | Testo breve |
 | Web | | La taglia come deve comparire sul sito. | Testo breve |
 
-{: .campi }
-
 Si compilano solo le righe che servono: un gruppo di otto taglie occupa le
 prime otto righe e lascia vuote le altre quarantadue.
 

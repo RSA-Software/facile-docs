@@ -50,8 +50,6 @@ campi e una casella.
 | **Password** | | Il codice che l'operatore digita per farsi riconoscere alla cassa touch. Si scrive coperto, a pallini, sia qui sia alla cassa. Distingue maiuscole e minuscole. | testo, fino a 16 caratteri |
 | **Supervisore** | | Dà a questo operatore il permesso di usare i tasti riservati della cassa touch. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

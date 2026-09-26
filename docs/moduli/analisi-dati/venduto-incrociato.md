@@ -77,8 +77,6 @@ quella del gruppo agenti ha i filtri sull'anagrafica dei clienti.
 | **Ordinamento** | | Come ordinare le righe. | `CODICE`, `ALFABETICO` |
 | **Salto Pagina dopo ogni Cliente** | | Manda ogni cliente su una pagina propria: comodo per consegnare a ciascuno il suo foglio. Il salto segue il **primo** raggruppamento, non il secondo. | attivo/non attivo |
 
-{: .campi }
-
 ### Venduto per Agente/Articolo
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -94,8 +92,6 @@ quella del gruppo agenti ha i filtri sull'anagrafica dei clienti.
 | **Ordinamento** | | Come ordinare. | `CODICE`, `ALFABETICO` |
 | **Salto Pagina dopo ogni Agente** | | Manda ogni agente su una pagina propria: comodo per consegnare a ciascuno il suo foglio. | attivo/non attivo |
 
-{: .campi }
-
 ### Comparazione Venduto Agenti su due Anni
 
 Stessi filtri della maschera per agente, con al posto del periodo:
@@ -104,8 +100,6 @@ Stessi filtri della maschera per agente, con al posto del periodo:
 |---|:---:|---|---|
 | **Primo Anno** | ● | L'annata di riferimento. | anno |
 | **Secondo Anno** | ● | L'annata con cui confrontarla. | anno |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

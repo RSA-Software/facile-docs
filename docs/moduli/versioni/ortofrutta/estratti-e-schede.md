@@ -28,8 +28,6 @@ Il venduto di un periodo, dal lato del cliente.
 | **Fornitore** | Restringe al venduto proveniente da un produttore. |
 | **Solo Causali Preimpostate** | Considera soltanto le causali di vendita previste dalle impostazioni della ditta, lasciando fuori tutto il resto. |
 
-{: .campi }
-
 Produce la stampa **Estratto Vendite**.
 
 ## Estratto Vendita Fornitore
@@ -44,8 +42,6 @@ della sua merce, a chi e a quanto.
 | **Fornitore** | Il produttore di cui si vuole l'estratto. |
 | **Filtro** | Quali movimenti prendere: `CAUSALI VENDITA PREIMPOSTATE`, `CAUSALE VENDITA`, `CAUSALE VENDITA S.D.` o `RESI`. |
 | **Ordinamento** | `CODICE` o `DESCRIZIONE`. |
-
-{: .campi }
 
 Produce la stampa **Estratto Vendite Fornitore**.
 
@@ -67,8 +63,6 @@ Il conto di un cliente, movimento per movimento.
 | **Stampa Iva** | Aggiunge l'IVA alla stampa. |
 | **Dettaglio** | Elenca le singole righe invece dei soli documenti. |
 
-{: .campi }
-
 !!! tip "«Non fatturati» è la lista di quello che manca"
 
     `NON FATTURATI` mostra le consegne che non sono ancora diventate fattura:
@@ -85,8 +79,6 @@ Quanto si è trattenuto di provvigione in un periodo.
 | **Causale** | Restringe a una causale di magazzino. |
 | **Fornitori** | Uno o più produttori; il pulsante **…** apre l'elenco da cui spuntarli. |
 
-{: .campi }
-
 Produce la stampa **Provvigione Periodo**, in due modelli diversi secondo che si
 sia scelto un solo produttore o più d'uno.
 
@@ -99,8 +91,6 @@ Che cosa è rimasto invenduto a una certa data.
 | **Data** | La data a cui fotografare le rimanenze. |
 | **Fornitore** | Restringe a un produttore. |
 | **Raggruppamento** | Come raccogliere le righe: `PARTITA`, `ARTICOLO + FORNITORE` o `ARTICOLO`. Ogni scelta ha il suo modello di stampa. |
-
-{: .campi }
 
 Nel riquadro **Partita in fase di controllo** si indicano una **Partita** e un
 **Fornitore** e la griglia mostra come sta quella partita, per verificarla

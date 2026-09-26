@@ -63,8 +63,6 @@ degli uffici fiscali sotto.
 | Codice Istat | | Codice ISTAT del comune. | Fino a 6 caratteri |
 | Azienda USL | | Codice dell'azienda sanitaria di competenza. | Fino a 3 caratteri |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -67,8 +67,6 @@ di variazione.
 | **Margine** | | Percentuale di margine che risulta dai due totali. Solo lettura. | — |
 | **Filtra Prezzo Acquisto :** | | Restringe la griglia agli articoli il cui prezzo d'acquisto si è mosso in un certo modo. | `TUTTI`, `IN AUMENTO`, `IN DIMINUIZIONE`, `NON VARIATI` |
 
-{: .campi }
-
 La griglia mostra, per ogni articolo dei documenti scelti: **Codice**,
 **Descrizione**, **Esistenza**, **Venduto Ult. 30gg**, **Quantità Caricata -
 Ordinata**, **Totale Rigo**, **Tipo Operaz.**, **Prezzo Acquisto Precedente** e
@@ -92,8 +90,6 @@ Si apre con **F4 - Filtro** e sceglie i documenti da esaminare:
 | **Dal**, **Al** | | Periodo dei documenti. | date |
 | **Fornitore** | | Limita ai documenti di un fornitore. | codice, oppure vuoto per tutti |
 
-{: .campi }
-
 Sotto compare l'elenco dei documenti che rispondono ai criteri, con **Sel**,
 **Anno**, **Tipo**, **Deposito**, **Numero**, **Data**, **Cod. Doc.**, **Num.
 Doc.**, **Data Doc.**, **Cod. Forn.**, **Fornitore**, **Verificato** e
@@ -107,8 +103,6 @@ Doc.**, **Data Doc.**, **Cod. Forn.**, **Fornitore**, **Verificato** e
 | **Listino Target** | ● | Il listino da allineare, quello su cui si scrive. | codice del listino |
 | **Categoria Merceol.** | | Limita il confronto a una [categoria merceologica](../magazzino/categorie-merceologiche.md). | codice, oppure vuoto per tutte |
 | **Reparto** | | Limita il confronto a un [reparto](../magazzino/reparti.md). | codice, oppure vuoto per tutti |
-
-{: .campi }
 
 La griglia elenca gli articoli il cui **prezzo netto** è diverso fra i due
 listini, con **Sel**, **Codice**, **Descrizione**, **Ult. Prezzo Acq.**, poi il

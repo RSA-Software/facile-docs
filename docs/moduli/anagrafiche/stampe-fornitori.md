@@ -55,8 +55,6 @@ ed **Esci**.
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `ALFABETICO` |
 | **Formato** | ● | L'impaginazione della stampa. | `SINTETICA`, `DETTAGLIATA`, `ETICHETTE`, `RICHIESTA DATI FISCALI` |
 
-{: .campi }
-
 Le stampe contabili — **Stampa Schede** e **Stampa Saldi** — aggiungono
 **Data Iniziale**, **Data Finale** e **Sezione**, e usano gli stessi filtri
 delle corrispondenti [stampe clienti](stampe-clienti.md).

@@ -67,8 +67,6 @@ caselle dei registri e i pulsanti **F2 - OK** ed **Esci**.
 | **Giornale** | | Include le registrazioni di solo giornale. | attivo/non attivo |
 | **Includi Movimenti già esportati** | | Rimanda anche quello che era già stato esportato in precedenza. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

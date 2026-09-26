@@ -95,8 +95,6 @@ la testata ne ha alcuni.
 | **Totale Q.tà**, **Tot. Imponibile**, **Totale IVA**, **TOTALE** | | I totali di quello che è sul banco. | Sola lettura |
 | **Punti Fidelity** | | A sinistra i punti che questa vendita fa maturare, a destra quelli già in saldo sulla tessera del cliente. | Sola lettura |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 Questi sono i comandi della schermata **Vendita**.

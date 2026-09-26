@@ -72,8 +72,6 @@ pulsante: dice da dove leggere e dove mettere quello che arriva.
 | **Data Ultimo Inventario** | | Quando quell'articolo era stato inventariato l'ultima volta, in quel deposito. Di sola lettura. | data |
 | **Codice su Stampa (se Diverso)** | | Il codice da far comparire in stampa al posto di quello dell'articolo. | codice |
 
-{: .campi }
-
 ### Acquisizione Letture per Inventario
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -81,8 +79,6 @@ pulsante: dice da dove leggere e dove mettere quello che arriva.
 | **Deposito** | ● | Dove mettere le letture che arrivano. | codice |
 | **Sezione** | | La sezione a cui riferirle. Se l'utente ne ha una assegnata, arriva già compilata e bloccata. | codice |
 | **Origine** | ● | Da dove leggere. | `PALMARE ANDROID`, `DATALOGIC FORMULA 734`, `METEOR ECO 486`, `UNITECH PT630D`, `METEOR PT10`, `ZEBEX 2030`, `EIA THUNDER`, `EIA SOLARIS`, `SYMBOL PDT3100`, `TYSSO BCP8000 - ET8000`, `DENSO N661`, `PALMARE WINDOWS MOBILE` |
-
-{: .campi }
 
 !!! note "**EIA THUNDER** e **EIA SOLARIS** sono la stessa scelta"
 

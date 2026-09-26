@@ -65,8 +65,6 @@ banco, in basso il riquadro degli sconti e delle provvigioni per scaglione.
 | Cod. Articolo | | Registrato e **non usato**: nessuna generazione di codice lo consulta. | Testo |
 | Suffisso | | Registrato e **non usato**, come il precedente. | Testo |
 
-{: .campi }
-
 ### Vendita al banco
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -77,8 +75,6 @@ banco, in basso il riquadro degli sconti e delle provvigioni per scaglione.
 | Consumabili | | Segnala che la categoria raccoglie articoli di consumo. | Casella |
 | Turno | | Turno di servizio a cui la categoria appartiene. | Numero |
 | Stampante | | Dove inviare la comanda degli articoli della categoria. | NESSUNA, CASSA, CUCINA, BAR, PIZZERIA, PASTICCERIA, OPZIONALE - 1 … OPZIONALE - 5, TUTTE |
-
-{: .campi }
 
 ### Sconti e provvigioni
 

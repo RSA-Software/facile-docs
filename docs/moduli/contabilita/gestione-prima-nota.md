@@ -70,8 +70,6 @@ La griglia ha queste colonne:
 | **Sezione** | | Restringe a una [sezione](sezioni.md) contabile. | codice |
 | **Causale** | | Restringe a una [causale](causali-contabili.md). | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

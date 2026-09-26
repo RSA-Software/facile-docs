@@ -49,8 +49,6 @@ griglia dei saldi.
 | Codice | ● | Identificativo del conto dentro il mastro. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Nome del conto, come compare nel piano dei conti e nelle stampe. | Fino a 30 caratteri |
 
-{: .campi }
-
 La griglia in basso non si compila: mostra i saldi del conto con le colonne
 **Sezione**, **Anno**, **Dare**, **Avere** e **Saldo**.
 

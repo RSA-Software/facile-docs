@@ -46,8 +46,6 @@ IVA*: la barra dei comandi e sei campi.
 | **Provincia** | | Sigla della provincia. | due lettere |
 | **Cap** | | Codice di avviamento postale. | cinque cifre |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

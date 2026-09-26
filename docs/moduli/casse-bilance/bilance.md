@@ -90,8 +90,6 @@ Magica*).
 | **Formato BANCONE + PLU** | ● | Come è composto il codice: quante cifre per il bancone e quante per il PLU. | `3 + 3`, `2 + 4` |
 | **Invia Tutti gli Articoli** | | Se attivo manda l'intero archivio invece delle sole variazioni. | attivo/non attivo |
 
-{: .campi }
-
 ### Invio Articoli Bilance Elga Aurora / Magica
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -99,8 +97,6 @@ Magica*).
 | **Bancone** | ● | Il bancone a cui mandare gli articoli. | numero |
 | **Porta COM** | ● | La porta seriale a cui la bilancia è collegata. | `NESSUNA`, `COM1` … `COM8` |
 | **Data** | | La data a cui riferire l'operazione. | data |
-
-{: .campi }
 
 La stessa finestra serve tutte e tre le voci delle bilance Elga — invio,
 ricezione da bilance e ricezione da file — con i campi che restano gli stessi.

@@ -81,8 +81,6 @@ vuoti, il reso da bolla, l'interrogazione e la stampa della situazione.
 | **Prezzo Cauzione** | | Quanto si addebita alla consegna e si rende al ritorno del vuoto. | Importo |
 | **Prezzo Vendita** | | Quanto vale il contenitore se non torna indietro. | Importo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

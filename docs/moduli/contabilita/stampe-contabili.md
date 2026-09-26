@@ -69,8 +69,6 @@ per le stampanti ad aghi dei moduli continui.
 | **Tipo Stampa** | | Come stampare. | `TESTO`, `GRAFICA` |
 | **Stampa Compatta** | | Riduce l'ingombro. | attivo/non attivo |
 
-{: .campi }
-
 ### Brogliaccio Movimenti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -81,8 +79,6 @@ per le stampanti ad aghi dei moduli continui.
 | **Causale** | | Restringe a una [causale](causali-contabili.md). | codice |
 | **Registro** | | Quale registro esaminare. | `TUTTI`, `LIBRO GIORNALE`, `REG. ACQUISTI`, `REG. FATTURE EMESSE`, `REG. CORRISPETTIVI`, `REG. FATTURE IN SOSPENSIONE`, `REG. ACQUISTI CEE`, `REG. FATTURE EMESSE CEE` |
 
-{: .campi }
-
 ### Libro Mastro
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -92,8 +88,6 @@ per le stampanti ad aghi dei moduli continui.
 | **Sezione** | | La [sezione](sezioni.md) contabile. | codice |
 | **Tipo Stampa** | | Come stampare. | `GRAFICA`, `TESTO` |
 | **Stampa Intestazione** | | Stampa l'intestazione in testa ai fogli. | attivo/non attivo |
-
-{: .campi }
 
 ### Stampa Libro Giornale
 
@@ -113,8 +107,6 @@ per le stampanti ad aghi dei moduli continui.
 | **Stampa Riferimento Interno** | | Aggiunge il riferimento interno della registrazione. | attivo/non attivo |
 | **Stampa Intestazione** | | Stampa l'intestazione in testa ai fogli. | attivo/non attivo |
 
-{: .campi }
-
 ### Bilancio di Verifica
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -125,8 +117,6 @@ per le stampanti ad aghi dei moduli continui.
 | **Dettaglio Clienti/Fornitori** | | Se scendere al singolo cliente o fornitore. | `NO`, `SI` |
 | **Sezione (0 = TUTTE)** | | La [sezione](sezioni.md) contabile. | codice, `0` per tutte |
 | **Formato Stampa** | | L'impaginazione. | `NORMALE`, `SEZIONI CONTRAPPOSTE` |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

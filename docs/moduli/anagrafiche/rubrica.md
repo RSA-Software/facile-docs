@@ -73,8 +73,6 @@ Rubrica ▸ Inserimento**.
 | Numero | | Il recapito vero e proprio. Le prime quattro righe sono telefoni, le quattro successive cellulari, le ultime due fax. | Fino a 14 cifre ciascuno |
 | E-Mail | | Sei caselle per altrettanti indirizzi di posta. | Fino a 45 caratteri ciascuno |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

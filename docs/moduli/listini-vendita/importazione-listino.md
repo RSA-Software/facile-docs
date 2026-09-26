@@ -108,8 +108,6 @@ da aprire!*: non c'è modo di indicarne un altro.
 | **Fornitore** | | Il fornitore a cui associare gli articoli importati. | codice, oppure vuoto per tutti |
 | **Marchio** | | Il marchio da assegnare agli articoli importati. | codice, oppure vuoto per tutti |
 
-{: .campi }
-
 La finestra di **Fenapro** ha il solo campo **Listino**.
 
 ## Pulsanti e comandi

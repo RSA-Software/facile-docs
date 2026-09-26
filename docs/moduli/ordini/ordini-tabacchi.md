@@ -69,8 +69,6 @@ evidenza, e la barra dei pulsanti.
 | **Fornitore** | ● | Il soggetto dell'ordine. Nell'ordine patentini l'etichetta è **Cliente**. | codice |
 | **Filtro** | | Quali righe della griglia restare a vedere. Non cambia l'ordine, solo la vista. | `TUTTE LE RIGHE`, `SOLO RIGHE CON QUANTITA'`, `SOLO RIGHE SOTTOSCORTA`, `SOLO RIGHE SOPRASCORTA` |
 
-{: .campi }
-
 Le colonne della griglia sono **Codice**, **Descrizione**, **Q.tà (Kg)**,
 **Q.tà Pat. (Kg)**, **Prezzo (Kg)**, **Totale**, **Min Riord. (Kg.)**,
 **Cod.Num**, **Scorta Min (Kg.)**, **Scorta Max (Kg.)**, **Cod. Iva**,

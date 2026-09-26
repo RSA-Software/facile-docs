@@ -67,8 +67,6 @@ avanzamento.
 | **Movimenti collegati (fatture emesse)** | | Le fatture attribuite a questo avanzamento: **N. Doc.**, **Data**, **Cliente**, **Imponibile**, **IVA**, **Totale**. | Elenco |
 | **Non ancora utilizzati** | | Le fatture emesse che non sono collegate a nessun avanzamento. Stesse colonne. | Elenco |
 
-{: .campi }
-
 La colonna **Obbl.** segna con ● i campi che il programma richiede per
 salvare: qui è **solo il numero**.
 

@@ -53,8 +53,6 @@ aperta.
 | **Articolo** | | Restringe a un articolo. | codice |
 | **Deposito** | | Restringe a un [deposito](depositi.md). | codice |
 
-{: .campi }
-
 !!! info "I campi della maschera"
 
     È la **stessa finestra** delle stampe di magazzino clienti — cambia il

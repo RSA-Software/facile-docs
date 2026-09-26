@@ -98,8 +98,6 @@ non è un guasto.
 | Rag. Soc. 1/Cognome | ● | Denominazione del fornitore, o il cognome se è una persona fisica. | Fino a 45 caratteri |
 | Rag. Soc. 2/Nome | | Seconda riga della denominazione, o il nome se è una persona fisica. | Fino a 45 caratteri |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -139,8 +137,6 @@ non è un guasto.
 | %Provvig. 2 | | Seconda percentuale di provvigione. | Percentuale |
 | Reg. DDT | | Registro su cui numerare i documenti di trasporto di questo fornitore. | (vuoto) o un registro definito in azienda |
 
-{: .campi }
-
 ### Scheda Impostazioni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -163,8 +159,6 @@ non è un guasto.
 | Passaporto Fitosanit. | | **Solo Ortofrutta.** Numero del passaporto fitosanitario del fornitore. | Fino a 30 caratteri |
 | Tipo Codice XML | | Nome del tipo di codice usato dal fornitore nelle sue fatture elettroniche. Se ne possono indicare tre. | Fino a 30 caratteri ciascuno |
 | Codice Facile | | Codice di Facile a cui agganciare il tipo indicato a fianco. Uno per ciascuna delle tre righe. | NESSUNO, PRINCIPALE, CODICE A BARRE, CODICE ARTICOLO FORNITORE |
-
-{: .campi }
 
 I tre campi **Tipo Codice XML** e i tre **Codice Facile** stanno nel riquadro
 **CODICI AGGANCIO FATTURE ELETTRONICHE** e vanno letti a coppie: a sinistra

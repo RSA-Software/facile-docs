@@ -49,8 +49,6 @@ campi. Il titolo in modifica è *Modifica Sconti Fornitore*.
 | **Descrizione** | ● | Nome della tabella, come compare quando la si richiama sul contratto. | testo |
 | **Metodo Calcolo** | | Classifica lo sconto. Il programma la registra e la mostra nell'elenco, ma non la usa in nessun calcolo. | `NORMALE`, `PRIMARIO`, `SECONDARIO` |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

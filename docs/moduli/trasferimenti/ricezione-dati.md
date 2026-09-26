@@ -75,8 +75,6 @@ propria **Ricezione DDT Consegnati da Terzi** (un campo, *Cliente Concess.*),
 |---|:---:|---|---|
 | **Cliente Concess.** | ● | Il concessionario che ha emesso i documenti. | codice |
 
-{: .campi }
-
 ### Importazione Aggiornamenti Argon
 
 Non ha campi di testata: si lavora nella griglia, che mette a confronto quello
@@ -97,8 +95,6 @@ Si spuntano le righe da accettare: quello che non è spuntato non entra.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Fornitore** | ● | Il [fornitore](../anagrafiche/anagrafica-fornitori.md) a cui riferire i dati che arrivano. | codice |
-
-{: .campi }
 
 Non si sceglie nessun file: i file li cerca il programma dove è previsto
 (vedi le note).

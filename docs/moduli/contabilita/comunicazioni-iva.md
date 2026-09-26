@@ -59,8 +59,6 @@ Aggregazioni** hanno una forma propria.
 | **Periodo** | ● | Il periodo da comunicare. | periodo |
 | *(elenco senza etichetta)* | ● | Quali fatture comunicare. | `EMESSE`, `RICEVUTE` |
 
-{: .campi }
-
 ### Gestione Aggregazioni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -70,8 +68,6 @@ Aggregazioni** hanno una forma propria.
 | **Anno Apertura**, **Anno Chiusura** | | Il periodo di validità. | anni |
 | **Cliente / Fornitore** | ● | Il soggetto a cui l'aggregazione si riferisce. | codice |
 | **Controllo Soglia** | | Se sottoporre l'aggregazione al controllo della soglia. | attivo/non attivo |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

@@ -54,8 +54,6 @@ Sono tre finestrelle con pochi campi e i pulsanti **F2 - OK** ed **Esci**.
 | **Sottoconto** | | Restringe a un [sottoconto](sottoconti.md). | codice |
 | **Sezione** | | Restringe a una [sezione](sezioni.md) contabile. | codice |
 
-{: .campi }
-
 ### Stampa Piano dei Conti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -63,8 +61,6 @@ Sono tre finestrelle con pochi campi e i pulsanti **F2 - OK** ed **Esci**.
 | **Solo Mastri** | | Ferma la stampa al primo livello, senza scendere a conti e sottoconti. | `SI`, `NO` |
 | **Includi Clienti** | | Se stampare anche i sottoconti dei clienti, che sono molti. | `SI`, `NO` |
 | **Includi Fornitori** | | Se stampare anche i sottoconti dei fornitori. | `SI`, `NO` |
-
-{: .campi }
 
 ### Stampa Piano dei Conti con Totali
 
@@ -74,8 +70,6 @@ Gli stessi tre campi della stampa precedente, più:
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | ● | Il periodo su cui calcolare i totali. | date |
 | **Mastro Iniziale**, **Mastro Finale** | | L'intervallo di mastri da stampare. | codici |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

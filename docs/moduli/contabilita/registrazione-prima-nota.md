@@ -76,8 +76,6 @@ Nota* — ed è divisa in quattro fasce, dall'alto in basso:
 | **Registrazione da Verificare** | | Marca la registrazione come da ricontrollare: si ritrova nella colonna **Verif.** della [gestione prima nota](gestione-prima-nota.md). | attivo/non attivo |
 | **Escludi da Spesometro** | | Tiene la registrazione fuori dalla [comunicazione delle operazioni IVA](comunicazioni-iva.md). | attivo/non attivo |
 
-{: .campi }
-
 ### Griglia IVA
 
 | Colonna | Contenuto |
@@ -122,8 +120,6 @@ un ricavo su più esercizi:
 | **Inizio**, **Fine** | ● | Il periodo di competenza. | date |
 | **Tipologia** | ● | Che genere di scrittura. | `RATEO ATTIVO`, `RATEO PASSIVO`, `RISCONTO ATTIVO`, `RISCONTO PASSIVO` |
 | **Calcolo** | ● | Come ripartire. | `GIORNI`, `MESI` |
-
-{: .campi }
 
 Sotto compare la ripartizione calcolata, **Anno** per **Importo**.
 

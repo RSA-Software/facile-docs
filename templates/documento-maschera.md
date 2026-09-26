@@ -62,10 +62,8 @@ campi.>
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| <Etichetta esatta come appare a video> | ● | <Cosa contiene e come si compila> | <formato, lunghezza, valori da elenco> |
+| **<Etichetta esatta come appare a video>** | ● | <Cosa contiene e come si compila> | <formato, lunghezza, valori da elenco> |
 | <...> |  | <...> | <...> |
-
-{: .campi }
 
 La colonna **Obbl.** segna con ● i campi che il programma richiede
 obbligatoriamente per salvare.

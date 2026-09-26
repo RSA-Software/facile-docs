@@ -59,8 +59,6 @@ schermo, con la griglia dei soggetti.
 | **Sezione (0 = Tutte)** | | Restringe a una [sezione](sezioni.md). | codice, `0` per tutte |
 | **Cliente** | | Restringe a un nominativo. Nella statistica acquisti l'etichetta è **Fornitore**. | codice |
 
-{: .campi }
-
 ### Statistica Acquisti su Conto
 
 Gli stessi campi, più:
@@ -69,8 +67,6 @@ Gli stessi campi, più:
 |---|:---:|---|---|
 | **Conto** | | Restringe a un [conto](conti.md). | codice |
 | **Ordinamento** | | Come ordinare la stampa. | `CODICE`, `ALFABETICO` |
-
-{: .campi }
 
 ### Squadrature Movimenti
 
@@ -81,8 +77,6 @@ Gli stessi campi, più:
 | **Da Data Reg.**, **A Data Reg.** | | Intervallo di date di registrazione. | date |
 | **Causale** | | Restringe a una [causale](causali-contabili.md). | codice |
 
-{: .campi }
-
 ### Stampa Rapporti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -90,8 +84,6 @@ Gli stessi campi, più:
 | **Data** | ● | La data a cui riferire i rapporti. Dev'essere dentro l'anno di lavoro. | data |
 | **Mostra Anteprima di Stampa** | | Fa vedere ogni rapporto a video prima di mandarlo alla stampante. | attivo/non attivo |
 | **Includi nella stampa** | | Le caselle dei rapporti da produrre: vedi sotto. | una o più caselle |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

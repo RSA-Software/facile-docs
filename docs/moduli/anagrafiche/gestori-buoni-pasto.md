@@ -58,8 +58,6 @@ importi dei buoni accettati, disposti su quattro colonne.
 | Buoni Celiachia | | Segnala che si tratta di buoni celiachia e non di buoni pasto. Spuntandola, il **Cliente** non è più richiesto. | Casella |
 | **1° Taglio** … **20° Taglio** | | I venti valori facciali dei buoni che si accettano da questo gestore. Si compilano solo quelli che servono. | Importi |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

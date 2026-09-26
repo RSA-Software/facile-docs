@@ -70,8 +70,6 @@ Attrezzature in Comodato*, divisa in due da una linea:
 | **Stato** | | In che condizioni è. | `NUOVO`, `USATO`, `ROTTAMATO`, `VENDUTO`, `IN RIPARAZIONE` |
 | **Ns. proprietà** | | Attiva se l'attrezzatura è dell'azienda. | attivo/non attivo |
 
-{: .campi }
-
 ### Dove si trova
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -80,8 +78,6 @@ Attrezzature in Comodato*, divisa in due da una linea:
 | **Destinazione** | | La destinazione merce del cliente presso cui si trova. | codice |
 | **Numero D.D.T.**, **Data D.D.T.** | | Il documento di trasporto con cui è stata consegnata. | numero e data |
 | **Penale** | | Importo da addebitare in caso di mancata restituzione o danneggiamento. | importo |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

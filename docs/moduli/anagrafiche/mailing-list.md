@@ -61,8 +61,6 @@ La griglia ha queste colonne:
 |---|:---:|---|---|
 | **Lista** | ● | Quale lista si sta lavorando. | codice della lista |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 ### Menu Liste

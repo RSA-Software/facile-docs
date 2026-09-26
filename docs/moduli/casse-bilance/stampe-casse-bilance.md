@@ -58,8 +58,6 @@ Flag Variazioni Articoli** non ha maschera: parte e basta.
 | **Deposito** | | Restringe a un [deposito](../magazzino/depositi.md). Vuoto significa `TUTTI`. | codice |
 | **Raggruppamento per Codice** | | Se attivo raggruppa gli scarti per codice invece di elencarli uno per uno. | attivo/non attivo |
 
-{: .campi }
-
 Per i campi delle altre stampe vedi [Stampe articoli](../anagrafiche/stampe-articoli.md).
 
 ## Pulsanti e comandi

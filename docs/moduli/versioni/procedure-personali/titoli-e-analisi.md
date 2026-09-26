@@ -27,8 +27,6 @@ Cambiali, tratte e ricevute bancarie ricevute dai clienti.
 | **Versato il** | La data in cui è stato versato. |
 | **Cod. Rinnovo** | Il titolo che lo sostituisce, quando viene rinnovato. |
 
-{: .campi }
-
 In alto a destra, accanto alla data, il programma scrive **lo stato** del
 titolo: `SCADUTO`, `PAGATO`, `INSOLUTO`, `RINNOVATO`, `RESPINTO`. Non è un campo
 da compilare — lo decide il programma da quello che è successo al titolo.
@@ -55,8 +53,6 @@ controllo da fare periodicamente.
 | **Stato** | `TUTTI`, `ATTIVI`, `SCADUTI`, `PAGATI`, `INSOLUTI`, `RINNOVATI` o `RESPINTI`. |
 | **Banca**, **Cliente** | Restringono a una banca o a un cliente. |
 
-{: .campi }
-
 ## Sospesi e Anticipazioni Varie
 
 Due voci che aprono **la stessa maschera**, tenendo però due elenchi distinti:
@@ -68,8 +64,6 @@ i **sospesi** e le **anticipazioni varie**.
 | **Data** | Quando è sorta. |
 | **Importo** | Di quanto. |
 | **Oggetto** | Cinque righe di testo libero per descriverla. |
-
-{: .campi }
 
 !!! note "Cinque righe di descrizione, e nessun cliente"
 
@@ -85,8 +79,6 @@ i **sospesi** e le **anticipazioni varie**.
 | **Data** | La data a cui fare l'analisi. |
 | **Saldo Accantonamenti** | Il saldo degli accantonamenti da tenere fuori. |
 | **Debito TFR Mese Prec.** | Il debito per trattamento di fine rapporto del mese precedente. |
-
-{: .campi }
 
 I due importi si scrivono a mano perché non stanno nella contabilità corrente:
 servono a depurare la disponibilità di cassa e banca da quello che è già
@@ -108,8 +100,6 @@ rovescia il filtro: invece dei sette indicati, tutti tranne quelli.
 | **Responsabile** | I [responsabili](../studio-collaboratori.md). |
 | **Tipo Contab.** | I tipi di contabilità. |
 
-{: .campi }
-
 !!! tip "«Escludi» è quello che rende utile la maschera"
 
     Chiedere «tutti i clienti tranne quelli in regime forfettario» è molto più
@@ -130,8 +120,6 @@ Crea i sottoconti dell'anno nuovo sotto i conti di **crediti**, **rettifiche** e
 | Campo | Descrizione |
 |---|---|
 | **Anno Iniziale**, **Anno Finale** | Gli anni per cui generare i sottoconti. |
-
-{: .campi }
 
 !!! note "Prima di partire dice quali anni farà"
 

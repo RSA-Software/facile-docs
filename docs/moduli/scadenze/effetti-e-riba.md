@@ -66,8 +66,6 @@ data documento — e i pulsanti **F2 - OK** ed **Esci**.
 | **Fornitore** | | Restringe a un soggetto. Nello scadenziario clienti l'etichetta è **Cliente**. | codice |
 | **Tipo Pagam.** | | Quale genere di effetto includere. | `TUTTI`, `RI.BA.`, `RI.VE.`, `TRATTA`, `ASSEGNO` |
 
-{: .campi }
-
 ### Stampa RI.BA.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -80,8 +78,6 @@ data documento — e i pulsanti **F2 - OK** ed **Esci**.
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Formato Stampa** | | L'impaginazione delle ricevute. | voce dell'elenco |
 
-{: .campi }
-
 ### Contabilizza Effetti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -91,8 +87,6 @@ data documento — e i pulsanti **F2 - OK** ed **Esci**.
 | **Data Doc. Dal**, **Al** | | Periodo della data documento. | date |
 | **Da Numero Scad.**, **A Numero Scad.** | | Intervallo dei numeri di scadenza. | numeri |
 | **Tipo Effetti** | ● | Quale genere di effetto contabilizzare. | `RI.BA.`, `RI.VE.`, e gli altri dell'elenco |
-
-{: .campi }
 
 ## Pulsanti e comandi
 
@@ -206,8 +200,6 @@ data documento — e i pulsanti **F2 - OK** ed **Esci**.
 | **Codice SIA Ditta** | Il codice SIA assegnato dalla banca. Arriva dalla ditta. |
 | **Codice ABI Banca Gateway** | L'ABI della banca che riceve il flusso. |
 
-{: .campi }
-
 ### Contabilizza Effetti
 
 | Campo | Descrizione |
@@ -218,8 +210,6 @@ data documento — e i pulsanti **F2 - OK** ed **Esci**.
 | **Includi gia' Contabilizzate** | Riprende anche quelle già fatte. |
 | **Causale Contabile** | La [causale](../contabilita/causali-contabili.md) con cui registrare. |
 | **Data Contabilizzazione** | Che data dare alle registrazioni: **Data Diversa** — e allora si scrive nel campo **Data** accanto —, **Data Emissione** o **Data Scadenza**. |
-
-{: .campi }
 
 **Tipo Effetti** vale `RI.BA.`, `RI.VE.` o `TRATTA`.
 

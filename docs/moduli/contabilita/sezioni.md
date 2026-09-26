@@ -53,8 +53,6 @@ e descrizione, e il riquadro **Escludi da** con quattro caselle.
 | Stampe Contabili | | La sezione non entra nelle stampe contabili. | Casella |
 | Spesometro | | La sezione non entra nello spesometro. | Casella |
 
-{: .campi }
-
 Le quattro caselle stanno nel riquadro **Escludi da**: spuntarle **toglie** la
 sezione da quell'elaborazione, non la aggiunge.
 

@@ -51,8 +51,6 @@ campi.
 | Descrizione | ● | Nome del centro, come compare in prima nota e nelle stampe analitiche. | Fino a 30 caratteri |
 | Gruppo | | In quale delle tre voci di costo far confluire quello che passa da questo centro. | `FATTURE`, `MANODOPERA`, `ALTRO` |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

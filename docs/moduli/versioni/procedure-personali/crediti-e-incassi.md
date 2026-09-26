@@ -30,8 +30,6 @@ un importo fisso concordato.
 | **Data** | La data da mettere sugli addebiti. |
 | **Sez.** | La [sezione](../../contabilita/sezioni.md). |
 
-{: .campi }
-
 ++f2++ avvia; la barra in basso mostra l'avanzamento.
 
 !!! warning "Sviluppare due volte lo stesso mese raddoppia gli addebiti"
@@ -57,8 +55,6 @@ Il singolo credito, a mano.
 | **Importo** | L'importo di questa registrazione. |
 | **Contropartita** | Mastro, conto e sottoconto su cui va il ricavo. |
 | **Descrizione** | Che cosa si sta addebitando. |
-
-{: .campi }
 
 !!! tip "«Fisso» e «Importo» non sono la stessa cosa"
 
@@ -86,8 +82,6 @@ La finestra si chiama *Incassi Clienti*.
 |---|---|
 | **Cliente** | Di chi si sta incassando. |
 | **Data** | La data dell'incasso. |
-
-{: .campi }
 
 Scelto il cliente, la griglia elenca le sue partite aperte. Si indica quanto si
 incassa su ciascuna, e in basso i tre totali si aggiornano:

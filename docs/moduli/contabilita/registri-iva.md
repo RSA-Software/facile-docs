@@ -69,8 +69,6 @@ stampa, le caselle e i pulsanti **F2 - OK** ed **Esci**.
 | **Stampa Intestazione** | | Stampa l'intestazione in testa ai fogli. | attivo/non attivo |
 | **Stampa Compatta** | | Riduce l'ingombro. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

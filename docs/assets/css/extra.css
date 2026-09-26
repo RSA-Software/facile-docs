@@ -10,12 +10,6 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-/* Tabella dei campi: prima colonna (nome campo) in evidenza. */
-.md-typeset table.campi td:first-child {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
 /* Etichetta per i campi obbligatori: usare {: .obbligatorio } */
 .md-typeset .obbligatorio {
   color: var(--md-accent-fg-color);

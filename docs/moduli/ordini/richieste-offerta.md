@@ -70,8 +70,6 @@ il documento di partenza e il registro di destinazione:
 | **Numero Riferimento** | ● | La richiesta offerta da trasformare. | numero |
 | **Registro** | ● | Il registro su cui nasce l'ordine a fornitore. | voce dell'elenco |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

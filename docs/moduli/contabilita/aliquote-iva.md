@@ -62,8 +62,6 @@ La maschera è divisa in tre parti:
 | Codice | ● | Identificativo del codice IVA. In modifica non è modificabile. | Numero |
 | Descrizione | ● | Denominazione, come compare sui documenti e nei registri. | Fino a 30 caratteri |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -86,8 +84,6 @@ La maschera è divisa in tre parti:
 | Escludi da Comunicazioni IVA | | Tiene il codice fuori dalle comunicazioni IVA. | Casella |
 | Escludi Liquid. IVA - Riga VP2 | | Esclude il codice dal rigo VP2 della liquidazione. | Casella |
 | Escludi Liquid. IVA - Riga VP3 | | Esclude il codice dal rigo VP3 della liquidazione. | Casella |
-
-{: .campi }
 
 ### Schede dei progressivi
 

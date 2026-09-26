@@ -68,16 +68,12 @@ della griglia di sopra.
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Visualizza documenti già inviati** | | Mostra anche quelle già trasmesse, che di norma spariscono dall'elenco. | attivo/non attivo |
 
-{: .campi }
-
 ### Cruscotto Fatture PA
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
 | **Filtra** | | Restringe l'elenco a quelle andate male. | `TUTTE`, `SCARTATE DIGITHUB`, `SCARTATE SDI` |
-
-{: .campi }
 
 !!! tip "I due scarti non sono la stessa cosa"
 

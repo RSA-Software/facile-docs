@@ -85,8 +85,6 @@ della finestra dice quale stampa si è aperta.
 | **Deposito** | | Restringe a un [deposito](depositi.md). | codice |
 | **Agente** | | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

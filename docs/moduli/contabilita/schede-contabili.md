@@ -66,8 +66,6 @@ La griglia ha queste colonne:
 | **Calcola Saldo Iniziale** | | Se calcolare il saldo che il conto aveva prima della **Data Iniziale**, così il progressivo parte da lì invece che da zero. | attivo/non attivo |
 | **Sezione (0 = Tutte)** | | Restringe a una [sezione](sezioni.md). L'etichetta ricorda che `0` le prende tutte. | codice, `0` per tutte |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

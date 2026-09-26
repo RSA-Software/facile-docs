@@ -70,8 +70,6 @@ In alto la testata — chi ha consegnato, con quali documenti, a quali condizion
 | **% Spese** | | Le spese da ripartire sulla merce. | percentuale |
 | **Stato** | | In che condizioni la merce è stata accettata. | `NORMALE`, `PREZZI DA CONTROLLARE`, `MERCE ACCETTATA CON RISERVA`, `PREZZI NON CONFORMI ALL' ORDINE` |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

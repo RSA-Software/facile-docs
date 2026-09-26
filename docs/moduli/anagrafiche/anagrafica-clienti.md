@@ -116,8 +116,6 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Rag. Sociale 1/Cognome | ● | Denominazione del cliente, o il cognome se è una persona fisica. | Fino a 45 caratteri |
 | Rag. Sociale 2/ Nome | | Seconda riga della denominazione, o il nome se è una persona fisica. | Fino a 45 caratteri |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -155,8 +153,6 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Livello | | Il gruppo di clienti a cui questo appartiene per le promozioni: una promozione riservata a un livello si applica solo ai clienti che hanno **quel** numero. Nella versione Studio il campo non compare. | da 0 a 100; `0` = nessun livello |
 | Riferimento | | Persona o ufficio da contattare presso il cliente. | Fino a 50 caratteri |
 | Sito Web | | Sito internet del cliente. | Fino a 80 caratteri, in minuscolo |
-
-{: .campi }
 
 ### Scheda Impostazioni
 
@@ -196,8 +192,6 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Spese Stoccaggio, Spese Trasporto, Altre Spese | | Spese addebitate al cliente. Nella versione Ortofrutta i tre campi si chiamano **% Incid. Stoccaggio**, **% Incid. Trasporto** e **% Incid. Contratto** e si esprimono in percentuale, da 0 a 100. | Importi |
 | Normale, Transfert, C.S. Vendita, C.S. Trasfert | | Le quattro percentuali di provvigione, nel riquadro **% Provvigioni**. | Percentuali |
 | Crediti Acquistati, Crediti Utilizzati, Crediti Utilizzabili Offline, Num. Crediti Omaggio, Data Crediti Omaggio, Fine Data Xml -> PDF | | **Solo RSA Office.** I crediti del servizio di invio delle fatture elettroniche, nel riquadro **Crediti Invia Fatture Elettroniche**. Nelle altre versioni il riquadro non compare. | Numeri e date |
-
-{: .campi }
 
 !!! warning "Attenzione"
 

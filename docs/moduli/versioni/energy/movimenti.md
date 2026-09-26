@@ -30,8 +30,6 @@ La maschera è divisa in fasce, dall'alto in basso.
 | **Data** | La data del movimento. |
 | **Tipo Richiesta** | Che cosa si sta comunicando: `I - INSERIMENTO`, `C - CANCELLAZIONE`, `A - INSERIMENTO RIENTRO TERZA COPIA DAA`, `D - CANCELLAZIONE RIENTRO TERZA COPIA DAA`. |
 
-{: .campi }
-
 !!! note "Le cancellazioni si comunicano, non si cancellano"
 
     Un movimento già trasmesso non si toglie dal registro: si registra un
@@ -49,8 +47,6 @@ La maschera è divisa in fasce, dall'alto in basso.
 | **Sogg. Obblig.** | Il [soggetto obbligato](tabelle.md) titolare del deposito. |
 | **Ufficio** | L'ufficio dell'Agenzia delle Dogane competente. |
 
-{: .campi }
-
 ### Il movimento
 
 | Campo | Descrizione |
@@ -61,8 +57,6 @@ La maschera è divisa in fasce, dall'alto in basso.
 | **Tipo Docum.**, **Data Docum.**, **Num. Docum.** | Il documento che accompagna il movimento. |
 | **Provenienza** | La nazione di provenienza. |
 | **DAS Collettivo** | Il numero del DAS collettivo, quando c'è. |
-
-{: .campi }
 
 ### Il prodotto e le quantità
 
@@ -76,8 +70,6 @@ La maschera è divisa in fasce, dall'alto in basso.
 | **Q.ta Nominale**, **Confezioni** | Per il condizionato: quanto contiene una confezione e quante ce ne sono. |
 | **Escludi da Calcolo Giacenze** | Tiene il movimento fuori dal conteggio della giacenza. |
 | **Movimento da Controllare** | Lo segna come da verificare. È un promemoria per chi lavora, non un dato da trasmettere. |
-
-{: .campi }
 
 !!! tip "Chili e litri vanno insieme"
 
@@ -93,8 +85,6 @@ La maschera è divisa in fasce, dall'alto in basso.
 | **Posiz. Fisc.** | La [posizione fiscale](tabelle.md) del movimento — accisa assolta, sospensione d'imposta, e così via. |
 | **Tributi Erariali a Debito** | L'importo dei tributi che il movimento fa nascere. |
 | **Note** | Testo libero. |
-
-{: .campi }
 
 ## Inserimento Movimenti DAS
 
@@ -145,8 +135,6 @@ usato il codice sbagliato per un periodo.
 | **A Prodotto** | Il codice nuovo. |
 | **Varia codice anche su DAS** | Estende la sostituzione ai DAS, non solo ai movimenti del registro. |
 
-{: .campi }
-
 !!! danger "È una variazione di massa e non si annulla"
 
     Tocca tutti i movimenti del periodo in una volta e non c'è modo di tornare
@@ -166,8 +154,6 @@ usato il codice sbagliato per un periodo.
 | **Sog. Obbligato** | Restringe a un soggetto obbligato. |
 | **Tipo Movim.** | `C - CARICO`, `S - SCARICO`, `G - GIACENZA A FINE GIORNATA` o `T - TUTTI`. |
 
-{: .campi }
-
 ## Stampa Controllo Giacenze
 
 Verifica che le giacenze tornino: parte da una giacenza iniziale dichiarata e
@@ -179,8 +165,6 @@ la confronta con quella che risulta dai movimenti.
 | **Registro** | Il registro da controllare. |
 | **Giacenza Iniziale (KG)** | I chilogrammi da cui partire. |
 | **Giacenza Iniziale (LT)** | I litri da cui partire. |
-
-{: .campi }
 
 !!! tip "È il controllo da fare prima di trasmettere"
 

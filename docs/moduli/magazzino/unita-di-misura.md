@@ -50,8 +50,6 @@ quattro campi.
 | Coef. Moltip. | | Per quanto va moltiplicata la quantità scritta sul documento. Lasciandolo a **1** la quantità vale così com'è. | Numero |
 | Riporta Colli | | Scrivendo la quantità su una riga di documento, mette **i colli uguali alla quantità**. | Casella |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

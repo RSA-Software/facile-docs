@@ -27,8 +27,6 @@ all'Agenzia.
 | **Cod. Ufficio** | L'ufficio delle dogane destinatario. |
 | **Anno**, **Numero**, **N. Sede** | I riferimenti con cui il flusso si identifica. |
 
-{: .campi }
-
 Sotto, la griglia elenca i movimenti che il flusso conterrà.
 
 ### Generare il file
@@ -92,8 +90,6 @@ Il conto dei tributi di un periodo.
 | **Totale Tributi** | Il saldo. |
 | **Note** | Testo libero. |
 
-{: .campi }
-
 ## Riepilogo Crediti e Riaccrediti
 
 Registra un credito riconosciuto da un provvedimento dell'Agenzia.
@@ -108,8 +104,6 @@ Registra un credito riconosciuto da un provvedimento dell'Agenzia.
 | **Importo Complessivo** | L'importo riconosciuto. |
 | **Importo Scontato** | La parte già utilizzata in compensazione. |
 | **Note** | Testo libero. |
-
-{: .campi }
 
 ## Ravvedimenti
 
@@ -126,8 +120,6 @@ regola su un tributo versato in ritardo.
 | **% Riduzione** | La riduzione che spetta secondo quanto tempo è passato. |
 | **Sanzione** | La sanzione ridotta da pagare. |
 | **Tasso legale**, **Giorni**, **Importo Interessi** | Il conto degli interessi. |
-
-{: .campi }
 
 !!! note "La percentuale di riduzione dipende dal ritardo"
 

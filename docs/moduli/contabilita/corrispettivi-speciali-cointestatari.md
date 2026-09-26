@@ -56,8 +56,6 @@ si aggiungono. **Operazioni Speciali** è una scheda a sé.
 | **Tot. Corrispettivo** | | Il totale del corrispettivo registrato. Solo lettura. | — |
 | **TOT. INTEGRAZIONI** | | La somma delle integrazioni inserite. Solo lettura. | — |
 
-{: .campi }
-
 Per ogni integrazione si compilano:
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -66,8 +64,6 @@ Per ogni integrazione si compilano:
 | **Cod. Fiscale** | ● | Il codice fiscale di chi ha comprato. | codice fiscale |
 | **Importo** | ● | Quanto di quel corrispettivo gli si attribuisce. | importo |
 | **Noleggio/Leasing** | | Segna le operazioni di noleggio o leasing. | attivo/non attivo |
-
-{: .campi }
 
 ### Operazioni Speciali
 
@@ -79,8 +75,6 @@ Per ogni integrazione si compilano:
 | **Partita IVA**, **Cod. Fiscale** | | I dati fiscali del soggetto. | testo |
 | **Data Registraz.** | ● | La data dell'operazione. | data |
 
-{: .campi }
-
 ### Cointestatari Fatture
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -88,8 +82,6 @@ Per ogni integrazione si compilano:
 | **Num. Rif. Int.** | ● | Il riferimento interno della registrazione della fattura. | numero |
 | **Data Reg.** | ● | Data della registrazione. | data |
 | **Num. Fattura**, **Data Fattura.** | | Gli estremi della fattura. | numero e data |
-
-{: .campi }
 
 Per ogni cointestatario si compilano **Codice**, **Cod. Fiscale**, **Partita
 IVA** e **Persona**.
@@ -100,8 +92,6 @@ IVA** e **Persona**.
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | ● | Il periodo da stampare. | date |
 | **Codice Iniziale**, **Codica Finale** | | Nella stampa delle operazioni speciali, l'intervallo di codici. La seconda etichetta contiene un refuso. | numeri |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

@@ -63,8 +63,6 @@ OK** ed **Esci**.
 | **Includi Documenti non Stampati** | | Comprende anche i documenti mai stampati prima. Sugli ordini arriva già attiva. | attivo/non attivo |
 | **Solo Esportazione** | | Non stampa: produce solo il file di esportazione. Compare solo se l'esportazione è abilitata. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

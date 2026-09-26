@@ -86,8 +86,6 @@ La griglia ha queste colonne:
 | **Operatore** | | Restringe a chi ha emesso il documento. | codice |
 | **Stato** | | Restringe allo stato del documento. | voce dell'elenco |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

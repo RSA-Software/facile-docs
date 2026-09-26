@@ -45,8 +45,6 @@ campi.
 | Descrizione | ● | Nome del marchio, come compare in anagrafica articoli e nelle stampe. | Fino a 30 caratteri |
 | Stock Ecommerce | | Se le giacenze degli articoli di questo marchio vanno esposte sul sito. | Da elenco a due valori |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

@@ -79,15 +79,11 @@ mostra il venduto riga per riga prima di produrre il file.
 | **Tipo Esportazione** | ● | Quanto esportare. | `VARIAZIONI ULTIMA ESPORTAZIONE`, `VARIAZIONI ULTIMO GIORNO`, `VARIAZIONI ULTIMA SETTIMANA`, `VARIAZIONI ULTIMO MESE`, `VARIAZIONI DA INIZIO ANNO`, `COMPLETA` |
 | **Cassa** | | La cassa a cui destinare il listino. | codice |
 
-{: .campi }
-
 ### Esportazione Movimenti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Tipo Esportazione** | ● | Quanto esportare. | gli stessi sei valori del listino |
-
-{: .campi }
 
 ### Esportazione Anagrafica EXPERT - Gruppo dello stretto
 
@@ -97,8 +93,6 @@ mostra il venduto riga per riga prima di produrre il file.
 | **Deposito** | | Restringe a un deposito. | codice |
 | **Marchio** | | Restringe a un [marchio](../magazzino/marchi.md). | codice |
 
-{: .campi }
-
 ### Esportazione Fidelity SISA
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -107,8 +101,6 @@ mostra il venduto riga per riga prima di produrre il file.
 | **Codice P. V.** | ● | Il codice del punto vendita. | codice |
 | **Campagna** | | La campagna promozionale a cui i dati si riferiscono. | codice |
 
-{: .campi }
-
 ### Esportazione Vendite Peroni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -116,8 +108,6 @@ mostra il venduto riga per riga prima di produrre il file.
 | **Data Iniziale**, **Data Finale** | ● | Il periodo del venduto. | date |
 | **Fornitore** | | Restringe a un fornitore. | codice |
 | **Cat. Merceologica** | | Restringe a una [categoria merceologica](../magazzino/categorie-merceologiche.md). | codice |
-
-{: .campi }
 
 Le colonne della griglia sono **Data**, **Q.ta Venduta**, **Q.ta Omaggio**,
 **Importo**, **Cliente**, **Destinazione**, **Codice**, **Descrizione**,
@@ -132,8 +122,6 @@ Misura**, **Cod Marchio**, **Desc. Marchio**, **Contenitore** e **Involucro**.
 | **Tipo Invio 730** | ● | Che genere di comunicazione. | `INSERIMENTO`, `VARIAZIONE`, `RIMBORSO`, `CANCELLAZIONE`, `TUTTE` |
 | **Operazione** | ● | Se fermarsi al file o mandarlo. | `GENERAZIONE`, `GENERAZIONE E INVIO` |
 
-{: .campi }
-
 ### Invio Movimenti Articoli Fiscali
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -144,8 +132,6 @@ Misura**, **Cod Marchio**, **Desc. Marchio**, **Contenitore** e **Involucro**.
 | **Autorizzazione** | ● | Gli estremi dell'autorizzazione. | testo |
 | **Data Autorizzazione** | ● | La data dell'autorizzazione. | data |
 | **Soggetto Invio** | | Chi effettua l'invio. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

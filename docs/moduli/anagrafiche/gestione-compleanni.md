@@ -70,8 +70,6 @@ dell'elenco, che le prende da lì.
 | **Data Iniziale** | ● | Primo giorno del periodo da esaminare. | data |
 | **Data Finale** | ● | Ultimo giorno del periodo. | data |
 
-{: .campi }
-
 Il periodo si legge su giorno e mese: l'anno di nascita non entra nel
 confronto.
 

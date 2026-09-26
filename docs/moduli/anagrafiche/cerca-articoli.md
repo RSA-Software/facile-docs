@@ -108,8 +108,6 @@ parte quando esci dal campo, con ++enter++ o ++tab++.
 | **Descrizione** | | Gli articoli la cui descrizione comincia con il testo scritto. Accetta i caratteri jolly: vedi sotto. | testo |
 | **Banco - PLU** | | **Solo Megastore.** Due caselle: il numero del bancone e il PLU. Si può compilarne una sola. | numeri |
 
-{: .campi }
-
 Nella versione **Taglie e Colori**, sugli archivi c-tree, un **Codice** fatto
 di sole cifre e più corto di sei viene completato con gli zeri davanti:
 `123` cerca `000123`.

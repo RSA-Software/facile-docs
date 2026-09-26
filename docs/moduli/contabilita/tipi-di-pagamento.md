@@ -64,8 +64,6 @@ pagamento di codice 1.
 | Descrizione | ● | Denominazione del pagamento, come compare nelle anagrafiche e sui documenti. | Fino a 30 caratteri |
 | Tipo Pagamento | | Modalità di pagamento, nella codifica usata anche dalla fattura elettronica. | RIMESSA DIRETTA, RI.BA., RID, TRATTA, ASSEGNO, CONTRASSEGNO, CONTANTI, ASSEGNO CIRCOLARE, CONTANTI PRESSO TESORERIA, BONIFICO, VAGLIA CAMBIARIO, BOLLETTINO BANCARIO, CARTA DI PAGAMENTO, RID UTENZE, RID VELOCE, MAV, QUIETANZA ERARIO, GIROCONTO CONTI SPECIALI, DOMICILIAZIONE BANCARIA, DOMICILIAZIONE POSTALE, BOLLETTINO DI C/C POSTALE, SEPA DIRECT DEBIT, SEPA DIRECT DEBIT CORE, SEPA DIRECT DEBIT B2B, TRATTENUTA SOMME RISCOSSE, PAGO PA |
 
-{: .campi }
-
 ### Calcolo delle scadenze
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -76,8 +74,6 @@ pagamento di codice 1.
 | Periodicità | | Giorni fra una rata e la successiva. | Numero di giorni |
 | Esclusione Mesi | | Fino a tre mesi in cui le scadenze non devono cadere. Una rata che finirebbe in un mese escluso viene spostata in avanti di una periodicità — o di un giorno, se la periodicità è zero — finché non esce dal mese. | Tre elenchi: NESSUNO, GENNAIO … DICEMBRE |
 
-{: .campi }
-
 ### Nota, tratta e spese
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -86,8 +82,6 @@ pagamento di codice 1.
 | **Tratta IVA** | | Come ripartire l'IVA fra le rate. Le tre scelte sono spiegate qui sotto. | *No Tratta*, *Si Tratta* o *Prima Rata* |
 | Spese Bolli | | Addebita l'importo indicato a fianco come spese di bollo. Si addebita **una volta per documento**, non per rata. | Casella più importo |
 | Commissioni Bancarie | | Addebita l'importo indicato a fianco come commissioni bancarie. Si addebita **una volta per documento**, non per rata. | Casella più importo |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

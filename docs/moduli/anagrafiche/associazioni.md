@@ -69,8 +69,6 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 | **Cliente** | ● | Il [cliente](anagrafica-clienti.md) a cui assegnare le condizioni. | codice |
 | **Destinazione** | | Una destinazione merce del cliente. Lasciandola vuota la regola vale per i documenti **senza** destinazione; indicandola vale **solo** per quella. | codice |
 
-{: .campi }
-
 ### Che cosa — solo in Associazione Clienti - Gruppi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -78,8 +76,6 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 | **Gruppo** | | Il **gruppo di articoli** a cui la regola si riferisce — la stessa tabella *Gruppi* che si indica sull'articolo, non il gruppo del cliente. Lasciandolo vuoto la regola vale per i documenti senza gruppo prevalente. | codice |
 | **Trasportatore** | | Il [vettore](trasportatori.md) che lo serve. | codice |
 | **Pagamento** | | Il [tipo di pagamento](../contabilita/tipi-di-pagamento.md) da proporgli. | codice |
-
-{: .campi }
 
 ### Che cosa — in entrambe
 
@@ -89,8 +85,6 @@ fondo i tre pulsanti **F2 - Salva**, **F6 - Canc.** ed **Esci**.
 | **Giro Agente** (primo) e **Sequenza** | | Il primo giro di visita e la posizione del cliente al suo interno. | codice e numero |
 | **Giro Agente** (secondo) e **Sequenza** | | Il secondo giro. | codice e numero |
 | **Giro Agente** (terzo) e **Sequenza** | | Il terzo giro. | codice e numero |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

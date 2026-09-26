@@ -65,8 +65,6 @@ La griglia ha queste colonne:
 |---|:---:|---|---|
 | **Fornitore** | ● | Di quale fornitore mostrare il listino. | codice |
 
-{: .campi }
-
 I dati delle righe si inseriscono e si correggono con **F2 - Modifica** e
 **F3 - Nuovo**.
 

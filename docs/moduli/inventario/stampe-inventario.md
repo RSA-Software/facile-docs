@@ -57,8 +57,6 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Data Iniziale**, **Data Finale** | | Il periodo in cui le letture sono state registrate. | date |
 | **Ordinamento** | | Come ordinare la stampa. | `DESCRIZIONE ARTICOLO`, `CODICE ARTICOLO`, `CODICE ACQUISIZIONE` |
 
-{: .campi }
-
 ### Stampa Rettifiche
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -68,15 +66,11 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Raggruppamento** | | Come raggruppare le righe. | `NESSUNO`, `GRUPPO`, `SOTTOGRUPPO` |
 | **Solo Articoli con Letture** | | Se attivo lascia fuori gli articoli mai contati, che altrimenti compaiono con la rettifica pari a tutta l'esistenza. | attivo/non attivo |
 
-{: .campi }
-
 ### Stampa Articoli Inventariati
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Deposito** | | Restringe a un deposito. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

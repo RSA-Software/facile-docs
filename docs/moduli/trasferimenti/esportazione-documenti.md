@@ -167,8 +167,6 @@ quelli che gli servono.
 | **Cod. Aggancio** | | L'aggancio con cui i dati vengono associati al destinatario. | `ELLEMME`, `SANT' ANGELO SRL` |
 | **Cod. Concess.** | | Il codice del concessionario. | codice |
 
-{: .campi }
-
 Questi sono **tutti** i campi che la maschera può mostrare. Quali si vedano
 dipende dal tracciato: il programma nasconde quelli che quel destinatario non
 usa.
@@ -182,8 +180,6 @@ usa.
 | **Creati/Var. Dal … Al** e **Cessati Dal … Al** | sulle esportazioni di **anagrafica clienti**, per mandare solo i clienti nuovi o cessati nel periodo |
 | **Cod. Aggancio** | sui due tracciati che lo prevedono: `ELLEMME` e `SANT' ANGELO SRL` |
 | **Cod. Concess.** | sui tracciati che vogliono il codice del concessionario |
-
-{: .campi }
 
 Non c'è da imparare quale campo serve a quale tracciato: **si vede quello che
 va compilato**, e basta riempirlo.

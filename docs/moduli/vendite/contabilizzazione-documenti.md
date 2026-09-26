@@ -78,8 +78,6 @@ subito, e parla solo con i messaggi che mostra.
 | **Imputazione Ritenuta Acconto** | | Il conto della ritenuta d'acconto. | codici |
 | **Data Contabilizzazione** | | La data da dare alle registrazioni. Lasciandola in bianco ogni registrazione prende **la data del suo documento**: è il caso normale. | data |
 
-{: .campi }
-
 I sei conti di imputazione servono per le voci del piede che non hanno una
 riga di merce a cui agganciarsi. Vanno compilati una volta e restano.
 

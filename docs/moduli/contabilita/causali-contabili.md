@@ -60,8 +60,6 @@ schema di registrazione.
 | Descrizione | ● | Nome della causale, come compare in prima nota e nelle stampe. | Fino a 30 caratteri |
 | Cod. Aggancio | | Codice con cui la causale viene riconosciuta nei tracciati esterni. | Testo breve |
 
-{: .campi }
-
 ### Registro e relazione
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -70,8 +68,6 @@ schema di registrazione.
 | Codice Sezione | | Sezione contabile su cui la causale registra. | Codice dall'archivio sezioni |
 | Relazione | | Con chi ha a che fare l'operazione: determina se il programma chiede un cliente, un fornitore o nessuno dei due. | CLIENTI, FORNITORI, NESSUNO |
 | Richiesta Allegati su Registrazione | | Chiede di allegare un documento alla registrazione. | Casella |
-
-{: .campi }
 
 ### Trattamento IVA
 
@@ -88,8 +84,6 @@ schema di registrazione.
 | Disabilita Gestione Scadenze | | La registrazione non genera scadenze. | Casella |
 | Tipo Documento | | Tipo di documento trasmesso in fattura elettronica. | (vuoto), FATTURA, NOTA DI CREDITO, NOTA DI DEBITO, FATTURA SEMPLIFICATA, NOTA DI CREDITO SEMPLIFICATA, FATTURA DI ACQUISTO INTRACOMUNITARIO BENI, FATTURA DI ACQUISTO INTRACOMUNITARIO SERVIZI e le altre voci previste dalla normativa |
 
-{: .campi }
-
 ### Contabilità analitica
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -97,8 +91,6 @@ schema di registrazione.
 | Centro di Costo | | Se il centro di costo va chiesto sulla registrazione. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Commessa | | Se la commessa va chiesta sulla registrazione. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Dettagli | | Se il dettaglio va chiesto sulla registrazione. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
-
-{: .campi }
 
 ### Schema di registrazione
 

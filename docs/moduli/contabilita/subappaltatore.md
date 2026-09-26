@@ -61,8 +61,6 @@ stanno in fondo a sinistra.
 | **Data Ordine** | | La data dell'ordine. | Data |
 | **Descr. Attivita'** | | Che cosa comprende il subappalto. È un campo **su più righe**: ci sta una descrizione distesa, non una sigla. | Testo |
 
-{: .campi }
-
 La colonna **Obbl.** segna con ● i campi che il programma richiede
 obbligatoriamente per salvare. Qui è **solo il fornitore**: tutto il resto si
 può lasciare in bianco e completare più avanti.

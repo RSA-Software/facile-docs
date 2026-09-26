@@ -53,8 +53,6 @@ su quale tabella si sta lavorando.
 | **Codice** | ● | Identificativo della voce. In modifica non è modificabile. | numero |
 | **Descrizione** | ● | La frase che comparirà sul documento. Quello che scrivi diventa **maiuscolo**. | testo, fino a 512 caratteri nelle Note Particolari e a 30 nelle altre due |
 
-{: .campi }
-
 !!! note "La casella delle Note Particolari è molto più capiente"
 
     Aspetto esteriore e causale di trasporto sono etichette brevi — trenta

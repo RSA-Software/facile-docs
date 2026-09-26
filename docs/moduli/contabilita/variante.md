@@ -53,8 +53,6 @@ pulsanti in fondo.
 | **Variaz. Importo** | | Di quanto cambia il valore del lavoro, in evidenza su fondo colorato. | Numero con decimali, anche negativo |
 | **Variaz. Giorni** | | Di quanti giorni si allunga — o si accorcia — il lavoro. | Numero intero |
 
-{: .campi }
-
 La colonna **Obbl.** segna con ● i campi che il programma richiede per
 salvare: qui sono **la data e la descrizione**.
 

@@ -68,8 +68,6 @@ ed è divisa in due:
 | **Gruppo** | | Limita agli articoli del gruppo indicato. | testo, oppure `TUTTI` |
 | **Sottogruppo** | | Limita agli articoli del sottogruppo indicato. | testo, oppure `TUTTI` |
 
-{: .campi }
-
 Lasciando i campi liberi si copia il listino di **tutti** gli articoli.
 
 ### Copia Listini
@@ -79,16 +77,12 @@ Lasciando i campi liberi si copia il listino di **tutti** gli articoli.
 | **Da Listino** | ● | Il listino da cui prendere i prezzi; a fianco compare il nome. | codice del listino |
 | **A Listino** | ● | Il listino su cui scriverli. Deve essere diverso da **Da Listino**. | codice del listino |
 
-{: .campi }
-
 ### Copia Listino da Altra Ditta
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Da Ditta** | ● | La ditta da cui prendere i prezzi; a fianco compare la ragione sociale. Deve essere diversa dalla ditta in cui si sta lavorando. | codice della ditta |
 | **Listino** | ● | Il listino da riprendere. | codice del listino |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

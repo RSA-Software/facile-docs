@@ -61,8 +61,6 @@ In alto la testata del movimento, sotto le righe della merce.
 | **Operatore** | | Chi ha registrato il movimento. | codice |
 | **Commessa** | | La [commessa](../contabilita/commesse.md) a cui imputare. | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

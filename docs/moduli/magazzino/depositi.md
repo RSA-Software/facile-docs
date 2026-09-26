@@ -64,8 +64,6 @@ stabiliscono dove il deposito deve comparire e dove no.
 | Cod. P.Vendita | | **Solo Megastore.** Codice con cui il punto vendita è identificato negli scambi con la centrale. | Fino a 7 caratteri |
 | Importa solo Articoli SMA | | **Solo Megastore.** L'importazione carica sul deposito i soli articoli previsti dalla centrale. Nella versione Taglie e Colori - Calzature la stessa casella si chiama **Non Esportare Sconto Clienti**. | Casella |
 
-{: .campi }
-
 !!! note "Nota"
 
     Su un deposito appena creato **Escludi Visibilità Web** è già spuntata: se

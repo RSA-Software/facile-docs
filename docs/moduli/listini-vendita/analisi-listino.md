@@ -72,8 +72,6 @@ Le colonne che si possono scrivere sono queste; le altre sono di sola lettura.
 | **Assortimento** | | Include o esclude l'articolo dall'assortimento del deposito. | attivo/non attivo |
 | **Nuovo Prezzo** | | Scrive il nuovo prezzo sul listino in esame, che è sempre il listino principale della ditta. | importo |
 
-{: .campi }
-
 Le colonne di sola lettura raccontano la situazione: **Q.tà Venduta in Promo**,
 **fuori Promo** e **Totale**, i corrispondenti **Val. Venduto**, il **Margine**
 in euro e in percentuale nelle tre versioni, **Q.tà Ordinata Fornitore**,
@@ -92,8 +90,6 @@ Si apre con **F7 - Periodo e Colonne** e ha due parti.
 |---|:---:|---|---|
 | **Periodo** | | Il periodo su cui calcolare il venduto. | `1 GIORNO`, `3 GIORNI`, `7 GIORNI`, `15 GIORNI`, `30 GIORNI`, `DA INIZIO ANNO`, `LIBERO` |
 | **Data Iniziale**, **Data Finale** | | Gli estremi del periodo, da compilare quando **Periodo** è `LIBERO`. | date |
-
-{: .campi }
 
 Sotto, il riquadro **..: N a s c o n d i   C o l o n n e :..** elenca le
 colonne che si possono togliere dalla vista, una casella per ciascuna:

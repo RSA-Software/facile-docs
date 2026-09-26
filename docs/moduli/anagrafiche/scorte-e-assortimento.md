@@ -84,8 +84,6 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
 | **Articolo** | ● | L'articolo da aggiornare, in **Aggiornamento Ubicazione**. | codice |
 | **Ubicazione** | | Dove l'articolo è sistemato: corsia, scaffale, ripiano. | testo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 ### Calcolo Scorta Ottimale

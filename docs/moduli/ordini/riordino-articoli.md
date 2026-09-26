@@ -77,8 +77,6 @@ stessa riga si compila con calma:
 | **Q.tà da Ordinare** | | Quanto ordinare, in pezzi. | quantità |
 | **Confez. da Ordinare** | | Quanto ordinare, in confezioni. Le due quantità si tengono allineate. | quantità |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
@@ -104,8 +102,6 @@ stessa riga si compila con calma:
 | **Ricarico** | | La percentuale da applicare al prezzo d'acquisto. | percentuale |
 | **Arrotondamento** | | Come arrotondare il prezzo ottenuto. | `NESSUNO`, `MILLESIMI`, `CENTESIMI`, `DECIMI`, `EURO` |
 | **Decorrenza** | | Da quando vale il nuovo prezzo. | data |
-
-{: .campi }
 
 ## Come si fa
 

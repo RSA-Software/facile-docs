@@ -72,8 +72,6 @@ formato dell'etichetta con la riga e la colonna da cui cominciare sul foglio.
 | **Stampa Prezzo** | | Fa comparire il prezzo sull'etichetta. | attivo/non attivo |
 | **Riga**, **Colonna**, **N. Colonne** | | Da quale posizione del foglio cominciare e quante colonne ha il foglio, per non sprecare le etichette già usate. | numeri |
 
-{: .campi }
-
 ### Stampa Etichette Eancode
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -87,8 +85,6 @@ formato dell'etichetta con la riga e la colonna da cui cominciare sul foglio.
 | **Data Scadenza** | | Quando scade. Non può essere anteriore a oggi. | data |
 | **Peso** | | Il peso, con l'unità di misura a fianco. | numero |
 | *(unità di misura)* | | L'unità del peso. | `Gr.`, `Hg.`, `Kg.`, `Q.` |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

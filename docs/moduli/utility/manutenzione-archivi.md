@@ -75,8 +75,6 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 | **Deposito** | | Il [deposito](../magazzino/depositi.md) da ricalcolare. Vuoto significa tutti. | codice |
 | **Da Data**, **A Data** | ● | Il periodo dei movimenti da rileggere. | date |
 
-{: .campi }
-
 ### Valorizzazione Costi Movimenti
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -85,15 +83,11 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 | **Deposito** | | Restringe a un deposito. | codice |
 | **Metodo** | ● | Come attribuire il costo. | `COSTO MEDIO PONDERATO`, `METODO LIFO`, `METODO FIFO`, `ULTIMO PREZZO ACQUISTO` |
 
-{: .campi }
-
 ### Riporto esistenze magazzino anno precedente
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Deposito** | | Il deposito su cui riportare le esistenze. | codice |
-
-{: .campi }
 
 ### Rinumerazione Scontrini
 
@@ -101,8 +95,6 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 |---|:---:|---|---|
 | **Dal Numero**, **Al Numero** | ● | L'intervallo di scontrini da rinumerare. | numeri |
 | **Nuovo Numero Iniziale** | ● | Il numero da cui ripartire. | numero |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

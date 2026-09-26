@@ -33,8 +33,6 @@ andando una partita** e che cosa si deve al produttore.
 | **Formato** | `SINTETICO` una riga per articolo, `DETTAGLIATO` anche le singole vendite. |
 | **Tipo Doc.** | Quali documenti considerare: `TUTTI`, `FATTURE`, `ORDINI` o `ALTRI`. |
 
-{: .campi }
-
 !!! tip "I tasti + e − cambiano il formato"
 
     Il **+** del tastierino passa a `DETTAGLIATO`, il **−** torna a `SINTETICO`:
@@ -94,8 +92,6 @@ A sinistra le spese da trattenere:
 | **Spese Imballaggi** | Il costo degli imballi. |
 | **Spese Manodopera** | La manodopera di selezione e confezionamento. |
 
-{: .campi }
-
 Al centro **cinque acconti**, ciascuno con il suo importo e la sua data: gli
 anticipi già dati al produttore mentre la partita si vendeva.
 
@@ -130,8 +126,6 @@ Guarda **più partite insieme** invece di una sola.
 | **Fornitori** | Uno o più produttori; il pulsante **…** apre l'elenco da cui spuntarli. |
 | **Formato** | Quale stampa produrre (vedi sotto). |
 
-{: .campi }
-
 | Formato | Che cosa dà |
 |---|---|
 | `STANDARD` | Il riepilogo di tutte le partite del periodo. |
@@ -150,8 +144,6 @@ mercato, già intestati con i dati della partita.
 |---|:---:|---|
 | **Partita** | | Il numero della partita da intestare. |
 | **Numero Copie** | ● | Quanti fogli stampare. |
-
-{: .campi }
 
 !!! note "Partita a zero: fogli non intestati"
 

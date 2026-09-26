@@ -104,8 +104,6 @@ Ogni scheda è descritta una per una più avanti, sotto *Campi*.
 | Tecnico | | Il tecnico che segue la commessa. | Testo |
 | Contatto Email | | Indirizzo di posta del referente. | Testo |
 
-{: .campi }
-
 !!! note "Come si calcola la % Fatturato"
 
     È la somma degli **Importo Fat.** degli avanzamenti, divisa per il

@@ -61,8 +61,6 @@ La griglia ha queste colonne:
 |---|:---:|---|---|
 | **Fornitore** | ● | Il fornitore da mettere a confronto con gli altri. | codice |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

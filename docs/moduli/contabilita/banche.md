@@ -71,8 +71,6 @@ recapiti, coordinate bancarie e collegamento contabile.
 | Swift (BIC) | | Codice identificativo dell'istituto per i pagamenti esteri. | Fino a 11 caratteri |
 | Sottoconto | | Sottoconto di contabilità che rappresenta questa banca. Vale per le banche dell'azienda; sulle banche d'appoggio dei clienti si lascia a zero. | Sottoconto del mastro e conto banche definiti nei dati dell'azienda |
 
-{: .campi }
-
 !!! note "Nota"
 
     Il campo **Num. Conto** accetta 12 caratteri, non 15: il limite è stato

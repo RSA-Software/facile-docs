@@ -79,8 +79,6 @@ La griglia ha queste colonne:
 | **Agente** | | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). | codice |
 | **TOTALE** | | La somma delle scadenze trovate. Solo lettura. | — |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
@@ -160,8 +158,6 @@ La griglia ha queste colonne:
     | **Insoluto** | Segna l'effetto tornato indietro. |
     | **Data Originale** | La scadenza di partenza, quando è stata spostata. |
     | **Fornitore Giro** e **Data Giro** | Il fornitore a cui l'effetto è stato girato e quando. Vanno compilati tutti e due o nessuno dei due. |
-
-    {: .campi }
 
     In alto a destra due scritte si accendono quando serve: **I N C A S S A T
     A** quando la scadenza risulta pagata e **CONTABILIZZATA** quando ne è nata

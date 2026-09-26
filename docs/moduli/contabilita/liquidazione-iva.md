@@ -64,8 +64,6 @@ Prima di usare queste maschere occorre:
 | **Operazioni Straordinarie** | | Segnala operazioni straordinarie nel periodo. | attivo/non attivo |
 | *(elenco senza etichetta accanto a Subforniture)* | | Il codice degli eventi eccezionali previsto dalla normativa. | codice |
 
-{: .campi }
-
 Il prospetto sotto è di sola lettura tranne i riporti dal periodo precedente:
 
 | Campo | Descrizione |

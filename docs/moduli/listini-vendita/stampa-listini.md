@@ -64,8 +64,6 @@ La finestra *Stampa Listini* è divisa in due:
 | **Gruppo**, **Sottogruppo** | | Limitano al gruppo e al sottogruppo indicati. | testo |
 | **Tabella 1**, **Tabella 2**, **Tabella 3** | | Le tre tabelle di classificazione libere. A video portano il nome che hanno nella ditta; se la ditta non le usa restano senza etichetta e non si possono compilare. | codici |
 
-{: .campi }
-
 ### Opzioni di stampa
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -77,8 +75,6 @@ La finestra *Stampa Listini* è divisa in due:
 | **Includi non più Ordinabili** | | Se stampare anche gli articoli marcati come non più ordinabili. All'apertura è attivo. | attivo/non attivo |
 | **Includi Fuori Assortimento** | | Se stampare anche gli articoli fuori assortimento. | attivo/non attivo |
 | **Solo Articoli con Esistenza Positiva** | | Limita la stampa a quello che c'è davvero in magazzino. | attivo/non attivo |
-
-{: .campi }
 
 ### I formati disponibili
 

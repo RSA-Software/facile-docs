@@ -75,8 +75,6 @@ si corregge cella per cella — vedi la nota qui sotto.
 | **2° Listino**, **3° Listino** | | Le stesse colonne, ripetute per il secondo e il terzo listino. | come sopra |
 | **Trovato** | | Si valorizza dopo un'importazione da Excel: dice quali articoli comparivano nel foglio. | — |
 
-{: .campi }
-
 La colonna **Obbl.** segna con ● i campi che il programma richiede
 obbligatoriamente per salvare: qui nessun campo è obbligatorio, perché non si
 inseriscono nuovi articoli ma si correggono quelli esistenti.

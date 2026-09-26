@@ -24,8 +24,6 @@ poi lascia decidere **da quale partita prendere** ogni quantità.
 | **Cliente** | La catena di cui raccogliere gli ordini. |
 | **Data Consegna** | Il giorno per cui la merce va consegnata. |
 
-{: .campi }
-
 Scelti cliente e data, la griglia si riempie con il totale per articolo:
 **deposito**, **codice**, **descrizione**, **unità di misura**, **quantità** e
 **colli**.
@@ -51,8 +49,6 @@ serve a proporre subito i soliti, senza cercarli ogni volta fra tutti.
 |---|---|
 | **Operatore** | L'[operatore](../../altre-tabelle/operatori.md) di cui si imposta l'elenco. |
 | **Mostra solo fornitori preferiti** | Mostra nella griglia i soli preferiti invece di tutti. |
-
-{: .campi }
 
 | Pulsante | Tasto | Effetto |
 |---|---|---|
@@ -80,8 +76,6 @@ merce e devono tornare indietro. Questa stampa fa il conto di quel giro.
 | **Dal**, **Al** | Il periodo. |
 | **Tipo** | `TUTTI`, `CLIENTI` o `FORNITORI`. |
 | **Cliente** / **Fornitore** | Compare **solo** scegliendo `CLIENTI` o `FORNITORI`, e cambia etichetta di conseguenza. Lasciandolo a zero vale per tutti. |
-
-{: .campi }
 
 Con `TUTTI` il campo sparisce del tutto: la stampa considera clienti e
 fornitori insieme.

@@ -78,8 +78,6 @@ dell'intestazione si legge l'invito a salvare.
 | **Data Fat.** | La data del **primo** documento collegato. Vuota finché non ce n'è nessuno. |
 | **Stato** | **PENDING** o **OK**: lo decidi tu, non cambia da solo. |
 
-{: .campi }
-
 ### La finestra di inserimento
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -89,8 +87,6 @@ dell'intestazione si legge l'invito a salvare.
 | **Stato** | | A che punto è la verifica dell'avanzamento. | **PENDING** o **OK** |
 | **Fatture collegate (fatture passive)** | | Le fatture attribuite a questo SAL: **N. Doc.**, **Data**, **Fornitore**, **Imponibile**, **IVA**, **Totale**. | Elenco |
 | **Non ancora utilizzate** | | Le fatture del subappaltatore imputate a questa commessa che **non sono collegate a nessun SAL**, nemmeno a un altro. Stesse colonne. | Elenco |
-
-{: .campi }
 
 La colonna **Obbl.** segna con ● i campi che il programma richiede per
 salvare: qui è **solo il numero**.

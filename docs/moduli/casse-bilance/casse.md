@@ -79,23 +79,17 @@ Fidelity** e **Cancellazione Promozioni**.
 | **Codici Alfanumerici** | | I codici articolo mandati alla cassa contengono anche lettere. | attivo/non attivo |
 | **Invio Prezzi Netti** | | Manda i prezzi al netto invece che al lordo. | attivo/non attivo |
 
-{: .campi }
-
 ### Invio Saldo Punti Fidelity
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Cliente** | | Il cliente di cui mandare il saldo. Lasciandolo vuoto si mandano tutti. | codice |
 
-{: .campi }
-
 ### Cancellazione Promozioni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Cancellazione Vecchie Offerte** | ● | Quante offerte cancellare dalla cassa. | `COMPLETA`, `PARZIALE (1-31999)`, `PARZIALE (1-998)`, `PARZIALE (1-2000)`, `PARZIALE (1-3000)`, `PARZIALE (1-4000)`, `PARZIALE (1-5000)` |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

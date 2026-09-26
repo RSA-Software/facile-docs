@@ -31,8 +31,6 @@ niente perché l'impianto era fermo.
 | **Motivazione** | Solo per l'inattività: `1 - FERIE`, `2 - MANUTENZIONE`, `3 - EVENTI STRAORDINARI`, `4 - ALTRO`. |
 | **Descrizione** | Il testo che accompagna la motivazione. |
 
-{: .campi }
-
 ## Esportazione File XML Corrispettivi
 
 Raccoglie i corrispettivi del periodo indicato e scrive il file nella cartella

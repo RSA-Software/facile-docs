@@ -55,8 +55,6 @@ l'anno di lavoro — *Ordini in Lavorazione - 00001 NOME DITTA - Anno :2026*.
 | **Cliente** | | Restringe agli ordini di un cliente. A fianco compare la ragione sociale. | codice |
 | **Registro** | | Restringe a un registro di numerazione. | `TUTTI` o una voce dell'elenco |
 
-{: .campi }
-
 Le colonne della griglia sono **Sel.**, **Codice**, **Numero**, **Data**,
 **Tipo**, **Stato**, **Cons.**, **Totale**, **Cod.Cli.**, **Cliente**,
 **Destinazione**, **Agente**, **Trasportatore** e **anno**. La prima colonna è
@@ -67,8 +65,6 @@ la casella con cui si scelgono le righe su cui agire.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Fornitore** | | Restringe agli ordini fatti a un fornitore. A fianco compare la ragione sociale. | codice |
-
-{: .campi }
 
 Le colonne sono **Codice**, **Anno**, **Numero**, **Data**, **Tipo**,
 **Arrivo**, **Totale**, **Cod. For.** e **Fornitore**.
@@ -83,8 +79,6 @@ Si apre da **F6- Scomponi** sull'ordine scelto.
 | **Registro** | | Il registro dell'ordine di partenza. | voce dell'elenco |
 | **Reg. Ordini Generati** | ● | Il registro su cui numerare gli ordini che nascono dalla scomposizione. | voce dell'elenco |
 | **Criterio Scomposizione** | ● | Come dividere l'ordine. | `FORNITORE` |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

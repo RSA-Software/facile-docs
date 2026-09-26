@@ -64,8 +64,6 @@ Il titolo della finestra dice sempre su quale documento si sta lavorando —
 | **Deposito Nuovo Doc.** | | Il [deposito](../magazzino/depositi.md) su cui mettere la copia. Lasciato a zero si legge `DEPOSITO DOCUMENTO ORIGINALE` e la copia resta sul deposito di partenza. | codice |
 | **Rimuovi Documento di Riferimento** | | **Cancella l'originale** dopo aver creato la copia, previa conferma. | attivo/non attivo |
 
-{: .campi }
-
 I due campi **Registro** spariscono se la [ditta](../anagrafiche/ditte.md) è
 impostata a registro unico.
 
@@ -80,8 +78,6 @@ impostata a registro unico.
 | **Cod. Fiscale** | | Codice fiscale o partita IVA del destinatario. | testo |
 | **Destinatario** | | Il codice destinatario. Per la fattura verso la Pubblica Amministrazione dev'essere di **6 caratteri**. | testo |
 | **PEC** | | L'indirizzo PEC del destinatario. | indirizzo |
-
-{: .campi }
 
 Le voci dell'elenco **Formato** cambiano secondo il documento:
 

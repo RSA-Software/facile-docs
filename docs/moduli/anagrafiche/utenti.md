@@ -69,8 +69,6 @@ Utenti* — ed è divisa in tre parti:
 | **Conf. Password** | | Ripetizione della password: deve coincidere con la precedente. | testo |
 | **Email** | | Indirizzo di posta dell'utente. | indirizzo |
 
-{: .campi }
-
 ### Come lavora
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -82,8 +80,6 @@ Utenti* — ed è divisa in tre parti:
 | **Registro** | | Il registro proposto all'utente nei documenti. | `PREDEFINITO`, oppure uno dei registri della ditta |
 | *(elenco senza etichetta, sotto Registro)* | | Quali record l'utente vede negli elenchi. | `ATTIVI`, `CANCELLATI`, `TUTTI` |
 
-{: .campi }
-
 ### Posta in uscita
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -93,8 +89,6 @@ Utenti* — ed è divisa in tre parti:
 | **Porta SMTP** | | La porta del server. | numero |
 | **Usa SSL** | | Attiva la cifratura SSL. | attivo/non attivo |
 | **Usa TLS** | | Attiva la cifratura TLS. | attivo/non attivo |
-
-{: .campi }
 
 ### Divieti e abilitazioni
 
@@ -112,8 +106,6 @@ Utenti* — ed è divisa in tre parti:
 | **Abilita download Stati Fatture Attive** | | Gli consente di scaricare gli esiti delle fatture emesse. | attivo/non attivo |
 | **Abilita download Fatture Passive** | | Gli consente di scaricare le fatture ricevute. | attivo/non attivo |
 | **Abilita Blocco Cancellazioni Dati** | | Gli impedisce di cancellare: al posto dell'eliminazione le maschere rispondono *Cancellazioni non abilitate per l' utente !*. Vale anche sulle cancellazioni di massa, come [Cancellazione Ordini Evasi](../vendite/ordini-clienti.md). | attivo/non attivo |
-
-{: .campi }
 
 ### L'albero del menu
 

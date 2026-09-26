@@ -58,8 +58,6 @@ Tre caselle e nient'altro: niente date, niente filtri per soggetto.
 | **Elimina Scadenze Fornitori Pagate** | | Comprende quelle dei fornitori già pagate. | attivo/non attivo |
 | **Elimina anche se non Contabilizzate** | | Allarga la pulizia alle scadenze mai passate in contabilità. | attivo/non attivo |
 
-{: .campi }
-
 ### Controllo Scadenze ↔ Schede Contabili
 
 Non ha campi di selezione: appena aperta fa il confronto e riempie una
@@ -72,15 +70,11 @@ cui si entra.
 |---|:---:|---|---|
 | **Periodo da Analizzare** | ● | Quanto avanti guardare. | `30`, `60`, `90`, `120`, `150`, `180 GIORNI` |
 
-{: .campi }
-
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | ● | Il periodo da esaminare o da ripulire. | date |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

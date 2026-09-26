@@ -79,8 +79,6 @@ cerca, si sceglie, si emette.
 | **Registri** | | I registri da cui pescare i documenti. Si scrivono le lettere separate da virgola. | lettere e virgole |
 | **Operatore** | | Restringe ai documenti di un [operatore](../altre-tabelle/operatori.md). | codice |
 
-{: .campi }
-
 ### L'elenco dei documenti trovati
 
 Le colonne sono **Tipo Doc.**, **Codice**, **Fatturato**, **Sel.**, **Anno**,
@@ -105,8 +103,6 @@ righe già elaborate, che vengono saltate.
 | **Accorpa Lotti** | | Mette insieme le righe dello stesso articolo con lotti diversi. | attivo/non attivo |
 | **Controlla Date DDT** | | Verifica che le date dei documenti siano congrue. | attivo/non attivo |
 | **Emetti Fatture IVA Esente** | | Emette le fatture con l'aliquota di esenzione invece che con quella dei documenti. Richiede un codice IVA esente impostato. | attivo/non attivo |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

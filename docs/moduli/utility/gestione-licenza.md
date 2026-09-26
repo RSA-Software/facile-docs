@@ -78,8 +78,6 @@ stanno per fare, e poi aprono una finestrella:
 | **Email** | ● | L'indirizzo di posta a cui R.S.A. manda le comunicazioni sulla licenza. | indirizzo |
 | **Tipo Licenza** | ● | Il livello acquistato. | `LIGHT`, `SMALL`, `PROFESSIONAL`, `EVOLUTION` |
 
-{: .campi }
-
 Nel riquadro **C O D I C I**:
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -88,8 +86,6 @@ Nel riquadro **C O D I C I**:
 | **Cod. Macchina** | | Identifica il computer. Lo calcola il programma. | Sola lettura |
 | **Numero Serie** | ● | Il numero di serie ricevuto all'acquisto. | codice |
 | **Chiave Attivazione** | ● | La chiave che R.S.A. restituisce. È l'unica cosa che si digita a mano. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

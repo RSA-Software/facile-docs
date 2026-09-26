@@ -115,8 +115,6 @@ codice attuale e quello nuovo.
 | **Cod. Iva**, **Reparto**, **Cat. Merc.**, **Fornitore**, **Stagione**, **Gruppo**, **Marchio**, **Sottogruppo** | | I filtri con cui scegliere quali articoli toccare. | codici |
 | **Nuovo Codice** | ● | Il codice da attribuire. | codice |
 
-{: .campi }
-
 ### Le variazioni a due campi
 
 | Maschera | Campi |
@@ -133,8 +131,6 @@ codice attuale e quello nuovo.
 | **Da Numero**, **A Numero** | ● | L'intervallo di registrazioni. | numeri |
 | **Da Data**, **A Data** | ● | Il periodo. | date |
 
-{: .campi }
-
 ### Rimozione Movimenti di Magazzino
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -143,8 +139,6 @@ codice attuale e quello nuovo.
 | **Da Data**, **A Data** | ● | Il periodo. | date |
 | **Causale Magazzino** | | Restringe a una causale. | codice |
 | **Deposito** | | Restringe a un deposito. | codice |
-
-{: .campi }
 
 ### Riporto Saldi Contabili da Scadenziario
 
@@ -155,15 +149,11 @@ codice attuale e quello nuovo.
 | **Causale Cont.** | ● | La [causale contabile](../contabilita/causali-contabili.md) da usare. | codice |
 | **Bil. Apertura** | | Il conto di bilancio di apertura. | codice |
 
-{: .campi }
-
 ### Azzera Listino
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Listino** | ● | Il listino da azzerare. | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

@@ -69,8 +69,6 @@ barra dei comandi in alto, il cubo al centro e una barra di stato in fondo.
 | **Deposito** | | Restringe a un [deposito](../magazzino/depositi.md). | codice |
 | **Articolo**, **Cod. Iva**, **Reparto**, **Cat. Merceol.**, **Fornitore**, **Stagione**, **Marchio**, **Gruppo Mix**, **Gruppo**, **Sottogruppo**, **Settore**, **Colore**, **Tabella 1**, **Tabella 2**, **Tabella 3** | | I filtri di classificazione. | codici |
 
-{: .campi }
-
 ### Analisi Vendite Multideposito
 
 Gli stessi campi, con al posto dei periodi predefiniti l'elenco dei **raffronti**:
@@ -92,8 +90,6 @@ Ha inoltre i filtri **Taglie** e **Sezione**.
 | **Dal**, **Al** | ● | Il periodo. | date |
 | **Deposito** | | Restringe a un deposito. | codice |
 | **Operatore** | | Restringe a un [operatore](../altre-tabelle/operatori.md). | codice |
-
-{: .campi }
 
 ## Pulsanti e comandi
 

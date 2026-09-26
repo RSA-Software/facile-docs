@@ -97,8 +97,6 @@ cliente per riga con il suo scaduto.
 | **Ordinamento** | | Come raggruppare il prospetto. | *CODICE CLIENTE*, *DESCRIZIONE CLIENTE* (*FORNITORE* sull'esposizione) |
 | **Formato** | | Quale delle due stampe produrre. Solo sul controllo crediti. | *CON GIORNI RITARDO*, *CON DIFFERENZA FIDO* |
 
-{: .campi }
-
 ### Credito circolante
 
 | Colonna | Cosa contiene |

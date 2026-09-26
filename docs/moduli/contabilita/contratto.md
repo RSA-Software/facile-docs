@@ -53,8 +53,6 @@ pulsanti in fondo.
 | **Tipo Pagamento** | | Come si fattura il contratto. | **MILESTONE** o **SAL** |
 | **Termini pag.** | | I termini di pagamento concordati, in forma libera. Viene portato **in maiuscolo**. | Fino a 100 caratteri |
 
-{: .campi }
-
 La colonna **Obbl.** segna con ● i campi che il programma richiede per
 salvare: qui è **solo il nome**.
 

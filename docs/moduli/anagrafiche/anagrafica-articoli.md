@@ -113,8 +113,6 @@ Il programma richiede sempre la **Descrizione** e il **Cod. Iva**. Il
 | Esistenza | | Quantità fisicamente presente nel deposito. | Sola lettura |
 | Disponibilità | | Esistenza meno la quantità già impegnata. | Sola lettura |
 
-{: .campi }
-
 ### Scheda Generale
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -142,8 +140,6 @@ Il programma richiede sempre la **Descrizione** e il **Cod. Iva**. Il
 | Coef. Convers. | | Coefficiente per convertire l'unità del fornitore nella propria. | Numero |
 | Codice Assoc. | | Codice dell'articolo presso l'associazione o il consorzio. | Testo |
 | Web Id | | Identificativo dell'articolo sul sito web. Compare solo se nei dati dell'azienda è attiva la gestione web, e non è modificabile. | Numero |
-
-{: .campi }
 
 Sopra le schede compaiono, quando ricorrono, le indicazioni **PROMO** —
 l'articolo è in promozione — e **Fuori Ass.** — l'articolo è fuori

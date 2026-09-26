@@ -77,8 +77,6 @@ finestrelle di pochi campi.
 | **Ditta Conv. HACCP** | | La ditta convenzionata per la parte HACCP. | codice |
 | **Formato Etichette** | | Il formato predefinito delle [etichette](etichette-barcode.md). | voce dell'elenco |
 
-{: .campi }
-
 ### Preferenze di lavoro
 
 Sono caselle da attivare o disattivare. Le principali:
@@ -104,8 +102,6 @@ Sono caselle da attivare o disattivare. Le principali:
 | **Cerca prima codice a barre e poi articolo** | Inverte l'ordine di ricerca. |
 | **Blocca Emissione …** | Undici caselle che impediscono di emettere, dalla vendita, un certo tipo di documento: **Fatture**, **Fatture Acc.**, **Fatture Ric. Fiscali**, **D.D.T.**, **Bolle**, **Buoni Consegna**, **Ricevute Fiscali**, **Ordini**, **Preventivi**, **Note Credito**, **Fatture Pro Forma**. |
 
-{: .campi }
-
 ### Impostazione Stampanti
 
 Per ogni voce si sceglie una stampante fra quelle installate in Windows.
@@ -122,8 +118,6 @@ Lasciandola vuota si usa la stampante predefinita.
 | **Etichette Barcode** e **Tipo Stampante** | La stampante delle [etichette](etichette-barcode.md) e il suo linguaggio: Zebra EPL2 o ZPL II, TSC TSPL, Intermec, Toshiba, Meteor, EZ-2/EZ-4, `GENERICA` e gli altri. |
 | **Etichette Colli** e **Tipo Stampante** | La stampante delle etichette dei colli: `GENERICA` o Intermec Easycoder / Bixolon SLP. |
 
-{: .campi }
-
 ### Impostazione FacileWebApiService
 
 | Campo | Descrizione |
@@ -131,8 +125,6 @@ Lasciandola vuota si usa la stampante predefinita.
 | **Nome Servizio** | Il nome con cui il servizio è installato in Windows. |
 | **URL Servizio** | L'indirizzo a cui il programma lo interroga. |
 | **User**, **Password** | Le credenziali del servizio. |
-
-{: .campi }
 
 Oltre a **F2 - OK** ci sono **F3 - Test**, che prova il collegamento, e **F4 -
 Avvia** e **F5 - Arresta**, che fermano e fanno ripartire il servizio di
@@ -146,8 +138,6 @@ Windows — ma solo se il servizio sta su questo computer.
 | **Url** | L'indirizzo del servizio. |
 | **Token** | La chiave di accesso. |
 | **Merchant ID** | Il codice esercente. |
-
-{: .campi }
 
 I tre campi valgono per il sistema scelto in alto: si configura un sistema per
 volta e si salva, poi si passa al successivo.
@@ -168,8 +158,6 @@ Pos*:
 | **Indirizzo IP**, **Porta TCP** | Per i terminali collegati in rete. |
 | **Dojo URL**, **Api Key** | Per i terminali che si raggiungono via internet. |
 | **Terminali Associati** e **F4 - Cerca** | L'elenco dei terminali trovati e il comando che li cerca. |
-
-{: .campi }
 
 I campi che servono cambiano con il **Tipo**: il programma svuota e nasconde
 quelli che non c'entrano.

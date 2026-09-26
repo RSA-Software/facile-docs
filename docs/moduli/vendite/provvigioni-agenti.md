@@ -67,8 +67,6 @@ stampe aprono finestre di selezione con periodo e filtri.
 | *(elenco del tipo documento)* | ● | Che tipo di documento è. | `FATTURA`, `BOLLA`, `D.D.T.`, `BUONO CON.`, `FATTURA PRO FORMA`, `SCONTRINO` |
 | **Registro** | | Il registro del documento. | voce dell'elenco |
 
-{: .campi }
-
 ### Stampa Distinta Provvigioni
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -78,8 +76,6 @@ stampe aprono finestre di selezione con periodo e filtri.
 | **Saldati** | | Se includere le provvigioni già pagate. | `TUTTI`, `SI`, `NO` |
 | **Data Doc. Iniziale**, **Data Doc. Finale** | | Il periodo dei documenti. | date |
 | **Registro** | | Restringe a un registro. | `TUTTI`, oppure un registro |
-
-{: .campi }
 
 ### Attribuzione Provvigioni per Cliente
 
@@ -92,8 +88,6 @@ stampe aprono finestre di selezione con periodo e filtri.
 | **Provvig. Trasfert** | | Quella dei documenti di trasferta (`T`). | percentuale |
 | **Provvig. C.S. Vendita** | | Quella dei documenti a centro servizi (`C`). | percentuale |
 | **Provvig. C.S. Trasfert** | | Quella dell'ultimo tipo di vendita (`D`). | percentuale |
-
-{: .campi }
 
 **Attribuzione Automatica Provvigioni Mancanti** chiede invece soltanto il
 periodo: le percentuali le prende dal listino, non dall'operatore.

@@ -54,8 +54,6 @@ anagrafici del capo area.
 | **Cod. Fiscale** | | Codice fiscale del capo area. | sedici caratteri, o undici cifre per le società |
 | **Email** | | Indirizzo di posta. | indirizzo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |

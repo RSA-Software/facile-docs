@@ -105,8 +105,6 @@ venduto per reparto **limitandolo a un fornitore**, o quello per agente
 | **Tipo Vendita** | | Quale genere di vendita comprendere. Non compare su tutte le voci. | `TUTTE` e le altre voci dell'elenco |
 | **Stampa Pagina con Riepilogo** | | Aggiunge una pagina di riepilogo in coda. Compare solo su deposito, reparto, categoria merceologica, marchio, stagione e agente. | attivo/non attivo |
 
-{: .campi }
-
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
