@@ -119,6 +119,8 @@ prezzo netto in promozione è 11,00.
 | **Casualità** | | La quota di casualità nell'applicazione dell'offerta. La usano **solo le casse SysPC**. | da `0` a `32767` |
 | **Frontalino** | | Il formato del frontalino da stampare per questa riga. | `PICCOLO`, `MEDIO`, `GRANDE`, `NESSUNO` |
 | **Codice Mix** | | Il codice che lega fra loro le righe di un'offerta mista. | codice |
+| **Sconto Aggiuntivo** | | Compare solo con `04 - Percentuale Articolo`, e solo se la ditta lavora a prezzi IVA esclusa. Con la spunta, sui documenti la percentuale si aggiunge agli sconti già presenti sulla riga; senza, la riga prende il prezzo promozionale e perde gli altri sconti. | spunta |
+| **Azione Posticipata** | | Viene trasmessa solo alle casse SysPC, e solo per le offerte `02`, `04`, `07` e a gruppo di articoli. Facile non la usa. <!-- DA VERIFICARE: che cosa fa la cassa SysPC quando l'azione è posticipata? --> | spunta |
 
 Aprendo una riga nuova, i campi non partono vuoti: **periodo, ora, giorni,
 deposito, listino, livello clienti e la spunta Abilitata** sono quelli della
@@ -126,7 +128,7 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 `(No) - Articoli Autonomi`, applicabilità **Sempre**, limiti da `0,01` a
 `9.999.999,99` e frontalino `PICCOLO`.
 
-!!! warning "In Facile valgono solo tre tipi di offerta su diciassette"
+!!! warning "Sui documenti di Facile valgono solo tre tipi di offerta su diciassette"
 
     Le diciassette forme di offerta descrivono quello che sa fare il **punto
     cassa**. Quando invece è Facile a fare il documento — vendita al banco,
@@ -142,7 +144,8 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 
     Tutte le altre — il 3x2, il paniere, i coupon, le multisoglia — sono
     trasmesse alle casse e applicate lì: sul documento fatto da Facile non
-    hanno effetto.
+    hanno effetto. Fa eccezione il 3x2, che il **Pos Touchscreen** calcola
+    anche da sé: vedi [Prendi 3 paghi 2](#prendi-3-paghi-2).
 
 !!! note "Come si leggono Tipo Offerta, Cumulativa e Applicabilità insieme"
 
@@ -161,6 +164,7 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
     | Sconto fisso sull'articolo, sempre | `02 - Ammontare Articolo` | `(No)` | `Sempre` |
     | Sconto percentuale sull'articolo, sempre | `04 - Percentuale Articolo` | `(No)` | `Sempre` |
     | Prendi 3 paghi 2 | `05 - MxN` | `(Si)` | `Sempre` |
+    <!-- DA VERIFICARE: il 3x2 di esempio in "Come si fa" usa (No) - Articoli Autonomi; per le casse vale (Si) o (No)? Facile non legge questo campo. -->
     | Sconto solo sul primo pezzo dello scontrino | `02` oppure `04` | `(No)` | `Una Volta nello Scontrino` |
     | Regalo al raggiungimento di una soglia | `06 - Regalo Articolo` | `(Set)` | `In Continuo dopo la Soglia` |
     | Sconto su un insieme di articoli diversi | `10` o `11` — gruppo articoli | `(Pan) - Paniere` | `Sempre` |
@@ -211,6 +215,98 @@ testata, e l'offerta parte già impostata su `02 - Ammontare Articolo`,
 5. Premi **F8 - Stampa ▸ Stampa Frontalini Promozione** per i cartellini.
 6. Manda la promozione alle casse da **Menu ▸ Casse e Bilance**, con
    [Invio Variazioni Articoli](../casse-bilance/casse.md).
+
+### Impostare le tre promozioni più comuni
+
+Il taglio di prezzo, lo sconto in percentuale e il *prendi 3 paghi 2* sono le
+offerte che si usano più spesso. I tre esempi sono le righe della promozione
+*OTTOBRATA* che si vede in [La maschera](#la-maschera): vale tutto ottobre,
+tutti i giorni, sul deposito 1 e sul 2° listino.
+
+Per ciascuno si parte allo stesso modo:
+
+1. Con la promozione aperta, premi **F7 - Aggiungi** e scegli *Promozione
+   Standard*.
+2. Indica l'articolo. Si apre la finestra della riga, con il prezzo di listino
+   già riportato in **Listino**.
+3. Compila la riga come spiegato negli esempi che seguono e salvala con
+   **F2 - Salva**. La riga compare nella griglia della promozione.
+
+In tutti e tre gli esempi **Soglia Q.tà** (per il 3x2, **Valore M**) e
+**Soglia Ammont.** si compilano solo nella prima riga di **Soglie Effetti**;
+le altre nove restano a zero.
+
+#### Taglio di prezzo: da 11,90 a 11,00
+
+Il tubo costa 11,90 a listino e in promozione va venduto a 11,00.
+
+![Riga con il taglio di prezzo](../../assets/img/vendite/promozioni-riga.png)
+
+1. In **Tipo Offerta** lascia `02 - Ammontare Articolo`, che sulle righe nuove
+   è già proposto.
+2. Lascia **Offerta Cumulativa** su `(No) - Articoli Autonomi` e
+   **Applicabilità** su `Sempre`.
+3. Nella prima riga di **Soglie Effetti** lascia **Soglia Q.tà** e
+   **Soglia Ammont.** a zero.
+4. In **Sconto €** scrivi quanto togliere al prezzo: `0,90`.
+5. Premi **F2 - Salva**. Prima del salvataggio **Prezzo Netto** mostra `11,00`;
+   in griglia la riga è *AMMONTARE ARTICOLO* con esito `0,90`.
+
+!!! tip "Se conosci il prezzo promozionale e non lo sconto"
+
+    Scrivi in **Sconto €** il prezzo a cui vuoi vendere, `11,00`, e premi
+    ++f10++: il programma lo trasforma nello sconto, `0,90`. Funziona solo con
+    `02 - Ammontare Articolo` e con un prezzo più basso di quello di listino.
+
+#### Sconto in percentuale: il 20%
+
+Il box doccia costa 119,00 a listino e in promozione ha il 20% di sconto.
+
+![Riga con lo sconto in percentuale](../../assets/img/vendite/promozioni-riga-percentuale.png)
+
+1. In **Tipo Offerta** scegli `04 - Percentuale Articolo`. L'intestazione
+   dell'effetto diventa **Sconto %**.
+2. Lascia **Offerta Cumulativa** su `(No) - Articoli Autonomi` e
+   **Applicabilità** su `Sempre`.
+3. Nella prima riga di **Soglie Effetti** lascia **Soglia Q.tà** e
+   **Soglia Ammont.** a zero.
+4. In **Sconto %** scrivi `20`.
+5. Premi **F2 - Salva**. Prima del salvataggio **Prezzo Netto** mostra
+   `95,20`, cioè 119,00 meno il 20%; in griglia la riga è
+   *PERCENTUALE ARTICOLO* con esito `20,00`.
+
+Se la ditta lavora a prezzi IVA esclusa (**Prezzi Ivati** = `NO` nei
+[parametri di magazzino della ditta](../anagrafiche/ditte.md#scheda-parametri-magazzino)),
+nella finestra compare anche la spunta **Sconto Aggiuntivo**. Con la spunta, sui
+documenti il 20% si aggiunge agli sconti che la riga ha già; senza, la riga
+prende il prezzo promozionale e gli altri sconti si azzerano.
+
+Sia il taglio di prezzo sia lo sconto in percentuale valgono anche sui
+documenti fatti da Facile, perché hanno **Applicabilità** `Sempre` e le soglie
+a zero. Con una soglia di quantità superiore a uno, o con una soglia di
+ammontare, sui documenti di Facile non valgono più.
+
+#### Prendi 3 paghi 2
+
+La colonna doccia costa 128,10: chi ne prende tre ne paga due.
+
+![Riga con il prendi 3 paghi 2](../../assets/img/vendite/promozioni-riga-mxn.png)
+
+1. In **Tipo Offerta** scegli `05 - MxN`. Le intestazioni cambiano:
+   **Valore M** prende il posto di **Soglia Q.tà**, **Valore N** quello
+   dell'effetto, e la colonna del prezzo netto resta vuota.
+2. Lascia **Offerta Cumulativa** su `(No) - Articoli Autonomi` e
+   **Applicabilità** su `Sempre`.
+3. Nella prima riga di **Soglie Effetti** scrivi in **Valore M** quanti pezzi
+   si prendono, `3`, e in **Valore N** quanti se ne pagano, `2`. Lascia
+   **Soglia Ammont.** a zero.
+4. Premi **F2 - Salva**. In griglia la riga è *MxN*, con `3,000` in
+   **PLU Q.tà** ed esito `2,00`.
+
+Lo sconto scatta a gruppi interi di tre pezzi dello stesso articolo: con
+quattro pezzi se ne pagano tre, con sei se ne pagano quattro. Il 3x2 lo
+applicano le casse e il **Pos Touchscreen**; la vendita al banco da
+tastiera, le fatture e gli altri documenti non lo applicano.
 
 ### Rifare la promozione dell'anno prima
 
