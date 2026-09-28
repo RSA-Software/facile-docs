@@ -61,6 +61,7 @@ e i file XML dei corrispettivi.
 | [Flussi e riepiloghi](flussi-e-riepiloghi.md) | La generazione del flusso per l'Agenzia, i riepiloghi di accise e crediti, i ravvedimenti. |
 | [Corrispettivi in XML](corrispettivi-xml.md) | I due file XML dei corrispettivi e dei periodi di inattività. |
 | [Le tabelle](tabelle.md) | Soggetti obbligati, registri, firme e tutte le tabelle ministeriali, con le rispettive importazioni. |
+| [Dati Agenzia Dogane di una destinazione](dati-agenzia-dogane.md) | I dati doganali della destinazione diversa di un cliente, letti dal DAS al posto di quelli della sede. |
 
 !!! note "Prima le tabelle, poi tutto il resto"
 

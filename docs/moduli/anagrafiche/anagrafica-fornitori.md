@@ -183,7 +183,8 @@ generata.
 | **Vendite** | Cod.Cli., Cliente, Cod.Age., Agente, Tot.Vendite |
 
 La scheda *Destinazioni Diverse* ha in più i pulsanti **Nuovo**, **Modifica**,
-**Canc.** e **Stampa**; la scheda *Gruppi* i pulsanti **Aggiungi** e
+**Canc.** e **Stampa**, che aprono la maschera
+[Destinazioni diverse](destinazioni-diverse.md); la scheda *Gruppi* i pulsanti **Aggiungi** e
 **Rimuovi**; la scheda *Vendite* i campi **Data Iniziale** e **Data Finale**
 per restringere il periodo.
 

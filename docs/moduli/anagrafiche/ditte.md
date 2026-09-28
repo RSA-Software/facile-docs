@@ -281,7 +281,8 @@ TRASPORTO**. Sotto:
 
 Una griglia con le destinazioni merce dell'azienda — colonne **Codice**,
 **Ragione Sociale**, **Città** e **Indirizzo** — e quattro pulsanti: **Nuovo**,
-**Modifica**, **Canc.** e **Stampa**.
+**Modifica**, **Canc.** e **Stampa**. Nuovo e Modifica aprono la maschera
+[Destinazioni diverse](destinazioni-diverse.md).
 
 ### Scheda Fidelity - Buoni Sconto
 

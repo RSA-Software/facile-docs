@@ -219,7 +219,9 @@ generata.
 | **Commesse** | Numero, Data, Descrizione |
 
 Le schede *Destinazioni Diverse* e *Luoghi Carico* hanno in più i pulsanti per
-inserire, modificare, cancellare e stampare le righe.
+inserire, modificare, cancellare e stampare le righe. Ogni riga si compila
+nella maschera [Destinazioni diverse](destinazioni-diverse.md), che è anche
+quella del titolare (**F7 - Altri ▸ Titolare/Rappr. Legale**).
 
 ## Pulsanti e comandi
 

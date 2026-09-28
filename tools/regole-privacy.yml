@@ -13,6 +13,7 @@ etichette_sensibili:
   # ragioni sociali, cognomi e nomi
   - "rag*cognome"          # Rag. Sociale 1/Cognome
   - "rag*nome"             # Rag. Sociale 2/ Nome
+  - "nome"                 # Nome da solo (Destinazioni diverse, titolare)
   - "ragionesociale*"
   - "cognome*"
   - "nominativo*"
@@ -39,6 +40,11 @@ etichette_sensibili:
   - "pec"
   - "indirizzo*"
   - "sitoweb"
+  # coordinate bancarie (Banche, Clienti, Fornitori, Ditte): nella schermata di
+  # Banche del 09/09/2026 un IBAN vero era rimasto leggibile
+  - "*iban*"
+  - "numconto"
+  - "nunconto"             # didascalia storica con il refuso "Nun. Conto"
   # date di nascita
   - "datanascita"
   - "data*nascita"
@@ -85,6 +91,7 @@ colonne_sensibili:
   - "nascita*"
   - "piva*"
   - "codfiscale*"
+  - "*iban*"
 
 # --- barra del titolo -------------------------------------------------------
 # Diverse maschere attaccano al titolo un dato del cliente dopo un separatore
@@ -101,6 +108,14 @@ per_maschera:
   # come etichetta generica, quindi valgono solo qui.
   IDD_TCN_COMMESSE:
     aggiungi_etichette: ["descrizione", "tecnico", "contratto"]
+
+  # Dati per l'Agenzia delle Dogane (versione Energy): il codice ditta e' una
+  # partita IVA con il prefisso del paese, accisa e targa identificano
+  # l'operatore e il suo mezzo.
+  IDD_TBC_DOGANE:
+    aggiungi_etichette: ["codditta", "codaccisa", "targa"]
+  IDD_CLI_DOGANE:
+    aggiungi_etichette: ["codditta", "codaccisa", "targa"]
 
   # IDD_CLI_COMPLEANNI:
   #   # colonne come frazioni della larghezza della griglia, da sinistra

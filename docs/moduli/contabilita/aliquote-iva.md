@@ -50,8 +50,14 @@ La maschera è divisa in tre parti:
 
 - in alto la **barra dei comandi**;
 - sotto la **testata**, sempre visibile, con codice e descrizione;
-- al centro le **schede**: *Generale*, che si compila, e diciassette schede di
-  sola consultazione — i dodici mesi, i quattro trimestri e il **Totale**.
+- al centro le **schede**: *Generale*, che si compila, e le schede di sola
+  consultazione — i dodici mesi, i quattro trimestri e il **Totale**.
+
+Le schede di consultazione compaiono **solo in modifica**: in inserimento c'è
+soltanto *Generale*, perché un codice nuovo non ha ancora progressivi. Le
+quattro schede dei **trimestri** compaiono solo se la [ditta](../anagrafiche/ditte.md)
+ha il **Regime Iva** `T - TRIMESTRALE`; con `M - MENSILE` restano i dodici mesi
+e il Totale, come nell'immagine.
 
 ## Campi
 
@@ -87,8 +93,9 @@ La maschera è divisa in tre parti:
 
 ### Schede dei progressivi
 
-Le schede dei dodici mesi, dei quattro trimestri e del **Totale** non si
-compilano: mostrano i progressivi maturati, con le stesse colonne.
+Le schede dei dodici mesi, dei trimestri (con il regime IVA trimestrale) e del
+**Totale** non si compilano: mostrano i progressivi maturati, con le stesse
+colonne.
 
 | Colonne |
 |---|

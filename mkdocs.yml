@@ -135,6 +135,7 @@ nav:
       - moduli/archivi.md
       - Clienti:
           - Inserimento e Modifica: moduli/anagrafiche/anagrafica-clienti.md
+          - Destinazioni Diverse: moduli/anagrafiche/destinazioni-diverse.md
           - Mailing list: moduli/anagrafiche/mailing-list.md
           - Associazione Gruppi e Giri: moduli/anagrafiche/associazioni.md
           - Agganci Trasferimento Documenti: moduli/anagrafiche/agganci-trasferimento-documenti.md
@@ -331,6 +332,7 @@ nav:
           - Flussi e riepiloghi: moduli/versioni/energy/flussi-e-riepiloghi.md
           - Corrispettivi in XML: moduli/versioni/energy/corrispettivi-xml.md
           - Le tabelle: moduli/versioni/energy/tabelle.md
+          - Dati Agenzia Dogane di una destinazione: moduli/versioni/energy/dati-agenzia-dogane.md
       - Ortofrutta:
           - moduli/versioni/ortofrutta/index.md
           - Partite: moduli/versioni/ortofrutta/partite.md

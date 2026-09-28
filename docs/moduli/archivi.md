@@ -13,6 +13,9 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
 
 - [Clienti](anagrafiche/anagrafica-clienti.md) — dati anagrafici, fiscali e
   commerciali dei clienti.
+    - [Destinazioni diverse](anagrafiche/destinazioni-diverse.md) — gli
+      indirizzi di consegna, i luoghi di carico e il titolare di clienti,
+      fornitori e ditte.
     - [Mailing list](anagrafiche/mailing-list.md) — le liste per email e SMS.
     - [Associazione gruppi e giri](anagrafiche/associazioni.md) — assegnare in
       fretta gruppo, agente, vettore, pagamento e giri.
