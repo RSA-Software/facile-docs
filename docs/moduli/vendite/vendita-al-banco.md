@@ -188,6 +188,51 @@ esempio dopo aver battuto un codice che non è in archivio.
     fattura, fattura accompagnatoria, ricevuta fiscale o pro forma: scegliendo
     un altro documento il programma si ferma e lo dice.
 
+### Incassare con la cassa automatica PagAmico
+
+Con la cassa automatica **PAGAMICO**, scelta nelle [impostazioni della
+postazione](../utility/impostazioni-postazione.md), il contante lo prende la
+macchina e il resto lo rende lei. Facile non parla direttamente con la
+macchina: passa dal FacileWebApiService, che deve essere in esecuzione.
+
+1. Batti lo scontrino come al solito.
+2. Sul **Pos Touchscreen** premi il tasto **PagAmico**; nella chiusura dello
+   scontrino di **Vendita** premi **F6 - Rendiresto**.
+3. Si apre la finestra **Cassa Automatica** con *Inserire Euro … nella cassa*:
+   il cliente inserisce banconote e monete, e la finestra mostra quanto ha già
+   inserito.
+4. Quando l'importo è coperto la macchina rende il resto, la finestra si chiude
+   e lo scontrino si chiude con il contante incassato.
+
+Per fermare un incasso premi **Esci** nella finestra. Se il cliente non ha
+ancora inserito niente l'incasso si chiude; altrimenti il programma chiede se
+restituire il denaro (**Sì**), trattenerlo come pagamento parziale (**No**: lo
+scontrino resta aperto per la parte che manca) o continuare (**Annulla**).
+
+Se la macchina non ha i tagli per rendere tutto il resto, lo dice e indica la
+cifra da dare a mano: lo scontrino la riporta come resto. Dopo ogni incasso, e
+all'apertura della schermata, il programma avvisa anche quando la macchina ha
+troppe monete, un taglio esaurito o il cassetto di recupero pieno.
+
+!!! warning "Un incasso dall'esito incerto non si ripete alla cieca"
+
+    Se il collegamento con il servizio si interrompe mentre il cliente sta
+    pagando, il denaro può essere già dentro la macchina. Prima di ripetere
+    l'incasso guarda il display della cassa automatica: se l'incasso è ancora
+    aperto, chiudilo con **Chiudi Incasso Sospeso** (vedi sotto).
+
+### Gestire la cassa PagAmico
+
+Dal **Pos Touchscreen**, **Funzioni ▸ Cassa Automatica** apre la finestra
+**PagAmico**:
+
+| Pulsante | Effetto |
+|---|---|
+| **Mostra Livelli** | Mostra quante monete e banconote di ogni taglio ci sono nella macchina, e avvisa se qualcosa è sotto scorta, esaurito o troppo pieno. |
+| **Preleva Contante** | Chiede un importo e lo fa erogare dalla macchina. |
+| **Chiudi Incasso Sospeso** | Chiude un incasso rimasto aperto sulla macchina, per esempio dopo che Facile è stato chiuso a metà: **Sì** restituisce al cliente il denaro inserito, **No** lo trattiene nella cassa. |
+| **Esci** | Chiude la finestra. |
+
 ## Controlli e messaggi
 
 Sono molti, e quasi tutti si capiscono meglio sapendo **in che momento**
@@ -315,12 +360,34 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *Comando non supportato dal modello della Cassa !* | Quel modello non sa fare quell'operazione. | Non tutte le casse fanno tutto. |
 | *Non e' possibile inizializzare il driver di comunicazione con la stampante fiscale!<br>Controllare il display, potrebbe essere necessario un azzeramento fiscale.<br>Vuoi fare l'azzeramento fiscale?* | La stampante fiscale è bloccata in attesa della chiusura giornaliera. | Di norma **Sì**: è la chiusura di fine giornata non fatta. |
 | *Il Cassetto puo' essere aperto solo a scontrino chiuso!* | Si è chiesto il cassetto a scontrino aperto. | Prima si chiude lo scontrino. |
-| *Assenza di Comunicazione con la cassa automatica…<br>Vuoi riprovare?* | La cassa automatica non risponde. | **Sì** ritenta dopo aver controllato il collegamento. |
+| *Assenza di Comunicazione con la cassa automatica…<br>Vuoi riprovare?* | La cassa automatica non risponde. Con la **PagAmico**, sopra questo testo compare anche il motivo dato dal FacileWebApiService. | **Sì** ritenta dopo aver controllato il collegamento. |
 | *Errore di comunicazione con la bilancia!* / *Impossibile comunicare con la bilancia!* | La bilancia non risponde. | Controllare cavo e accensione. |
 | *Bilancia non a livello!* | La bilancia non è in piano. | Va livellata, altrimenti pesa male. |
 | *Peso Instabile!<br>Far stabilizzare il peso prima dell'acquisizione!* / *Peso non stabile o negativo!* | Il piatto si muove. | Attendere che si fermi. |
 | *Sottopeso* / *Sovrappeso<br>Peso fuori dal range consentito!* | Il peso è fuori dai limiti della bilancia. | Il pezzo non è pesabile su quella bilancia. |
 | *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | Il piatto è vuoto. | Appoggiare l'articolo. |
+
+### Quando si incassa con la cassa automatica PagAmico
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *FacileWebApiService non configurato!<br><br>Impostarlo con il comando Impostazione FacileWebApiService.* | La postazione non sa dove si trova il servizio che pilota la macchina. | Configuralo da **Menu ▸ Utility ▸ Impostazione FacileWebApiService**. |
+| *Nessuna risposta da FacileWebApiService!<br><br>Verificare che il servizio sia in esecuzione.* | Il servizio è fermo o non si raggiunge. | Avvialo, o controlla l'indirizzo nella sua impostazione. |
+| *Errore … da FacileWebApiService!* seguito da una spiegazione | Il servizio ha rifiutato la richiesta. | Leggi la spiegazione; se non è chiara, riferiscila all'assistenza. |
+| *Su questa cassa c'e' gia' un incasso in corso.* | Sulla macchina è rimasto aperto un incasso precedente. | Aspetta che finisca, o chiudilo con **Chiudi Incasso Sospeso**. |
+| *Il cliente ha inserito Euro ….<br><br>Scegliere:<br>SI - Per restituire il denaro al cliente<br>NO - Per trattenerlo come pagamento parziale<br>Annulla - Per continuare l'incasso* | Hai premuto **Esci** mentre il cliente aveva già inserito denaro. | **Sì** lo restituisce; **No** lo tiene e lo scontrino resta aperto per il resto; **Annulla** torna ad aspettare. |
+| *La cassa non ha ancora preso in carico l'incasso: riprovare fra un istante.* | Hai premuto **Esci** nel primo istante dell'incasso. | Premi di nuovo **Esci** dopo un momento. |
+| *Attenzione!<br><br>Impossibile erogare resto per Euro …<br><br>Il resto va consegnato a mano al cliente.* | La macchina non aveva i tagli per rendere tutto il resto. | Dai a mano la cifra indicata. |
+| *Cassa automatica:<br><br>…* | La macchina segnala le scorte: troppe monete o banconote, un taglio esaurito, cassetto di recupero pieno; all'apertura della schermata anche le scorte basse. | Svuota o ricarica la macchina. Lo stesso avviso non si ripete finché la situazione non cambia. |
+| *FacileWebApiService non risponde e l'incasso potrebbe essere ancora aperto sulla cassa automatica.<br><br>Vuoi continuare ad attendere?* | Durante un incasso il servizio non risponde da alcuni secondi. | Di norma **Sì**: il collegamento torna e l'incasso prosegue. |
+| *Esito dell'incasso sconosciuto!<br><br>Controllare la cassa automatica prima di ripetere l'operazione.* | Hai smesso di attendere senza sapere come è finito l'incasso. | Guarda il display della macchina; se l'incasso è ancora aperto chiudilo con **Chiudi Incasso Sospeso**. Non ripetere l'incasso prima. |
+| *…<br><br>L'erogazione potrebbe essere avvenuta in parte: verificare la cassa automatica.* | Un reso o un prelievo non è stato erogato tutto. | Controlla quanto è uscito dalla macchina e dai il resto a mano. |
+| *…<br><br>Se la cassa automatica ha erogato denaro, verificarlo prima di ripetere l'operazione.* | Il servizio non ha risposto durante un'erogazione. | Controlla la macchina prima di riprovare. |
+| *Chiusura di un incasso rimasto aperto sulla cassa automatica.<br><br>Scegliere:<br>SI - Per restituire al cliente il denaro inserito<br>NO - Per trattenerlo nella cassa<br>Annulla - Per non fare nulla* | Hai premuto **Chiudi Incasso Sospeso**. | Scegli che cosa fare del denaro inserito. |
+| *Importo Prelevato dalla Cassa :  …* | **Preleva Contante** è riuscito. | Nessuna azione. |
+
+Gli altri messaggi sulla macchina — occupata, fuori servizio, importo oltre il
+limite — li scrive il FacileWebApiService e compaiono così come li riceve.
 
 ### Quando si esce, si azzera, si abbandona
 

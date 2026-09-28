@@ -73,7 +73,7 @@ finestrelle di pochi campi.
 | **Customer Display - 1** e **Porta** | | Il display rivolto al cliente e la sua porta. | voce dell'elenco |
 | **Customer Display - 2** e **Porta** | | Un secondo display. | voce dell'elenco |
 | **Bilancia Checkout** e **Porta** | | La bilancia della cassa. | voce dell'elenco |
-| **Cassa Automatica** | | Il sistema di cassa automatica collegato. | voce dell'elenco |
+| **Cassa Automatica** | | Il sistema di cassa automatica collegato. Con `PAGAMICO` la postazione non parla con la macchina ma con il FacileWebApiService, che va configurato con la sua [impostazione](#impostazione-facilewebapiservice); l'indirizzo della macchina si imposta nel servizio. | `NESSUNA`, `CASHDRO WEB SERVICE`, `CASHDRO FILES`, `CASHLOGY`, `CASHMATIC`, `VIRTUO VNE`, `PAGAMICO` |
 | **Ditta Conv. HACCP** | | La ditta convenzionata per la parte HACCP. | codice |
 | **Formato Etichette** | | Il formato predefinito delle [etichette](etichette-barcode.md). | voce dell'elenco |
 
@@ -86,7 +86,7 @@ Sono caselle da attivare o disattivare. Le principali:
 | **Descrizione completa** | Mostra la descrizione estesa dell'articolo. |
 | **Disabilita Numerazione Scontrini** | Toglie la numerazione automatica degli [scontrini](../vendite/scontrini.md). |
 | **Calcolo Predefinito per Scontrini** | Applica il calcolo predefinito. |
-| **Arrotonda ai 5 Centesimi Superiori** | Arrotonda i totali per eccesso ai cinque centesimi. |
+| **Arrotonda ai 5 Centesimi Superiori** | Arrotonda i totali per eccesso ai cinque centesimi. Cambiando la **Cassa Automatica**, la casella resta a video solo con `VIRTUO VNE` e `PAGAMICO`. |
 | **Abilita Ricerca Articolo su Vendita con Spazio** | La barra spaziatrice apre la ricerca articolo. |
 | **Aggiungi Sempre Nuovo Rigo su Vendita** | Ogni lettura crea una riga nuova invece di sommare. |
 | **Posizionamento Iniziale su Codice Articolo su Vendita** | Il cursore parte dal codice articolo. |
@@ -129,6 +129,11 @@ Lasciandola vuota si usa la stampante predefinita.
 Oltre a **F2 - OK** ci sono **F3 - Test**, che prova il collegamento, e **F4 -
 Avvia** e **F5 - Arresta**, che fermano e fanno ripartire il servizio di
 Windows — ma solo se il servizio sta su questo computer.
+
+Il servizio serve anche alla cassa automatica **PAGAMICO**. Se sull'impianto
+ci sono più casse PagAmico, quella da usare su questa postazione si indica nel
+file `cfg\pagamico.ini`, voce `id_cassa` della sezione `[OPTIONS]`, con il
+numero che la cassa ha nel servizio; senza il file si usa la cassa predefinita.
 
 ### Impostazione Sistemi di Pagamento Elettronico
 
