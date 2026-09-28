@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-25 — **887 messaggi**.
+Aggiornato al 2026-09-28 — **890 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -753,6 +753,8 @@ Aggiornato al 2026-09-25 — **887 messaggi**.
 | *Note non presenti! Le vuoi creare?* | [Cerca articoli](../moduli/anagrafiche/cerca-articoli.md) | Hai premuto ++f9++ su un articolo che non ha ancora il documento delle note. | Rispondi **Sì** per crearlo dal modello, **No** per lasciar perdere. |
 | *Numero cassa non valido!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La postazione non ha un numero di cassa. | Come sopra. |
 | *Numero di telefono gia' presente in archivio! Cliente … Vuoi Continuare ?* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Il numero è già di un altro cliente, indicato nel messaggio. | Come sopra. |
+| *Numero gia in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato occupato nel frattempo, per esempio da un'altra cassa. | Scegli un altro posto. |
+| *Numero non trovato in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato liberato nel frattempo, per esempio perché lo scontrino è già stato ripreso da un'altra cassa. | Controlla gli altri posti. |
 | *Obbligo Selezione Reparto!* / *Impostare reparto predefinito prima della conversione!* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Manca il [reparto](../moduli/magazzino/reparti.md) da assegnare agli articoli nuovi. | Scegli il reparto, o impostane uno predefinito nelle opzioni della ditta. |
 | *Operazione disponibile solo su archivi anno corrente.* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md), [Stampe dell'inventario](../moduli/inventario/stampe-inventario.md) | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro e riprova. |
 | *Operazione disponibile solo su archivi anno corrente.* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro. |
@@ -816,6 +818,7 @@ Aggiornato al 2026-09-25 — **887 messaggi**.
 | *Sei Sicuro ?* | [Manutenzione degli articoli](../moduli/anagrafiche/manutenzione-articoli.md) | Seconda conferma della cancellazione. | **Sì** cancella davvero. Non si torna indietro. |
 | *Selezionare almeno una Sezione!* | [Stampe magazzino clienti](../moduli/magazzino/stampe-magazzino-clienti.md), [Stampe magazzino fornitori](../moduli/magazzino/stampe-magazzino-fornitori.md) | Si è confermato senza aver spuntato nessuna sezione. | Spunta le sezioni da includere. |
 | *Selezionare almeno un registro !* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Nessuna delle sei caselle è spuntata. | Spunta il registro o i registri da rinumerare. |
+| *Sequenza Errata* (sul display del Pos Touchscreen) | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Fra le altre cause: hai battuto una quantità da moltiplicare e poi letto l'etichetta di una bilancia che porta già l'importo. | Premi **C** e rileggi l'etichetta senza moltiplicare; per più pezzi, leggi un'etichetta per pezzo. |
 | *Se vuoi adeguare alla Scorta Minima scegli SI.<br>Se Vuoi adeguare alla Scorta Massima scegli NO.* | [Ordini tabacchi](../moduli/ordini/ordini-tabacchi.md) | Hai premuto **F4 - Scorta**. | Scegli il livello a cui adeguare, oppure **Annulla**. |
 | *Sezione Documento non coincide con Sezione Causale Contabile Fatture PA impostata sulla Ditta!<br>Vuoi continuare ?* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Come sopra, per la sezione. | Come sopra. |
 | *Sezione Fatture PA non impostata sulla Causale Contabile Fatture PA o non valida!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | La causale dedicata non ha la sezione. | Come sopra. |

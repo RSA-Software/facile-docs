@@ -142,6 +142,35 @@ Questi sono i comandi della schermata **Vendita**.
 
 Sul **Pos Touchscreen** lo stesso si fa con il tasto **Cliente**.
 
+### Parcheggiare uno scontrino e riprenderlo dopo
+
+Sul **Pos Touchscreen** uno scontrino a metà si può mettere da parte, servire
+un altro cliente e riprenderlo più tardi. Lo fa un tasto solo, che cambia nome:
+**Memo** quando nello scontrino ci sono righe, **Rich.** quando è vuoto.
+
+1. Con lo scontrino aperto premi **Memo**: si apre *Parcheggia Scontrino*, con
+   ventiquattro posti numerati. Quelli già occupati mostrano il cliente, o il
+   numero del posto, con data e ora, e non si possono scegliere.
+2. Premi un posto libero: lo scontrino vi viene salvato e la schermata si
+   svuota, pronta per il cliente successivo.
+3. Quando vuoi riprenderlo, a scontrino vuoto premi **Rich.**: si apre
+   *Richiama Scontrino* e si possono scegliere solo i posti occupati.
+4. Premi il posto: tornano le righe e i dati del cliente — sconto, listino,
+   punti, codice fiscale, lotteria — e il posto si libera.
+
+Lo scontrino ripreso si lavora come uno appena battuto. Se con **Correz.** ne
+togli tutte le righe, la schermata riparte da capo — cliente compreso — e il
+tasto torna **Rich.**, pronto per richiamarne un altro.
+
+A decidere è lo scontrino, non la scritta: a scontrino vuoto il tasto richiama
+sempre, anche nel breve momento in cui porta ancora scritto **Memo** — per
+esempio dopo aver battuto un codice che non è in archivio.
+
+!!! note "I posti sono gli stessi per tutte le casse"
+
+    I ventiquattro posti sono in comune fra tutte le postazioni: uno scontrino
+    parcheggiato a una cassa si può riprendere da un'altra.
+
 ### Fatturare quello che è sul banco
 
 1. Passa gli articoli come per una vendita normale.
@@ -193,6 +222,7 @@ arrivano. Qui sono raccolti per quello, non in ordine alfabetico.
 |---|---|---|
 | *Attenzione!<br>Articolo Inesistente<br>Codice … Q.ta …* | Il codice letto o digitato non è in archivio. | Controllare il codice o creare l'articolo. |
 | *Codice non trovato in archivio !<br>Vuoi effettuare un ricerca ?* | Come sopra. | **Sì** apre la ricerca articoli. |
+| *Sequenza Errata* (sul display del Pos Touchscreen) | Fra le altre cause: hai battuto una quantità da moltiplicare e poi letto l'etichetta di una bilancia che porta già l'importo. | Premi **C** e rileggi l'etichetta senza moltiplicare; per più pezzi, leggi un'etichetta per pezzo. |
 | *Attenzione!<br>PLU non trovato in archivio (…)* | Il PLU letto dalla bilancia non corrisponde a nessun articolo. | Va allineata la [bilancia](../casse-bilance/bilance.md). |
 | *Per questo Articolo non e' stato Impostato il Reparto Cassa!* | L'articolo non ha il reparto con cui la cassa lo registra. | Si imposta in [anagrafica articoli](../anagrafiche/anagrafica-articoli.md): senza, lo scontrino non si chiude. |
 | *Per l' articolo regalo non e' stato Impostato il Reparto Cassa!* | Lo stesso, per l'articolo usato come omaggio. | Come sopra. |
@@ -212,6 +242,16 @@ arrivano. Qui sono raccolti per quello, non in ordine alfabetico.
 | *Raggiunto il numero massimo di sconti applicabili!<br>Lo sconto della promozioni non e' stato applicato!* | La riga ha già tutti gli sconti che può avere. | La [promozione](promozioni.md) **non entra**: se deve valere, va tolto uno degli sconti manuali. |
 | *Attenzione!<br>Ci sono righe con prezzi pari a zero dovuti al cambio del listino applicato.<br>Controllare prima di emettere lo scontrino.* | Cambiando listino, alcune righe sono rimaste senza prezzo. | Vanno controllate una per una prima di chiudere. |
 | *Attenzione!<br>Cliente con aliquota iva preimpostata.<br>Saranno ricalcolati i prezzi di vendita.* | Il cliente ha un'aliquota fissa. | I prezzi vengono rifatti su quell'aliquota. |
+
+### Quando si parcheggia o si richiama uno scontrino
+
+Questi avvisi compaiono sul display della cassa, non in una finestra. Si
+tolgono con il tasto **C** del tastierino, poi si riprende a lavorare.
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Numero gia in memoria* | Il posto scelto è stato occupato nel frattempo, per esempio da un'altra cassa. | Scegli un altro posto. |
+| *Numero non trovato in memoria* | Il posto scelto è stato liberato nel frattempo, per esempio perché lo scontrino è già stato ripreso da un'altra cassa. | Controlla gli altri posti. |
 
 ### Quando si sceglie il cliente
 
@@ -349,6 +389,27 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 
     Senza cliente la vendita è anonima: lo scontrino resta valido, ma non
     matura punti e non si ritrova per cliente.
+
+!!! note "L'importo stampato dalla bilancia resta quello"
+
+    Sul **Pos Touchscreen**, quando si legge l'etichetta di una bilancia che
+    porta l'importo — articoli con **Dati su etichetta** impostato a
+    **CODICE + PREZZO** o **CODICE + PREZZO Q.TA = 1** nell'[anagrafica
+    articoli](../anagrafiche/anagrafica-articoli.md) — la riga tiene il prezzo
+    calcolato in quel momento, anche se il cliente o la sua tessera si indicano
+    dopo: su queste righe promozioni e sconto del cliente non vengono
+    ricalcolati. Quando gli articoli alla bilancia li manda Facile, le
+    promozioni sono già comprese nel prezzo che la bilancia usa; lo sconto del
+    cliente si applica solo se il cliente è indicato **prima**
+    di leggere l'etichetta, e solo con **CODICE + PREZZO**.
+
+    Con **CODICE + PREZZO** la quantità si ricava dividendo l'importo per il
+    prezzo del listino di base della cassa, anche quando il cliente ha un
+    listino suo. Con **CODICE + PREZZO Q.TA = 1** la quantità è sempre 1.
+
+    Queste etichette non si moltiplicano: se prima di leggerne una si batte
+    una quantità con il tasto di moltiplicazione, la cassa risponde
+    *Sequenza Errata* e la riga non entra.
 
 !!! warning "«Scarica» e «Scontrino» non sono la stessa cosa"
 
