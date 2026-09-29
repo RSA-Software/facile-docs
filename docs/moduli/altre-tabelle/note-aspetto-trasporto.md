@@ -58,7 +58,7 @@ Differita**, descritta nella tabella dei [campi](#campi).
 ![Elenco delle causali di trasporto](../../assets/img/altre-tabelle/causali-trasporto-elenco.png)
 
 Premendo **F5 - Cerca** si apre l'elenco della tabella su cui stai lavorando —
-per le causali la finestra **Cerca Causali Trasporto [SQL]** — con le colonne
+per le causali la finestra **Cerca Causali Trasporto** — con le colonne
 **Codice** e **Descrizione**.
 
 Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
