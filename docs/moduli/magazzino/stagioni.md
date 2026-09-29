@@ -38,6 +38,25 @@ distinte, così l'inventario dice a colpo d'occhio quanto pesa il vecchio.
 È una maschera a finestra unica, senza schede: la **barra dei comandi** e tre
 campi.
 
+### L'elenco delle stagioni
+
+![Elenco delle stagioni](../../assets/img/magazzino/stagioni-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Stagioni**: l'elenco delle stagioni
+con le colonne **Codice** e **Descrizione**. La stessa finestra si apre
+dall'anagrafica articoli, premendo ++f10++ sul campo **Stagione**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
+doppio clic), **F3 - Nuova** apre la maschera per aggiungere una stagione, **F4 -
+Modifica** apre la stagione selezionata per correggerla.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quella stagione, o sulla prima che la segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  le stagioni che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

@@ -49,6 +49,28 @@ la richiama.
 dati della categoria e i ricarichi, al centro le impostazioni per la vendita al
 banco, in basso il riquadro degli sconti e delle provvigioni per scaglione.
 
+### L'elenco delle categorie
+
+![Elenco delle categorie merceologiche](../../assets/img/magazzino/categorie-merceologiche-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Categorie Merceologiche**:
+l'elenco delle categorie con codice, descrizione, abbreviativo e posizione
+sulla cassa touch. La stessa finestra si apre dall'anagrafica articoli,
+premendo ++f10++ sul campo **Cat. Merc.**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la categoria selezionata (vale
+anche il doppio clic), **F3 - Nuovo** apre la maschera per aggiungerne una,
+**F4 - Modifica** apre la categoria selezionata per correggerla.
+
+In alto ci sono i campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quella categoria, o sulla prima che la segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  le categorie che cominciano così. Svuota il campo per tornare all'elenco completo.
+- **Posiz. POS** — scrivi una posizione: l'elenco si posiziona sulla categoria
+  che occupa quel posto sulla cassa touch, o sulla prima che la segue.
+
 ## Campi
 
 ### Dati della categoria
@@ -119,6 +141,18 @@ Valgono inoltre:
 4. Se usi la cassa touch, imposta **Posizione POS**, i colori e la
    **Stampante**.
 5. Premi **F2 - Salva**.
+
+### Ritrovare e modificare una categoria
+
+1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Categorie Merceologiche ▸ Modifica**.
+   La maschera non si apre vuota: mostra già la categoria con il **codice più
+   alto**.
+2. Premi **F5 - Cerca** e scegli la categoria dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge la
+categoria dall'archivio e abbandona le modifiche non salvate.
 
 ### Impostare sconti e provvigioni per scaglione
 

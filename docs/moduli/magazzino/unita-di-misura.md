@@ -40,6 +40,25 @@ richiama, e su molte installazioni è fra i campi resi obbligatori.
 È una maschera a finestra unica, senza schede: la **barra dei comandi** e
 quattro campi.
 
+### L'elenco delle unità di misura
+
+![Elenco delle unità di misura](../../assets/img/magazzino/unita-di-misura-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Unità di Misura**: l'elenco delle unità di misura con
+le colonne **Codice** e **Descrizione**. La stessa finestra si apre
+dall'anagrafica articoli, premendo ++f10++ sul campo **Un. Misura**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
+doppio clic), **F3 - Nuova** apre la maschera per aggiungere un'unità, **F4 -
+Modifica** apre l'unità selezionata per correggerla.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quell'unità, o sulla prima che la segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  le unità che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -78,6 +97,17 @@ Valgono inoltre:
 2. Digita il **Codice** e la **Descrizione**.
 3. Scrivi l'**Abbreviativo**: è quello che comparirà sui documenti.
 4. Premi **F2 - Salva**.
+
+### Ritrovare e modificare un'unità di misura
+
+1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Unità di Misura ▸ Modifica**. La
+   maschera non si apre vuota: mostra già l'unità con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli l'unità dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge l'unità
+dall'archivio e abbandona le modifiche non salvate.
 
 ### Assegnare l'unità a un articolo
 

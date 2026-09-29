@@ -54,6 +54,26 @@ ne indica uno, e il codice deve esistere.
   e **V A L O R E** — una colonna;
 - in fondo, quattro caselle di opzione.
 
+### L'elenco delle causali
+
+![Elenco delle causali di magazzino](../../assets/img/magazzino/causali-magazzino-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Causali Magazzino**:
+l'elenco delle causali con le colonne **Codice** e **Descrizione**. La stessa
+finestra si apre dai movimenti di magazzino e dalle altre maschere che chiedono
+una causale, premendo ++f10++ sul campo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la causale selezionata (vale
+anche il doppio clic), **F3 - Nuova** apre la maschera per aggiungerne una,
+**F4 - Modifica** apre la causale selezionata per correggerla.
+
+In alto ci sono i campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quella causale, o sulla prima che la segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  le causali che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 ### Intestazione e regole generali
@@ -134,6 +154,18 @@ Valgono inoltre:
    **Acquistata**; nella colonna dei valori metti **+** su **Acquistato**.
 6. Lascia **=** su tutto il resto.
 7. Premi **F2 - Salva**.
+
+### Ritrovare e modificare una causale
+
+1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Causali Magazzino ▸ Modifica**. La
+   maschera non si apre vuota: mostra già la causale con il **codice più
+   alto**.
+2. Premi **F5 - Cerca** e scegli la causale dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge la
+causale dall'archivio e abbandona le modifiche non salvate.
 
 ### Creare una coppia di causali per il trasferimento fra depositi
 

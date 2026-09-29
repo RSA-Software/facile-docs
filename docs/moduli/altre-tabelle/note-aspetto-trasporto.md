@@ -43,8 +43,35 @@ documenti. Le tre tabelle contengono queste frasi già pronte.
 ![Note particolari](../../assets/img/altre-tabelle/note-aspetto-trasporto.png)
 
 Tutte e tre sono maschere a finestra unica, senza schede: la barra dei comandi
-e due soli campi, **Codice** e **Descrizione**. Il titolo della finestra dice
-su quale tabella si sta lavorando.
+e i campi **Codice** e **Descrizione**. Il titolo della finestra dice su quale
+tabella si sta lavorando.
+
+### La maschera delle causali di trasporto
+
+![Causali di trasporto](../../assets/img/altre-tabelle/causali-trasporto.png)
+
+Le causali di trasporto hanno in più la casella **Escludi da Fatturazione
+Differita**, descritta nella tabella dei [campi](#campi).
+
+### L'elenco delle voci
+
+![Elenco delle causali di trasporto](../../assets/img/altre-tabelle/causali-trasporto-elenco.png)
+
+Premendo **F5 - Cerca** si apre l'elenco della tabella su cui stai lavorando —
+per le causali la finestra **Cerca Causali Trasporto [SQL]** — con le colonne
+**Codice** e **Descrizione**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
+doppio clic), **F3 - Nuovo** apre la maschera per aggiungere una voce, **F4 -
+Modifica** apre la voce selezionata per correggerla. Lo stesso elenco si apre
+dal piede del documento di vendita, quando si cerca la causale da indicare.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quella voce, o sulla prima che la segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le
+  voci che cominciano così. Svuota il campo per tornare all'elenco completo.
 
 ## Campi
 
@@ -52,6 +79,7 @@ su quale tabella si sta lavorando.
 |---|:---:|---|---|
 | **Codice** | ● | Identificativo della voce. In modifica non è modificabile. | numero |
 | **Descrizione** | ● | La frase che comparirà sul documento. Quello che scrivi diventa **maiuscolo**. | testo, fino a 512 caratteri nelle Note Particolari e a 30 nelle altre due |
+| **Escludi da Fatturazione Differita** | | Solo nelle causali di trasporto. I DDT emessi con questa causale non vengono raccolti dalla fatturazione differita, e sulle loro righe compare la colonna **Q.ta' Fatturata**: è la causale giusta per il **conto visione** e il **conto deposito**, dove si fattura solo la merce che il cliente trattiene. | casella |
 
 !!! note "La casella delle Note Particolari è molto più capiente"
 
@@ -80,6 +108,15 @@ su quale tabella si sta lavorando.
 1. Apri **Menu ▸ Archivi ▸ Altre Tabelle ▸ Causali Trasporto Merci ▸
    Inserimento**.
 2. Digita il **Codice** e la **Descrizione**, per esempio `CONTO VISIONE`.
+3. Se i DDT con questa causale non vanno fatturati per intero — conto visione,
+   conto deposito — spunta **Escludi da Fatturazione Differita**.
+4. Premi **F2 - Salva**. La maschera si svuota per la voce successiva.
+
+### Aggiungere un aspetto esteriore
+
+1. Apri **Menu ▸ Archivi ▸ Altre Tabelle ▸ Aspetto Esteriore Merci ▸
+   Inserimento**.
+2. Digita il **Codice** e la **Descrizione**, per esempio `CARTONI`.
 3. Premi **F2 - Salva**. La maschera si svuota per la voce successiva.
 
 ### Correggere una frase

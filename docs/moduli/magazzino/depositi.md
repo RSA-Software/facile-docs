@@ -45,6 +45,39 @@ causali di magazzino e i documenti lo richiamano.
 comandi**, sotto i campi su quattro righe e, in fondo, le caselle che
 stabiliscono dove il deposito deve comparire e dove no.
 
+### L'elenco dei depositi
+
+![Elenco dei depositi](../../assets/img/magazzino/depositi-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Depositi**: l'elenco dei
+depositi con le colonne **Codice** e **Descrizione**. La stessa finestra si
+apre da tutte le maschere che chiedono un deposito, premendo ++f10++ sul campo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie il deposito selezionato (vale
+anche il doppio clic), **F3 - Nuovo** apre la maschera per aggiungerne uno,
+**F4 - Modifica** apre il deposito selezionato per correggerlo.
+
+In alto ci sono i campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quel deposito, o sul primo che lo segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  i depositi che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+### La selezione dei depositi
+
+![Selezione dei depositi](../../assets/img/magazzino/depositi-selezione.png)
+
+Alcune analisi e stampe lavorano su più depositi insieme — l'analisi del
+listino, il riordino, il sell-out, le vendite di un periodo — e li fanno
+scegliere nella finestra **Selezione Depositi**: l'elenco di tutti i depositi,
+ciascuno con la sua casella.
+
+- Spunta i depositi da includere, con il mouse o con la barra spaziatrice.
+- **F3 - Selez. Tutti** spunta tutti i depositi, **F4 - Deselez. Tutti** li
+  toglie tutti.
+- **F2 - OK** conferma la scelta e torna alla maschera di partenza.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

@@ -43,6 +43,25 @@ cassa, per sapere quali numeri di reparto usare.
 È una maschera a finestra unica, senza schede: la **barra dei comandi** e due
 righe di campi.
 
+### L'elenco dei reparti
+
+![Elenco dei reparti](../../assets/img/magazzino/reparti-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Reparti**: l'elenco dei reparti
+con le colonne **Codice** e **Descrizione**. La stessa finestra si apre
+dall'anagrafica articoli, premendo ++f10++ sul campo **Reparto**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
+doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un reparto, **F4 -
+Modifica** apre il reparto selezionato per correggerlo.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quel reparto, o sul primo che lo segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  i reparti che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -83,6 +102,17 @@ Valgono inoltre:
 3. Scrivi in **Reparto Cassa** il numero con cui il registratore di cassa
    conosce quel reparto.
 4. Premi **F2 - Salva**.
+
+### Ritrovare e modificare un reparto
+
+1. Apri **Menu ▸ Archivi ▸ Magazzino ▸ Reparti ▸ Modifica**. La maschera non
+   si apre vuota: mostra già il reparto con il **codice più alto**.
+2. Premi **F5 - Cerca** e scegli il reparto dall'elenco, oppure scorri con
+   **F3 - Prec.** e **F4 - Succ.**.
+3. Correggi i campi e premi **F2 - Salva**.
+
+Finché non salvi puoi tornare indietro con **Ricarica**, che rilegge il reparto
+dall'archivio e abbandona le modifiche non salvate.
 
 ### Assegnare il reparto a un articolo
 

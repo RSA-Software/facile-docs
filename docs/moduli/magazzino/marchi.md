@@ -37,6 +37,25 @@ una marca debbano essere esposte sul sito.
 È una maschera a finestra unica, senza schede: la **barra dei comandi** e tre
 campi.
 
+### L'elenco dei marchi
+
+![Elenco dei marchi](../../assets/img/magazzino/marchi-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Marchi**: l'elenco dei marchi con
+le colonne **Codice** e **Descrizione**. La stessa finestra si apre
+dall'anagrafica articoli, premendo ++f10++ sul campo **Marchio**.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la voce selezionata (vale anche il
+doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un marchio, **F4 -
+Modifica** apre il marchio selezionato per correggerlo.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quel marchio, o sul primo che lo segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo
+  i marchi che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

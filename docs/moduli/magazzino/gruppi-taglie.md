@@ -47,6 +47,60 @@ comandi**, poi codice e descrizione del gruppo, e sotto una griglia di
 cinquanta righe numerate da **01** a **50**, disposte su cinque colonne da
 dieci. Ogni riga ha tre caselle.
 
+### L'elenco dei gruppi taglie
+
+![Elenco dei gruppi taglie](../../assets/img/magazzino/gruppi-taglie-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Gruppi Taglie**: l'elenco
+dei gruppi con le colonne **Codice** e **Descrizione**. Sotto l'elenco, nelle
+fasce **Misure** e **Riferimenti**, compaiono le taglie del gruppo su cui ti
+trovi, nell'ordine delle righe: servono a riconoscerlo, non si modificano da
+qui.
+
+Dalla barra dei comandi: **F2 - OK** sceglie il gruppo selezionato (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un gruppo,
+**F4 - Modifica** apre il gruppo selezionato per correggerlo.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  posiziona su quel gruppo, o sul primo che lo segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i
+  gruppi che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+### La finestra Seleziona Taglia
+
+![Finestra Seleziona Taglia](../../assets/img/magazzino/gruppi-taglie-scelta.png)
+
+Nelle maschere che chiedono una taglia — le righe dei documenti di vendita e
+del carico merci, i movimenti di magazzino, l'inventario, i codici a barre, i
+frontalini e le etichette — un doppio clic sulla casella della taglia apre la
+finestra **Seleziona Taglia**. In alto riporta codice e descrizione del gruppo
+taglie dell'articolo; sotto, una riga per ogni taglia del gruppo con le colonne
+**Misura**, **Riferimento** e **Web**. Le righe lasciate vuote nel gruppo non
+compaiono. Il modo di usarla è descritto in
+[Scegliere una taglia](#scegliere-una-taglia).
+
+### Il riepilogo taglie e colori
+
+![Riepilogo taglie e colori](../../assets/img/magazzino/gruppi-taglie-riepilogo.png)
+
+Quando vendi al banco un articolo gestito a taglie e colori senza indicare
+taglia e colore, si apre la finestra **Seleziona Taglia e Colore**. Il suo
+pulsante **F3 - Assortimento** apre il **Riepilogo Taglie e Colori** dell'articolo:
+una tabella con un colore per riga e una taglia per colonna, che mostra la
+giacenza attuale nel deposito della vendita.
+
+- In testa a ogni colonna c'è la taglia, con la misura e sotto il riferimento.
+- La colonna **Totale** somma la riga; l'ultima riga, **T O T A L I**, somma le
+  colonne.
+- Le righe del gruppo lasciate vuote, senza misura né riferimento, non
+  compaiono come colonne; nelle righe dei colori le quantità a zero non si
+  vedono.
+
+Un doppio clic su una cella sceglie quel colore e quella taglia e li riporta
+nella vendita. ++esc++ o **Esci** chiudono la finestra senza scegliere nulla.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -91,6 +145,17 @@ Valgono inoltre:
 4. Compila **Web** se le taglie devono comparire sul sito con una scrittura
    diversa.
 5. Premi **F2 - Salva**.
+
+### Scegliere una taglia
+
+1. Nella riga del documento, del carico o del movimento fai doppio clic sulla
+   casella della taglia: si apre la finestra **Seleziona Taglia**, già
+   posizionata sulla taglia della riga se ne ha una.
+2. Spostati sulla taglia che ti serve con le frecce.
+3. Premi **F2 - OK** o ++enter++, oppure fai doppio clic sulla riga: la
+   finestra si chiude e la taglia passa nella riga di partenza.
+
+Con ++esc++ o **Esci** la finestra si chiude e la riga resta com'era.
 
 ### Assegnare il gruppo a un articolo
 
