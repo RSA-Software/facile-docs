@@ -88,6 +88,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina. Dalla finestra **Consultazione Rubrica** porta direttamente a *Ritrovare un contatto*. |
 | Elenco valori | ++f10++, ++space++ o doppio clic su **Categoria** | Apre l'elenco delle categorie. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |

@@ -54,6 +54,30 @@ obbligatoria.
 soli campi, **Codice** e **Descrizione**. Il titolo della finestra dice su
 quale tabella stai lavorando.
 
+### L'elenco delle voci
+
+![Elenco delle voci di una tabella](../../assets/img/magazzino/tabelle-di-classificazione-elenco.png)
+
+Premendo **F5 - Cerca** si apre l'elenco delle voci della tabella, ordinato
+per descrizione, con le colonne **Codice** e **Descrizione**; sui **Mezzi di
+Trasporto** compare anche la **Targa**. Il titolo, come nella maschera, dice
+di quale tabella si tratta: *Cerca Gruppi Articoli*, *Cerca Settori* e così
+via. Sulle tabelle che hanno la casella **Non Attivo**, le voci spuntate sono
+scritte in rosso.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le
+  voci che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere una voce,
+**F4 - Modifica** apre la voce selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ### Sotto Archivi ▸ Magazzino
 
 Queste sono le diciannove voci di menu, con il titolo che compare in alto:

@@ -53,6 +53,30 @@ pagamento di codice 1.
 - la casella della nota per i prodotti alimentari;
 - i due riquadri **Tratta IVA** e **Spese di Rivalsa**.
 
+### L'elenco dei tipi di pagamento
+
+![Elenco dei tipi di pagamento](../../assets/img/contabilita/tipi-di-pagamento-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Tipi di Pagamento**:
+l'elenco dei pagamenti, ordinato per descrizione, con le colonne **Codice**,
+**Descrizione**, **Tipo** e **Rate**. La stessa finestra si apre ovunque
+si cerchi un pagamento: nelle anagrafiche di clienti e fornitori, nei
+documenti di vendita, nelle scadenze, in prima nota e nei filtri delle stampe.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i
+  pagamenti che cominciano così. Svuota il campo per tornare all'elenco
+  completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un pagamento,
+**F4 - Modifica** apre il pagamento selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 ### Anagrafica

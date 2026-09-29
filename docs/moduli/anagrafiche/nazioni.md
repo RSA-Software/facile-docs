@@ -44,6 +44,30 @@ correggere un codice o per spegnere una nazione che non si usa più.
 quattro righe di campi. La finestra si intitola **Nazionalità**, ed è il nome
 giusto: quello che si registra qui è la nazionalità, non il paese.
 
+### L'elenco delle nazioni
+
+![Elenco delle nazioni](../../assets/img/anagrafiche/nazioni-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Nazionalità**: l'elenco
+di tutte le nazioni, ordinato per nazionalità, con le colonne **Codice**,
+**Nazionalità**, **Nazione**, **ISO-2** e **ISO**. Le nazioni spuntate come
+**Non Attiva** sono scritte in rosso. La stessa finestra si apre dalle
+anagrafiche di clienti, fornitori e articoli, quando si cerca la nazione da
+assegnare.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuova** apre la maschera per aggiungere una nazione,
+**F4 - Modifica** apre la nazione selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio della nazionalità: l'elenco mostra solo
+  quelle che cominciano così. Svuota il campo per tornare all'elenco completo.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -73,6 +97,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |
@@ -90,6 +115,14 @@ Valgono inoltre:
 5. Spunta **Nazione UE** se il paese appartiene all'Unione europea, e
    **Fiscalità Privilegiata** se ricorre.
 6. Premi **F2 - Salva**.
+
+### Ritrovare una nazione
+
+1. Premi **F5 - Cerca**: si apre la finestra **Cerca Nazionalità**.
+2. Scrivi l'inizio della nazionalità nel campo **Descrizione**, oppure il
+   codice nel campo **Codice**.
+3. Seleziona la riga e premi **F2 - OK**, o fai doppio clic: la nazione si
+   carica nella maschera.
 
 ### Togliere dall'uso una nazione
 

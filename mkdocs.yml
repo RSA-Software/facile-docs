@@ -183,6 +183,7 @@ nav:
       - Zone: moduli/anagrafiche/zone.md
       - Codici Catastali Comuni: moduli/anagrafiche/codici-catastali-comuni.md
       - Nazioni: moduli/anagrafiche/nazioni.md
+      - Stampa delle tabelle: moduli/anagrafiche/stampa-tabelle.md
       - Magazzino:
           - moduli/magazzino/index.md
           - Causali Magazzino: moduli/magazzino/causali-magazzino.md

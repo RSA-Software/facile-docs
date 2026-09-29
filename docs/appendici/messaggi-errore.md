@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-28 — **909 messaggi**.
+Aggiornato al 2026-09-29 — **912 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -696,6 +696,7 @@ Aggiornato al 2026-09-28 — **909 messaggi**.
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | [Copia listini](../moduli/listini-vendita/copia-listini.md) | Manca uno dei due codici, oppure **A Listino** è uguale a **Da Listino**, oppure **Da Ditta** è la ditta in cui si sta già lavorando. | Correggi il campo su cui si è posizionato il cursore. |
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | [Variazioni di listino programmate](../moduli/listini-vendita/variazione-listini.md) | In **Cancella Variazioni Listini** manca la data **Dal**, oppure **Al** è anteriore a **Dal**. | Correggi la data su cui si è posizionato il cursore. |
 | *(nessun messaggio, solo un segnale acustico e il cursore che torna sul campo)* | [Variazioni di massa dei listini](../moduli/listini-vendita/variazioni-di-massa.md) | Manca il **Listino**, oppure in **Varia Listini** la variazione è a zero. | Compila il campo su cui si è posizionato il cursore. |
+| *(nessun messaggio, solo un segnale acustico e il cursore su **Codice Finale**)* | [Stampa delle tabelle](../moduli/anagrafiche/stampa-tabelle.md) | I due codici sono entrambi a zero, oppure il finale è minore dell'iniziale. | Correggi l'intervallo. |
 | *Nessun ordine evaso con data fra il … e il …* | [Ordini clienti](../moduli/vendite/ordini-clienti.md) | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
 | *Nessun ordine ricevuto con data fra il … e il …* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | Nel periodo indicato non c'è niente da cancellare. | Allarga il periodo, o non c'era nulla da ripulire. |
 | *Nessun PDF allegato a questa registrazione.* | [Avanzamento lavori (Milestone / SAL)](../moduli/contabilita/avanzamento.md), [SAL Subappaltatore](../moduli/contabilita/sal-subappaltatore.md) | Hai premuto **PDF** su una fattura che in prima nota non ha allegati in formato PDF. | Nessun rimedio dalla maschera: l'allegato va aggiunto alla registrazione di prima nota. |
@@ -864,6 +865,7 @@ Aggiornato al 2026-09-28 — **909 messaggi**.
 | *Tutti i giorni della settimana sono stati esclusi dalla promozione !* | [Promozioni](../moduli/vendite/promozioni.md) | Nessuno dei sette giorni è spuntato. | Spunta almeno un giorno. |
 | *Una sola ditta e' presente in archivio!* | [Ditte](../moduli/anagrafiche/ditte.md) | Si è chiesto il cambio ditta ma l'azienda gestita è una sola. | Non c'è nulla da fare: si sta già lavorando sull'unica azienda. |
 | *User ID gia' presente in archivio !* | [Utenti](../moduli/anagrafiche/utenti.md) | Un altro utente ha già quello **UserID**. | Scegli un identificativo diverso. |
+| *Utente non abilitato all'utilizzo dei prezzi d'acquisto!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | In **Seleziona Listino** è stato scelto il listino **0** (ultimo prezzo di acquisto) da un utente che non è amministratore, su un documento che aveva già un listino. | Scegliere un listino di vendita, oppure far fare l'operazione a un amministratore. |
 | *Valore Densita' a temperatura ambiente non indicato !* | [Documenti accompagnatori semplificati](../moduli/vendite/documenti-accompagnatori-semplificati.md) | Manca la densità sulla riga. | Aprire la riga e compilarla. |
 | *Verranno cancellati definitivamente … ordini evasi con data fra il … e il …, insieme alle loro righe. L' operazione non si può annullare. Vuoi continuare ?* | [Ordini clienti](../moduli/vendite/ordini-clienti.md) | La conferma della cancellazione, con il numero dei documenti trovati. | Controlla il numero e il periodo. **Sì** cancella; la risposta preimpostata è **No**. |
 | *Verranno cancellati definitivamente … ordini ricevuti con data fra il … e il …, insieme alle loro righe. L' operazione non si può annullare. Vuoi continuare ?* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | La conferma della cancellazione, con il numero dei documenti trovati. | Controlla il numero e il periodo. **Sì** cancella; la risposta preimpostata è **No**. |
@@ -881,6 +883,7 @@ Aggiornato al 2026-09-28 — **909 messaggi**.
 | *Vuoi azzerare le quantità inserite prima dell' acquisizione ?* | [Ordini tabacchi](../moduli/ordini/ordini-tabacchi.md) | Premendo **F3 - Acquisiz.** o **F5 - Patent.** ci sono già quantità in griglia. | **Sì** per ripartire da zero, **No** per sommare all'esistente. |
 | *Vuoi Calcolare l'esistenza ed il venduto?* | [Scorte, assortimento e ubicazioni](../moduli/anagrafiche/scorte-e-assortimento.md) | L'assortimento chiede se calcolare i dati, operazione che richiede tempo. | **Sì** se ti servono le colonne di esistenza e venduto. |
 | *Vuoi calcolare l' Iva sulla Fattura Pro Forma ?* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | Si sta generando una pro forma. | **Sì** per l'IVA in fattura, **No** per lasciarla fuori. |
+| *Vuoi cambiare il listino applicato ?* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Si è premuto **F9 - Varia Lis.** nel corpo. | **Sì** apre la scelta del listino; vedi [Cambiare il listino di un documento](../moduli/vendite/documento-di-vendita.md#cambiare-il-listino-di-un-documento). |
 | *Vuoi Cancellare tutte le righe della promozione ?* | [Anomalie carichi e promozioni sellin](../moduli/magazzino/anomalie-e-promozioni-sellin.md), [Promozioni](../moduli/vendite/promozioni.md) | Hai premuto **F6 - Elimina**. | **Sì** cancella testata e righe. La risposta preimpostata è **No**. |
 | *Vuoi chiudere le partite aperte ?* | [Carico merci](../moduli/magazzino/carico-merci.md) | Chiesto al salvataggio quando restano partite aperte. | Rispondere **Sì** se il fornitore ha finito di consegnare. |
 | *Vuoi Collegarti al server FTP ?* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Inizio della ricezione FTP. | **Sì** scarica dal server, **No** chiede un file da disco. |

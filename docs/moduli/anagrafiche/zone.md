@@ -41,6 +41,29 @@ anagrafiche.
 
 È la maschera più breve del manuale: la **barra dei comandi** e due soli campi.
 
+### L'elenco delle zone
+
+![Elenco delle zone](../../assets/img/anagrafiche/zone-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Zone**: l'elenco
+delle zone, ordinato per descrizione, con le colonne **Codice** e
+**Descrizione**. La stessa finestra si apre ovunque si cerchi una zona: nelle
+anagrafiche di clienti, fornitori e agenti e nei filtri di stampe, scadenze e
+analisi delle vendite.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio del nome: l'elenco mostra solo le zone
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuova** apre la maschera per aggiungere una zona,
+**F4 - Modifica** apre quella selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -63,6 +86,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina. Dall'elenco **Cerca Zone** porta direttamente a *Ritrovare e modificare una zona*. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

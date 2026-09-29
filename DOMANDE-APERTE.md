@@ -1,7 +1,7 @@
 # Domande aperte del manuale Facile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-09-28 — **2 domande** su 1 pagine.
+Aggiornato al 2026-09-29 — **2 domande** su 1 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata: rispondendo
 alla domanda, la correzione va fatta nella pagina e il marcatore va tolto.

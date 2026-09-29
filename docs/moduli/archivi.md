@@ -83,6 +83,8 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
   con CAP, provincia e codici degli uffici fiscali.
 - [Nazioni](anagrafiche/nazioni.md) — le nazionalità, con i codici ISO e
   l'appartenenza all'Unione europea.
+- [Stampa delle tabelle](anagrafiche/stampa-tabelle.md) — la finestra comune
+  alla voce **Stampa** di queste e di molte altre tabelle.
 
 ## I sottomenu delle tabelle
 

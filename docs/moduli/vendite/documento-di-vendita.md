@@ -106,6 +106,10 @@ Il corpo si apre con **F8 - Corpo** ed è la griglia delle righe:
 | **Ordinare** | Segna la riga da ordinare al fornitore. |
 | **Dep** | Il [deposito](../magazzino/depositi.md) da cui scaricare. |
 
+Dalla barra del corpo, **F9 - Varia Lis.** rifà i prezzi di tutte le righe con
+un altro listino: vedi [Cambiare il listino di un
+documento](#cambiare-il-listino-di-un-documento).
+
 ### Piede
 
 Si apre con il pulsante **Piede** e raccoglie i dati del trasporto e le note.
@@ -215,6 +219,49 @@ il pulsante **F2 - OK** sparisce: resta solo **Esci**.
 3. Il documento resta poi disponibile per l'
    [emissione differita della fattura](emissione-fatture-da-documenti.md).
 
+### Cambiare il listino di un documento
+
+Se il documento è stato compilato con il listino sbagliato, o il cliente è
+passato ad altre condizioni, non serve riscrivere le righe: si cambia il
+listino e il programma rifà i prezzi di tutte.
+
+1. Apri il documento e premi **F8 - Corpo**.
+2. Premi **F9 - Varia Lis.** e rispondi **Sì** a *Vuoi cambiare il listino
+   applicato ?*.
+3. Nella finestra **Seleziona Listino** scrivi il numero in **Listino**,
+   oppure premi ++f10++, la barra spaziatrice o fai doppio clic sul campo per
+   sceglierlo dall'[elenco dei listini](../listini-vendita/gestione-listini.md).
+   Accanto compare la descrizione.
+4. Premi **F2 - OK**: le righe vengono ricalcolate e il nuovo listino diventa
+   quello del documento. **Esci** o ++esc++ chiudono senza cambiare nulla.
+
+Il pulsante è attivo solo finché il documento è nello stato *SALVATA* o
+*SALVATO*, cioè non ancora stampato.
+
+Per ogni riga che contiene un articolo il programma:
+
+- prende il prezzo dal listino scelto. Se l'articolo in quel listino non c'è,
+  usa il **Listino Principale** della [ditta](../anagrafiche/ditte.md) — o il
+  **Listino Trasfert**, per i documenti in trasfert;
+- riprende dal listino anche la provvigione dell'agente e, se nella ditta è
+  attivo **Sconti Articolo**, gli sconti;
+- converte il prezzo quando l'articolo ha i prezzi IVA inclusa e la riga no,
+  o il contrario.
+
+Le righe senza articolo, come quelle di sola descrizione, restano come sono.
+
+Il listino **0** vuol dire *ULTIMO PREZZO DI ACQUISTO*: le righe prendono
+l'ultimo prezzo pagato al fornitore, senza sconti e senza provvigione. Lo può
+scegliere solo un amministratore, oppure chiunque se il documento non aveva
+ancora un listino.
+
+!!! warning "La variazione si registra subito"
+
+    Le righe vengono salvate una per una appena si preme **F2 - OK**:
+    **Ricarica** non le riporta indietro, e i prezzi o gli sconti corretti a
+    mano sulle singole righe vengono sovrascritti. Per tornare ai prezzi di
+    prima si ripete l'operazione con il listino di prima.
+
 ## Controlli e messaggi
 
 È la maschera che parla di più di tutto il programma. I messaggi sono
@@ -257,6 +304,8 @@ fermato.
 | *Non c'è giacenza sufficiente per il lotto indicato!* | Il lotto scelto non ha abbastanza merce. | Scegliere un altro lotto o dividere la riga. |
 | *GTIN Mancante!<br>Vuoi Continuare ?* | L'articolo non ha il codice a barre, richiesto da questo tipo di documento. | Conviene aggiungerlo in anagrafica. |
 | *Attenzione!<br>Listino di vendita non impostato.<br>Saranno utilizzati i prezzi di acquisto.* | Il documento non ha un listino. | I prezzi proposti saranno quelli di acquisto: è quasi sempre da correggere. |
+| *Vuoi cambiare il listino applicato ?* | Si è premuto **F9 - Varia Lis.** nel corpo. | **Sì** apre la scelta del listino; vedi [Cambiare il listino di un documento](documento-di-vendita.md#cambiare-il-listino-di-un-documento). |
+| *Utente non abilitato all'utilizzo dei prezzi d'acquisto!* | In **Seleziona Listino** è stato scelto il listino **0** (ultimo prezzo di acquisto) da un utente che non è amministratore, su un documento che aveva già un listino. | Scegliere un listino di vendita, oppure far fare l'operazione a un amministratore. |
 | *Impostare l'Aliquota Iva Predefinita prima di Continuare!* | Manca l'[aliquota](../contabilita/aliquote-iva.md) predefinita nelle impostazioni della ditta. | Va impostata una volta per tutte. |
 | *Il tipo di documento selezionato non puo' contenere articoli fiscali!* | Si sta mettendo un articolo fiscale — tabacchi, valori bollati — in un documento che non li ammette. | Serve il tipo di documento giusto. |
 

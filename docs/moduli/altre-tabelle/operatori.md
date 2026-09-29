@@ -40,6 +40,28 @@ L'operatore si collega poi all'utente nel campo **Operatore** della
 È una maschera a finestra unica, senza schede: la barra dei comandi, quattro
 campi e una casella.
 
+### L'elenco degli operatori
+
+![Elenco degli operatori](../../assets/img/altre-tabelle/operatori-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Operatori**: l'elenco
+degli operatori, ordinato per descrizione, con le colonne **Codice** e
+**Descrizione**.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio del nome: l'elenco mostra solo gli
+  operatori il cui nome comincia così. Svuota il campo per tornare all'elenco
+  completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un operatore,
+**F4 - Modifica** apre l'operatore selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -60,6 +82,7 @@ campi e una casella.
 | **F5 - Cerca** | ++f5++ | Apre l'elenco degli operatori. |
 | **F6 - Elimina** | ++f6++ | Cancella l'operatore, previa conferma. |
 | **Ricarica** | | Rilegge l'operatore dall'archivio, abbandonando le modifiche non salvate. |
+| **Guida** | ++f1++ | Apre questa pagina. |
 | **Consultazione** | ++f11++ | Apre la consultazione. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
 
@@ -74,6 +97,14 @@ campi e una casella.
    chiesto, e senza password non entra.
 5. Spunta **Supervisore** solo a chi deve poter usare i tasti riservati.
 6. Premi **F2 - Salva**.
+
+### Ritrovare un operatore
+
+1. Premi **F5 - Cerca**: si apre la finestra **Cerca Operatori**.
+2. Scrivi l'inizio del nome nel campo **Descrizione**, oppure il numero nel
+   campo **Codice**.
+3. Seleziona la riga e premi **F2 - OK**, o fai doppio clic: l'operatore si
+   carica nella maschera.
 
 ## Controlli e messaggi
 

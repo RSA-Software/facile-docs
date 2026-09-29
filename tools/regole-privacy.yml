@@ -117,6 +117,16 @@ per_maschera:
   IDD_CLI_DOGANE:
     aggiungi_etichette: ["codditta", "codaccisa", "targa"]
 
+  # La descrizione di un operatore e' il nome e cognome di chi sta alla cassa,
+  # e la tessera e' il suo badge (29/09/2026: la schermata usciva in chiaro).
+  IDD_TBC_OPERATORI:
+    aggiungi_etichette: ["descrizione", "tessera"]
+
+  # Un trasportatore puo' essere una persona fisica: la citta' completa
+  # l'indirizzo, targa e numero d'albo identificano lui e il suo mezzo.
+  IDD_TBC_VETTORI:
+    aggiungi_etichette: ["citta", "targa", "nalbo"]
+
   # IDD_CLI_COMPLEANNI:
   #   # colonne come frazioni della larghezza della griglia, da sinistra
   #   colonne: [[0.22, 0.52], [0.52, 0.62], [0.62, 0.86]]

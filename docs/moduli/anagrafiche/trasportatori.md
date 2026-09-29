@@ -42,6 +42,30 @@ registri vettori esteri.
 comandi**, sotto la denominazione del vettore, l'indirizzo, i dati fiscali, i
 recapiti e i dati del mezzo.
 
+### L'elenco dei trasportatori
+
+![Elenco dei trasportatori](../../assets/img/anagrafiche/trasportatori-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Trasportatori**: l'elenco
+dei vettori, ordinato per ragione sociale, con le colonne **Codice**,
+**Descrizione**, **Città**, **Targa** e **N. Iscrizione Albo**. La stessa
+finestra si apre dalle anagrafiche di clienti e fornitori e dai documenti,
+quando si cerca il vettore da indicare.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato, o sul primo che lo
+  segue;
+- **Descrizione** — scrivi l'inizio della ragione sociale: l'elenco mostra
+  solo i vettori che cominciano così. Svuota il campo per tornare all'elenco
+  completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un vettore,
+**F4 - Modifica** apre quello selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -77,6 +101,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina. Dall'elenco **Cerca Trasportatori** porta direttamente a *Ritrovare e modificare un trasportatore*. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |
