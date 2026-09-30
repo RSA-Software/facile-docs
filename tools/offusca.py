@@ -371,6 +371,9 @@ def regioni_da_griglia(immagine, controlli, regole, maschera_id="") -> list:
     classi = [c.upper() for c in (regole.get("classi_griglia") or [])]
     per_maschera = (regole.get("per_maschera") or {}).get(maschera_id) or {}
     intestazioni = [_sigla(e) for e in (regole.get("colonne_sensibili") or [])]
+    # colonne che sono sensibili solo in questa maschera: "Descrizione" non lo
+    # e' in generale, ma nei sottoconti contiene i numeri dei conti correnti
+    intestazioni += [_sigla(e) for e in (per_maschera.get("aggiungi_colonne") or [])]
 
     regioni = []
     for c in controlli:

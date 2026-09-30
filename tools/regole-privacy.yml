@@ -127,10 +127,24 @@ per_maschera:
   IDD_TBC_VETTORI:
     aggiungi_etichette: ["citta", "targa", "nalbo"]
 
+  # Piano dei conti: la descrizione di un sottoconto e' spesso il conto
+  # corrente con il suo numero ("UNICREDIT 106752986", "POSTEPAY 1746"), o il
+  # nome di una societa' collegata. Nella Riclassificazione Conti e nell'elenco
+  # dei sottoconti e' una colonna della griglia; nella scheda del sottoconto
+  # e' un campo, che ha la stessa etichetta del mastro e del conto e li copre
+  # tutti e tre (30/09/2026: l'elenco dei sottoconti usciva in chiaro).
+  IDD_TCN_RICLASSIFICA:
+    aggiungi_colonne: ["descrizione"]
+  IDD_TCN_SOTTOCONTI_BR:
+    aggiungi_colonne: ["descrizione"]
+  IDD_TCN_SOTTOCON:
+    aggiungi_etichette: ["descrizione"]
+
   # IDD_CLI_COMPLEANNI:
   #   # colonne come frazioni della larghezza della griglia, da sinistra
   #   colonne: [[0.22, 0.52], [0.52, 0.62], [0.62, 0.86]]
   #   aggiungi_etichette: ["riferimento"]
+  #   aggiungi_colonne: ["note"]       # intestazioni di griglia, lette con l'OCR
   #   escludi_etichette: ["citta"]
   #   larghezza_minima: 90
 
