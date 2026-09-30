@@ -40,6 +40,7 @@ ITALSTUDIO*, e così via. Quello che si compila sono sempre gli stessi campi.
 ### DDT verso i fornitori
 
 - **Esportazione DDT - BONDUELLE**
+- **[Esportazione DDT - CENTRALE LATTE SALERNO](esportazione-ddt-centrale-latte-salerno.md)**
 - **Esportazione DDT - FACILE**
 - **Esportazione DDT - FILCONAD**
 - **Esportazione DDT - FINI**
@@ -207,6 +208,12 @@ va compilato**, e basta riempirlo.
 6. Consegna il file secondo l'accordo con il destinatario — cartella condivisa,
    posta elettronica, portale.
 
+### Mandare i DDT trasfert alla Centrale del Latte di Salerno
+
+Questo tracciato ha una pagina sua, con le impostazioni da fare, i messaggi e
+il tracciato record: [Esportazione DDT - Centrale Latte
+Salerno](esportazione-ddt-centrale-latte-salerno.md).
+
 ### Mandare il sellout alla centrale
 
 1. Apri il tracciato sotto **Esportazione Sellout**.
@@ -243,6 +250,9 @@ dato e si riesporta.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Manca una delle date o un campo obbligatorio del tracciato. | Compila il campo su cui si è posizionato il cursore. |
+
+Il tracciato della **Centrale del Latte di Salerno** ha messaggi suoi, elencati
+nella [sua pagina](esportazione-ddt-centrale-latte-salerno.md#controlli-e-messaggi).
 
 ## Note
 
@@ -295,6 +305,10 @@ dato e si riesporta.
     un'esportazione con segnalazioni conviene quindi fermarsi, sistemare i dati
     e rifarla, invece di mandare il file così com'è.
 
+    Fa eccezione il tracciato della **Centrale del Latte di Salerno**, che
+    lascia fuori l'intero DDT incompleto: vedi
+    [la sua pagina](esportazione-ddt-centrale-latte-salerno.md).
+
 !!! warning "Il nome non cambia mai: una esportazione sovrascrive la precedente"
 
     Non c'è la data nel nome e non c'è un progressivo: rilanciando lo stesso
@@ -302,6 +316,11 @@ dato e si riesporta.
 
     Il file va quindi preso dalla cartella `out` e mandato **subito**, o almeno
     spostato altrove, prima di fare un'altra esportazione.
+
+    L'eccezione è il tracciato della **Centrale del Latte di Salerno**. Il suo
+    nome contiene il codice concessionario e la data del giorno, per esempio
+    `015-CESSIONE-30092026`, quindi le esportazioni di giorni diversi restano
+    tutte. Due esportazioni nello stesso giorno, invece, si sovrascrivono.
 
 !!! info "Dove si mettono i codici del destinatario"
 

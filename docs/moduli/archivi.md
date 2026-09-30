@@ -40,6 +40,8 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
   scorte e codici a barre degli articoli di magazzino.
     - [Cerca articoli](anagrafiche/cerca-articoli.md) — l'elenco da cui si
       ritrova un articolo, con esistenza, disponibilità e prezzo.
+    - [Codici articolo dei clienti](anagrafiche/codici-articolo-clienti.md) —
+      il codice con cui ciascun cliente chiama l'articolo.
     - [Manutenzione degli articoli](anagrafiche/manutenzione-articoli.md) —
       modifica da griglia, caricamento prezzi, duplica, cancellazione, panieri.
     - [Scorte, assortimento e ubicazioni](anagrafiche/scorte-e-assortimento.md)

@@ -27,6 +27,14 @@ nel browser la pagina di questo manuale dedicata alla maschera in cui ti
 trovi. Funziona anche in maschere che prima non avevano guida, e non compare
 più il messaggio *Impossibile aprire la Guida.*
 
+**[Esportazione DDT - CENTRALE LATTE SALERNO](../moduli/trasferimenti/esportazione-ddt-centrale-latte-salerno.md).**
+Il nuovo tracciato manda alla Centrale del Latte di Salerno i DDT trasfert del
+periodo, con i punti vendita, gli articoli venduti e quelli resi. Il file
+porta nel nome il codice concessionario e la data, quindi non sovrascrive
+l'invio del giorno prima. Un DDT a cui manca un dato, per esempio un aggancio
+o un codice fornitore, viene lasciato fuori per intero, con un messaggio che
+dice cosa manca.
+
 **[Commesse](../moduli/contabilita/commesse.md)**
 
 - Nella scheda dei **Centri di Costo** il doppio clic su una riga apre

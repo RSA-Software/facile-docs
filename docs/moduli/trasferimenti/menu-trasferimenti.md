@@ -17,6 +17,9 @@ riceve. Sono oltre sessanta e passano quasi tutti dalla stessa maschera.
 - [Esportazione documenti per tracciato](esportazione-documenti.md) — la
   maschera unica: DDT, fatture, sellout, movimentazione e inventario banchi,
   anagrafica clienti, premi di fine anno e le voci sciolte in fondo al menu.
+    - [Esportazione DDT - Centrale Latte Salerno](esportazione-ddt-centrale-latte-salerno.md)
+      — le consegne in trasfert per la Centrale del Latte di Salerno, con il
+      tracciato record.
 - [Esportazioni con maschera propria](esportazioni-specifiche.md) — listini per
   i punti vendita, movimenti, dati per Facile Mobile e Facile Agenti,
   anagrafica articoli, fidelity SISA, Peroni, SAGI, 730 precompilati e

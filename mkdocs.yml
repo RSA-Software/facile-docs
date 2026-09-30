@@ -149,6 +149,7 @@ nav:
       - Articoli:
           - Inserimento e Modifica: moduli/anagrafiche/anagrafica-articoli.md
           - Cerca articoli: moduli/anagrafiche/cerca-articoli.md
+          - Codici articolo dei clienti: moduli/anagrafiche/codici-articolo-clienti.md
           - Modifica da Griglia: moduli/anagrafiche/modifica-da-griglia.md
           - Impostazione Dati Web: moduli/anagrafiche/impostazione-dati-web.md
           - Manutenzione degli articoli: moduli/anagrafiche/manutenzione-articoli.md
@@ -306,6 +307,7 @@ nav:
   - Trasferimenti:
       - moduli/trasferimenti/menu-trasferimenti.md
       - Esportazione per tracciato: moduli/trasferimenti/esportazione-documenti.md
+      - Esportazione DDT - Centrale Latte Salerno: moduli/trasferimenti/esportazione-ddt-centrale-latte-salerno.md
       - Esportazioni con maschera propria: moduli/trasferimenti/esportazioni-specifiche.md
       - Ricezione Dati: moduli/trasferimenti/ricezione-dati.md
   - Utility:

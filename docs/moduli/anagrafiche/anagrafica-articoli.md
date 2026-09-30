@@ -207,8 +207,9 @@ permette di vedere i dati di una sola sezione anziché di tutte.
 
 Il menu **F7 - Altri** contiene: **Codici Articolo Fornitori**, **Vendite**,
 **Acquisti**, **Andamento**, **Note**, **Promozioni Acquisto**, **Riepilogo
-Depositi**, **Dati Articoli Fiscali**, **Ingredienti** e **Competenze su
-Vendite**; vi si aggiungono **Gestione Lotti** e **Gestione Matricole** se
+Depositi**, **Dati Articoli Fiscali**, **Ingredienti**, **Competenze su
+Vendite** e **Agganci <-> Cod. Art. Clienti**, che apre i
+[codici articolo dei clienti](codici-articolo-clienti.md); vi si aggiungono **Gestione Lotti** e **Gestione Matricole** se
 quelle gestioni sono attive per l'azienda e per l'articolo. Le voci
 **Acquisti**, **Andamento** e **Promozioni Acquisto** non compaiono agli utenti
 a cui i costi sono preclusi.
@@ -367,6 +368,7 @@ Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 ## Vedi anche
 
 - [Cerca articoli](cerca-articoli.md)
+- [Codici articolo dei clienti](codici-articolo-clienti.md)
 - [Anagrafica clienti](anagrafica-clienti.md)
 - [Anagrafica fornitori](anagrafica-fornitori.md)
 - [Documento di vendita](../vendite/documento-di-vendita.md)
