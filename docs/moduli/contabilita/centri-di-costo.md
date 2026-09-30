@@ -43,6 +43,29 @@ bolletta finisce su uno dei tre.
 È una maschera a finestra unica, senza schede: la **barra dei comandi** e tre
 campi.
 
+### L'elenco dei centri di costo
+
+![Elenco dei centri di costo](../../assets/img/contabilita/centri-di-costo-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Centri di Costo/Ricavo**:
+l'elenco dei centri, ordinato per descrizione, con le colonne **Codice**,
+**Descrizione** e **Gruppo**. La stessa finestra si apre ovunque si scelga un
+centro di costo: in prima nota, nelle righe dei documenti di vendita, nel
+carico merci, nei movimenti di magazzino e nei sottoconti.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i
+  centri che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un centro,
+**F4 - Modifica** apre il centro selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -66,6 +89,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina; dall'elenco dei centri porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

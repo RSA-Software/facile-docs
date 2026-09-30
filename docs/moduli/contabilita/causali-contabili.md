@@ -47,8 +47,36 @@ lo schema di registrazione li richiama, e le **[sezioni](sezioni.md)**.
 ![Maschera Causali contabili](../../assets/img/contabilita/causali-contabili.png)
 
 È una maschera a finestra unica, senza schede: in alto la **barra dei
-comandi**, poi quattro righe di impostazioni, e in basso la griglia con lo
-schema di registrazione.
+comandi**, poi le impostazioni della causale — identificazione, registro e
+relazione, trattamento IVA, tipo documento e contabilità analitica — e in
+basso la griglia con lo schema di registrazione.
+
+### L'elenco delle causali
+
+![Elenco delle causali contabili](../../assets/img/contabilita/causali-contabili-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Causali Contabili**:
+l'elenco delle causali, ordinato per descrizione, con le colonne **Codice**,
+**Descrizione** e **Registro**. La stessa finestra si apre ovunque si scelga
+una causale: in prima nota, nei documenti di vendita, nell'apertura e nella
+chiusura dei conti, nelle importazioni di clienti e fornitori. Quando la apri
+dall'importazione delle fatture elettroniche, mostra solo le causali adatte:
+per le fatture ricevute quelle sul registro acquisti in relazione con i
+fornitori, per le fatture emesse quelle sul registro delle fatture emesse in
+relazione con i clienti.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le
+  causali che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuova** apre la maschera per aggiungere una causale,
+**F4 - Modifica** apre la causale selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
 
 ## Campi
 
@@ -149,6 +177,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina: in inserimento su come si crea una causale, in modifica su come si ritrova. Dall'elenco delle causali porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

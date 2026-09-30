@@ -84,6 +84,33 @@ raccolgono quello che è stato registrato altrove.
 
 Ogni scheda è descritta una per una più avanti, sotto *Campi*.
 
+### L'elenco delle commesse
+
+![Elenco delle commesse](../../assets/img/contabilita/commesse-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Commesse**: l'elenco delle
+commesse, ordinato per descrizione, con le colonne **Codice**, **Apertura**,
+**Chiusura**, **Descrizione** e il **Cliente**, codice e nome. La stessa
+finestra si apre ovunque si scelga una commessa: in prima nota, nelle righe
+dei documenti di vendita e dei preventivi, nel carico merci e nei movimenti di
+magazzino.
+
+In alto ci sono tre campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Data Apertura** — scrivi una data: l'elenco si riordina per data di
+  apertura e si posiziona sull'ultima commessa aperta in quel giorno o, se
+  non ce ne sono, sull'ultima aperta prima;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le commesse
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuova** apre la maschera per aggiungere una commessa,
+**F4 - Modifica** apre la commessa selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 ### Testata
@@ -287,6 +314,7 @@ Valgono inoltre:
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
 | Elenco valori | ++f10++, ++space++ o doppio clic su **Cliente** | Apre l'elenco dei clienti. |
+| Guida | ++f1++ | Apre questa pagina, da qualunque scheda. Dall'elenco delle commesse porta alla ricerca, dai movimenti di un centro di costo a come ci si arriva. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

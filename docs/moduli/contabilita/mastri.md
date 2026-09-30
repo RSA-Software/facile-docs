@@ -41,6 +41,30 @@ divisi per sezione e per anno.
 È una maschera a finestra unica: in alto la **barra dei comandi**, poi codice e
 descrizione del mastro, e sotto la griglia dei saldi.
 
+### L'elenco dei mastri
+
+![Elenco dei mastri](../../assets/img/contabilita/mastri-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Mastri**: l'elenco dei
+mastri con le colonne **Codice**, **Descrizione**, **Dare**, **Avere** e
+**Saldo**, ordinato per codice oppure per descrizione: riprende l'ordine
+dell'ultima ricerca fatta. La stessa finestra si apre ovunque si scelga
+un mastro: in prima nota, nelle schede contabili e nel libro mastro, nelle
+causali contabili, nell'apertura e nella chiusura dei conti.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i mastri
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un mastro,
+**F4 - Modifica** apre il mastro selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -67,6 +91,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina: in inserimento su come si crea un mastro, in modifica su come si ritrova. Dall'elenco dei mastri porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

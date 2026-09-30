@@ -52,6 +52,31 @@ la sua descrizione — quindi la riclassificazione, il riquadro della contabilit
 analitica, il codice IVA e i codici per il trasferimento; in fondo la griglia
 dei saldi.
 
+### L'elenco dei sottoconti
+
+![Elenco dei sottoconti](../../assets/img/contabilita/sottoconti-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Sottoconti**: l'elenco dei
+sottoconti, ordinato per mastro, conto e sottoconto, con le colonne
+**Mastro**, **Conto**, **Codice**, **Descrizione**, **Tipo**, **Dare**,
+**Avere** e **Saldo**. La stessa finestra si apre ovunque si scelga un
+sottoconto: in prima nota, nelle schede contabili e nel libro mastro, nelle
+causali contabili, nella contabilizzazione delle fatture, nell'apertura e
+nella chiusura dei conti.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi mastro, conto e sottoconto, tre cifre ciascuno
+  (`150-001-001`), e passa al campo successivo: l'elenco si posiziona su quel
+  sottoconto o, se non esiste, su quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i sottoconti
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un sottoconto,
+**F4 - Modifica** apre il sottoconto selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -87,6 +112,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina: in inserimento su come si crea un sottoconto, in modifica su come si ritrova. Dall'elenco dei sottoconti porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

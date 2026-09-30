@@ -50,6 +50,32 @@ di dover presentare altrove.
 dati della banca e le coordinate, al centro saldo e scopertura, in basso i due
 riquadri **CASTELLETTI** e **TASSI**.
 
+### L'elenco delle banche
+
+![Elenco delle banche ditta](../../assets/img/contabilita/banche-ditta-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Banche Ditta**: l'elenco
+delle banche dell'azienda, ordinato per descrizione, con le colonne
+**Codice**, **Descrizione**, **Indirizzo**, **Città**, **ABI** e **CAB**. La
+stessa finestra si apre dai [titoli](titoli.md) e dalla loro stampa, quando si
+sceglie la banca.
+
+In alto ci sono tre modi di cercare:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Codice Abi-Cab** — scrivi l'ABI, il CAB o tutti e due, e passa al campo
+  successivo: l'elenco si riordina per ABI e CAB e mostra solo le banche con
+  quell'ABI e con un CAB che comincia come quello scritto;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le
+  banche che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere una banca,
+**F4 - Modifica** apre la banca selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 ### Dati della banca
@@ -103,6 +129,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina, anche dall'elenco delle banche. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

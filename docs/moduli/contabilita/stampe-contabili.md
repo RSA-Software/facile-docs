@@ -225,7 +225,7 @@ per le stampanti ad aghi dei moduli continui.
 !!! note "Come si scelgono più sezioni"
 
     Con il comando di **selezione delle sezioni**, che apre un elenco a
-    spunte: quelle scelte finiscono nel campo accanto, separate da virgola.
+    spunte (vedi [Scegliere le sezioni di una stampa](sezioni.md#scegliere-le-sezioni-di-una-stampa)): quelle scelte finiscono nel campo accanto, separate da virgola.
     Non spuntandone nessuna vale **TUTTE**.
 
     Il messaggio *Troppe sezioni selezionate. Le ultime saranno scartate !*

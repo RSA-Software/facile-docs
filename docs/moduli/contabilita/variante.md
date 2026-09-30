@@ -62,6 +62,7 @@ salvare: qui sono **la data e la descrizione**.
 |---|---|---|
 | **F2 - Salva** | ++f2++ | Registra e chiude la finestra. La riga compare — o si aggiorna — nella scheda da cui sei partito. |
 | **Esci** | ++esc++ | Chiude senza salvare niente. |
+| Guida | ++f1++ | Apre questa pagina. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ o ++down++ | Sposta il cursore sul campo seguente. |

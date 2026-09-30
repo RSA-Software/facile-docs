@@ -80,6 +80,7 @@ Gli stessi tre campi della stampa precedente, più:
 | Elenco di scelta | ++f10++ o ++space++ | Sul campo con il codice, apre l'elenco da cui scegliere. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
 | **Consultazione** | ++f11++ | Apre la consultazione. |
+| Guida | ++f1++ | Apre questa pagina. |
 
 ## Come si fa
 

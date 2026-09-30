@@ -41,6 +41,29 @@ appartiene.
 mastro di appartenenza, il codice e la descrizione del conto, e sotto la
 griglia dei saldi.
 
+### L'elenco dei conti
+
+![Elenco dei conti](../../assets/img/contabilita/conti-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Conti**: l'elenco dei
+conti, ordinato per mastro e conto, con le colonne **Mastro**, **Codice**,
+**Descrizione**, **Dare**, **Avere** e **Saldo**. La stessa finestra si apre
+ovunque si scelga un conto: in prima nota, nelle schede contabili e nel libro
+mastro, nelle causali contabili, nell'apertura e nella chiusura dei conti.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi mastro e conto, tre cifre ciascuno (`150-001`), e passa
+  al campo successivo: l'elenco si posiziona su quel conto o, se non esiste,
+  su quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i conti
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un conto,
+**F4 - Modifica** apre il conto selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -67,6 +90,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina: in inserimento su come si crea un conto, in modifica su come si ritrova. Dall'elenco dei conti porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |

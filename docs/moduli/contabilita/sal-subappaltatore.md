@@ -104,6 +104,7 @@ viene scritta in **rosso**.
 | **Modifica** | doppio clic o ++enter++ sulla riga | Apre l'avanzamento selezionato. |
 | **Elimina** | | Cancella l'avanzamento selezionato, **senza chiedere conferma**. |
 | **Esci** | ++esc++ | Chiude l'elenco e torna alla scheda *Subappaltatori*. |
+| Guida | ++f1++ | Apre questa pagina. |
 
 Senza una riga selezionata, **Modifica** ed **Elimina** non fanno niente.
 
@@ -116,6 +117,7 @@ Senza una riga selezionata, **Modifica** ed **Elimina** non fanno niente.
 | **Collega** | doppio clic sulla riga dell'elenco in basso | Attribuisce a questo SAL la fattura selezionata fra quelle non ancora utilizzate. L'importo si ricalcola. |
 | **Scollega** | doppio clic sulla riga dell'elenco in alto | Toglie il collegamento: la fattura torna fra quelle disponibili e l'importo si ricalcola. |
 | **PDF** | | Apre il primo PDF allegato alla registrazione selezionata, ciascuno per il proprio elenco. |
+| Guida | ++f1++ | Apre questa pagina. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ o ++down++ | Sposta il cursore sul campo seguente. |

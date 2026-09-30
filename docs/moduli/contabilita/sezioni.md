@@ -42,6 +42,29 @@ la richiamano.
 È una maschera a finestra unica, senza schede: la **barra dei comandi**, codice
 e descrizione, e il riquadro **Escludi da** con quattro caselle.
 
+### L'elenco delle sezioni
+
+![Elenco delle sezioni](../../assets/img/contabilita/sezioni-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Sezioni**: l'elenco delle
+sezioni, ordinato per descrizione, con le colonne **Codice** e
+**Descrizione**. La stessa finestra si apre ovunque si scelga una sezione: in
+prima nota, nei documenti di vendita, nel carico merci, nelle scadenze e nelle
+stampe contabili.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le sezioni
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere una sezione,
+**F4 - Modifica** apre la sezione selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -71,6 +94,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina. Dall'elenco delle sezioni porta alla ricerca, dalla scelta delle sezioni di una stampa alla sezione che la spiega. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sul campo seguente. |
@@ -91,6 +115,20 @@ Valgono inoltre:
 1. Premi **F5 - Cerca** e carica la sezione.
 2. Nel riquadro *Escludi da* spunta **Liquidazioni IVA**.
 3. Premi **F2 - Salva**.
+
+### Scegliere le sezioni di una stampa
+
+Il libro giornale e le stampe dei saldi di clienti e fornitori possono
+limitarsi ad alcune sezioni. Il pulsante accanto al campo della sezione apre
+la finestra **Seleziona Sezioni**: l'elenco di tutte le sezioni, ciascuna con
+il codice fra parentesi e la sua casella.
+
+1. Spunta le sezioni da includere, oppure usa **F3 - Selez. Tutte** e togli
+   quelle che non servono. **F4 - Deselez. Tutte** toglie tutte le spunte.
+2. Premi **F2 - OK**: le sezioni scelte finiscono nel campo della stampa.
+   ++esc++ chiude senza cambiare niente.
+
+Se all'utente è assegnata una sezione, l'elenco mostra soltanto quella.
 
 ## Controlli e messaggi
 

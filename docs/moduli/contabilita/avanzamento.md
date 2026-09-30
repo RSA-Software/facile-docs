@@ -82,6 +82,7 @@ viene scritta in **rosso**.
 | **Collega** | doppio clic sulla riga dell'elenco in basso | Attribuisce a questo avanzamento la fattura selezionata. Gli importi si ricalcolano. |
 | **Scollega** | doppio clic sulla riga dell'elenco in alto | Toglie il collegamento: la fattura torna fra quelle disponibili e gli importi si ricalcolano. |
 | **PDF** | | Apre il primo PDF allegato alla registrazione selezionata, ciascuno per il proprio elenco. |
+| Guida | ++f1++ | Apre questa pagina. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 

@@ -43,6 +43,27 @@ disegnato sapendo cosa ci si aggancerà.
 È una maschera a finestra unica, senza schede: la **barra dei comandi**, le
 cinque caselle del codice affiancate e la descrizione.
 
+### L'elenco delle voci di riclassificazione
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Conti Riclassificazione**:
+l'elenco delle voci, ordinato per descrizione, con le cinque parti del codice
+(**Cod-1** … **Cod-5**) e la **Descrizione**. La stessa finestra si apre dai
+[sottoconti](sottoconti.md), quando si aggancia un conto alla
+riclassificazione, e dall'anagrafica della ditta.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — le cinque caselle del codice: scrivi le parti che conosci e
+  passa al campo successivo. L'elenco si riordina per codice e si posiziona
+  su quello digitato o, se non esiste, su quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo le voci
+  che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere una voce,
+**F4 - Modifica** apre la voce selezionata per correggerla. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -65,6 +86,7 @@ Valgono inoltre:
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
+| Guida | ++f1++ | Apre questa pagina: in inserimento su come si crea una voce, in modifica su come si ritrova. Dall'elenco delle voci porta alla ricerca. |
 | Consultazione | ++f11++ | Apre la finestra **Consultazione**. |
 | Calcolatrice | ++f12++ | Apre la calcolatrice. |
 | Campo successivo | ++enter++ | Sposta il cursore sulla casella seguente. |
