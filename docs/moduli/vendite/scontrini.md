@@ -114,8 +114,10 @@ La griglia ha queste colonne:
    Rientrati**; in **Totale Rientrati** si accumulano quelli di tutti i buoni
    letti.
 4. Passa al buono seguente: il campo si è già svuotato.
-5. A fine giro, **F2 - OK** azzera il totale — previa conferma — e si
+5. A fine giro, **F2 - Azzera** azzera il totale — previa conferma — e si
    ricomincia.
+
+![Finestra Controllo Rientro Punti](../../assets/img/vendite/controllo-rientro-punti.png)
 
 ## Controlli e messaggi
 
@@ -128,7 +130,7 @@ La griglia ha queste colonne:
 | *Conferimento non trovato in archivio!* | Lo scontrino indicato dal buono non esiste nell'anno di lavoro. | Controlla di essere nell'anno giusto. |
 | *Punti rientrati superiori ai punti erogati!* | Su quello scontrino sono già rientrati più punti di quanti ne fossero stati dati. | I punti vengono sommati lo stesso: verifica se il buono è stato letto due volte. |
 | *Cliente sul barcode diverso da cliente su Conferimento!* | Il cliente scritto sul buono non è quello dello scontrino. | I punti vengono sommati lo stesso: controlla che il buono sia di quel cliente. |
-| *Confermi l'azzeramento del totale?* | Hai premuto **F2 - OK** nel Controllo Conferimento. | **Sì** azzera il **Totale Rientrati** a video. La risposta preimpostata è **No**. |
+| *Confermi l'azzeramento del totale?* | Hai premuto **F2 - Azzera** nel Controllo Conferimento. | **Sì** azzera il **Totale Rientrati** a video. La risposta preimpostata è **No**. |
 
 ## Note
 

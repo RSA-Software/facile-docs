@@ -151,6 +151,7 @@ Bilance**.
 | *Impossibile aprire il file C:\\DIBAL\\articoli.txt!* | Facile non riesce a scrivere il file per le bilance Dibal. | Controlla che la cartella `C:\\DIBAL` esista e sia scrivibile, e che nessun altro programma tenga aperto il file. |
 | *Impossibile aprire il file!* | Facile non riesce a leggere o scrivere il file di scambio. | Controlla percorsi e permessi, e che nessun altro programma tenga il file aperto. |
 | *Impossibile spostare il file !* | Il file ricevuto non si è potuto archiviare. | Controlla i permessi della cartella. |
+| *File inesistente o impossibile da aprire !*, seguito dal percorso | Nella ricezione da file di Zenith, Bizerba o WinShop non c'è il file della data indicata. | Controlla la data, e che il file del giorno sia nella cartella indicata dal messaggio. |
 | *Ci sono Codici Scartati durante la Ricezione.<br>Li vuoi stampare?* | Alcuni codici venduti non corrispondono a nessun articolo. | **Sì**: la stampa dice quali. Vanno sistemati in anagrafica. |
 
 ## Note
@@ -214,10 +215,13 @@ Bilance**.
     lavoro, e il titolo lo dice. Non c'è niente da compilare di diverso fra
     invio e ricezione.
 
-    **Ricezione da file** si distingue per una cosa sola: invece di cercare il
-    file del giorno nella cartella prevista, apre la scelta del file — serve
-    quando il file è stato salvato altrove, o quando si rilegge un giorno
-    passato già finito in `backup`.
+    **Ricezione da file** non si collega alla bilancia: legge un file già
+    scaricato. Per **Zenith**, **Bizerba** e **Mettler Toledo - WinShop** chiede
+    la **Data Ricezione** e cerca il file di quel giorno: per Zenith nella
+    cartella `zenith` del programma (`DC-AAAAMMGG.TXT` per i totali,
+    `sco-AAAAMMGG.TXT` per gli scontrini), per Bizerba e WinShop in
+    `C:\backupdc` (`bilAAMMGG.dat`). Serve anche per rileggere un giorno
+    passato. La data deve stare nell'esercizio su cui stai lavorando.
 
 !!! info "Scontrini o totali: cambia il dettaglio, non il risultato"
 

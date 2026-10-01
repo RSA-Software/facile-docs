@@ -91,6 +91,8 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 
 ### Rinumerazione Scontrini
 
+![Finestra Rinumerazione Scontrini](../../assets/img/utility/rinumerazione-scontrini.png)
+
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Dal Numero**, **Al Numero** | ● | L'intervallo di scontrini da rinumerare. | numeri |

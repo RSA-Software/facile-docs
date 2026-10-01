@@ -129,7 +129,7 @@ Sotto compare la ripartizione calcolata, **Anno** per **Importo**.
 |---|---|---|
 | **F6 - Elimina** | ++f6++ | Cancella la registrazione, previa conferma. |
 | **F7 - Allegati** | ++f7++ | Allega il documento scansionato alla registrazione. |
-| **F8 - Causale** | ++f8++ | Apre la [causale contabile](causali-contabili.md) in uso, per controllarne le impostazioni. |
+| **F8 - Causale** | ++f8++ | Apre la finestra **Descrizione Causale**, in cui correggere la descrizione della causale sulla riga selezionata. Non fa nulla se la riga non ha una causale. |
 | **F9 - Integr.** | ++f9++ | Apre le integrazioni, che cambiano secondo il registro della causale: vedi sotto. Sul libro giornale il comando è spento. |
 | Elenco di scelta | ++f10++ o ++space++ | Sul campo con il codice, apre l'elenco da cui scegliere. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |

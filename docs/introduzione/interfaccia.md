@@ -148,6 +148,11 @@ insieme nell'[appendice dei messaggi](../appendici/messaggi-errore.md).
 paragrafo giusto, nel browser predefinito del computer. Da **Menu ▸ ? ▸
 Argomenti della Guida** si apre invece la copertina.
 
+Le finestrelle che chiedono un dato solo — una data, un periodo, il numero di
+copie, una quantità, la lettura di un terminalino — non hanno una pagina
+propria, perché si aprono da tante maschere diverse. Lì ++f1++ apre la pagina
+della maschera o del comando da cui la finestrella è partita.
+
 Il manuale sta su Internet, e si aggiorna senza toccare il programma. Le
 postazioni che non hanno un collegamento possono puntare a una **copia locale**:
 è una impostazione della postazione, che mette l'assistenza.

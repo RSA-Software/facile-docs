@@ -107,6 +107,8 @@ Sono caselle da attivare o disattivare. Le principali:
 Per ogni voce si sceglie una stampante fra quelle installate in Windows.
 Lasciandola vuota si usa la stampante predefinita.
 
+![Finestra Impostazione Stampanti](../../assets/img/utility/impostazione-stampanti.png)
+
 | Campo | Descrizione |
 |---|---|
 | **Fatture**, **Doc. di Trasporto**, **Buoni di Consegna**, **Bolle Accompagn.**, **Ricevute Fiscali** | La stampante di ciascun documento di vendita. |
@@ -119,6 +121,8 @@ Lasciandola vuota si usa la stampante predefinita.
 | **Etichette Colli** e **Tipo Stampante** | La stampante delle etichette dei colli: `GENERICA` o Intermec Easycoder / Bixolon SLP. |
 
 ### Impostazione FacileWebApiService
+
+![Finestra Impostazione FacileWebApiService](../../assets/img/utility/impostazione-facilewebapiservice.png)
 
 | Campo | Descrizione |
 |---|---|
@@ -150,9 +154,15 @@ volta e si salva, poi si passa al successivo.
 ### Impostazioni EFT Pos
 
 La voce apre prima una finestrella, *Selezione EFT POS*, con **sei pulsanti**
-— da **EFT POS 1** a **EFT POS 6** — e **Annulla**: si possono configurare
-fino a sei terminali. Scelto il numero si apre *Impostazione Parametri EFT
-Pos*:
+e **Annulla**: si possono configurare fino a sei terminali. Un pulsante ancora
+libero mostra il suo numero (*..:: 1 ::..* e così via); uno già configurato
+mostra la **Descrizione** del terminale e l'icona del suo protocollo.
+
+![Finestra Selezione EFT POS](../../assets/img/utility/selezione-eft-pos.png)
+
+Scelto il pulsante si apre *Impostazione Parametri EFT Pos*:
+
+![Finestra Impostazione Parametri EFT Pos](../../assets/img/utility/parametri-eft-pos.png)
 
 | Campo | Descrizione |
 |---|---|
@@ -170,6 +180,8 @@ quelli che non c'entrano.
 ### Impostazioni Messaggi SMS e WhatsApp
 
 Un campo solo, **Token**: la chiave del servizio di invio.
+
+![Finestra Impostazioni per Invio SMS e Messaggi WhatsApp](../../assets/img/utility/messaggi-sms-whatsapp.png)
 
 ## Pulsanti e comandi
 

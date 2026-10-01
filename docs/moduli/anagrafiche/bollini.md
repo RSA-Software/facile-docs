@@ -48,8 +48,10 @@ Non c'è una maschera vera e propria: le tre voci fanno partire l'elaborazione
 dopo aver chiesto conferma.
 
 **Azzeramento Bollini Campagna Attuale** apre prima la finestrella **Data
-Azzeramento Bollini**, che chiede la data a cui azzerare. Le altre due partono
-dalla sola conferma.
+Azzeramento Bollini**, che chiede la data a cui azzerare. **Ricalcolo Bollini**
+apre la finestrella **Ricalcolo Bollini**, che chiede il periodo degli scontrini
+da rileggere. L'azzeramento della campagna precedente parte dalla sola
+conferma.
 
 Durante il lavoro compare la finestra di avanzamento, con la scritta
 *Azzeramento Bollini Clienti...* oppure *Ricalcolo Bollini Clienti...*.
@@ -59,12 +61,13 @@ Durante il lavoro compare la finestra di avanzamento, con la scritta
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Azzeramento Bollini** | ● | La data a cui azzerare i bollini. Compare solo per la campagna attuale. | data |
+| **Data Iniziale**, **Data Finale** | ● | Il periodo degli scontrini da rileggere. Compaiono solo per il ricalcolo. | date dell'esercizio corrente, la finale non prima dell'iniziale |
 
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **OK** | ++f2++ | Conferma la data e prosegue. |
+| **F2 - OK** | ++f2++ | Conferma la data o il periodo e prosegue. |
 | **Esci** | ++esc++ | Annulla l'elaborazione. |
 | **Interrompi** | | Durante l'elaborazione, il pulsante della finestra di avanzamento ferma il lavoro. |
 
@@ -88,10 +91,14 @@ Durante il lavoro compare la finestra di avanzamento, con la scritta
 ### Rifare i conti dei bollini
 
 1. Apri **Menu ▸ Archivi ▸ Clienti ▸ Ricalcolo Bollini**.
-2. Alla domanda *«Vuoi azzerare i valori iniziali ?»* rispondi **Sì** solo se
+2. Nella finestra **Ricalcolo Bollini** indica **Data Iniziale** e **Data
+   Finale**: sono le date degli scontrini che il programma rilegge, e devono
+   stare tutte e due nell'esercizio su cui stai lavorando. Premi **F2 - OK**.
+3. Alla domanda *«Vuoi azzerare i valori iniziali ?»* rispondi **Sì** solo se
    vuoi ripartire da zero; **No** conserva i saldi di partenza e ricalcola solo
    il movimentato.
-3. L'elaborazione azzera, poi rilegge gli scontrini e ricostruisce i saldi.
+4. L'elaborazione azzera, poi rilegge gli scontrini del periodo e ricostruisce
+   i saldi.
 
 ## Controlli e messaggi
 

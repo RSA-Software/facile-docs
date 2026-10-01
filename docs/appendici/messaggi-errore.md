@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-09-30 — **926 messaggi**.
+Aggiornato al 2026-10-01 — **927 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -215,7 +215,7 @@ Aggiornato al 2026-09-30 — **926 messaggi**.
 | *Confermi la Variazione del Listino?* | [Variazioni di massa dei listini](../moduli/listini-vendita/variazioni-di-massa.md) | Richiesta di conferma di **Varia Listini**. | **Sì** avvia il ricalcolo su tutti gli articoli selezionati. |
 | *Confermi l'azzeramento dei bollini alla data indicata ?* | [Bollini](../moduli/anagrafiche/bollini.md) | Conferma dell'azzeramento della campagna attuale. | **Sì** azzera i bollini di tutti i clienti. La domanda propone **No**. |
 | *Confermi l'azzeramento dei bollini della campagna precedente ?* | [Bollini](../moduli/anagrafiche/bollini.md) | Prima conferma dell'azzeramento della campagna precedente. | **Sì** prosegue. La domanda propone **No**. |
-| *Confermi l'azzeramento del totale?* | [Scontrini](../moduli/vendite/scontrini.md) | Hai premuto **F2 - OK** nel Controllo Conferimento. | **Sì** azzera il **Totale Rientrati** a video. La risposta preimpostata è **No**. |
+| *Confermi l'azzeramento del totale?* | [Scontrini](../moduli/vendite/scontrini.md) | Hai premuto **F2 - Azzera** nel Controllo Conferimento. | **Sì** azzera il **Totale Rientrati** a video. La risposta preimpostata è **No**. |
 | *Confermi l'azzeramento di tutte le quantità ?* | [Produzione](../moduli/magazzino/produzione.md) | Hai premuto **F6 - Pulisci**. | **Sì** svuota la colonna. La risposta preimpostata è **No**. |
 | *Confermi l'Azzeramento Fiscale?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Chiusura fiscale di fine giornata. | È l'operazione che chiude il giorno sulla cassa. |
 | *Confermi l'Azzeramento Reparti?* / *Vuoi Azzerare i reparti ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Azzeramento dei totali per reparto. | — |
@@ -302,6 +302,7 @@ Aggiornato al 2026-09-30 — **926 messaggi**.
 | *File di configurazione non trovato!* seguito dal percorso | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Manca il file `cfg\imp_mobile_NNNNN.ini` della ditta. | Chiedi all'assistenza di installarlo. |
 | *File di Interscambio non Valido!* | [Ricezione dati](../moduli/trasferimenti/ricezione-dati.md) | Il file degli agenti non ha la struttura attesa. | Controlla di aver preso il file giusto. |
 | *File Generato :<br><br>…* | [Esportazione DDT - Centrale Latte Salerno](../moduli/trasferimenti/esportazione-ddt-centrale-latte-salerno.md) | L'esportazione è finita; il messaggio indica il percorso del file. | Manda il file alla Centrale. |
+| *File inesistente o impossibile da aprire !*, seguito dal percorso | [Bilance](../moduli/casse-bilance/bilance.md) | Nella ricezione da file di Zenith, Bizerba o WinShop non c'è il file della data indicata. | Controlla la data, e che il file del giorno sia nella cartella indicata dal messaggio. |
 | *File in PDF del documento non trovato in archivio!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Il PDF di cortesia non c'è. | Non tutte le fatture ne hanno uno: consulta il **Dettaglio Linee**. |
 | *File non trovato o impossibile da aprire!* / *Impossibile aprire il file !* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Il file non c'è, ha un nome diverso da quello atteso, o è aperto in un altro programma. | Controlla nome e posizione del file e chiudilo negli altri programmi. |
 | *File non Valido!* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Il nome del file non comincia per `ORD` né per `OFO`. | Scegli il file giusto o rinominalo. |
