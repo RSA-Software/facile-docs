@@ -41,7 +41,12 @@ al telefono: senza quel codice nessuno può collegarsi.
 ### Email
 
 Una finestra di posta dentro Facile, per mandare un messaggio senza passare dal
-programma di posta.
+programma di posta. È la stessa che si apre quando si spedisce per email da
+altre parti del programma, per esempio dalle
+[mailing list](../moduli/anagrafiche/mailing-list.md) o dalla
+[gestione dei compleanni](../moduli/anagrafiche/gestione-compleanni.md).
+
+![Finestra Invia Email](../assets/img/introduzione/email.png)
 
 | Campo | Descrizione |
 |---|---|
@@ -50,6 +55,7 @@ programma di posta.
 | **Allegati** | I file da allegare; il pulsante **Allega** apre la finestra di scelta. |
 | *(corpo)* | Il testo, con la formattazione. |
 | **Invia** | Spedisce. Sotto, una barra mostra l'avanzamento. |
+| ++f1++ | Apre questa sezione del manuale. |
 
 Il **mittente** è l'indirizzo dell'utente collegato, preso dalla sua
 [scheda](../moduli/anagrafiche/utenti.md). Se quell'utente ha anche i propri
@@ -75,12 +81,19 @@ quella della [ditta](../moduli/anagrafiche/ditte.md).
 
 ### SMS
 
+La stessa finestra si apre anche dalle mailing list e dalla gestione dei
+compleanni; dai compleanni i destinatari sono già scelti e l'invio programmato
+non c'è.
+
+![Finestra Invio SMS](../assets/img/introduzione/sms.png)
+
 | Campo | Descrizione |
 |---|---|
 | **A…** | Apre l'elenco da cui scegliere i destinatari; i numeri si possono anche scrivere a mano. |
 | *(testo)* | Il messaggio. |
 | **Invio Programmato — Data**, **Ora** | Quando farlo partire. Lasciandoli vuoti parte subito. |
 | **Invia** | Spedisce. |
+| ++f1++ | Apre questa sezione del manuale. |
 
 Mentre si scrive, **il titolo della finestra conta i caratteri**: *Invio SMS :
 40 caratteri*. Superati i 160 diventa *Invio di 2 SMS : 173 caratteri* e si
