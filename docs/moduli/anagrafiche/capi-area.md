@@ -39,6 +39,30 @@ da quella dell'agente.
 È una maschera a finestra unica, senza schede: la barra dei comandi e i dati
 anagrafici del capo area.
 
+### L'elenco dei capi area
+
+![Elenco dei capi area](../../assets/img/anagrafiche/capi-area-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Capi Area**: l'elenco dei
+capi area, ordinato per descrizione, con le colonne **Codice** e
+**Descrizione**. La stessa finestra si apre quando si sceglie il capo area
+nella scheda **Generale** dell'[anagrafica agenti](anagrafica-agenti.md),
+nella stampa degli agenti e nelle provvigioni.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio della descrizione: l'elenco mostra solo i
+  capi area che cominciano così. Svuota il campo per tornare all'elenco
+  completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un capo area,
+**F4 - Modifica** apre quello selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

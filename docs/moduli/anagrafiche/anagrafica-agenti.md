@@ -60,6 +60,34 @@ Le schede sono queste:
 | **Prov. Anno** | Le provvigioni di tutto l'anno, documento per documento. |
 | **Prov. Gennaio** … **Prov. Dicembre** | Le stesse provvigioni, un mese per scheda. |
 | **Mat. Anno** | Il maturato dell'anno: quanto è stato incassato e quanta provvigione ne consegue. |
+| **Mat. Gennaio** … **Mat. Dicembre** | Lo stesso maturato, un mese per scheda. |
+
+Inserendo un agente nuovo compaiono solo **Generale** e **Totali**: le schede
+delle provvigioni e del maturato si riempiono con i documenti, e un agente
+appena creato non ne ha ancora.
+
+### L'elenco degli agenti
+
+![Elenco degli agenti](../../assets/img/anagrafiche/agenti-elenco.png)
+
+Premendo **F5 - Cerca** si apre la finestra **Cerca Agenti**: l'elenco degli
+agenti, ordinato per descrizione, con le colonne **Codice** e **Descrizione**.
+La stessa finestra si apre ovunque si scelga un agente: nell'anagrafica dei
+clienti, nei documenti di vendita, nelle scadenze, nelle provvigioni e nelle
+stampe che filtrano per agente.
+
+In alto ci sono due campi di ricerca:
+
+- **Codice** — scrivi il codice e passa al campo successivo: l'elenco si
+  riordina per codice e si posiziona su quello digitato o, se non esiste, su
+  quello che lo precede;
+- **Descrizione** — scrivi l'inizio del nominativo: l'elenco mostra solo gli
+  agenti che cominciano così. Svuota il campo per tornare all'elenco completo.
+
+Dalla barra dei comandi: **F2 - OK** sceglie la riga selezionata (vale anche
+il doppio clic), **F3 - Nuovo** apre la maschera per aggiungere un agente,
+**F4 - Modifica** apre l'agente selezionato per correggerlo. Tornando
+all'elenco, questo si aggiorna.
 
 ## Campi
 
