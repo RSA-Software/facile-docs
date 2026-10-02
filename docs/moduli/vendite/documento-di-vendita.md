@@ -52,6 +52,12 @@ basso:
 2. il **corpo** (**F8 - Corpo**) — le righe di merce;
 3. il **piede** e i **totali** — spese, sconti finali, riepilogo IVA.
 
+Se in fondo al titolo della finestra compare **[SQL]** — per esempio
+*Inserimento Ordine Cliente [SQL]* — la maschera sta lavorando sull'archivio
+attraverso il motore SQL. Per chi usa la maschera non cambia nulla: è
+un'indicazione utile all'assistenza, da riferire insieme al testo di un
+eventuale messaggio d'errore.
+
 ## Campi
 
 ### Testata
@@ -177,7 +183,7 @@ il pulsante **F2 - OK** sparisce: resta solo **Esci**.
 | **F4 - Succ.** | ++f4++ | Passa al documento successivo. |
 | **F5 - Cerca** | ++f5++ | Apre l'elenco dei documenti. |
 | **F6 - Elimina** | ++f6++ | Cancella il documento, previa conferma. |
-| **F7 - Stampa** | ++f7++ | Stampa il documento. |
+| **F7 - Stampa** | ++f7++ | Stampa il documento; se è ancora solo salvato, prima lo emette. Se il salvataggio non riesce, compare il messaggio con la causa e la stampa non parte. |
 | **F8 - Corpo** | ++f8++ | Passa alle righe di merce. |
 | **F9 - Email** | ++f9++ | Manda il documento per posta al cliente. |
 | **Piede**, **Totali** | | Passano al piede e al riepilogo dei totali. |
@@ -344,6 +350,8 @@ Credito PA» al posto di «Fatture PA».
 | *Confermi la stampa della fattura ?* | Conferma prima di stampare. | È il momento in cui il documento **diventa emesso**: magazzino, scadenze e provvigioni si muovono adesso. |
 | *Vuoi Stampare il Documento?* | Proposta di stampa dopo il salvataggio. | **No** lascia il documento salvato ma non emesso. |
 | *Vuoi Contabilizzare il documento ?* | Proposta di [contabilizzazione](contabilizzazione-documenti.md). | **Sì** genera la registrazione di prima nota. |
+| *Il Record è stato modificato da un altro processo.* | Mentre il documento era aperto a video, qualcuno l'ha cambiato da un'altra postazione o da un'altra maschera. Esce anche quando il programma si accorge che stava per scrivere su un documento diverso da quello a video: in quel caso blocca la scrittura e ne lascia traccia nel registro degli errori. | Il documento viene riletto com'è in archivio e il comando — stampa, corpo, totali, piede — **non prosegue**. Controlla i dati a video e ripeti il comando. |
+| *Record cancellato da un altro processo* | Il documento è stato eliminato da un'altra postazione mentre era aperto a video. | Il comando non prosegue: la maschera passa al documento successivo, o si chiude se era aperta su quel solo documento. |
 | *Impossibile trovare il documento in archivio!* | Il documento non c'è più: qualcuno l'ha eliminato. | Ricaricare l'elenco. |
 | *Il record richiesto non è presente in archivio.* | Un codice richiamato dal documento non esiste più. | Controllare i codici della testata. |
 | *Record di un archivio relazionato non trovato!* | Manca una tabella collegata — pagamento, banca, aliquota. | Va ripristinata la voce mancante. |

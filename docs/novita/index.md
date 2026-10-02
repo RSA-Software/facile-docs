@@ -16,6 +16,37 @@ una versione specifica del programma lo dicono in apertura, per esempio
 Non sono elencate le modifiche interne, che non cambiano nulla a video, e
 quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
+## Versione 2026 B08.01
+
+<!-- DA VERIFICARE: data di distribuzione della B08.01 -->
+
+### Miglioramenti
+
+- [Documento di vendita](../moduli/vendite/documento-di-vendita.md): quando
+  la maschera lavora sull'archivio attraverso il motore SQL, in fondo al
+  titolo compare **[SQL]**. È un'indicazione per l'assistenza.
+
+### Correzioni
+
+**Vendite**
+
+- [Documento di vendita](../moduli/vendite/documento-di-vendita.md): se il
+  salvataggio non riesce, **F7 - Stampa** non stampa più. Prima, dopo un
+  messaggio come *Il Record è stato modificato da un altro processo.*, il
+  documento veniva stampato lo stesso ma restava solo salvato: il magazzino
+  non si muoveva e le scadenze non nascevano. Ora il documento viene riletto
+  com'è in archivio e la stampa si ripete con un nuovo ++f7++. Lo stesso vale
+  per **Anteprima**, **F8 - Corpo**, **Totali** e **Piede**.
+- Documento di vendita: in alcune installazioni certi errori di salvataggio
+  non comparivano a video e il documento sembrava salvato. Ora il messaggio
+  compare sempre.
+- Documento di vendita: il programma controlla di scrivere proprio il
+  documento aperto a video. Se si accorge che stava per scriverne un altro,
+  si ferma con *Il Record è stato modificato da un altro processo.* invece di
+  sovrascriverlo.
+- **Vendite ▸ Doc. di Trasporto Consegne Terzi ▸ Modifica** apre l'ultimo
+  documento registrato; prima proponeva un documento nuovo.
+
 ## Versione 2026 B08
 
 In distribuzione dal 31 luglio 2026.

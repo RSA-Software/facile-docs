@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-01 — **927 messaggi**.
+Aggiornato al 2026-10-02 — **929 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -444,6 +444,7 @@ Aggiornato al 2026-10-01 — **927 messaggi**.
 | *Il record è stato modificato da un altro nodo della rete.* | [Trasportatori](../moduli/anagrafiche/trasportatori.md) | Un altro utente ha salvato lo stesso trasportatore mentre lo modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato modificato da un altro nodo della rete.* | [Unità di misura](../moduli/magazzino/unita-di-misura.md) | Un altro utente ha salvato la stessa unità mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
 | *Il record è stato modificato da un altro nodo della rete.* | [Zone](../moduli/anagrafiche/zone.md) | Un altro utente ha salvato la stessa zona mentre la modificavi. | Premi **Ricarica**, verifica cosa è cambiato e rifai le tue modifiche. |
+| *Il Record è stato modificato da un altro processo.* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Mentre il documento era aperto a video, qualcuno l'ha cambiato da un'altra postazione o da un'altra maschera. Esce anche quando il programma si accorge che stava per scrivere su un documento diverso da quello a video: in quel caso blocca la scrittura e ne lascia traccia nel registro degli errori. | Il documento viene riletto com'è in archivio e il comando — stampa, corpo, totali, piede — **non prosegue**. Controlla i dati a video e ripeti il comando. |
 | *Il registro della causale contabile preimpostata non e' valido!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | La causale predefinita non è del registro acquisti. | Correggi la [causale](../moduli/contabilita/causali-contabili.md) o indicane un'altra. |
 | *Il registro fiscale della causale di contabile per l'incasso deve essere il N° 1.* | [Gestione scadenze](../moduli/scadenze/gestione-scadenze.md) | La causale è su un registro IVA invece che sul giornale. | Correggi la [causale contabile](../moduli/contabilita/causali-contabili.md). |
 | *Il servizio deve essere installato sulla macchina locale!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | **F4 - Avvia** o **F5 - Arresta** su un servizio che sta su un altro computer. | Va avviato da lì. |
@@ -827,6 +828,7 @@ Aggiornato al 2026-10-01 — **927 messaggi**.
 | *Questi registri risultano già stampati in via definitiva: … Rinumerando, i protocolli non corrisponderanno più a quanto è stato stampato. Vuoi procedere lo stesso ?* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Almeno uno dei registri scelti ha una data in **Ditte ▸ Date Bollati**: quel registro è già stato stampato in via definitiva, e il messaggio dice quale e quando. | Fermati e leggi le date. Se il registro è già stato stampato, rinumerare rompe la corrispondenza con la carta: prosegui solo se sai perché lo stai facendo. |
 | *Raggiunto il numero massimo di sconti applicabili!<br>Lo sconto della promozioni non e' stato applicato!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La riga ha già tutti gli sconti che può avere. | La [promozione](../moduli/vendite/promozioni.md) **non entra**: se deve valere, va tolto uno degli sconti manuali. |
 | *Raggiunto limite massimo di righe nella promozione!* | [Promozioni](../moduli/vendite/promozioni.md) | La promozione ha raggiunto il numero massimo di righe. | Dividi gli articoli su più promozioni. |
+| *Record cancellato da un altro processo* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il documento è stato eliminato da un'altra postazione mentre era aperto a video. | Il comando non prosegue: la maschera passa al documento successivo, o si chiude se era aperta su quel solo documento. |
 | *Record di un archivio relazionato non trovato!* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | Il fornitore richiama un pagamento, una banca o un'altra tabella che non esiste più. | Segnala l'anomalia all'assistenza: manca un record in una tabella di base. |
 | *Record di un archivio relazionato non trovato!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Manca una tabella collegata — pagamento, banca, aliquota. | Va ripristinata la voce mancante. |
 | *Registro Causale Contabile non compatibile!* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | La causale indicata non è di acquisti, acquisti CEE o fatture sospese. | Scegli una causale del registro acquisti. |
