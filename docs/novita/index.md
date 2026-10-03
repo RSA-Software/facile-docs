@@ -46,6 +46,23 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
   sovrascriverlo.
 - **Vendite ▸ Doc. di Trasporto Consegne Terzi ▸ Modifica** apre l'ultimo
   documento registrato; prima proponeva un documento nuovo.
+- Righe dei documenti: con Facile aperto per molte ore, o dopo l'emissione di
+  molti documenti di seguito, le righe potevano non essere più registrate
+  (il documento restava senza righe) oppure il salvataggio poteva non
+  terminare. Ora l'ordine delle righe segue l'orologio e resta sempre valido.
+- [Vendita al banco](../moduli/vendite/vendita-al-banco.md): i dati presi da
+  un ordine, un preventivo o un DDT con **F6 - Dati** — numero e data del
+  documento d'origine, pagamento, destinatario, agente — restano sul foglio
+  su cui sono stati presi. Prima passavano al documento emesso da un altro
+  foglio, cioè a un altro cliente.
+- Vendita al banco: se sul foglio si cambia il cliente dopo aver richiamato un
+  documento, i riferimenti a quel documento si tolgono e il programma avvisa.
+- Vendita al banco: alla domanda *Vuoi accorpare gli ordini ?* (e *Vuoi
+  accorpare i buoni ?*) la risposta proposta è ora **No**. Con **Sì**
+  proposto, un ++enter++ di troppo aggiungeva le righe a un ordine già aperto.
+- Vendita al banco: se l'emissione di un documento si interrompe dopo averne
+  registrato la testata, il programma indica il numero del documento rimasto
+  incompleto, da controllare prima di riemetterlo.
 
 ## Versione 2026 B08
 

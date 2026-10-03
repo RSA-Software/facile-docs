@@ -188,6 +188,15 @@ esempio dopo aver battuto un codice che non è in archivio.
     fattura, fattura accompagnatoria, ricevuta fiscale o pro forma: scegliendo
     un altro documento il programma si ferma e lo dice.
 
+!!! note "Ogni foglio tiene i suoi documenti richiamati"
+
+    Il banco tiene aperte fino a cinque vendite, una per foglio. Quello che si
+    prende con **F6 - Dati** da un ordine, un preventivo o un DDT — il numero
+    del documento d'origine, la sua data, il pagamento, il destinatario,
+    l'agente — resta legato al foglio su cui è stato preso: passando da un
+    foglio all'altro, ognuno ritrova i suoi. Se sul foglio cambi il cliente,
+    quei riferimenti si tolgono e il programma lo dice.
+
 ### Incassare con la cassa automatica PagAmico
 
 Con la cassa automatica **PAGAMICO**, scelta nelle [impostazioni della
@@ -306,8 +315,9 @@ tolgono con il tasto **C** del tastierino, poi si riprende a lavorare.
 | *Il Codice del Cliente richiesto non è valido o disponibile.* | Il codice non esiste. | Controllare il codice. |
 | *Attenzione !<br>E' stato superato il Fido concesso al Cliente.<br>Vuoi Continuare ?* | La vendita porta il cliente oltre il fido. | **Sì** prosegue lo stesso. |
 | *Il cliente selezionato ha un credito di … Euro per un anticipo pagato in precedenza !* | Il cliente ha un [acconto](acconti.md) non ancora utilizzato. | Va scalato dal totale. |
-| *Esiste in archivio un ordine in corso per il cliente !<br>Vuoi accorpare gli ordini ?* | C'è già un ordine aperto per quel cliente. | **Sì** unisce le righe in un solo ordine. |
-| *Esiste in archivio un buono di consegna in corso per il cliente !<br>Vuoi accorpare i buoni ?* | Come sopra, per i buoni di consegna. | Come sopra. |
+| *Esiste in archivio un ordine in corso per il cliente !<br>Vuoi accorpare gli ordini ?* | Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è già un ordine aperto. | La risposta proposta è **No**: nasce un ordine nuovo. **Sì** aggiunge le righe all'ordine già aperto. Rispondi **Sì** solo se sai qual è quell'ordine e vuoi davvero allungarlo. |
+| *Esiste in archivio un buono di consegna in corso per il cliente !<br>Vuoi accorpare i buoni ?* | Come sopra, per i buoni di consegna. | Come sopra: la risposta proposta è **No**. |
+| *Attenzione !<br><br>Sul foglio erano stati richiamati documenti di un altro cliente.<br><br>I riferimenti a quei documenti sono stati tolti: le righe restano sul foglio e vanno controllate prima di emettere il documento.* | Sul foglio hai preso le righe di un ordine, di un preventivo o di un DDT con **F6 - Dati**, e poi hai cambiato il cliente. Il documento che emetterai non riporterà più il numero, il pagamento, il destinatario e l'agente del documento richiamato, che erano dell'altro cliente. | Controlla le righe: sono ancora quelle del documento richiamato. Se non sono per questo cliente, abbandona la vendita e rifalla. Il messaggio può comparire anche alla pressione di **F4 - Documenti**: in quel caso il documento non viene emesso, e dopo il controllo basta premere di nuovo **F4**. |
 | *Attenzione!<br>L'ordine selezionato e' marcato come non frazionabile.* | L'ordine va consegnato tutto insieme. | Non si può evaderne una parte. |
 
 **Quando lo scontrino deve portare i dati del cliente** — fattura
@@ -350,6 +360,7 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 |---|---|---|
 | *Attenzione!<br><br>Su una riga il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>La riga scarichera' il magazzino.* / *Attenzione!<br><br>Su … righe il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>Le righe scaricheranno il magazzino.* | Premendo **F4 - Documenti**, il programma controlla il segno che dice se una riga ha già scaricato il magazzino. Quel segno può essere solo acceso o spento: qui aveva un valore diverso, e il programma lo ha spento. | Niente: le righe scaricheranno il magazzino come quelle battute a mano, che è il comportamento normale. Il messaggio non dovrebbe comparire: se lo vedi, segnalalo all'assistenza. |
 | *Attenzione!<br><br>Sul banco ci sono righe prese da un DDT conto vendita.<br>Si possono emettere solo in fattura, fattura accompagnatoria, ricevuta fiscale o pro forma.* | Con **F4 - Documenti** si è scelto un DDT, una bolla, un buono di consegna, un ordine o un preventivo, ma sul banco ci sono righe prese con **F6 - Dati ▸ DDT Conto Vendita**. Quella merce è già uscita con il DDT. | Premi di nuovo **F4** e scegli la fattura: le righe sono ancora sul banco. |
+| *Attenzione !<br><br>Il documento n. … e' stato registrato solo in parte: la testata c'e', ma le righe o i riferimenti potrebbero non esserci tutti.<br><br>Va controllato dalla gestione dei documenti prima di emetterlo di nuovo: le righe restano sul foglio.* | L'emissione si è fermata a metà per un errore, mostrato subito prima. Il documento è già in archivio con quel numero, ma può mancare qualche riga. | **Non premere subito di nuovo F4**: nascerebbe un secondo documento accanto a quello incompleto. Apri il documento indicato dalla gestione di ordini o fatture, completalo o eliminalo, e solo dopo abbandona o riemetti la vendita sul banco. |
 
 ### Quando la cassa o la bilancia non rispondono
 
