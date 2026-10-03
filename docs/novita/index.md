@@ -30,13 +30,43 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
   ricerca, integrazioni della fattura elettronica, riassortimento da vendite,
   scelta dello scontrino e del carico, etichette dei colli — ognuna alla sua
   sezione, che il manuale ora descrive con le schermate.
+- Vendita al banco: il **TOTALE** in basso a destra si adatta al campo. Con lo
+  schermo ingrandito o ad alta risoluzione restava piccolo e in alto; ora il
+  numero riempie il campo, centrato, e si rimpicciolisce solo se un importo
+  lungo non ci starebbe.
+- [Vendita al banco](../moduli/vendite/vendita-al-banco.md): ++f1++ apre la
+  guida anche dalle finestre che si aprono dal banco — riga, chiusura dello
+  scontrino, scelta e dati del documento, controllo con un ordine, partite
+  scadute, compleanno del cliente — e dal dettaglio di uno
+  [scontrino](../moduli/vendite/scontrini.md#il-dettaglio-di-uno-scontrino).
+  Il manuale le descrive ora con le schermate, e spiega passo per passo il
+  reso a partire dallo scontrino.
+- **Solo Ortofrutta.** ++f1++ apre la guida anche dalla riga della vendita al
+  banco, e il manuale descrive ora le righe di questa versione — al banco e
+  nel [documento di vendita](../moduli/vendite/documento-di-vendita.md#la-riga-del-documento)
+  — e la voce **F7 - Dati ▸ File Listino Prezzi Excel** degli ordini clienti.
+- **Solo Taglie e Colori.** Il manuale descrive ora la finestra della riga
+  per taglie e colori del documento di vendita, le voci di **F7 - Dati** di
+  questa versione e della variante Calzature, e le differenze della riga e
+  della chiusura dello scontrino al banco.
 - Documento di vendita, preventivi e righe: le etichette dei campi usano lo
   stesso carattere del resto della finestra, e non escono più tagliate.
+  Lo stesso vale per la [vendita al banco](../moduli/vendite/vendita-al-banco.md)
+  e le finestre che apre — riga, emissione dello scontrino, tipo e dati del
+  documento, controllo dell'ordine, partite scadute — e per il dettaglio
+  degli [scontrini](../moduli/vendite/scontrini.md).
 
 ### Correzioni
 
 **Vendite**
 
+- Vendita al banco, **F8 - Contr.Ordine**: indicando un ordine già evaso
+  compariva *Ordine annullato!*; ora il messaggio è *Ordine già evaso!*.
+- **Solo Taglie e Colori.** Nella riga per taglie e colori del documento,
+  il nome della terza tabella libera usciva tagliato (*Tipo Tomai* invece di
+  *Tipo Tomaia*).
+- Vendita al banco, **Buon Compleanno!**: con lo schermo ingrandito
+  l'immagine di auguri copriva solo una parte della finestra; ora la riempie.
 - Documento di vendita, corpo, **F7 - Dati ▸ Scontrino Facile**: uscendo con
   **Esci** compariva *SQL Error*; e se lo scontrino non esisteva, dopo il
   messaggio la fattura proseguiva con uno scontrino vuoto. Ora **Esci** chiude

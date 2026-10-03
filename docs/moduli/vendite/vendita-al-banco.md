@@ -95,6 +95,197 @@ la testata ne ha alcuni.
 | **Totale Q.tà**, **Tot. Imponibile**, **Totale IVA**, **TOTALE** | | I totali di quello che è sul banco. | Sola lettura |
 | **Punti Fidelity** | | A sinistra i punti che questa vendita fa maturare, a destra quelli già in saldo sulla tessera del cliente. | Sola lettura |
 
+### La riga
+
+Il doppio clic su una riga della griglia apre **Dettaglio**, la scheda
+completa della riga. Se nella [ditta](../anagrafiche/ditte.md) **Conferma
+Dati** è `SI`, la finestra si apre anche da sola ogni volta che passi un
+articolo.
+
+![Riga della vendita al banco](../../assets/img/vendite/vendita-al-banco-riga.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Dep/Articolo**, **Cod. Fornitore** | Il deposito, l'articolo e il suo codice presso il fornitore. Si leggono soltanto. |
+| **Descrizione** | Proposta dall'articolo; si corregge e si allunga su più righe. |
+| **Ultime Vendite** | Le ultime cinque vendite dell'articolo a questo cliente, con data e prezzo. Senza cliente, le ultime vendite dell'articolo. |
+| **Esistenza**, **Disponibilità** | Quanti pezzi ci sono in magazzino, e quanti ne restano tolti gli ordini dei clienti e gli impegni. |
+| **Un. Mis.** | L'[unità di misura](../magazzino/unita-di-misura.md). |
+| **Coef. Mol** | I due coefficienti che moltiplicano la quantità. Compaiono solo con l'impostazione **Usa Coefficenti Moltiplicativi** della ditta. |
+| **Quantità**, **Prezzo Un.** | Quanto e a che prezzo. |
+| **%Sco.** | Fino a sette sconti in cascata. |
+| **Sco. Merce**, **Sco. Valore** | La quantità data in sconto merce e uno sconto in euro. |
+| **C.Iva** | L'[aliquota IVA](../contabilita/aliquote-iva.md) della riga. Obbligatoria. |
+| **Colli**, **Peso Un.** | I colli e il peso di un pezzo, con la sua unità. |
+| **%Provvigione** | La provvigione dell'agente. |
+| **Tipo** | `VENDITA` o `SOSTITUZIONE`. |
+| **Totale**, **Totale Ivato** | Il totale della riga, senza e con l'IVA. **Totale Ivato** non c'è quando la ditta lavora a prezzi IVA compresa. |
+| **Lotto**, **SSCC**, **GTIN**, **Scadenza** | I dati del lotto. Compaiono solo per gli articoli a lotti, e solo con **Usa Gestione Lotti** acceso nella ditta. |
+
+Con **Blocca imputazione prezzi maschere vendita** acceso nella ditta, chi non
+è amministratore non può cambiare prezzo, sconti e provvigione.
+
+La barra ha **F2 - Salva**, che registra la riga e torna al banco, e
+**F3 - Acq. Peso**, che legge il peso dalla bilancia e lo scrive in
+**Quantità**: c'è solo se nelle [impostazioni della
+postazione](../utility/impostazioni-postazione.md) è indicata la **Bilancia
+Checkout**. Senza descrizione o senza aliquota IVA la riga non si salva: il
+cursore va sul campo da completare.
+
+**Solo Ortofrutta.** La riga del banco è fatta per la merce venduta a peso e
+in casse:
+
+![Riga della vendita al banco, versione Ortofrutta](../../assets/img/vendite/vendita-al-banco-riga-ortofrutta.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Sconti %** | Fino a sette sconti in cascata. |
+| **Origine Merci** | L'origine della merce, dalla tabella delle origini. |
+| **Colli**, **Tara Imballo**, **Altre Tare** | I colli, la tara di un collo e le altre tare della riga. |
+| **Totale Tara** | **Altre Tare** più **Colli** per **Tara Imballo**. Lo calcola il programma; l'importo della riga si calcola sulla quantità meno la tara. |
+| **Prezzo For.** | Il prezzo di acquisto dal fornitore. |
+| **Partita** | Il numero del carico da cui viene la merce. Indicandolo, origine e imballo si prendono dal carico. |
+| **Polymer** | L'imballo: l'elenco propone gli articoli del sottogruppo `IMBALLO`, più `SENZA IMBALLO`. |
+| **Totale Impo.**, **Totale Ivato** | Il totale della riga, senza e con l'IVA. |
+
+Non ci sono **Peso Un.**, **%Provvigione** e **Tipo**. La partita è
+obbligatoria: senza, la riga chiede di forzare. Con **Disabilita Richiesta
+Partita** acceso nella ditta non viene chiesta, e **Prezzo For.**, **Partita** e
+**Polymer** non compaiono.
+
+**Solo Taglie e Colori.** Passando un articolo si apre *Seleziona Taglia e
+Colore*, che chiede la taglia del gruppo e il colore. Nella riga taglia e
+colore stanno accanto al codice dell'articolo, e non ci sono **Peso Un.**,
+**%Provvigione**, **Prezzo For.**, **Tara** e **Partita**. Nella variante
+**Calzature** al posto dell'unità di misura c'è l'**Operatore**, e gli ultimi
+due sconti non si scrivono.
+
+![Riga della vendita al banco, versione Taglie e Colori - Calzature](../../assets/img/vendite/vendita-al-banco-riga-taglie.png)
+
+Sui campi funzionano anche questi tasti:
+
+| Tasto | Dove | Effetto |
+|---|---|---|
+| ++f4++ | ovunque | Apre i listini dell'articolo e prende prezzo, sconti e provvigione da quello scelto. Non funziona con i prezzi bloccati. |
+| ++space++ | **Prezzo Un.** | Come ++f4++. |
+| ++f6++ | **Prezzo Un.** | Toglie l'IVA dal prezzo. |
+| ++f9++ | **Prezzo Un.** | Divide il prezzo per la quantità: si scrive l'importo della riga e si ottiene il prezzo unitario. |
+| ++f9++ | **Quantità** | Moltiplica la quantità per i pezzi della confezione: si scrivono i colli e si ottengono i pezzi. |
+| ++f10++ | **Quantità** | Arrotonda la quantità alle confezioni intere. |
+| ++f10++ | **Prezzo Un.** | Aggiunge l'IVA al prezzo se l'articolo è a prezzo IVA compresa, la toglie se non lo è. |
+| ++f10++ | **Descrizione** | Inserisce, dove si trova il cursore, una delle descrizioni predefinite. |
+| ++f10++ o ++space++ | **Un. Mis.**, **C.Iva**, **Lotto** | Apre l'elenco da cui scegliere. |
+
+### La chiusura dello scontrino
+
+**F3 - Scontrino** apre *Emissione Scontrino Fiscale*: qui si dice come paga
+il cliente e quanti punti fedeltà muove lo scontrino; **F2 - OK** lo manda
+alla cassa.
+
+![Chiusura dello scontrino](../../assets/img/vendite/vendita-al-banco-scontrino.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Codice Fidelity** | La tessera fedeltà. È proposta quella del cliente indicato sul banco. |
+| **Bollini Erogati** | A sinistra i punti che lo scontrino fa maturare, a destra quelli già sulla tessera. Il giorno del compleanno del cliente i punti si moltiplicano o si sommano come stabilito nella ditta con **Bollini Giorno Compleanno**. |
+| **Bollini Premio C/P** | I punti da scalare dalla tessera per un premio: il primo riquadro li toglie dai punti della campagna attuale, il secondo da quelli della campagna precedente. |
+| **Totale Scontrino** | Il totale del banco. |
+| **Abbuono** | Uno sconto sul totale, in euro. |
+| **Abbuono Fidelity** | Lo sconto che vale il premio: i punti di **Bollini Premio C/P** per il **Valore Bollino** della ditta. Lo calcola il programma. |
+| **Totale Reso** | L'importo di un reso appena fatto, se si decide di usarlo per pagare. |
+| **Totale** | Quello che il cliente deve pagare. |
+| **Contante**, **Pagamento Elettronico**, **Assegni**, **Credito** | Come paga. Il **Credito** si può usare solo con un cliente indicato e con la causale **Registraz. Crediti** impostata nella ditta. |
+| **Resto** | Il resto da dare. Lo calcola il programma. |
+
+**Solo Taglie e Colori - Calzature.** Con la fidelity della variante la riga
+si chiama **Bollini Premio** e ha un riquadro solo, e **Pagamento
+Elettronico**, **Assegni** e **Credito** non si compilano.
+
+Quando i pagamenti non coprono il totale, in fondo compare in rosso
+**F9 - Importo Rimanente** con la cifra che manca: ++f9++ sul campo di un
+pagamento lo riempie con quella cifra.
+
+| Pulsante | Scorciatoia | Effetto |
+|---|---|---|
+| **F2 - OK** | ++f2++ | Emette lo scontrino. Con un **Pagamento Elettronico** chiede prima con che cosa si paga; con un cliente indicato e **Fatture da Scontrino su Vendita** acceso nella postazione, chiede se emettere lo scontrino o la fattura. |
+| **F3 - Cod. Fiscale** | ++f3++ | Il codice fiscale, o la partita IVA, da stampare sullo scontrino. È proposto quello del cliente. |
+| **F4 - Regali** | ++f4++ | Si accende dopo l'emissione: stampa i buoni regalo dello scontrino appena fatto. |
+| **F5 - Cod. Lotteria** | ++f5++ | Il codice lotteria del cliente. Codice fiscale e codice lotteria si escludono: indicandone uno, l'altro si toglie. |
+| **F6 - Rendiresto** | ++f6++ | Incassa con la cassa automatica: vedi [più avanti](vendita-al-banco.md#incassare-con-la-cassa-automatica-pagamico). |
+| **Esci** | ++esc++ | Torna al banco senza emettere niente. |
+
+### La scelta del documento
+
+**F4 - Documenti** apre *Tipo Documento*, un pulsante per ogni documento che
+si può emettere con quello che c'è sul banco: **F2 - Fattura**, **F3 -
+Fattura Accompagnatoria**, **F4 - Fattura Ricevuta Fiscale**, **F5 -
+Documento di Trasporto**, **Bolla di Accompagnamento**, **F7 - Buono di
+Consegna**, **F8 - Ricevuta Fiscale**, **F12 - Nota Credito**, **F6 - Fattura
+Pro Forma**, **F9 - Ordine** e **F11 - Preventivo**.
+
+![Scelta del documento](../../assets/img/vendite/vendita-al-banco-tipo-documento.png)
+
+Scelto il documento, una seconda finestra — *Emissione Fattura*, *Emissione
+Doc. di Trasporto* e così via — chiede gli ultimi dati:
+
+![Dati del documento](../../assets/img/vendite/vendita-al-banco-documento.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Registro** | Il registro del documento. È proposto quello dell'utente, se ne ha uno, altrimenti quello del tipo di documento impostato nella ditta. Con il registro unico nella ditta non si cambia, salvo che per fatture, fatture accompagnatorie e pro forma. |
+| **Prezzi Iva Inclusa** | Solo su preventivi e buoni di consegna, quando la ditta non lavora già a prezzi IVA compresa. |
+| **N. Scontrino** | Solo sul buono di consegna: lo scontrino a cui si riferisce. |
+| **Destinatario** | La [destinazione](../anagrafiche/destinazioni-diverse.md) della merce, con il suo indirizzo sotto. Non c'è su fattura, ricevuta fiscale e pro forma. |
+
+**F2 - OK** emette il documento, **Esci** torna al banco.
+
+### Il controllo con un ordine
+
+**F8 - Contr.Ordine** apre *Controllo Ordine*: si indicano **Anno**,
+**Numero** e **Registro** di un ordine del cliente e la griglia mette a
+confronto, articolo per articolo, la **Q.tà Ordinata** ancora da evadere con
+la **Q.tà in Vendita** sul banco, accanto a **Esistenza** e
+**Disponibilità**.
+
+![Controllo con un ordine](../../assets/img/vendite/vendita-al-banco-controllo-ordine.png)
+
+Le righe che non tornano sono in grassetto, e in alto due scritte le contano:
+in rosso *Rilevati … errori !*, gli articoli venduti in più di quanto ordinato
+o non ordinati affatto; in blu *Rilevate … difformità !*, gli articoli
+ordinati e non venduti, o venduti in meno.
+
+**F2 - Conferma Evasione** segna come evase sull'ordine le quantità vendute e
+apre subito la [scelta del documento](#la-scelta-del-documento). Si accende
+solo se almeno un articolo è sia sull'ordine sia sul banco.
+
+### Le partite scadute
+
+Con **Controlla Scadenze** a `SI` nella ditta, indicando il cliente si apre
+*Partite Scadute non Incassate*: a sinistra le scadenze passate e non ancora
+pagate, sommate mese per mese con il **TOTALE** in fondo; a destra le note
+del cliente. Se il cliente non ha né scadenze aperte né note, la finestra non
+compare.
+
+![Partite scadute](../../assets/img/vendite/vendita-al-banco-partite-scadute.png)
+
+**F2 - Continua** chiude la finestra. La stessa finestra torna quando si preme
+**F4 - Documenti**, salvo che per ordini e preventivi: lì ha anche **Esci**,
+che rinuncia al documento.
+
+### Il compleanno del cliente
+
+Se il giorno e il mese della **Data di Nascita** del cliente — nella scheda
+*Fidelity* dell'[anagrafica](../anagrafiche/anagrafica-clienti.md) — sono
+quelli di oggi, indicando il cliente si apre *Buon Compleanno!* con
+un'immagine di auguri e un motivo musicale. La finestra si chiude da sola
+dopo trenta secondi, o con un doppio clic.
+
+![Compleanno del cliente](../../assets/img/vendite/vendita-al-banco-compleanno.png)
+
+L'immagine e la musica sono due file nella cartella dei modelli di Facile,
+`birthday.bmp` e `birthday.wav`: si possono sostituire con altri dello stesso
+nome. Senza l'immagine la finestra mostra la scritta **Happy Birthday**.
+
 ## Pulsanti e comandi
 
 Questi sono i comandi della schermata **Vendita**.
@@ -108,11 +299,12 @@ Questi sono i comandi della schermata **Vendita**.
 | **F6 - Dati** | ++f6++ | Prende gli articoli da un **ordine**, da un **preventivo**, da un **DDT conto vendita** o da un lettore di codici a barre. |
 | **F7 - Interroga Art.** | ++f7++ | Interrogazione dell'articolo. |
 | **F8 - Contr.Ordine** | ++f8++ | Confronta quello che è sul banco con un ordine e segnala le differenze. |
-| **F9 - Resi** | ++f9++ | Registra un reso. |
+| **F9 - Resi** | ++f9++ | Registra un reso: vedi [Registrare un reso](vendita-al-banco.md#registrare-un-reso). Premuto di nuovo, torna alla vendita normale. |
 | **Cerca** | | Cerca un articolo. |
 | **Info Taglia** | | Mostra la disponibilità per taglia e colore. |
 | **Acq. Inventario** | | Acquisisce le letture per l'inventario. |
 | **Buoni Regalo** | | Gestisce i buoni regalo. |
+| Doppio clic su una riga | | Apre la [riga](#la-riga). |
 | **Esci** | | Chiude la schermata di vendita. |
 
 ## Come si fa
@@ -126,9 +318,18 @@ Questi sono i comandi della schermata **Vendita**.
 
 ### Registrare un reso
 
-1. Nella schermata di vendita premi **F9 - Resi**: in alto compare la scritta
-   **RESI ATTIVO**.
-2. Indica l'articolo reso e la quantità.
+1. Con il banco vuoto premi **F9 - Resi**: in alto compare la scritta
+   **RESI ATTIVO** e si apre *Inserisci Codice Scontrino*.
+2. Leggi con il lettore il codice a barre stampato sullo scontrino da
+   rendere, o scrivilo, e premi **F2 - OK**. Vale per gli scontrini
+   dell'anno in corso e di quello precedente.
+3. Si apre lo scontrino. Con il doppio clic segna le righe che il cliente
+   restituisce e premi **F2 - OK**.
+4. Le righe passano sul banco come reso, con il cliente dello scontrino.
+   Chiudi come una vendita normale.
+
+Se lo scontrino non c'è, con **Esci** sulla richiesta del codice si resta in
+modalità reso e gli articoli si passano a mano.
 
 ### Far maturare i punti al cliente
 
@@ -296,6 +497,10 @@ arrivano. Qui sono raccolti per quello, non in ordine alfabetico.
 | *Raggiunto il numero massimo di sconti applicabili!<br>Lo sconto della promozioni non e' stato applicato!* | La riga ha già tutti gli sconti che può avere. | La [promozione](promozioni.md) **non entra**: se deve valere, va tolto uno degli sconti manuali. |
 | *Attenzione!<br>Ci sono righe con prezzi pari a zero dovuti al cambio del listino applicato.<br>Controllare prima di emettere lo scontrino.* | Cambiando listino, alcune righe sono rimaste senza prezzo. | Vanno controllate una per una prima di chiudere. |
 | *Attenzione!<br>Cliente con aliquota iva preimpostata.<br>Saranno ricalcolati i prezzi di vendita.* | Il cliente ha un'aliquota fissa. | I prezzi vengono rifatti su quell'aliquota. |
+| *Partita non indicata !<br><br>Vuoi Forzare ?* | **Solo Ortofrutta.** Salvando una [riga](vendita-al-banco.md#la-riga) senza **Partita**. | **No**, la risposta proposta, torna sulla partita; **Sì** salva la riga senza. |
+| *Articolo inesistente nella partita non indicata !<br><br>Vuoi Forzare ?* | **Solo Ortofrutta.** L'articolo non è nel carico indicato in **Partita**: la partita c'è, anche se il testo dice «non indicata». | Controlla il numero della partita. **Sì** salva lo stesso. |
+| *L'origine indicata non coincide con l'origine della partita!<br><br>Vuoi Correggere?* | **Solo Ortofrutta.** L'**Origine Merci** della riga è diversa da quella del carico. | **Sì** prende l'origine della partita; **No** lascia quella scritta. |
+| *Impostare Cod. Iva Sconto Merce!* | Nella [riga](vendita-al-banco.md#la-riga) lo sconto è del 100%, e nella ditta manca l'aliquota IVA da usare per lo sconto merce. | Impostala nella [ditta](../anagrafiche/ditte.md). |
 
 ### Quando si parcheggia o si richiama uno scontrino
 
@@ -317,6 +522,8 @@ tolgono con il tasto **C** del tastierino, poi si riprende a lavorare.
 | *Il cliente selezionato ha un credito di … Euro per un anticipo pagato in precedenza !* | Il cliente ha un [acconto](acconti.md) non ancora utilizzato. | Va scalato dal totale. |
 | *Esiste in archivio un ordine in corso per il cliente !<br>Vuoi accorpare gli ordini ?* | Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è già un ordine aperto. | La risposta proposta è **No**: nasce un ordine nuovo. **Sì** aggiunge le righe all'ordine già aperto. Rispondi **Sì** solo se sai qual è quell'ordine e vuoi davvero allungarlo. |
 | *Esiste in archivio un buono di consegna in corso per il cliente !<br>Vuoi accorpare i buoni ?* | Come sopra, per i buoni di consegna. | Come sopra: la risposta proposta è **No**. |
+| *Il Cliente è una pubblica amministrazione!<br><br>Vuoi utilizzare il registro e la causale per le Fatture PA ?* | Con **F4 - Documenti** si emette una fattura a un cliente che è una pubblica amministrazione. Per una nota di credito la domanda parla di *Note Credito PA*. | **Sì** usa il registro e la causale contabile delle fatture PA impostati nella [ditta](../anagrafiche/ditte.md). |
+| *Registro Fatture PA non impostato su Ditta!* / *La Causale Contabile Fatture PA non è impostata o non è valida!* / *La Sezione sulla Causale Contabile Fatture PA non è impostata o non è valida!* | Hai risposto **Sì**, ma nella ditta manca uno dei dati per le fatture PA. Gli stessi tre avvisi esistono per le *Note Credito PA*. | Completa la ditta; intanto il documento resta sul registro e la causale normali. |
 | *Attenzione !<br><br>Sul foglio erano stati richiamati documenti di un altro cliente.<br><br>I riferimenti a quei documenti sono stati tolti: le righe restano sul foglio e vanno controllate prima di emettere il documento.* | Sul foglio hai preso le righe di un ordine, di un preventivo o di un DDT con **F6 - Dati**, e poi hai cambiato il cliente. Il documento che emetterai non riporterà più il numero, il pagamento, il destinatario e l'agente del documento richiamato, che erano dell'altro cliente. | Controlla le righe: sono ancora quelle del documento richiamato. Se non sono per questo cliente, abbandona la vendita e rifalla. Il messaggio può comparire anche alla pressione di **F4 - Documenti**: in quel caso il documento non viene emesso, e dopo il controllo basta premere di nuovo **F4**. |
 | *Attenzione!<br>L'ordine selezionato e' marcato come non frazionabile.* | L'ordine va consegnato tutto insieme. | Non si può evaderne una parte. |
 
@@ -345,6 +552,12 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *Codice lotteria scontrini non valido!* | Il codice lotteria del cliente non è valido. | Va ricontrollato. |
 | *Confermi l' annullamento dello scontrino ?* | Annullamento in corso. | La risposta preimpostata è **No**. |
 | *Si e' verificato un problema nell'erogazione del resto.<br>Si prega di rendere manualmente Euro …* | La cassa automatica non è riuscita a erogare il resto. | **Il resto va dato a mano**: la cifra è quella indicata. |
+| *L'ultimo scontrino emesso è stato un reso di € …<br><br>Vuoi utilizzare l'importo per il pagamento?* | Aprendo la [chiusura dello scontrino](vendita-al-banco.md#la-chiusura-dello-scontrino), l'ultimo scontrino di quel foglio era un reso non ancora usato. | **Sì** lo mette in **Totale Reso** e in **Contante**. **No** chiede se dimenticarlo. |
+| *Vuoi azzerare l'importo dell'ultimo reso?* | Hai risposto **No** alla domanda precedente. | **Sì** lo dimentica; **No** lo ripropone alla chiusura successiva. |
+| *Sono stati utilizzati troppi metodi di pagamento!<br><br>Correggere gli importi per proseguire.* | Un pagamento copre già da solo tutto il totale, ma ne sono indicati anche altri. | Lascia solo quello, o dividi il totale fra i pagamenti. |
+| *Si è in presenza di resto con pagamenti diversi da contante!<br><br>Vuoi proseguire?* | Il resto supera i 100 euro, e fra i pagamenti c'è un pagamento elettronico, un assegno o un credito. | Quasi sempre un importo è sbagliato: la risposta proposta è **No**. |
+| *Si è in presenza di resto superiore ai 100,00<br><br>Vuoi proseguire?* | Il resto supera i 100 euro. | Controlla il contante digitato. La risposta proposta è **No**. |
+| *Errore di Comunicazione con la Cassa !<br><br>Scegliere SI per effettuare lo scarico dei prodotti o NO per interrompere l'operazione.* | La cassa non ha risposto mentre lo scontrino veniva emesso. | **No**, la risposta proposta, ferma tutto. **Sì** scarica il magazzino anche se lo scontrino non è uscito: guarda prima il display della cassa. |
 
 !!! danger "«Chiudere senza scaricare gli articoli» non è la risposta di default da dare per abitudine"
 
@@ -361,6 +574,23 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *Attenzione!<br><br>Su una riga il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>La riga scarichera' il magazzino.* / *Attenzione!<br><br>Su … righe il segno "Gia' movimentato" aveva un valore non valido ed e' stato azzerato.<br>Le righe scaricheranno il magazzino.* | Premendo **F4 - Documenti**, il programma controlla il segno che dice se una riga ha già scaricato il magazzino. Quel segno può essere solo acceso o spento: qui aveva un valore diverso, e il programma lo ha spento. | Niente: le righe scaricheranno il magazzino come quelle battute a mano, che è il comportamento normale. Il messaggio non dovrebbe comparire: se lo vedi, segnalalo all'assistenza. |
 | *Attenzione!<br><br>Sul banco ci sono righe prese da un DDT conto vendita.<br>Si possono emettere solo in fattura, fattura accompagnatoria, ricevuta fiscale o pro forma.* | Con **F4 - Documenti** si è scelto un DDT, una bolla, un buono di consegna, un ordine o un preventivo, ma sul banco ci sono righe prese con **F6 - Dati ▸ DDT Conto Vendita**. Quella merce è già uscita con il DDT. | Premi di nuovo **F4** e scegli la fattura: le righe sono ancora sul banco. |
 | *Attenzione !<br><br>Il documento n. … e' stato registrato solo in parte: la testata c'e', ma le righe o i riferimenti potrebbero non esserci tutti.<br><br>Va controllato dalla gestione dei documenti prima di emetterlo di nuovo: le righe restano sul foglio.* | L'emissione si è fermata a metà per un errore, mostrato subito prima. Il documento è già in archivio con quel numero, ma può mancare qualche riga. | **Non premere subito di nuovo F4**: nascerebbe un secondo documento accanto a quello incompleto. Apri il documento indicato dalla gestione di ordini o fatture, completalo o eliminalo, e solo dopo abbandona o riemetti la vendita sul banco. |
+
+### Quando si registra un reso
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Codice scontrino non valido!* | Il codice letto non ha la forma prevista, o è di uno scontrino di due o più anni fa. | Rileggi il codice; gli scontrini più vecchi non si rendono da qui. |
+| *Scontrino non trovato in archivio!* | Il codice è valido, ma quello scontrino non c'è. | Controlla il codice sullo scontrino. |
+
+### Quando si controlla un ordine
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Cliente della vendita diverso dal cliente dell' ordine!* | L'ordine indicato in [Controllo Ordine](vendita-al-banco.md#il-controllo-con-un-ordine) è di un altro cliente. | Controlla numero e registro dell'ordine. |
+| *Ordine annullato!* | L'ordine è annullato. | Indica un altro ordine. |
+| *Ordine già evaso!* | L'ordine è già stato evaso del tutto: non resta niente da confrontare. | Indica un altro ordine. |
+| *Ordine non ancora confermato!* | L'ordine è solo salvato, o è arrivato dal web e non è stato ancora confermato. | Confermalo dalla [gestione ordini](ordini-clienti.md) e riprova. |
+| *Confermi l' evasione dell' ordine ?* | Hai premuto **F2 - Conferma Evasione**. | **Sì** segna come evase le quantità vendute. La risposta proposta è **No**. |
 
 ### Quando la cassa o la bilancia non rispondono
 

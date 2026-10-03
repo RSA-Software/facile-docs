@@ -150,6 +150,22 @@ Le voci cambiano con il tipo di documento:
 | **Fattura XML/P7M** | fatture | Legge le righe da un file di fattura elettronica. |
 | **Esistenza Deposito** | documenti di trasporto | Mette nel documento la giacenza di un deposito. |
 | **Carico Merci** | autofatture | Prende le righe da un carico: vedi [Autofattura da un carico merci](#autofattura-da-un-carico-merci). |
+| **File Listino Prezzi Excel** | ordini clienti, solo Ortofrutta | Mette nell'ordine le righe di un listino prezzi in Excel: vedi sotto. |
+| **Movimento GESA** | tutti, solo Taglie e Colori - Calzature | Importa le righe di un movimento del programma GESA: chiede numero e data del movimento, poi il deposito, e se importare anche i prezzi di vendita. |
+| **Assegna Prezzo** | tutti, solo Taglie e Colori - Calzature | Mette lo stesso prezzo su tutte le righe del documento, dopo due conferme. |
+
+Nella versione **Taglie e Colori** non ci sono **Riassortimento da Vendite**,
+**Fatturazione Vendite**, **Fattura XML/P7M**, **Esistenza Deposito** e
+**Foglio Excel**.
+
+**File Listino Prezzi Excel** (**solo Ortofrutta**) chiede conferma e poi il
+file, e ne legge il primo foglio dalla riga 11 in giù: codice dell'articolo
+nella colonna C, descrizione in D, prezzo in F, quantità di un collo in H,
+colli in J. Ogni riga con codice e colli diventa una riga dell'ordine, con
+quel prezzo, quei colli e una quantità pari ai colli per la quantità del
+collo (1 se manca). Le righe con un articolo che non esiste le segnala una per
+una, e restano fuori.
+<!-- DA VERIFICARE: con la quantita' scritta come numero il programma la legge dalla colonna G e non dalla H (difetto segnalato, non corretto) -->
 
 <!-- DA VERIFICARE: cosa fanno esattamente Buoni Pasto e Fattura XML/P7M dopo la scelta -->
 
@@ -225,7 +241,50 @@ Tasti utili mentre si scrive la riga:
 Alcune versioni e alcuni documenti hanno una finestra della riga diversa: la
 versione Taglie e Colori, gli ordini dei tabacchi e alcune installazioni
 personalizzate.
-<!-- DA VERIFICARE: documentare le finestre della riga delle altre versioni (Taglie e Colori, Tabacchi, CO.M.EDIL) -->
+<!-- DA VERIFICARE: documentare le finestre della riga delle altre versioni (Tabacchi, CO.M.EDIL) -->
+
+**Solo Taglie e Colori.** **F2 - Nuova** e **F3 - Modifica** aprono una
+finestra che scrive in una volta tutte le taglie e tutti i colori di un
+articolo. Tenendo premuto ++ctrl++ si apre invece la riga normale.
+
+![Riga del documento, versione Taglie e Colori](../../assets/img/vendite/documento-di-vendita-riga-taglie.png)
+
+- In alto l'**Articolo**, con il deposito e la descrizione, e le sue
+  classificazioni: **Taglie** (il gruppo di taglie), **Cat. Merc.**, **Cod.
+  Iva**, **Reparto**, **Stagione**, **Settore**, **Marchio**, le tre tabelle
+  libere della ditta — nell'esempio **Colore For.**, **Tipo Fondo** e **Tipo
+  Tomaia** —, **Art. For.**, **Gruppo** e **Sottogrup.**. Il codice
+  dell'articolo è di sei cifre; se non esiste, il programma propone di crearlo
+  con questi dati.
+- Al centro la griglia: una riga per colore, con **Codice** e **Descrizione
+  Colore** — la barra spaziatrice o il doppio clic sul codice aprono l'elenco
+  dei colori —, e una colonna per ogni taglia del gruppo, in cui si scrivono
+  le quantità.
+- In basso **Quantità**, che somma la griglia, **Prezzo Un.**, quattro
+  **%Sco.** e il **Totale**.
+
+Sulla griglia ++f9++ — lo ricorda la scritta **F9 - Copia Quantità** —
+copia nella riga del colore le quantità della riga sopra. Su **Prezzo Un.**
+++f9++ divide il prezzo per la quantità e ++f10++ toglie l'IVA. **F2 - Salva**
+registra le righe, **Esci** chiude senza salvare.
+
+**Solo Ortofrutta.** La riga ha alcuni campi in più, per la merce venduta a
+peso e in casse, e non ha **Sostituzione**:
+
+![Riga del documento, versione Ortofrutta](../../assets/img/vendite/documento-di-vendita-riga-ortofrutta.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Origine** | L'origine della merce, dalla tabella delle origini. |
+| **Partita** | Il numero del carico da cui viene la merce. Indicandolo, origine e imballo si prendono dal carico. |
+| **Polymer** | L'imballo: l'elenco propone gli articoli del sottogruppo `IMBALLO`, più `SENZA IMBALLO`. |
+| **Tara Imb.**, **Tara Altre** | La tara di un collo e le altre tare della riga. |
+| **Tot. Tara** | **Tara Altre** più **Colli** per **Tara Imb.** Lo calcola il programma; l'importo si calcola sulla quantità meno la tara. |
+| **Prz. Fornitore** | Il prezzo di acquisto dal fornitore. |
+
+In questa versione ++f9++ su **Quantità** non moltiplica per i pezzi della
+confezione: aggiunge alla quantità la tara — **Tara Altre** più **Colli** per
+**Tara Imb.** —, così si scrive il peso netto e si ottiene il lordo.
 
 ### Piede
 
@@ -565,6 +624,10 @@ fermato.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Attenzione!<br>Articolo Inesistente<br>Codice … Q.ta …* | Il codice digitato non è in [anagrafica](../anagrafiche/anagrafica-articoli.md). | Controllare il codice o creare l'articolo. |
+| *Il codice dell' articolo deve essere composto da sei numeri !* | **Solo Taglie e Colori**, nella [riga](documento-di-vendita.md#la-riga-del-documento) per taglie e colori. | Correggi il codice. |
+| *Articolo Inesistente!<br><br>Vuoi Crearlo ?* | **Solo Taglie e Colori**: il codice non è in archivio. | **Sì** crea l'articolo con i dati scritti nella finestra. |
+| *Nessuna Quantità Inserita !<br><br>Vuoi Continuare ?* | **Solo Taglie e Colori**: la griglia delle taglie è vuota. | **No**, la risposta proposta, torna sulla griglia. |
+| *Con questa procedura e' possibile assegnare lo stesso prezzo a tutte le righe del documento<br><br>Vuoi continuare?* / *Confermi l'assegnazione del prezzo a tutte le righe del documento?* | **Solo Taglie e Colori - Calzature**: hai scelto **F7 - Dati ▸ Assegna Prezzo**. Fra le due domande si scrive il prezzo. | **Sì** a tutte e due cambia il prezzo di tutte le righe. La risposta proposta è **No**. |
 | *Codice … non corrispondente ad alcun articolo in archivio!* | Lo stesso caso, leggendo da un lettore o da un file. | Come sopra. |
 | *Riga N. …<br>Esistenza non sufficiente per effettuare la vendita!* | L'esistenza dei depositi che l'utente può vedere non copre la quantità. | Controllare la giacenza: può anche essere un carico non ancora registrato. |
 | *L'articolo selezionato ha superato la Scorta Max impostata!* | La riga porta l'articolo oltre la scorta massima. | È un avviso: si prosegue. |
@@ -675,6 +738,11 @@ controlli sono altri.
 | *Nessuna tra le Colonne QUANTITA o COLLI e' stata trovata nel documento !* | Manca la quantità. | Serve almeno una delle due colonne. |
 | *Nessun codice articolo presente per la riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Una riga del file non ha codice. | La riga **non entra**: va aggiunta a mano. |
 | *Non e' possibile accoppiare l'articolo della riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Il codice della riga non si aggancia a nessun articolo. | Come sopra. |
+| *Confermi l'Importazione del Movimento da GESA ?* / *Vuoi Importare i Prezzi di Vendita ?* | **Solo Taglie e Colori - Calzature**: hai scelto **F7 - Dati ▸ Movimento GESA**. | **Sì** alla prima importa il movimento; la seconda decide se prendere anche i prezzi di vendita. |
+| *Vuoi importare i dati da un foglio Excel ?* | **Solo Ortofrutta.** Hai scelto **F7 - Dati ▸ File Listino Prezzi Excel**. | **Sì** chiede il file. |
+| *Deposito principale non impostato o non valido !* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: la ditta non ha un deposito attivo valido. | Impostalo nella [ditta](../anagrafiche/ditte.md). |
+| *Riga … - articolo '… …' non trovato* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il codice di quella riga del foglio non è in archivio. | La riga non entra: crea l'articolo, o aggiungila a mano. |
+| *Impossibile aprire il file …!<br><br>…* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il file non si apre; segue la spiegazione. | Chiudilo in Excel e riprova. |
 | *Impossibile aprire il file excel!* / *Impossibile accedere al foglio!* | Il file è aperto altrove o non è leggibile. | Chiuderlo in Excel e riprovare. |
 | *In archivio non e' stato trovato nessun documento col numero e data corrispondenti al carico merci!<br>Impossibile continuare.* | Si sta generando un'autofattura da un carico che non ha documento. | Il carico va completato prima. |
 | *In archivio sono stati trovati piu' documenti con stesso numero e data!<br>Impossibile continuare.* | Due documenti hanno lo stesso numero e la stessa data. | Vanno distinti prima di procedere. |

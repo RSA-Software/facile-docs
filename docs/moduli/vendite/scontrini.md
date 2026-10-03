@@ -58,6 +58,42 @@ La griglia ha queste colonne:
 | **Cliente** | Il cliente, se identificato. |
 | **Operatore** | Chi ha battuto. |
 
+### Il dettaglio di uno scontrino
+
+Il doppio clic su una riga dell'elenco apre lo scontrino in una finestra a
+sé, con il titolo *Altri Scarichi - Scontrini* e il deposito.
+
+![Dettaglio di uno scontrino](../../assets/img/vendite/scontrini-dettaglio.png)
+
+In alto i dati dello scontrino: **Numero**, **Registro**, **Data** e **Ora**;
+le caselle **Parlante**, **Esc. Invio 730** e **Reso Autorizzato** con il
+**Tipo Inv. 730**; **Cliente**, **Operatore**, **Causale** e **Agente**; i dati
+della cassa — **Num. S.F.**, **Num. Azzer.**, **Matricola**, **ECR** — e
+quelli della tessera — **Tessera N.**, **Cod. Fiscale**, **Punti Erogati**,
+**Punti Detratti**. Sotto, le righe; in fondo **Imponibile**, **Totale IVA** e
+**TOTALE**. Se lo scontrino viene da una comanda o ha delle note, accanto ai
+totali una scritta in rosso lo segnala.
+
+Il doppio clic su una riga apre il [movimento di
+magazzino](../magazzino/movimenti-magazzino.md) che l'ha registrata.
+
+| Comando | Scorciatoia | Effetto |
+|---|---|---|
+| **F2 - Salva** | ++f2++ | Salva le correzioni. Data e ora sono obbligatorie, e il codice fiscale, se c'è, deve essere valido. |
+| **F6 - Elimina** | ++f6++ | Elimina lo scontrino con tutti i suoi movimenti, dopo una conferma. |
+| **Note** | | Le note dello scontrino. |
+| **F8 - Stampa** | ++f8++ | Stampa lo scontrino su carta. |
+| **Regali** | | Stampa i buoni regalo dello scontrino. |
+| **Ristampa** | | Ristampa lo scontrino sulla cassa. |
+| **Mod. Pagamento** | | Mostra e corregge come è stato pagato. |
+| **Fattura** | | Emette la fattura dello scontrino. Si accende solo se lo scontrino ha un cliente. |
+| **Forza Invio** | | Rimette lo scontrino in coda di sincronizzazione. |
+| Icona di Excel | | Esporta lo scontrino in un file Excel. |
+
+La stessa finestra si apre anche con **F9 - Resi** dalla [vendita al
+banco](vendita-al-banco.md#registrare-un-reso): lì ha una colonna in più per
+segnare le righe da rendere, e **F2 - OK** al posto dei comandi.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
@@ -131,6 +167,9 @@ La griglia ha queste colonne:
 | *Punti rientrati superiori ai punti erogati!* | Su quello scontrino sono già rientrati più punti di quanti ne fossero stati dati. | I punti vengono sommati lo stesso: verifica se il buono è stato letto due volte. |
 | *Cliente sul barcode diverso da cliente su Conferimento!* | Il cliente scritto sul buono non è quello dello scontrino. | I punti vengono sommati lo stesso: controlla che il buono sia di quel cliente. |
 | *Confermi l'azzeramento del totale?* | Hai premuto **F2 - Azzera** nel Controllo Conferimento. | **Sì** azzera il **Totale Rientrati** a video. La risposta preimpostata è **No**. |
+| *Codice Fiscale non valido!* | Nel [dettaglio di uno scontrino](scontrini.md#il-dettaglio-di-uno-scontrino) il codice fiscale non supera il controllo. | Correggilo o cancellalo, poi salva. |
+| *Vuoi Cancellare tutti i movimenti ?* | Hai premuto **F6 - Elimina** sul dettaglio. | **Sì** elimina lo scontrino e i suoi movimenti di magazzino. La risposta proposta è **No**. |
+| *Confermi l'emissione della fattura?* | Hai premuto **Fattura** sul dettaglio. | **Sì** emette la fattura dello scontrino. La risposta proposta è **No**. |
 
 ## Note
 
