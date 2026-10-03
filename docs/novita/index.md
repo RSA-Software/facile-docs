@@ -43,6 +43,24 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
   e basta, e il numero dello scontrino viene richiesto di nuovo.
 - **Integrazioni Fatture**: **F2 - Aggiungi**, **F3 - Modifica** e **F6 -
   Elimina** rispondevano al rilascio del tasto invece che alla pressione.
+- Integrazioni: con il tipo `RIF.TO AMMINISTRAZIONE` e la descrizione vuota
+  l'integrazione veniva salvata lo stesso; ora il programma si ferma sulla
+  descrizione. Sulle integrazioni di riga, cambiando tipo restavano le
+  etichette di **ALTRI DATI GESTIONALI**, e venendo da `DOC. DI TRASPORTO`
+  **Tipo Dato** e **Rif. Testo** restavano nascosti.
+- Documento di vendita, **F5 - Cerca**: cercando per **Data** il documento
+  proposto era il primo per numero fra quelli di quella data o successivi, non
+  il primo per data; cercando per **Intestatario** su bolle e documenti di
+  trasporto la scelta fra cliente e fornitore non contava.
+- Riga del documento: **F3 - Integraz.** e **F3 - Acq. Peso** avevano la
+  stessa scorciatoia e il tasto apriva sempre le integrazioni. La lettura del
+  peso ora è **Maiusc+F3 - Acq. Peso**, e legge anche le bilance BIZERBA, come
+  già faceva la vendita al banco; con una OMEGA CHECKOUT, che la riga non sa
+  leggere, compare un avviso invece di una quantità zero.
+- Autofattura da carico merci: la data adeguata a quella del carico non veniva
+  registrata sugli archivi che lavorano in SQL.
+- Documento di vendita, corpo, **F7 - Dati**: tolta la voce **Scontrino MTX
+  F3.0**, che leggeva gli scontrini da un sistema di cassa non più in uso.
 
 - [Documento di vendita](../moduli/vendite/documento-di-vendita.md): se il
   salvataggio non riesce, **F7 - Stampa** non stampa più. Prima, dopo un

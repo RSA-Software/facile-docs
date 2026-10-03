@@ -145,7 +145,7 @@ Le voci cambiano con il tipo di documento:
 | **Ordine C.S.R.S.**, **Ordine EspriNet** | ordini a fornitore | Leggono l'ordine dal file del fornitore. |
 | **Riassortimento da Vendite** | ordini clienti | Mette nell'ordine il venduto di un periodo: vedi [Prendere le righe dal venduto](#prendere-le-righe-dal-venduto). |
 | **Fatturazione Vendite** | fatture | La stessa cosa, per fatturare il venduto di un periodo. |
-| **Scontrino SysPC**, **Scontrino MTX F3.0**, **Scontrino Ditron**, **Scontrino Facile** | fatture | Fatturano uno scontrino: vedi [Fatturare uno scontrino](#fatturare-uno-scontrino). |
+| **Scontrino SysPC**, **Scontrino Ditron**, **Scontrino Facile** | fatture | Fatturano uno scontrino: vedi [Fatturare uno scontrino](#fatturare-uno-scontrino). |
 | **Buoni Pasto** | fatture | Chiede un periodo da cui prendere i buoni pasto. |
 | **Fattura XML/P7M** | fatture | Legge le righe da un file di fattura elettronica. |
 | **Esistenza Deposito** | documenti di trasporto | Mette nel documento la giacenza di un deposito. |
@@ -201,9 +201,10 @@ due pulsanti:
 - **F3 - Integraz.** apre le [integrazioni](#le-integrazioni-della-fattura-elettronica)
   della riga. C'è solo su fatture, fatture accompagnatorie e autofatture, e
   solo su una riga già registrata;
-- **F3 - Acq. Peso** legge il peso dalla bilancia collegata alla postazione.
-  C'è solo se la bilancia è impostata. **Si usa con il clic**: il tasto ++f3++
-  apre le integrazioni.
+- **Maiusc+F3 - Acq. Peso** (++shift+f3++) legge il peso dalla bilancia
+  collegata alla postazione e lo mette nella **Quantità**. C'è solo se la
+  bilancia è impostata, e legge le bilance DIBAL, NONIS, BIZERBA e WUNDER.
+  Alla BIZERBA il programma manda anche il **Prezzo** della riga.
 
 Sul documento già stampato la riga si apre soltanto in lettura e **F2 - Salva**
 resta spento.
@@ -434,7 +435,7 @@ righe, sommando quelle uguali. Il prezzo:
 ### Fatturare uno scontrino
 
 Una fattura può riprendere le righe di uno scontrino già battuto. Le voci di
-**F7 - Dati** sono quattro, una per ogni modo in cui gli scontrini arrivano a
+**F7 - Dati** sono tre, una per ogni modo in cui gli scontrini arrivano a
 Facile:
 
 - **Scontrino Facile**, per gli scontrini battuti con Facile: si indicano
@@ -442,8 +443,8 @@ Facile:
 
     ![Scontrino Facile](../../assets/img/vendite/documento-di-vendita-scontrino-facile.png)
 
-- **Scontrino MTX F3.0**, **Scontrino SysPC** e **Scontrino Ditron**, per
-  quelli dei registratori di cassa: si indicano **Data**, **Numero** e
+- **Scontrino SysPC** e **Scontrino Ditron**, per quelli dei registratori di
+  cassa: si indicano **Data**, **Numero** e
   **Cassa**, e il programma legge lo scontrino dal file che il registratore
   ha prodotto.
 
@@ -583,10 +584,12 @@ fermato.
 | *Non c'è giacenza sufficiente per il lotto indicato!<br><br>Vuoi continuare?* | Il lotto scelto non copre la quantità. | **Sì** prosegue lo stesso. |
 | *Vuoi abilitare la gestione del lotto ?* | L'articolo non ha la gestione dei lotti e si sta indicando un lotto. | **Sì** la attiva sull'articolo. |
 | *Vuoi azzerare la quantità ?* | Si è chiesto di riprendere la quantità con ++f5++. | **Sì** la azzera prima. |
-| *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | Con **F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
+| *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | Con **Maiusc+F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
 | *Peso Instabile!<br><br>Far stabilizzare il peso prima dell'acquisizione!* | Il piatto si muove. | Aspettare e ripetere. |
 | *Sovrappeso<br><br>Peso fuori dal range consentito!* / *Sottopeso<br><br>Peso fuori dal range consentito!* | Il peso è fuori dai limiti della bilancia. | Il pezzo non si pesa su quella bilancia. |
 | *Bilancia non a livello!* | La bilancia non è in piano. | Va livellata. |
+| *La lettura del peso non è disponibile per la bilancia impostata nella postazione.* | Con **Acq. Peso**, la bilancia della postazione è di un tipo da cui la riga del documento non sa leggere il peso (OMEGA CHECKOUT). | Scrivi la quantità a mano. |
+| *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | Con una bilancia BIZERBA, il peso non si è stabilizzato o il piatto è vuoto. | Appoggia l'articolo, aspetta che si fermi e ripeti. |
 
 ### Quando si stampano le etichette
 

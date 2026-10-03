@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-03 — **954 messaggi**.
+Aggiornato al 2026-10-03 — **956 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -287,7 +287,7 @@ Aggiornato al 2026-10-03 — **954 messaggi**.
 | *E' necessario selezionare almeno un fornitore!* | [Riordino articoli con analisi prezzi](../moduli/ordini/riordino-articoli.md) | Hai premuto **F2 - Cerca** senza aver scelto i fornitori. | Premi prima **F4 - Sel. Fornitori**. |
 | *E' obbligatorio indicare la matricola!* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Con la gestione matricole attiva il campo è vuoto. | Compila la **Matricola**. |
 | *E' obbligatorio inserire dati in almeno uno dei tre campi!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Negli altri dati gestionali mancano **Rif. Numero**, **Rif. Testo** e **Rif. Data**. | Compilane almeno uno. |
-| *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con **F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
+| *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con **Maiusc+F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
 | *Errore CrystalReport …* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il modello di stampa non si apre o non trova i dati. | Riportare all'assistenza il testo completo: contiene il nome del report e il codice dell'errore. |
 | *Errore … da FacileWebApiService!* seguito da una spiegazione | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il servizio ha rifiutato la richiesta. | Leggi la spiegazione; se non è chiara, riferiscila all'assistenza. |
 | *Errore di comunicazione con la bilancia!* / *Impossibile comunicare con la bilancia!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La bilancia non risponde. | Controllare cavo e accensione. |
@@ -616,6 +616,7 @@ Aggiornato al 2026-10-03 — **954 messaggi**.
 | *La descrizione inserita sarà troncata a 20 caratteri!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Nel tipo `RIF.TO AMMINISTRAZIONE` la descrizione è più lunga di 20 caratteri. | La fattura elettronica ne porta solo 20: conviene abbreviarla. |
 | *la durata presunta del trasporto deve essere tra 1 e 18!* | [Documenti accompagnatori semplificati](../moduli/vendite/documenti-accompagnatori-semplificati.md) | **Durata Presunta** fuori intervallo. | Indicare un valore da 1 a 18. |
 | *La Fattura N. … non risulta contabilizzata* | [Contabilizzazione dei documenti](../moduli/vendite/contabilizzazione-documenti.md) | Il documento risulta contabilizzato, ma in prima nota non c'è nessuna registrazione con quel numero. | La registrazione è stata cancellata: rifalla a mano, oppure fai riportare il documento a *emesso* dall'assistenza e ricontabilizza. |
+| *La lettura del peso non è disponibile per la bilancia impostata nella postazione.* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con **Acq. Peso**, la bilancia della postazione è di un tipo da cui la riga del documento non sa leggere il peso (OMEGA CHECKOUT). | Scrivi la quantità a mano. |
 | *La lunghezza massima del mittente è di 16 caratteri* / *…di 11 caratteri* | [Ditte](../moduli/anagrafiche/ditte.md) | Il mittente SMS è troppo lungo: 16 se numerico, 11 se alfanumerico. | Accorcialo. |
 | *(la maschera non si apre)* | [Stampe e manutenzione di casse e bilance](../moduli/casse-bilance/stampe-casse-bilance.md) | L'archivio articoli è vuoto. | **Stampa Articoli Gestione Bilance** e **Stampa Articoli con Flag Variazioni Attivo** si chiudono in silenzio se non c'è nessun articolo. |
 | *L'annullamento della Ventilazione dei corrispettivi è stata conclusa in modo errato!* | [Liquidazione IVA e ventilazione](../moduli/contabilita/liquidazione-iva.md) | L'annullamento non è riuscito. | Ripeti; se il problema resta, segnala all'assistenza. |
@@ -834,6 +835,7 @@ Aggiornato al 2026-10-03 — **954 messaggi**.
 | *Peso Instabile!<br><br>Far stabilizzare il peso prima dell'acquisizione!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il piatto si muove. | Aspettare e ripetere. |
 | *Peso Instabile!<br>Far stabilizzare il peso prima dell'acquisizione!* / *Peso non stabile o negativo!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il piatto si muove. | Attendere che si fermi. |
 | *PLU … - Reparto … - Q.ta … Totale …<br> Non trovato in archivio* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Una riga dello scontrino ha un PLU che non corrisponde a nessun articolo. | Controlla la fattura con lo scontrino, e collega quel PLU all'articolo in [anagrafica](../moduli/anagrafiche/anagrafica-articoli.md). |
+| *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con una bilancia BIZERBA, il peso non si è stabilizzato o il piatto è vuoto. | Appoggia l'articolo, aspetta che si fermi e ripeti. |
 | *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il piatto è vuoto. | Appoggiare l'articolo. |
 | *Primo esito = 0* — *Vuoi Continuare ?* | [Promozioni](../moduli/vendite/promozioni.md) | La riga non ha un valore di offerta, e non è un'offerta a regalo. | **No** torna sul campo. **Sì** salva la riga così: non farà nulla. La risposta preimpostata è **No**. |
 | *Procedendo con la cancellazione sarà eliminato l'intero andamento della produzione!* — *Vuoi Continuare?* | [Produzione](../moduli/magazzino/produzione.md) | Hai chiesto di cancellare una commessa. | **Sì** cancella la commessa e tutti i suoi movimenti. La risposta preimpostata è **No**. |
