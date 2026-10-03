@@ -25,10 +25,24 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 - [Documento di vendita](../moduli/vendite/documento-di-vendita.md): quando
   la maschera lavora sull'archivio attraverso il motore SQL, in fondo al
   titolo compare **[SQL]**. È un'indicazione per l'assistenza.
+- Documento di vendita: ++f1++ apre la guida anche dalle finestre che si
+  aprono dal documento — corpo, riga, piede con le sue schede, totali,
+  ricerca, integrazioni della fattura elettronica, riassortimento da vendite,
+  scelta dello scontrino e del carico, etichette dei colli — ognuna alla sua
+  sezione, che il manuale ora descrive con le schermate.
+- Documento di vendita, preventivi e righe: le etichette dei campi usano lo
+  stesso carattere del resto della finestra, e non escono più tagliate.
 
 ### Correzioni
 
 **Vendite**
+
+- Documento di vendita, corpo, **F7 - Dati ▸ Scontrino Facile**: uscendo con
+  **Esci** compariva *SQL Error*; e se lo scontrino non esisteva, dopo il
+  messaggio la fattura proseguiva con uno scontrino vuoto. Ora **Esci** chiude
+  e basta, e il numero dello scontrino viene richiesto di nuovo.
+- **Integrazioni Fatture**: **F2 - Aggiungi**, **F3 - Modifica** e **F6 -
+  Elimina** rispondevano al rilascio del tasto invece che alla pressione.
 
 - [Documento di vendita](../moduli/vendite/documento-di-vendita.md): se il
   salvataggio non riesce, **F7 - Stampa** non stampa più. Prima, dopo un

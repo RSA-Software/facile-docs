@@ -248,6 +248,12 @@ def regioni_da_etichette(controlli, regole, maschera_id="", scala=None) -> list:
             continue
         if sensibile(etichetta["testo"]):
             regioni.append(tuple(c["rect"]))
+    # Campi che l'etichetta non raggiunge: l'indirizzo dell'intestatario nel
+    # documento di vendita sta sulla riga sotto, ed e' uno Static, non un
+    # campo. Si indicano per numero, che dentro una sola maschera e' sicuro
+    # (il problema dei numeri condivisi, sopra, e' fra maschere diverse).
+    ids = set(per_maschera.get("controlli") or [])
+    regioni += [tuple(c["rect"]) for c in controlli if c.get("id") in ids]
     return regioni
 
 

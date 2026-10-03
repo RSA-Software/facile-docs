@@ -92,7 +92,11 @@ eventuale messaggio d'errore.
 
 ### Corpo
 
-Il corpo si apre con **F8 - Corpo** ed è la griglia delle righe:
+Il corpo si apre con **F8 - Corpo** ed è la griglia delle righe. Il titolo
+della finestra riporta numero e data del documento, l'intestatario e il listino
+in uso.
+
+![Corpo del documento](../../assets/img/vendite/documento-di-vendita-corpo.png)
 
 | Colonna | Contenuto |
 |---|---|
@@ -112,15 +116,138 @@ Il corpo si apre con **F8 - Corpo** ed è la griglia delle righe:
 | **Ordinare** | Segna la riga da ordinare al fornitore. |
 | **Dep** | Il [deposito](../magazzino/depositi.md) da cui scaricare. |
 
-Dalla barra del corpo, **F9 - Varia Lis.** rifà i prezzi di tutte le righe con
-un altro listino: vedi [Cambiare il listino di un
-documento](#cambiare-il-listino-di-un-documento).
+La barra del corpo:
+
+| Comando | Scorciatoia | Effetto |
+|---|---|---|
+| **F2 - Nuova** | ++f2++ | Aggiunge una riga: si apre la [finestra della riga](#la-riga-del-documento). |
+| **F3 - Modifica** | ++f3++ | Apre la riga selezionata. A documento già stampato il pulsante si chiama **F3 - Vedi** e la riga si guarda soltanto. |
+| **F6 - Elimina** | ++f6++ | Toglie la riga selezionata. |
+| **F7 - Dati** | ++f7++ | Prende le righe da fuori: da un lettore, da un file, da uno scontrino, dal venduto. Le voci sono [più sotto](#le-voci-di-f7-dati). Spento sui documenti dei tabacchi. |
+| **F8 - Etichette** | ++f8++ | Stampa le etichette degli articoli delle righe. Alla domanda *Vuoi confermare le etichette ?* **Sì** apre la finestra di ogni etichetta, da confermare una per una; **No** le stampa direttamente; **Annulla** non stampa niente. |
+| **F9 - Varia Lis.** | ++f9++ | Rifà i prezzi di tutte le righe con un altro listino: vedi [Cambiare il listino di un documento](#cambiare-il-listino-di-un-documento). Negli ordini a fornitore il pulsante si chiama **F9 - Listini** e aggiorna invece i listini degli articoli. |
+| **Da Ordinare** | | Segna o toglie il segno *da ordinare* sulla riga selezionata. Compare solo sugli ordini clienti non ancora evasi del tutto. |
+| **Ricarica** | | Rilegge le righe dall'archivio. |
+| **Trova** | | Cerca un testo nella griglia. |
+
+A documento stampato **F2 - Nuova**, **F6 - Elimina**, **F7 - Dati** e **F9**
+restano spenti: le righe di un documento emesso non si toccano.
+
+#### Le voci di F7 - Dati
+
+Le voci cambiano con il tipo di documento:
+
+| Voce | Documento | Cosa fa |
+|---|---|---|
+| **Palmare Android**, **Lettore Formula 734**, **Lettore Meteor Eco 486**, **Lettore Meteor PT10**, **Lettore Unitech PT630D**, **Lettore Zebex 2030**, **Lettore Eia Thunder**, **Lettore BCP8000 - ET8000**, **Lettore DENSO N661** | tutti | Scaricano le letture di un terminale portatile o di un lettore di codici a barre. |
+| **Foglio Excel** | tutti | Prende le righe da un foglio Excel: vedi [Le righe che arrivano da fuori](#le-righe-che-arrivano-da-fuori). |
+| **Articoli** | tutti | Apre la [ricerca articoli](../anagrafiche/cerca-articoli.md) per scegliere gli articoli da mettere nel documento. |
+| **Ordine C.S.R.S.**, **Ordine EspriNet** | ordini a fornitore | Leggono l'ordine dal file del fornitore. |
+| **Riassortimento da Vendite** | ordini clienti | Mette nell'ordine il venduto di un periodo: vedi [Prendere le righe dal venduto](#prendere-le-righe-dal-venduto). |
+| **Fatturazione Vendite** | fatture | La stessa cosa, per fatturare il venduto di un periodo. |
+| **Scontrino SysPC**, **Scontrino MTX F3.0**, **Scontrino Ditron**, **Scontrino Facile** | fatture | Fatturano uno scontrino: vedi [Fatturare uno scontrino](#fatturare-uno-scontrino). |
+| **Buoni Pasto** | fatture | Chiede un periodo da cui prendere i buoni pasto. |
+| **Fattura XML/P7M** | fatture | Legge le righe da un file di fattura elettronica. |
+| **Esistenza Deposito** | documenti di trasporto | Mette nel documento la giacenza di un deposito. |
+| **Carico Merci** | autofatture | Prende le righe da un carico: vedi [Autofattura da un carico merci](#autofattura-da-un-carico-merci). |
+
+<!-- DA VERIFICARE: cosa fanno esattamente Buoni Pasto e Fattura XML/P7M dopo la scelta -->
+
+
+### La riga del documento
+
+Si apre dal corpo con **F2 - Nuova** o **F3 - Modifica**. Il titolo dice cosa
+si sta facendo e su quale documento: *Inserimento Righe Fattura*, *Modifica
+Righe Ordine Cliente.* e così via.
+
+![Riga del documento](../../assets/img/vendite/documento-di-vendita-riga.png)
+
+| Campo | Descrizione |
+|---|---|
+| **Deposito** | Il [deposito](../magazzino/depositi.md) da cui esce la merce. |
+| **Articolo** | Il codice dell'[articolo](../anagrafiche/anagrafica-articoli.md). Accanto, la descrizione: proposta dall'articolo, si può correggere e allungare su più righe. |
+| **Ultime vendite** | Le ultime quattro vendite dell'articolo, con data e prezzo. Sugli ordini a fornitore il riquadro si chiama **Ultimi Acquisti**. |
+| **Pezzi x Conf.**, **Esistenza** | Quanti pezzi ha una confezione e quanti ce ne sono in magazzino. |
+| **Commessa**, **Cen. Costo/Ricavo** | La [commessa](../contabilita/commesse.md) e il [centro di costo](../contabilita/centri-di-costo.md) della riga. Compaiono solo se la causale di magazzino del documento li gestisce. |
+| **Cod. Iva** | L'[aliquota IVA](../contabilita/aliquote-iva.md) della riga. Obbligatoria. |
+| **Un. Mis.** | L'[unità di misura](../magazzino/unita-di-misura.md). |
+| **Quantità**, **Prezzo** | Quanto e a che prezzo. Il prezzo arriva dal listino del documento. |
+| **%Sconto** | Fino a sette sconti in cascata. |
+| **Sc.Valore**, **Spese** | Uno sconto in euro e una spesa da aggiungere alla riga. |
+| **Sc.Merce** | La quantità data in sconto merce. |
+| **Importo** | Il totale della riga. Lo calcola il programma. |
+| **Colli**, **Peso Un.**, **Peso** | I colli, il peso di un pezzo con la sua unità, e il peso totale, calcolato. |
+| **%Provvig.** | La provvigione dell'agente e quella del capo area. Non c'è sugli ordini a fornitore e sui documenti intestati a un fornitore. |
+| **Note** | Una nota sulla riga. |
+| **Iva Inclusa** | Dice se il prezzo è IVA compresa, come stabilito nell'articolo. Si legge soltanto. |
+| **Già Movimentato** | La riga non muove il magazzino, perché la merce è già uscita: lo segnano le righe prese da uno scontrino o da un carico merci. |
+| **Sostituzione** | Merce data in sostituzione: non matura provvigione. |
+
+Alcuni campi compaiono solo in certi casi:
+
+- **Q.ta Evasa** sugli ordini clienti, **Q.ta Ricev.** sugli ordini a
+  fornitore: quanto è già stato consegnato o ricevuto. Si legge soltanto;
+- **F8 - Ordini** e **F7 - Carichi**, in rosso in alto, sugli ordini a
+  fornitore: ricordano i due tasti che mostrano gli ordini ancora aperti e i
+  carichi dell'articolo;
+- **Lotto**, **SSCC**, **GTIN** e **Scadenza** con la gestione dei lotti attiva
+  nella [ditta](../anagrafiche/ditte.md);
+- **Coef. Mol.** con l'impostazione **Usa Coefficenti Moltiplicativi** della
+  ditta.
+
+La barra ha **F2 - Salva**, che registra la riga e prepara la successiva, e
+due pulsanti:
+
+- **F3 - Integraz.** apre le [integrazioni](#le-integrazioni-della-fattura-elettronica)
+  della riga. C'è solo su fatture, fatture accompagnatorie e autofatture, e
+  solo su una riga già registrata;
+- **F3 - Acq. Peso** legge il peso dalla bilancia collegata alla postazione.
+  C'è solo se la bilancia è impostata. **Si usa con il clic**: il tasto ++f3++
+  apre le integrazioni.
+
+Sul documento già stampato la riga si apre soltanto in lettura e **F2 - Salva**
+resta spento.
+
+Tasti utili mentre si scrive la riga:
+
+| Tasto | Dove | Effetto |
+|---|---|---|
+| ++f4++ | | Apre i listini dell'articolo. |
+| ++f6++ | **Prezzo** | Toglie l'IVA dal prezzo. |
+| ++f9++ | **Quantità** | Moltiplica la quantità per i pezzi della confezione. |
+| ++f9++ | **Prezzo** | Divide il prezzo per la quantità. |
+| ++f10++ | **Quantità** | Arrotonda alla confezione intera successiva. |
+| ++f10++ | **Prezzo** | Mette o toglie l'IVA dal prezzo. |
+| ++f7++, ++f8++ | ordini a fornitore | Mostrano i carichi dell'articolo e gli ordini ancora aperti, da cui si prendono prezzo e sconti. |
+| barra spaziatrice, doppio clic | un codice | Apre l'elenco da cui sceglierlo. |
+
+Alcune versioni e alcuni documenti hanno una finestra della riga diversa: la
+versione Taglie e Colori, gli ordini dei tabacchi e alcune installazioni
+personalizzate.
+<!-- DA VERIFICARE: documentare le finestre della riga delle altre versioni (Taglie e Colori, Tabacchi, CO.M.EDIL) -->
 
 ### Piede
 
 Si apre con il pulsante **Piede** e raccoglie i dati del trasporto e le note.
 Su ricevute fiscali e autofatture quel pulsante non c'è: al suo posto
 compare **Allegati**.
+
+![Piede del documento](../../assets/img/vendite/documento-di-vendita-piede.png)
+
+La finestra è divisa in schede:
+
+| Scheda | Contenuto | Compare |
+|---|---|---|
+| **Piede** | I dati del trasporto e le righe libere, descritti nella tabella qui sotto. Sulle anomalie restano solo le quattro righe **V A R I E**. | sempre |
+| **Note** | Un testo libero sul documento, su più righe, sotto l'intestazione **N O T E**. | sempre |
+| **Allegati** | I file allegati al documento. | sempre |
+| **Allegati DigitHub**, **Allegati SDI** | I file scambiati con l'intermediario e con il Sistema di Interscambio. | su fatture e fatture accompagnatorie |
+| **Scheda Trasporto** | **Committente**, **Caricatore**, **Proprietario** della merce e **Luogo di Carico**, ciascuno con il suo indirizzo, e il **Luogo Compilazione** della scheda. | sui documenti di trasporto |
+
+![Scheda Note del piede](../../assets/img/vendite/documento-di-vendita-note.png)
+
+**F2 - Salva** registra quello che si è scritto in tutte le schede; **Esci**
+chiude senza salvare.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
@@ -145,6 +272,8 @@ compare **Allegati**.
 Si apre con il pulsante **Totali**. È il riepilogo economico del documento:
 quasi tutto lo calcola il programma, e si scrivono a mano solo le voci del
 piede.
+
+![Totali del documento](../../assets/img/vendite/documento-di-vendita-totali.png)
 
 | Campo | Si scrive | Descrizione |
 |---|:---:|---|
@@ -189,7 +318,7 @@ il pulsante **F2 - OK** sparisce: resta solo **Esci**.
 | **Piede**, **Totali** | | Passano al piede e al riepilogo dei totali. |
 | **Lista** | | Torna all'elenco dei documenti. |
 | **Anteprima** | | Mostra l'anteprima di stampa. |
-| **Etichette** | | Stampa le etichette del documento. |
+| **Etichette** | | Stampa le etichette dei colli: vedi [Stampare le etichette dei colli](#stampare-le-etichette-dei-colli). |
 | **Allegati** | | Allega un file al documento. |
 | **Tracc.** | | Apre un menu con **Etichette Logistiche** ed **Etichette Commerciali**. Compare solo con la gestione dei lotti attiva. |
 | **Fatture Elettroniche** | | Apre la gestione della fattura elettronica del documento. Compare solo su fatture, fatture accompagnatorie e autofatture. |
@@ -268,6 +397,141 @@ ancora un listino.
     mano sulle singole righe vengono sovrascritti. Per tornare ai prezzi di
     prima si ripete l'operazione con il listino di prima.
 
+### Cercare un documento
+
+1. Premi **F5 - Cerca**: si apre la finestra **Cerca**, già compilata con i
+   dati del documento a video.
+2. Scegli come cercare: **Num. Doc.** (numero e registro), **Data** o
+   **Intestatario** (cliente o fornitore, con il suo codice; la barra
+   spaziatrice o il doppio clic aprono l'elenco).
+3. Premi **F2 - OK**: compare il primo documento dello stesso tipo con numero,
+   data o intestatario uguale o successivo a quello indicato. Se non ce n'è
+   nessuno, compare l'ultimo.
+
+![Cerca](../../assets/img/vendite/documento-di-vendita-cerca.png)
+
+### Prendere le righe dal venduto
+
+Mette in un ordine cliente — o in una fattura — tutto quello che è stato
+venduto da un deposito in un periodo.
+
+1. Apri il documento e premi **F8 - Corpo**.
+2. Premi **F7 - Dati** e scegli **Riassortimento da Vendite** (sugli ordini) o
+   **Fatturazione Vendite** (sulle fatture).
+3. Nella finestra **Riassortimento da Vendite** indica **Da Data**, **A Data**
+   e il **Deposito**, poi premi **F2 - OK**.
+
+![Riassortimento da Vendite](../../assets/img/vendite/documento-di-vendita-riassortimento.png)
+
+Il programma legge i movimenti di vendita di quel deposito nel periodo e ne fa
+righe, sommando quelle uguali. Il prezzo:
+
+- sugli **ordini** è quello del listino del documento; con il listino 0 è
+  l'ultimo prezzo di acquisto, senza sconti;
+- sulle **fatture** è quello della vendita, e le righe sono segnate **Già
+  Movimentato**: la merce è già uscita, non va scaricata di nuovo.
+
+### Fatturare uno scontrino
+
+Una fattura può riprendere le righe di uno scontrino già battuto. Le voci di
+**F7 - Dati** sono quattro, una per ogni modo in cui gli scontrini arrivano a
+Facile:
+
+- **Scontrino Facile**, per gli scontrini battuti con Facile: si indicano
+  **Numero** e **Registro** dello scontrino;
+
+    ![Scontrino Facile](../../assets/img/vendite/documento-di-vendita-scontrino-facile.png)
+
+- **Scontrino MTX F3.0**, **Scontrino SysPC** e **Scontrino Ditron**, per
+  quelli dei registratori di cassa: si indicano **Data**, **Numero** e
+  **Cassa**, e il programma legge lo scontrino dal file che il registratore
+  ha prodotto.
+
+    ![Seleziona Scontrino](../../assets/img/vendite/documento-di-vendita-scontrino.png)
+
+In tutti i casi le righe arrivano segnate **Già Movimentato** — il magazzino
+l'ha già scaricato lo scontrino — e la fattura non genera scadenze, perché lo
+scontrino è già stato pagato. **Numero Scontrino** e **Data Scontrino** della
+testata si compilano da soli.
+
+Se la data dello scontrino è diversa da quella della fattura il programma lo
+dice e propone di allinearla.
+
+### Autofattura da un carico merci
+
+1. Apri l'autofattura, intestata al fornitore, e premi **F8 - Corpo**.
+2. Premi **F7 - Dati** e scegli **Carico Merci**.
+3. Indica il numero del carico e premi **F2 - OK**.
+
+Le righe del carico entrano nell'autofattura segnate **Già Movimentato**. Il
+carico deve essere dello stesso fornitore dell'autofattura; se ha già un
+documento collegato, o una data diversa, il programma lo chiede prima di
+proseguire.
+
+### Stampare le etichette dei colli
+
+Il pulsante **Etichette** della testata stampa un'etichetta per ogni collo,
+con intestatario — o destinatario — e indirizzo. C'è su fatture, fatture pro
+forma, documenti di trasporto, bolle e buoni di consegna.
+
+1. Controlla i **Colli** nel [piede](#piede): il numero di etichette è quello.
+   Il programma li calcola con i **Totali**, sommando i colli delle righe.
+2. Premi **Etichette**.
+
+Il tipo di etichetta e la stampante si scelgono nelle impostazioni delle
+stampanti. Con le stampanti di etichette la stampa parte subito. Con un foglio
+di etichette su stampante normale, se l'installazione non ha un modello di
+etichetta proprio, si apre la finestra **Etichette Colli**, per usare un
+foglio già cominciato:
+
+| Campo | Descrizione |
+|---|---|
+| **N. Colonne** | Quante etichette ci sono in una riga del foglio, da 1 a 10. |
+| **Riga**, **Colonna** | Da quale etichetta del foglio cominciare. Le precedenti restano bianche. |
+
+### Le integrazioni della fattura elettronica
+
+Le integrazioni sono i dati che la fattura elettronica porta oltre a quelli del
+documento: l'ordine di acquisto o il contratto del cliente, i codici CUP e CIG
+delle pubbliche amministrazioni, il documento di trasporto, lo stato di
+avanzamento dei lavori e così via.
+
+1. Nella testata della fattura premi **Fatture Elettroniche** e scegli
+   **Integrazioni**. Su un documento nuovo, non ancora salvato, il pulsante
+   serve invece a importare una fattura XML.
+2. Si apre **Integrazioni Fatture**, con l'elenco di quelle già inserite.
+   **F2 - Aggiungi** ne aggiunge una, **F3 - Modifica** (o il doppio clic)
+   apre quella selezionata, **F6 - Elimina** la toglie subito, senza
+   chiedere conferma.
+
+    ![Integrazioni Fatture](../../assets/img/vendite/documento-di-vendita-integrazioni.png)
+
+3. Nella finestra **Integrazioni** scegli il **Tipo** e compila i campi, che
+   cambiano con il tipo; poi premi **F2 - Salva**.
+
+    ![Integrazioni](../../assets/img/vendite/documento-di-vendita-integrazione.png)
+
+| Tipo | Campi |
+|---|---|
+| `ORDINE ACQUISTO`, `CONTRATTO`, `CONVENZIONE`, `RICEZIONE`, `FATTURE COLLEGATE` | **Num. Documento** (obbligatorio), **Data**, **Num. Linea**, **Commessa - Convenz.**, **Codice CUP**, **Codice CIG**, e **Da Linea** / **A Linea** per riferire l'integrazione solo ad alcune righe |
+| `DOC. DI TRASPORTO` | **Num. Documento** e **Data**, obbligatori; **Da Linea** / **A Linea** |
+| `FATTURA PRINCIPALE` | **Num. Documento** e **Data**, obbligatori |
+| `STATO AVANZ. LAVORI` | **Stato Avanzamento**, il numero del SAL |
+| `NORMA DI RIFERIMENTO` | **Descrizione Norma** |
+| `CAUSALE` | **Descrizione** |
+| `RIF.TO AMMINISTRAZIONE` | **Descrizione**, al massimo 20 caratteri |
+| `DATI VEICOLI` | **Immatricolazione** (obbligatoria) e **Km / Ore** |
+
+Se si indicano **Da Linea** e **A Linea** vanno compilati tutti e due, e il
+primo non può superare il secondo.
+
+Le stesse integrazioni si possono dare a una **singola riga**: dalla finestra
+della riga, **F3 - Integraz.** apre *Integrazione Righe Fatture*. Lì i tipi
+sono quelli dell'ordine, del contratto, della convenzione, della ricezione,
+delle fatture collegate e del documento di trasporto, più **ALTRI DATI
+GESTIONALI**, che chiede **Tipo Dato** (fino a 10 caratteri) e almeno uno fra
+**Rif. Numero**, **Rif. Testo** (fino a 60 caratteri) e **Rif. Data**.
+
 ## Controlli e messaggi
 
 È la maschera che parla di più di tutto il programma. I messaggi sono
@@ -314,6 +578,34 @@ fermato.
 | *Utente non abilitato all'utilizzo dei prezzi d'acquisto!* | In **Seleziona Listino** è stato scelto il listino **0** (ultimo prezzo di acquisto) da un utente che non è amministratore, su un documento che aveva già un listino. | Scegliere un listino di vendita, oppure far fare l'operazione a un amministratore. |
 | *Impostare l'Aliquota Iva Predefinita prima di Continuare!* | Manca l'[aliquota](../contabilita/aliquote-iva.md) predefinita nelle impostazioni della ditta. | Va impostata una volta per tutte. |
 | *Il tipo di documento selezionato non puo' contenere articoli fiscali!* | Si sta mettendo un articolo fiscale — tabacchi, valori bollati — in un documento che non li ammette. | Serve il tipo di documento giusto. |
+| *Articolo non più ordinabile!<br><br>Vuoi inserirlo ugualmente nell'ordine?* | In un ordine a fornitore, l'articolo è segnato come non più ordinabile. | **No** lo lascia fuori; **Sì** lo ordina lo stesso. |
+| *L'Articolo è già presente nell'ordine.<br><br>Vuoi inserirlo ugualmente?* | L'ordine a fornitore ha già una riga con quell'articolo. | Di solito conviene correggere la quantità della riga che c'è. |
+| *Non c'è giacenza sufficiente per il lotto indicato!<br><br>Vuoi continuare?* | Il lotto scelto non copre la quantità. | **Sì** prosegue lo stesso. |
+| *Vuoi abilitare la gestione del lotto ?* | L'articolo non ha la gestione dei lotti e si sta indicando un lotto. | **Sì** la attiva sull'articolo. |
+| *Vuoi azzerare la quantità ?* | Si è chiesto di riprendere la quantità con ++f5++. | **Sì** la azzera prima. |
+| *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | Con **F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
+| *Peso Instabile!<br><br>Far stabilizzare il peso prima dell'acquisizione!* | Il piatto si muove. | Aspettare e ripetere. |
+| *Sovrappeso<br><br>Peso fuori dal range consentito!* / *Sottopeso<br><br>Peso fuori dal range consentito!* | Il peso è fuori dai limiti della bilancia. | Il pezzo non si pesa su quella bilancia. |
+| *Bilancia non a livello!* | La bilancia non è in piano. | Va livellata. |
+
+### Quando si stampano le etichette
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Calcolare i totali per stabilire il numero di etichette !* | Si è premuto **Etichette** su un documento non ancora stampato, con i **Colli** a zero. | Apri i **Totali**, che contano i colli, e ripeti. |
+| *Non ci sono etichette da stampare !* | Il documento stampato non ha colli. | Non c'è niente da stampare. |
+| *Vuoi confermare le etichette ?* | Si è premuto **F8 - Etichette** nel corpo. | **Sì** apre ogni etichetta per confermarla, **No** le stampa direttamente, **Annulla** non stampa. |
+| *Tipo Stampante Barcode non Impostato.* | La stampante delle etichette è impostata, ma non il suo tipo. | Si completa nelle impostazioni delle stampanti. |
+
+### Quando si compilano le integrazioni
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *La descrizione inserita sarà troncata a 20 caratteri!* | Nel tipo `RIF.TO AMMINISTRAZIONE` la descrizione è più lunga di 20 caratteri. | La fattura elettronica ne porta solo 20: conviene abbreviarla. |
+| *Il Tipo Dato è stato troncato a 10 caratteri!* | Negli altri dati gestionali di una riga, il tipo dato è più lungo di 10 caratteri. | Controlla il testo rimasto. |
+| *Il Rif. Testo è stato troncato a 60 caratteri!* | Come sopra, per il riferimento testuale. | Come sopra. |
+| *Il numero deve avere 2 decimali.<br>Non ci devono essere separatori di migliaia e il separatore decimale deve essere il . (punto)!* / *Il numero deve avere al massimo 2 decimali.<br>…* | **Rif. Numero** non è scritto come lo vuole la fattura elettronica. | Scrivilo con il punto e al massimo due decimali, per esempio `1250.50`. |
+| *E' obbligatorio inserire dati in almeno uno dei tre campi!* | Negli altri dati gestionali mancano **Rif. Numero**, **Rif. Testo** e **Rif. Data**. | Compilane almeno uno. |
 
 ### Quando il cliente è una pubblica amministrazione
 
@@ -386,7 +678,12 @@ controlli sono altri.
 | *Il fornitore del carico non coincide con l' intestatario dell' Autofattura !* | L'autofattura è intestata a un soggetto diverso dal fornitore del carico. | Si corregge l'intestatario. |
 | *La data del carico non coincide con la data dell' Autofattura !<br>Vuoi adeguare la data dell' Autofattura ?* | Le due date non coincidono. | **Sì** allinea la data. |
 | *Data Documento non coincide con data scontrino!* / *La data dello scontrino non coincide con la data della Fattura !<br>Vuoi adeguare la data della Fattura ?* | Si sta emettendo una fattura da uno [scontrino](scontrini.md) di un altro giorno. | **Sì** allinea. |
-| *Al carico sono gia' associati documenti fiscali!<br>Vuoi Continuare ?* | Il carico ha già generato un documento. | **No**, a meno di sapere perché lo si sta rifacendo. |
+| *Al carico sono gia' associati documenti fiscali!<br><br>Vuoi Continuare ?* | Il carico ha già generato un documento. | **No**, a meno di sapere perché lo si sta rifacendo. |
+| *Carico Merci non trovato in archivio !* | Il numero di carico indicato non esiste nell'esercizio. | Il numero viene richiesto di nuovo. |
+| *Scontrino non trovato in archivio !* | Con **Scontrino Facile**, il numero indicato non esiste nell'esercizio. | Il numero viene richiesto di nuovo. |
+| *Impossibile aprire il file !<br><br>SCONTRINO.TXT* / *Impossibile aprire il file!* | Il file che il registratore di cassa doveva produrre non c'è o non si legge. | Controllare il collegamento con la cassa e ripetere. |
+| *Tipo record sconosciuto !<br><br>Tipo : …   Riga : …<br><br>Vuoi continuare ?* | Il file dello scontrino contiene una riga che il programma non riconosce. | **Sì** prosegue con il resto del file; conviene segnalarlo all'assistenza. |
+| *PLU … - Reparto … - Q.ta … Totale …<br> Non trovato in archivio* | Una riga dello scontrino ha un PLU che non corrisponde a nessun articolo. | Controlla la fattura con lo scontrino, e collega quel PLU all'articolo in [anagrafica](../anagrafiche/anagrafica-articoli.md). |
 
 ### Quello che il programma non dice
 

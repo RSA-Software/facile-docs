@@ -140,6 +140,27 @@ per_maschera:
   IDD_TCN_SOTTOCON:
     aggiungi_etichette: ["descrizione"]
 
+  # Documento di vendita e preventivo: «Intestatario» e «Destinatario» non sono
+  # etichette sensibili in generale, ma qui accanto c'e' la ragione sociale.
+  # L'indirizzo sta su una riga sotto, senza etichetta, in uno Static: si
+  # copre per numero di controllo (130 intestatario, 485 destinatario).
+  # 03/10/2026: la testata di ACQUA WORLD usciva con cliente e indirizzo in chiaro.
+  # L'operatore e' una persona (su un archivio di prova: nome e cognome di chi
+  # emette); nel preventivo «All' Attenzione» e' il referente del cliente, e
+  # oggetto e note portano spesso il nome del cliente.
+  IDD_VEN_FATTURE:
+    aggiungi_etichette: ["intestatario", "destinatario", "operatore"]
+    controlli: [130, 485]
+  IDD_VEN_PREVENTIVI:
+    aggiungi_etichette: ["intestatario", "destinatario", "operatore", "allattenzione", "oggetto", "note"]
+    controlli: [130, 733]
+
+  # Ricerca del documento: «Intestatario» e' un pulsante di opzione, non
+  # un'etichetta, e la regola per etichetta non lo vede. La ragione sociale e'
+  # il campo 118 (03/10/2026: usciva in chiaro).
+  IDD_VEN_FAT_SH:
+    controlli: [118]
+
   # IDD_CLI_COMPLEANNI:
   #   # colonne come frazioni della larghezza della griglia, da sinistra
   #   colonne: [[0.22, 0.52], [0.52, 0.62], [0.62, 0.86]]
