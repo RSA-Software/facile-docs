@@ -239,6 +239,12 @@ Doc. di Trasporto* e così via — chiede gli ultimi dati:
 
 **F2 - OK** emette il documento, **Esci** torna al banco.
 
+Emesso il documento, il foglio del banco si svuota subito e il documento si
+apre nella maschera del [documento di vendita](documento-di-vendita.md), per
+la stampa e gli ultimi ritocchi; il DDT, alla chiusura, chiede il piede. Il
+banco è già libero per la vendita successiva, anche mentre il documento o il
+suo piede sono ancora aperti.
+
 ### Il controllo con un ordine
 
 **F8 - Contr.Ordine** apre *Controllo Ordine*: si indicano **Anno**,

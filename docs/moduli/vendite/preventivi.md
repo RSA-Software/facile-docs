@@ -44,8 +44,11 @@ dati del documento — numero, date, sconto, sezione — e il tipo di offerta co
 il suo esito. Le righe della merce stanno in una finestra a parte, che si apre
 con **F8 - Corpo**.
 
-Il titolo è *Inserimento Preventivo* o *Modifica Preventivo* secondo la voce da
-cui sei entrato.
+Il titolo è *Inserimento Preventivo [SQL]* o *Modifica Preventivo [SQL]*
+secondo la voce da cui sei entrato. **[SQL]** dice che la maschera lavora
+sull'archivio attraverso il motore SQL, come il
+[documento di vendita](documento-di-vendita.md): per chi la usa non cambia
+nulla, è un'indicazione utile all'assistenza.
 
 ## Campi
 

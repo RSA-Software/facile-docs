@@ -35,7 +35,9 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 - [Documento di vendita](../moduli/vendite/documento-di-vendita.md): la
   maschera lavora sempre sull'archivio attraverso il motore SQL, su tutte le
   installazioni, e in fondo al titolo compare **[SQL]**. È un'indicazione per
-  l'assistenza. Lo stesso vale per i documenti aperti o eliminati dal CRM.
+  l'assistenza. Lo stesso vale per i documenti aperti o eliminati dal CRM e
+  per i [preventivi](../moduli/vendite/preventivi.md), che già lavoravano in
+  SQL e ora lo dicono nel titolo.
 - Documento di vendita: ++f1++ apre la guida anche dalle finestre che si
   aprono dal documento — corpo, riga, piede con le sue schede, totali,
   ricerca, integrazioni della fattura elettronica, riassortimento da vendite,
@@ -79,6 +81,12 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 
 **Vendite**
 
+- [Vendita al banco](../moduli/vendite/vendita-al-banco.md#la-scelta-del-documento),
+  **F4 - Documenti**: il foglio si svuotava solo dopo la chiusura del
+  documento emesso e, per il DDT, del suo piede. Se nel frattempo si tornava
+  sul banco per il cliente successivo, le righe appena emesse finivano anche
+  nel documento seguente; e se si era passati a un altro foglio, a svuotarsi
+  era quello. Ora il foglio si svuota appena il documento è emesso.
 - Vendita al banco, **F8 - Contr.Ordine**: indicando un ordine già evaso
   compariva *Ordine annullato!*; ora il messaggio è *Ordine già evaso!*.
 - **Solo Taglie e Colori.** Nella riga per taglie e colori del documento,
