@@ -52,11 +52,11 @@ basso:
 2. il **corpo** (**F8 - Corpo**) — le righe di merce;
 3. il **piede** e i **totali** — spese, sconti finali, riepilogo IVA.
 
-Se in fondo al titolo della finestra compare **[SQL]** — per esempio
-*Inserimento Ordine Cliente [SQL]* — la maschera sta lavorando sull'archivio
-attraverso il motore SQL. Per chi usa la maschera non cambia nulla: è
-un'indicazione utile all'assistenza, da riferire insieme al testo di un
-eventuale messaggio d'errore.
+In fondo al titolo della finestra compare **[SQL]** — per esempio
+*Inserimento Ordine Cliente [SQL]*: dalla versione B08.01 la maschera lavora
+sempre sull'archivio attraverso il motore SQL, su tutte le installazioni. Per
+chi usa la maschera non cambia nulla: è un'indicazione utile all'assistenza,
+da riferire insieme al testo di un eventuale messaggio d'errore.
 
 ## Campi
 
@@ -709,10 +709,11 @@ Credito PA» al posto di «Fatture PA».
 | *Vuoi Stampare il Documento?* | Proposta di stampa dopo il salvataggio. | **No** lascia il documento salvato ma non emesso. |
 | *Vuoi Contabilizzare il documento ?* | Proposta di [contabilizzazione](contabilizzazione-documenti.md). | **Sì** genera la registrazione di prima nota. |
 | *Il Record è stato modificato da un altro processo.* | Mentre il documento era aperto a video, qualcuno l'ha cambiato da un'altra postazione o da un'altra maschera. Esce anche quando il programma si accorge che stava per scrivere su un documento diverso da quello a video: in quel caso blocca la scrittura e ne lascia traccia nel registro degli errori. | Il documento viene riletto com'è in archivio e il comando — stampa, corpo, totali, piede — **non prosegue**. Controlla i dati a video e ripeti il comando. |
+| *Il record è stato modificato da un altro nodo della rete.* | Lo stesso, con il testo che usa il motore SQL: mentre il documento era aperto a video, un'altra postazione l'ha cambiato. | Il documento viene riletto com'è in archivio, con le modifiche dell'altra postazione, e il comando non prosegue. Rifai le tue modifiche e salva di nuovo. |
 | *Record cancellato da un altro processo* | Il documento è stato eliminato da un'altra postazione mentre era aperto a video. | Il comando non prosegue: la maschera passa al documento successivo, o si chiude se era aperta su quel solo documento. |
 | *Impossibile trovare il documento in archivio!* | Il documento non c'è più: qualcuno l'ha eliminato. | Ricaricare l'elenco. |
 | *Il record richiesto non è presente in archivio.* | Un codice richiamato dal documento non esiste più. | Controllare i codici della testata. |
-| *Record di un archivio relazionato non trovato!* | Manca una tabella collegata — pagamento, banca, aliquota. | Va ripristinata la voce mancante. |
+| *Record di un archivio relazionato non trovato!* | Manca una tabella collegata — pagamento, banca, aliquota, agente. Con **F3 - Prec.**, **F4 - Succ.** o **F5 - Cerca** il documento cercato non si apre e a video resta quello di prima, che si può salvare senza rischi. | Va ripristinata la voce mancante. |
 | *SMTP Server non impostato !* | Si è premuto **F9 - Email** senza il server di posta configurato. | Si imposta nella scheda della [ditta](../anagrafiche/ditte.md). |
 | *Mittente Email non impostato !* | Manca l'indirizzo del mittente. | Si imposta sull'[utente](../anagrafiche/utenti.md) o sulla postazione. |
 | *Errore CrystalReport …* | Il modello di stampa non si apre o non trova i dati. | Riportare all'assistenza il testo completo: contiene il nome del report e il codice dell'errore. |

@@ -32,9 +32,10 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 
 ### Miglioramenti
 
-- [Documento di vendita](../moduli/vendite/documento-di-vendita.md): quando
-  la maschera lavora sull'archivio attraverso il motore SQL, in fondo al
-  titolo compare **[SQL]**. È un'indicazione per l'assistenza.
+- [Documento di vendita](../moduli/vendite/documento-di-vendita.md): la
+  maschera lavora sempre sull'archivio attraverso il motore SQL, su tutte le
+  installazioni, e in fondo al titolo compare **[SQL]**. È un'indicazione per
+  l'assistenza. Lo stesso vale per i documenti aperti o eliminati dal CRM.
 - Documento di vendita: ++f1++ apre la guida anche dalle finestre che si
   aprono dal documento — corpo, riga, piede con le sue schede, totali,
   ricerca, integrazioni della fattura elettronica, riassortimento da vendite,
@@ -143,6 +144,41 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 - Vendita al banco: se l'emissione di un documento si interrompe dopo averne
   registrato la testata, il programma indica il numero del documento rimasto
   incompleto, da controllare prima di riemetterlo.
+- Documento di vendita: se con **F3 - Prec.**, **F4 - Succ.** o **F5 -
+  Cerca** il documento cercato non si poteva leggere (per esempio *Record di
+  un archivio relazionato non trovato!*), a video restava il documento di
+  prima ma il programma teneva in memoria quello cercato: salvando, il
+  documento a video prendeva stato, totali e dati del piede dell'altro. Ora
+  resta in memoria il documento a video. Lo stesso quando la preparazione di
+  un documento nuovo si interrompe.
+- Documento di vendita: se due postazioni modificano lo stesso documento,
+  chi salva per secondo riceve di nuovo *Il record è stato modificato da un
+  altro nodo della rete.* invece di sovrascrivere senza avviso le modifiche
+  dell'altro.
+- Documento di vendita, **Ricarica**: rileggeva il documento ma lasciava a
+  video i campi modificati, che il salvataggio successivo registrava. Ora
+  riporta davvero il documento com'è in archivio.
+- Documento di vendita, **F8 - Corpo**: dopo i dati dello scontrino, i dati
+  del carico o il cambio di listino, su un documento di un anno diverso da
+  quello aperto la testata veniva riletta da quell'anno, cioè da un altro
+  documento con lo stesso numero.
+- Documento di vendita, **Shift+F1** (recupero dell'ordine): su un ordine
+  nuovo non ancora salvato non fa più nulla. Con un numero scritto a mano,
+  riscriveva l'ordine esistente con quel numero.
+- Documento di vendita: l'importazione di un ordine da file non si blocca più
+  se il numero proposto è già usato.
+- Preventivi: se il salvataggio non riesce, **F8 - Corpo**, **Totali**,
+  **Piede**, **Anteprima** e **F7 - Stampa** si fermano. Prima proseguivano,
+  e con due postazioni sul numero nuovo le righe di una finivano nel
+  preventivo dell'altra.
+- Vendita al banco, accorpamento degli ordini: il messaggio dice quale ordine
+  (numero e data), e vengono proposti solo ordini salvati e non ancora
+  emessi. Prima l'ordine poteva essere uno qualsiasi degli ultimi 30 giorni,
+  anche già emesso, che veniva riaperto.
+- Vendita al banco, **F8 - Contr.Ordine** ▸ **F2 - Conferma Evasione**: non
+  evadeva mai le quantità dell'ordine e poteva segnare come evaso un ordine
+  diverso da quello controllato (di un altro cliente, o con il numero
+  cambiato senza ricaricarlo). Ora evade l'ordine caricato in griglia.
 - Pos Touchscreen, scontrini delle bilance Bizerba, Macchi e Dibal: indicando
   il cliente o la tessera dopo averli letti, le righe tornavano al prezzo di
   listino. Ora tengono il prezzo della bilancia.

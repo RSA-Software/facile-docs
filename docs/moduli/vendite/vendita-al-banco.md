@@ -256,7 +256,9 @@ ordinati e non venduti, o venduti in meno.
 
 **F2 - Conferma Evasione** segna come evase sull'ordine le quantità vendute e
 apre subito la [scelta del documento](#la-scelta-del-documento). Si accende
-solo se almeno un articolo è sia sull'ordine sia sul banco.
+solo se almeno un articolo è sia sull'ordine sia sul banco. L'ordine evaso è
+quello caricato in griglia: se cambi il numero, esci dal campo per caricare
+il nuovo ordine prima di confermare.
 
 ### Le partite scadute
 
@@ -555,8 +557,8 @@ tolgono con il tasto **C** del tastierino, poi si riprende a lavorare.
 | *Il Codice del Cliente richiesto non è valido o disponibile.* | Il codice non esiste. | Controllare il codice. |
 | *Attenzione !<br>E' stato superato il Fido concesso al Cliente.<br>Vuoi Continuare ?* | La vendita porta il cliente oltre il fido. | **Sì** prosegue lo stesso. |
 | *Il cliente selezionato ha un credito di … Euro per un anticipo pagato in precedenza !* | Il cliente ha un [acconto](acconti.md) non ancora utilizzato. | Va scalato dal totale. |
-| *Esiste in archivio un ordine in corso per il cliente !<br>Vuoi accorpare gli ordini ?* | Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è già un ordine aperto. | La risposta proposta è **No**: nasce un ordine nuovo. **Sì** aggiunge le righe all'ordine già aperto. Rispondi **Sì** solo se sai qual è quell'ordine e vuoi davvero allungarlo. |
-| *Esiste in archivio un buono di consegna in corso per il cliente !<br>Vuoi accorpare i buoni ?* | Come sopra, per i buoni di consegna. | Come sopra: la risposta proposta è **No**. |
+| *Esiste in archivio un ordine in corso per il cliente !<br><br>Ordine n. … del …<br><br>Vuoi accorpare gli ordini ?* | Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è un ordine degli ultimi 30 giorni salvato e non ancora emesso: il messaggio dice quale. Gli ordini già emessi non vengono proposti. | La risposta proposta è **No**: nasce un ordine nuovo. **Sì** aggiunge le righe all'ordine indicato. Rispondi **Sì** solo se è proprio l'ordine che vuoi allungare. |
+| *Esiste in archivio un buono di consegna in corso per il cliente !<br><br>Buono n. … del …<br><br>Vuoi accorpare i buoni ?* | Come sopra, per i buoni di consegna. | Come sopra: la risposta proposta è **No**. |
 | *Il Cliente è una pubblica amministrazione!<br><br>Vuoi utilizzare il registro e la causale per le Fatture PA ?* | Con **F4 - Documenti** si emette una fattura a un cliente che è una pubblica amministrazione. Per una nota di credito la domanda parla di *Note Credito PA*. | **Sì** usa il registro e la causale contabile delle fatture PA impostati nella [ditta](../anagrafiche/ditte.md). |
 | *Registro Fatture PA non impostato su Ditta!* / *La Causale Contabile Fatture PA non è impostata o non è valida!* / *La Sezione sulla Causale Contabile Fatture PA non è impostata o non è valida!* | Hai risposto **Sì**, ma nella ditta manca uno dei dati per le fatture PA. Gli stessi tre avvisi esistono per le *Note Credito PA*. | Completa la ditta; intanto il documento resta sul registro e la causale normali. |
 | *Attenzione !<br><br>Sul foglio erano stati richiamati documenti di un altro cliente.<br><br>I riferimenti a quei documenti sono stati tolti: le righe restano sul foglio e vanno controllate prima di emettere il documento.* | Sul foglio hai preso le righe di un ordine, di un preventivo o di un DDT con **F6 - Dati**, e poi hai cambiato il cliente. Il documento che emetterai non riporterà più il numero, il pagamento, il destinatario e l'agente del documento richiamato, che erano dell'altro cliente. | Controlla le righe: sono ancora quelle del documento richiamato. Se non sono per questo cliente, abbandona la vendita e rifalla. Il messaggio può comparire anche alla pressione di **F4 - Documenti**: in quel caso il documento non viene emesso, e dopo il controllo basta premere di nuovo **F4**. |
