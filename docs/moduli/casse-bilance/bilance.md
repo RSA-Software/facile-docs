@@ -140,6 +140,15 @@ contenga.
 Usa **Ricezione Scontrini da Bilance** invece di **Ricezione Totali Vendite da
 Bilance**.
 
+Ogni riga si riconosce da **Bancone** e **Num. PLU** dell'articolo; il codice a
+barre conta solo per gli articoli caricati a mano sulla bilancia. Le righe
+dello stesso articolo allo stesso prezzo si sommano in un solo movimento di
+scarico, con il peso o i pezzi venduti e l'importo al netto degli sconti fatti
+sulla bilancia.
+
+Per passare in cassa lo scontrino stampato da una bilancia, mentre il cliente
+paga, vedi [Vendita al banco](../vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
@@ -194,7 +203,7 @@ Bilance**.
     |---|---|---|
     | **DIBAL** | `C:\DIBAL\articoli.txt` | tutti i `.txt` in `C:\DIBAL\scontrini` |
     | **Elga** | `out\elgAAMMGG_NN.txt` nella cartella del programma, con data e numero di bancone | lo stesso file, che dopo il caricamento viene spostato in `backup` |
-    | **Zenith** | `out\zenart.txt` | `in\zentotart.txt` per i totali, `zenith\DC-AAAAMMGG.TXT` per gli scontrini |
+    | **Zenith** | `out\zenart.txt` | `in\zentotart.txt` per i totali e `in\zensco.txt` per gli scontrini, archiviati poi in `zenith\DC-AAAAMMGG.TXT` e `zenith\sco-AAAAMMGG.TXT`; alla cassa, un file per scontrino in `C:\SCONTRINI_BILANCE` (vedi [il tracciato](#il-tracciato-standard-degli-scontrini-zenith)) |
     | **Macchi** | `out\macchiart.txt` | `in\totplu.txt` |
     | **Omega** | `C:\omega\manbil.dat` | i file `.tot` in `C:\omega` |
 
@@ -244,6 +253,100 @@ Bilance**.
 
     La scelta fra le due dipende da come è impostata la bilancia: se produce
     solo i totali, l'altra voce non trova niente da leggere.
+
+### Il tracciato standard degli scontrini Zenith
+
+Facile legge gli scontrini delle bilance Zenith in **un solo tracciato, quello
+standard di Facile**. È lo stesso sia per **Ricezione Scontrini da Bilance** e
+**da File**, sia per lo scontrino passato
+[in cassa](../vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).
+Si imposta in Zenith System, in **Configurazione ▸ Conf. Programma ▸ Struttura
+files di I/O**, sui tracciati **Esportazione Totale Scontrino**,
+**Esportazione Transazione Scontrino** ed **Esportazione Riapertura
+Scontrino**.
+
+!!! warning "Non è il tracciato «rev.2» della documentazione Zenith"
+
+    Il documento *Struttura dei files di input / output rev.2* di Italiana
+    Macchi descrive gli scontrini con record da 27 e 46 caratteri. Facile
+    non li legge: una bilancia configurata così non manda niente in cassa, e
+    la ricezione degli scontrini non trova righe valide. Va impostato il
+    tracciato descritto qui.
+
+**Il file.** Ogni scontrino è un file di testo, con un record per riga. Ogni
+riga finisce con ritorno a capo e avanzamento riga, e ha lunghezza fissa. I
+numeri sono allineati a destra con zeri davanti, senza virgola: gli importi
+sono in centesimi, i pesi in grammi. Uno scontrino è fatto di un record di
+totale seguito da tanti record di riga quante sono le vendite.
+
+In cassa, Zenith System scrive ogni scontrino in un file a sé, chiamato `SCO`,
+più il bancone su 2 cifre, più il numero dello scontrino su 4 cifre: lo
+scontrino 32 del bancone 1 è `SCO010032.dat`. I file stanno in
+`C:\SCONTRINI_BILANCE`; la cartella si può cambiare solo con l'assistenza.
+Perché i file arrivino mentre si vende, in Zenith System va attivato il
+**Recupero scontrino** sulla linea delle bilance (**Config. Linee ▸
+Connessioni**), e ZSServer deve restare attivo in modalità residente.
+Dopo la lettura il file viene rinominato con l'estensione `.old`.
+
+**Il codice a barre sullo scontrino** va impostato in Zenith System
+(**Impostazioni ▸ Barcode ▸ Formato**) come EAN-13 così composto:
+
+| Cifre | Contenuto |
+|---|---|
+| 1-2 | `29` fisso |
+| 3-6 | numero dello scontrino |
+| 7-12 | totale dello scontrino in centesimi |
+| 13 | cifra di controllo |
+
+Esempio: `2900040553277` è lo scontrino 4, da 553,27 €. Il bancone non è nel
+codice: la cassa riconosce il file giusto dal numero e dal totale.
+
+**Record di totale** — 43 caratteri più il ritorno a capo. Gli scostamenti
+sono contati da 0, come li chiede Zenith System.
+
+| Scostamento | Lunghezza | Contenuto | A cosa serve in Facile |
+|---|---|---|---|
+| 0 | 1 | `T` per lo scontrino chiuso, `R` per lo scontrino riaperto | distingue i record |
+| 1 | 10 | data, `gg/mm/aaaa` | — |
+| 11 | 8 | ora, `hh:mm:ss` | — |
+| 19 | 2 | bancone | — |
+| 21 | 3 | numero dello scontrino, ultime tre cifre | — |
+| 24 | 2 | numero dei record di riga | controllo che lo scontrino sia completo |
+| 26 | 6 | totale in centesimi | confronto con il codice a barre e con la somma delle righe |
+| 32 | 2 | `01` | — |
+| 34 | 2 | operatore | — |
+| 36 | 6 | `000000` | — |
+| 42 | 1 | `M` | la ricezione degli scontrini scarta le righe degli scontrini senza `M` |
+
+**Record di riga** — 155 caratteri più il ritorno a capo.
+
+| Scostamento | Lunghezza | Contenuto | A cosa serve in Facile |
+|---|---|---|---|
+| 0 | 1 | `t` | distingue i record |
+| 1 | 10 | data, `gg/mm/aaaa` | — |
+| 11 | 8 | ora, `hh:mm:ss` | — |
+| 19 | 2 | bancone | trova l'articolo, con il PLU |
+| 21 | 4 | PLU | trova l'articolo, con il bancone |
+| 25 | 70 | descrizione | compare negli avvisi |
+| 95 | 1 | indicatore della bilancia, `0` o `1` | — |
+| 96 | 5 | numero dello scontrino | — |
+| 101 | 6 | peso in grammi | quantità delle vendite a peso |
+| 107 | 6 | prezzo in centesimi, al chilo o al pezzo | prezzo della riga |
+| 113 | 6 | importo della riga in centesimi, al netto dello sconto | controllo del totale; valore dello scarico |
+| 119 | 1 | `P` a peso, `C` a pezzi | sceglie fra peso e pezzi |
+| 120 | 2 | aliquota IVA | — |
+| 122 | 12 | codice a barre dell'articolo, senza cifra di controllo | solo nella ricezione, se bancone e PLU non trovano l'articolo |
+| 134 | 1 | spazio | — |
+| 135 | 2 | `01` | — |
+| 137 | 3 | pezzi | quantità delle vendite a pezzi |
+| 140 | 2 | progressivo della riga nello scontrino, da `00` | — |
+| 142 | 1 | `1` se la riga è stata scontata sulla bilancia | in cassa aggiunge la riga di sconto |
+| 143 | 7 | sconto in centesimi | importo della riga di sconto |
+| 150 | 5 | non usato | — |
+
+Il **record di riapertura** (`R`) ha lo stesso tracciato del totale e non è
+seguito da righe: in cassa, uno scontrino con la sola riapertura viene
+segnalato e non entra.
 
 ## Vedi anche
 

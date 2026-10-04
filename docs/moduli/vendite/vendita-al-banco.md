@@ -316,6 +316,36 @@ Questi sono i comandi della schermata **Vendita**.
 3. Se il cliente chiede il conto prima di pagare, premi **F5 - Preconto**.
 4. Chiudi lo scontrino e incassa.
 
+### Passare in cassa lo scontrino di una bilancia
+
+Vale per il **Pos Touchscreen** e per le bilance che lasciano lo scontrino in
+un file: Zenith, Bizerba, Macchi e Dibal. Lo scontrino della bilancia porta in
+fondo un codice a barre. Per le Zenith il file e il codice a barre seguono il
+[tracciato standard di Facile](../casse-bilance/bilance.md#il-tracciato-standard-degli-scontrini-zenith),
+che va impostato in Zenith System.
+
+1. Apri **Menu ▸ Vendite ▸ Pos Touchscreen**.
+2. Leggi con il lettore il codice a barre in fondo allo scontrino della
+   bilancia.
+3. Le righe dello scontrino entrano sul banco, ciascuna con il peso o i pezzi
+   e il prezzo della bilancia. Se sulla bilancia una riga era stata scontata,
+   sotto l'articolo compare la riga **SCONTO VAL.** con lo stesso sconto, e il
+   totale torna uguale a quello stampato dalla bilancia.
+4. Se qualche riga non si è potuta inserire, la cassa la elenca in un
+   avviso: aggiungila a mano prima di chiudere.
+5. Chiudi lo scontrino e incassa.
+
+Uno scontrino della bilancia si passa una volta sola: per le Zenith, se lo
+rileggi, la cassa avvisa che è già stato letto.
+
+Ogni riga si riconosce da **Bancone** e **Num. PLU** dell'articolo, nella
+scheda *Impostazioni* dell'[anagrafica articoli](../anagrafiche/anagrafica-articoli.md).
+Sulle Zenith le vendite battute sulla bilancia senza tasto articolo arrivano
+con PLU 0: perché entrino anche loro serve un articolo — per esempio «VARIE
+BILANCIA» — con lo stesso **Bancone** e **Num. PLU** 0, e deve essere l'unico
+con quella coppia. Su questo articolo lascia spenta **Gestione Bilancia**, così
+non viene mandato alle bilance.
+
 ### Registrare un reso
 
 1. Con il banco vuoto premi **F9 - Resi**: in alto compare la scritta
@@ -477,8 +507,13 @@ arrivano. Qui sono raccolti per quello, non in ordine alfabetico.
 |---|---|---|
 | *Attenzione!<br>Articolo Inesistente<br>Codice … Q.ta …* | Il codice letto o digitato non è in archivio. | Controllare il codice o creare l'articolo. |
 | *Codice non trovato in archivio !<br>Vuoi effettuare un ricerca ?* | Come sopra. | **Sì** apre la ricerca articoli. |
-| *Sequenza Errata* (sul display del Pos Touchscreen) | Fra le altre cause: hai battuto una quantità da moltiplicare e poi letto l'etichetta di una bilancia che porta già l'importo. | Premi **C** e rileggi l'etichetta senza moltiplicare; per più pezzi, leggi un'etichetta per pezzo. |
+| *Sequenza Errata* (sul display del Pos Touchscreen) | Fra le altre cause: hai battuto una quantità da moltiplicare e poi letto l'etichetta di una bilancia che porta già l'importo; oppure hai letto lo scontrino di una bilancia Zenith con il moltiplicatore, il reso, lo storno o il prezzo libero ancora attivi. | Premi **C** e rileggi l'etichetta o lo scontrino senza altri tasti; per più pezzi, leggi un'etichetta per pezzo. |
 | *Attenzione!<br>PLU non trovato in archivio (…)* | Il PLU letto dalla bilancia non corrisponde a nessun articolo. | Va allineata la [bilancia](../casse-bilance/bilance.md). |
+| *Lo scontrino della bilancia n. … e' gia' stato letto!* | Lo scontrino di una bilancia Zenith è già passato in cassa. | Non va ripassato. Se le sue righe non sono sul banco, battile a mano. |
+| *Lo scontrino della bilancia n. … e' stato riaperto sulla bilancia e non contiene vendite!* | Dopo averlo emesso, sulla bilancia lo scontrino è stato riaperto. | Le vendite non sono in quel file: battile a mano. <!-- DA VERIFICARE: dopo la riapertura la bilancia emette un nuovo scontrino con le stesse righe? --> |
+| *Lo scontrino della bilancia n. … non e' completo!<br><br>Riprova fra qualche secondo: se il messaggio si ripete, controlla il file<br>…* | Il file dello scontrino non ha tutte le righe che dichiara, o il loro totale non torna: di solito la bilancia lo sta ancora scrivendo. Sul banco non entra nulla. | Rileggi il codice dopo qualche secondo. Se il messaggio si ripete, fai controllare il file indicato. |
+| *Impossibile aprire lo scontrino della bilancia!<br><br>…* | Il file c'è ma non si apre, per esempio perché un altro programma lo tiene aperto. | Riprova; se si ripete, controlla i permessi della cartella indicata. |
+| *Attenzione!<br><br>Alcune righe dello scontrino della bilancia n. … non sono state inserite:<br><br>…<br>Aggiungile a mano prima di chiudere lo scontrino.* | Le altre righe sono entrate. Per ogni riga saltata l'avviso indica bancone, PLU, descrizione, importo e il motivo: *PLU non trovato*, *PLU presente su piu' articoli*, *riga non accettata dalla cassa*; oppure *sconto di Euro … non applicato*, se è entrato l'articolo ma non il suo sconto. | Batti a mano quello che l'avviso elenca, poi sistema l'articolo in [anagrafica](../anagrafiche/anagrafica-articoli.md) perché la prossima volta entri da solo. |
 | *Per questo Articolo non e' stato Impostato il Reparto Cassa!* | L'articolo non ha il reparto con cui la cassa lo registra. | Si imposta in [anagrafica articoli](../anagrafiche/anagrafica-articoli.md): senza, lo scontrino non si chiude. |
 | *Per l' articolo regalo non e' stato Impostato il Reparto Cassa!* | Lo stesso, per l'articolo usato come omaggio. | Come sopra. |
 | *Per l'articolo indicato non e' presente un prezzo di listino!<br>Vuoi inserirlo ugualmente?* | L'articolo non ha prezzo sul listino in uso. | **Sì** lo mette a zero: va corretto a mano. |
@@ -718,6 +753,12 @@ limite — li scrive il FacileWebApiService e compaiono così come li riceve.
     Queste etichette non si moltiplicano: se prima di leggerne una si batte
     una quantità con il tasto di moltiplicazione, la cassa risponde
     *Sequenza Errata* e la riga non entra.
+
+    Lo stesso vale per le righe che entrano dallo
+    [scontrino di una bilancia](#passare-in-cassa-lo-scontrino-di-una-bilancia):
+    tengono il prezzo della bilancia anche se il cliente o la sua tessera si
+    indicano dopo, e lo sconto del cliente si aggiunge solo se il cliente è
+    indicato **prima** di leggere lo scontrino.
 
 !!! warning "«Scarica» e «Scontrino» non sono la stessa cosa"
 

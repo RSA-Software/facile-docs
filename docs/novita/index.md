@@ -20,6 +20,16 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
 <!-- DA VERIFICARE: data di distribuzione della B08.01 -->
 
+### Nuove funzioni
+
+**[Scontrini delle bilance Zenith in cassa](../moduli/vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).**
+Sul **Pos Touchscreen** si legge il codice a barre in fondo allo scontrino di
+una bilancia Zenith e le sue righe entrano sul banco con il peso, i pezzi e i
+prezzi della bilancia, come già succedeva per Bizerba, Macchi e Dibal. Lo
+sconto fatto sulla bilancia entra come riga **SCONTO VAL.**, così il totale è
+quello stampato dalla bilancia. Le righe che non si possono inserire vengono
+elencate in un avviso, e uno scontrino già passato non si ripassa.
+
 ### Miglioramenti
 
 - [Documento di vendita](../moduli/vendite/documento-di-vendita.md): quando
@@ -57,6 +67,14 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
   degli [scontrini](../moduli/vendite/scontrini.md).
 
 ### Correzioni
+
+**In tutto il programma**
+
+- Arrotondamenti: un importo che cade esattamente sul mezzo centesimo veniva
+  a volte arrotondato per difetto. Per esempio 0,250 kg a 19,90 €/kg, cioè
+  4,975, diventava 4,97 invece di 4,98, e lo scontrino della bilancia non
+  tornava con quello della cassa. Ora il mezzo centesimo segue sempre la
+  stessa regola, per eccesso (4,98), nella cassa come nei documenti.
 
 **Vendite**
 
@@ -125,6 +143,18 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 - Vendita al banco: se l'emissione di un documento si interrompe dopo averne
   registrato la testata, il programma indica il numero del documento rimasto
   incompleto, da controllare prima di riemetterlo.
+- Pos Touchscreen, scontrini delle bilance Bizerba, Macchi e Dibal: indicando
+  il cliente o la tessera dopo averli letti, le righe tornavano al prezzo di
+  listino. Ora tengono il prezzo della bilancia.
+
+**Casse e Bilance**
+
+- [Bilance](../moduli/casse-bilance/bilance.md) Zenith, **Ricezione Scontrini
+  da Bilance** e **da File**: le quantità venivano lette male, l'importo della
+  riga veniva preso per il prezzo unitario, e gli articoli si cercavano solo
+  per codice a barre. Ora le righe si riconoscono da bancone e PLU, e il
+  movimento riporta il peso o i pezzi venduti e l'importo al netto degli
+  sconti.
 
 ## Versione 2026 B08
 
