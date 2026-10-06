@@ -79,6 +79,15 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
   tornava con quello della cassa. Ora il mezzo centesimo segue sempre la
   stessa regola, per eccesso (4,98), nella cassa come nei documenti.
 
+**Listini e articoli**
+
+- **Solo Taglie e Colori.** [Anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md#schede-di-consultazione),
+  scheda **Taglie**: aprendo la scheda le colonne erano così strette da non
+  leggere le quantità, e si allargavano solo passando a un altro articolo con
+  **F3 - Prec.** o **F4 - Succ.**, tranne la prima. Ora la griglia viene
+  uguale all'apertura e a ogni cambio di articolo, e mostra solo le taglie
+  del gruppo dell'articolo, senza le colonne vuote a destra.
+
 **Vendite**
 
 - [Vendita al banco](../moduli/vendite/vendita-al-banco.md#la-scelta-del-documento),

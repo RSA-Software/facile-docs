@@ -185,9 +185,16 @@ il documento che l'ha generata.
 | **Fatture**, **D.D.T.**, **Pro Forma**, **Bolle**, **Buoni Cons.**, **Ric. Fiscali** | Anno, Numero, Data, Sez., Cliente, Quantità, Prezzo Unit., Totale, Serial |
 | **Scontrini** | Anno, Numero, Data, Cliente, Quantità, Prezzo Unit., Totale, Matricola, Taglia, Colore |
 | **Progressivi** | Data, Q.tà Acquistata, Q.tà Venduta, Rimanenza Iniz., Q.tà Caricata, Q.tà Scaricata, Saldo |
+| **Taglie** | **Solo Taglie e Colori.** Colore, una colonna per ogni taglia del gruppo (misura e riferimento), Totale. L'ultima riga, **T O T A L I**, somma le quantità di ogni taglia |
 
 Le schede *Contatori* e *Statistici* hanno in alto il campo **Sezione**, che
 permette di vedere i dati di una sola sezione anziché di tutte.
+
+La scheda *Taglie* mostra le giacenze del deposito indicato in testata e solo
+le taglie del gruppo dell'articolo. Se le colonne stanno nella griglia si
+allargano fino a riempirla; se sono troppe mantengono la loro larghezza e la
+griglia si scorre in orizzontale. Passando a un altro articolo con
+**F3 - Prec.** o **F4 - Succ.** la griglia si ricompone allo stesso modo.
 
 ## Pulsanti e comandi
 
