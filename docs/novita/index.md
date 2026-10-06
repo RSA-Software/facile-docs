@@ -68,6 +68,19 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
   e le finestre che apre — riga, emissione dello scontrino, tipo e dati del
   documento, controllo dell'ordine, partite scadute — e per il dettaglio
   degli [scontrini](../moduli/vendite/scontrini.md).
+- Clienti: lo stesso carattere uniforme arriva in tutte le finestre dei
+  clienti — [anagrafica](../moduli/anagrafiche/anagrafica-clienti.md) con le
+  sue schede e la ricerca, [stampe](../moduli/anagrafiche/stampe-clienti.md),
+  [associazione gruppi e giri](../moduli/anagrafiche/associazioni.md),
+  [gestione compleanni](../moduli/anagrafiche/gestione-compleanni.md),
+  [gestori buoni pasto](../moduli/anagrafiche/gestori-buoni-pasto.md), filtro
+  della [mailing list](../moduli/anagrafiche/mailing-list.md), tessere
+  fidelity e prodotti dei clienti.
+- Clienti: ++f1++ apre la guida anche da **Altri Dati Cliente**, dalla
+  finestra **Tessera Fidelity**, dalla ricerca per parole, dai **Dati
+  Trasmissione Agenzia Dogane** (versione Energy), dal filtro della mailing
+  list e dall'elenco dei gestori di buoni pasto. Il manuale descrive ora i
+  pulsanti della [scheda Fidelity](../moduli/anagrafiche/anagrafica-clienti.md#schede-di-consultazione).
 
 ### Correzioni
 

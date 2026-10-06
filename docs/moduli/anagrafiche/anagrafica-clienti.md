@@ -223,6 +223,19 @@ inserire, modificare, cancellare e stampare le righe. Ogni riga si compila
 nella maschera [Destinazioni diverse](destinazioni-diverse.md), che è anche
 quella del titolare (**F7 - Altri ▸ Titolare/Rappr. Legale**).
 
+La scheda *Fidelity* ha in più i pulsanti **Aggiungi**, **Modifica** e
+**Rimuovi**, attivi quando modifichi un cliente già registrato. **Aggiungi** e
+**Modifica** — o il doppio clic su una riga — aprono la finestra **Tessera
+Fidelity**: **Cognome**, **Nome** e **Codice Tessera** sono obbligatori (se ne
+manca uno il programma emette un segnale e porta il cursore sul campo), poi
+sesso, data di nascita, indirizzo, telefoni, cellulari ed e-mail del titolare
+della tessera. **F2 - Salva** la registra. **Rimuovi** cancella la tessera
+della riga selezionata.
+
+!!! warning "Rimuovi non chiede conferma"
+
+    La tessera viene cancellata dall'archivio appena premi il pulsante.
+
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
@@ -333,6 +346,7 @@ Valgono inoltre in tutta la maschera:
 | *Il record è stato cancellato da un altro nodo della rete.* | Un altro utente ha eliminato il cliente mentre lo modificavi. | La maschera si chiude: non c'è più nulla da salvare. |
 | *Codice Fiscale Cliente non impostato!* — *Indirizzo Cliente non impostato!* — *Citta' Cliente non impostata!* | Stai stampando l'autorizzazione al trattamento dei dati e mancano dati del cliente. | Completa la scheda *Generale* e ripeti la stampa. |
 | *Mancano i dati del titolare/legale rappresentante!* | Stai stampando il modulo di fidejussione e il titolare non è registrato. | Registralo con **F7 - Altri ▸ Titolare/Rappr. Legale**. |
+| *Codice Tessera già attribuito al cliente (…)!* | Nella finestra **Tessera Fidelity** hai scritto un codice che è già la tessera di un altro cliente, indicato fra parentesi. | Usa un altro codice, oppure toglilo prima dall'altro cliente. |
 | *Note non presenti! Le vuoi creare ?* | Hai aperto **F7 - Altri ▸ Note** su un cliente che non ne ha. | Rispondi **Sì** per aprire la nota vuota. |
 | *Impossibile acquisire i dati!* | Il testo incollato nella finestra del QR code non è leggibile. | Rileggi il QR code e riprova. |
 | *Codice Fiscale Titolare/Legale Rappresentante non presente in archivio e da compilare manualmente!* | Il titolare è registrato ma senza codice fiscale. | Completarne i dati, oppure scriverlo a mano sul modulo stampato. |

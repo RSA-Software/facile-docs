@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-04 — **993 messaggi**.
+Aggiornato al 2026-10-06 — **994 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -139,6 +139,7 @@ Aggiornato al 2026-10-04 — **993 messaggi**.
 | *Codice non trovato in archivio !<br>Vuoi effettuare un ricerca ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra. | **Sì** apre la ricerca articoli. |
 | *Codice Registro Non Valido !* / *Codice Causale Movimentazione Non Valido !* / *Codice Posizione Fiscale Non Valido !* | [Documenti accompagnatori semplificati](../moduli/vendite/documenti-accompagnatori-semplificati.md) | Un codice fiscale della riga non esiste in archivio. | Correggerlo nella riga o nel prodotto energetico. |
 | *Codice scontrino non valido!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il codice letto non ha la forma prevista, o è di uno scontrino di due o più anni fa. | Rileggi il codice; gli scontrini più vecchi non si rendono da qui. |
+| *Codice Tessera già attribuito al cliente (…)!* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Nella finestra **Tessera Fidelity** hai scritto un codice che è già la tessera di un altro cliente, indicato fra parentesi. | Usa un altro codice, oppure toglilo prima dall'altro cliente. |
 | *Colonna BARCODE non trovata nel documento !* | [Gestione listini fornitori](../moduli/listini-fornitori/gestione-listini-fornitori.md) | Il foglio non ha la colonna del codice a barre. | Aggiungi l'intestazione `BARCODE`. |
 | *Colonna Categoria non trovata !* / *Importazione non possibile.* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Nel listino tabacchi manca la colonna della categoria. | Riscarica il file dal sito senza modificarne le colonne. |
 | *Colonna Codice non trovata !* / *Importazione non possibile.* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Manca la colonna del codice. | Come sopra. |
