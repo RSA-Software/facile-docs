@@ -143,6 +143,12 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
   tornava con quello della cassa. Ora il mezzo centesimo segue sempre la
   stessa regola, per eccesso (4,98), nella cassa come nei documenti.
 
+**Clienti**
+
+- [Gestori buoni pasto](../moduli/anagrafiche/gestori-buoni-pasto.md): il
+  titolo **TAGLIO TICKETS** usciva su un rettangolo di colore diverso dallo
+  sfondo della finestra. Ora è trasparente come gli altri titoli.
+
 **Listini e articoli**
 
 - [Analisi fornitore](../moduli/listini-fornitori/analisi-fornitore.md): il
