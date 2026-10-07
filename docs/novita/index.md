@@ -81,6 +81,57 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
   Trasmissione Agenzia Dogane** (versione Energy), dal filtro della mailing
   list e dall'elenco dei gestori di buoni pasto. Il manuale descrive ora i
   pulsanti della [scheda Fidelity](../moduli/anagrafiche/anagrafica-clienti.md#schede-di-consultazione).
+- Articoli: lo stesso carattere uniforme arriva in tutte le finestre degli
+  articoli — [anagrafica](../moduli/anagrafiche/anagrafica-articoli.md) con le
+  sue schede e le finestre di **F7 - Altri**,
+  [ricerca](../moduli/anagrafiche/cerca-articoli.md),
+  [stampe](../moduli/anagrafiche/stampe-articoli.md),
+  [modifica da griglia](../moduli/anagrafiche/modifica-da-griglia.md),
+  [scorte e assortimento](../moduli/anagrafiche/scorte-e-assortimento.md),
+  [gestione](../moduli/listini-vendita/gestione-listini.md),
+  [stampa](../moduli/listini-vendita/stampa-listini.md) e
+  [controllo](../moduli/listini-vendita/controllo-listini.md) dei listini,
+  [riordino](../moduli/ordini/riordino-articoli.md),
+  [frontalini](../moduli/casse-bilance/frontalini.md) ed
+  [etichette barcode](../moduli/utility/etichette-barcode.md). Qualche
+  etichetta che col carattere nuovo avrebbe perso le ultime lettere (per
+  esempio **Coef. Convers.** e **Arrotondamento**) è stata allargata.
+- Contabilità e scadenze: lo stesso vale per la
+  [prima nota](../moduli/contabilita/registrazione-prima-nota.md) e la sua
+  [gestione](../moduli/contabilita/gestione-prima-nota.md),
+  [liquidazione IVA](../moduli/contabilita/liquidazione-iva.md),
+  [registri IVA](../moduli/contabilita/registri-iva.md),
+  [schede contabili](../moduli/contabilita/schede-contabili.md),
+  [stampe contabili](../moduli/contabilita/stampe-contabili.md),
+  [comunicazioni IVA](../moduli/contabilita/comunicazioni-iva.md),
+  [corrispettivi e cointestatari](../moduli/contabilita/corrispettivi-speciali-cointestatari.md)
+  e per lo scadenzario —
+  [gestione](../moduli/scadenze/gestione-scadenze.md),
+  [stampe](../moduli/scadenze/stampe-scadenze.md),
+  [distinte](../moduli/scadenze/distinte-incasso-pagamento.md),
+  [effetti](../moduli/scadenze/effetti-e-riba.md) e
+  [controllo crediti](../moduli/scadenze/controllo-crediti.md).
+- Articoli: ++f1++ apre la guida anche dalle finestre che si aprono
+  dall'anagrafica (andamento, riepilogo dei depositi, competenze, codici
+  articolo dei fornitori, codici a barre, listino del fornitore, componenti),
+  dalla ricerca (codice a barre, articoli alternativi e collegati), dalla
+  modifica da griglia, dall'impostazione dei dati web, dalle regole della
+  scorta ottimale, dall'inserimento dei frontalini, dalle finestre del
+  riordino e del controllo listini e dalle stampe articoli che non avevano una
+  sezione loro. Dall'anagrafica in modifica la guida si apre ora su
+  [Ritrovare e modificare un articolo](../moduli/anagrafiche/anagrafica-articoli.md#ritrovare-e-modificare-un-articolo)
+  invece che sull'inserimento.
+- Contabilità: ++f1++ apre la guida anche dalle finestre della prima nota
+  (competenza, centri di costo, integrazioni spesometro, ricerca), dalla
+  ricerca delle aggregazioni e delle operazioni speciali, dall'inserimento
+  dei cointestatari e delle integrazioni dei corrispettivi, dall'associazione
+  degli articoli delle fatture elettroniche passive, dall'aggiornamento dei
+  progressivi del libro giornale e dalla ricerca delle distinte.
+- Le finestrelle che si aprono da più punti del programma — ricerca
+  articoli, ultime vendite e acquisti, ricarico, listini, ricerca della
+  matricola, immagini dell'articolo, allegati della prima nota, stampa della
+  liquidazione IVA, invio telematico — aprono con ++f1++ la pagina della
+  finestra da cui sono state aperte.
 
 ### Correzioni
 
@@ -94,6 +145,8 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 
 **Listini e articoli**
 
+- [Analisi fornitore](../moduli/listini-fornitori/analisi-fornitore.md): il
+  titolo della finestra era scritto «Aanalisi Fornitore».
 - **Solo Taglie e Colori.** [Anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md#schede-di-consultazione),
   scheda **Taglie**: aprendo la scheda le colonne erano così strette da non
   leggere le quantità, e si allargavano solo passando a un altro articolo con
@@ -212,6 +265,14 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
 - Pos Touchscreen, scontrini delle bilance Bizerba, Macchi e Dibal: indicando
   il cliente o la tessera dopo averli letti, le righe tornavano al prezzo di
   listino. Ora tengono il prezzo della bilancia.
+
+**Contabilità**
+
+- [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md):
+  riportando la finestra a una dimensione più piccola dello schermo intero, la
+  barra dei pulsanti andava su due righe e copriva le intestazioni delle
+  colonne. Ora l'elenco comincia sotto la barra, qualunque sia la larghezza
+  della finestra.
 
 **Casse e Bilance**
 
