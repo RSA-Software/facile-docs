@@ -159,8 +159,12 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
 | *Impossibile inizializzare il book excel!* | Il programma non riesce a preparare il foglio Excel. | Segnala all'assistenza. |
 | *Impossibile aprire il file excel!* | Il file è aperto in Excel, spostato o danneggiato. | Chiudilo e riprova. |
 | *Colonna CODICE non trovata nel file excel!* / *Impossibile continuare* | Il foglio non ha l'intestazione `CODICE`. | Aggiungila e riprova. |
-| *Impossibile aprire il File!* | Il file delle ubicazioni non si apre. | Controlla nome e posizione del file. |
+| *Impossibile aprire il file!* | Il file delle ubicazioni non si apre. | Controlla nome e posizione del file. |
+| *Attenzione! Articolo Inesistente Codice …* | Un codice a barre del file non corrisponde a nessun articolo. | Controlla il codice: l'importazione prosegue con gli altri. |
+| *Attenzione! L'ultimo codice letto (…) non è seguito da un'ubicazione e non è stato importato. Il file delle letture non è stato cancellato.* | Il file finisce con un prodotto invece che con l'etichetta di uno scaffale. | Leggi l'etichetta dello scaffale in fondo alle letture e importa di nuovo il file. |
+| *Attenzione! Gli ultimi … codici letti non sono seguiti da un'ubicazione e non sono stati importati. Il file delle letture non è stato cancellato.* | Come sopra, per più prodotti. | Come sopra. |
 | *Importazione Ubicazioni conclusa con successo!* | L'importazione è andata a buon fine. | Nulla: è una conferma. |
+| *Importazione Ubicazione conclusa con un errore!* / *Importazione ubicazioni conclusa con … errori!* | Alcune letture non sono state importate: i messaggi precedenti dicono quali. | Correggi i codici segnalati e importa di nuovo le letture mancanti. |
 | *Vuoi Calcolare l'esistenza ed il venduto?* | L'assortimento chiede se calcolare i dati, operazione che richiede tempo. | **Sì** se ti servono le colonne di esistenza e venduto. |
 | *Vuoi rimuovere gli articoli dalla griglia ?* | Si sta svuotando la griglia della distribuzione. | **Sì** toglie gli articoli dalla griglia; gli articoli restano in archivio. |
 
@@ -259,14 +263,21 @@ ordinare (**Cod. For.**, **Fornitore**, **Prezzo**, **%Sc.1** … **%Sc.7**,
     Il file è un elenco di codici letti, uno per riga, e il programma li
     distingue dalla **lunghezza**:
 
-    - una riga di **esattamente tre caratteri** è il codice di
-      un'**ubicazione**;
-    - le righe più lunghe che la seguono sono i **codici a barre** degli
-      articoli che stanno in quell'ubicazione.
+    - una riga di **uno, due o tre caratteri** è il codice di
+      un'**ubicazione** (per esempio `A01` o `n9`);
+    - le righe più lunghe che la **precedono** sono i **codici a barre**
+      degli articoli che stanno in quell'ubicazione.
 
-    Si lavora quindi così: si legge l'etichetta dello scaffale, poi tutti i
-    prodotti che ci stanno, poi l'etichetta dello scaffale dopo. Non serve
-    nessuna intestazione e nessun separatore.
+    Si lavora quindi così: si leggono tutti i prodotti di uno scaffale, poi
+    l'etichetta di quello scaffale, poi i prodotti dello scaffale dopo e la
+    sua etichetta. Non serve nessuna intestazione e nessun separatore; le
+    righe vuote vengono ignorate. L'ubicazione viene registrata in
+    maiuscolo.
+
+    **L'ultima lettura del file deve essere un'ubicazione.** I prodotti letti
+    dopo l'ultima etichetta non hanno uno scaffale a cui andare: non vengono
+    importati e il file **non viene cancellato**, così le letture non vanno
+    perse. Negli altri casi, a importazione finita, il file viene cancellato.
 
 ## Vedi anche
 
