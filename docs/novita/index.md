@@ -22,6 +22,17 @@ In distribuzione dal 12 ottobre 2026.
 
 ### Nuove funzioni
 
+**[Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md).**
+In **Stampante Fiscale** ci sono due voci nuove, `RCH XON / XOFF (9600,N,8,1)`
+e `RCH XON / XOFF LAN`, per i Print!F RT e Print! 3.0 RT collegati in seriale o
+in rete. Le forme di pagamento del registratore, le colonne e l'indirizzo si
+impostano in un file di configurazione, perché la tabella dei pagamenti cambia
+da cassa a cassa. Con la voce `RCH MULTIDRIVER SERVER` Facile ora legge l'esito
+di ogni scontrino: se il registratore segnala un errore o il fine carta,
+l'operatore viene avvisato invece di trovarsi in archivio uno scontrino mai
+stampato. I registratori hanno ora una sezione propria nel manuale,
+[Registratori telematici](../moduli/casse-bilance/registratori/index.md).
+
 **[Connettore Shopify](../moduli/ecommerce/shopify/index.md).** Un nuovo
 collegamento con i negozi Shopify, descritto nella nuova sezione
 [E-commerce](../moduli/ecommerce/index.md). Pubblica gli articoli con

@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-10 — **1001 messaggi**.
+Aggiornato al 2026-10-10 — **1003 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -69,6 +69,7 @@ Aggiornato al 2026-10-10 — **1001 messaggi**.
 | *Attenzione!<br>Selezionando OK la vendita sara' chiusa ed inviata alla stampante fiscale.<br>Se devi rivedere qualcosa seleziona il tasto Annulla.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Ultima conferma prima dell'invio alla cassa. | Da lì in avanti lo scontrino è emesso. |
 | *Attenzione !<br>Si ricorda che l' opzione è vincolante per almeno un triennio, salvo che venga superata in corso d' anno la soglia di fatturato di 2 milioni di euro.* | [Ditte](../moduli/anagrafiche/ditte.md) | Si sta disattivando o attivando l'IVA per cassa. | Conferma solo se sei sicuro. |
 | *Attenzione! Gli ultimi … codici letti non sono seguiti da un'ubicazione e non sono stati importati. Il file delle letture non è stato cancellato.* | [Scorte, assortimento e ubicazioni](../moduli/anagrafiche/scorte-e-assortimento.md) | Come sopra, per più prodotti. | Come sopra. |
+| *Attenzione! Il driver della cassa ha segnalato un errore: … Controllare la stampa prima di proseguire.* | [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md) | Con il Multidriver, il registratore ha rifiutato lo scontrino o non è stato raggiungibile; al posto dei puntini c'è il testo dell'errore, vedi la tabella qui sotto. | Controlla che cosa è stato stampato. Facile non ristampa da solo: se lo scontrino non è uscito, ripetilo. |
 | *Attenzione!* / *Il movimento contiene incassi/rettifiche e non può essere modificato.* | [Registrazione di prima nota](../moduli/contabilita/registrazione-prima-nota.md) | Alla registrazione sono già agganciati incassi o rettifiche. | Vanno tolti prima quelli, poi si può modificare. |
 | *Attenzione!* / *Il movimento risulta esportato al consulente.* / *Prendere nota delle modifiche apportate* | [Registrazione di prima nota](../moduli/contabilita/registrazione-prima-nota.md) | La registrazione è già stata mandata al commercialista con l'[esportazione movimenti](../moduli/contabilita/esportazione-movimenti.md). | Annota la modifica: il consulente ha già la versione precedente. |
 | *Attenzione!* / *I movimenti di apertura e di chiusura non possono essere modificati.* | [Registrazione di prima nota](../moduli/contabilita/registrazione-prima-nota.md) | Si è aperta una registrazione di apertura o chiusura dell'esercizio. | Non è modificabile: le scritture di apertura e chiusura si rifanno con le procedure di fine anno. |
@@ -560,6 +561,7 @@ Aggiornato al 2026-10-10 — **1001 messaggi**.
 | *Impossibile trovare il file della licenza.* / *Riattivare il software per accedere al server delle licenze.* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Importazione tabacchi: la licenza non è raggiungibile. | Riattiva il programma o contatta l'assistenza. |
 | *Impossibile trovare la colonna CODICE!* | [Riordino articoli con analisi prezzi](../moduli/ordini/riordino-articoli.md) | Il foglio Excel da importare non ha la colonna attesa. | Correggi le intestazioni del foglio. |
 | *Impossibile trovare l' articolo !* | [Assistenza](../moduli/utility/assistenza.md) | Il codice vecchio non esiste. | Controlla il codice. |
+| *Impossible Eseguire il protocollo di Shell!* | [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md) | Il Multidriver non si è potuto avviare. | Controlla `PATH_EXE` in `RCH_Multidriver.ini`. |
 | *Impostare codice fiscale sulla ditta!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Manca il codice fiscale nei dati della ditta. | Impostalo nella [ditta](../moduli/anagrafiche/ditte.md): serve per le fatture intestate al codice fiscale invece che alla partita IVA. |
 | *Impostare codice fiscale sulla ditta!* / *Partita iva non impostata sulla ditta!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Mancano i dati della ditta emittente. | Si completano nella scheda della ditta. |
 | *Impostare Cod. Iva Sconto Merce!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Nella [riga](../moduli/vendite/vendita-al-banco.md#la-riga) lo sconto è del 100%, e nella ditta manca l'aliquota IVA da usare per lo sconto merce. | Impostala nella [ditta](../moduli/anagrafiche/ditte.md). |

@@ -64,13 +64,13 @@ finestrelle di pochi campi.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Stampante Fiscale** | | Il modello di registratore di cassa collegato. L'elenco copre una quarantina di modelli, dai vecchi seriali ai driver moderni: `ELSI RETAIL`, `OLIVETTI`, `DITRON`, `CUSTOM PROTOCOL`, `RCH NUCLEO`, `RCH GLOBE`, `RCH ONDA`, `EPSON FP90`, `MICRELEC`, `DATAPROCESS FPCONNECTOR`, `FASY FSEDRIVER` e altri. Ogni voce riporta fra parentesi i parametri della porta. | voce dell'elenco, `NESSUNA` per nessuna |
-| **Porta** | | La porta seriale a cui è collegata. | `NESSUNA`, `COM1` … `COM9` |
+| **Stampante Fiscale** | | Il modello di [registratore telematico](../casse-bilance/registratori/index.md) collegato. L'elenco completo, con il tipo di collegamento di ciascuna voce, è nella pagina dei registratori; le voci RCH hanno una [pagina propria](../casse-bilance/registratori/rch.md). Le voci seriali riportano fra parentesi i parametri della porta. | voce dell'elenco, `NESSUNA` per nessuna |
+| **Porta** | | La porta seriale a cui è collegata. Per i registratori in rete non serve: l'indirizzo sta nel file di configurazione del modello. | `NESSUNA`, `COM1` … `COM9` |
 | **Data Attivazione RT** | | Da quando il registratore telematico è attivo. | data |
 | **Matricola** | | La matricola del registratore. | testo |
 | **N. Cassa** | | Il numero della cassa. | numero |
 | **Num. Negozio** | | Il numero del negozio. | numero |
-| **Customer Display - 1** e **Porta** | | Il display rivolto al cliente e la sua porta. | voce dell'elenco |
+| **Customer Display - 1** e **Porta** | | Il display rivolto al cliente e la sua porta. Se il display è attaccato al registratore, si sceglie il tipo che corrisponde alla stampante fiscale, con la stessa porta: vedi [il display cliente](../casse-bilance/registratori/index.md#il-display-cliente). | voce dell'elenco |
 | **Customer Display - 2** e **Porta** | | Un secondo display. | voce dell'elenco |
 | **Bilancia Checkout** e **Porta** | | La bilancia della cassa. | voce dell'elenco |
 | **Cassa Automatica** | | Il sistema di cassa automatica collegato. Con `PAGAMICO` la postazione non parla con la macchina ma con il FacileWebApiService, che va configurato con la sua [impostazione](#impostazione-facilewebapiservice); l'indirizzo della macchina si imposta nel servizio. | `NESSUNA`, `CASHDRO WEB SERVICE`, `CASHDRO FILES`, `CASHLOGY`, `CASHMATIC`, `VIRTUO VNE`, `PAGAMICO` |
@@ -198,7 +198,8 @@ Un campo solo, **Token**: la chiave del servizio di invio.
 1. Apri **Menu ▸ Utility ▸ Impostazioni Postazione**.
 2. Scegli il modello in **Stampante Fiscale**: l'elenco riporta fra parentesi i
    parametri della porta, che devono corrispondere a come l'apparecchio è
-   configurato.
+   configurato. Per i modelli che si configurano anche con un file, come gli
+   [RCH](../casse-bilance/registratori/rch.md), segui la pagina del modello.
 3. Indica la **Porta** seriale.
 4. Compila **Matricola**, **N. Cassa** e **Num. Negozio**.
 5. Premi **F2 - OK** e prova uno scontrino.

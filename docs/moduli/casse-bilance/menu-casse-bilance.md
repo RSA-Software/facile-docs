@@ -21,6 +21,9 @@ cambiano nome da una all'altra, ma fanno le stesse cose.
   Custom Retail; più la gestione fidelity e le promozioni.
 - [Bilance](bilance.md) — Zenith, Omega, Macchi, Bizerba, Elga, Dibal, Helmac,
   Mettler Toledo.
+- [Registratori telematici](registratori/index.md) — le stampanti fiscali
+  che battono gli scontrini del banco. Non sono una voce di questo menu: il
+  modello si sceglie in [Impostazioni Postazione](../utility/impostazioni-postazione.md).
 
 ## Il negozio
 

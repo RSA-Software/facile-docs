@@ -304,6 +304,11 @@ nav:
       - Bilance: moduli/casse-bilance/bilance.md
       - Gestione e Stampa Frontalini: moduli/casse-bilance/frontalini.md
       - Stampe e manutenzione: moduli/casse-bilance/stampe-casse-bilance.md
+      # Registratori telematici non e' una voce del menu: il modello si sceglie in
+      # Utility > Impostazioni Postazione. Il ramo sta qui perche' e' dove lo si cerca.
+      - Registratori telematici:
+          - moduli/casse-bilance/registratori/index.md
+          - RCH: moduli/casse-bilance/registratori/rch.md
   - Trasferimenti:
       - moduli/trasferimenti/menu-trasferimenti.md
       - Esportazione per tracciato: moduli/trasferimenti/esportazione-documenti.md
