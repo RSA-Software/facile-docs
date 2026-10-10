@@ -139,7 +139,9 @@ operation         = 982
 | `[COMMAND]` | `interval` | Usato da alcune operazioni, per esempio per decidere quanti giorni di ordini rileggere. |
 
 Le altre sezioni dipendono dal negozio: per Shopify sono descritte nel
-[file di configurazione del connettore](shopify/configurazione.md).
+[file di configurazione del connettore](shopify/configurazione.md), da cui
+si può scaricare un file di prova completo. L'installazione di Facile non
+porta file di configurazione.
 
 !!! warning "Il file contiene password"
 

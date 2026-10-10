@@ -67,9 +67,9 @@ disponibilità zero per tutti i suoi articoli.
 
 ## 3. Prepara il file di configurazione
 
-1. Copia nella cartella `cfg` di Facile il file di esempio riportato in
-   [Il file di configurazione](configurazione.md#un-file-completo), con un
-   nome a tua scelta, per esempio `shopify.ini`.
+1. Scarica il [file di prova](../../../assets/modelli/shopify.ini) descritto in
+   [Il file di configurazione](configurazione.md#un-file-completo) e salvalo
+   nella cartella `cfg` di Facile: l'installazione di Facile non lo porta.
 2. Nella sezione `[LOGIN]` indica archivio, utente e password di Facile.
 3. Nella sezione `[ECOMMERCE]` indica in `web_host` l'indirizzo
    *nomenegozio*`.myshopify.com` del negozio e il token, oppure client ID e

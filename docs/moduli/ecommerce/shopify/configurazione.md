@@ -23,86 +23,31 @@ le fa tutte.
 
 ## Un file completo
 
-Questo file fa girare l'[esecuzione continua](ciclo.md) con le scelte più
-comuni. Copialo, dagli un nome e completa le parti in maiuscolo.
+L'installazione di Facile non porta nessun file di configurazione per
+Shopify: si parte da questo modello, con **tutte le operazioni accese**.
+
+[:material-download: Scarica shopify.ini](../../../assets/modelli/shopify.ini){ .md-button download="shopify.ini" }
+
+1. Salvalo nella cartella `cfg` di Facile.
+2. Nella sezione `[LOGIN]` sostituisci `ARCHIVI`, `xxxxx` e `yyyyy` con
+   l'archivio, l'utente e la password di Facile.
+3. Nella sezione `[ECOMMERCE]` indica l'indirizzo del negozio e il token.
+4. Compila `[ARTICOLI]` e `[PAGAMENTI]` e rivedi le altre chiavi.
+5. Metti a `0`, nella sezione `[CICLO]`, le operazioni che non ti servono:
+   per esempio `ingrosso` se non vendi ai professionisti, `stato_ordini` se
+   non vuoi che Facile evada o annulli gli ordini sul negozio.
+
+!!! warning "Lo stato degli ordini è acceso"
+
+    Nel modello `evaso` e `annullato` valgono `1`: un ordine annullato in
+    Facile viene annullato anche sul negozio, senza rimborso. Se non è
+    quello che vuoi, spegnili prima di avviare il ciclo.
+
+Il contenuto del file:
 
 ```ini
-[LOGIN]
-server            = FAIRCOMS
-host              = 192.168.1.101
-arc               = ARCHIVIO
-usr               = UTENTE
-pwd               = PASSWORD
-
-[COMMAND]
-operation         = 979
-interval          = 2
-
-[CICLO]
-pausa             = 300
-exit              = 0
-setup             = 0
-abbina            = 0
-ordini            = 1
-prodotti          = 3600
-giacenze          = 1
-prezzi            = 1
-ingrosso          = 0
-stato_ordini      = 0
-immagini          = 86400
-
-[ECOMMERCE]
-web_host          = NOMENEGOZIO.myshopify.com
-api_version       = 2026-10
-token             = TOKEN
-;client_id        =
-;client_secret    =
-location_name     =
-modalita          = B2C
-listino_web       = 1
-listino_uff       = 1
-listino_ing       = 2
-depositi_disp     = 1
-deposito          = 1
-registro          =
-pagamento         = 1
-cateco            = 0
-cliente_generico  = 0
-verifica_spariti  = 1
-tipo_prodotto     = 1
-sigle             = USB,LED
-nazione           =
-
-[ARTICOLI]
-cod_spese_tra     = CODICE ARTICOLO SPESE
-cod_buono_sco     = CODICE ARTICOLO SCONTO
-
-[STATI]
-paid              = 1
-partially_paid    = 1
-authorized        = 1
-pending           = 0
-
-[PAGAMENTI]
-pag_manual        = 1
-pag_shopify_payments = 1
-
-[STATO_ORDINI]
-evaso             = 0
-annullato         = 0
-avvisa_cliente    = 0
-
-[TAGLIECOL]
-opzione_taglia    = Taglia
-opzione_colore    = Colore
-
-[DEBUG]
-codici            =
-limite            = 0
-log_json          = 0
+--8<-- "docs/assets/modelli/shopify.ini"
 ```
-
-<!-- DA VERIFICARE: se l'installazione di Facile porta nella cartella cfg i file di esempio del connettore (ciclo_shopify.ini e gli altri) -->
 
 ## [LOGIN] e [COMMAND]
 
