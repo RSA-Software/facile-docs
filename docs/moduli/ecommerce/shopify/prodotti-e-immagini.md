@@ -115,10 +115,13 @@ si spuntano in [Impostazione Dati Web](../../anagrafiche/impostazione-dati-web.m
 - un prodotto entra nella collezione dell'elemento spuntato, in quelle degli
   elementi che lo contengono e in quella della tassonomia;
 - una tassonomia o un elemento rinominati aggiornano la collezione;
-- una tassonomia o un elemento disattivati tolgono la collezione dal
-  negozio.
-
-<!-- DA VERIFICARE: l'etichetta a video con cui si disattiva una tassonomia o un elemento -->
+- un elemento segnato come **Disabilitata** toglie la sua collezione dal
+  negozio. La casella si trova in FacileNext, nella finestra di modifica
+  dell'elemento della tassonomia; in Facile non c'è, e nemmeno per le
+  tassonomie principali;
+- togliere a un articolo la spunta di una tassonomia, in
+  [Impostazione Dati Web](../../anagrafiche/impostazione-dati-web.md#le-tassonomie),
+  lo fa uscire dalla collezione al giro successivo.
 
 Le collezioni nuove vengono pubblicate sul canale indicato nella
 configurazione, come i prodotti nuovi.

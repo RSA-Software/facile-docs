@@ -89,11 +89,15 @@ tolto e al giro successivo l'importazione riparte da capo.
 | **Data** | La data dell'ordine sul negozio. |
 | **Registro** | Quello indicato nella chiave `registro`; vuota, il registro principale. |
 | **Cliente** | Vedi [A quale cliente va l'ordine](#a-quale-cliente-va-lordine). |
-| **Destinazione** | L'indirizzo di spedizione, come destinazione diversa del cliente. |
+| **Destinatario** | L'indirizzo di spedizione, come destinazione diversa del cliente. |
 | **Pagamento** | Il codice indicato nella sezione `[PAGAMENTI]` per il metodo di pagamento usato. |
-| Riferimento | Il numero dell'ordine Shopify e la sua data, per esempio *#1001 del 2026-10-08*. |
+| **Num. Doc. Rif.**, **Data Doc. Rif.** | Il numero dell'ordine sul negozio (per esempio *1001*) e la sua data. |
 
-<!-- DA VERIFICARE: in quale campo della maschera dell'ordine si legge il riferimento «#1001 del 2026-10-08» -->
+Nel [documento di vendita](../../vendite/documento-di-vendita.md) l'ordine
+importato si riconosce da **Num. Doc. Rif.** e **Data Doc. Rif.**. Se l'ordine
+non ha un indirizzo di spedizione, e quindi non ha un **Destinatario**, accanto
+al campo **Destinatario** compare anche il riferimento completo, per esempio
+*#1001 DEL 2026-10-08*.
 
 ### Le righe
 
