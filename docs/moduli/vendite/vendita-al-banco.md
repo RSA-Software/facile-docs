@@ -479,6 +479,7 @@ Dal **Pos Touchscreen**, **Funzioni ▸ Cassa Automatica** apre la finestra
 | **Mostra Livelli** | Mostra quante monete e banconote di ogni taglio ci sono nella macchina, e avvisa se qualcosa è sotto scorta, esaurito o troppo pieno. |
 | **Preleva Contante** | Chiede un importo e lo fa erogare dalla macchina. |
 | **Chiudi Incasso Sospeso** | Chiude un incasso rimasto aperto sulla macchina, per esempio dopo che Facile è stato chiuso a metà: **Sì** restituisce al cliente il denaro inserito, **No** lo trattiene nella cassa. |
+| **Ricarica Fondo Cassa** | Apre la ricarica del fondo cassa: si inseriscono monete e banconote, la finestra mostra quanto è stato caricato, **Annulla** la chiude. Vedi [Ricaricare il fondo cassa](../casse-bilance/casse-automatiche/pagamico.md#ricaricare-il-fondo-cassa). |
 | **Esci** | Chiude la finestra. |
 
 ## Controlli e messaggi
@@ -669,6 +670,12 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *…<br><br>Se la cassa automatica ha erogato denaro, verificarlo prima di ripetere l'operazione.* | Il servizio non ha risposto durante un'erogazione. | Controlla la macchina prima di riprovare. |
 | *Chiusura di un incasso rimasto aperto sulla cassa automatica.<br><br>Scegliere:<br>SI - Per restituire al cliente il denaro inserito<br>NO - Per trattenerlo nella cassa<br>Annulla - Per non fare nulla* | Hai premuto **Chiudi Incasso Sospeso**. | Scegli che cosa fare del denaro inserito. |
 | *Importo Prelevato dalla Cassa :  …* | **Preleva Contante** è riuscito. | Nessuna azione. |
+| *Caricati Euro ….<br><br>Terminare la ricarica del fondo cassa?* | Hai premuto **Annulla** durante la ricarica del fondo cassa. | **Sì** chiude la ricarica, **No** continua a caricare. |
+| *Importo Caricato nella Cassa :  …* | La ricarica del fondo cassa è stata chiusa. | Nessuna azione. |
+| *La cassa automatica non ha aperto la ricarica!* | La macchina non ha accettato la ricarica. | Controlla che non ci sia un incasso in corso e riprova. |
+| *Ricarica non riuscita!* | La ricarica si è chiusa con un errore; se c'è, il servizio indica il motivo al posto di questo testo. | Controlla la macchina e il giornale del servizio. |
+| *FacileWebApiService non risponde e la ricarica potrebbe essere ancora aperta sulla cassa automatica.<br><br>Vuoi continuare ad attendere?* | Durante la ricarica il servizio non risponde. | **Sì** continua ad aspettare; **No** smette. |
+| *Esito della ricarica sconosciuto!<br><br>Se la ricarica e' ancora aperta, Ricarica Fondo Cassa la riprende.* | Hai smesso di attendere senza sapere come è finita la ricarica. | Premi di nuovo **Ricarica Fondo Cassa**: se la ricarica è aperta, la riprende. |
 
 Gli altri messaggi sulla macchina — occupata, fuori servizio, importo oltre il
 limite — li scrive il FacileWebApiService e compaiono così come li riceve.

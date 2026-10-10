@@ -16,6 +16,7 @@ servizio di incassare, di erogare o di leggere lo stato della macchina.
     - **Serve:** il FacileWebApiService installato e configurato
     - **Configurazione:** la macchina nel servizio ([casse_automatiche.json](../../../assets/modelli/casse_automatiche.json)), la scelta della macchina nella postazione ([pagamico.ini](../../../assets/modelli/pagamico.ini))
     - **Uso al banco:** vedi [Incassare con la cassa automatica PagAmico](../../vendite/vendita-al-banco.md#incassare-con-la-cassa-automatica-pagamico)
+    - **Licenza:** separata, in aggiunta a quella di Facile
 
 ---
 
@@ -42,6 +43,8 @@ configurazione è una sola.
 
 ## Prerequisiti
 
+- La **licenza** del collegamento con le casse automatiche, separata da quella
+  di Facile.
 - Il **FacileWebApiService** installato, in esecuzione e raggiungibile dalla
   postazione, configurato in **Impostazioni Postazione ▸ Impostazione
   FacileWebApiService** (vedi [Impostazioni Postazione](../../utility/impostazioni-postazione.md)).
@@ -112,10 +115,31 @@ riavviarlo.
 | Vedere quanti pezzi di ogni taglio ci sono | **Funzioni ▸ Cassa Automatica ▸ Mostra Livelli** | [Gestire la cassa PagAmico](../../vendite/vendita-al-banco.md#gestire-la-cassa-pagamico) |
 | Prelevare contante | **Funzioni ▸ Cassa Automatica ▸ Preleva Contante** | come sopra |
 | Chiudere un incasso rimasto aperto | **Funzioni ▸ Cassa Automatica ▸ Chiudi Incasso Sospeso** | come sopra |
+| Ricaricare il fondo cassa | **Funzioni ▸ Cassa Automatica ▸ Ricarica Fondo Cassa** | [Ricaricare il fondo cassa](#ricaricare-il-fondo-cassa) |
 | Rendere il denaro di un reso | Il reso al banco, chiuso con il rendiresto | [Registrare un reso](../../vendite/vendita-al-banco.md#registrare-un-reso) |
 
-La **ricarica del fondo cassa** e gli **svuotamenti** non si fanno da Facile:
-si fanno dal pannello della macchina, seguendo il manuale del fornitore.
+Gli **svuotamenti** non si fanno da Facile: si fanno dal pannello della
+macchina, seguendo il manuale del fornitore.
+
+## Ricaricare il fondo cassa
+
+Per mettere nella macchina il fondo cassa — monete e banconote per il resto:
+
+1. Dal **Pos Touchscreen** apri **Funzioni ▸ Cassa Automatica** e premi
+   **Ricarica Fondo Cassa**.
+2. Si apre la finestra **Ricarica Fondo Cassa** con *Inserire monete e
+   banconote nella cassa*: inserisci il denaro; la finestra mostra quanto è
+   già stato caricato.
+3. Quando hai finito premi **Annulla** e conferma con **Sì** la domanda
+   *Terminare la ricarica del fondo cassa?*.
+4. A ricarica chiusa compare *Importo Caricato nella Cassa*, con il totale.
+
+La ricarica si può chiudere anche dal pannello della macchina: Facile se ne
+accorge e mostra lo stesso il totale.
+
+Mentre una ricarica è aperta la macchina non incassa. Se Facile si chiude a
+ricarica aperta, ripremendo **Ricarica Fondo Cassa** la si riprende da dove era
+rimasta.
 
 ## Gli esiti di un incasso
 

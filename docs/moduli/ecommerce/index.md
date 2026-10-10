@@ -18,8 +18,14 @@ ordini che arrivano dal sito.
     - **Registro:** un file per operazione e per giorno, nella cartella `log`
     - **Avvio:** a mano, dall'Utilità di pianificazione di Windows, oppure in
       esecuzione continua
+    - **Licenza:** separata, in aggiunta a quella di Facile
 
 ---
+
+!!! info "Licenza"
+
+    I connettori e-commerce sono soggetti a una **licenza separata**, in
+    aggiunta a quella di Facile.
 
 ## A cosa serve
 

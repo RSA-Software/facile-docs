@@ -17,8 +17,14 @@ totale dello scontrino e registra quanto è stato pagato.
     - **Configurazione:** un file nella cartella `cfg` di Facile, diverso per ogni marca
     - **Al banco:** ++f6++ **Rendiresto**, oppure il tasto della cassa sul **Pos Touchscreen**
     - **Pagine dei modelli:** [PagAmico](pagamico.md)
+    - **Licenza:** separata, in aggiunta a quella di Facile
 
 ---
+
+!!! info "Licenza"
+
+    Il collegamento con le casse automatiche è soggetto a una **licenza
+    separata**, in aggiunta a quella di Facile.
 
 ## A cosa serve
 

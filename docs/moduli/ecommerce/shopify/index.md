@@ -18,6 +18,7 @@ prezzi, e importa in Facile gli ordini dei clienti del sito.
     - **Prima volta:** [Prima installazione](installazione.md)
     - **Uso quotidiano:** [Esecuzione continua](ciclo.md), che fa tutte le
       operazioni a giri
+    - **Licenza:** separata, in aggiunta a quella di Facile
 
 ---
 
@@ -55,6 +56,11 @@ articoli.
 | 979 | Esecuzione continua | Esegue le operazioni scelte, una dopo l'altra, poi aspetta e ricomincia. | Sempre accesa. |
 
 ## Requisiti
+
+### La licenza
+
+Il connettore Shopify è soggetto a una **licenza separata**, in aggiunta a
+quella di Facile.
 
 ### Il negozio
 
