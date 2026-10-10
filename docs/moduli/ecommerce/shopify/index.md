@@ -58,9 +58,9 @@ articoli.
 
 ### Il negozio
 
-Serve un negozio Shopify e, al suo interno, un'**app personalizzata** che dà
-a Facile l'accesso al negozio. L'app si crea dall'amministrazione del
-negozio ed è descritta in [Prima installazione](installazione.md#1-crea-lapp-sul-negozio).
+Serve un negozio Shopify e un'**app personalizzata** che dà a Facile
+l'accesso al negozio. Le app nuove si creano dal Dev Dashboard di Shopify:
+vedi [Prima installazione](installazione.md#1-crea-lapp-sul-negozio).
 
 All'app servono questi permessi:
 

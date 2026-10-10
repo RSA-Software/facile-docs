@@ -31,7 +31,9 @@ Shopify: si parte da questo modello, con **tutte le operazioni accese**.
 1. Salvalo nella cartella `cfg` di Facile.
 2. Nella sezione `[LOGIN]` sostituisci `ARCHIVI`, `xxxxx` e `yyyyy` con
    l'archivio, l'utente e la password di Facile.
-3. Nella sezione `[ECOMMERCE]` indica l'indirizzo del negozio e il token.
+3. Nella sezione `[ECOMMERCE]` indica l'indirizzo del negozio e le
+   credenziali dell'app: client ID e segreto, oppure il token di un'app
+   creata prima del 2026.
 4. Compila `[ARTICOLI]` e `[PAGAMENTI]` e rivedi le altre chiavi.
 5. Metti a `0`, nella sezione `[CICLO]`, le operazioni che non ti servono:
    per esempio `ingrosso` se non vendi ai professionisti, `stato_ordini` se
@@ -75,8 +77,8 @@ Usata solo dall'[esecuzione continua](ciclo.md) (operazione 979).
 |---|---|---|---|
 | `web_host` | — | tutte | L'indirizzo del negozio, nella forma *nomenegozio*`.myshopify.com`. |
 | `api_version` | 2026-10 | tutte | La versione del sistema di scambio dati di Shopify. Si cambia solo insieme a un aggiornamento di Facile. |
-| `token` | — | tutte | Il token di accesso dell'app creata dall'amministrazione del negozio. Se c'è, vince su `client_id` e `client_secret`. |
-| `client_id`, `client_secret` | — | tutte | Le credenziali dell'app creata dal Dev Dashboard di Shopify, in alternativa al token. |
+| `client_id`, `client_secret` | — | tutte | Le credenziali dell'app creata dal Dev Dashboard di Shopify, il modo previsto per le app nuove. |
+| `token` | — | tutte | Il token di accesso di un'app creata dall'amministrazione del negozio prima del 1° gennaio 2026. Se c'è, vince su `client_id` e `client_secret`. |
 | `location_name` | la prima ubicazione attiva | 988 | Il nome dell'ubicazione di Shopify su cui scrivere le giacenze. |
 | `canale` | Online Store | 988 | Il nome del canale di vendita su cui pubblicare prodotti e collezioni nuovi. |
 | `modalita` | B2C | 983, 991 | `B2C` negozio al pubblico, `B2B` solo professionisti, `MISTO` tutti e due. Vedi [I prezzi](giacenze-e-prezzi.md#i-prezzi). |

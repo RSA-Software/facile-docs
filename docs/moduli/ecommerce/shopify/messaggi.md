@@ -90,6 +90,10 @@ L'elenco delle varianti non abbinate, con il motivo, è nel file
 | Riga del registro | Causa | Cosa fare |
 |---|---|---|
 | `Shopify ordini: risposta parziale (... errori), primo: This app is not approved to access the Customer object...` | Il piano del negozio non dà i dati personali dei clienti. | Niente: gli ordini entrano sul [cliente generico](ordini.md#ordini-senza-dati-personali). |
+| `Ordine Shopify ... del ...: l'esercizio ... non e' stato creato, ordine non importato` | L'ordine è di un anno per cui la ditta non ha l'esercizio. | Crea l'esercizio in Facile: al giro successivo l'ordine entra, se è ancora dentro i giorni di `interval`. |
+| `Ordine Shopify ... del ...: errore nell'esercizio ..., ordine non importato - ...` | Scrivendo l'ordine nell'esercizio del suo anno c'è stato un errore, per esempio un archivio di quell'anno non aggiornato alla versione di Facile. | Apri quell'esercizio con Facile, che lo aggiorna; l'ordine viene ritentato a ogni giro. |
+| `Ordine Shopify ...: importazione interrotta da un errore, l'ordine ... incompleto e' stato tolto` | L'ordine si è interrotto a metà ed è stato tolto. | Leggi l'errore nelle righe vicine; l'ordine viene ritentato. |
+| `Ordine Shopify ...: importazione interrotta da un errore, l'ordine ... e' rimasto incompleto e va tolto a mano` | L'ordine si è interrotto a metà e non è stato possibile toglierlo. | Elimina in Facile l'ordine indicato: finché c'è, l'ordine Shopify risulta già importato. |
 | `Cliente ... non trovato: se ne crea uno nuovo` | Il cliente di Facile collegato al cliente del negozio è stato cancellato. | Niente: ne viene creato uno nuovo. |
 | `Cliente generico ... di [ECOMMERCE] cliente_generico non trovato: si usa quello automatico` | Il cliente indicato nella chiave non esiste. | Correggi `cliente_generico`, oppure mettilo a `0`. |
 | `Nessuno stato da comunicare: impostare [STATO_ORDINI] evaso e/o annullato` | La 990 gira con gli interruttori spenti. | Accendi gli stati da comunicare, oppure spegni l'operazione. |

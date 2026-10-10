@@ -41,7 +41,6 @@ Di questi, si importano gli ordini che:
 
 - **non sono già stati importati**, nemmeno dal connettore precedente;
 - **non sono annullati** su Shopify;
-- sono stati creati **nell'anno dell'esercizio** della ditta;
 - hanno uno **stato di pagamento acceso** nella sezione `[STATI]`.
 
 La sezione `[STATI]` elenca gli stati di pagamento di Shopify, con `1` per
@@ -62,13 +61,26 @@ Gli stati non elencati, o elencati con `0`, non si importano. Un ordine in
 attesa di pagamento che non importi oggi entra al giro in cui diventa pagato,
 purché sia ancora dentro i giorni riletti.
 
+### Ordini di un altro anno
+
+Ogni ordine entra nell'**esercizio del suo anno**, anche se non è quello su
+cui lavora la ditta: un ordine del 30 dicembre importato il 2 gennaio va
+nell'esercizio dell'anno prima, con la sua numerazione.
+
+Se l'esercizio dell'anno dell'ordine **non è stato creato**, l'ordine non
+entra: il registro lo segnala e l'ordine viene ritentato a ogni giro.
+Basta creare l'esercizio in Facile perché al giro successivo entri, purché
+sia ancora dentro i giorni riletti (chiave `interval`).
+
 !!! warning "Il cambio d'anno"
 
-    Si importano solo gli ordini creati nell'anno dell'esercizio della
-    ditta. Gli ordini dei primi giorni dell'anno nuovo vengono saltati
-    finché la ditta lavora sull'esercizio vecchio.
+    Crea l'esercizio dell'anno nuovo prima che arrivino gli ordini di
+    gennaio, oppure imposta `interval` in modo che il connettore li rilegga
+    finché l'esercizio non c'è: con `2` restano ritentabili per sette
+    giorni.
 
-<!-- DA VERIFICARE: come si importano gli ordini di gennaio prima dell'apertura del nuovo esercizio -->
+Se un ordine si interrompe a metà per un errore, l'ordine incompleto viene
+tolto e al giro successivo l'importazione riparte da capo.
 
 ## Com'è fatto l'ordine in Facile
 
@@ -208,7 +220,9 @@ Il **numero di tracciamento** della spedizione non viene inviato.
 | `Cliente generico N (CLIENTE SHOPIFY) creato per gli ordini senza dati personali` | Il primo ordine senza dati personali ha creato il cliente generico. |
 | `Cliente generico N di [ECOMMERCE] cliente_generico non trovato: si usa quello automatico` | Il cliente indicato nella chiave non esiste. |
 | `Shopify ordini: risposta parziale (N errori), primo: This app is not approved to access the Customer object...` | Il piano del negozio non dà i dati personali dei clienti: gli ordini entrano lo stesso, sul cliente generico. |
-| `Fine importazione ordini Shopify: letti N - importati N - saltati N - errori N` | Il riepilogo: i *saltati* sono già importati, annullati, di un altro esercizio o in uno stato non acceso. |
+| `Ordine Shopify #N del AAAA-MM-GG: l'esercizio AAAA non e' stato creato, ordine non importato` | Manca l'esercizio dell'anno dell'ordine: crealo in Facile. |
+| `Ordine Shopify #N: importazione interrotta da un errore, l'ordine N/AAAA incompleto e' stato tolto` | Un errore ha interrotto l'ordine: è stato tolto e si riprova al giro dopo. |
+| `Fine importazione ordini Shopify: letti N - importati N - saltati N - errori N` | Il riepilogo: i *saltati* sono già importati, annullati o in uno stato non acceso. |
 | `Nessuno stato da comunicare: impostare [STATO_ORDINI] evaso e/o annullato` | La 990 è stata lanciata con gli interruttori spenti. |
 | `Ordine ... evaso su Shopify`, `Ordine ... annullato su Shopify` | Lo stato è stato comunicato. |
 

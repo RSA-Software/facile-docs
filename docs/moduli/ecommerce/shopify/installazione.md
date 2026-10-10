@@ -23,29 +23,32 @@ il primo caricamento. Alla fine si accende l'[esecuzione continua](ciclo.md).
 
 ## 1. Crea l'app sul negozio
 
-Facile entra nel negozio attraverso un'**app personalizzata** creata
-dall'amministrazione del negozio. Ci sono due tipi di app, e il connettore
-li accetta tutti e due:
+Facile entra nel negozio attraverso un'**app personalizzata**. Come si crea
+e si installa lo spiega la documentazione di Shopify, alla pagina
+[Custom apps](https://help.shopify.com/it/manual/apps/app-types/custom-apps):
+le voci del pannello di Shopify cambiano nel tempo, e quella è la fonte
+aggiornata.
+
+Il connettore accetta i due tipi di app:
 
 | App | Cosa si copia nel file di configurazione |
 |---|---|
-| App creata dall'amministrazione del negozio | Il **token di accesso** all'Admin API, nella chiave `token`. |
-| App creata dal Dev Dashboard di Shopify, nella stessa organizzazione del negozio | **Client ID** e **segreto**, nelle chiavi `client_id` e `client_secret`. Facile chiede da solo un accesso valido 24 ore e lo rinnova quando scade. |
+| App creata dal **Dev Dashboard** di Shopify, nella stessa organizzazione del negozio. È il modo previsto da Shopify per le app nuove. | **Client ID** e **segreto**, nelle chiavi `client_id` e `client_secret`. Facile chiede da solo un accesso valido 24 ore e lo rinnova quando scade. |
+| App creata dall'**amministrazione del negozio** prima del 1° gennaio 2026: Shopify le mantiene, ma non se ne creano più di nuove. | Il **token di accesso** all'Admin API, nella chiave `token`. |
 
 Se nel file ci sono sia il token sia client ID e segreto, vale il token.
 
-1. Crea l'app dall'amministrazione del negozio o dal Dev Dashboard.
+1. Crea l'app seguendo la documentazione di Shopify.
 2. Assegna all'app i permessi elencati nei
    [requisiti](index.md#il-negozio).
 3. Installa l'app sul negozio.
-4. Copia il token, oppure client ID e segreto: ti servono al passo 3.
+4. Copia client ID e segreto, oppure il token: ti servono al passo 3.
 
-<!-- DA VERIFICARE: i nomi esatti delle voci dell'amministrazione Shopify per creare l'app, e se le app create dall'amministrazione sono ancora disponibili per i negozi nuovi -->
+!!! warning "Segreto e token sono chiavi del negozio"
 
-!!! warning "Il token è una chiave del negozio"
-
-    Con il token chiunque può modificare prodotti e ordini del negozio.
-    Non mandarlo per email e conservalo solo nel file di configurazione.
+    Con il segreto o con il token chiunque può modificare prodotti e ordini
+    del negozio. Non mandarli per email e conservali solo nel file di
+    configurazione.
 
 ## 2. Prepara gli articoli in Facile
 
