@@ -318,6 +318,19 @@ nav:
       - Manutenzione degli archivi: moduli/utility/manutenzione-archivi.md
       - Assistenza: moduli/utility/assistenza.md
       - Gestione Licenza: moduli/utility/gestione-licenza.md
+  # E-commerce non e' una voce del menu: FacileToWeb e' un programma a parte,
+  # che si configura con i file ini. Il ramo sta qui, dopo Utility.
+  - E-commerce:
+      - moduli/ecommerce/index.md
+      - Shopify:
+          - moduli/ecommerce/shopify/index.md
+          - Prima installazione: moduli/ecommerce/shopify/installazione.md
+          - Prodotti e immagini: moduli/ecommerce/shopify/prodotti-e-immagini.md
+          - Giacenze e prezzi: moduli/ecommerce/shopify/giacenze-e-prezzi.md
+          - Ordini: moduli/ecommerce/shopify/ordini.md
+          - Esecuzione continua: moduli/ecommerce/shopify/ciclo.md
+          - Il file di configurazione: moduli/ecommerce/shopify/configurazione.md
+          - Messaggi del registro: moduli/ecommerce/shopify/messaggi.md
   - Versioni specifiche:
       - moduli/versioni/index.md
       - Valenze di Lavorazione (Oreficerie): moduli/versioni/oreficerie-valenze.md

@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-09 — **998 messaggi**.
+Aggiornato al 2026-10-10 — **1001 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -327,6 +327,7 @@ Aggiornato al 2026-10-09 — **998 messaggi**.
 | *File di Interscambio non Valido!* | [Ricezione dati](../moduli/trasferimenti/ricezione-dati.md) | Il file degli agenti non ha la struttura attesa. | Controlla di aver preso il file giusto. |
 | *File Generato :<br><br>…* | [Esportazione DDT - Centrale Latte Salerno](../moduli/trasferimenti/esportazione-ddt-centrale-latte-salerno.md) | L'esportazione è finita; il messaggio indica il percorso del file. | Manda il file alla Centrale. |
 | *File inesistente o impossibile da aprire !*, seguito dal percorso | [Bilance](../moduli/casse-bilance/bilance.md) | Nella ricezione da file di Zenith, Bizerba o WinShop non c'è il file della data indicata. | Controlla la data, e che il file del giorno sia nella cartella indicata dal messaggio. |
+| *File INI non impostato su linea di comando.* | [E-commerce](../moduli/ecommerce/index.md) | Manca il parametro `-ini`, oppure fra `-ini` e il nome del file c'è uno spazio. | Scrivi il nome del file attaccato al parametro: `-iniciclo_shopify.ini`. |
 | *File in PDF del documento non trovato in archivio!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Il PDF di cortesia non c'è. | Non tutte le fatture ne hanno uno: consulta il **Dettaglio Linee**. |
 | *File non trovato o impossibile da aprire!* / *Impossibile aprire il file !* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Il file non c'è, ha un nome diverso da quello atteso, o è aperto in un altro programma. | Controlla nome e posizione del file e chiudilo negli altri programmi. |
 | *File non Valido!* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | Il nome del file non comincia per `ORD` né per `OFO`. | Scegli il file giusto o rinominalo. |
@@ -546,6 +547,7 @@ Aggiornato al 2026-10-09 — **998 messaggi**.
 | *Impossibile Inizializzare la Stampa !* | [Frontalini](../moduli/casse-bilance/frontalini.md) | La stampante non risponde. | Controlla collegamento e driver. |
 | *Impossibile Inizializzare la stampa!* | [Stampe contabili](../moduli/contabilita/stampe-contabili.md) | Come sopra, nell'intestazione fogli. | Come sopra. |
 | *Impossibile Inizializzare la Stampa!* | [Stampe contabili](../moduli/contabilita/stampe-contabili.md) | Il programma non riesce ad avviare la stampa del libro giornale. | Verifica che la stampante sia disponibile; se il problema resta, segnala all'assistenza. |
+| *Impossibile recuperare la directory di lavoro.* | [E-commerce](../moduli/ecommerce/index.md) | Windows non ha dato al programma la cartella da cui è stato avviato. | Avvia FacileToWeb indicando la cartella di Facile come cartella di lavoro (nell'Utilità di pianificazione, campo **Inizio in**). |
 | *Impossibile salvare il file!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | Lo stesso, per il FacileWebApiService. | Come sopra. |
 | *Impossibile salvare il file* | [Stampe delle scadenze](../moduli/scadenze/stampe-scadenze.md) | Non si riesce a scrivere il CSV. | Verifica che la cartella sia scrivibile e che il file non sia già aperto. |
 | *Impossibile salvare il file!<br>Chiudere il file se aperto* | [Analisi delle vendite](../moduli/analisi-dati/analisi-vendite.md) | Il file di destinazione è aperto in Excel. | Chiudilo e riprova. |
@@ -836,6 +838,7 @@ Aggiornato al 2026-10-09 — **998 messaggi**.
 | *Numero gia in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato occupato nel frattempo, per esempio da un'altra cassa. | Scegli un altro posto. |
 | *Numero non trovato in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato liberato nel frattempo, per esempio perché lo scontrino è già stato ripreso da un'altra cassa. | Controlla gli altri posti. |
 | *Obbligo Selezione Reparto!* / *Impostare reparto predefinito prima della conversione!* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Manca il [reparto](../moduli/magazzino/reparti.md) da assegnare agli articoli nuovi. | Scegli il reparto, o impostane uno predefinito nelle opzioni della ditta. |
+| *Operazione da eseguire non impostata nel file INI.* | [E-commerce](../moduli/ecommerce/index.md) | Nel file manca `operation` nella sezione `[COMMAND]`, oppure il file non esiste nella cartella `cfg`. | Controlla il nome del file e la sua posizione, e che `[COMMAND]` contenga il numero dell'operazione. |
 | *Operazione disponibile solo su archivi anno corrente.* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md), [Stampe dell'inventario](../moduli/inventario/stampe-inventario.md) | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro e riprova. |
 | *Operazione disponibile solo su archivi anno corrente.* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro. |
 | *Operazione non consentita per lo stato dell' Ordine!* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | Lo stato dell'ordine non ammette il comando. | Guarda la colonna **Stato**. |

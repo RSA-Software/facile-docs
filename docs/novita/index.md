@@ -22,6 +22,20 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
 ### Nuove funzioni
 
+**[Connettore Shopify](../moduli/ecommerce/shopify/index.md).** Un nuovo
+collegamento con i negozi Shopify, descritto nella nuova sezione
+[E-commerce](../moduli/ecommerce/index.md). Pubblica gli articoli con
+**Includi WEB**, con fotografie, collezioni dalle tassonomie e, nella
+versione taglie e colori, una variante per ogni combinazione; aggiorna
+giacenze, prezzi e promozioni, e il listino ingrosso per i clienti
+professionali; importa gli ordini del sito come ordini cliente e può
+comunicare al negozio quelli evasi o annullati. Ogni giro manda solo
+quello che è cambiato. Tutte le operazioni possono girare da un solo file
+di configurazione, in [esecuzione continua](../moduli/ecommerce/shopify/ciclo.md),
+e si fermano con il flag `exit`. Un prodotto cancellato a mano sul negozio
+viene ricreato, mentre i dati aggiunti sul negozio — collezioni manuali,
+tag, fotografie — restano.
+
 **[Scontrini delle bilance Zenith in cassa](../moduli/vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).**
 Sul **Pos Touchscreen** si legge il codice a barre in fondo allo scontrino di
 una bilancia Zenith e le sue righe entrano sul banco con il peso, i pezzi e i

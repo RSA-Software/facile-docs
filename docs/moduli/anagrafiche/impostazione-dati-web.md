@@ -34,6 +34,9 @@ finestra si scorrono gli articoli e per ciascuno si decide:
 La pubblicazione vera e propria è un'altra cosa: il collegamento al sito si
 configura nella scheda **E-Commerce** delle [ditte](ditte.md), e i dati partono
 con le procedure di [trasferimento](../trasferimenti/esportazione-documenti.md).
+Per un negozio **Shopify** il collegamento è il
+[connettore Shopify](../ecommerce/shopify/index.md): legge da qui nome,
+descrizioni, tassonomie e la casella **Includi WEB**.
 
 ## Prerequisiti
 
