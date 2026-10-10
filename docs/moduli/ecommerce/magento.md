@@ -141,6 +141,7 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
 | `Articolo … : Codice brand o product_brand non impostato sul marchio …` | Il marchio dell'articolo non è collegato al negozio: l'articolo non viene creato. |
 | `Impossibile aggiornare Art. … - Disp. …` / `Impossibile aggiornare Art. … - Prezzo …` | Il negozio ha rifiutato la disponibilità o il prezzo di un articolo. |
 | `… : Nessuna risposta dal server` | Il negozio non ha risposto. |
+| `Articolo … : elemento di tassonomia … non trovato fra i livelli superiori` | Una tassonomia dell'articolo ha un livello superiore che non esiste più: le categorie superiori mancanti non vengono mandate. |
 
 ## Vedi anche
 

@@ -62,6 +62,11 @@ prima l'importo. Facile aggiunge una riga **CONTANTI** con l'importo pagato.
 
 Se la macchina non riesce a rendere tutto il resto, Facile lo dice.
 
+Dal **Pos Touchscreen**, con un totale negativo — un reso o una vincita — la
+VNE **eroga** l'importo al cliente. Se ne eroga solo una parte, Facile indica la
+differenza da dare a mano. Dalla **Vendita** ++f6++ incassa solo i totali
+positivi.
+
 ## La gestione della cassa
 
 Sul **Pos Touchscreen**, a scontrino vuoto, **Funzioni ▸ Cassa Automatica**
@@ -71,12 +76,12 @@ apre la finestra **VNE Virtuo**:
 |---|---|
 | **Mostra Livelli** | Mostra il contenuto: riciclatore, stacker e monete. |
 | **Preleva Contante** | Chiede un importo e lo fa erogare; alla fine mostra l'importo prelevato. |
-| **Aggiungi Monete e Banconote** | Ricarica: la finestra mostra quanto è stato caricato; **Annulla** chiude la ricarica. |
+| **Aggiungi Monete e Banconote** | Ricarica il fondo cassa: la macchina accetta le monete e le banconote dei tagli che usa per il resto; la finestra mostra quanto è stato caricato; **Annulla** chiude la ricarica. |
 | **Svuotamento Parziale Monete**, **Svuotamento Totale Monete** | Svuotano le monete. |
 | **Svuotamento Parziale Banconote**, **Svuotamento Totale Banconote** | Svuotano le banconote del riciclatore. |
 | **Apertura Porta** | Apre la porta della macchina. |
 | **Riavvio Cassa**, **Spegni Cassa** | Riavviano o spengono la macchina, **senza chiedere conferma**. |
-| **Chiusura Cassa** | Chiude la cassa e mostra il riepilogo: inserito ed erogato ai clienti, pagamenti, versamenti, prelievi, contenuto, fondo cassa, incasso in contanti. |
+| **Chiusura Cassa** | Chiude la cassa e mostra il riepilogo con data e ora della chiusura: inserito ed erogato ai clienti, pagamenti, versamenti, prelievi, contenuto, fondo cassa, incasso in contanti. |
 | **Reset Stacker**, **Reset Monete**, **Reset Totale** | Azzerano il conteggio dello stacker, delle monete o di entrambi, dopo conferma. |
 | **Esci** | Chiude la finestra. |
 
@@ -85,11 +90,6 @@ apre la finestra **VNE Virtuo**:
     I reset azzerano il **conteggio**, non il denaro: vanno fatti solo dopo aver
     tolto fisicamente monete e banconote, altrimenti il conteggio della macchina
     non corrisponde più al contenuto.
-
-!!! note "Con un totale negativo"
-
-    Con un totale negativo — un reso o una vincita — la VNE non eroga denaro:
-    per restituirlo usa **Preleva Contante**.
 
 ## Controlli e messaggi
 
@@ -101,6 +101,9 @@ apre la finestra **VNE Virtuo**:
 | *Impossibile erogare completamente il resto!* / *Impossibile restituire resto per € …* | La macchina non aveva i tagli per il resto. | **Il resto va dato a mano.** |
 | *Errore sulla richiesta http!* | La macchina non è raggiungibile. | Controlla rete e indirizzo. |
 | *Impossibile avviare l'operazione!* | La macchina ha rifiutato l'operazione. | Controlla lo stato della macchina. |
+| *La cassa automatica ha rifiutato il comando (codice …)!* | Un prelievo, un reset, l'apertura della porta, il riavvio o lo spegnimento sono stati rifiutati dalla macchina; il codice è quello della VNE. | Controlla lo stato della macchina; se non si risolve, riferisci il codice all'assistenza. |
+| *Errore della cassa automatica!* | In **Vendita** il rendiresto non è riuscito e la macchina non ha dato un motivo. | Controlla la macchina e riprova. |
+| *Attenzione!<br><br>La cassa automatica ha erogato Euro … di ….<br><br>Consegnare a mano al cliente Euro ….* | In un reso o in una vincita la macchina non ha erogato tutto. | Dai a mano la differenza indicata. |
 | *Sistema occupato!* | La macchina sta facendo un'altra operazione. | Aspetta e riprova. |
 | *Attenzione!<br>Il comando resetta il contenuto dello stacker delle banconote.<br><br>Effettuare l'operazione solo dopo che l'operatore ha rimosso fisicamente tutte le banconote dallo stacker.<br><br>Vuoi Continuare?* | Hai premuto **Reset Stacker**. | Rispondi **Sì** solo a stacker svuotato. Le domande di **Reset Monete** e **Reset Totale** sono analoghe. |
 

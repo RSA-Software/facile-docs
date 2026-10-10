@@ -124,8 +124,8 @@ apre la finestra **Cashlogy** con i pulsanti abilitati per l'operatore:
 | **Visualizza Logs**, **Manutenzione** | Aprono le schermate della Cashlogy. |
 | **Esci** | Chiude la finestra. |
 
-I risultati compaiono con l'icona rossa anche quando l'operazione è riuscita:
-conta il testo, non l'icona.
+I risultati delle operazioni riuscite compaiono con l'icona delle
+informazioni; gli errori con quella rossa.
 
 ## Controlli e messaggi
 
@@ -137,7 +137,7 @@ conta il testo, non l'icona.
 | *Si e' verificato un problema nell'erogazione del resto.<br>Si prega di rendere manualmente Euro …* | La macchina non aveva i tagli per tutto il resto. | **Il resto va dato a mano.** |
 | *…<br><br>Non e' stato erogato l'importo di Euro …* | Un **Prelievo** non è riuscito. | Controlla la macchina. |
 | *Cassa Automatica Occupata!* | La macchina sta facendo un'altra operazione. | Aspetta e riprova. |
-| *Path Caslogy Connector non valida!* | `connector_path` manca o è sbagliato. | Correggi il percorso. |
+| *Path Cashlogy Connector non valida!* | `connector_path` manca o è sbagliato. | Correggi il percorso. |
 | *Impossibile aprire il socket* / *Errore di comunicazione con il socket!* | Il collegamento con il programma di collegamento non riesce. | Controlla indirizzo e porta. |
 
 ## Vedi anche

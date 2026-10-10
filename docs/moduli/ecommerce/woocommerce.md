@@ -72,6 +72,8 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
 | `[ECOMMERCE]` | `deposito` | il deposito attivo della ditta | 930, 933 | Il deposito delle righe degli ordini e delle promozioni. |
 | `[ECOMMERCE]` | `registro` | vuoto | 930 | Il registro degli ordini importati. |
 | `[ECOMMERCE]` | `pagamento`, `cateco` | 0 | 930 | Pagamento e categoria economica dei clienti. |
+| `[ARTICOLI]` | `cod_buono_sco`, `cod_spese_tra` | — | 930 | Gli articoli delle righe di sconto e commissioni e di quelle delle spese di trasporto. Se mancano si usano gli articoli `SCONTO` e `TRASPORTO`. |
+| `[STATO]` | `ultimo_import` | — | 930 | Data e ora dell'ultima importazione riuscita. **La scrive Facile**: serve a `interval = 0`. |
 | `[OPTIONS]` | `GRUPPO_0000` … `GRUPPO_0099` | — | 936 | I nomi dei gruppi all'ingrosso sul negozio. |
 | `[OPTIONS]` | `tags` | 0 | 934 | Diverso da 0: le stagioni diventano tag del prodotto. |
 | `[OPTIONS]` | `backorders` | `no` | 934 | Se accettare ordini di articoli esauriti: `yes`, `notify` o `no`. |
@@ -119,10 +121,16 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
 
 | `interval` | Ordini riletti |
 |---|---|
+| `0` | Dall'ultima importazione riuscita, con un'ora e dieci minuti di margine; la prima volta dal 1° gennaio dell'esercizio |
+| `1` | Di oggi |
 | `2` | Degli ultimi 7 giorni |
 | `3` | Degli ultimi 31 giorni |
 | `4` | Dal 1° gennaio dell'esercizio |
-| `1`, `0` o altri valori | Dell'ultimo giorno |
+| `5` | Tutti |
+
+Il negozio restituisce gli ordini a pagine di cento: Facile le legge tutte.
+L'importazione si considera riuscita solo se tutti gli ordini sono entrati;
+altrimenti con `interval = 0` il giro dopo riparte dalla stessa data.
 
 - **Quali ordini:** quelli negli stati accesi in `[STATI]`, creati nell'anno
   dell'esercizio della ditta e non già importati.
@@ -130,23 +138,23 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
   email; se non c'è viene creato dai dati di **fatturazione**, come persona
   giuridica se c'è l'azienda. Se esiste, i suoi dati vengono **aggiornati** con
   quelli dell'ordine. Tutto in maiuscolo.
-- **Destinazione:** dall'indirizzo di fatturazione; se il cliente ne ha già una
-  uguale, si usa quella.
+- **Destinazione:** dall'indirizzo di spedizione; da quello di fatturazione se
+  la spedizione è vuota. Se il cliente ha già una destinazione uguale, si usa
+  quella.
 - **Righe:** l'articolo si ritrova dal codice (SKU); se non esiste la riga entra
-  come descrittiva, con lo SKU e l'IVA predefinita della ditta.
-- **Sconti e spese di trasporto** entrano come righe solo se in archivio
-  esistono gli articoli con codice **`SCONTO`** e **`TRASPORTO`**.
+  come descrittiva, con lo SKU e l'IVA predefinita della ditta. Il prezzo è
+  quello **prima dello sconto**.
+- **Sconto:** una riga in negativo con lo sconto dell'ordine, sull'articolo
+  `cod_buono_sco`. Le commissioni del negozio entrano sullo stesso articolo,
+  ciascuna con il suo nome.
+- **Spese di trasporto:** una riga sull'articolo `cod_spese_tra`. Con i prezzi
+  IVA esclusa la riga è netta e l'IVA la calcola Facile.
 
-!!! warning "Gli articoli SCONTO e TRASPORTO"
-
-    Senza gli articoli `SCONTO` e `TRASPORTO` in anagrafica, sconti e spese di
-    trasporto dell'ordine **non entrano** e il totale dell'ordine in Facile è
-    diverso da quello del negozio, senza nessun avviso. Le chiavi
-    `cod_spese_tra`, `cod_buono_sco` e `cod_contanti` della sezione
-    `[ARTICOLI]` vengono solo controllate all'avvio: il registro segnala se
-    mancano, ma le righe usano comunque i due articoli fissi.
-
-<!-- DA VERIFICARE: le spese di trasporto usano sempre l'importo con le tasse e l'indirizzo di spedizione dell'ordine non viene letto -->
+Se nella sezione `[ARTICOLI]` mancano `cod_buono_sco` o `cod_spese_tra`, si
+usano gli articoli **`SCONTO`** e **`TRASPORTO`**; se non esistono nemmeno quelli,
+la riga entra descrittiva con l'IVA predefinita della ditta, così il totale
+dell'ordine torna comunque. Se le righe non arrivano al totale del negozio, il
+registro lo segnala.
 
 ## Messaggi del registro
 
@@ -155,6 +163,7 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
 | `Salto Ordine … (anno esercizio diverso)` | L'ordine è di un altro anno. |
 | `Salto Ordine … (già trovato in archivio)` | L'ordine era già stato importato. |
 | `ORDER KEY - ordine non trovato` | Un ordine del negozio non ha il suo identificativo: l'importazione si ferma. |
+| `Ordine … : le righe differiscono dal totale del negozio di …` | Le righe importate non arrivano al totale dell'ordine sul negozio, per arrotondamenti o per voci che Facile non conosce: controlla l'ordine in Facile. |
 | `Codice articolo per spese di trasporto (cod_spese_tra) non impostato nel file di configurazione!` (e gli analoghi) | Manca una chiave della sezione `[ARTICOLI]`. |
 | `Articolo … : Nessuna risposta dal server` | Il negozio non ha risposto. |
 | `Impossibile aggiornare Art. … : …` | Il negozio ha rifiutato l'aggiornamento di un prodotto; segue il motivo. |

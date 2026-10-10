@@ -321,6 +321,49 @@ elencate in un avviso, e uno scontrino già passato non si ripassa.
   per codice a barre. Ora le righe si riconoscono da bancone e PLU, e il
   movimento riporta il peso o i pezzi venduti e l'importo al netto degli
   sconti.
+- [PagAmico](../moduli/casse-bilance/casse-automatiche/pagamico.md): dopo la
+  richiesta di chiusura di un incasso o della ricarica, **Annulla** non faceva
+  più niente e l'attesa non finiva se la macchina rifiutava la chiusura. Ora
+  chiede se ripetere la richiesta, continuare ad attendere o smettere. Un
+  annullo rifiutato dalla macchina non viene più preso per un incasso annullato.
+- [CashDro](../moduli/casse-bilance/casse-automatiche/cashdro.md): il resto
+  non erogato ora viene segnalato; l'attesa del pagamento si può interrompere,
+  anche quando un'operazione rimasta a metà bloccava la cartella condivisa;
+  `sleep_time` e `max_iter` mancanti valgono 500 e 60; la chiave `ssl` di
+  `cashdro_ws.ini` viene letta. Con un reso o una vincita Facile dice
+  l'importo da dare a mano.
+- [Cashmatic](../moduli/casse-bilance/casse-automatiche/cashmatic.md): resi e
+  vincite dal Pos Touchscreen ora vengono erogati dalla macchina;
+  **Svuotamento Totale Monete** faceva uno svuotamento parziale; se il
+  programma della macchina non risponde Facile non aspetta più all'infinito.
+- [Virtuo VNE](../moduli/casse-bilance/casse-automatiche/vne.md): resi e
+  vincite dal Pos Touchscreen ora vengono erogati dalla macchina; reset,
+  apertura della porta, riavvio e spegnimento rifiutati dalla macchina ora lo
+  dicono, e così il rendiresto ++f6++ della Vendita; il riepilogo della
+  **Chiusura Cassa** mostrava la data al contrario e poteva chiudere il
+  programma.
+- [Cashlogy](../moduli/casse-bilance/casse-automatiche/cashlogy.md) e
+  Cashmatic: i risultati delle operazioni riuscite uscivano con l'icona di
+  errore.
+
+**E-commerce**
+
+- [WooCommerce](../moduli/ecommerce/woocommerce.md), importazione degli
+  ordini: si leggevano solo i primi dieci ordini del periodo; `interval` 0 e 5
+  valevano un giorno; sconti e spese di trasporto sparivano senza gli articoli
+  `SCONTO` e `TRASPORTO`, e lo sconto veniva sommato invece che sottratto; la
+  destinazione era presa dall'indirizzo di fatturazione; con i prezzi IVA
+  esclusa le spese di trasporto entravano con l'IVA. Ora `cod_buono_sco` e
+  `cod_spese_tra` vengono usati davvero.
+- WooCommerce, invio dei prodotti: un codice già presente sul negozio veniva
+  riconosciuto solo con il negozio in italiano; con `tags = 1` le stagioni
+  come tag e come attributo si sovrascrivevano a vicenda.
+- [Magento](../moduli/ecommerce/magento.md): un livello superiore di
+  tassonomia cancellato bloccava l'invio dei prodotti; l'aggiornamento di
+  giacenze e prezzi riscriveva in Facile il vecchio collegamento del prodotto.
+- [nopCommerce](../moduli/ecommerce/nopcommerce.md): gli ordini entravano
+  senza la loro data e senza il riferimento all'ordine web, e ognuno creava una
+  destinazione nuova anche con lo stesso indirizzo.
 
 ## Versione 2026 B08
 

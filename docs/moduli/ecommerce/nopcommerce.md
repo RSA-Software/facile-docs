@@ -97,7 +97,9 @@ stessa data.
   indirizzo, codice fiscale, partita IVA, PEC e codice destinatario. La
   provincia si ricava dalla città.
 - **Destinazione:** l'indirizzo di spedizione diventa una destinazione diversa
-  del cliente; ogni ordine ne crea una nuova.
+  del cliente; se il cliente ne ha già una con lo stesso nome e indirizzo, si
+  usa quella.
+- **Data:** l'ordine entra con la data dell'ordine sul negozio.
 - **Righe:** l'articolo si ritrova dal codice della variante venduta; se non
   esiste in Facile la riga entra come descrittiva, con il codice indicato e
   l'IVA predefinita della ditta. I prezzi sono IVA inclusa.
@@ -116,8 +118,6 @@ stessa data.
 - **Ordini Amazon** (metodo di pagamento numero 77): l'ordine entra già
   **evaso**, con i movimenti di scarico del magazzino. Se l'ordine era già stato
   importato ed evaso, viene annullato e reimportato.
-
-<!-- DA VERIFICARE: con quale data entra in Facile l'ordine importato (la data dell'ordine sul negozio sembra azzerata durante la preparazione del documento) -->
 
 ## Messaggi del registro
 

@@ -39,9 +39,10 @@ fanno con il programma della CashDro.
 | `indirizzo_ip` | — | L'indirizzo della macchina. Obbligatorio. |
 | `user` | — | L'utente del servizio web della macchina. Obbligatorio. |
 | `password` | — | La password. Obbligatoria. |
+| `ssl` | 1 | `1` per il collegamento cifrato (https), `0` per http. |
 
-Il collegamento è sempre cifrato (https). Ogni risposta della macchina durante
-l'incasso viene salvata in `log\cashdro.json`, utile all'assistenza.
+Ogni risposta della macchina durante l'incasso viene salvata in
+`log\cashdro.json`, utile all'assistenza.
 
 ### CASHDRO FILES: cashdro.ini
 
@@ -49,37 +50,34 @@ l'incasso viene salvata in `log\cashdro.json`, utile all'assistenza.
 |---|---|---|
 | `path` | `c:\cashdro` | La cartella condivisa con il programma della CashDro. |
 | `full_screen` | 0 | `1` per mostrare la schermata della CashDro a tutto schermo, `0` per una barra in alto. |
-| `sleep_time` | 0 | I millisecondi fra due controlli della risposta. |
-| `max_iter` | 0 | Quanti controlli fare prima di rinunciare. |
-
-!!! warning "Indica sempre sleep_time e max_iter"
-
-    Se mancano, Facile controlla la risposta una volta sola e dà subito
-    *Nessuna risposta*. Il file di esempio usa `sleep_time = 500` e
-    `max_iter = 60`, cioè mezzo minuto di attesa.
+| `sleep_time` | 500 | I millisecondi fra due controlli della risposta. |
+| `max_iter` | 60 | Quanti controlli fare prima di rinunciare: con i valori predefiniti, mezzo minuto dopo la fine del pagamento. |
 
 ## Incassare uno scontrino
 
 1. Batti lo scontrino sul **Pos Touchscreen** e fai il subtotale.
 2. Premi **CashDro**. Per incassare solo una parte, digita prima l'importo.
-3. Il cliente paga sullo schermo della CashDro; Facile resta in attesa.
+3. Il cliente paga sullo schermo della CashDro; Facile resta in attesa nella
+   finestra **Cassa Automatica**.
 4. A pagamento concluso Facile aggiunge una riga **CONTANTI** con l'importo
    pagato e, se il totale è coperto, chiude e stampa lo scontrino. Se è stata
    pagata solo una parte, lo scontrino resta aperto per il resto.
 
 Se il pagamento viene annullato sulla CashDro, lo scontrino resta aperto senza
-messaggi.
+messaggi. Se la CashDro non riesce a rendere tutto il resto, Facile lo dice e
+indica la cifra da dare a mano.
 
-!!! warning "Il resto non erogato non viene segnalato"
-
-    Facile non avvisa se la CashDro non è riuscita a rendere tutto il resto:
-    controlla lo schermo della macchina.
+**Annulla** nella finestra d'attesa non ferma la CashDro: chiede se smettere di
+aspettare. Serve quando la macchina non risponde più, o quando un'operazione
+interrotta ha lasciato la cartella condivisa bloccata. L'esito dell'incasso
+resta sconosciuto e va controllato sulla macchina.
 
 !!! note "Solo dal Pos Touchscreen"
 
     La CashDro si usa solo dal **Pos Touchscreen**: nella chiusura dello
     scontrino di **Vendita** il tasto **F6 - Rendiresto** non è disponibile.
-    Con un totale negativo (reso o vincita) la CashDro non eroga denaro.
+    Con un totale negativo (reso o vincita) la CashDro non eroga denaro:
+    Facile lo dice e indica l'importo da consegnare a mano.
 
 ## Controlli e messaggi
 
@@ -94,6 +92,10 @@ messaggi.
 | *Servizio cashdro non operativo!* | Il servizio della CashDro non è avviato. | Riavvia la macchina. |
 | *Impossibile creare il file nella cartella specificata!* | Con `CASHDRO FILES` la cartella non esiste o non è scrivibile. | Controlla `path`. |
 | *Nessuna risposta* | Con `CASHDRO FILES` il programma della CashDro non ha risposto in tempo. | Controlla che sia avviato e i valori di `sleep_time` e `max_iter`. |
+| *La cassa automatica non ha ancora concluso l'operazione.<br><br>Smettere di attendere?<br><br>L'esito restera' sconosciuto: controllare la cassa automatica prima di ripetere l'operazione.* | Hai premuto **Annulla** nella finestra d'attesa mentre la CashDro lavora. | Di norma **No**. **Sì** smette di aspettare: la CashDro non si ferma, e l'incasso va controllato sulla macchina. |
+| *Esito dell'incasso sconosciuto!<br><br>Controllare la cassa automatica prima di ripetere l'operazione.* | Hai smesso di aspettare la CashDro. | Guarda lo schermo della macchina prima di ripetere l'incasso: il cliente potrebbe aver già pagato. |
+| *Attenzione!<br><br>Impossibile erogare resto per Euro …<br><br>Il resto va consegnato a mano al cliente.* | La macchina non aveva i tagli per tutto il resto. | **Il resto va dato a mano**: la cifra è quella indicata. |
+| *La cassa automatica CashDro non eroga denaro da Facile.<br><br>Consegnare a mano al cliente Euro ….* | Lo scontrino ha un totale negativo: un reso o una vincita. | Dai a mano l'importo indicato. |
 | *File XML di risposta non valido!* / *File JSON di risposta non valido!* | La risposta della macchina non è leggibile. | Contatta l'assistenza con il file di risposta. |
 
 ## Vedi anche
