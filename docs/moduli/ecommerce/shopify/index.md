@@ -83,14 +83,17 @@ indicata nel file di configurazione (`api_version`, oggi `2026-10`). Quando
 Shopify annuncia il ritiro della versione in uso, il connettore va
 aggiornato insieme a Facile.
 
-### I limiti dei piani Shopify
+### I piani Shopify
 
-| Piano | Effetto sul connettore |
-|---|---|
-| **Basic** | Negli ordini Shopify non fornisce né nome, né email, né indirizzi del cliente. Gli ordini entrano lo stesso, intestati a un [cliente generico](ordini.md#a-quale-cliente-va-lordine). |
-| Tutti | Il connettore assegna i prezzi ingrosso alle aziende attraverso un mercato dedicato. È il metodo che non richiede il piano Plus. |
+Con il piano **Basic** Shopify non restituisce al connettore i dati personali
+dei clienti: negli ordini mancano nome, email, indirizzi e telefono. Gli
+ordini entrano lo stesso, intestati a un
+[cliente generico](ordini.md#ordini-senza-dati-personali), e i dati del
+cliente si leggono sul negozio.
 
-<!-- DA VERIFICARE: da quale piano Shopify mette a disposizione le aziende B2B (prova fatta solo sul negozio di sviluppo) -->
+Per tutto il resto — quali funzioni offre ciascun piano, compresa la vendita
+ai professionisti con aziende e listini dedicati — fa fede la documentazione
+di Shopify, a partire dalla [pagina dei piani](https://www.shopify.com/it/prezzi).
 
 ## Come Facile riconosce i propri prodotti
 

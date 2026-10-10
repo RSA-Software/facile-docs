@@ -82,7 +82,8 @@ Le regole:
 ## Il listino ingrosso
 
 Con `modalita = MISTO`, l'operazione **991** prepara sul negozio la vendita
-ai professionisti:
+ai professionisti (se il piano del negozio la prevede: vedi
+[I piani Shopify](index.md#i-piani-shopify)):
 
 1. crea sul negozio un listino prezzi chiamato **Facile ingrosso**, nella
    valuta del negozio;
