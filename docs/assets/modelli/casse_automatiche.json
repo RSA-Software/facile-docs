@@ -1,0 +1,14 @@
+{
+  "CasseAutomatiche": [
+    {
+      "Id": 1,
+      "Descrizione": "Cassa 1",
+      "Tipo": "PagAmico",
+      "Indirizzo": "192.168.1.61",
+      "Porta": 0,
+      "Password": "",
+      "Predefinita": true,
+      "PosAbilitato": false
+    }
+  ]
+}

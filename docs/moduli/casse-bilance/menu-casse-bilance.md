@@ -24,6 +24,9 @@ cambiano nome da una all'altra, ma fanno le stesse cose.
 - [Registratori telematici](registratori/index.md) — le stampanti fiscali
   che battono gli scontrini del banco. Non sono una voce di questo menu: il
   modello si sceglie in [Impostazioni Postazione](../utility/impostazioni-postazione.md).
+- [Casse automatiche](casse-automatiche/index.md) — i rendiresto in cui il
+  cliente paga in contanti: CashDro, Cashlogy, Cashmatic, Virtuo VNE, PagAmico.
+  Anche queste si scelgono in Impostazioni Postazione.
 
 ## Il negozio
 

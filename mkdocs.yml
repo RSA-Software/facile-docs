@@ -309,6 +309,10 @@ nav:
       - Registratori telematici:
           - moduli/casse-bilance/registratori/index.md
           - RCH: moduli/casse-bilance/registratori/rch.md
+      # Casse automatiche non e' una voce del menu: si sceglie in Impostazioni Postazione.
+      - Casse automatiche:
+          - moduli/casse-bilance/casse-automatiche/index.md
+          - PagAmico: moduli/casse-bilance/casse-automatiche/pagamico.md
   - Trasferimenti:
       - moduli/trasferimenti/menu-trasferimenti.md
       - Esportazione per tracciato: moduli/trasferimenti/esportazione-documenti.md

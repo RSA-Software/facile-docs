@@ -22,6 +22,14 @@ In distribuzione dal 12 ottobre 2026.
 
 ### Nuove funzioni
 
+**[Cassa automatica PagAmico](../moduli/casse-bilance/casse-automatiche/pagamico.md).**
+Il banco incassa con il rendiresto PagAmico di PayPrint attraverso il
+FacileWebApiService: il cliente paga alla macchina, che rende il resto, e
+Facile chiude lo scontrino con il contante incassato, gestendo pagamenti
+parziali, resti non erogati e incassi rimasti aperti. Le casse automatiche
+hanno ora una sezione propria nel manuale,
+[Casse automatiche](../moduli/casse-bilance/casse-automatiche/index.md).
+
 **[Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md).**
 In **Stampante Fiscale** ci sono due voci nuove, `RCH XON / XOFF (9600,N,8,1)`
 e `RCH XON / XOFF LAN`, per i Print!F RT e Print! 3.0 RT collegati in seriale o

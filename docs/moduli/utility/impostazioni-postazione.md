@@ -73,7 +73,7 @@ finestrelle di pochi campi.
 | **Customer Display - 1** e **Porta** | | Il display rivolto al cliente e la sua porta. Se il display è attaccato al registratore, si sceglie il tipo che corrisponde alla stampante fiscale, con la stessa porta: vedi [il display cliente](../casse-bilance/registratori/index.md#il-display-cliente). | voce dell'elenco |
 | **Customer Display - 2** e **Porta** | | Un secondo display. | voce dell'elenco |
 | **Bilancia Checkout** e **Porta** | | La bilancia della cassa. | voce dell'elenco |
-| **Cassa Automatica** | | Il sistema di cassa automatica collegato. Con `PAGAMICO` la postazione non parla con la macchina ma con il FacileWebApiService, che va configurato con la sua [impostazione](#impostazione-facilewebapiservice); l'indirizzo della macchina si imposta nel servizio. | `NESSUNA`, `CASHDRO WEB SERVICE`, `CASHDRO FILES`, `CASHLOGY`, `CASHMATIC`, `VIRTUO VNE`, `PAGAMICO` |
+| **Cassa Automatica** | | Il sistema di [cassa automatica](../casse-bilance/casse-automatiche/index.md) collegato; ogni marca ha il suo file di configurazione. Con `PAGAMICO` la postazione non parla con la macchina ma con il FacileWebApiService, che va configurato con la sua [impostazione](#impostazione-facilewebapiservice); l'indirizzo della macchina si imposta nel servizio. | `NESSUNA`, `CASHDRO WEB SERVICE`, `CASHDRO FILES`, `CASHLOGY`, `CASHMATIC`, `VIRTUO VNE`, `PAGAMICO` |
 | **Ditta Conv. HACCP** | | La ditta convenzionata per la parte HACCP. | codice |
 | **Formato Etichette** | | Il formato predefinito delle [etichette](etichette-barcode.md). | voce dell'elenco |
 
@@ -138,6 +138,8 @@ Il servizio serve anche alla cassa automatica **PAGAMICO**. Se sull'impianto
 ci sono più casse PagAmico, quella da usare su questa postazione si indica nel
 file `cfg\pagamico.ini`, voce `id_cassa` della sezione `[OPTIONS]`, con il
 numero che la cassa ha nel servizio; senza il file si usa la cassa predefinita.
+Come si configura tutto il collegamento è spiegato nella pagina
+[PagAmico](../casse-bilance/casse-automatiche/pagamico.md).
 
 ### Impostazione Sistemi di Pagamento Elettronico
 
