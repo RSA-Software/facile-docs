@@ -45,12 +45,13 @@ dell'operazione si scrive nel file di configurazione.
 
 ## Negozi collegati
 
-| Negozio | Pagina |
-|---|---|
-| Shopify | [Connettore Shopify](shopify/index.md) |
-
-FacileToWeb contiene anche i collegamenti con WooCommerce, PrestaShop,
-Magento e nopCommerce, che questo manuale non descrive ancora.
+| Negozio | Che cosa scambia | Pagina |
+|---|---|---|
+| Shopify | Prodotti, immagini, giacenze, prezzi, listino ingrosso, ordini e stato degli ordini | [Connettore Shopify](shopify/index.md) |
+| WooCommerce | Prodotti, immagini, giacenze, prezzi, prezzi all'ingrosso, ordini | [Connettore WooCommerce](woocommerce.md) |
+| Magento 2 | Categorie, prodotti, immagini, disponibilità, prezzi, ordini | [Connettore Magento](magento.md) |
+| PrestaShop 1.6 | Clienti, categorie, prodotti, giacenze, prezzi, immagini, ordini | [Connettore PrestaShop](prestashop.md) |
+| nopCommerce | Solo ordini | [Connettore nopCommerce](nopcommerce.md) |
 
 ## Prerequisiti
 
@@ -193,6 +194,6 @@ all'avvio:
 
 ## Vedi anche
 
-- [Connettore Shopify](shopify/index.md)
+- [Connettore Shopify](shopify/index.md), [WooCommerce](woocommerce.md), [Magento](magento.md), [PrestaShop](prestashop.md), [nopCommerce](nopcommerce.md)
 - [Impostazione Dati Web](../anagrafiche/impostazione-dati-web.md)
 - [Marchi](../magazzino/marchi.md): la colonna **Stock Ecommerce**

@@ -15,8 +15,8 @@ totale dello scontrino e registra quanto è stato pagato.
 
     - **Dove si sceglie:** Menu ▸ Utility ▸ [Impostazioni Postazione](../../utility/impostazioni-postazione.md), campo **Cassa Automatica**
     - **Configurazione:** un file nella cartella `cfg` di Facile, diverso per ogni marca
-    - **Al banco:** ++f6++ **Rendiresto**, oppure il tasto della cassa sul **Pos Touchscreen**
-    - **Pagine dei modelli:** [PagAmico](pagamico.md)
+    - **Al banco:** il tasto della cassa sul **Pos Touchscreen**; con Virtuo VNE e PagAmico anche ++f6++ **Rendiresto** nella chiusura della vendita
+    - **Pagine dei modelli:** [CashDro](cashdro.md), [Cashlogy](cashlogy.md), [Cashmatic](cashmatic.md), [Virtuo VNE](vne.md), [PagAmico](pagamico.md)
     - **Licenza:** separata, in aggiunta a quella di Facile
 
 ---
@@ -34,72 +34,38 @@ annullato — insieme al resto che la macchina non è riuscita a erogare, da dar
 a mano.
 
 Ogni postazione ha la sua cassa automatica, scelta nelle impostazioni della
-postazione. Le funzioni di gestione — stato dei livelli, prelievi, chiusure —
-si aprono dal **Pos Touchscreen** con **Funzioni ▸ Cassa Automatica**.
+postazione. Per tutte le marche tranne la CashDro, le funzioni di gestione —
+livelli, prelievi, caricamenti, chiusure — si aprono dal **Pos Touchscreen**
+con **Funzioni ▸ Cassa Automatica**.
 
 ## I modelli in elenco
 
-| Voce in **Cassa Automatica** | Come la pilota Facile | File di configurazione |
-|---|---|---|
-| `NESSUNA` | Nessuna cassa automatica. | — |
-| `CASHDRO WEB SERVICE` | Direttamente, in rete. | `cfg\cashdro_ws.ini` |
-| `CASHDRO FILES` | Scambiando file con il programma della CashDro. | `cfg\cashdro.ini` |
-| `CASHLOGY` | Direttamente, in rete. | `cfg\cashlogy.ini` |
-| `CASHMATIC` | Scambiando file con il programma della Cashmatic. | `cfg\cashmatic.ini` |
-| `VIRTUO VNE` | Direttamente, in rete. | `cfg\vne.ini` |
-| `PAGAMICO` | Attraverso il FacileWebApiService. | `cfg\pagamico.ini` e la configurazione del servizio — vedi [PagAmico](pagamico.md) |
-
-Con `VIRTUO VNE` nelle impostazioni della postazione compare anche **Arrotonda
-ai 5 Centesimi Superiori**.
-
-## La configurazione delle singole marche
-
-Il file di ciascuna marca sta nella cartella `cfg` di Facile; le chiavi sono
-nella sezione `[OPTIONS]`, salvo dove indicato.
-
-### CashDro
-
-| File | Chiave | Predefinito | Descrizione |
+| Voce in **Cassa Automatica** | Come la pilota Facile | Configurazione | Pagina |
 |---|---|---|---|
-| `cashdro_ws.ini` | `indirizzo_ip` | — | Indirizzo della macchina. Obbligatorio. |
-| `cashdro_ws.ini` | `user`, `password` | — | Le credenziali della macchina. |
-| `cashdro_ws.ini` | `ssl` | 0 | `1` per il collegamento cifrato. |
-| `cashdro.ini` | `path` | `c:\cashdro` | La cartella in cui Facile e il programma della CashDro si scambiano i file. |
-| `cashdro.ini` | `full_screen` | 0 | `1` per mostrare la schermata della cassa a tutto schermo. |
+| `NESSUNA` | Nessuna cassa automatica. | — | — |
+| `CASHDRO WEB SERVICE` | Direttamente, in rete. | `cfg\cashdro_ws.ini` | [CashDro](cashdro.md) |
+| `CASHDRO FILES` | Scambiando file con il programma della CashDro. | `cfg\cashdro.ini` | [CashDro](cashdro.md) |
+| `CASHLOGY` | Attraverso il programma di collegamento della Cashlogy. | `cfg\cashlogy.ini` | [Cashlogy](cashlogy.md) |
+| `CASHMATIC` | Scambiando file con il programma della Cashmatic. | `cfg\cashmatic.ini` | [Cashmatic](cashmatic.md) |
+| `VIRTUO VNE` | Direttamente, in rete. | `cfg\vne.ini` | [Virtuo VNE](vne.md) |
+| `PAGAMICO` | Attraverso il FacileWebApiService. | `cfg\pagamico.ini` e la configurazione del servizio | [PagAmico](pagamico.md) |
 
-### Cashlogy
+Con `VIRTUO VNE` e `PAGAMICO` nelle impostazioni della postazione compare anche
+**Arrotonda ai 5 Centesimi Superiori**.
 
-| Sezione | Chiave | Predefinito | Descrizione |
-|---|---|---|---|
-| `[OPTIONS]` | `indirizzo_ip` | — | Indirizzo della macchina. Obbligatorio. |
-| `[OPTIONS]` | `port` | 8092 | Porta della macchina. |
-| `[OPTIONS]` | `connector_path`, `connector_close` | — , 1 | Il programma di collegamento della Cashlogy e se chiuderlo a fine operazione. |
-| `[VENDITA]` | `mostra_schermo_2`, `posizione_x_schermo_2`, `posizione_y_schermo_2`, `schermo_on_top` | 0 | Dove e come mostrare la schermata della cassa durante la vendita. |
-| `[VENDITA]` | `mostra_pulsante_accetta`, `accetta_importo_parziale`, `accetta_cent_manuali`, `mostra_pulsante_deposito` | 0 | Le scelte offerte durante l'incasso. |
-| `[BACKOFFICE]` | `show_status`, `show_add_change`, `show_remove_cash`, `show_complete_empty`, … | 0 | Quali comandi di gestione della cassa compaiono: `1` li mostra. |
+## Che cosa si fa con ciascuna
 
-### Cashmatic
-
-| Chiave | Predefinito | Descrizione |
-|---|---|---|
-| `path` | `c:\cashmatic` | La cartella in cui Facile e il programma della Cashmatic si scambiano i file. |
-| `sleep_time` | 250 | Millisecondi fra due controlli dei file di risposta. |
-| `max_iter` | 40 | Quanti controlli fare prima di considerare la cassa non raggiungibile. |
-
-### Virtuo VNE
-
-| Chiave | Predefinito | Descrizione |
-|---|---|---|
-| `ip_address` | `127.0.0.1` | Indirizzo della macchina. |
-| `ssl` | 0 | `1` per il collegamento cifrato. |
-
-### PagAmico
-
-Vedi la [pagina dedicata](pagamico.md).
+| | CashDro | Cashlogy | Cashmatic | Virtuo VNE | PagAmico |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Incasso dal **Pos Touchscreen** | ● | ● | ● | ● | ● |
+| Incasso con ++f6++ **Rendiresto** in vendita | | | | ● | ● |
+| Erogazione automatica di resi e vincite | | ● | | | ● |
+| Avviso del resto non erogato | | ● | ● | ● | ● |
+| Gestione da **Funzioni ▸ Cassa Automatica** | | ● | ● | ● | ● |
 
 ## Vedi anche
 
-- [PagAmico](pagamico.md)
+- [CashDro](cashdro.md), [Cashlogy](cashlogy.md), [Cashmatic](cashmatic.md), [Virtuo VNE](vne.md), [PagAmico](pagamico.md)
 - [Vendita al banco](../../vendite/vendita-al-banco.md)
 - [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
 - [Registratori telematici](../registratori/index.md)

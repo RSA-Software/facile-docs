@@ -312,6 +312,10 @@ nav:
       # Casse automatiche non e' una voce del menu: si sceglie in Impostazioni Postazione.
       - Casse automatiche:
           - moduli/casse-bilance/casse-automatiche/index.md
+          - CashDro: moduli/casse-bilance/casse-automatiche/cashdro.md
+          - Cashlogy: moduli/casse-bilance/casse-automatiche/cashlogy.md
+          - Cashmatic: moduli/casse-bilance/casse-automatiche/cashmatic.md
+          - Virtuo VNE: moduli/casse-bilance/casse-automatiche/vne.md
           - PagAmico: moduli/casse-bilance/casse-automatiche/pagamico.md
   - Trasferimenti:
       - moduli/trasferimenti/menu-trasferimenti.md
@@ -340,6 +344,10 @@ nav:
           - Esecuzione continua: moduli/ecommerce/shopify/ciclo.md
           - Il file di configurazione: moduli/ecommerce/shopify/configurazione.md
           - Messaggi del registro: moduli/ecommerce/shopify/messaggi.md
+      - WooCommerce: moduli/ecommerce/woocommerce.md
+      - Magento: moduli/ecommerce/magento.md
+      - PrestaShop: moduli/ecommerce/prestashop.md
+      - nopCommerce: moduli/ecommerce/nopcommerce.md
   - Versioni specifiche:
       - moduli/versioni/index.md
       - Valenze di Lavorazione (Oreficerie): moduli/versioni/oreficerie-valenze.md

@@ -340,7 +340,7 @@ Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 
     Oltre a quelli segnati in questa pagina, l'elenco dei campi che il programma
     pretende può essere allungato per singola installazione, con un file di
-    configurazione (`cfgrticoli_check.ini`, sezione `[CHECK]`) che l'assistenza
+    configurazione (`cfg\articoli_check.ini`, sezione `[CHECK]`) che l'assistenza
     predispone. Quando manca uno di quei campi **il programma non dice nulla**:
     emette un segnale acustico e sposta il cursore. Se il salvataggio si rifiuta
     senza spiegazioni, guarda dov'è finito il cursore.
@@ -349,7 +349,7 @@ Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 
     Oltre a quelli che il programma pretende sempre, ogni installazione può
     renderne obbligatori altri. La scelta sta in un file di configurazione
-    — `cfgrticoli_check.ini` — dove sotto la voce `[CHECK]` si mette a
+    — `cfg\articoli_check.ini` — dove sotto la voce `[CHECK]` si mette a
     `1` il campo che si vuole richiedere e a `0` quello che si vuole
     lasciare libero.
 
