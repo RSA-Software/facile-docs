@@ -18,7 +18,7 @@ quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
 ## Versione 2026 B08.01
 
-<!-- DA VERIFICARE: data di distribuzione della B08.01 -->
+In distribuzione dal 12 ottobre 2026.
 
 ### Nuove funzioni
 
