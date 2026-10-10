@@ -35,8 +35,8 @@ Un articolo viene rimandato quando:
   **stagione**, del suo **reparto** o della sua **categoria merceologica**;
 - nella versione taglie e colori, ha una taglia o un colore nuovi;
 - hai cambiato nel file di configurazione il modo di compilare il tipo di
-  prodotto o l'elenco delle sigle (vedi più sotto): in quel caso si rimandano
-  **tutti** i prodotti, una volta.
+  prodotto, l'elenco delle sigle o la nazione dei testi (vedi più sotto): in
+  quel caso si rimandano **tutti** i prodotti, una volta.
 
 Un articolo collegato a cui togli **Includi WEB** resta sul negozio ma passa
 **in bozza**: i clienti non lo vedono più, e lo storico degli ordini non si
@@ -57,6 +57,15 @@ perde.
 | **Prezzo** | Solo quando il prodotto viene **creato**. Da lì in avanti lo aggiorna l'operazione [prezzi](giacenze-e-prezzi.md#i-prezzi). |
 | **Collezioni** | Le tassonomie dell'articolo (vedi [Le collezioni](#le-collezioni)). |
 | Campi aggiuntivi **facile.codice**, **facile.categoria**, **facile.reparto**, **facile.stagione** | Il codice dell'articolo e le descrizioni di categoria merceologica, reparto e stagione. Il tema del negozio li può mostrare o usare nei filtri. |
+
+### La nazione dei testi
+
+In [Impostazione Dati Web](../../anagrafiche/impostazione-dati-web.md) nome e
+descrizioni per il sito sono legati a una **nazione**, così lo stesso articolo
+può avere testi diversi per ogni mercato. Sul negozio vanno i testi della
+nazione indicata nella chiave `nazione`; se la chiave è vuota, quelli scritti
+senza nazione. Un articolo che non ha testi per quella nazione prende come
+titolo le due righe di descrizione dell'anagrafica.
 
 ### Le descrizioni in forma leggibile
 
@@ -166,7 +175,7 @@ esempio una volta al giorno (vedi [Esecuzione continua](ciclo.md)).
 |---|---|
 | `Prodotti da inviare: N` | Quanti articoli sono nuovi o cambiati in questo giro. |
 | `Fine sincronizzazione prodotti Shopify: articoli N - nuovi N - aggiornati N - errori N` | Il riepilogo del giro. |
-| `Formato dei prodotti cambiato (...): N prodotti collegati da rimandare` | Hai cambiato `tipo_prodotto` o `sigle`: tutti i prodotti si rimandano una volta. |
+| `Formato dei prodotti cambiato (...): N prodotti collegati da rimandare` | Hai cambiato `tipo_prodotto`, `sigle` o `nazione`: tutti i prodotti si rimandano una volta. |
 | `Articolo ... a taglie e colori senza combinazioni pubblicabili: non inviato` | Nessuna combinazione di taglia e colore ha movimenti nei depositi pubblicati. |
 | `Articolo ...: il codice non da' uno SKU EAN-13 di variante (servono 6 cifre): non inviato` | Il codice dell'articolo a taglie non è di 6 cifre. |
 | `Articolo ...: il prodotto ... non c'e' piu' su Shopify, lo si ricrea` | Il prodotto era stato cancellato sul negozio. |

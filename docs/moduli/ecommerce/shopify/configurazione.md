@@ -71,6 +71,7 @@ cliente_generico  = 0
 verifica_spariti  = 1
 tipo_prodotto     = 1
 sigle             = USB,LED
+nazione           =
 
 [ARTICOLI]
 cod_spese_tra     = CODICE ARTICOLO SPESE
@@ -146,10 +147,11 @@ Usata solo dall'[esecuzione continua](ciclo.md) (operazione 979).
 | `verifica_spariti` | 1 | 984 | `1` = a ogni giro si controlla che prodotti e collezioni esistano ancora sul negozio, e quelli cancellati a mano si ricreano. |
 | `tipo_prodotto` | 0 | 984 | `1` = la categoria merceologica diventa il tipo di prodotto. |
 | `sigle` | vuoto | 984 | Le parole da lasciare maiuscole nelle descrizioni di categoria, reparto e stagione, separate da virgole. |
+| `nazione` | vuoto | 984 | La nazione dei testi web (**Web Nome**, **Web Des. Breve**, **Web Des. Estesa**) da mandare sul negozio. Vuota, i testi senza nazione. |
 
-!!! note "Cambiare tipo_prodotto o sigle"
+!!! note "Cambiare tipo_prodotto, sigle o nazione"
 
-    Quando cambi `tipo_prodotto` o `sigle`, al giro successivo l'operazione
+    Quando cambi `tipo_prodotto`, `sigle` o `nazione`, al giro successivo l'operazione
     prodotti rimanda **tutti** i prodotti, una volta, per allinearli. Su un
     catalogo grande richiede qualche ora.
 
