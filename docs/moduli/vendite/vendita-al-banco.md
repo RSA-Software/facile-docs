@@ -457,6 +457,12 @@ ancora inserito niente l'incasso si chiude; altrimenti il programma chiede se
 restituire il denaro (**Sì**), trattenerlo come pagamento parziale (**No**: lo
 scontrino resta aperto per la parte che manca) o continuare (**Annulla**).
 
+Se dopo la richiesta di chiusura la finestra resta aperta — la macchina non l'ha
+ancora eseguita, o l'ha rifiutata — premi di nuovo **Esci**: puoi ripetere la
+richiesta (**Sì**), continuare ad aspettare (**No**) o smettere di aspettare
+(**Annulla**). Smettendo di aspettare l'esito resta sconosciuto: guarda il
+display della macchina prima di ripetere l'incasso.
+
 Se la macchina non ha i tagli per rendere tutto il resto, lo dice e indica la
 cifra da dare a mano: lo scontrino la riporta come resto. Dopo ogni incasso, e
 all'apertura della schermata, il programma avvisa anche quando la macchina ha
@@ -662,6 +668,8 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *Su questa cassa c'e' gia' un incasso in corso.* | Sulla macchina è rimasto aperto un incasso precedente. | Aspetta che finisca, o chiudilo con **Chiudi Incasso Sospeso**. |
 | *Il cliente ha inserito Euro ….<br><br>Scegliere:<br>SI - Per restituire il denaro al cliente<br>NO - Per trattenerlo come pagamento parziale<br>Annulla - Per continuare l'incasso* | Hai premuto **Esci** mentre il cliente aveva già inserito denaro. | **Sì** lo restituisce; **No** lo tiene e lo scontrino resta aperto per il resto; **Annulla** torna ad aspettare. |
 | *La cassa non ha ancora preso in carico l'incasso: riprovare fra un istante.* | Hai premuto **Esci** nel primo istante dell'incasso. | Premi di nuovo **Esci** dopo un momento. |
+| *La cassa automatica non ha ancora confermato la chiusura dell'incasso.<br><br>Scegliere:<br>SI - Per ripetere la richiesta di chiusura<br>NO - Per continuare ad attendere<br>Annulla - Per smettere di attendere* | Hai premuto **Esci** dopo aver già chiesto la chiusura, e la macchina non l'ha ancora eseguita: è lenta a rispondere, oppure l'ha rifiutata. | Di norma **No** e aspetta qualche secondo. **Sì** ripete la richiesta: se la macchina non ha ancora risposto alla prima, il servizio lo dice. **Annulla** smette di aspettare con esito sconosciuto. |
+| *Chiusura gia' richiesta con …: si aspetta la risposta della cassa.* | Hai ripetuto la richiesta di chiusura mentre la macchina non ha ancora risposto alla prima. | Aspetta: se la macchina non risponde, guarda il suo display. |
 | *Attenzione!<br><br>Impossibile erogare resto per Euro …<br><br>Il resto va consegnato a mano al cliente.* | La macchina non aveva i tagli per rendere tutto il resto. | Dai a mano la cifra indicata. |
 | *Cassa automatica:<br><br>…* | La macchina segnala le scorte: troppe monete o banconote, un taglio esaurito, cassetto di recupero pieno; all'apertura della schermata anche le scorte basse. | Svuota o ricarica la macchina. Lo stesso avviso non si ripete finché la situazione non cambia. |
 | *FacileWebApiService non risponde e l'incasso potrebbe essere ancora aperto sulla cassa automatica.<br><br>Vuoi continuare ad attendere?* | Durante un incasso il servizio non risponde da alcuni secondi. | Di norma **Sì**: il collegamento torna e l'incasso prosegue. |
@@ -671,6 +679,8 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *Chiusura di un incasso rimasto aperto sulla cassa automatica.<br><br>Scegliere:<br>SI - Per restituire al cliente il denaro inserito<br>NO - Per trattenerlo nella cassa<br>Annulla - Per non fare nulla* | Hai premuto **Chiudi Incasso Sospeso**. | Scegli che cosa fare del denaro inserito. |
 | *Importo Prelevato dalla Cassa :  …* | **Preleva Contante** è riuscito. | Nessuna azione. |
 | *Caricati Euro ….<br><br>Terminare la ricarica del fondo cassa?* | Hai premuto **Annulla** durante la ricarica del fondo cassa. | **Sì** chiude la ricarica, **No** continua a caricare. |
+| *La cassa automatica non ha ancora confermato la fine della ricarica.<br><br>Scegliere:<br>SI - Per ripetere la richiesta di fine ricarica<br>NO - Per continuare ad attendere<br>Annulla - Per smettere di attendere* | Hai premuto **Annulla** dopo aver già chiesto la fine della ricarica, e la macchina non l'ha ancora eseguita o l'ha rifiutata. | Di norma **No** e aspetta qualche secondo. **Sì** ripete la richiesta. **Annulla** smette di aspettare: ripremendo **Ricarica Fondo Cassa** la ricarica, se è ancora aperta, si riprende. |
+| *Fine ricarica gia' richiesta: si aspetta la risposta della cassa.* | Hai ripetuto la richiesta di fine ricarica mentre la macchina non ha ancora risposto alla prima. | Aspetta: se la macchina non risponde, guarda il suo display. |
 | *Importo Caricato nella Cassa :  …* | La ricarica del fondo cassa è stata chiusa. | Nessuna azione. |
 | *La cassa automatica non ha aperto la ricarica!* | La macchina non ha accettato la ricarica. | Controlla che non ci sia un incasso in corso e riprova. |
 | *Ricarica non riuscita!* | La ricarica si è chiusa con un errore; se c'è, il servizio indica il motivo al posto di questo testo. | Controlla la macchina e il giornale del servizio. |

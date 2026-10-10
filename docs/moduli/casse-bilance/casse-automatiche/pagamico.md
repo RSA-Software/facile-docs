@@ -137,6 +137,10 @@ Per mettere nella macchina il fondo cassa — monete e banconote per il resto:
 La ricarica si può chiudere anche dal pannello della macchina: Facile se ne
 accorge e mostra lo stesso il totale.
 
+Se dopo la conferma la finestra resta aperta — la macchina non ha ancora chiuso
+la ricarica, o l'ha rifiutata — premi di nuovo **Annulla**: puoi ripetere la
+richiesta, continuare ad aspettare o smettere di aspettare.
+
 Mentre una ricarica è aperta la macchina non incassa. Se Facile si chiude a
 ricarica aperta, ripremendo **Ricarica Fondo Cassa** la si riprende da dove era
 rimasta.
