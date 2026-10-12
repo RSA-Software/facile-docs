@@ -42,6 +42,14 @@ Salute:
 
 Con la casella spenta non cambia nulla: i campi nuovi non compaiono.
 
+**[Dato Vendita Fornitori](../moduli/vendite/dato-vendita-fornitori.md).**
+Nel nuovo menu **Vendite ▸ Gestione Farmaceutica**, che compare solo con la
+gestione farmaceutica attiva, il report mensile per i fornitori in conto
+deposito: i pezzi usciti con i DDT trasfert del mese, meno i resi dei clienti,
+per località e articolo, con una colonna per deposito. Scrive un file Excel per
+fornitore nella cartella **out**, nel formato concordato con i fornitori, e
+prima elenca gli articoli senza Minsan e i clienti senza CAP.
+
 **[DDT trasfert di un solo fornitore](../moduli/vendite/documento-di-vendita.md#emettere-un-ddt-trasfert).**
 Un DDT con **Tipo Vendita** `T` si emette solo se gli articoli hanno un
 fornitore in comune, come fornitore abituale o come alternativo. Il programma

@@ -259,6 +259,8 @@ nav:
       - Promozioni: moduli/vendite/promozioni.md
       - Provvigioni Agenti - Capi Area: moduli/vendite/provvigioni-agenti.md
       - Stampe e strumenti: moduli/vendite/stampe-vendite.md
+      - Gestione Farmaceutica:
+          - Dato Vendita Fornitori: moduli/vendite/dato-vendita-fornitori.md
   - Ordini:
       - moduli/ordini/menu-ordini.md
       - Ordini in Lavorazione e in Ricezione: moduli/ordini/ordini-in-lavorazione-e-ricezione.md

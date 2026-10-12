@@ -51,6 +51,14 @@ sotto [Archivi ▸ Listini Vendita](../listini-vendita/index.md).
 - [Stampe e strumenti di vendita](stampe-vendite.md) — liste di prelievo,
   distinte per i trasportatori, rapporto di cassa.
 
+## Gestione farmaceutica
+
+Il ramo compare solo con la [gestione farmaceutica](../anagrafiche/ditte.md#attivare-la-gestione-farmaceutica)
+attiva nei dati della ditta.
+
+- [Dato Vendita Fornitori](dato-vendita-fornitori.md) — il report mensile per i
+  fornitori in conto deposito, un file Excel per fornitore.
+
 !!! tip "Una maschera per tutti i documenti"
 
     Fatture, DDT, bolle, buoni di consegna, ricevute fiscali, autofatture e
