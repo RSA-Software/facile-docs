@@ -340,8 +340,8 @@ sono contati da 0, come li chiede Zenith System.
 | 135 | 2 | `01` | — |
 | 137 | 3 | pezzi | quantità delle vendite a pezzi |
 | 140 | 2 | progressivo della riga nello scontrino, da `00` | — |
-| 142 | 1 | `1` se la riga è stata scontata sulla bilancia | in cassa aggiunge la riga di sconto |
-| 143 | 7 | sconto in centesimi | importo della riga di sconto |
+| 142 | 1 | `0` o `1`; non indica se la riga è scontata: vale `0` anche su righe con lo sconto | — |
+| 143 | 7 | sconto in centesimi, zero se la riga non è scontata | se non è zero, in cassa aggiunge la riga di sconto con questo importo |
 | 150 | 5 | non usato | — |
 
 Il **record di riapertura** (`R`) ha lo stesso tracciato del totale e non è
