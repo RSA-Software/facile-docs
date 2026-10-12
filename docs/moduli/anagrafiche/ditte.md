@@ -474,6 +474,7 @@ dopo la password e dopo un avviso esplicito. Contiene i parametri più delicati:
 | **Key SmartCard**, **Pin**, **Utilizzo SmartC.** | La smart card. |
 | **Ultima Fattura su Cassa**, **Ultima Scontrino Emesso** | Gli ultimi numeri emessi. |
 | **Categoria Premi** | La categoria dei premi fidelity. |
+| **Usa Gestione Farmaceutica** | Accende la gestione dei medicinali: il codice Minsan e la tracciabilità sugli [articoli](anagrafica-articoli.md), i codici ministeriali su [clienti](anagrafica-clienti.md) e [destinazioni](destinazioni-diverse.md), il sito NSIS sui [depositi](../magazzino/depositi.md) e il tipo di movimento sulle [causali di magazzino](../magazzino/causali-magazzino.md). Spenta, quei campi non compaiono da nessuna parte. |
 
 ### Intestazione per Fatturazione
 
@@ -507,6 +508,17 @@ stampata sui documenti, con **F2 - Salva** ed **Esci**.
 Va deciso **prima** di popolare gli archivi: cambiare idea dopo significa avere
 articoli classificati secondo un significato che non c'è più.
 
+### Attivare la gestione farmaceutica
+
+1. Entra come amministratore e apri **Menu ▸ Archivi ▸ Ditte ▸ Modifica**.
+2. Premi **F7 - Impo. Prot.**, inserisci la password e conferma l'avviso.
+3. Spunta **Usa Gestione Farmaceutica**.
+4. Premi **F2 - Salva** e rispondi **Sì** a *Sei Sicuro di voler continuare?*.
+5. Premi **Esci**, poi chiudi la maschera delle ditte.
+6. Da quel momento le maschere di articoli, clienti, destinazioni, depositi e
+   causali di magazzino mostrano i campi della gestione farmaceutica. Una
+   maschera che era già aperta li mostra dopo averla chiusa e riaperta.
+
 ### Attivare l'IVA per cassa
 
 1. Nella scheda **Generale**, metti **Iva D.L.83/2012** su `SI`.
@@ -527,6 +539,7 @@ articoli classificati secondo un significato che non c'è più.
 | *Una sola ditta e' presente in archivio!* | Si è chiesto il cambio ditta ma l'azienda gestita è una sola. | Non c'è nulla da fare: si sta già lavorando sull'unica azienda. |
 | *Cambio ditta non permesso!* | Il cambio ditta è stato bloccato per questa installazione. | Se serve, chiedi all'assistenza di abilitarlo. |
 | *Attenzione!<br>La variazione di queste impostazioni può provocare il blocco del funzionamento del programma.<br>Eseguire l'operazione solo dopo aver contattato l'assistenza al numero 0941/563653.* | Si stanno aprendo le **Impostazioni Protette**. | Chiama prima l'assistenza, come dice il messaggio. |
+| *Sei Sicuro di voler continuare?* | Conferma richiesta da **F2 - Salva** nelle **Impostazioni Protette**. La risposta preimpostata è **No**. | Rispondi **Sì** per registrare. La finestra resta aperta: chiudila con **Esci**. |
 | *Il numero delle cifre non può essere pari a 0!* | Nel formato seriale da contatore manca il numero di cifre. | Compila **Cifre**. |
 | *Il codice finale non può avere valore pari a 0!* | Manca il codice finale del contatore. | Compila **Cod. Finale**. |
 | *Il codice finale non può avere valore inferiore o pari al valore iniziale!* | L'intervallo del contatore è a rovescio. | Metti **Cod. Finale** maggiore di **Cod. Iniziale**. |

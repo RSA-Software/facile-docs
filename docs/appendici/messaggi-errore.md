@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-10 — **1055 messaggi**.
+Aggiornato al 2026-10-12 — **1057 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -412,6 +412,7 @@ Aggiornato al 2026-10-10 — **1055 messaggi**.
 | *Il Codice Fiscale digitato risulta già presente in archivio! Vuoi Continuare?* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | Lo stesso codice fiscale è già di un altro fornitore. | Come sopra. |
 | *Il Codice Fiscale digitato risulta già presente in archivio! Vuoi Continuare?* | [Rubrica](../moduli/anagrafiche/rubrica.md) | Lo stesso codice fiscale è già di un altro contatto. | Come sopra. |
 | *Il codice IVA impostato non è esente !<br>Impossibile continuare* | [Emissione fatture da documenti](../moduli/vendite/emissione-fatture-da-documenti.md) | L'aliquota indicata non è di esenzione. | Usa un'[aliquota](../moduli/contabilita/aliquote-iva.md) esente. |
+| *Il Codice Minsan/AIC deve avere 9 cifre, oppure la lettera E seguita da 8 cifre.* | [Anagrafica articoli](../moduli/anagrafiche/anagrafica-articoli.md) | Il **Cod. Minsan** non ha il formato richiesto. | Correggilo, oppure lascialo vuoto se l'articolo non è un medicinale. |
 | *Il codice nazione impostato sulla ditta deve essere di due caratteri!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Il codice nazione non è nel formato ISO a due lettere. | Correggilo, per esempio `IT`. |
 | *Il Codice non può superare …* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Il codice scritto è fuori dall'intervallo ammesso. | Usa un codice più basso. |
 | *Il Destinatario e' una pubblica amministrazione!<br>Vuoi utilizzare il registro e la causale per le Fatture PA ?* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Come sopra, quando è il destinatario a essere una PA. | Come sopra. |
@@ -961,6 +962,7 @@ Aggiornato al 2026-10-10 — **1055 messaggi**.
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | La causale è di scarico ma non sottrae dall'esistenza. | Correggi la [causale](../moduli/magazzino/causali-magazzino.md). |
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Movimenti di magazzino](../moduli/magazzino/movimenti-magazzino.md) | La causale scelta è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](../moduli/magazzino/causali-magazzino.md), o scegline un'altra. |
 | *Sei Sicuro ?* | [Manutenzione degli articoli](../moduli/anagrafiche/manutenzione-articoli.md) | Seconda conferma della cancellazione. | **Sì** cancella davvero. Non si torna indietro. |
+| *Sei Sicuro di voler continuare?* | [Ditte](../moduli/anagrafiche/ditte.md) | Conferma richiesta da **F2 - Salva** nelle **Impostazioni Protette**. La risposta preimpostata è **No**. | Rispondi **Sì** per registrare. La finestra resta aperta: chiudila con **Esci**. |
 | *Selezionare almeno una Sezione!* | [Stampe magazzino clienti](../moduli/magazzino/stampe-magazzino-clienti.md), [Stampe magazzino fornitori](../moduli/magazzino/stampe-magazzino-fornitori.md) | Si è confermato senza aver spuntato nessuna sezione. | Spunta le sezioni da includere. |
 | *Selezionare almeno un registro !* | [Rinumerazione protocolli](../moduli/contabilita/rinumerazione-protocolli.md) | Nessuna delle sei caselle è spuntata. | Spunta il registro o i registri da rinumerare. |
 | *Sequenza Errata* (sul display del Pos Touchscreen) | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Fra le altre cause: hai battuto una quantità da moltiplicare e poi letto l'etichetta di una bilancia che porta già l'importo; oppure hai letto lo scontrino di una bilancia Zenith con il moltiplicatore, il reso, lo storno o il prezzo libero ancora attivi. | Premi **C** e rileggi l'etichetta o lo scontrino senza altri tasti; per più pezzi, leggi un'etichetta per pezzo. |

@@ -103,8 +103,9 @@ correggere, cancellare e stampare le destinazioni.
 | **Listino Trasfert** | | Listino applicato ai trasferimenti verso questa destinazione. Solo per le destinazioni. | Numero di listino |
 | **Escludi dal Fatturato** | | Esclude la destinazione dalle [stampe clienti](stampe-clienti.md) che filtrano su questo segno. Solo per le destinazioni. | Sì / No |
 | **Cod. Univoco Ufficio** | | Il codice IPA dell'ufficio, per le destinazioni della Pubblica Amministrazione. | Fino a 6 caratteri |
+| **Tipo Destinatario**, **Cod. Ministeriale** | | Come la destinazione è identificata nelle comunicazioni al Ministero della Salute quando riceve medicinali: il tipo di destinatario e il suo codice ministeriale, come per il [cliente](anagrafica-clienti.md). Solo per le destinazioni dei clienti, e solo con la [gestione farmaceutica](ditte.md#attivare-la-gestione-farmaceutica) attiva. | Gli stessi tipi del cliente, da F - FARMACIA a Z - ALTRO; codice fino a 11 caratteri |
 
-Solo per il **titolare**, nel riquadro in basso:
+Solo per il **titolare**, nelle due righe in basso:
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|

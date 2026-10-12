@@ -140,6 +140,8 @@ Il programma richiede sempre la **Descrizione** e il **Cod. Iva**. Il
 | Coef. Convers. | | Coefficiente per convertire l'unità del fornitore nella propria. | Numero |
 | Codice Assoc. | | Codice dell'articolo presso l'associazione o il consorzio. | Testo |
 | Web Id | | Identificativo dell'articolo sul sito web. Compare solo se nei dati dell'azienda è attiva la gestione web, e non è modificabile. | Numero |
+| Cod. Minsan | | Il codice ministeriale del prodotto (AIC o Minsan), con cui il medicinale è identificato nelle comunicazioni al Ministero della Salute. Può restare vuoto. Compare solo con la [gestione farmaceutica](ditte.md#attivare-la-gestione-farmaceutica) attiva. | 9 cifre, oppure la lettera E seguita da 8 cifre |
+| Soggetto a Tracciabilità | | Segna i medicinali soggetti alla tracciabilità del farmaco, i cui movimenti vanno comunicati al Ministero della Salute. Compare solo con la gestione farmaceutica attiva. | Casella |
 
 Sopra le schede compaiono, quando ricorrono, le indicazioni **PROMO** —
 l'articolo è in promozione — e **Fuori Ass.** — l'articolo è fuori
@@ -294,6 +296,7 @@ Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 | *La descrizione articolo in italiano e' obbligatoria!* | Stai lavorando in una lingua diversa dall'italiano e la descrizione italiana è vuota. | Torna all'italiano con **Seleziona Lingua** e scrivi la descrizione. |
 | *Codice Articolo Presente in Archivio.* | Il codice digitato è già di un altro articolo. | Usa un codice diverso, o lascialo vuoto per farlo generare al programma. |
 | *Codice Articolo inferiore al minimo consentito (…)!* — *Codice Articolo superiore al massimo consentito (…)!* | Il codice è fuori dall'intervallo previsto per la generazione automatica dei codici. | Usa un codice compreso nell'intervallo indicato dal messaggio. |
+| *Il Codice Minsan/AIC deve avere 9 cifre, oppure la lettera E seguita da 8 cifre.* | Il **Cod. Minsan** non ha il formato richiesto. | Correggilo, oppure lascialo vuoto se l'articolo non è un medicinale. |
 | *Accoppiata Bancone - PLU gia' presente in Archivio ! Vuoi Correggere ?* | Un altro articolo ha già quel numero di PLU su quel bancone. | Rispondi **Sì** e cambia **Num. PLU** o **Bancone** nella scheda *Impostazioni*. |
 | *Confermi la cancellazione...* | Conferma richiesta da **F6 - Elimina** sulla prima eliminazione. | Rispondi **Sì** per marcare l'articolo come cancellato. |
 | *Confermi la Cancellazione....* | Conferma richiesta dalla seconda eliminazione, quella definitiva. | Rispondi **Sì** per togliere l'articolo dall'archivio. |

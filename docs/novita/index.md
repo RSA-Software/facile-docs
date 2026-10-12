@@ -16,6 +16,52 @@ una versione specifica del programma lo dicono in apertura, per esempio
 Non sono elencate le modifiche interne, che non cambiano nulla a video, e
 quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
+## Versione 2026 B09.00
+
+In preparazione.
+
+### Nuove funzioni
+
+**[Gestione farmaceutica](../moduli/anagrafiche/ditte.md#attivare-la-gestione-farmaceutica).**
+Per chi distribuisce medicinali, una nuova casella delle **Impostazioni
+Protette** della ditta, **Usa Gestione Farmaceutica**, aggiunge alle maschere i
+dati che servono per la tracciabilità del farmaco presso il Ministero della
+Salute:
+
+- sugli [articoli](../moduli/anagrafiche/anagrafica-articoli.md), il **Cod.
+  Minsan** e la casella **Soggetto a Tracciabilità**. Il codice si controlla al
+  salvataggio: 9 cifre, oppure la lettera E seguita da 8 cifre;
+- sui [clienti](../moduli/anagrafiche/anagrafica-clienti.md), nella scheda
+  **Impostazioni**, il tipo e il codice ministeriale del destinatario, del
+  committente e dell'intestatario della fattura;
+- sulle [destinazioni](../moduli/anagrafiche/destinazioni-diverse.md) dei
+  clienti, il tipo e il codice ministeriale del destinatario;
+- sui [depositi](../moduli/magazzino/depositi.md), il **Cod. Sito NSIS**;
+- sulle [causali di magazzino](../moduli/magazzino/causali-magazzino.md), il
+  **Tipo Mov. Ministero**, con i 29 tipi previsti.
+
+Con la casella spenta non cambia nulla: i campi nuovi non compaiono.
+
+### Miglioramenti
+
+- [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
+  finestra è più larga e i dati di nascita del titolare non sono più chiusi
+  in un riquadro.
+- [Depositi](../moduli/magazzino/depositi.md): **Cod. P.Vendita** della
+  versione Megastore sta ora sopra le caselle **Escludi**, accanto al sito
+  NSIS.
+
+### Correzioni
+
+**Magazzino**
+
+- [Causali magazzino](../moduli/magazzino/causali-magazzino.md): salvando una
+  causale raggiunta con **F3 - Prec.**, **F4 - Succ.**, **F5 - Cerca** o
+  **Ricarica**, il programma poteva avvisare *Hai cambiato il modo in cui
+  questa causale muove i contatori di magazzino…* anche se i contatori non
+  erano stati toccati: li confrontava con quelli della prima causale aperta.
+  Ora l'avviso compare solo quando i contatori cambiano davvero.
+
 ## Versione 2026 B08.01
 
 In distribuzione dal 12 ottobre 2026.

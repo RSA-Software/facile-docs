@@ -89,12 +89,13 @@ ciascuno con la sua casella.
 | Registro Doc. | | Registro su cui numerare i documenti emessi da questo deposito. Lasciandolo vuoto vale il registro generale. | (vuoto) o un registro definito in azienda |
 | Fornitore | | Fornitore associato al deposito. Il programma lo registra ma **non lo rilegge da nessuna parte**. | Codice dall'archivio fornitori |
 | Cod. Destinazione | | La destinazione a cui il fornitore deve consegnare per questo deposito: viene messa sugli ordini generati dalla distribuzione automatica. | Numero di una destinazione di tipo fornitore o ditta |
+| Cod. Sito NSIS | | Il codice con cui il ministero identifica il deposito come sito logistico, usato nelle comunicazioni dei movimenti dei medicinali. Compare solo con la [gestione farmaceutica](../anagrafiche/ditte.md#attivare-la-gestione-farmaceutica) attiva. | Fino a 6 caratteri |
+| Cod. P.Vendita | | **Solo Megastore.** Codice con cui il punto vendita è identificato negli scambi con la centrale. | Fino a 7 caratteri |
 | Escludi Visibilità Web | | Le giacenze del deposito **non vengono mandate al negozio online**. Su un deposito nuovo è già spuntata. | Casella |
 | Escludi Interrogazione da Web | | Il deposito **non compare fra quelli interrogabili** nella consultazione delle giacenze. | Casella |
 | Escludi da Esportazione P.V. | | Il deposito resta fuori dall'esportazione verso i punti vendita. | Casella |
 | Escludi da Inventario | | Il deposito non entra nelle stampe e nelle rilevazioni d'inventario. | Casella |
 | Escludi da Magazzino | | Il deposito non entra nelle stampe di magazzino. | Casella |
-| Cod. P.Vendita | | **Solo Megastore.** Codice con cui il punto vendita è identificato negli scambi con la centrale. | Fino a 7 caratteri |
 | Importa solo Articoli SMA | | **Solo Megastore.** L'importazione carica sul deposito i soli articoli previsti dalla centrale. Nella versione Taglie e Colori - Calzature la stessa casella si chiama **Non Esportare Sconto Clienti**. | Casella |
 
 !!! note "Nota"

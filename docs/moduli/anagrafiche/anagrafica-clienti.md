@@ -192,6 +192,9 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Spese Stoccaggio, Spese Trasporto, Altre Spese | | Spese addebitate al cliente. Nella versione Ortofrutta i tre campi si chiamano **% Incid. Stoccaggio**, **% Incid. Trasporto** e **% Incid. Contratto** e si esprimono in percentuale, da 0 a 100. | Importi |
 | Normale, Transfert, C.S. Vendita, C.S. Trasfert | | Le quattro percentuali di provvigione, nel riquadro **% Provvigioni**. | Percentuali |
 | Crediti Acquistati, Crediti Utilizzati, Crediti Utilizzabili Offline, Num. Crediti Omaggio, Data Crediti Omaggio, Fine Data Xml -> PDF | | **Solo RSA Office.** I crediti del servizio di invio delle fatture elettroniche, nel riquadro **Crediti Invia Fatture Elettroniche**. Nelle altre versioni il riquadro non compare. | Numeri e date |
+| Tipo Destinatario, Cod. Ministeriale | | Come il cliente è identificato nelle comunicazioni al Ministero della Salute quando riceve medicinali: il tipo di destinatario e il suo codice ministeriale. Nel riquadro **Gestione Farmaceutica**, che compare solo con la [gestione farmaceutica](ditte.md#attivare-la-gestione-farmaceutica) attiva e mai nella versione RSA Office. | F - FARMACIA, D - DISTRIBUTORE, A - ASL, R - REGIONE, T - STRUTTURA DI RICOVERO, L - LABORATORIO DI ANALISI, C - ESERCIZIO COMMERCIALE, E - ESTERO, P - PRODUTTORE, S - SMALTITORE, I - IPZS, U - USCITA DAL CANALE, Z - ALTRO; codice fino a 11 caratteri |
+| Tipo Committente, Cod. Committente | | L'ente per conto del quale si consegna, quando la fornitura è fatta per un'ASL, una Regione o una struttura, come nella distribuzione per conto. Nello stesso riquadro. | A - ASL, R - REGIONE, T - STRUTTURA; codice fino a 16 caratteri |
+| Tipo Intestatario, Cod. Intestatario | | L'ente a cui è intestata la fattura della fornitura, quando non è il cliente stesso. Nello stesso riquadro. | A - ASL, R - REGIONE, T - STRUTTURA; codice fino a 16 caratteri |
 
 !!! warning "Attenzione"
 

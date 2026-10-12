@@ -90,6 +90,41 @@ In alto ci sono i campi di ricerca:
 | Commessa | | Se la commessa va chiesta sul movimento. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Dettaglio | | Se il dettaglio va chiesto sul movimento. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Matricole | | Se il movimento gestisce le matricole. | NON GESTITE, FACOLTATIVE, OBBLIGATORIE |
+| Tipo Mov. Ministero | | Come i movimenti di questa causale vanno comunicati al Ministero della Salute per la tracciabilità dei medicinali. Lascialo vuoto sulle causali che non riguardano il Ministero. Compare solo con la [gestione farmaceutica](../anagrafiche/ditte.md#attivare-la-gestione-farmaceutica) attiva. | (vuoto) o uno dei 29 tipi del Ministero, elencati qui sotto |
+
+??? note "I tipi di movimento del Ministero"
+
+    | Tipo | Significato |
+    |---|---|
+    | VI | Vendita Italia (non SSN) |
+    | VS | Vendita SSN |
+    | VE | Vendita estero |
+    | RI | Altre restituzioni in ingresso |
+    | RT | Restituzione in ingresso SSN |
+    | RN | Rientri |
+    | NV | Movimento senza vendita |
+    | DC | Distribuzione per conto ASL/Regione |
+    | RD | Restituzione da distribuzione per conto |
+    | RS | Rientro a fornitore da distribuzione per conto |
+    | DI | Distruzione |
+    | SM | Smaltimento |
+    | FU | Furto o smarrimento |
+    | RF | Ritrovamento furto |
+    | SQ | Sequestro |
+    | DQ | Dissequestro |
+    | DN | Donazione |
+    | QP | Quadratura con differenza positiva |
+    | QN | Quadratura con differenza negativa |
+    | NC | Nota di credito accordi AIFA |
+    | CU | Uso compassionevole |
+    | RU | Restituzione uso compassionevole |
+    | DB | Distruzione bollini |
+    | FB | Furto bollini |
+    | RB | Reso bollino |
+    | RC | Riclassificazione bollino |
+    | PV | Prelievo vaccini Covid |
+    | RV | Restituzione vaccini Covid |
+    | ZZ | Altro movimento |
 
 ### Contatori
 
