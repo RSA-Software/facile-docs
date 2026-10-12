@@ -124,8 +124,8 @@ Il programma richiede sempre la **Descrizione** e il **Cod. Iva**. Il
 | Cat. Merc. | | Categoria merceologica. | Codice dall'archivio categorie |
 | Marchio | | Marca dell'articolo. | Codice dall'archivio marchi |
 | Stagione | | Stagione di riferimento. | Codice dall'archivio stagioni |
-| For. Abituale | | Fornitore da cui l'articolo si acquista di norma. | Codice dall'archivio fornitori |
-| For. Altern. | | Fornitore alternativo. Nella versione Taglie e Colori il campo si chiama **Settore**. | Codice dall'archivio fornitori |
+| For. Abituale | | Fornitore da cui l'articolo si acquista di norma. Conta, insieme al fornitore alternativo, per i [DDT trasfert](../vendite/documento-di-vendita.md#emettere-un-ddt-trasfert), che si emettono solo con un fornitore comune a tutti gli articoli. | Codice dall'archivio fornitori |
+| For. Altern. | | Fornitore alternativo, che conta come l'abituale per i DDT trasfert. Nella versione Taglie e Colori il campo si chiama **Settore** e per i DDT trasfert non conta. | Codice dall'archivio fornitori |
 | Tabella 1, Tabella 2, Tabella 3 | | Tre classificazioni libere. Non si chiamano davvero così: ciascuna prende il nome della tabella che le è stata assegnata nei dati dell'azienda, e resta spenta finché non gliene viene assegnata una. Nella versione Bevande la prima si chiama **Cod. Vuoto**. | Codici di tabella |
 | Ubicazione | | Posizione dell'articolo in magazzino. | Testo |
 | Gruppo, Sottogruppo | | Raggruppamenti liberi dell'articolo. | Fino a 30 caratteri |

@@ -74,7 +74,7 @@ da riferire insieme al testo di un eventuale messaggio d'errore.
 | **Banca** | | La [banca](../contabilita/banche.md) di appoggio. | codice |
 | **Agente** | | L'[agente](../anagrafiche/anagrafica-agenti.md) su cui matura la provvigione. Proposto dal cliente. | codice |
 | **Cau. Magazzino** | | La [causale di magazzino](../magazzino/causali-magazzino.md) con cui la merce viene movimentata. | codice |
-| **Tipo Vendita** | | Il genere di vendita: decide quale delle quattro percentuali di provvigione si applica. | `N` normale, `T` trasferta, `C` e `D` centro servizi |
+| **Tipo Vendita** | | Il genere di vendita: decide quale delle quattro percentuali di provvigione si applica. Un DDT con `T` si emette solo se gli articoli hanno un fornitore in comune: vedi [Emettere un DDT trasfert](#emettere-un-ddt-trasfert). | `N` normale, `T` trasferta, `C` e `D` centro servizi |
 | **Cau. Contabile** | | La [causale](../contabilita/causali-contabili.md) con cui il documento sarà contabilizzato. | codice |
 | **Registro** | ● | Il registro IVA e il numeratore da usare. | voce dell'elenco |
 | **Num. Fattura**, **Data Fattura** | | Numero e data del documento. | numero e data |
@@ -414,6 +414,27 @@ il pulsante **F2 - OK** sparisce: resta solo **Esci**.
 3. Il documento resta poi disponibile per l'
    [emissione differita della fattura](emissione-fatture-da-documenti.md).
 
+### Emettere un DDT trasfert
+
+Un DDT con **Tipo Vendita** `T` raccoglie la merce di **un solo fornitore**: gli
+articoli devono avere un fornitore in comune, come fornitore abituale o come
+alternativo, secondo l'[anagrafica articoli](../anagrafiche/anagrafica-articoli.md).
+
+1. Apri **Menu ▸ Vendite ▸ Doc. di Trasporto ▸ Inserimento** e metti
+   **Tipo Vendita** su `T`.
+2. Scrivi le righe. Se un articolo non ha fornitori, o non ne ha in comune con
+   quelli già sul DDT, il programma avvisa subito, ma la riga resta.
+3. Premi **F7 - Stampa**. Il DDT diventa emesso solo se il fornitore comune
+   c'è; altrimenti resta salvato e il messaggio dice quale articolo o quali
+   fornitori correggere.
+
+Le righe senza codice articolo, come le descrizioni e le note, non contano.
+Se gli articoli hanno più di un fornitore in comune, vale quello che è il
+fornitore abituale del maggior numero di righe. Nella versione Taglie e Colori
+il secondo fornitore dell'articolo è il **Settore**, quindi conta solo il
+fornitore abituale. Il controllo vale per tutti i DDT trasfert, anche senza la
+gestione farmaceutica.
+
 ### Cambiare il listino di un documento
 
 Se il documento è stato compilato con il listino sbagliato, o il cliente è
@@ -645,6 +666,7 @@ fermato.
 | *Articolo non più ordinabile!<br><br>Vuoi inserirlo ugualmente nell'ordine?* | In un ordine a fornitore, l'articolo è segnato come non più ordinabile. | **No** lo lascia fuori; **Sì** lo ordina lo stesso. |
 | *L'Articolo è già presente nell'ordine.<br><br>Vuoi inserirlo ugualmente?* | L'ordine a fornitore ha già una riga con quell'articolo. | Di solito conviene correggere la quantità della riga che c'è. |
 | *Non c'è giacenza sufficiente per il lotto indicato!<br><br>Vuoi continuare?* | Il lotto scelto non copre la quantità. | **Sì** prosegue lo stesso. |
+| *Questo DDT Trasfert non potrà essere emesso: gli articoli devono avere un fornitore in comune, abituale o alternativo.<br><br>…* | Su un DDT trasfert, la riga appena salvata — o il passaggio del **Tipo Vendita** a `T` — lascia gli articoli senza un fornitore in comune, oppure l'articolo non ha né fornitore abituale né alternativo. Il messaggio nomina l'articolo o elenca i fornitori presenti. Compare solo quando è questa operazione a creare il problema. | È un avviso: la riga resta. Per poter emettere il DDT togli o cambia la riga, oppure completa i fornitori dell'articolo in [anagrafica](../anagrafiche/anagrafica-articoli.md). |
 | *Vuoi abilitare la gestione del lotto ?* | L'articolo non ha la gestione dei lotti e si sta indicando un lotto. | **Sì** la attiva sull'articolo. |
 | *Vuoi azzerare la quantità ?* | Si è chiesto di riprendere la quantità con ++f5++. | **Sì** la azzera prima. |
 | *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | Con **Maiusc+F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
@@ -706,6 +728,7 @@ Credito PA» al posto di «Fatture PA».
 | *Per poter eseguire la stampa il documento deve essere sbloccato!* | Come sopra, al momento della stampa. | Va sbloccato prima. |
 | *Per il documento risultano gia' incassi per … Euro.<br>Se continui con l' operazione e non ristampi il documento, devi correggere manualmente lo scadenzario.<br>Vuoi Continuare ?* | Si sta modificando un documento su cui sono già stati registrati incassi (o pagamenti, per l'autofattura). | Leggerlo bene: proseguendo **senza ristampare**, lo scadenzario resta con i vecchi importi e va sistemato a mano. |
 | *Confermi la stampa della fattura ?* | Conferma prima di stampare. | È il momento in cui il documento **diventa emesso**: magazzino, scadenze e provvigioni si muovono adesso. |
+| *Un DDT Trasfert si emette solo se gli articoli hanno un fornitore in comune, abituale o alternativo.<br><br>…* | Stampando un DDT con **Tipo Vendita** `T`, gli articoli non hanno un fornitore in comune, oppure uno non ha fornitori. Sotto, il messaggio nomina l'articolo o elenca i fornitori presenti. | Il DDT resta salvato e non viene emesso. Correggi le righe o i fornitori in anagrafica e ristampa: vedi [Emettere un DDT trasfert](documento-di-vendita.md#emettere-un-ddt-trasfert). |
 | *Vuoi Stampare il Documento?* | Proposta di stampa dopo il salvataggio. | **No** lascia il documento salvato ma non emesso. |
 | *Vuoi Contabilizzare il documento ?* | Proposta di [contabilizzazione](contabilizzazione-documenti.md). | **Sì** genera la registrazione di prima nota. |
 | *Il Record è stato modificato da un altro processo.* | Mentre il documento era aperto a video, qualcuno l'ha cambiato da un'altra postazione o da un'altra maschera. Esce anche quando il programma si accorge che stava per scrivere su un documento diverso da quello a video: in quel caso blocca la scrittura e ne lascia traccia nel registro degli errori. | Il documento viene riletto com'è in archivio e il comando — stampa, corpo, totali, piede — **non prosegue**. Controlla i dati a video e ripeti il comando. |

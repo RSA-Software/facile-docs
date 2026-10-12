@@ -42,6 +42,23 @@ Salute:
 
 Con la casella spenta non cambia nulla: i campi nuovi non compaiono.
 
+**[DDT trasfert di un solo fornitore](../moduli/vendite/documento-di-vendita.md#emettere-un-ddt-trasfert).**
+Un DDT con **Tipo Vendita** `T` si emette solo se gli articoli hanno un
+fornitore in comune, come fornitore abituale o come alternativo. Il programma
+avvisa già mentre si scrivono le righe, quando si passa il tipo vendita a `T`
+e quando la vendita al banco registra il DDT; alla stampa un DDT senza
+fornitore comune resta salvato, e il messaggio dice quale articolo o quali
+fornitori correggere. Il fornitore comune viene registrato sul DDT a ogni
+salvataggio, e il riepilogo delle competenze per fornitore lo trova anche sui
+DDT emessi senza nota del fornitore.
+
+!!! warning "Vale per tutti i DDT trasfert"
+
+    Il controllo non dipende dalla gestione farmaceutica. Chi oggi emette DDT
+    trasfert con articoli di fornitori diversi, o con articoli senza
+    fornitore, dopo l'aggiornamento non riuscirà più a stamparli finché non
+    completa i fornitori in anagrafica o divide il DDT.
+
 ### Miglioramenti
 
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
