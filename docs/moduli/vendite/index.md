@@ -58,6 +58,10 @@ attiva nei dati della ditta.
 
 - [Dato Vendita Fornitori](dato-vendita-fornitori.md) — il report mensile per i
   fornitori in conto deposito, un file Excel per fornitore.
+- [Flusso MOV](flusso-mov.md) — il file della tracciabilità del farmaco per il
+  Ministero della Salute, con invii, rettifiche e cancellazioni.
+- [Registro Trasmissioni MOV](registro-trasmissioni-mov.md) — quello che è stato
+  mandato, l'ID di caricamento del portale e gli scarti.
 
 !!! tip "Una maschera per tutti i documenti"
 

@@ -149,6 +149,7 @@ non è un guasto.
 | Tipo | | Formato del file d'ordine da produrre. | NESSUNO, EXCEL XLS, EXCEL XLXS, EVISION, INGROSS LEVANTE s.p.a., EDIFACT D96A, MODERNA, SISA, APULIA DISTRIBUZIONE, EURITMO |
 | Frazionabile | | Indica se l'ordine al fornitore può essere spezzato in più consegne. | (vuoto), NO, SI |
 | Lingua Docum. | | Nazione che determina la lingua dei documenti emessi verso il fornitore. | Fino a 4 caratteri, dall'archivio nazioni |
+| Tipo Destinatario, Cod. Ministeriale | | Come il fornitore è identificato nel [Flusso MOV](../vendite/flusso-mov.md) quando gli si rimandano medicinali (rientri): il tipo e il codice ministeriale del suo sito. Compaiono solo con la [gestione farmaceutica](ditte.md#attivare-la-gestione-farmaceutica) attiva. | F - FARMACIA, D - DISTRIBUTORE, P - PRODUTTORE e gli altri tipi del Ministero; codice fino a 11 caratteri |
 | Causale Contab. | | Causale proposta nelle registrazioni di prima nota. Accanto compare la descrizione. | Codice dall'archivio causali contabili |
 | Natura Giuridica | | Codice della forma giuridica usato dalla fattura elettronica: da questo dipende se il capitale sociale e il socio unico vengono trasmessi. Da non confondere con **Natura Giurid.** della scheda *Generale*. | 2 caratteri |
 | Regime Fiscale | | Regime fiscale dichiarato dal fornitore. | Da elenco (ORDINARIO, REGIME FORFETTARIO, …) |

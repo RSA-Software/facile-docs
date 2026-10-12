@@ -90,7 +90,7 @@ In alto ci sono i campi di ricerca:
 | Commessa | | Se la commessa va chiesta sul movimento. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Dettaglio | | Se il dettaglio va chiesto sul movimento. | INVISIBILE, FACOLTATIVO, OBBLIGATORIO |
 | Matricole | | Se il movimento gestisce le matricole. | NON GESTITE, FACOLTATIVE, OBBLIGATORIE |
-| Tipo Mov. Ministero | | Come i movimenti di questa causale vanno comunicati al Ministero della Salute per la tracciabilità dei medicinali. Lascialo vuoto sulle causali che non riguardano il Ministero. Compare solo con la [gestione farmaceutica](../anagrafiche/ditte.md#attivare-la-gestione-farmaceutica) attiva. | (vuoto) o uno dei 29 tipi del Ministero, elencati qui sotto |
+| Tipo Mov. Ministero | | Come i movimenti di questa causale vanno comunicati al Ministero della Salute per la tracciabilità dei medicinali, nel [Flusso MOV](../vendite/flusso-mov.md): i documenti con una causale senza tipo movimento non si comunicano. Per i clienti del Servizio Sanitario il programma trasforma da sé `VI` in `VS` e `RI` in `RT`. Lascialo vuoto sulle causali che non riguardano il Ministero. Compare solo con la [gestione farmaceutica](../anagrafiche/ditte.md#attivare-la-gestione-farmaceutica) attiva. | (vuoto) o uno dei 29 tipi del Ministero, elencati qui sotto |
 
 ??? note "I tipi di movimento del Ministero"
 

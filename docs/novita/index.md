@@ -50,6 +50,18 @@ per località e articolo, con una colonna per deposito. Scrive un file Excel per
 fornitore nella cartella **out**, nel formato concordato con i fornitori, e
 prima elenca gli articoli senza Minsan e i clienti senza CAP.
 
+**[Flusso MOV](../moduli/vendite/flusso-mov.md) e [Registro Trasmissioni MOV](../moduli/vendite/registro-trasmissioni-mov.md).**
+Nello stesso menu, il file MOV della tracciabilità del farmaco per il
+Ministero della Salute. Dai documenti di merce a clienti e fornitori, con le
+causali che hanno il tipo movimento e gli articoli soggetti a tracciabilità,
+il programma prepara un'anteprima con i primi invii, le rettifiche e le
+cancellazioni, ferma i documenti con dati mancanti e scrive il file XML
+controllato contro lo schema del Ministero. Il registro tiene tutto quello che
+è partito, con l'ID di caricamento del portale NSIS e gli scarti da
+rimandare. Per i rientri ai fornitori, l'[anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md)
+ha ora anche tipo e codice ministeriale, e la riga ministeriale vale anche
+per le destinazioni dei fornitori.
+
 **[DDT trasfert di un solo fornitore](../moduli/vendite/documento-di-vendita.md#emettere-un-ddt-trasfert).**
 Un DDT con **Tipo Vendita** `T` si emette solo se gli articoli hanno un
 fornitore in comune, come fornitore abituale o come alternativo. Il programma

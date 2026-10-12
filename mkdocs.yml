@@ -261,6 +261,8 @@ nav:
       - Stampe e strumenti: moduli/vendite/stampe-vendite.md
       - Gestione Farmaceutica:
           - Dato Vendita Fornitori: moduli/vendite/dato-vendita-fornitori.md
+          - Flusso MOV: moduli/vendite/flusso-mov.md
+          - Registro Trasmissioni MOV: moduli/vendite/registro-trasmissioni-mov.md
   - Ordini:
       - moduli/ordini/menu-ordini.md
       - Ordini in Lavorazione e in Ricezione: moduli/ordini/ordini-in-lavorazione-e-ricezione.md
