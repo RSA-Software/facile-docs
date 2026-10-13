@@ -56,6 +56,10 @@ In alto il periodo, il pulsante dell'anteprima e il riepilogo; al centro l'elenc
 di quello che partirebbe, una riga per articolo e lotto di ogni documento; in
 basso i pulsanti.
 
+La maschera si apre larga quattro quinti della finestra di Facile e alta sette
+decimi; con il pulsante di ingrandimento nella barra del titolo occupa tutto lo
+schermo, e l'elenco si allarga con lei.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |

@@ -42,6 +42,10 @@ In alto il periodo di generazione; al centro l'elenco dei record, dal più recen
 in basso i due campi per l'ID di caricamento e per l'esito, ciascuno con il suo
 pulsante.
 
+La maschera si apre larga quattro quinti della finestra di Facile e alta sette
+decimi; con il pulsante di ingrandimento nella barra del titolo occupa tutto lo
+schermo, e l'elenco si allarga con lei.
+
 ## Campi
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
