@@ -474,7 +474,7 @@ dopo la password e dopo un avviso esplicito. Contiene i parametri più delicati:
 | **Key SmartCard**, **Pin**, **Utilizzo SmartC.** | La smart card. |
 | **Ultima Fattura su Cassa**, **Ultima Scontrino Emesso** | Gli ultimi numeri emessi. |
 | **Categoria Premi** | La categoria dei premi fidelity. |
-| **Usa Gestione Farmaceutica** | Accende la gestione dei medicinali: il codice Minsan e la tracciabilità sugli [articoli](anagrafica-articoli.md), i codici ministeriali su [clienti](anagrafica-clienti.md) e [destinazioni](destinazioni-diverse.md), il sito NSIS sui [depositi](../magazzino/depositi.md), il tipo di movimento sulle [causali di magazzino](../magazzino/causali-magazzino.md) e il menu **Vendite ▸ Gestione Farmaceutica**. Spenta, quei campi e quel menu non compaiono da nessuna parte. |
+| **Usa Gestione Farmaceutica** | Accende la gestione dei medicinali: il codice Minsan e la tracciabilità sugli [articoli](anagrafica-articoli.md), i codici ministeriali su [clienti](anagrafica-clienti.md), [fornitori](anagrafica-fornitori.md) e [destinazioni](destinazioni-diverse.md), il sito NSIS sui [depositi](../magazzino/depositi.md), il tipo di movimento sulle [causali di magazzino](../magazzino/causali-magazzino.md) e il menu **Vendite ▸ Gestione Farmaceutica**. Spenta, quei campi e quel menu non compaiono da nessuna parte. |
 
 ### Intestazione per Fatturazione
 
@@ -515,8 +515,8 @@ articoli classificati secondo un significato che non c'è più.
 3. Spunta **Usa Gestione Farmaceutica**.
 4. Premi **F2 - Salva** e rispondi **Sì** a *Sei Sicuro di voler continuare?*.
 5. Premi **Esci**, poi chiudi la maschera delle ditte.
-6. Da quel momento le maschere di articoli, clienti, destinazioni, depositi e
-   causali di magazzino mostrano i campi della gestione farmaceutica, e nel
+6. Da quel momento le maschere di articoli, clienti, fornitori, destinazioni,
+   depositi e causali di magazzino mostrano i campi della gestione farmaceutica, e nel
    menu compare **Vendite ▸ Gestione Farmaceutica**. Una maschera che era già
    aperta li mostra dopo averla chiusa e riaperta.
 

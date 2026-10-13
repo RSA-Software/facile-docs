@@ -105,6 +105,19 @@ Le colonne dell'elenco:
 6. Carica il file sul portale NSIS del Ministero e riporta l'ID di caricamento
    nel [Registro Trasmissioni MOV](registro-trasmissioni-mov.md).
 
+### Il promemoria all'avvio
+
+All'avvio di Facile, e quando si cambia ditta, il programma controlla i documenti
+dell'ultimo mese fino a ieri. Se c'è qualcosa da mandare al Ministero — primi
+invii, rettifiche o cancellazioni — o qualche documento fermo per anomalie,
+avvisa con quanti record sono e propone di aprire questa maschera. Rispondendo
+**Sì** la maschera si apre su quel periodo, fino a oggi, con l'anteprima già
+fatta.
+
+Il promemoria compare solo con la gestione farmaceutica attiva, sull'esercizio
+dell'anno in corso e agli utenti che hanno la voce **Flusso MOV** abilitata; non
+compare sulle postazioni di cassa.
+
 ### Cosa entra nel file
 
 - I documenti di merce verso **clienti e fornitori**: DDT di ogni tipo vendita,
@@ -154,6 +167,7 @@ Il programma confronta ogni documento con quello che ha già mandato:
 | *…: con il tipo movimento … il committente SSN è obbligatorio.* | Riga ferma: il movimento è verso il Servizio Sanitario ma il cliente non ha il committente. | Compila **Tipo Committente** e **Cod. Committente** nel cliente. |
 | *Articolo …: nella vendita all'estero il lotto è obbligatorio.* | Riga ferma: movimento `VE` senza lotto. | Indica il lotto sulla riga del documento. |
 | *Articolo …: la quantità non è un numero intero di confezioni.* / *Articolo …: la quantità è negativa.* | Riga ferma: il Ministero vuole confezioni intere, da zero in su. | Correggi la quantità sul documento. |
+| *Ci sono movimenti di medicinali, di ieri o dei giorni prima, non ancora comunicati al Ministero:<br><br>da mandare: … record<br>fermi per anomalie: … record<br><br>La comunicazione va fatta entro 24 ore dalla spedizione.<br><br>Vuoi aprire il Flusso MOV?* | All'avvio di Facile o al cambio ditta: nell'ultimo mese fino a ieri ci sono record da mandare o documenti fermi per anomalie. | **Sì** apre questa maschera sul periodo, con l'anteprima già fatta; **No** rimanda: il promemoria torna al prossimo avvio. |
 | *Nel periodo non c'è niente da mandare al Ministero.* | Nessun primo invio, rettifica o cancellazione nel periodo. | Niente: è tutto già comunicato. |
 | *Ci sono … righe ferme per anomalie, elencate con FERMO nelle note: i loro documenti non partono.<br><br>Vuoi generare il file con gli altri?* | Alcuni documenti hanno anomalie. La risposta preimpostata è **No**. | **No** per correggere prima; **Sì** per mandare intanto gli altri: i documenti fermi partiranno con una generazione successiva. |
 | *Il file non rispetta lo schema del Ministero e non è stato scritto:<br><br>…* | Il controllo del file contro lo schema del Ministero ha trovato un errore; il motivo è sotto. | Segnala all'assistenza il testo del messaggio. Il registro non è stato toccato. |

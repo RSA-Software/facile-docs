@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-12 — **1081 messaggi**.
+Aggiornato al 2026-10-13 — **1082 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -126,6 +126,7 @@ Aggiornato al 2026-10-12 — **1081 messaggi**.
 | *Ci sono Codici Scartati durante la Ricezione.<br>Li vuoi stampare?* | [Bilance](../moduli/casse-bilance/bilance.md) | Alcuni codici venduti non corrispondono a nessun articolo. | **Sì**: la stampa dice quali. Vanno sistemati in anagrafica. |
 | *Ci sono Codici Scartati durante la Ricezione.<br>Vuoi stampare ?* | [Casse](../moduli/casse-bilance/casse.md) | Alcuni codici venduti non corrispondono a nessun articolo. | **Sì**: la stampa dice quali. Vanno sistemati in anagrafica e il venduto reinserito a mano. |
 | *Ci sono Fatture/Note di Credito fatte in anni di esercizio diversi<br>che non possono essere stampate da questo esercizio!* | [Distinte di incasso e di pagamento](../moduli/scadenze/distinte-incasso-pagamento.md) | Alcuni documenti sono di un altro anno. | Ristampali dall'anno in cui sono stati emessi. |
+| *Ci sono movimenti di medicinali, di ieri o dei giorni prima, non ancora comunicati al Ministero:<br><br>da mandare: … record<br>fermi per anomalie: … record<br><br>La comunicazione va fatta entro 24 ore dalla spedizione.<br><br>Vuoi aprire il Flusso MOV?* | [Flusso MOV](../moduli/vendite/flusso-mov.md) | All'avvio di Facile o al cambio ditta: nell'ultimo mese fino a ieri ci sono record da mandare o documenti fermi per anomalie. | **Sì** apre questa maschera sul periodo, con l'anteprima già fatta; **No** rimanda: il promemoria torna al prossimo avvio. |
 | *Ci sono righe con impegno materiale per la produzione fatte in anni diversi dal corrente!* | [Produzione](../moduli/magazzino/produzione.md) | Come sopra, ma le righe di impegno sono di un esercizio precedente. | Vanno tolte dall'esercizio in cui sono nate: rientra in quell'anno e ripeti. |
 | *Ci sono righe con impegno materiale per la produzione!* — *Vuoi rimuoverle?* | [Produzione](../moduli/magazzino/produzione.md) | Si sta chiudendo una commessa che ha ancora righe di impegno non trasformate in scarico. | **Sì** le toglie e prosegue. **No** interrompe la chiusura. |
 | *Ci sono righe con presente la quantita' ma senza fornitore!* | [Riordino articoli con analisi prezzi](../moduli/ordini/riordino-articoli.md) | Una riga ha la quantità ma **For. Sel.** vuoto. | Facile si posiziona sulla riga: indica il fornitore. |

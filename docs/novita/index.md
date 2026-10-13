@@ -58,7 +58,8 @@ il programma prepara un'anteprima con i primi invii, le rettifiche e le
 cancellazioni, ferma i documenti con dati mancanti e scrive il file XML
 controllato contro lo schema del Ministero. Il registro tiene tutto quello che
 è partito, con l'ID di caricamento del portale NSIS e gli scarti da
-rimandare. Per i rientri ai fornitori, l'[anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md)
+rimandare. All'avvio, se nell'ultimo mese ci sono movimenti non ancora
+comunicati, un promemoria propone di aprire il Flusso MOV. Per i rientri ai fornitori, l'[anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md)
 ha ora anche tipo e codice ministeriale, e la riga ministeriale vale anche
 per le destinazioni dei fornitori.
 
