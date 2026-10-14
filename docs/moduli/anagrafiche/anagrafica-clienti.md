@@ -151,6 +151,7 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Listino Vendita | | Listino applicato nei documenti di vendita. | Da 1 a 3 |
 | Listino Trasfert | | Listino applicato ai trasferimenti. | Da 1 a 3 |
 | Livello | | Il gruppo di clienti a cui questo appartiene per le promozioni: una promozione riservata a un livello si applica solo ai clienti che hanno **quel** numero. Nella versione Studio il campo non compare. | da 0 a 100; `0` = nessun livello |
+| Aggiungi a preferiti | | Mette il cliente fra i preferiti delle app FacileSmart e Facile Mobile, che durante la vendita permettono di sceglierlo velocemente fra i soli clienti preferiti. In Facile non cambia nulla. Su Facile Mobile la scelta arriva con il successivo **Genera Dati per Facile Mobile**. | Casella |
 | Riferimento | | Persona o ufficio da contattare presso il cliente. | Fino a 50 caratteri |
 | Sito Web | | Sito internet del cliente. | Fino a 80 caratteri, in minuscolo |
 

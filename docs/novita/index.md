@@ -88,6 +88,10 @@ DDT emessi senza nota del fornitore.
 - [Depositi](../moduli/magazzino/depositi.md): **Cod. P.Vendita** della
   versione Megastore sta ora sopra le caselle **Escludi**, accanto al sito
   NSIS.
+- [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md): la nuova
+  casella **Aggiungi a preferiti** nella scheda **Generale** mette il cliente
+  fra i preferiti delle app FacileSmart e Facile Mobile, per sceglierlo
+  velocemente durante la vendita.
 
 ### Correzioni
 
