@@ -84,7 +84,6 @@ Le versioni citate nel manuale sono queste:
 | Oreficerie | Oreficerie e gioiellerie |
 | Fiscali | Attività commerciali che vendono modulistica fiscale soggetta a registrazione, come le ricevute fiscali |
 | Studio | Studi di consulenza fiscale e del lavoro: la gestione dei costi mensili delle attività professionali svolte |
-| RSA Office | Servizi in abbonamento e licenze |
 | CRM | Modulo di gestione della relazione con i clienti |
 
 !!! note "Nota"
