@@ -143,6 +143,12 @@ compare sulle postazioni di cassa.
 - **Lotto** e **scadenza** partono se la riga li ha; nella vendita all'estero il
   lotto è obbligatorio.
 - **Valore**: solo per `VS`, `RT` e `DC`, il totale delle righe IVA compresa.
+- **Caratteri**: il file usa la codifica ISO-8859-1, come gli esempi delle
+  specifiche del Ministero. Le lettere accentate restano come sono; i caratteri
+  che quella codifica non ha diventano il loro equivalente semplice: virgolette
+  e apostrofi tipografici diventano `"` e `'`, i trattini lunghi `-`, i puntini
+  di sospensione `...` e il simbolo dell'euro `EUR`. Riguarda soprattutto il
+  numero del documento e il lotto.
 
 ### Rettifiche e cancellazioni
 
