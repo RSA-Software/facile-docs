@@ -17,14 +17,19 @@ totale dello scontrino e registra quanto è stato pagato.
     - **Configurazione:** un file nella cartella `cfg` di Facile, diverso per ogni marca
     - **Al banco:** il tasto della cassa sul **Pos Touchscreen**; con Virtuo VNE e PagAmico anche ++f6++ **Rendiresto** nella chiusura della vendita
     - **Pagine dei modelli:** [CashDro](cashdro.md), [Cashlogy](cashlogy.md), [Cashmatic](cashmatic.md), [Virtuo VNE](vne.md), [PagAmico](pagamico.md)
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della licenza digitale, sulla postazione della cassa
 
 ---
 
 !!! info "Licenza"
 
-    Il collegamento con le casse automatiche è soggetto a una **licenza
-    separata**, in aggiunta a quella di Facile.
+    Il collegamento con le casse automatiche vuole il modulo a pagamento
+    **casse automatiche** della licenza digitale, assegnato alla postazione a
+    cui è collegata la cassa. Il modulo si sceglie all'attivazione o con
+    **Richiedi modulo** nella finestra [Licenza](../../utility/gestione-licenza.md).
+    Senza il modulo Facile non apre la cassa e avvisa: *La funzione casse
+    automatiche non è abilitata su questo PC. Per abilitarla rivolgiti a
+    R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.*
 
 ## A cosa serve
 

@@ -1,228 +1,195 @@
 ---
-title: Gestione della licenza
-description: Come si attiva Facile su un computer, come si rimuove la licenza e come si trasferisce su un'altra macchina.
+title: Licenza
+description: "La licenza digitale di Facile: attivazione con il seriale, moduli, PC senza Internet, passaggio dalla licenza precedente e spostamento su un altro computer."
 modulo: Utility
-maschera_id: IDD_RSAREGISTER_ATTIVAZIONE
+maschera_id: IDD_RSAREGISTER_LICENZA
 ---
 
-# Gestione della licenza
+# Licenza
 
-Facile è legato al computer su cui è installato. Queste tre voci servono ad
-attivarlo la prima volta, a liberarlo quando il computer viene dismesso e a
-spostare la licenza su una macchina nuova.
+Facile si attiva con la **licenza digitale**: un seriale che vale per tutte le
+postazioni della licenza e si scrive una volta su ogni PC. Da questa finestra
+si attiva il PC, si scelgono i moduli da usare su questa postazione, si
+lavora senza Internet con lo scambio di due file e si libera la postazione
+quando si cambia computer.
 
 !!! info "In sintesi"
 
-    - **Percorso:**
-        - Menu ▸ Utility ▸ Gestione Licenza ▸ Attivazione Licenza
-        - Menu ▸ Utility ▸ Gestione Licenza ▸ Rimozione Licenza
-        - Menu ▸ Utility ▸ Gestione Licenza ▸ Trasferimento Licenza
-    - **Scorciatoia:** ++f2++ conferma, ++f3++ stampa il modulo, ++f4++ attiva via internet, ++esc++ esce
-    - **Permessi richiesti:** nessun profilo predefinito; le singole voci di menu si abilitano per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
+    - **Percorso:** Menu ▸ Utility ▸ Licenza...
+    - **Si apre anche da sola:** all'avvio, se questo PC non ha una licenza e non può lavorare in prova; dalla finestra della prova, con **F3 - Attiva**
+    - **Scorciatoia:** ++f2++ attiva, ++esc++ esce
+    - **Permessi richiesti:** nessun profilo predefinito; la voce di menu si abilita per ogni utente da [Archivi ▸ Utenti](../anagrafiche/utenti.md)
 
 ---
 
 ## A cosa serve
 
-| Voce di menu | A cosa serve |
+| Situazione | Cosa si fa qui |
 |---|---|
-| **Attivazione Licenza** | Registra l'installazione presso R.S.A. e attiva il programma su questo computer. La finestra si chiama *Attivazione*. |
-| **Rimozione Licenza** | Disattiva la licenza su questo computer, liberandola. |
-| **Trasferimento Licenza** | Sposta la licenza su un'altra macchina. |
+| PC nuovo, collegato a Internet | Si scrive il seriale e si attiva. |
+| PC senza Internet | Si crea un file di richiesta, lo si manda a R.S.A. e si importa il file di risposta. |
+| Modulo acquistato in seguito | Si richiede il modulo per questa postazione, o lo si rilascia per usarlo su un'altra. |
+| Cambio di computer | Si disattiva questa postazione, così la licenza si può attivare sull'altro PC. |
 
-Il livello di licenza decide **quali voci di menu si vedono**. I livelli sono
-quattro, e a video si chiamano `LIGHT`, `SMALL`, `PROFESSIONAL` e `EVOLUTION`:
-mostrano menu via via più ampi. Questo manuale descrive il menu completo;
-nelle licenze inferiori alcune voci non compaiono.
+L'**edizione** della licenza decide **quali voci di menu si vedono**: Lite,
+Small, Professional ed Evolution mostrano menu via via più ampi. Questo
+manuale descrive il menu completo. In prova il programma è completo (come
+Evolution), ma senza moduli a pagamento e senza i listini dei tabacchi.
 
 ## Prerequisiti
 
-Prima di attivare occorre avere i dati della ditta intestataria della licenza —
-ragione sociale, indirizzo, partita IVA — e il codice fornito da R.S.A.
-
-Prima di trasferire, il computer di destinazione deve essere pronto: la licenza
-viene liberata da questo e va attivata sull'altro.
+- **Il seriale** ricevuto per email, nella forma `RSA-FACILE-XXXX-XXXX-XXXX-XXXX`.
+- **Il PC collegato a Internet**, almeno per l'attivazione. Senza Internet si
+  attiva con i file (vedi sotto).
 
 ## La maschera
 
-![Attivazione](../../assets/img/utility/gestione-licenza.png)
+Prima dell'attivazione la finestra mostra in alto la situazione del PC e,
+sotto, i campi per attivarlo.
 
-**Attivazione** è una scheda con i dati dell'intestatario, il riquadro
-**C O D I C I** e i pulsanti in fondo.
+![La finestra Licenza prima dell'attivazione](../../assets/img/utility/licenza-attivazione.png)
 
-Le altre due voci chiedono prima conferma con un riepilogo di quello che
-stanno per fare, e poi aprono una finestrella:
+Dopo l'attivazione mostra il riepilogo della licenza di questo PC e l'elenco
+dei moduli con il loro stato.
 
-- **Rimozione** mostra *CLICCARE SUL PULSANTE "F2 - RIMUOVI" PER RIMUOVERE LA
-  LICENZA* e, sotto, *PRENDERE NOTA DEL CODICE RIMOZIONE PER RICHIEDERE UNA
-  NUOVA LICENZA*, con il riquadro in cui il codice comparirà;
-- **Trasferimento** chiede il **Nuovo Cod. Sito** e, premuto **F2 -
-  Trasferisci**, scrive nel riquadro in basso la **NUOVA CHIAVE DI
-  ATTIVAZIONE**.
+![La finestra Licenza con la licenza attiva](../../assets/img/utility/licenza-riepilogo.png)
+
+Finché il programma non è attivato funziona **in prova**. Dopo i primi
+quindici giorni, ogni tanto, all'apertura di una finestra compare la
+**finestra della prova**: i pulsanti si abilitano dopo qualche secondo;
+**F3 - Attiva** apre la finestra Licenza, **F2 - OK** continua il lavoro.
+Con il passare dei giorni la finestra della prova compare più spesso, fino a
+comparire ogni volta.
+
+![La finestra della prova](../../assets/img/utility/licenza-demo.png)
 
 ## Campi
 
-### Attivazione
+### Prima dell'attivazione
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Nome Computer** | | Il nome della macchina su cui si sta attivando. Lo propone il programma. | testo |
-| **Rag. Soc. Ditta** | ● | La ragione sociale dell'intestatario della licenza. | testo |
-| **Indirizzo** | ● | L'indirizzo. | testo |
-| **Città** | ● | Il comune. | testo |
-| **Cap** | ● | Il codice di avviamento postale. | numero |
-| **Prov** | ● | La sigla della provincia. | due lettere |
-| **Telefono**, **Fax** | | I recapiti. | testo |
-| **Partita IVA** | ● | La partita IVA dell'intestatario. | 11 cifre |
-| **Cod. Fiscale** | | Il codice fiscale. | codice |
-| **Email** | ● | L'indirizzo di posta a cui R.S.A. manda le comunicazioni sulla licenza. | indirizzo |
-| **Tipo Licenza** | ● | Il livello acquistato. | `LIGHT`, `SMALL`, `PROFESSIONAL`, `EVOLUTION` |
+| **Seriale** | ● | Il seriale della licenza. Si può incollare così com'è nell'email: spazi e lettere minuscole non contano. | `RSA-FACILE-XXXX-XXXX-XXXX-XXXX` |
+| **Edizione** | ● | L'edizione acquistata. | Lite, Small, Professional, Evolution |
+| **Nome del PC** | | Il nome con cui R.S.A. vede la postazione. Propone il nome di Windows: cambialo se vuoi riconoscere meglio la postazione. | testo |
+| **Moduli** | | I moduli acquistati da usare su questo PC: si spuntano. | CONNETTORE E-COMMERCE, CASSE AUTOMATICHE, SCAMBIO DATI FTP, ETICHETTE ELETTRONICHE |
 
-Nel riquadro **C O D I C I**:
+### Dopo l'attivazione
 
-| Campo | Obbl. | Descrizione | Valori ammessi |
-|---|:---:|---|---|
-| **Cod. Sito** | | Identifica questa installazione. Lo calcola il programma e **non si tocca**: è il numero da comunicare a R.S.A. | Sola lettura |
-| **Cod. Macchina** | | Identifica il computer. Lo calcola il programma. | Sola lettura |
-| **Numero Serie** | ● | Il numero di serie ricevuto all'acquisto. | codice |
-| **Chiave Attivazione** | ● | La chiave che R.S.A. restituisce. È l'unica cosa che si digita a mano. | codice |
+Il riepilogo riporta **Licenza**, **Cliente**, **Edizione**, **Scadenza** (o
+*nessuna*) e la data entro cui il programma deve **collegarsi al server
+licenze**: lo fa da solo all'avvio; se non ci riesce per molto tempo, te lo
+ricorda. Un PC attivato con i file riporta *Attivazione offline*.
+
+L'elenco **Moduli** dice per ogni modulo se è *attivo* o *non attivo* su
+questo PC.
 
 ## Pulsanti e comandi
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - Attiva** | ++f2++ | Attiva il programma con la **Chiave Attivazione** scritta nel campo. |
-| **F3 - Stampa** | ++f3++ | Stampa il modulo *Richiesta Attivazione* da mandare a R.S.A. |
-| **F4 - Attiva On Line** | ++f4++ | Si collega al server R.S.A. e prende la chiave da sé. |
-| **Esci** | ++esc++ | Chiude senza attivare. |
-
-Nelle altre due finestre i pulsanti sono **F2 - Rimuovi** e **F2 -
-Trasferisci**.
+| **F2 - Attiva** | ++f2++ | Attiva il PC con il seriale, l'edizione e i moduli spuntati. |
+| **Richiedi modulo** | | Aggiunge a questo PC il modulo selezionato, se ce n'è uno libero fra quelli acquistati. |
+| **Rilascia modulo** | | Toglie a questo PC il modulo selezionato, che si può usare su un'altra postazione. |
+| **Richiesta offline…** | | Salva il file di richiesta (.req) da mandare a R.S.A. Dopo l'attivazione si chiama **Rinnovo offline…**. |
+| **Importa risposta…** | | Importa il file di risposta (.rsp) di R.S.A. |
+| **Disattiva questa postazione** | | Libera la postazione: la licenza si può attivare su un altro PC. Il programma si chiude. |
+| **Esci** | ++esc++ | Chiude la finestra. |
 
 ## Come si fa
 
-### Attivare Facile, con il computer collegato a internet
+### Attivare il PC con il seriale
 
-1. Apri **Menu ▸ Utility ▸ Gestione Licenza ▸ Attivazione Licenza**.
-2. Compila i dati della ditta intestataria: sono quelli che compariranno sulla
-   licenza, quindi vanno scritti giusti la prima volta.
-3. Scrivi il **Numero Serie** e scegli il **Tipo Licenza**.
-4. Premi **F4 - Attiva On Line** e, quando richiesto, indica il tuo **codice
-   cliente** e la **password** R.S.A.
-5. Il programma prende la chiave da sé e si attiva.
+1. Apri **Menu ▸ Utility ▸ Licenza...**.
+2. Scrivi il seriale in **Seriale**.
+3. Scegli l'**Edizione** acquistata.
+4. Spunta nell'elenco **Moduli** quelli da usare su questo PC.
+5. Premi **F2 - Attiva**: il programma risponde *Licenza attivata.* e la finestra mostra il riepilogo.
 
-### Attivare Facile senza internet
+### Attivare un PC senza Internet
 
-1. Apri la stessa maschera e compila i dati come sopra.
-2. Premi **F3 - Stampa**: esce il modulo *Richiesta Attivazione*, con i dati
-   della ditta, il **Numero Serie**, il **Cod. Sito** e il **Cod. Macchina**.
-3. Manda il modulo a R.S.A.
-4. Quando ti arriva la **Chiave Attivazione**, riapri la maschera, scrivila
-   nel campo e premi **F2 - Attiva**.
+1. Apri la finestra Licenza, scrivi il seriale e scegli l'edizione.
+2. Premi **Richiesta offline…** e salva il file .req: *Invia il file a RSA Software; riceverai un file .rsp da importare qui.*
+3. Manda il file .req a R.S.A. per email.
+4. Quando ricevi il file .rsp, premi **Importa risposta…** e sceglilo: il programma risponde *Licenza attivata.*
 
-### Spostare Facile su un altro computer
+Un PC attivato così non ha bisogno di collegarsi. Per aggiornarne la licenza
+(per esempio dopo l'acquisto di un modulo) si usa lo stesso scambio di file,
+con **Rinnovo offline…**.
 
-L'ordine è quello che dice il programma, ed è il contrario di quello che
-verrebbe da fare: **prima si prepara il computer nuovo**.
+### Usare un modulo acquistato dopo l'attivazione
 
-1. **Installa Facile sul computer nuovo.**
-2. Sul computer nuovo apri **Attivazione Licenza** e **prendi nota del Cod.
-   Sito**.
-3. Torna sul computer vecchio, apri **Trasferimento Licenza** e conferma.
-4. Scrivi quel numero in **Nuovo Cod. Sito** e premi **F2 - Trasferisci**.
-5. **Prendi nota della chiave di attivazione** che compare.
-6. Sul computer nuovo, scrivi la chiave in **Chiave Attivazione** e premi
-   **F2 - Attiva**.
+1. Apri la finestra Licenza.
+2. Seleziona il modulo nell'elenco e premi **Richiedi modulo**: il programma risponde *Moduli aggiornati.* e il modulo risulta *attivo*.
 
-### Dismettere un computer
+### Passare dalla licenza precedente
 
-1. Apri **Rimozione Licenza** e conferma.
-2. **Prendi nota del codice di rimozione** che compare: senza quel numero
-   R.S.A. non può rilasciare una nuova attivazione.
+Su un PC dove il programma era già attivato con la licenza precedente non c'è
+niente da fare: al primo avvio con il PC collegato a Internet il passaggio
+alla licenza digitale avviene da solo, con la stessa edizione e gli stessi
+moduli, e il programma lo dice: *Questo PC è passato alla licenza digitale.*
 
-Da quel momento su quel computer il programma non è più attivo, e le tre voci
-del menu Gestione Licenza si spengono.
+Senza Internet, premi **Richiesta offline…** lasciando vuoto il seriale: il
+file .req chiede il passaggio, il resto è come per l'attivazione senza
+Internet.
+
+### Spostare la licenza su un altro PC
+
+1. Sul PC che lasci, apri la finestra Licenza e premi **Disattiva questa postazione**.
+2. Conferma: il programma si chiude e la postazione è libera.
+3. Sul PC nuovo attiva la licenza con il seriale.
+
+Se il PC che lasci non è collegato a Internet, il programma propone la
+disattivazione offline e mostra due codici, il **Codice di rimozione** e
+l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
+
+![La disattivazione offline](../../assets/img/utility/licenza-rimozione.png)
 
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Licenza non ancora attivata !* | Si prova a rimuovere o trasferire una licenza mai attivata. | Non c'è nulla da rimuovere. |
-| *Software non protetto!* | L'installazione non ha protezione attiva. | Nessuna azione: è una versione senza licenza. |
-| *Errore interfaccia protezione!* | Il componente di protezione non risponde. | Chiama l'assistenza. |
+| *Il seriale non è scritto correttamente.* | Il seriale non ha la forma giusta. | Ricopialo dall'email. |
+| *Seriale non riconosciuto per questo programma.* | Il seriale non esiste, o è di un altro programma. | Controlla l'email; altrimenti contatta R.S.A. |
+| *Non ci sono postazioni libere per l'edizione Professional. Libere: Lite 0, Small 0, Evolution 0.* | Tutte le postazioni di quell'edizione sono già attivate. Il messaggio cambia con l'edizione e indica le postazioni libere delle altre. | Disattiva una postazione che non usi più, o scegli un'edizione con postazioni libere. |
+| *Il server licenze non risponde. Controlla la connessione o usa l'attivazione offline.* | Il PC non raggiunge il server delle licenze. | Controlla la connessione, oppure usa **Richiesta offline…**. |
+| *Troppi tentativi: riprova fra 30 minuti.* | Troppi seriali sbagliati di seguito. I minuti cambiano. | Aspetta e riprova. |
+| *La licenza è sospesa. Contatta RSA Software.* | La licenza è sospesa. | Contatta R.S.A. |
+| *La licenza è revocata. Contatta RSA Software.* | La licenza è revocata. | Contatta R.S.A. |
+| *La licenza è scaduta. Contatta RSA Software.* | La licenza è scaduta. | Contatta R.S.A. |
+| *Il file non è una risposta valida per questo PC.* | Il file .rsp importato non è di questo PC o è rovinato. | Importa il file giusto o richiedilo a R.S.A. |
+| *Modulo non disponibile: SCAMBIO DATI FTP (acquistati 1, in uso su CASSA 2).* | Il modulo è già usato su un'altra postazione. Il messaggio cambia con il modulo. | Rilascia il modulo sull'altro PC, o acquistane un altro. |
+| *Questo PC è passato alla licenza digitale.* | Al primo avvio la licenza precedente del PC è stata convertita. | Nessuna azione. |
+| *La licenza precedente di questo PC non è più valida: inserisci il seriale.* | Il passaggio automatico non è possibile. | Attiva il PC con il seriale. |
+| *Disattivare questa postazione? La licenza potrà essere usata su un altro PC. Il programma si chiuderà.* | Conferma della disattivazione. | Rispondi **Sì** per liberare la postazione. |
+| *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Si usa una funzione di un modulo a pagamento che questo PC non ha. Il nome cambia con il modulo (connettore e-commerce, casse automatiche, scambio dati FTP, etichette elettroniche). | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
 
-Le due conferme, per esteso:
+All'avvio, se la licenza non permette di lavorare, compare una finestra con
+il motivo e i pulsanti **Riprova**, **Licenza…** ed **Esci**:
 
-!!! note "Rimozione Licenza"
-
-    *La procedura permette la rimozione della licenza del software.*
-
-    *Per riattivare il software è necessario prendere nota del codice di
-    rimozione e richiedere un nuovo codice di attivazione alla R.S.A.*
-
-    *Vuoi continuare ?*
-
-!!! note "Trasferimento Licenza"
-
-    *La procedura permette il trasferimento della licenza su un altro
-    computer.*
-
-    *Per effettuare il trasferimento effettuare le seguenti operazioni*
-
-    *1 - Installare il software sull' altro computer*
-    *2 - Andare nella maschera di attivazione della licenza e prendere nota sel
-    cod. sito*
-    *3 - Inserire il cod. sito in questa maschera e d effettuare il
-    trasferimento di licenza*
-    *4 - Prendere nota della chiave di attivazione ed attivare il software
-    sull' altro computer*
-
-    *Vuoi continuare ?*
-
-In tutte e due la risposta preimpostata è **No**.
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Il programma deve collegarsi al server licenze. Controlla la connessione a Internet e premi Riprova, oppure usa il rinnovo offline da Licenza….* | Il PC non si collega al server da troppo tempo. | Collegati a Internet e premi **Riprova**, oppure **Licenza…** ▸ **Rinnovo offline…**. |
+| *La data del computer è indietro rispetto all'ultima usata dal programma. Correggi data e ora e premi Riprova.* | L'orologio del PC è indietro. | Correggi data e ora di Windows e premi **Riprova**. |
+| *La release 2026 non è coperta dall'assistenza: la licenza copre fino alla 2025.* | La versione installata è più recente di quelle coperte dalla licenza. Gli anni cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza. |
 
 ## Note
 
-!!! warning "La licenza è una sola, e il trasferimento va fatto nell'ordine giusto"
+!!! note "I moduli a pagamento valgono per la postazione"
 
-    Rimozione e trasferimento **liberano** la licenza da questo computer: finché
-    non la si attiva altrove, non è attiva da nessuna parte.
+    Un modulo acquistato si usa sul PC a cui è assegnato: **casse
+    automatiche**, **scambio dati FTP** (le voci di Trasferimenti e di Ordini
+    che scambiano dati con il server FTP), **connettore e-commerce** ed
+    **etichette elettroniche** (le operazioni di FacileToWeb, che si attiva
+    con la licenza del PC su cui è installato Facile). Senza il modulo la
+    funzione non parte e il programma lo dice; nelle operazioni automatiche
+    il messaggio va nel registro dell'operazione.
 
-    Per il trasferimento serve il **Cod. Sito del computer nuovo**, e quel
-    numero si legge solo dopo aver installato Facile lì. Chi libera prima la
-    licenza sul computer vecchio resta senza programma da nessuna delle due
-    parti finché non completa l'installazione sull'altro.
+!!! note "I listini dei tabacchi vogliono il canone di assistenza"
 
-!!! note "Il livello di licenza cambia il menu"
-
-    Con `LIGHT` e `SMALL` alcune voci descritte in questo manuale non compaiono
-    affatto. Non è un malfunzionamento: è il livello di licenza. Vedi
-    [Convenzioni del manuale](../../introduzione/convenzioni.md).
-
-!!! info "Internet serve solo se si vuole"
-
-    Ci sono **due strade** per farsi dare la chiave, e si scelgono con due
-    pulsanti diversi:
-
-    | | **F4 - Attiva On Line** | **F3 - Stampa** |
-    |---|---|---|
-    | Serve internet | sì | no |
-    | Cosa chiede | codice cliente e password R.S.A. | niente |
-    | Come arriva la chiave | il programma la prende da sé | R.S.A. la manda, e si digita a mano |
-    | Quanto ci vuole | subito | il tempo di una risposta |
-
-    Il modulo stampato porta i dati della ditta, il **Numero Serie**, il **Cod.
-    Sito** e il **Cod. Macchina**: sono i tre numeri con cui R.S.A. calcola la
-    chiave, e servono tutti e tre.
-
-    Se il collegamento non riesce il programma prova tre server diversi prima
-    di rinunciare.
-
-!!! warning "Nel testo del trasferimento ci sono due refusi"
-
-    *prendere nota **sel** cod. sito* e *inserire il cod. sito in questa
-    maschera **e d** effettuare*. Non sono errori di questo manuale: il
-    messaggio è scritto così nel programma.
+    Lo scarico del listino aggiornato dei tabacchi è riservato a chi è in
+    regola con il canone di assistenza, e in prova non è disponibile. Vedi
+    [Importazione listino](../listini-vendita/importazione-listino.md).
 
 ## Vedi anche
 

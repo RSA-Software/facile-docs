@@ -16,7 +16,7 @@ con il programma di interfaccia della Cashmatic.
     - **Voce:** `CASHMATIC` in **Cassa Automatica**, in [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
     - **Configurazione:** `cfg\cashmatic.ini`
     - **Al banco:** il tasto **Cashmatic** del **Pos Touchscreen**; la gestione da **Funzioni ▸ Cassa Automatica**
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della [licenza digitale](../../utility/gestione-licenza.md), sulla postazione della cassa
 
 ---
 

@@ -16,7 +16,7 @@ statistiche — ciascuna abilitata per operatore.
     - **Voce:** `CASHLOGY` in **Cassa Automatica**, in [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
     - **Configurazione:** `cfg\cashlogy.ini`
     - **Al banco:** il tasto **CashLogy** del **Pos Touchscreen**; la gestione da **Funzioni ▸ Cassa Automatica**
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della [licenza digitale](../../utility/gestione-licenza.md), sulla postazione della cassa
 
 ---
 

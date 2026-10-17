@@ -16,7 +16,7 @@ fanno con il programma della CashDro.
     - **Voci:** `CASHDRO WEB SERVICE` o `CASHDRO FILES` in **Cassa Automatica**, in [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
     - **Configurazione:** `cfg\cashdro_ws.ini` o `cfg\cashdro.ini`
     - **Al banco:** il tasto **CashDro** del **Pos Touchscreen**
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della [licenza digitale](../../utility/gestione-licenza.md), sulla postazione della cassa
 
 ---
 

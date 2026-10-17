@@ -14,14 +14,14 @@ che è cambiato, e con un'altra ne importa gli ordini.
 
     - **Programma:** [FacileToWeb](index.md), operazioni **900** (invio al negozio) e **901** (ordini)
     - **Collegamento:** il webservice di PrestaShop, con la sua chiave
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della [licenza digitale](../utility/gestione-licenza.md), sul PC dove gira FacileToWeb
 
 ---
 
 !!! info "Licenza"
 
-    Il connettore PrestaShop è soggetto a una **licenza separata**, in
-    aggiunta a quella di Facile.
+    Il connettore PrestaShop vuole il modulo **connettore e-commerce** della licenza digitale, sul PC dove gira
+    FacileToWeb: vedi [Licenza](../utility/gestione-licenza.md).
 
 ## Il collegamento
 

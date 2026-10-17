@@ -334,7 +334,7 @@ nav:
       - Esercizi, ditte e chiusure: moduli/utility/esercizi-e-chiusure.md
       - Manutenzione degli archivi: moduli/utility/manutenzione-archivi.md
       - Assistenza: moduli/utility/assistenza.md
-      - Gestione Licenza: moduli/utility/gestione-licenza.md
+      - Licenza: moduli/utility/gestione-licenza.md
   # E-commerce non e' una voce del menu: FacileToWeb e' un programma a parte,
   # che si configura con i file ini. Il ramo sta qui, dopo Utility.
   - E-commerce:

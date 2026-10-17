@@ -25,8 +25,8 @@ Due avvertenze:
   più ampi. Questo manuale descrive **il menu completo**: nelle licenze
   inferiori alcune voci descritte qui non compaiono affatto. Il livello della
   propria installazione si legge in **Menu ▸ Utility ▸
-  [Gestione Licenza](../moduli/utility/gestione-licenza.md)**, campo *Tipo
-  Licenza*.
+  [Licenza...](../moduli/utility/gestione-licenza.md)**, alla riga
+  *Edizione* del riepilogo.
 
 ## Percorsi di menu
 

@@ -148,6 +148,9 @@ ciascuna. Se una delle due non serve, rispondi **No** alla sua domanda.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
+| *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | **Ricezione Movimenti di Vendita** e **Aggiornamento Listino** dal server FTP della ditta (senza *Abilita tabacchi*): ognuna richiede il modulo a pagamento *scambio dati FTP* su questo PC. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../utility/gestione-licenza.md). |
+| *Non sei più abilitato allo scarico del listino aggiornato. Rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | **Aggiornamento Listino** con *Abilita tabacchi* sulla ditta: il canone di assistenza della licenza non è in regola, oppure il programma è in prova. | Contatta R.S.A. per il rinnovo del canone; in prova attiva prima la [licenza](../utility/gestione-licenza.md). |
+| *Il server delle licenze non risponde: riprova più tardi.* | **Aggiornamento Listino** con *Abilita tabacchi*: il controllo del canone non ha raggiunto il server delle licenze. | Verifica il collegamento a Internet e riprova più tardi. |
 | *Livello Importazioni non Valido!* | Il livello di importazione configurato non è ammesso. | Chiama l'assistenza: è un parametro di configurazione. |
 | *Sono presenti Listini Aggiornati!<br>Vuoi Caricarli?* — oppure *E' presente un Listino Aggiornato!<br>Vuoi Caricarlo?* | Facile ha trovato uno o più listini da caricare. | **Sì** procede. |
 | *Vuoi rimuovere il primo listino ?* | Ci sono più listini in coda. | **Sì** scarta il più vecchio. La risposta preimpostata è **No**. |

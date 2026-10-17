@@ -16,7 +16,7 @@ della porta, riavvio e chiusura.
     - **Voce:** `VIRTUO VNE` in **Cassa Automatica**, in [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
     - **Configurazione:** `cfg\vne.ini`
     - **Al banco:** ++f6++ **Rendiresto** nella chiusura della vendita, o il tasto **VNE** del **Pos Touchscreen**; la gestione da **Funzioni ▸ Cassa Automatica**
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della [licenza digitale](../../utility/gestione-licenza.md), sulla postazione della cassa
 
 ---
 

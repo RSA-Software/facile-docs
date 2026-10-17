@@ -14,14 +14,13 @@ gli ordini dei clienti del sito.
 
     - **Programma:** [FacileToWeb](index.md), operazioni **918**, **921**-**926**
     - **Collegamento:** il sistema di scambio dati REST di Magento 2, con un token
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della [licenza digitale](../utility/gestione-licenza.md), sul PC dove gira FacileToWeb
 
 ---
 
 !!! info "Licenza"
 
-    Il connettore Magento è soggetto a una **licenza separata**, in aggiunta a
-    quella di Facile.
+    Il connettore Magento vuole il modulo **connettore e-commerce** della licenza digitale, sul PC dove gira FacileToWeb: vedi [Licenza](../utility/gestione-licenza.md).
 
 ## Le operazioni
 

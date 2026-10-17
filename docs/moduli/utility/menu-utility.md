@@ -20,8 +20,8 @@ intervenire sui dati.
 - [Impostazioni della postazione](impostazioni-postazione.md) — stampante
   fiscale, display, bilancia, stampanti, POS, messaggi e le preferenze di
   comportamento della vendita.
-- [Gestione della licenza](gestione-licenza.md) — attivazione, rimozione e
-  trasferimento.
+- [Licenza](gestione-licenza.md) — la licenza digitale: attivazione con il
+  seriale, moduli, PC senza Internet, cambio di computer.
 
 ## Cambiare contesto e passare l'anno
 

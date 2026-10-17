@@ -22,6 +22,18 @@ In preparazione.
 
 ### Nuove funzioni
 
+**[Licenza digitale](../moduli/utility/gestione-licenza.md).** Facile si
+attiva con un seriale, uguale per tutte le postazioni della licenza, dalla
+nuova finestra **Utility ▸ Licenza...**; senza Internet si attiva scambiando
+due file con R.S.A. Sui PC già attivati con la licenza precedente il
+passaggio avviene da solo al primo avvio con Internet, con la stessa edizione
+e gli stessi moduli. I moduli a pagamento — connettore e-commerce, casse
+automatiche, scambio dati FTP ed etichette elettroniche — valgono per la
+postazione a cui sono assegnati: senza il modulo la funzione non parte e
+avvisa di rivolgersi a R.S.A. Software. Lo scarico del listino aggiornato dei
+tabacchi richiede il canone di assistenza in regola e non è disponibile in
+prova.
+
 **[Gestione farmaceutica](../moduli/anagrafiche/ditte.md#attivare-la-gestione-farmaceutica).**
 Per chi distribuisce medicinali, una nuova casella delle **Impostazioni
 Protette** della ditta, **Usa Gestione Farmaceutica**, aggiunge alle maschere i
@@ -103,6 +115,12 @@ DDT emessi senza nota del fornitore.
   questa causale muove i contatori di magazzino…* anche se i contatori non
   erano stati toccati: li confrontava con quelli della prima causale aperta.
   Ora l'avviso compare solo quando i contatori cambiano davvero.
+
+### Voci tolte dal menu
+
+- **Utility ▸ Gestione Licenza**, con **Attivazione Licenza**, **Rimozione
+  Licenza** e **Trasferimento Licenza**: al loro posto c'è la voce
+  **Utility ▸ Licenza...** della licenza digitale.
 
 ## Versione 2026 B08.01
 

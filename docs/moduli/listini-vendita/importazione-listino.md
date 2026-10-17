@@ -171,10 +171,8 @@ La finestra di **Fenapro** ha il solo campo **Listino**.
 | *Colonna Denominazione Commerciale non trovata !* / *Importazione non possibile.* | Manca la colonna della denominazione. | Come sopra. |
 | *Impossibile Creare la tabella* | Il programma non riesce a preparare l'area di lavoro per l'importazione. | Segnala all'assistenza. |
 | *Confermi l'importazione del Listino Flex?* / *Confermi l'importazione del Listino Monthblanc ?* | Richiesta di conferma. | **Sì** avvia l'importazione. |
-| *Impossibile trovare il file della licenza.* / *Riattivare il software per accedere al server delle licenze.* | Importazione tabacchi: la licenza non è raggiungibile. | Riattiva il programma o contatta l'assistenza. |
-| *Accesso non consentito.* / *Necessario rinnovo canone.* | Importazione tabacchi: il canone di assistenza è scaduto. | Contatta l'assistenza per il rinnovo. |
-| *Connessione al server conclusa con errore n N* | Importazione tabacchi: il controllo della licenza non è andato a buon fine. | Verifica il collegamento a Internet e riprova; se il problema resta, contatta l'assistenza. |
-| *Impossibile allocare la memoria necessaria. Riavviare il pc e riprovare.* | Il controllo della licenza per l'importazione dei tabacchi non è riuscito. | Riavviare il computer; se il problema resta, contattare l'assistenza. |
+| *Non sei più abilitato allo scarico del listino aggiornato. Rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Importazione tabacchi: il canone di assistenza della licenza non è in regola, oppure il programma è in prova. | Contatta R.S.A. per il rinnovo del canone; in prova attiva prima la [licenza](../utility/gestione-licenza.md). |
+| *Il server delle licenze non risponde: riprova più tardi.* | Importazione tabacchi: il controllo del canone non ha raggiunto il server delle licenze. | Verifica il collegamento a Internet e riprova più tardi. |
 
 ## Note
 

@@ -179,6 +179,7 @@ Usa `COMPLETA` solo quando il punto vendita va riallineato da capo.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
+| *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | **Genera Listino per Punti Vendita**, **Esportazione Movimenti**, **Genera Dati per Facile Mobile** e **Genera Dati per Facile Agenti**: ognuna richiede il modulo a pagamento *scambio dati FTP* su questo PC. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../utility/gestione-licenza.md). |
 | *Identificatore postazione non impostato !* | Manca l'identificativo della postazione. | Impostalo da [Impostazioni Postazione](../utility/impostazioni-postazione.md). |
 | *Vuoi esportare tutti i depositi ?* | Inizio dell'esportazione per gli agenti. | **Sì** tutti, **No** per sceglierne uno, **Annulla** ferma. |
 | *Impossibile creare il File!* | Facile non riesce a scrivere il file. | Controlla che la cartella esista e sia scrivibile. |

@@ -14,14 +14,14 @@ giacenze e prezzi, e porta in Facile gli ordini dei clienti del sito.
 
     - **Programma:** [FacileToWeb](index.md), operazioni **930**-**936**
     - **Collegamento:** il sistema di scambio dati REST di WooCommerce, con le chiavi *consumer key* e *consumer secret*
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della [licenza digitale](../utility/gestione-licenza.md), sul PC dove gira FacileToWeb
 
 ---
 
 !!! info "Licenza"
 
-    Il connettore WooCommerce è soggetto a una **licenza separata**, in
-    aggiunta a quella di Facile.
+    Il connettore WooCommerce vuole il modulo **connettore e-commerce** della licenza digitale, sul PC dove gira
+    FacileToWeb: vedi [Licenza](../utility/gestione-licenza.md).
 
 ## Le operazioni
 

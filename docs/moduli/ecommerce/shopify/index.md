@@ -18,7 +18,7 @@ prezzi, e importa in Facile gli ordini dei clienti del sito.
     - **Prima volta:** [Prima installazione](installazione.md)
     - **Uso quotidiano:** [Esecuzione continua](ciclo.md), che fa tutte le
       operazioni a giri
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della [licenza digitale](../../utility/gestione-licenza.md), sul PC dove gira FacileToWeb
 
 ---
 
@@ -59,8 +59,7 @@ articoli.
 
 ### La licenza
 
-Il connettore Shopify è soggetto a una **licenza separata**, in aggiunta a
-quella di Facile.
+Il connettore Shopify vuole il modulo **connettore e-commerce** della licenza digitale, sul PC dove gira FacileToWeb: vedi [Licenza](../../utility/gestione-licenza.md).
 
 ### Il negozio
 

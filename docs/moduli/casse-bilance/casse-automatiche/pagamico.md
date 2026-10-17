@@ -16,7 +16,7 @@ servizio di incassare, di erogare o di leggere lo stato della macchina.
     - **Serve:** il FacileWebApiService installato e configurato
     - **Configurazione:** la macchina nel servizio ([casse_automatiche.json](../../../assets/modelli/casse_automatiche.json)), la scelta della macchina nella postazione ([pagamico.ini](../../../assets/modelli/pagamico.ini))
     - **Uso al banco:** vedi [Incassare con la cassa automatica PagAmico](../../vendite/vendita-al-banco.md#incassare-con-la-cassa-automatica-pagamico)
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *casse automatiche* della [licenza digitale](../../utility/gestione-licenza.md), sulla postazione della cassa
 
 ---
 

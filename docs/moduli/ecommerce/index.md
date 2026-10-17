@@ -18,14 +18,18 @@ ordini che arrivano dal sito.
     - **Registro:** un file per operazione e per giorno, nella cartella `log`
     - **Avvio:** a mano, dall'Utilità di pianificazione di Windows, oppure in
       esecuzione continua
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della licenza digitale, sul PC dove gira FacileToWeb
 
 ---
 
 !!! info "Licenza"
 
-    I connettori e-commerce sono soggetti a una **licenza separata**, in
-    aggiunta a quella di Facile.
+    I connettori e-commerce vogliono il modulo a pagamento **connettore
+    e-commerce** della licenza digitale, assegnato al PC su cui è installato
+    Facile e su cui gira FacileToWeb (che usa la licenza di quel PC). Il
+    modulo si sceglie all'attivazione o con **Richiedi modulo** nella finestra
+    [Licenza](../utility/gestione-licenza.md). Senza il modulo l'operazione
+    non parte e lo scrive nel registro.
 
 ## A cosa serve
 
@@ -179,6 +183,7 @@ per vedere a che punto è. Non va modificato mentre il programma scrive.
 | *Impossibile recuperare la directory di lavoro.* | Windows non ha dato al programma la cartella da cui è stato avviato. | Avvia FacileToWeb indicando la cartella di Facile come cartella di lavoro (nell'Utilità di pianificazione, campo **Inizio in**). |
 | *File INI non impostato su linea di comando.* | Manca il parametro `-ini`, oppure fra `-ini` e il nome del file c'è uno spazio. | Scrivi il nome del file attaccato al parametro: `-iniciclo_shopify.ini`. |
 | *Operazione da eseguire non impostata nel file INI.* | Nel file manca `operation` nella sezione `[COMMAND]`, oppure il file non esiste nella cartella `cfg`. | Controlla il nome del file e la sua posizione, e che `[COMMAND]` contenga il numero dell'operazione. |
+| *Operazione 980: funzione connettore e-commerce non abilitata su questo PC. Per abilitarla rivolgersi a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Nel registro: il PC non ha il modulo *connettore e-commerce* (o non ha la licenza digitale). Il numero è quello dell'operazione. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../utility/gestione-licenza.md) di Facile su questo PC. |
 
 Gli altri problemi non compaiono a video ma nel registro. I più comuni
 all'avvio:

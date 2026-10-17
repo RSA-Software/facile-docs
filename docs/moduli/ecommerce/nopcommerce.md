@@ -15,14 +15,14 @@ negozio.
 
     - **Programma:** [FacileToWeb](index.md), operazione **902**
     - **Direzione:** dal negozio a Facile, solo ordini
-    - **Licenza:** separata, in aggiunta a quella di Facile
+    - **Licenza:** il modulo *connettore e-commerce* della [licenza digitale](../utility/gestione-licenza.md), sul PC dove gira FacileToWeb
 
 ---
 
 !!! info "Licenza"
 
-    Il connettore nopCommerce è soggetto a una **licenza separata**, in
-    aggiunta a quella di Facile.
+    Il connettore nopCommerce vuole il modulo **connettore e-commerce** della licenza digitale, sul PC dove gira
+    FacileToWeb: vedi [Licenza](../utility/gestione-licenza.md).
 
 ## Come funziona
 

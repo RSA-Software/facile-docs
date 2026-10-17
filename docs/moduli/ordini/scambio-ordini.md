@@ -107,6 +107,7 @@ l'avanzamento.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
+| *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | **Ricezione Ordini da Facile Mobile**, **Ricezione Ordini dal Server FTP** e **Invio Ordini al Server**: ognuna richiede il modulo a pagamento *scambio dati FTP* su questo PC. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../utility/gestione-licenza.md). |
 | *Vuoi Collegarti al server FTP ?* | Inizio della ricezione FTP. | **Sì** scarica dal server, **No** chiede un file da disco. |
 | *File non Valido!* | Il nome del file non comincia per `ORD` né per `OFO`. | Scegli il file giusto o rinominalo. |
 | *Path Name Troppo Lungo!* | Il percorso del file supera il limite. | Sposta il file in una cartella dal nome più breve. |
