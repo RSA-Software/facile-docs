@@ -154,7 +154,7 @@ l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
 | *Non ci sono postazioni libere per l'edizione Professional. Libere: Lite 0, Small 0, Evolution 0.* | Tutte le postazioni di quell'edizione sono già attivate. Il messaggio cambia con l'edizione e indica le postazioni libere delle altre. | Disattiva una postazione che non usi più, o scegli un'edizione con postazioni libere. |
 | *Il server licenze non risponde. Controlla la connessione o usa l'attivazione offline.* | Il PC non raggiunge il server delle licenze. | Controlla la connessione, oppure usa **Richiesta offline…**. |
 | *Troppi tentativi: riprova fra 30 minuti.* | Troppi seriali sbagliati di seguito. I minuti cambiano. | Aspetta e riprova. |
-| *La licenza è sospesa. Contatta RSA Software.* | La licenza è sospesa. | Contatta R.S.A. |
+| *La licenza è corrotta. Contatta RSA Software.* | La licenza non è più valida per questo programma. | Contatta R.S.A. |
 | *La licenza è revocata. Contatta RSA Software.* | La licenza è revocata. | Contatta R.S.A. |
 | *La licenza è scaduta. Contatta RSA Software.* | La licenza è scaduta. | Contatta R.S.A. |
 | *La licenza è scaduta il 30/11/2026: il programma funziona in modalità dimostrativa finché non la rinnovi.* | La licenza è scaduta: lo dice all'avvio, o mentre lavori quando il programma si collega al server licenze. La data cambia con la licenza; quando la scadenza è stata fissata dopo l'ultimo collegamento, il messaggio è senza data: *La licenza è scaduta: il programma funziona in modalità dimostrativa finché non la rinnovi.* | Il programma continua in prova; contatta R.S.A. per il rinnovo. |
