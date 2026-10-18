@@ -120,6 +120,7 @@ Non applicabile.
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare la ricezione.* | Il credito sul servizio è finito. | Acquista il credito; il pulsante **Credito** mostra il residuo. |
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare l' invio.* | Come sopra, per l'invio. | Come sopra. |
 | *Errore di comunicazione!* / *Impossibile contattare l'Authorization Server.* / *Attendere qualche minuto* | Il servizio non risponde. | Attendi e riprova; se il problema resta, contatta l'assistenza. |
+| *Partita Iva Ditta non impostata!* / *Impossibile continuare.* | Senza la partita IVA della ditta il credito del servizio non si può verificare. | Impostala nella [ditta](../anagrafiche/ditte.md) e riprova. |
 | *Continuando l'operazione imposterai questo computer come l'unico abilitato allo scarico...* | Lo scarico si lega a una sola postazione. | Prosegui solo se è la postazione da cui si scaricheranno sempre le fatture. |
 | *Identificativo Nazione (ISO alpha-2) non impostato su ditta!* | Manca il codice nazione nei dati della ditta. | Impostalo nella [ditta](../anagrafiche/ditte.md). |
 | *Il codice nazione impostato sulla ditta deve essere di due caratteri!* | Il codice nazione non è nel formato ISO a due lettere. | Correggilo, per esempio `IT`. |

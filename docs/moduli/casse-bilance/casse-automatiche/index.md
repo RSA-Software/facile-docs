@@ -27,9 +27,10 @@ totale dello scontrino e registra quanto è stato pagato.
     **casse automatiche** della licenza digitale, assegnato alla postazione a
     cui è collegata la cassa. Il modulo si sceglie all'attivazione o con
     **Richiedi modulo** nella finestra [Licenza](../../utility/gestione-licenza.md).
-    Senza il modulo Facile non apre la cassa e avvisa: *La funzione casse
-    automatiche non è abilitata su questo PC. Per abilitarla rivolgiti a
-    R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.*
+    Senza il modulo Facile avvisa: *La funzione casse automatiche non è
+    abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software:
+    rsa@rsaweb.com, tel. 0941 563653.* La vendita continua senza la cassa
+    automatica: il contante si incassa a mano.
 
 ## A cosa serve
 

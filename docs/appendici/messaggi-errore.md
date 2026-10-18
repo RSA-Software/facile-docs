@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-18 — **1101 messaggi**.
+Aggiornato al 2026-10-18 — **1103 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -710,6 +710,7 @@ Aggiornato al 2026-10-18 — **1101 messaggi**.
 | *La licenza precedente di questo PC non è più valida: inserisci il seriale.* | [Licenza](../moduli/utility/gestione-licenza.md) | Il passaggio automatico non è possibile. | Attiva il PC con il seriale. |
 | *La licenza è revocata. Contatta RSA Software.* | [Licenza](../moduli/utility/gestione-licenza.md) | La licenza è revocata. | Contatta R.S.A. |
 | *La licenza è scaduta. Contatta RSA Software.* | [Licenza](../moduli/utility/gestione-licenza.md) | La licenza è scaduta. | Contatta R.S.A. |
+| *La licenza è scaduta il 30/11/2026: il programma funziona in modalità dimostrativa finché non la rinnovi.* | [Licenza](../moduli/utility/gestione-licenza.md) | La licenza è scaduta: lo dice all'avvio, o mentre lavori quando il programma si collega al server licenze. La data cambia con la licenza; quando la scadenza è stata fissata dopo l'ultimo collegamento, il messaggio è senza data: *La licenza è scaduta: il programma funziona in modalità dimostrativa finché non la rinnovi.* | Il programma continua in prova; contatta R.S.A. per il rinnovo. |
 | *La licenza è sospesa. Contatta RSA Software.* | [Licenza](../moduli/utility/gestione-licenza.md) | La licenza è sospesa. | Contatta R.S.A. |
 | *La lunghezza massima del mittente è di 16 caratteri* / *…di 11 caratteri* | [Ditte](../moduli/anagrafiche/ditte.md) | Il mittente SMS è troppo lungo: 16 se numerico, 11 se alfanumerico. | Accorcialo. |
 | *(la maschera non si apre)* | [Stampe e manutenzione di casse e bilance](../moduli/casse-bilance/stampe-casse-bilance.md) | L'archivio articoli è vuoto. | **Stampa Articoli Gestione Bilance** e **Stampa Articoli con Flag Variazioni Attivo** si chiudono in silenzio se non c'è nessun articolo. |
@@ -937,6 +938,7 @@ Aggiornato al 2026-10-18 — **1101 messaggi**.
 | *Ordine non Trovato in Archivio!* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | La riga della griglia non corrisponde più a un ordine. | Premi **Ricarica** e riprova. |
 | *Pagamento non completato!<br><br>Scegliere:<br>OK - Per continuare a ricevere denaro<br>Annulla - per annullare l'incasso* | [Cassa automatica Cashmatic](../moduli/casse-bilance/casse-automatiche/cashmatic.md) | Il cliente non ha ancora pagato tutto. | **OK** continua ad aspettare; **Annulla** annulla l'incasso e lo scontrino resta aperto. |
 | *Partita Iva/Codice fiscale non corrispondenti per il file :* seguito dal nome del file / *Vuoi Continuare ?* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | La fattura è intestata a una partita IVA o a un codice fiscale diversi da quelli della ditta su cui stai lavorando. | **No** se hai sbagliato ditta o file: il file risulta **ignorato** nel riepilogo. **Sì** solo se sai perché l'intestazione è diversa. |
+| *Partita Iva Ditta non impostata!* / *Impossibile continuare.* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Senza la partita IVA della ditta il credito del servizio non si può verificare. | Impostala nella [ditta](../moduli/anagrafiche/ditte.md) e riprova. |
 | *Partita IVA non impostata su configurazione Ditta!* / *Partita IVA non impostata sul fornitore!* | [Riordino articoli con analisi prezzi](../moduli/ordini/riordino-articoli.md) | Manca un dato obbligatorio per l'invio EDI. | Compila la partita IVA sulla [ditta](../moduli/anagrafiche/ditte.md) o sul [fornitore](../moduli/anagrafiche/anagrafica-fornitori.md). |
 | *Partita iva non impostata sulla ditta!* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Manca la partita IVA nei dati della ditta. | Impostala nella [ditta](../moduli/anagrafiche/ditte.md): è quella che il programma confronta con l'intestatario della fattura. |
 | *Partita IVA non Valida ! Vuoi Continuare?* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Su un soggetto italiano il codice di controllo della partita IVA non torna. | Rispondi **No** e ricontrolla il numero. |

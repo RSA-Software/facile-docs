@@ -157,6 +157,7 @@ l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
 | *La licenza è sospesa. Contatta RSA Software.* | La licenza è sospesa. | Contatta R.S.A. |
 | *La licenza è revocata. Contatta RSA Software.* | La licenza è revocata. | Contatta R.S.A. |
 | *La licenza è scaduta. Contatta RSA Software.* | La licenza è scaduta. | Contatta R.S.A. |
+| *La licenza è scaduta il 30/11/2026: il programma funziona in modalità dimostrativa finché non la rinnovi.* | La licenza è scaduta: lo dice all'avvio, o mentre lavori quando il programma si collega al server licenze. La data cambia con la licenza; quando la scadenza è stata fissata dopo l'ultimo collegamento, il messaggio è senza data: *La licenza è scaduta: il programma funziona in modalità dimostrativa finché non la rinnovi.* | Il programma continua in prova; contatta R.S.A. per il rinnovo. |
 | *Il file non è una risposta valida per questo PC.* | Il file .rsp importato non è di questo PC o è rovinato. | Importa il file giusto o richiedilo a R.S.A. |
 | *Modulo non disponibile: SCAMBIO DATI FTP (acquistati 1, in uso su CASSA 2).* | Il modulo è già usato su un'altra postazione. Il messaggio cambia con il modulo. | Rilascia il modulo sull'altro PC, o acquistane un altro. |
 | *Questo PC è passato alla licenza digitale.* | Al primo avvio la licenza precedente del PC è stata convertita. | Nessuna azione. |
