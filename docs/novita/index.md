@@ -30,7 +30,8 @@ passaggio avviene da solo al primo avvio con Internet, con la stessa edizione
 e gli stessi moduli. I moduli a pagamento — connettore e-commerce, casse
 automatiche, scambio dati FTP ed etichette elettroniche — valgono per la
 postazione a cui sono assegnati: senza il modulo la funzione non parte e
-avvisa di rivolgersi a R.S.A. Software. Lo scarico del listino aggiornato dei
+avvisa di rivolgersi a R.S.A. Software, anche nelle operazioni automatiche
+dello scambio con i punti vendita e di Spree. Lo scarico del listino aggiornato dei
 tabacchi richiede il canone di assistenza in regola e non è disponibile in
 prova.
 

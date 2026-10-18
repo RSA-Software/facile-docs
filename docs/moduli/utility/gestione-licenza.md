@@ -163,6 +163,7 @@ l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
 | *La licenza precedente di questo PC non è più valida: inserisci il seriale.* | Il passaggio automatico non è possibile. | Attiva il PC con il seriale. |
 | *Disattivare questa postazione? La licenza potrà essere usata su un altro PC. Il programma si chiuderà.* | Conferma della disattivazione. | Rispondi **Sì** per liberare la postazione. |
 | *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Si usa una funzione di un modulo a pagamento che questo PC non ha. Il nome cambia con il modulo (connettore e-commerce, casse automatiche, scambio dati FTP, etichette elettroniche). | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
+| *Operazione 105: funzione scambio dati FTP non abilitata su questo PC. Per abilitarla rivolgersi a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Nel registro di un'operazione automatica: il PC non ha il modulo che l'operazione richiede. Numero e modulo cambiano con l'operazione; per i comandi di trasferimento ai punti vendita il testo comincia con *Comando* e il numero del comando. L'operazione non parte. | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
 
 All'avvio, se la licenza non permette di lavorare, compare una finestra con
 il motivo e i pulsanti **Riprova**, **Licenza…** ed **Esci**:
@@ -184,6 +185,14 @@ il motivo e i pulsanti **Riprova**, **Licenza…** ed **Esci**:
     con la licenza del PC su cui è installato Facile). Senza il modulo la
     funzione non parte e il programma lo dice; nelle operazioni automatiche
     il messaggio va nel registro dell'operazione.
+
+    Valgono anche per le operazioni automatiche di Facile avviate
+    dall'Utilità di pianificazione: lo scambio con i punti vendita
+    (trasferimento e importazione delle variazioni delle fatture, dei
+    documenti di vendita e carico, trasferimento dell'archivio ai punti
+    vendita) vuole lo **scambio dati FTP**; l'esportazione dei dati verso
+    Spree e l'importazione dei suoi ordini vogliono il **connettore
+    e-commerce**.
 
 !!! note "I listini dei tabacchi vogliono il canone di assistenza"
 

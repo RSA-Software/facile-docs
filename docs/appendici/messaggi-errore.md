@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-17 — **1100 messaggi**.
+Aggiornato al 2026-10-18 — **1101 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -921,6 +921,7 @@ Aggiornato al 2026-10-17 — **1100 messaggi**.
 | *Numero gia in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato occupato nel frattempo, per esempio da un'altra cassa. | Scegli un altro posto. |
 | *Numero non trovato in memoria* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il posto scelto è stato liberato nel frattempo, per esempio perché lo scontrino è già stato ripreso da un'altra cassa. | Controlla gli altri posti. |
 | *Obbligo Selezione Reparto!* / *Impostare reparto predefinito prima della conversione!* | [Importazione listino](../moduli/listini-vendita/importazione-listino.md) | Manca il [reparto](../moduli/magazzino/reparti.md) da assegnare agli articoli nuovi. | Scegli il reparto, o impostane uno predefinito nelle opzioni della ditta. |
+| *Operazione 105: funzione scambio dati FTP non abilitata su questo PC. Per abilitarla rivolgersi a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | [Licenza](../moduli/utility/gestione-licenza.md) | Nel registro di un'operazione automatica: il PC non ha il modulo che l'operazione richiede. Numero e modulo cambiano con l'operazione; per i comandi di trasferimento ai punti vendita il testo comincia con *Comando* e il numero del comando. L'operazione non parte. | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
 | *Operazione 980: funzione connettore e-commerce non abilitata su questo PC. Per abilitarla rivolgersi a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | [E-commerce](../moduli/ecommerce/index.md) | Nel registro: il PC non ha il modulo *connettore e-commerce* (o non ha la licenza digitale). Il numero è quello dell'operazione. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../moduli/utility/gestione-licenza.md) di Facile su questo PC. |
 | *Operazione da eseguire non impostata nel file INI.* | [E-commerce](../moduli/ecommerce/index.md) | Nel file manca `operation` nella sezione `[COMMAND]`, oppure il file non esiste nella cartella `cfg`. | Controlla il nome del file e la sua posizione, e che `[COMMAND]` contenga il numero dell'operazione. |
 | *Operazione disponibile solo su archivi anno corrente.* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md), [Stampe dell'inventario](../moduli/inventario/stampe-inventario.md) | Si sta lavorando su un anno diverso da quello in corso. | Cambia anno di lavoro e riprova. |
