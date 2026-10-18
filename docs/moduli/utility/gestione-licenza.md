@@ -78,8 +78,8 @@ comparire ogni volta.
 
 Il riepilogo riporta **Licenza**, **Cliente**, **Edizione**, **Scadenza** (o
 *nessuna*) e la data entro cui il programma deve **collegarsi al server
-licenze**: lo fa da solo all'avvio; se non ci riesce per molto tempo, te lo
-ricorda. Un PC attivato con i file riporta *Attivazione offline*.
+licenze**: lo fa da solo all'avvio e, se il programma resta aperto, una volta
+al giorno; se non ci riesce per molto tempo, te lo ricorda. Un PC attivato con i file riporta *Attivazione offline*.
 
 L'elenco **Moduli** dice per ogni modulo se è *attivo* o *non attivo* su
 questo PC.
@@ -167,7 +167,9 @@ l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
 | *Operazione 105: funzione scambio dati FTP non abilitata su questo PC. Per abilitarla rivolgersi a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | Nel registro di un'operazione automatica: il PC non ha il modulo che l'operazione richiede. Numero e modulo cambiano con l'operazione; per i comandi di trasferimento ai punti vendita il testo comincia con *Comando* e il numero del comando. L'operazione non parte. | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
 
 All'avvio, se la licenza non permette di lavorare, compare una finestra con
-il motivo e i pulsanti **Riprova**, **Licenza…** ed **Esci**:
+il motivo e i pulsanti **Riprova**, **Licenza…** ed **Esci**. La stessa
+finestra compare anche mentre lavori, se nel frattempo la licenza cambia: il
+programma lo controlla da solo, senza bisogno di riavviarlo.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
