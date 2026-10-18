@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-18 — **1103 messaggi**.
+Aggiornato al 2026-10-18 — **1104 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -739,6 +739,7 @@ Aggiornato al 2026-10-18 — **1103 messaggi**.
 | *L'attivazione/disattivazione del reso puo' essere fatta solo con la griglia vuota!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Si sta passando a reso con righe già battute. | Prima si svuota la griglia. |
 | *La Ventilazione dei corrispettivi è stata conclusa in modo errato!* / *Ripetere l'operazione* | [Liquidazione IVA e ventilazione](../moduli/contabilita/liquidazione-iva.md) | La ventilazione non è riuscita. | Ripeti; se il problema resta, segnala all'assistenza. |
 | *La Ventilazione dei corrispettivi è stata conclusa regolarmente!* | [Liquidazione IVA e ventilazione](../moduli/contabilita/liquidazione-iva.md) | La ventilazione è andata a buon fine. | Nulla: è una conferma. |
+| *L'edizione è cambiata in Lite: chiudi e riapri il programma per aggiornare il menu.* | [Licenza](../moduli/utility/gestione-licenza.md) | L'edizione della licenza è cambiata mentre lavori: hai attivato il PC dalla prova, o R.S.A. ha cambiato la licenza. Il menu resta quello di prima fino alla riapertura. L'edizione cambia con la licenza. | Chiudi il programma e riaprilo. |
 | *Le due password digitate non corrispondono !* | [Utenti](../moduli/anagrafiche/utenti.md) | **Password** e **Conf. Password** sono diverse. | Ridigita le due password facendo attenzione al blocco maiuscole. |
 | *Le funzionalità per i lettori Formula sono fornite a richiesta.<br>Contattare la R.S.A. per l' installazione dei componenti necessari.* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Manca il componente per i lettori Datalogic Formula. | Chiedi all'assistenza l'installazione. |
 | *Lettura terminali fallita!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | **F4 - Cerca** non ha ottenuto l'elenco. | Come sopra. |
