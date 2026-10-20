@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-18 — **1104 messaggi**.
+Aggiornato al 2026-10-20 — **1105 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -723,7 +723,8 @@ Aggiornato al 2026-10-18 — **1104 messaggi**.
 | *La procedura permette la rimozioni dei dati dell' anno dallo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | [Manutenzione degli archivi](../moduli/utility/manutenzione-archivi.md) | Hai avviato la rimozione dallo storico. | **Sì** procede. |
 | *La Quantita' indicata e' pari a Zero !<br>Vuoi eliminare la riga ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Quantità a zero. | **Sì** toglie la riga. |
 | *La quantità indicata deve essere obbligatoriamente pari a uno!* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Con le matricole ogni lettura vale un pezzo. | Metti `1` e registra una lettura per matricola. |
-| *La release 2026 non è coperta dall'assistenza: la licenza copre fino alla 2025.* | [Licenza](../moduli/utility/gestione-licenza.md) | La versione installata è più recente di quelle coperte dalla licenza. Gli anni cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza. |
+| *La release 2026 B09.00 non è coperta dall'assistenza: la licenza copre fino alla 2026 B08.01.* | [Licenza](../moduli/utility/gestione-licenza.md) | Stesso anno, ma la versione installata è più recente di quella coperta dalla licenza. La versione è quella che compare nella barra di stato, dopo l'anno. I numeri cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza, oppure installa la versione coperta. |
+| *La release 2026 non è coperta dall'assistenza: la licenza copre fino alla 2025 B08.01.* | [Licenza](../moduli/utility/gestione-licenza.md) | La versione installata è più recente di quelle coperte dalla licenza. Gli anni e le versioni cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza. |
 | *L'articolo … con la gestione dei seriali abilitata non puo' essere venduto con quantita' decimali!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra, per gli articoli a matricola. | Come sopra. |
 | *L'articolo fa parte di un Gruppo Mix!* / *Vuoi aggiornare tutti gli altri articoli del gruppo ?* | [Analisi listino da vendite ed esistenza](../moduli/listini-vendita/analisi-listino.md) | Si è cambiato il prezzo di un articolo che appartiene a un gruppo mix. | **Sì** allinea tutto il gruppo. |
 | *L'articolo fa parte di un Gruppo Mix!* / *Vuoi inserire tutti gli altri articoli del gruppo ?* | [Analisi listino da vendite ed esistenza](../moduli/listini-vendita/analisi-listino.md) | L'articolo aggiunto appartiene a un gruppo mix. | **Sì** porta in griglia tutto il gruppo, così il ragionamento sui prezzi resta coerente. |

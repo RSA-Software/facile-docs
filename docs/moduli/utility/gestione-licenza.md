@@ -143,6 +143,15 @@ Se il PC che lasci non è collegato a Internet, il programma propone la
 disattivazione offline e mostra due codici, il **Codice di rimozione** e
 l'**Attivazione**: comunicali a R.S.A., che libera la postazione.
 
+### Riattivare un PC disattivato
+
+Il PC ricorda la sua ultima attivazione anche dopo la disattivazione. Quando
+riapri la finestra Licenza per attivarlo di nuovo, trovi già compilati il
+**Seriale**, l'**Edizione**, i **Moduli** spuntati e il **Nome del PC**, se
+allora l'avevi cambiato. Controllali e premi **F2 - Attiva**. Vale anche per
+un PC passato dalla licenza precedente, che il seriale non l'ha mai visto
+scritto.
+
 ![La disattivazione offline](../../assets/img/utility/licenza-rimozione.png)
 
 ## Controlli e messaggi
@@ -176,7 +185,8 @@ programma lo controlla da solo, senza bisogno di riavviarlo.
 |---|---|---|
 | *Il programma deve collegarsi al server licenze. Controlla la connessione a Internet e premi Riprova, oppure usa il rinnovo offline da Licenza….* | Il PC non si collega al server da troppo tempo. | Collegati a Internet e premi **Riprova**, oppure **Licenza…** ▸ **Rinnovo offline…**. |
 | *La data del computer è indietro rispetto all'ultima usata dal programma. Correggi data e ora e premi Riprova.* | L'orologio del PC è indietro. | Correggi data e ora di Windows e premi **Riprova**. |
-| *La release 2026 non è coperta dall'assistenza: la licenza copre fino alla 2025.* | La versione installata è più recente di quelle coperte dalla licenza. Gli anni cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza. |
+| *La release 2026 non è coperta dall'assistenza: la licenza copre fino alla 2025 B08.01.* | La versione installata è più recente di quelle coperte dalla licenza. Gli anni e le versioni cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza. |
+| *La release 2026 B09.00 non è coperta dall'assistenza: la licenza copre fino alla 2026 B08.01.* | Stesso anno, ma la versione installata è più recente di quella coperta dalla licenza. La versione è quella che compare nella barra di stato, dopo l'anno. I numeri cambiano. | Contatta R.S.A. per il rinnovo dell'assistenza, oppure installa la versione coperta. |
 
 ## Note
 
