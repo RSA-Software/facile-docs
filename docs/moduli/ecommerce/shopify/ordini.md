@@ -107,13 +107,17 @@ al campo **Destinatario** compare anche il riferimento completo, per esempio
 - **Articolo sconosciuto:** se l'articolo non si trova, la riga entra come
   riga descrittiva con il nome del prodotto e lo SKU, e l'IVA predefinita
   della ditta. Va sistemata a mano.
-- **Prezzi:** sono quelli dell'ordine. Se il negozio mostra i prezzi IVA
-  compresa, le righe sono IVA inclusa.
+- **Prezzi:** sono quelli dell'ordine, prima dello sconto. Se il negozio
+  mostra i prezzi IVA compresa, le righe sono IVA inclusa.
+- **Sconto sulla riga:** lo sconto che Shopify ha attribuito all'articolo,
+  compresa la sua parte di un codice sconto dell'ordine, resta **sulla
+  riga** come sconto in valore: l'importo della riga è quello pagato.
 - **Deposito:** quello indicato nella chiave `deposito`; se manca, il
   deposito attivo della ditta.
-- **Sconto:** lo sconto totale dell'ordine entra come una riga in negativo
-  sull'articolo indicato in `cod_buono_sco`, con il codice sconto come
-  descrizione (o *SCONTO*).
+- **Sconto:** la parte dello sconto dell'ordine che Shopify non ha
+  attribuito agli articoli entra come una riga in negativo sull'articolo
+  indicato in `cod_buono_sco`, con il codice sconto come descrizione (o
+  *SCONTO*). Di norma non c'è.
 - **Spese di trasporto:** ogni spedizione a pagamento entra come una riga
   sull'articolo indicato in `cod_spese_tra`, con il nome della spedizione
   come descrizione.
@@ -121,7 +125,8 @@ al campo **Destinatario** compare anche il riferimento completo, per esempio
 !!! warning "Sconti e spese senza articolo"
 
     Se `cod_buono_sco` o `cod_spese_tra` sono vuoti, o indicano un articolo
-    che non esiste, lo sconto o le spese **non entrano** e il totale
+    che non esiste, lo sconto non attribuito agli articoli o le spese **non
+    entrano** e il totale
     dell'ordine in Facile è diverso da quello del negozio. Prepara due
     articoli di servizio e indicali nella sezione `[ARTICOLI]`.
 

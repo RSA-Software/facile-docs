@@ -109,7 +109,7 @@ Usata dall'importazione degli ordini (980).
 | Chiave | Predefinito | Descrizione |
 |---|---|---|
 | `cod_spese_tra` | vuoto | L'articolo su cui registrare le spese di trasporto. Vuoto, le spese non entrano. |
-| `cod_buono_sco` | vuoto | L'articolo su cui registrare lo sconto dell'ordine. Vuoto, lo sconto non entra. |
+| `cod_buono_sco` | vuoto | L'articolo su cui registrare lo sconto dell'ordine non attribuito agli articoli (quello degli articoli resta sulle loro righe). Vuoto, quella parte non entra. |
 
 ## [STATI]
 

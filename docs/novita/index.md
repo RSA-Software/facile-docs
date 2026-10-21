@@ -117,6 +117,18 @@ DDT emessi senza nota del fornitore.
   erano stati toccati: li confrontava con quelli della prima causale aperta.
   Ora l'avviso compare solo quando i contatori cambiano davvero.
 
+**E-commerce**
+
+- [WooCommerce](../moduli/ecommerce/woocommerce.md), importazione degli
+  ordini: dalla B08.01 lo sconto di un articolo entrava come riga **SCONTO**
+  a parte, con l'articolo a prezzo pieno. Ora resta sulla riga dell'articolo,
+  come sconto in valore, e la riga a parte compare solo per uno sconto
+  dell'ordine che il negozio non ha ripartito sugli articoli.
+- [Shopify](../moduli/ecommerce/shopify/ordini.md), importazione degli
+  ordini: lo stesso. Lo sconto, compresa la parte di un codice sconto
+  dell'ordine che Shopify attribuisce a ogni articolo, resta sulla riga come
+  sconto in valore invece di entrare tutto come riga a parte.
+
 ### Voci tolte dal menu
 
 - **Utility ▸ Gestione Licenza**, con **Attivazione Licenza**, **Rimozione

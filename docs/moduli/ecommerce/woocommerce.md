@@ -143,10 +143,13 @@ altrimenti con `interval = 0` il giro dopo riparte dalla stessa data.
   quella.
 - **Righe:** l'articolo si ritrova dal codice (SKU); se non esiste la riga entra
   come descrittiva, con lo SKU e l'IVA predefinita della ditta. Il prezzo è
-  quello **prima dello sconto**.
-- **Sconto:** una riga in negativo con lo sconto dell'ordine, sull'articolo
-  `cod_buono_sco`. Le commissioni del negozio entrano sullo stesso articolo,
-  ciascuna con il suo nome.
+  quello **prima dello sconto**, e lo sconto che il negozio ha applicato
+  all'articolo resta **sulla riga**, come sconto in valore: l'importo della
+  riga è quello pagato.
+- **Sconto:** una riga in negativo sull'articolo `cod_buono_sco` solo per la
+  parte dello sconto dell'ordine che il negozio non ha ripartito sugli
+  articoli; di norma non c'è. Le commissioni del negozio entrano sullo stesso
+  articolo, ciascuna con il suo nome.
 - **Spese di trasporto:** una riga sull'articolo `cod_spese_tra`. Con i prezzi
   IVA esclusa la riga è netta e l'IVA la calcola Facile.
 
