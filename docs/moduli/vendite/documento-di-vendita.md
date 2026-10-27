@@ -140,7 +140,7 @@ Le voci cambiano con il tipo di documento:
 | Voce | Documento | Cosa fa |
 |---|---|---|
 | **Palmare Android**, **Lettore Formula 734**, **Lettore Meteor Eco 486**, **Lettore Meteor PT10**, **Lettore Unitech PT630D**, **Lettore Zebex 2030**, **Lettore Eia Thunder**, **Lettore BCP8000 - ET8000**, **Lettore DENSO N661** | tutti | Scaricano le letture di un terminale portatile o di un lettore di codici a barre. |
-| **Foglio Excel** | tutti | Prende le righe da un foglio Excel: vedi [Le righe che arrivano da fuori](#le-righe-che-arrivano-da-fuori). |
+| **Foglio Excel** | tutti | Prende le righe da un foglio Excel: vedi [Importare le righe da un foglio Excel](#importare-le-righe-da-un-foglio-excel), con il [modello da scaricare](../../assets/modelli/documento-righe-importazione.xlsx). |
 | **Articoli** | tutti | Apre la [ricerca articoli](../anagrafiche/cerca-articoli.md) per scegliere gli articoli da mettere nel documento. |
 | **Ordine C.S.R.S.**, **Ordine EspriNet** | ordini a fornitore | Leggono l'ordine dal file del fornitore. |
 | **Riassortimento da Vendite** | ordini clienti | Mette nell'ordine il venduto di un periodo: vedi [Prendere le righe dal venduto](#prendere-le-righe-dal-venduto). |
@@ -512,6 +512,116 @@ righe, sommando quelle uguali. Il prezzo:
 - sulle **fatture** è quello della vendita, e le righe sono segnate **Già
   Movimentato**: la merce è già uscita, non va scaricata di nuovo.
 
+### Importare le righe da un foglio Excel
+
+Mette nel documento le righe scritte in un foglio Excel: un ordine ricevuto
+per posta, un elenco preparato dal fornitore, un conteggio di magazzino.
+
+1. Prepara il foglio come spiegato in
+   [Il foglio Excel da importare](#il-foglio-excel-da-importare). Puoi partire
+   dal [modello già impostato](../../assets/modelli/documento-righe-importazione.xlsx).
+2. Chiudi il foglio in Excel: un file ancora aperto non si può leggere.
+3. Apri il documento e premi **F8 - Corpo**.
+4. Premi **F7 - Dati** e scegli **Foglio Excel**. Alla domanda *Vuoi importare
+   i dati da un foglio Excel ?* rispondi **Sì**.
+5. Scegli il file, `.xlsx` o `.xls`. La ricerca parte dalla cartella `in`.
+6. Se il foglio non ha la colonna `PREZZO`, il programma avvisa che userà i
+   prezzi del listino del documento: rispondi **Sì** per continuare.
+7. Solo negli **ordini a fornitore**: alla domanda *Vuoi inserire eventuali
+   articoli non piu' ordinabili nell'ordine?* rispondi **Sì** se vuoi ordinare
+   anche gli articoli non più ordinabili, esclusi dai listini o tolti
+   dall'assortimento del deposito; con **No**, già selezionato, restano fuori.
+8. Attendi la fine dell'importazione. La finestra di avanzamento mostra a che
+   punto è; **Esci** la interrompe, e le righe già importate restano.
+9. Leggi il riepilogo: righe importate, righe scartate senza quantità o perché
+   non più ordinabili, articoli non trovati. Se qualche riga non è entrata,
+   rispondi **Sì** alla domanda finale per vederne l'elenco, con il numero di
+   riga del foglio e il motivo.
+
+Le righe importate compaiono nel corpo del documento come quelle inserite a
+mano, con la descrizione dell'articolo. Si **aggiungono** a quelle già
+presenti: se ripeti l'importazione con lo stesso foglio, entrano tutte una
+seconda volta. Per recuperare le righe scartate, correggile in un foglio a
+parte con le sole righe mancanti, oppure aggiungile a mano.
+
+#### Il foglio Excel da importare
+
+Il programma legge il **primo foglio** del file. L'intestazione è la prima
+riga che contiene almeno uno dei nomi di colonna qui sotto: le righe sopra,
+per esempio un titolo o una data, vengono ignorate. Dalla riga successiva in
+giù, un articolo per riga.
+
+| CODICE | DESCRIZIONE | QUANTITA | PREZZO | SCO | COLLI |
+|---|---|--:|--:|--:|--:|
+| 000123 | PASTA DI SEMOLA 500 G | 12 | 2,35 | 10 | 1 |
+| 8001234567890 | OLIO EXTRAVERGINE 1 L | 24 | 1,10 | 10 | 2 |
+| ART-45 | DETERSIVO PIATTI 750 ML | 50 | 0,89 | | |
+
+Le colonne sono riconosciute dal **nome** scritto nell'intestazione, non dalla
+posizione: l'ordine non conta, e non conta se il nome è scritto in maiuscolo o
+in minuscolo. Qualunque altra colonna viene ignorata.
+
+| Colonna | Obbl. | Contenuto |
+|---|:---:|---|
+| `CODICE` | ● | Il codice dell'articolo, uno dei suoi codici a barre o il codice che gli dà il fornitore. |
+| `QUANTITA` | ● | La quantità della riga. Va scritta **senza accento**: `QUANTITÀ` non viene riconosciuta. Una riga con quantità zero o vuota viene scartata. |
+| `PREZZO` | | Il prezzo della riga. Se la colonna manca, i prezzi e gli sconti arrivano dal listino del documento. |
+| `SCO`, `SCO1` … `SCO6` | | I sette **%Sconto** della riga, in cascata: `SCO` è il primo, `SCO6` il settimo. |
+| `SCO_VAL` | | Lo **Sc.Valore**, lo sconto in euro della riga. |
+| `SCO_MER` | | Lo **Sc.Merce**, la quantità data in sconto merce. |
+| `COLLI` | | I **Colli** della riga, un numero intero. |
+| `CODIVA` | | Il codice dell'[aliquota IVA](../contabilita/aliquote-iva.md). Vuota o zero, resta quella dell'articolo. |
+| `CODDEP` | | Il codice del [deposito](../magazzino/depositi.md). Vuota o zero, si usa il deposito attivo della ditta. |
+| `DESCRIZIONE` | | Non viene registrata: la descrizione arriva dall'articolo. Serve a te per riconoscere la riga, e compare nell'elenco delle righe non importate. |
+| `PARTITA` o `LOTTO` | | **Solo Ortofrutta**: la partita di carico da cui prendere la merce. Se l'articolo non è in quella partita, il dato viene lasciato vuoto. |
+
+● Senza `CODICE` l'importazione non parte. Senza `QUANTITA` parte solo se c'è
+`COLLI`, ma fuori dalla versione **Ortofrutta** tutte le righe vengono poi
+scartate perché senza quantità.
+
+!!! warning "Con la colonna PREZZO, il listino non c'entra più"
+
+    Se nel foglio c'è la colonna `PREZZO`, il programma prende prezzo **e
+    sconti** solo dal foglio. Una cella `PREZZO` vuota dà una riga a prezzo
+    zero, e gli sconti del listino non vengono applicati: valgono soltanto
+    quelli scritti nelle colonne `SCO`. Se vuoi i prezzi del listino su tutte
+    le righe, togli la colonna `PREZZO` dal foglio.
+
+**Come scrivere i valori.**
+
+- **Codici con zeri iniziali**: la colonna `CODICE` va formattata come
+  **Testo** prima di scrivere i codici. Altrimenti Excel trasforma `000123` in
+  `123`, e l'articolo non viene trovato. Nel modello la colonna è già
+  impostata così.
+- **Codici a barre**: vanno bene anche come numeri. Excel li può mostrare
+  abbreviati, per esempio `8,00123E+12`, ma il numero salvato resta intero e
+  viene letto bene. Un codice a barre che comincia con zero, scritto come
+  numero, perde lo zero: se così non si trova, il programma lo cerca di nuovo
+  completandolo a 13 cifre.
+- **Codici rovinati da Excel**: in tre casi le cifre del codice sono già perse
+  nel foglio, e il programma non le può recuperare:
+    - la cella contiene come **testo** la forma abbreviata, per esempio
+      `8,00123E+12`. Succede ai fogli passati da un file CSV;
+    - il codice è un numero di **più di 15 cifre**: Excel ne conserva solo le
+      prime 15;
+    - il numero è stato **accorciato** e finisce con una fila di zeri, per
+      esempio `8001230000000`.
+
+    Queste righe finiscono fra gli articoli non trovati, e nell'elenco delle
+    righe non importate è indicato il motivo. Vanno riscritte nel foglio,
+    partendo dal codice originale, in una colonna formattata come **Testo**.
+- **Quantità, prezzi e sconti** devono essere numeri, non testo: una quantità
+  scritta come testo vale zero, e la riga viene scartata.
+- **Sconti**: scrivi `10` per il dieci per cento. Una cella in formato
+  percentuale con `10%` vale `0,1` per Excel, e diventerebbe uno sconto dello
+  0,1%.
+- **Righe vuote**: una riga senza codice viene saltata e non conta fra le
+  scartate.
+
+**Solo Ortofrutta.** `PREZZO` e le colonne degli sconti vengono ignorati: i
+prezzi arrivano sempre dal listino del documento. Una riga entra se ha la
+quantità oppure i colli.
+
 ### Fatturare uno scontrino
 
 Una fattura può riprendere le righe di uno scontrino già battuto. Le voci di
@@ -760,11 +870,15 @@ controlli sono altri.
 | *Colonna CODICE non trovata nel documento !* | Il foglio Excel non ha la colonna del codice. | È obbligatoria: il foglio va sistemato. |
 | *Colonna PREZZO non trovata nel documento !<br>Continuando nell'importazione saranno inseriti i prezzi del listino associato al documento.<br>Vuoi continuare?* | Manca la colonna del prezzo. | **Sì** prende i prezzi dal listino: va bene se i prezzi sono i propri, non se erano quelli del fornitore. |
 | *Nessuna tra le Colonne QUANTITA o COLLI e' stata trovata nel documento !* | Manca la quantità. | Serve almeno una delle due colonne. |
+| *Vuoi inserire eventuali articoli non piu' ordinabili nell'ordine?* | In un ordine a fornitore hai scelto **F7 - Dati ▸ Foglio Excel**. | **Sì** mette nell'ordine anche gli articoli non più ordinabili, quelli esclusi dai listini e quelli tolti dall'assortimento del deposito; **No**, già selezionato, li salta e li conta nel riepilogo finale. |
+| *Importazione terminata.<br><br>Righe importate : …<br>Righe scartate senza quantita' : …<br>Righe scartate non piu' ordinabili : …<br>Articoli non trovati : …<br>di cui con il codice rovinato da Excel : …<br><br>Vuoi vedere l'elenco delle righe non importate?* | Fine di **F7 - Dati ▸ Foglio Excel**. La riga dei non più ordinabili c'è solo negli ordini a fornitore; quella dei codici rovinati solo se ce ne sono, vedi [Come scrivere i valori](#il-foglio-excel-da-importare); la domanda finale solo se qualche riga non è entrata. Se hai interrotto l'importazione, la prima riga dice *Importazione interrotta.* e i conti si fermano lì. | **Sì** apre l'elenco delle righe non entrate, ognuna con il numero di riga del foglio, il codice, la descrizione e il motivo. Le righe importate restano comunque nel documento: quelle senza quantità le correggi nel foglio o le aggiungi a mano, gli articoli non trovati li crei o ne correggi il codice. |
+| *Vuoi inserire eventuali articoli non piu' ordinabili?* | In un ordine a fornitore stai scaricando le letture del palmare o di un lettore di codici a barre. | Come sopra, ma qui il pulsante già selezionato è **Sì**. |
 | *Nessun codice articolo presente per la riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Una riga del file non ha codice. | La riga **non entra**: va aggiunta a mano. |
 | *Non e' possibile accoppiare l'articolo della riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Il codice della riga non si aggancia a nessun articolo. | Come sopra. |
 | *Confermi l'Importazione del Movimento da GESA ?* / *Vuoi Importare i Prezzi di Vendita ?* | **Solo Taglie e Colori - Calzature**: hai scelto **F7 - Dati ▸ Movimento GESA**. | **Sì** alla prima importa il movimento; la seconda decide se prendere anche i prezzi di vendita. |
-| *Vuoi importare i dati da un foglio Excel ?* | **Solo Ortofrutta.** Hai scelto **F7 - Dati ▸ File Listino Prezzi Excel**. | **Sì** chiede il file. |
-| *Deposito principale non impostato o non valido !* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: la ditta non ha un deposito attivo valido. | Impostalo nella [ditta](../anagrafiche/ditte.md). |
+| *Vuoi importare i dati da un foglio Excel ?* | Hai scelto **F7 - Dati ▸ Foglio Excel** oppure, **solo Ortofrutta**, **File Listino Prezzi Excel**. | **Sì** chiede il file. |
+| *Deposito principale non impostato o non valido !* | Hai scelto **F7 - Dati ▸ Foglio Excel**, **Articoli** oppure, **solo Ortofrutta**, **File Listino Prezzi Excel**, e la ditta non ha un deposito attivo valido. | Impostalo nella [ditta](../anagrafiche/ditte.md). |
+| *Impossibile inizializzare il file excel!* | **F7 - Dati ▸ Foglio Excel**: il programma non riesce ad avviare la lettura del foglio. | Riprova; se si ripete, chiama l'assistenza. |
 | *Riga … - articolo '… …' non trovato* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il codice di quella riga del foglio non è in archivio. | La riga non entra: crea l'articolo, o aggiungila a mano. |
 | *Impossibile aprire il file …!<br><br>…* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il file non si apre; segue la spiegazione. | Chiudilo in Excel e riprova. |
 | *Impossibile aprire il file excel!* / *Impossibile accedere al foglio!* | Il file è aperto altrove o non è leggibile. | Chiuderlo in Excel e riprovare. |
