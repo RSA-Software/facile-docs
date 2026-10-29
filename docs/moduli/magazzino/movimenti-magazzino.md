@@ -96,6 +96,7 @@ In alto la testata del movimento, sotto le righe della merce.
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | La causale scelta è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](causali-magazzino.md), o scegline un'altra. |
 | *Se il movimento è di tipo CARICO impostare ESISTENZA +* | La causale scelta è di carico ma non aggiunge all'esistenza. | Come sopra. |
 | *Data fuori dall'Esercizio Corrente ! Vuoi Continuare ?* | La data del movimento non cade nell'anno di lavoro. | **No** per correggerla. **Sì** registra lo stesso: il movimento finisce in un altro esercizio. |
+| *Il codice dell' articolo non è valido o disponibile.* | L'articolo del movimento non è in anagrafica, per esempio perché è stato cancellato dopo che il movimento era stato registrato. | Indica un articolo esistente, o rimetti l'articolo in [anagrafica](../anagrafiche/anagrafica-articoli.md) prima di salvare. |
 | *Commessa obbligatoria!* | La causale pretende la commessa e il campo è vuoto. | Indica la commessa. |
 | *Centro Cost/Ricavo obbligatorio!* | La causale pretende il centro di costo e il campo è vuoto. | Indica il centro. |
 | *Non sono ammesse quantità con decimali nella gestione delle matricole!* | L'articolo è gestito a matricola e hai scritto una quantità con la virgola. | Le matricole si contano a pezzi interi. |

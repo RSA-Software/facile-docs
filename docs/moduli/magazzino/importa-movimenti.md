@@ -142,7 +142,10 @@ in minuscolo. Qualunque altra colonna viene ignorata.
 - **Codici a barre**: vanno bene anche come numeri; il numero salvato resta
   intero e viene letto bene. Un codice a barre che comincia con zero, scritto
   come numero, perde lo zero: se così non si trova, il programma lo cerca di
-  nuovo completandolo a 13 cifre.
+  nuovo completandolo a 12 cifre (UPC) e poi a 13 (EAN).
+- **Spazi e tabulazioni**: quelli prima e dopo il codice non contano. Capita
+  spesso nei fogli esportati da altri programmi, che mettono una tabulazione
+  davanti al codice per farlo restare testo.
 - **Date**: vanno bene le celle in formato data di Excel e le date scritte come
   testo, per esempio `02/03/2026`.
 - **Numeri**: quantità e prezzi possono avere la virgola o il punto come

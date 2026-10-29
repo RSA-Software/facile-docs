@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-29 — **1126 messaggi**.
+Aggiornato al 2026-10-29 — **1127 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -412,6 +412,7 @@ Aggiornato al 2026-10-29 — **1126 messaggi**.
 | *Il codice della Causale di Magazzino richiesto non è valido o disponibile.* | [Casse](../moduli/casse-bilance/casse.md) | Manca la causale delle vendite nei parametri della ditta. | Impostala prima di procedere. |
 | *Il codice della Causale di Magazzino richiesto non è valido o disponibile.* | [Causali magazzino](../moduli/magazzino/causali-magazzino.md) | La causale indicata nel campo **Causale** non esiste. | Correggila, oppure lascia il campo a zero. |
 | *Il codice dell' articolo deve essere composto da sei numeri !* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | **Solo Taglie e Colori**, nella [riga](../moduli/vendite/documento-di-vendita.md#la-riga-del-documento) per taglie e colori. | Correggi il codice. |
+| *Il codice dell' articolo non è valido o disponibile.* | [Movimenti di magazzino](../moduli/magazzino/movimenti-magazzino.md) | L'articolo del movimento non è in anagrafica, per esempio perché è stato cancellato dopo che il movimento era stato registrato. | Indica un articolo esistente, o rimetti l'articolo in [anagrafica](../moduli/anagrafiche/anagrafica-articoli.md) prima di salvare. |
 | *Il codice della zona non è valido o disponibile.* | [Anagrafica agenti](../moduli/anagrafiche/anagrafica-agenti.md) | Il codice digitato in **Zona** non esiste. | Premi ++f10++ sul campo e scegli dall'elenco. |
 | *Il codice dell' Operatore non è valido o disponibile.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | L'[operatore](../moduli/altre-tabelle/operatori.md) non esiste. | Va creato o corretto. |
 | *Il codice del nuovo articolo è già presente in archivio !<br><br>Vuoi unificare gli articoli ?* | [Assistenza](../moduli/utility/assistenza.md) | Il codice di destinazione esiste già. | **Sì** fonde i due articoli in uno: movimenti, listini e giacenze del vecchio passano al nuovo e il vecchio sparisce. È irreversibile. La risposta preimpostata è **No**. |
