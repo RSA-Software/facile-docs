@@ -21,6 +21,8 @@ stampe. Le tabelle su cui poggia — causali, depositi, categorie — stanno sot
 
 - [Movimenti di magazzino](movimenti-magazzino.md) — rettifiche,
   trasferimenti, cali: tutto quello che si muove senza un documento.
+- [Importa movimenti da Excel](importa-movimenti.md) — gli stessi movimenti,
+  presi a decine da un foglio Excel, con il controllo prima di registrarli.
 - [Produzione](produzione.md) — distinta base, fabbisogno, avanzamento e carico
   dei prodotti finiti.
 - [Movimenti dei banchi conservatori](banchi-conservatori-movimenti.md) —

@@ -144,4 +144,5 @@ In alto la testata del movimento, sotto le righe della merce.
 - [Causali magazzino](causali-magazzino.md)
 - [Depositi](depositi.md)
 - [Carico merci](carico-merci.md)
+- [Importa movimenti da Excel](importa-movimenti.md)
 - [Stampe dei movimenti di magazzino](stampe-movimenti-magazzino.md)
