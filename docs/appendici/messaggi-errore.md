@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-29 — **1127 messaggi**.
+Aggiornato al 2026-10-30 — **1130 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -90,6 +90,7 @@ Aggiornato al 2026-10-29 — **1127 messaggi**.
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | [Analisi listino da vendite ed esistenza](../moduli/listini-vendita/analisi-listino.md) | La causale di rettifica non aggiorna la data di inventario. | Attiva l'opzione corrispondente sulla causale. |
 | *Attivare il Flag Aggiorna Data Inventario sulla Causale.* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | La causale non aggiorna la data di inventario. | Attiva il flag sulla causale. |
 | *Autenticazione fallita!* | [Cassa automatica CashDro](../moduli/casse-bilance/casse-automatiche/cashdro.md) | Utente o password sbagliati. | Correggi `user` e `password`. |
+| *Autenticazione Fallita!* | [Gestione documenti](../moduli/vendite/gestione-documenti.md) | Con **F4** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprova; se si ripete, contatta l'assistenza. |
 | *Bilancia non a livello!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | La bilancia non è in piano. | Va livellata. |
 | *Bilancia non a livello!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La bilancia non è in piano. | Va livellata, altrimenti pesa male. |
 | *…<br><br>L'erogazione potrebbe essere avvenuta in parte: verificare la cassa automatica.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Un reso o un prelievo non è stato erogato tutto. | Controlla quanto è uscito dalla macchina e dai il resto a mano. |
@@ -778,6 +779,7 @@ Aggiornato al 2026-10-29 — **1127 messaggi**.
 | *L'ultimo scontrino emesso è stato un reso di € …<br><br>Vuoi utilizzare l'importo per il pagamento?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Aprendo la [chiusura dello scontrino](../moduli/vendite/vendita-al-banco.md#la-chiusura-dello-scontrino), l'ultimo scontrino di quel foglio era un reso non ancora usato. | **Sì** lo mette in **Totale Reso** e in **Contante**. **No** chiede se dimenticarlo. |
 | *L'utente non ha diritti sufficienti!* | [Cassa automatica CashDro](../moduli/casse-bilance/casse-automatiche/cashdro.md) | L'utente della macchina non può fare incassi. | Usa un utente con i permessi. |
 | *Mancano i dati del titolare/legale rappresentante!* | [Anagrafica clienti](../moduli/anagrafiche/anagrafica-clienti.md) | Stai stampando il modulo di fidejussione e il titolare non è registrato. | Registralo con **F7 - Altri ▸ Titolare/Rappr. Legale**. |
+| *Mancata risposta dal server!* | [Gestione documenti](../moduli/vendite/gestione-documenti.md) | Con **F4** il servizio delle fatture elettroniche non ha risposto. | Controlla la connessione a Internet e riprova. |
 | *Matricola stampante fiscale non impostata!* / *Matricola stampante fiscale non valida!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Manca o è sbagliata la matricola del registratore telematico. | Si imposta nelle impostazioni della postazione. |
 | *(messaggio della libreria Excel)* | [Analisi e giacenza dei lotti](../moduli/analisi-dati/analisi-lotti.md) | Errore in scrittura del foglio. | Controlla che il file non sia già aperto e che la cartella sia scrivibile. |
 | *(messaggio della libreria Excel)* | [Modifica articoli da griglia](../moduli/anagrafiche/modifica-da-griglia.md) | Errore in lettura o scrittura del foglio. | Controlla che la cartella sia scrivibile e che il file non sia in uso. |
@@ -982,6 +984,7 @@ Aggiornato al 2026-10-29 — **1127 messaggi**.
 | *PLU … - Reparto … - Q.ta … Totale …<br> Non trovato in archivio* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Una riga dello scontrino ha un PLU che non corrisponde a nessun articolo. | Controlla la fattura con lo scontrino, e collega quel PLU all'articolo in [anagrafica](../moduli/anagrafiche/anagrafica-articoli.md). |
 | *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con una bilancia BIZERBA, il peso non si è stabilizzato o il piatto è vuoto. | Appoggia l'articolo, aspetta che si fermi e ripeti. |
 | *Posizionare sul piatto della bilancia l'articolo da pesare e ripetere l'operazione!* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il piatto è vuoto. | Appoggiare l'articolo. |
+| *POST -> Response status code = …* | [Gestione documenti](../moduli/vendite/gestione-documenti.md) | Con **F4** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprova; se si ripete, comunica il numero all'assistenza. |
 | *Primo esito = 0* — *Vuoi Continuare ?* | [Promozioni](../moduli/vendite/promozioni.md) | La riga non ha un valore di offerta, e non è un'offerta a regalo. | **No** torna sul campo. **Sì** salva la riga così: non farà nulla. La risposta preimpostata è **No**. |
 | *Procedendo con la cancellazione sarà eliminato l'intero andamento della produzione!* — *Vuoi Continuare?* | [Produzione](../moduli/magazzino/produzione.md) | Hai chiesto di cancellare una commessa. | **Sì** cancella la commessa e tutti i suoi movimenti. La risposta preimpostata è **No**. |
 | *%Provvig. per Vendite Concessionario Uguale a Zero* / *Confermi la Variazione delle Provvigioni ?* | [Variazioni di massa dei listini](../moduli/listini-vendita/variazioni-di-massa.md) | Il campo **C.S. Vendita** è rimasto a zero. | Come sopra. |

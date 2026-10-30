@@ -121,6 +121,9 @@ La griglia ha queste colonne:
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *(nessun messaggio, solo un segnale acustico)* | Un campo del filtro non è valido. | Guarda dove si è posizionato il cursore: è il campo da correggere. |
+| *Autenticazione Fallita!* | Con **F4** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprova; se si ripete, contatta l'assistenza. |
+| *Mancata risposta dal server!* | Con **F4** il servizio delle fatture elettroniche non ha risposto. | Controlla la connessione a Internet e riprova. |
+| *POST -> Response status code = …* | Con **F4** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprova; se si ripete, comunica il numero all'assistenza. |
 
 ## Note
 
