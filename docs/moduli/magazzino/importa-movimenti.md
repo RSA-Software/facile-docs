@@ -188,8 +188,6 @@ finale dice quanti movimenti sono entrati.
 |---|---|---|
 | *Deposito non impostato o non valido!* | **Deposito** è vuoto o il codice non esiste. | Indica un deposito; ++f10++ apre l'elenco. |
 | *Causale non impostata o non valida!* | **Causale** è vuota o il codice non esiste. | Indica una causale; ++f10++ apre l'elenco. |
-| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | La causale della maschera è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](causali-magazzino.md), o scegline un'altra. |
-| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | La causale della maschera è di carico ma non aggiunge all'esistenza. | Come sopra. |
 | *Impossibile inizializzare il file excel!* | Il programma non riesce a preparare la lettura del foglio. | Riprova; se si ripete, segnalalo all'assistenza. |
 | *Impossibile aprire il file excel!* | Il file è aperto in Excel, danneggiato o non è un foglio Excel. | Chiudi il file in Excel e riprova, o salvalo di nuovo come `.xlsx`. |
 | *Colonna CODICE non trovata nel file excel!<br><br>Impossibile continuare* | Nella prima riga del foglio manca l'intestazione `CODICE`. | Aggiungi la colonna, o porta l'intestazione sulla prima riga. |
@@ -228,6 +226,11 @@ finale dice quanti movimenti sono entrati.
     della maschera o quella della colonna `CAUSALE`. Una stessa importazione
     può quindi contenere carichi e scarichi, se le righe hanno causali
     diverse.
+
+    La causale della maschera si usa così com'è impostata, anche se non
+    tocca l'esistenza: i movimenti muovono solo i contatori che la causale
+    prevede. Prima di importare, controlla nelle
+    [causali di magazzino](causali-magazzino.md) che sia quella giusta.
 
 ## Vedi anche
 

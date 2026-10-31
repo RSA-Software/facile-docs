@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-30 — **1130 messaggi**.
+Aggiornato al 2026-10-31 — **1128 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -1024,11 +1024,9 @@ Aggiornato al 2026-10-30 — **1130 messaggi**.
 | *Se il mittente è un numero di telefono, deve iniziare con il prefisso internazionale (es. +39 Italia)* | [Ditte](../moduli/anagrafiche/ditte.md) | Il mittente SMS è un numero senza prefisso. | Aggiungi `+39`. |
 | *Se il movimento è di tipo CARICO impostare ESISTENZA +* | [Analisi listino da vendite ed esistenza](../moduli/listini-vendita/analisi-listino.md) | La causale di rettifica è di tipo carico ma non alza l'esistenza. | Come sopra. |
 | *Se il movimento è di tipo CARICO impostare ESISTENZA +* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | La causale è di carico ma non somma all'esistenza. | Correggi la causale. |
-| *Se il movimento è di tipo CARICO impostare ESISTENZA +* | [Importa movimenti da Excel](../moduli/magazzino/importa-movimenti.md) | La causale della maschera è di carico ma non aggiunge all'esistenza. | Come sopra. |
 | *Se il movimento è di tipo CARICO impostare ESISTENZA +* | [Movimenti di magazzino](../moduli/magazzino/movimenti-magazzino.md) | La causale scelta è di carico ma non aggiunge all'esistenza. | Come sopra. |
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Analisi listino da vendite ed esistenza](../moduli/listini-vendita/analisi-listino.md) | La causale di rettifica inventario impostata nella ditta è di tipo scarico ma non abbassa l'esistenza. | Correggi la [causale di magazzino](../moduli/magazzino/causali-magazzino.md), oppure indica nella ditta una causale adatta. |
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | La causale è di scarico ma non sottrae dall'esistenza. | Correggi la [causale](../moduli/magazzino/causali-magazzino.md). |
-| *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Importa movimenti da Excel](../moduli/magazzino/importa-movimenti.md) | La causale della maschera è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](../moduli/magazzino/causali-magazzino.md), o scegline un'altra. |
 | *Se il movimento è di tipo SCARICO impostare ESISTENZA -* | [Movimenti di magazzino](../moduli/magazzino/movimenti-magazzino.md) | La causale scelta è di scarico ma non toglie dall'esistenza. | Correggi la [causale di magazzino](../moduli/magazzino/causali-magazzino.md), o scegline un'altra. |
 | *Sei Sicuro ?* | [Manutenzione degli articoli](../moduli/anagrafiche/manutenzione-articoli.md) | Seconda conferma della cancellazione. | **Sì** cancella davvero. Non si torna indietro. |
 | *Sei Sicuro di voler continuare?* | [Ditte](../moduli/anagrafiche/ditte.md) | Conferma richiesta da **F2 - Salva** nelle **Impostazioni Protette**. La risposta preimpostata è **No**. | Rispondi **Sì** per registrare. La finestra resta aperta: chiudila con **Esci**. |
