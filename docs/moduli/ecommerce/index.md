@@ -202,3 +202,4 @@ all'avvio:
 - [Connettore Shopify](shopify/index.md), [WooCommerce](woocommerce.md), [Magento](magento.md), [PrestaShop](prestashop.md), [nopCommerce](nopcommerce.md)
 - [Impostazione Dati Web](../anagrafiche/impostazione-dati-web.md)
 - [Marchi](../magazzino/marchi.md): la colonna **Stock Ecommerce**
+- [Sellout Coca Cola](../trasferimenti/sellout-coca-cola.md): un'operazione di FacileToWeb che non riguarda il negozio, l'invio giornaliero del venduto al fornitore
