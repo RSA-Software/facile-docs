@@ -188,7 +188,12 @@ dalla cartella di log del programma di Micrelec, per impostazione
 Con `MICRELEC G100` il motivo di un errore compare dentro la finestra d'errore
 della vendita, sotto l'intestazione — per esempio *Errore !*, *Cassa
 OFF-LINE !* o *Comando non accettato dalla Cassa !* — insieme ai pulsanti per
-riprovare o annullare.
+riprovare o annullare. Il pulsante **Ignora**, che con le altre casse salta il
+comando e prosegue, con `MICRELEC G100` non c'è: lo scontrino perderebbe una
+riga o un pagamento senza avvisare. **Annulla** interrompe lo scontrino e lo
+annulla sulla cassa; sugli errori di comunicazione è il pulsante proposto,
+perché riprovare un comando rimasto senza risposta potrebbe registrarlo due
+volte.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
