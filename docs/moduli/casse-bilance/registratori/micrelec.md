@@ -82,7 +82,8 @@ righe nuove gli si sommerebbero, e Facile si ferma con un avviso.
 
 Se interrompi uno scontrino a metà — scegliendo di annullare o di interrompere
 quando una riga o un pagamento danno errore — le righe già mandate sono sulla
-cassa, in un documento ancora aperto. Facile lo annulla sulla cassa e te lo dice. Un documento che non
+cassa, in un documento ancora aperto. Facile lo annulla sulla cassa e te lo
+dice; allo stesso modo chiude un preconto rimasto a metà. Un documento che non
 ha iniziato Facile non viene mai annullato. Se invece la cassa aveva già
 chiuso lo scontrino — per esempio quando l'ultimo pagamento è rimasto senza
 risposta — lo scontrino è emesso ma la vendita non è registrata in Facile:
@@ -90,6 +91,14 @@ Facile ti avvisa con il numero dello scontrino, da controllare sulla stampa.
 
 Il codice fiscale, la partita IVA e il codice lotteria del cliente sono
 alternativi: il registratore ne accetta uno solo per scontrino.
+
+Nelle descrizioni degli articoli le lettere accentate diventano lettere
+semplici (`è` diventa `e`), il simbolo dell'euro diventa `EUR`, le virgolette
+e i trattini tipografici diventano quelli normali e il simbolo dei gradi
+diventa `o`. La parola TOTALE, che il registratore tiene per il totale del
+documento, diventa `TOT.`. Le righe di vendita non riportano l'aliquota IVA: il
+registratore la prende dal reparto, che deve quindi essere programmato con
+l'aliquota giusta.
 
 ### Resi e annulli
 
@@ -99,11 +108,6 @@ il registratore lo emette da solo solo se lo scontrino originale è nel suo
 giornale elettronico: se è di un'altra cassa, o non c'è più, Facile chiude il
 documento rimasto aperto e ti avvisa, e l'annullo va fatto dalla tastiera della
 cassa.
-
-Nelle descrizioni degli articoli le lettere accentate diventano lettere
-semplici (`è` diventa `e`) e il simbolo dell'euro diventa `EUR`. Le righe di
-vendita non riportano l'aliquota IVA: il registratore la prende dal reparto,
-che deve quindi essere programmato con l'aliquota giusta.
 
 ### La matricola
 
@@ -117,9 +121,6 @@ sapere se è stato emesso da questa stessa cassa.
 
 - **La fattura da cassa.** Il registratore G100 non la emette con questo
   collegamento: la fattura si fa da Facile.
-- **La parola TOTALE nelle descrizioni.** Il registratore la rifiuta, perché la
-  usa per il totale del documento: un articolo con TOTALE nella descrizione dà
-  errore sulla sua riga.
 - **Versamenti e prelievi di cassa**, come con `MICRELEC`.
 
 ## Le forme di pagamento
@@ -189,9 +190,10 @@ riprovare o annullare.
 | *La cassa non ha risposto: controllare sul display se l'operazione e' stata registrata prima di riprovare* | Il comando è partito ma la risposta non è arrivata, o è arrivata incomprensibile: non si sa se il registratore l'ha eseguito. | Guarda il display della cassa. Se la riga è stata registrata, non riprovare: annulla e rifai lo scontrino oppure prosegui. Se non c'è, riprova. |
 | *Errore 0x… (…) della cassa: …* | Il registratore ha rifiutato il comando; dopo i due punti c'è il motivo, per esempio *carta esaurita* o *il reparto non esiste*, e fra parentesi lo stato della cassa. | Risolvi la causa e riprova. |
 | *Sulla cassa c'e' un documento aperto. Chiuderlo o annullarlo dalla cassa, poi riprovare.* | Prima della prima riga, sul registratore c'è già un documento aperto, per esempio iniziato dalla tastiera. | Chiudi o annulla il documento dalla cassa, poi riprova. |
-| *Lo scontrino interrotto e' stato annullato sulla cassa.* | Hai interrotto uno scontrino a metà: le righe già mandate sono state annullate sul registratore. | Nessuna: la vendita successiva parte pulita. |
+| *La cassa non ha risposto: controllare che sia accesa e collegata, poi riprovare* | Facile non ha potuto leggere dal registratore lo stato, il numero dello scontrino o l'azzeramento. | Controlla che la cassa sia accesa e in rete, poi riprova. |
+| *Lo scontrino interrotto e' stato annullato sulla cassa.* | Hai interrotto uno scontrino o un preconto a metà: le righe già mandate sono state annullate sul registratore. | Nessuna: la vendita successiva parte pulita. |
 | *Sulla cassa potrebbe essere rimasto aperto lo scontrino interrotto. Controllare il display e, se serve, annullarlo dalla cassa prima della vendita successiva.* | Hai interrotto uno scontrino, ma Facile non è riuscito ad annullarlo sul registratore. | Controlla il display e annulla il documento dalla cassa. |
-| *La cassa ha emesso lo scontrino n. …, ma la vendita non e' stata registrata in Facile. Controllare la stampa.* | Hai interrotto la vendita dopo che il registratore aveva già chiuso lo scontrino, per esempio perché l'ultimo pagamento è rimasto senza risposta. | Controlla lo scontrino stampato: in Facile la vendita non c'è. Se la vendita va rifatta, annulla prima lo scontrino. <!-- DA VERIFICARE: come registrare in Facile una vendita il cui scontrino è già stato emesso dalla cassa --> |
+| *La cassa ha emesso lo scontrino n. …, ma la vendita non e' stata registrata in Facile. Controllare la stampa.* | Hai interrotto la vendita dopo che il registratore aveva già chiuso lo scontrino, per esempio perché l'ultimo pagamento è rimasto senza risposta. | Controlla lo scontrino stampato. La vendita è ancora sul banco: se lo scontrino è giusto, scarica il magazzino con **F2 - Scarica**, che non emette un secondo scontrino (vedi [Vendita al banco](../../vendite/vendita-al-banco.md#pulsanti-e-comandi)); altrimenti annulla lo scontrino e rifai la vendita. |
 | *La cassa non ha emesso l'annullo: lo scontrino originale non e' nel suo giornale elettronico o e' di un'altra cassa. Fare l'annullo dalla tastiera della cassa.* | Il registratore emette l'annullo da solo solo per gli scontrini che ha nel suo giornale elettronico. | Fai l'annullo dalla tastiera della cassa. |
 | *Risposta della cassa incompleta* | Una lettura dal registratore — numero dello scontrino, azzeramento, stato — è arrivata troncata. | Riprova; se si ripete, controlla la rete e il log dei comandi. |
 | *Attenzione! Il driver della cassa ha segnalato un errore: Il documento e' rimasto aperto sulla cassa. Controllare la stampa prima di proseguire.* | Alla fine dello scontrino il documento è ancora aperto sul registratore, per esempio perché un pagamento non è stato accettato. | Controlla la stampa e il display; chiudi o annulla il documento dalla cassa. |
