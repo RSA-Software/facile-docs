@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-04 — **1140 messaggi**.
+Aggiornato al 2026-11-04 — **1141 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -334,6 +334,7 @@ Aggiornato al 2026-11-04 — **1140 messaggi**.
 | *E' obbligatorio indicare la matricola!* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Con la gestione matricole attiva il campo è vuoto. | Compila la **Matricola**. |
 | *E' obbligatorio inserire dati in almeno uno dei tre campi!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Negli altri dati gestionali mancano **Rif. Numero**, **Rif. Testo** e **Rif. Data**. | Compilane almeno uno. |
 | *Erogazione non completata!<br><br>Scegliere:<br>SI - Per accettare l'erogazione parziale<br>NO - Per continuare a erogare denaro<br>Annulla - per annullare l'erogazione* | [Cassa automatica Cashmatic](../moduli/casse-bilance/casse-automatiche/cashmatic.md) | Un prelievo non è ancora concluso. | Scegli come proseguire. |
+| *Errore 0x17 (23) della cassa: aliquota IVA errata* | [Registratori telematici Micrelec](../moduli/casse-bilance/registratori/micrelec.md) | Il reparto del registratore su cui va la riga ha un'aliquota diversa da quella dell'articolo. | Correggi il **Reparto Cassa** dell'aliquota o del reparto in Facile, oppure la programmazione del reparto sul registratore. |
 | *Errore 0x… (…) della cassa: …* | [Registratori telematici Micrelec](../moduli/casse-bilance/registratori/micrelec.md) | Il registratore ha rifiutato il comando; dopo i due punti c'è il motivo, per esempio *carta esaurita* o *il reparto non esiste*, e fra parentesi lo stato della cassa. | Risolvi la causa e riprova. |
 | *Errore comunicazione con Bilancia Checkout!* / *Impossibile comunicare con la bilancia!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con **Maiusc+F3 - Acq. Peso** la bilancia non risponde. | Controllare cavo, accensione e impostazione della bilancia nella postazione. |
 | *Errore CrystalReport …* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il modello di stampa non si apre o non trova i dati. | Riportare all'assistenza il testo completo: contiene il nome del report e il codice dell'errore. |

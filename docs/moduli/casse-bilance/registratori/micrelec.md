@@ -96,9 +96,16 @@ Nelle descrizioni degli articoli le lettere accentate diventano lettere
 semplici (`è` diventa `e`), il simbolo dell'euro diventa `EUR`, le virgolette
 e i trattini tipografici diventano quelli normali e il simbolo dei gradi
 diventa `o`. La parola TOTALE, che il registratore tiene per il totale del
-documento, diventa `TOT.`. Le righe di vendita non riportano l'aliquota IVA: il
-registratore la prende dal reparto, che deve quindi essere programmato con
-l'aliquota giusta.
+documento, diventa `TOT.`.
+
+Ogni riga di vendita porta il reparto e l'aliquota IVA dell'articolo, e il
+registratore controlla che il reparto abbia proprio quell'aliquota: se non
+coincidono la riga viene rifiutata con *Errore 0x17 (23) della cassa: aliquota
+IVA errata*. Il **Reparto Cassa** di Facile — nelle
+[aliquote IVA](../../contabilita/aliquote-iva.md) o nei
+[reparti](../../magazzino/reparti.md) di magazzino, secondo come è impostata la
+ditta — deve quindi indicare un reparto del registratore programmato con la
+stessa aliquota.
 
 ### Resi e annulli
 
@@ -189,6 +196,7 @@ riprovare o annullare.
 | *Cassa non raggiungibile all'indirizzo …* | Il registratore non risponde all'indirizzo di `micrelec_g100.ini`: è spento, scollegato dalla rete o l'indirizzo è sbagliato. Il comando non è partito. | Controlla il registratore e il cavo di rete, poi riprova. |
 | *La cassa non ha risposto: controllare sul display se l'operazione e' stata registrata prima di riprovare* | Il comando è partito ma la risposta non è arrivata, o è arrivata incomprensibile: non si sa se il registratore l'ha eseguito. | Guarda il display della cassa. Se la riga è stata registrata, non riprovare: annulla e rifai lo scontrino oppure prosegui. Se non c'è, riprova. |
 | *Errore 0x… (…) della cassa: …* | Il registratore ha rifiutato il comando; dopo i due punti c'è il motivo, per esempio *carta esaurita* o *il reparto non esiste*, e fra parentesi lo stato della cassa. | Risolvi la causa e riprova. |
+| *Errore 0x17 (23) della cassa: aliquota IVA errata* | Il reparto del registratore su cui va la riga ha un'aliquota diversa da quella dell'articolo. | Correggi il **Reparto Cassa** dell'aliquota o del reparto in Facile, oppure la programmazione del reparto sul registratore. |
 | *Sulla cassa c'e' un documento aperto. Chiuderlo o annullarlo dalla cassa, poi riprovare.* | Prima della prima riga, sul registratore c'è già un documento aperto, per esempio iniziato dalla tastiera. | Chiudi o annulla il documento dalla cassa, poi riprova. |
 | *La cassa non ha risposto: controllare che sia accesa e collegata, poi riprovare* | Facile non ha potuto leggere dal registratore lo stato, il numero dello scontrino o l'azzeramento. | Controlla che la cassa sia accesa e in rete, poi riprova. |
 | *Lo scontrino interrotto e' stato annullato sulla cassa.* | Hai interrotto uno scontrino o un preconto a metà: le righe già mandate sono state annullate sul registratore. | Nessuna: la vendita successiva parte pulita. |
