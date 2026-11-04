@@ -93,6 +93,15 @@ DDT emessi senza nota del fornitore.
     fornitore, dopo l'aggiornamento non riuscirà più a stamparli finché non
     completa i fornitori in anagrafica o divide il DDT.
 
+**[Registratori Micrelec G100 in rete](../moduli/casse-bilance/registratori/micrelec.md).**
+Nuova voce `MICRELEC G100` della **Stampante Fiscale**: i registratori Axon
+Micrelec della serie G100 si collegano direttamente in rete, senza il
+programma di Micrelec. Facile manda le righe mentre batte lo scontrino e
+riceve l'esito di ognuna: un errore compare sulla riga che l'ha causato, e uno
+scontrino interrotto a metà viene annullato sulla cassa. Numero dello
+scontrino, ultimo azzeramento e matricola si leggono dalla cassa, e c'è il
+display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
+
 ### Miglioramenti
 
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la

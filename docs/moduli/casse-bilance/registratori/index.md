@@ -15,7 +15,7 @@ registratore stampa e trasmette i corrispettivi.
 
     - **Dove si sceglie:** Menu ▸ Utility ▸ [Impostazioni Postazione](../../utility/impostazioni-postazione.md), campo **Stampante Fiscale**
     - **Vale per:** la sola postazione su cui lo imposti
-    - **Pagine dei modelli:** [RCH](rch.md)
+    - **Pagine dei modelli:** [Micrelec](micrelec.md), [RCH](rch.md)
 
 ---
 
@@ -52,7 +52,8 @@ l'apparecchio.
 | `3I XON / XOFF LAN` | Rete |
 | `DTR XON / XOFF (19200,N,8,1,ECHO ON)` | Seriale |
 | `DTR XON / XOFF LAN` | Rete |
-| `MICRELEC` | — |
+| `MICRELEC` | Attraverso il programma di Micrelec — vedi [Micrelec](micrelec.md) |
+| `MICRELEC G100` | Rete — vedi [Micrelec](micrelec.md) |
 | `OLIVETTI XON / XOFF (9600 N 8 1)` | Seriale |
 | `EDIT XON / XOFF (9600,N,8,1)` | Seriale |
 | `RCH XON / XOFF (9600,N,8,1)` | Seriale — vedi [RCH](rch.md) |
@@ -81,6 +82,7 @@ documenti di reso e di annullo, che la riportano.
 
 ## Vedi anche
 
+- [Micrelec](micrelec.md)
 - [RCH](rch.md)
 - [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
 - [Vendita al banco](../../vendite/vendita-al-banco.md)
