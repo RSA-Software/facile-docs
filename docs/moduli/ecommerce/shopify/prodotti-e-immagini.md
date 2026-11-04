@@ -172,6 +172,33 @@ collegati:
 È l'operazione più lenta: conviene farla girare a intervalli lunghi, per
 esempio una volta al giorno (vedi [Esecuzione continua](ciclo.md)).
 
+## Shopify e WooCommerce sullo stesso archivio
+
+Lo stesso archivio di Facile può alimentare insieme un negozio Shopify e un
+negozio [WooCommerce](../woocommerce.md). Ciascun connettore ricorda per conto
+suo che cosa ha già inviato. Un articolo modificato in Facile arriva quindi su
+tutti e due i negozi, qualunque dei due giri per primo.
+
+Tieni presente che:
+
+- la casella **Includi WEB** è una sola: un articolo pubblicato va su tutti e
+  due i negozi;
+- quando WooCommerce invia un articolo, un'immagine o una categoria, Shopify
+  li rimanda una volta anche se non sono cambiati. Per un'immagine vuol dire
+  rifare la galleria del prodotto;
+- per lo stesso motivo, dopo che WooCommerce ha aggiornato un marchio, una
+  stagione o un reparto, Shopify rimanda una volta i prodotti che lo usano;
+- listino, depositi e pagamenti si scelgono nel file di configurazione di
+  ciascun connettore, quindi possono essere diversi per i due negozi;
+- per gli ordini conviene usare un **registro** diverso per ciascun negozio,
+  così sai sempre da quale sito arriva un ordine;
+- un cliente che compra sui due negozi con la stessa email diventa un solo
+  cliente in Facile.
+
+Il primo giro di prodotti o immagini dopo l'aggiornamento del connettore
+prende nota di ciò che Shopify ha già ricevuto, e lo scrive nel registro.
+Non rimanda il catalogo: parte solo ciò che era già in attesa.
+
 ## Messaggi principali
 
 | Riga del registro | Che cosa significa |
@@ -179,6 +206,7 @@ esempio una volta al giorno (vedi [Esecuzione continua](ciclo.md)).
 | `Prodotti da inviare: N` | Quanti articoli sono nuovi o cambiati in questo giro. |
 | `Fine sincronizzazione prodotti Shopify: articoli N - nuovi N - aggiornati N - errori N` | Il riepilogo del giro. |
 | `Formato dei prodotti cambiato (...): N prodotti collegati da rimandare` | Hai cambiato `tipo_prodotto`, `sigle` o `nazione`: tutti i prodotti si rimandano una volta. |
+| `Delta Shopify separato da WooCommerce: prodotti N, immagini N, categorie N gia' inviati` | Compare una volta sola, al primo giro dopo l'aggiornamento del connettore: quanti elementi risultavano già sul negozio e non verranno rimandati. Vedi [Shopify e WooCommerce sullo stesso archivio](#shopify-e-woocommerce-sullo-stesso-archivio). |
 | `Articolo ... a taglie e colori senza combinazioni pubblicabili: non inviato` | Nessuna combinazione di taglia e colore ha movimenti nei depositi pubblicati. |
 | `Articolo ...: il codice non da' uno SKU EAN-13 di variante (servono 6 cifre): non inviato` | Il codice dell'articolo a taglie non è di 6 cifre. |
 | `Articolo ...: il prodotto ... non c'e' piu' su Shopify, lo si ricrea` | Il prodotto era stato cancellato sul negozio. |
