@@ -59,11 +59,16 @@ aggiornato.
    parte.
 3. Compila la **Matricola** del registratore, di 11 caratteri, come è stampata
    sugli scontrini.
-4. Copia nella cartella `cfg` di Facile il
-   [file di esempio](../../../assets/modelli/micrelec_g100.ini) e scrivi in
-   `ip` l'indirizzo del registratore.
+4. Nella cartella `cfg` di Facile metti il file `micrelec_g100.ini` — se non
+   c'è, [scarica il modello](#il-file-micrelec_g100ini) — e scrivi in `ip`
+   l'indirizzo del registratore.
 
 ### Il file micrelec_g100.ini
+
+Il modello è già commentato: basta salvarlo nella cartella `cfg` di Facile e
+cambiare l'indirizzo in `ip`. Le altre chiavi vanno bene così come sono.
+
+[:material-download: Scarica micrelec_g100.ini](../../../assets/modelli/micrelec_g100.ini){ .md-button download="micrelec_g100.ini" }
 
 | Sezione | Chiave | Predefinito | Descrizione |
 |---|---|---|---|
@@ -72,6 +77,12 @@ aggiornato.
 | `[OPTIONS]` | `timeout_ms` | 15000 | Attesa massima della risposta a un comando, in millisecondi. |
 | `[OPTIONS]` | `timeout_chiusura_ms` | 120000 | Attesa massima per le letture e la chiusura giornaliera, che stampano a lungo. |
 | `[OPTIONS]` | `display_colonne` | 20 | Caratteri di una riga del display, per il display cliente `MICRELEC G100`. |
+
+Il contenuto del modello:
+
+```ini
+--8<-- "docs/assets/modelli/micrelec_g100.ini"
+```
 
 ### Lo scontrino
 
