@@ -118,8 +118,9 @@ cassa.
 
 ### La matricola
 
-Con un firmware G100.127 o successivo Facile legge la matricola dal
-registratore e la salva sullo scontrino. La **Matricola** delle impostazioni
+Facile legge la matricola dal registratore — dall'ultimo scontrino, oppure,
+subito dopo la chiusura giornaliera, dallo stato della cassa — e la salva sullo
+scontrino. La **Matricola** delle impostazioni
 va compilata comunque: nei [resi](../../vendite/vendita-al-banco.md#registrare-un-reso)
 e negli annulli Facile la confronta con quella dello scontrino originale, per
 sapere se è stato emesso da questa stessa cassa.
