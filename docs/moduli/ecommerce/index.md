@@ -195,6 +195,8 @@ all'avvio:
 | `Manca il nome del server : Inserire i parametri -host e -server` | Nella sezione `[LOGIN]` mancano `server` e `host`. | Indica il server dell'archivio. |
 | `Manca l' Archivio : Inserire il parametro -arc` | Nella sezione `[LOGIN]` manca `arc`. | Indica l'archivio. |
 | `Apertura del database fallita...` | L'archivio non è raggiungibile, oppure utente o password sono sbagliati. | Prova ad accedere a Facile con gli stessi dati dalla stessa macchina. |
+| `Archivi della Versione 2026 B09.01, programma della Versione 2026 B10.00: gli archivi vanno aggiornati aprendoli con Facile` | FacileToWeb è più nuovo degli archivi. Non li aggiorna da solo, perché nessuno è davanti al computer per confermare. I numeri sono d'esempio. | Apri Facile su quegli archivi: l'aggiornamento parte all'avvio, come descritto in [Primo accesso](../../introduzione/primo-accesso.md#programma-e-archivi-di-versioni-diverse). |
+| `Archivi della Versione 2026 B10.00, programma della Versione 2026 B09.01: va installato l'aggiornamento del programma` | Gli archivi sono stati aggiornati da una versione più recente di Facile. | Installa l'aggiornamento sul PC dove gira FacileToWeb. Basta lo stesso anno e lo stesso numero dopo la B: la build può essere diversa. |
 | `Operation Not Found!` | Il numero in `operation` non corrisponde a nessuna operazione. | Correggi il numero: per Shopify vedi l'[elenco delle operazioni](shopify/index.md#le-operazioni). |
 
 ## Vedi anche

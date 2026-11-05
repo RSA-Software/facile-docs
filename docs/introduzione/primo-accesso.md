@@ -152,8 +152,11 @@ le ritrova al prossimo accesso, senza disturbare i colleghi.
 ## Programma e archivi di versioni diverse
 
 Gli archivi ricordano con quale versione di Facile sono stati aggiornati
-l'ultima volta, e a ogni avvio il programma confronta quella versione con la
-propria. La versione si legge nella forma **2026 B09.01**: l'anno, il numero
+l'ultima volta, e il programma confronta quella versione con la propria a ogni
+avvio e ogni volta che apre altri archivi: cambio ditta,
+[cambio anno e Seleziona Archivio](../moduli/utility/esercizi-e-chiusure.md).
+Ogni ditta e — sugli archivi non SQL — ogni anno passato hanno la loro
+versione. La versione si legge nella forma **2026 B09.01**: l'anno, il numero
 dopo la **B** e, dopo il punto, la **build**.
 
 Per lavorare insieme sugli stessi archivi contano **l'anno e il numero dopo la
@@ -214,7 +217,7 @@ degli archivi e del programma in uso.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Attenzione !<br>Gli archivi sono contrassegnati dalla Versione 2026 B10.00<br>Il software in uso e' la Versione 2026 B09.01<br>E' necessario aggiornare il programma.<br>Vuoi installare l'aggiornamento?* | Gli archivi sono stati aggiornati da una versione più recente, con un anno o un numero dopo la B più alto. | **Sì** installa l'aggiornamento, se è già stato scaricato sul computer. **No** chiede la password di amministratore: senza, all'avvio il programma non entra e nel cambio ditta resti sulla ditta di prima. |
-| *Attenzione !<br>Gli archivi sono contrassegnati dalla Versione 2026 B09.01<br>Il software in uso e' la Versione 2026 B10.00<br>Prima di Continuare con l'esecuzione assicurarsi che nessun altro utente abbia il software avviato.<br>Vuoi Aggiornare gli Archivi?* | Il programma è più nuovo degli archivi, che non sono SQL. | Fai chiudere il programma sugli altri computer, poi rispondi **Sì**. **No** non tocca niente: all'avvio chiude il programma, nel cambio ditta resti sulla ditta di prima. |
+| *Attenzione !<br>Gli archivi sono contrassegnati dalla Versione 2026 B10.00<br>Il software in uso e' la Versione 2026 B09.01<br>E' necessario aggiornare il programma.<br>Vuoi installare l'aggiornamento?* | Gli archivi sono stati aggiornati da una versione più recente, con un anno o un numero dopo la B più alto. | **Sì** installa l'aggiornamento, se è già stato scaricato sul computer. **No** chiede la password di amministratore: senza, all'avvio e in **Seleziona Archivio** il programma si chiude, nel cambio ditta o d'anno resti dove eri. |
+| *Attenzione !<br>Gli archivi sono contrassegnati dalla Versione 2026 B09.01<br>Il software in uso e' la Versione 2026 B10.00<br>Prima di Continuare con l'esecuzione assicurarsi che nessun altro utente abbia il software avviato.<br>Vuoi Aggiornare gli Archivi?* | Il programma è più nuovo degli archivi, che non sono SQL. | Fai chiudere il programma sugli altri computer, poi rispondi **Sì**. **No** non tocca niente: all'avvio e in **Seleziona Archivio** chiude il programma, nel cambio ditta o d'anno resti dove eri. |
 | *Aggiornamento degli archivi non completato: una tabella e' in uso su un altro computer.<br>Chiudere il programma sugli altri computer e riavviarlo: l'aggiornamento riprende da dove si e' fermato.* | Con gli archivi SQL l'aggiornamento non ha potuto modificare una tabella aperta su un altro computer. Il programma si chiude e gli archivi restano da aggiornare. | Chiudi Facile sugli altri computer e riavvialo. |
 | *La tabella e' stata aggiornata da una versione piu' recente del programma (record da 900 byte, questo programma ne gestisce 850).<br>La tabella non e' stata toccata. E' necessario aggiornare il programma.* | Il messaggio si apre con il percorso della tabella. Una tabella ha una struttura più recente di quella che il programma conosce: di solito si è entrati con la password di amministratore su archivi più nuovi. | Installa l'aggiornamento del programma. La tabella non viene modificata. |

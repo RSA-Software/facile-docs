@@ -117,6 +117,13 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
   all'avvio, e chi non accetta l'aggiornamento resta sulla ditta di prima. Con
   gli archivi SQL ora compaiono anche *Una sola ditta e' presente in archivio!*
   e, con Facile avviato su una ditta fissa, *Cambio ditta non permesso!*.
+- [Scegli Esercizio e Seleziona Archivio](../moduli/utility/esercizi-e-chiusure.md):
+  anche qui la versione degli archivi si controlla come all'avvio. Un anno
+  passato da aggiornare chiede conferma sugli archivi non SQL; chi non accetta
+  resta sull'anno di prima.
+- [FacileToWeb](../moduli/ecommerce/index.md#controlli-e-messaggi): con
+  archivi di un'altra versione non parte e lo scrive nel registro, invece di
+  lavorarci sopra.
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
   finestra è più larga e i dati di nascita del titolare non sono più chiusi
   in un riquadro.
