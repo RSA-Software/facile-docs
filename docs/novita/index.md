@@ -111,6 +111,12 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
   numero dopo la B. Con gli archivi SQL l'aggiornamento degli archivi parte da
   solo, senza domanda; se una tabella è in uso su un altro computer si ferma
   dopo qualche secondo e riprende al riavvio, invece di bloccare la rete.
+- [Cambio ditta](../introduzione/primo-accesso.md#scegliere-la-ditta): chiudendo
+  l'elenco senza scegliere si resta sulla ditta di prima, invece di chiudere il
+  programma. La versione degli archivi della ditta scelta si controlla come
+  all'avvio, e chi non accetta l'aggiornamento resta sulla ditta di prima. Con
+  gli archivi SQL ora compaiono anche *Una sola ditta e' presente in archivio!*
+  e, con Facile avviato su una ditta fissa, *Cambio ditta non permesso!*.
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
   finestra è più larga e i dati di nascita del titolare non sono più chiusi
   in un riquadro.
