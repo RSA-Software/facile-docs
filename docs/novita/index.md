@@ -151,6 +151,15 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
 
 ### Correzioni
 
+**Casse e Bilance**
+
+- [Bilance Zenith](../moduli/casse-bilance/bilance.md#note):
+  **Invio Variazioni Articoli** mandava ogni volta tutti gli articoli, come
+  l'invio completo. Ora manda solo gli articoli nuovi o cambiati dall'ultimo
+  invio, e se non è cambiato niente avvisa *Nessun articolo variato
+  dall'ultimo invio alle bilance.* Il primo invio dopo l'aggiornamento manda
+  ancora tutto.
+
 **Magazzino**
 
 - [Causali magazzino](../moduli/magazzino/causali-magazzino.md): salvando una

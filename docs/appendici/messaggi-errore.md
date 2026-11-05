@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-05 — **1147 messaggi**.
+Aggiornato al 2026-11-05 — **1148 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -816,6 +816,7 @@ Aggiornato al 2026-11-05 — **1147 messaggi**.
 | *Nessuna risposta* | [Cassa automatica Cashmatic](../moduli/casse-bilance/casse-automatiche/cashmatic.md) | Il programma della Cashmatic non ha risposto in tempo. | Controlla che sia avviato. |
 | *Nessuna Risposta da CashLogy!<br><br>Vuoi Attendere?* | [Cassa automatica Cashlogy](../moduli/casse-bilance/casse-automatiche/cashlogy.md) | La macchina non ha risposto per cinque minuti. | **Sì** continua ad aspettare. |
 | *Nessuna risposta da FacileWebApiService!<br><br>Verificare che il servizio sia in esecuzione.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il servizio è fermo o non si raggiunge. | Avvialo, o controlla l'indirizzo nella sua impostazione. |
+| *Nessun articolo variato dall'ultimo invio alle bilance.* | [Bilance](../moduli/casse-bilance/bilance.md) | Con **Invio Variazioni Articoli** delle Zenith: nessun articolo è cambiato dall'ultimo invio, e non parte niente. | Niente, le bilance sono già allineate. Se pensi di no, usa **Cancellazione Archivi e Invio Articoli**. |
 | *Nessuna Scadenza Selezionata!* | [Distinte di incasso e di pagamento](../moduli/scadenze/distinte-incasso-pagamento.md) | Si è premuto salva senza spuntare niente. | Scegli almeno una scadenza. |
 | *Nessuna tra le Colonne IDXTAG o COLORE e' stata trovata nel documento !* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Nelle versioni con taglie e colori serve una delle due. | Aggiungila. |
 | *Nessuna tra le Colonne QUANTITA o COLLI e' stata trovata nel documento !* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Manca la quantità. | Serve almeno una delle due colonne. |
