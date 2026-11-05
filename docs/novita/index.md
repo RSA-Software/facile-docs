@@ -181,7 +181,11 @@ quello che è cambiato. Tutte le operazioni possono girare da un solo file
 di configurazione, in [esecuzione continua](../moduli/ecommerce/shopify/ciclo.md),
 e si fermano con il flag `exit`. Un prodotto cancellato a mano sul negozio
 viene ricreato, mentre i dati aggiunti sul negozio — collezioni manuali,
-tag, fotografie — restano.
+tag, fotografie — restano. Per i negozi che dopo il caricamento gestiscono i
+prodotti a mano, l'operazione
+[solo prodotti nuovi](../moduli/ecommerce/shopify/prodotti-e-immagini.md#solo-i-prodotti-nuovi-978)
+crea gli articoli non ancora sul negozio, con collezioni e fotografie, e poi
+non li tocca più.
 
 **[Scontrini delle bilance Zenith in cassa](../moduli/vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).**
 Sul **Pos Touchscreen** si legge il codice a barre in fondo allo scontrino di
