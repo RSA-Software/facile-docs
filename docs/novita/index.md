@@ -104,6 +104,13 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
 
 ### Miglioramenti
 
+- [Versioni in rete](../introduzione/primo-accesso.md#programma-e-archivi-di-versioni-diverse):
+  i computer con build diverse della stessa versione — per esempio 2026 B09.01
+  e 2026 B09.03 — lavorano insieme sugli stessi archivi, senza dover
+  aggiornare tutti. L'aggiornamento serve solo quando cambiano l'anno o il
+  numero dopo la B. Con gli archivi SQL l'aggiornamento degli archivi parte da
+  solo, senza domanda; se una tabella è in uso su un altro computer si ferma
+  dopo qualche secondo e riprende al riavvio, invece di bloccare la rete.
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
   finestra è più larga e i dati di nascita del titolare non sono più chiusi
   in un riquadro.
