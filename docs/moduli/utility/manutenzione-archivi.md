@@ -177,18 +177,20 @@ A questi si aggiungono i messaggi dei singoli ricalcoli:
 
 !!! info "Che cosa fa «Aggiorna Catalogo Dati»"
 
-    **Non tocca i dati.** Riscrive il file che descrive gli archivi al driver
-    ODBC — il *catalogo* — cioè l'elenco delle tabelle e dei campi con cui
-    Crystal e le stampe in modalità SQL riescono a interrogare gli archivi.
+    **Non tocca i dati.** Riscrive la descrizione di tabelle e campi che
+    accompagna ogni archivio — il *catalogo* — e ricollega le tabelle al
+    database SQL con cui Crystal, le stampe e i programmi collegati (servizi,
+    app) interrogano gli archivi. Lo fa su **tutte** le tabelle della ditta e
+    dell'anno aperti: per gli anni passati va lanciato aprendo ciascun anno.
 
-    Il file sta nella cartella del programma e si chiama `FDATI001.DB` per
-    l'anno corrente della ditta 1, `F2025001.DB` per un anno passato: uno per
-    ditta e per anno. È per questo che le procedure di assistenza chiedono di
-    lanciarlo **su tutti gli anni** e non solo su quello corrente.
+    Il programma fa lo stesso lavoro da sé, ma solo dove serve, quando gli
+    archivi vengono aggiornati a una versione nuova, quando crea una tabella
+    nuova, alla creazione di un [nuovo esercizio](esercizi-e-chiusure.md) e al
+    primo accesso a un altro archivio.
 
-    Il programma lo rifà anche da sé quando si accorge che il catalogo è più
-    vecchio del programma, e lo rifà sempre alla creazione di un
-    [nuovo esercizio](esercizi-e-chiusure.md).
+    I file `FDATI001.DB`, `F2025001.DB` e simili che si trovano nella cartella
+    del programma servivano al vecchio collegamento ODBC senza SQL, che non si
+    usa più: il programma non li scrive più e si possono cancellare.
 
     Serve **solo con gli archivi c-tree**: su PostgreSQL la voce non fa niente,
     perché il catalogo lo tiene il server.

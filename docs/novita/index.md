@@ -129,6 +129,12 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
   sole al prossimo avvio. Prima bastava una tabella occupata per annullare
   tutto l'aggiornamento con *Errore Database N. -8*. In più l'aggiornamento
   aggiunge al catalogo SQL anche le tabelle che ci mancavano.
+- Le stampe usano sempre il collegamento ODBC SQL. Il vecchio collegamento
+  ODBC senza SQL non c'è più: il programma non scrive più i file
+  `FDATI001.DB`, `F2025001.DB` e simili, e non ripassa più il catalogo a ogni
+  apertura degli archivi ma solo quando serve. Vedi
+  [Manutenzione archivi](../moduli/utility/manutenzione-archivi.md) e i
+  [messaggi delle stampe](../introduzione/interfaccia.md#i-messaggi-che-si-incontrano-ovunque).
 - [FacileToWeb](../moduli/ecommerce/index.md#controlli-e-messaggi): con
   archivi di un'altra versione non parte e lo scrive nel registro, invece di
   lavorarci sopra.

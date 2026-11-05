@@ -138,6 +138,8 @@ programma per conto di tutte.
 | *Il record è stato modificato da un altro nodo della rete.* | Un collega ha salvato lo stesso record mentre lo si modificava. | **Ricarica**, guardare che cosa è cambiato e rifare le proprie modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un collega l'ha eliminato mentre lo si modificava. | La maschera si chiude: non c'è più niente da salvare. |
 | *La data è esterna all' esercizio corrente.* | La data digitata non appartiene all'anno su cui si sta lavorando. | Correggere la data, oppure cambiare esercizio. |
+| *Driver ODBC SQL non installato correttamente.* | Lanciando una stampa: sul computer manca il collegamento ODBC che le stampe usano per leggere gli archivi. | Chiamare l'assistenza: va configurato il collegamento ODBC SQL di Facile su quel computer. |
+| *La ditta usa ancora il vecchio formato delle date: le stampe non sono disponibili finche' gli archivi non vengono convertiti.<br>Contattare l'assistenza.* | Lanciando una stampa: la ditta ha gli archivi nel formato delle date precedente all'SQL, che le stampe non sanno leggere. | Chiamare l'assistenza per la conversione degli archivi. |
 
 I messaggi delle singole maschere stanno in fondo a ciascuna pagina, e tutti
 insieme nell'[appendice dei messaggi](../appendici/messaggi-errore.md).
