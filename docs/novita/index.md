@@ -121,6 +121,14 @@ display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
   anche qui la versione degli archivi si controlla come all'avvio. Un anno
   passato da aggiornare chiede conferma sugli archivi non SQL; chi non accetta
   resta sull'anno di prima.
+- [Aggiorna Catalogo Dati](../moduli/utility/manutenzione-archivi.md#controlli-e-messaggi)
+  e aggiornamento degli archivi non SQL all'avvio: con altri computer collegati
+  non si fermano più. Prima di cominciare Facile dice chi sta usando gli
+  archivi (utente, computer, file aperti); le tabelle che gli altri tengono
+  aperte vengono saltate, elencate in un solo messaggio alla fine e riprese da
+  sole al prossimo avvio. Prima bastava una tabella occupata per annullare
+  tutto l'aggiornamento con *Errore Database N. -8*. In più l'aggiornamento
+  aggiunge al catalogo SQL anche le tabelle che ci mancavano.
 - [FacileToWeb](../moduli/ecommerce/index.md#controlli-e-messaggi): con
   archivi di un'altra versione non parte e lo scrive nel registro, invece di
   lavorarci sopra.

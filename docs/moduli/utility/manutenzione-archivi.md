@@ -144,6 +144,8 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 | *La procedura permette l' acquisizione dei dati dell' anno allo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | Hai avviato l'aggiornamento dello storico. | **Sì** procede. La risposta preimpostata è **No**. |
 | *La procedura permette la rimozioni dei dati dell' anno dallo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | Hai avviato la rimozione dallo storico. | **Sì** procede. |
 | *Impossibile Caricare RAPI.DLL !<br>Controllare presenza installazione ActiveSync.* | Manca ActiveSync per parlare con il palmare. | Installalo sulla postazione. |
+| *Altri computer stanno usando gli archivi:<br> - ADMIN su MARIO (376 file aperti)<br>Le tabelle che hanno aperte non potranno essere aggiornate adesso: lo saranno al prossimo avvio del programma.<br>Vuoi continuare?* | Hai lanciato **Aggiorna Catalogo Dati** con altri computer collegati. Utente, computer e numero di file sono d'esempio. | Fai uscire gli altri utenti e rispondi **Sì**, oppure rispondi **Sì** subito e lascia che le tabelle in uso vengano riprese al prossimo avvio. La risposta preimpostata è **No**. |
+| *Aggiornamento degli archivi non completato: 12 tabelle sono aperte su altri computer e non sono state aggiornate:<br> - monteleo\dit00001\misure<br> - ...<br>Verranno aggiornate al prossimo avvio del programma.<br>Collegati in questo momento:<br> - ADMIN su MARIO (376 file aperti)* | Alcune tabelle erano aperte su altri computer e non si sono potute aggiornare. Compare anche dopo un aggiornamento degli archivi all'avvio. | Nessuna azione: il programma le riprende al prossimo avvio. Per farlo subito, fai uscire gli altri utenti e rilancia **Aggiorna Catalogo Dati**. |
 
 A questi si aggiungono i messaggi dei singoli ricalcoli:
 
@@ -190,6 +192,18 @@ A questi si aggiungono i messaggi dei singoli ricalcoli:
 
     Serve **solo con gli archivi c-tree**: su PostgreSQL la voce non fa niente,
     perché il catalogo lo tiene il server.
+
+!!! note "Con altri computer collegati"
+
+    Per aggiornare il catalogo di una tabella il programma deve averla tutta
+    per sé. Se altri computer stanno usando gli archivi, Facile li elenca prima
+    di cominciare (utente, computer e numero di file aperti) e chiede se
+    continuare.
+
+    Se continui, le tabelle aperte sugli altri computer **vengono saltate**:
+    alla fine un solo messaggio dice quali sono, e il programma le riprende
+    da sé al prossimo avvio, finché non riesce ad aggiornarle tutte. Per farlo
+    subito, fai uscire gli altri utenti e rilancia la voce.
 
 !!! info "Come «Importa Foto» trova le fotografie"
 
