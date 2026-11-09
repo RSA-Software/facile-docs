@@ -93,12 +93,12 @@ errore e il buono non esce.
 | `tipo` | `valore` oppure `percentuale` | Con `valore`, l'importo di ogni fascia (`buono_1`…`buono_5`) è in euro. Con `percentuale` è una percentuale, maggiore di 0 e al massimo 100, del totale dello scontrino. Se manca vale `valore`. |
 | `emissione_dal`, `emissione_al` | data | Il periodo in cui i buoni si emettono, estremi compresi. Se uno dei due manca, il periodo è aperto da quella parte. Fuori dal periodo non esce nessun buono e non compare nessun messaggio. |
 | `validita_dal`, `validita_al` | data | La validità fissa del buono: vale dal primo al secondo giorno. Vanno scritte **tutte e due**, con `validita_al` non prima di `validita_dal`. |
-| `validita_dopo_giorni`, `validita_durata_giorni` | numero di giorni | La validità relativa alla data di emissione: il buono inizia a valere dopo tanti giorni da oggi (0 = oggi) e dura tanti giorni. Si usa solo se la validità fissa manca. |
+| `validita_dopo_giorni`, `validita_durata_giorni` | numero di giorni | La validità relativa alla data di emissione: il buono inizia a valere dopo `validita_dopo_giorni` giorni da oggi (0 = oggi) e vale fino al giorno di inizio più `validita_durata_giorni`, compreso. Con 0 e 30, un buono emesso il 09/11 vale dal 09/11 al 09/12. Si usa solo se la validità fissa manca. |
 | `multipli` | `0` oppure `1` | Con `tipo = valore`, quando la spesa è un multiplo della soglia. Con `1` escono tanti buoni quante volte la soglia sta nel totale, ciascuno del valore della fascia. Con `0` esce un solo buono, che vale quel valore moltiplicato per lo stesso numero. Con `tipo = percentuale` la chiave non conta: esce sempre un buono solo. |
 | `colonne` | da 1 a 45 | La larghezza in caratteri del buono stampato con il formato 3. Se manca vale 45. |
 | `header_1` … `header_5` | testo, al massimo 45 caratteri | Le righe in testa al buono. |
 | `spesa_1` … `spesa_5` | importo | La spesa minima della fascia. |
-| `buono_1` … `buono_5` | importo | Quello che si ottiene con la fascia: euro, o percentuale se `tipo = percentuale`. |
+| `buono_1` … `buono_5` | importo | Quello che si ottiene con la fascia: euro, o percentuale se `tipo = percentuale`. Un importo in euro si arrotonda al centesimo: `12,345` vale 12,35. |
 | `footer_<fascia>_<riga>` | testo, al massimo 45 caratteri | Le righe in coda al buono per la fascia che ha fatto scattare il buono. La fascia va da 1 a 5, la riga da 1 a 5: `footer_2_1` è la prima riga di coda della seconda fascia. |
 | `footer_1` … `footer_5` | testo | Righe in coda comuni, usate per le fasce che non hanno nessuna riga `footer_<fascia>_<riga>`. |
 
@@ -145,11 +145,14 @@ Quando si chiude lo scontrino, il programma:
 1. controlla che la ditta abbia attiva la casella **Abilita Emissione Buoni
    Sconto**, e legge il file della ditta o, in mancanza, quello generico;
 2. se la data di oggi è fuori dal periodo di emissione, si ferma: nessun buono;
-3. sceglie la fascia: quella con la **spesa più alta che il totale dello
+3. se il **Formato Stampa** della ditta non è un numero da 0 a 3, o se la
+   validità fissa del file è già finita, si ferma senza emettere il buono e
+   annota il motivo nel file degli errori;
+4. sceglie la fascia: quella con la **spesa più alta che il totale dello
    scontrino raggiunge**. La spesa è raggiunta anche quando il totale è
    **uguale** alla spesa: con una fascia a 60,00 euro, uno scontrino di 60,00
    euro fa uscire il buono;
-4. ricava la validità, calcola il valore, stampa il buono e lo registra.
+5. ricava la validità, calcola il valore, stampa il buono e lo registra.
 
 Se il totale non raggiunge nessuna fascia, non esce niente.
 
@@ -254,7 +257,8 @@ regolarmente, ma senza buono. Il motivo si legge nel file degli errori,
 con la data e l'ora, per esempio `09/11/2026 10:15:00 - Buoni sconto: …`. Se la
 stessa cosa si ripete a ogni scontrino, la riga **non viene ripetuta di
 seguito**: non ne compare una per ogni vendita. Torna a comparire solo se nel
-frattempo è stato scritto un altro messaggio.
+frattempo è stato scritto un altro messaggio dei buoni sconto, oppure dopo
+aver riavviato Facile.
 
 Nella tabella le parti che cambiano da un caso all'altro (percorsi, nomi,
 valori) sono indicate con i puntini.
@@ -271,17 +275,22 @@ valori) sono indicate con i puntini.
 | *Buoni sconto: nessuna fascia valida (servono spesa_n e buono_n maggiori di zero)* | Nessuna delle cinque fasce ha insieme spesa e buono maggiori di zero. | Compila almeno una coppia `spesa_1` e `buono_1`. |
 | *Buoni sconto: validità non determinabile: servono validita_dal/validita_al oppure validita_durata_giorni* | Mancano sia la validità fissa sia la durata. | Scrivi `validita_dal` e `validita_al`, oppure `validita_durata_giorni` (ed eventualmente `validita_dopo_giorni`). |
 | *Buoni sconto: validità non determinabile: validita_dal e validita_al vanno impostate entrambe, con validita_al non prima di validita_dal, oppure serve validita_durata_giorni* | La validità fissa è incompleta (una sola data) o la data finale viene prima di quella iniziale, e non c'è la durata. | Scrivi tutte e due le date nell'ordine giusto, oppure `validita_durata_giorni`. |
+| *Buoni sconto: validita' gia' scaduta il …* | La validità fissa del file (`validita_al`) è già passata, ma il periodo di emissione è ancora aperto: il buono nascerebbe scaduto, quindi non esce. La data è quella di `validita_al`, scritta `gg-mm-aaaa`. | Sposta in avanti `validita_dal` e `validita_al`, oppure chiudi l'emissione con `emissione_al`. |
+| *Buoni sconto: Formato Stampa … della ditta non previsto: valori ammessi da 0 a 3* | Nella scheda **Fidelity - Buoni Sconto** della ditta il **Formato Stampa** è un numero diverso da 0, 1, 2 e 3. Il buono non saprebbe come stamparsi, quindi non viene né stampato né registrato. | Nella [ditta](../anagrafiche/ditte.md#scheda-fidelity-buoni-sconto) imposta il **Formato Stampa** a un numero da 0 a 3. |
 | *Buoni sconto: percorso troppo lungo: …* | Il percorso del file supera i limiti di Windows. | Accorcia il percorso della cartella del programma. |
 
 ### Il buono alla cassa
 
 Quando il cliente riporta il buono, il codice si legge in cassa come un normale
-buono a valore. Se il buono è già stato usato, sul display compare il messaggio
-seguente, nessuno sconto viene applicato e la vendita prosegue.
+buono a valore. Se il buono non si può usare, sul display compare uno dei
+messaggi seguenti, nessuno sconto viene applicato e la vendita prosegue.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
+| *Codice Organizzazione non Valido* | Il buono è stato emesso da un'altra organizzazione: il suo codice non comincia con il **Codice Organizzazione** della ditta. | Il buono non si può usare in questo negozio. Se invece è un buono vostro, controlla il **Codice Organizzazione** nella scheda **Fidelity - Buoni Sconto** della [ditta](../anagrafiche/ditte.md#scheda-fidelity-buoni-sconto). |
+| *Codice Punto Vendita non Valido* | Il buono è stato emesso da un altro punto vendita della stessa organizzazione e nella ditta **Abilita Circolarità** è spenta. | Il buono si usa solo nel punto vendita che l'ha emesso. Per renderlo spendibile in tutti i punti vendita attiva **Abilita Circolarità** nella ditta. |
 | *Buono disabilitato* | Il buono è già stato usato: ogni buono si può incassare una volta sola. | Il buono non è più valido: il cliente non ha diritto allo sconto. |
+| *Buono fuori termine validita'* | Oggi è prima del primo giorno o dopo l'ultimo giorno di validità del buono. | Se la validità non è ancora cominciata, il cliente può usare il buono dal giorno stampato sopra. Se è finita, il buono non dà più diritto allo sconto. |
 
 ## Note
 
@@ -292,6 +301,15 @@ seguente, nessuno sconto viene applicato e la vendita prosegue.
     per giorno. I valori che c'erano **non sono stati travasati** nel file:
     chi li usava deve scrivere il file `.ini`, altrimenti, con l'emissione
     attiva e nessun file, il buono non esce più.
+
+!!! warning "Un buoni_sconto.ini già presente vale anche per il POS"
+
+    Se nella cartella **cfg** c'è già un file `buoni_sconto.ini`, dalla
+    versione 2026 B10 le sue regole valgono anche per la
+    [vendita al banco e POS](vendita-al-banco.md), che prima non lo leggeva.
+    Con l'emissione attiva nella ditta, la cassa comincia a emettere i buoni
+    con le fasce e la validità scritte in quel file: **controllale prima di
+    aggiornare**, e se il file non serve più toglilo o rinominalo.
 
 - La soglia è raggiunta anche con un totale **uguale** alla spesa della fascia.
 - Il buono si basa sempre sul **totale dello scontrino**.

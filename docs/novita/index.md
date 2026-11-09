@@ -69,6 +69,15 @@ giorno della settimana.
     l'emissione attiva **non esce nessun buono** e il motivo è annotato nel
     file degli errori.
 
+!!! warning "Se nella cartella cfg c'è già un buoni_sconto.ini"
+
+    Da questa versione il file `buoni_sconto.ini` della cartella **cfg** vale
+    anche per la vendita al banco e POS, che prima non lo leggeva. Se il file
+    c'è già, con l'emissione attiva nella ditta la cassa comincia a emettere i
+    buoni con le fasce e la validità scritte lì: **controllale prima di
+    aggiornare**, e se il file non serve più toglilo o rinominalo. I dettagli
+    sono nel [manuale dei buoni sconto](../moduli/vendite/buoni-sconto.md#note).
+
 ## Versione 2026 B09.00
 
 In preparazione.

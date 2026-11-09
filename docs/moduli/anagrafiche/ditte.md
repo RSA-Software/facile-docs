@@ -303,7 +303,7 @@ Due riquadri. **FIDELITY**:
 | Campo | Descrizione |
 |---|---|
 | **Abilita Emissione Buoni Sconto** | Fa uscire il buono in cassa a fine scontrino. Con la casella spenta non esce nessun buono. Quanto vale, da quale spesa, per quanto tempo e con quali scritte non si imposta qui: sta in un [file di configurazione](../vendite/buoni-sconto.md) per ogni ditta. Con la casella attiva e senza il file, il buono non esce. |
-| **Formato Stampa** | Il modulo del buono, un numero da 0 a 3: **0** buono largo 45 colonne, **1** largo 32 colonne, **2** largo 35 colonne, ottimizzato per le stampanti 3I, **3** personalizzato da file (solo le righe scritte nel file, il codice a barre e le righe in coda). |
+| **Formato Stampa** | Il modulo del buono, un numero da 0 a 3: **0** buono largo 45 colonne, **1** largo 32 colonne, **2** largo 35 colonne, ottimizzato per le stampanti 3I, **3** personalizzato da file (solo le righe scritte nel file, il codice a barre e le righe in coda). Il campo non accetta numeri oltre il 3. |
 | **Codice Organizzazione**, **Codice Punto Vendita** | I codici del circuito. |
 | **Num Buoni Emessi** | Il contatore dei buoni. |
 | **Abilita Circolarità** | Rende i buoni spendibili in tutti i punti vendita del circuito. |
