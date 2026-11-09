@@ -24,6 +24,9 @@ riceve. Sono oltre sessanta e passano quasi tutti dalla stessa maschera.
   i punti vendita, movimenti, dati per Facile Mobile e Facile Agenti,
   anagrafica articoli, fidelity SISA, Peroni, SAGI, 730 precompilati e
   forniture fiscali.
+- [Sellout Coca Cola](sellout-coca-cola.md) — il venduto dei marchi Coca Cola
+  dal primo del mese a ieri, preparato e inviato in SFTP ogni giorno da
+  FacileToWeb, senza aprire Facile.
 
 ## Far entrare i dati
 

@@ -69,7 +69,7 @@ Usata solo dall'[esecuzione continua](ciclo.md) (operazione 979).
 |---|---|---|
 | `pausa` | 300 | Secondi di attesa fra un giro e l'altro; minimo 10. |
 | `exit` | 0 | `1` ferma il ciclo e gli impedisce di ripartire. |
-| `setup`, `abbina`, `ordini`, `prodotti`, `giacenze`, `prezzi`, `ingrosso`, `stato_ordini`, `immagini` | 0 | `0` = no, `1` = a ogni giro, un numero = al massimo una volta ogni tanti secondi. |
+| `setup`, `abbina`, `ordini`, `prodotti_nuovi`, `prodotti`, `giacenze`, `prezzi`, `ingrosso`, `stato_ordini`, `immagini` | 0 | `0` = no, `1` = a ogni giro, un numero = al massimo una volta ogni tanti secondi. |
 
 ## [ECOMMERCE]
 
@@ -82,25 +82,26 @@ Usata solo dall'[esecuzione continua](ciclo.md) (operazione 979).
 | `location_name` | la prima ubicazione attiva | 988 | Il nome dell'ubicazione di Shopify su cui scrivere le giacenze. |
 | `canale` | Online Store | 988 | Il nome del canale di vendita su cui pubblicare prodotti e collezioni nuovi. |
 | `modalita` | B2C | 983, 991 | `B2C` negozio al pubblico, `B2B` solo professionisti, `MISTO` tutti e due. Vedi [I prezzi](giacenze-e-prezzi.md#i-prezzi). |
-| `listino_web` | 1 | 983, 984 | Il listino del prezzo di vendita. |
-| `listino_uff` | 1 | 983, 984 | Il listino ufficiale: se è più alto del prezzo, diventa il prezzo barrato. |
+| `listino_web` | 1 | 983, 984, 978 | Il listino del prezzo di vendita. |
+| `listino_uff` | 1 | 983, 984, 978 | Il listino ufficiale: se è più alto del prezzo, diventa il prezzo barrato. |
 | `listino_ing` | 2 | 983, 991 | Il listino ingrosso, per i professionisti. |
-| `depositi_disp` | 1 | 982, 984 | I depositi sommati per la disponibilità, separati da virgole. Nella versione taglie e colori, anche quelli le cui combinazioni diventano varianti. |
+| `depositi_disp` | 1 | 982, 984, 978 | I depositi sommati per la disponibilità, separati da virgole. Nella versione taglie e colori, anche quelli le cui combinazioni diventano varianti. |
 | `deposito` | il deposito attivo della ditta | 980, 983 | Il deposito delle righe degli ordini importati **e** quello delle promozioni dei prezzi. |
 | `registro` | vuoto | 980 | Il registro degli ordini importati. |
 | `pagamento` | 0 | 980 | Il pagamento dei clienti nuovi creati dagli ordini. |
 | `cateco` | 0 | 980 | La categoria economica dei clienti nuovi creati dagli ordini. |
 | `cliente_generico` | 0 | 980 | Il cliente degli ordini senza dati personali. Con `0`, il connettore ne crea uno, *CLIENTE SHOPIFY*, e usa sempre quello. |
-| `verifica_spariti` | 1 | 984 | `1` = a ogni giro si controlla che prodotti e collezioni esistano ancora sul negozio, e quelli cancellati a mano si ricreano. |
-| `tipo_prodotto` | 0 | 984 | `1` = la categoria merceologica diventa il tipo di prodotto. |
-| `sigle` | vuoto | 984 | Le parole da lasciare maiuscole nelle descrizioni di categoria, reparto e stagione, separate da virgole. |
-| `nazione` | vuoto | 984 | La nazione dei testi web (**Web Nome**, **Web Des. Breve**, **Web Des. Estesa**) da mandare sul negozio. Vuota, i testi senza nazione. |
+| `verifica_spariti` | 1 | 984 | `1` = a ogni giro si controlla che prodotti e collezioni esistano ancora sul negozio, e quelli cancellati a mano si ricreano. La 978 non fa questo controllo: un prodotto cancellato sul negozio resta cancellato. |
+| `tipo_prodotto` | 0 | 984, 978 | `1` = la categoria merceologica diventa il tipo di prodotto. |
+| `sigle` | vuoto | 984, 978 | Le parole da lasciare maiuscole nelle descrizioni di categoria, reparto e stagione, separate da virgole. |
+| `nazione` | vuoto | 984, 978 | La nazione dei testi web (**Web Nome**, **Web Des. Breve**, **Web Des. Estesa**) da mandare sul negozio. Vuota, i testi senza nazione. |
 
 !!! note "Cambiare tipo_prodotto, sigle o nazione"
 
     Quando cambi `tipo_prodotto`, `sigle` o `nazione`, al giro successivo l'operazione
     prodotti rimanda **tutti** i prodotti, una volta, per allinearli. Su un
-    catalogo grande richiede qualche ora.
+    catalogo grande richiede qualche ora. La 978 non rimanda niente: il cambio
+    vale per i prodotti che crea da quel momento.
 
 ## [ARTICOLI]
 
@@ -139,7 +140,7 @@ se mancano.
 
 ## [TAGLIECOL]
 
-Solo nella versione taglie e colori, usata dai prodotti (984).
+Solo nella versione taglie e colori, usata dai prodotti (984 e 978).
 
 | Chiave | Predefinito | Descrizione |
 |---|---|---|

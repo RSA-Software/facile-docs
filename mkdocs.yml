@@ -314,6 +314,7 @@ nav:
       # Utility > Impostazioni Postazione. Il ramo sta qui perche' e' dove lo si cerca.
       - Registratori telematici:
           - moduli/casse-bilance/registratori/index.md
+          - Micrelec: moduli/casse-bilance/registratori/micrelec.md
           - RCH: moduli/casse-bilance/registratori/rch.md
       # Casse automatiche non e' una voce del menu: si sceglie in Impostazioni Postazione.
       - Casse automatiche:
@@ -328,6 +329,7 @@ nav:
       - Esportazione per tracciato: moduli/trasferimenti/esportazione-documenti.md
       - Esportazione DDT - Centrale Latte Salerno: moduli/trasferimenti/esportazione-ddt-centrale-latte-salerno.md
       - Esportazioni con maschera propria: moduli/trasferimenti/esportazioni-specifiche.md
+      - Sellout Coca Cola: moduli/trasferimenti/sellout-coca-cola.md
       - Ricezione Dati: moduli/trasferimenti/ricezione-dati.md
   - Utility:
       - moduli/utility/menu-utility.md

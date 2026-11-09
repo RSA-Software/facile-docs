@@ -144,6 +144,8 @@ non hanno maschera: chiedono conferma e lavorano mostrando l'avanzamento.
 | *La procedura permette l' acquisizione dei dati dell' anno allo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | Hai avviato l'aggiornamento dello storico. | **Sì** procede. La risposta preimpostata è **No**. |
 | *La procedura permette la rimozioni dei dati dell' anno dallo storico dei movimenti.<br>Per essere eseguita puo' essere necessario parecchio tempo.<br>Vuoi Continuare ?* | Hai avviato la rimozione dallo storico. | **Sì** procede. |
 | *Impossibile Caricare RAPI.DLL !<br>Controllare presenza installazione ActiveSync.* | Manca ActiveSync per parlare con il palmare. | Installalo sulla postazione. |
+| *Altri computer stanno usando gli archivi:<br> - ADMIN su MARIO (376 file aperti)<br>Le tabelle che hanno aperte non potranno essere aggiornate adesso: lo saranno al prossimo avvio del programma.<br>Vuoi continuare?* | Hai lanciato **Aggiorna Catalogo Dati** con altri computer collegati. Utente, computer e numero di file sono d'esempio. | Fai uscire gli altri utenti e rispondi **Sì**, oppure rispondi **Sì** subito e lascia che le tabelle in uso vengano riprese al prossimo avvio. La risposta preimpostata è **No**. |
+| *Aggiornamento degli archivi non completato: 12 tabelle sono aperte su altri computer e non sono state aggiornate:<br> - monteleo\dit00001\misure<br> - ...<br>Verranno aggiornate al prossimo avvio del programma.<br>Collegati in questo momento:<br> - ADMIN su MARIO (376 file aperti)* | Alcune tabelle erano aperte su altri computer e non si sono potute aggiornare. Compare anche dopo un aggiornamento degli archivi all'avvio. | Nessuna azione: il programma le riprende al prossimo avvio. Per farlo subito, fai uscire gli altri utenti e rilancia **Aggiorna Catalogo Dati**. |
 
 A questi si aggiungono i messaggi dei singoli ricalcoli:
 
@@ -175,21 +177,35 @@ A questi si aggiungono i messaggi dei singoli ricalcoli:
 
 !!! info "Che cosa fa «Aggiorna Catalogo Dati»"
 
-    **Non tocca i dati.** Riscrive il file che descrive gli archivi al driver
-    ODBC — il *catalogo* — cioè l'elenco delle tabelle e dei campi con cui
-    Crystal e le stampe in modalità SQL riescono a interrogare gli archivi.
+    **Non tocca i dati.** Riscrive la descrizione di tabelle e campi che
+    accompagna ogni archivio — il *catalogo* — e ricollega le tabelle al
+    database SQL con cui Crystal, le stampe e i programmi collegati (servizi,
+    app) interrogano gli archivi. Lo fa su **tutte** le tabelle della ditta e
+    dell'anno aperti: per gli anni passati va lanciato aprendo ciascun anno.
 
-    Il file sta nella cartella del programma e si chiama `FDATI001.DB` per
-    l'anno corrente della ditta 1, `F2025001.DB` per un anno passato: uno per
-    ditta e per anno. È per questo che le procedure di assistenza chiedono di
-    lanciarlo **su tutti gli anni** e non solo su quello corrente.
+    Il programma fa lo stesso lavoro da sé, ma solo dove serve, quando gli
+    archivi vengono aggiornati a una versione nuova, quando crea una tabella
+    nuova, alla creazione di un [nuovo esercizio](esercizi-e-chiusure.md) e al
+    primo accesso a un altro archivio.
 
-    Il programma lo rifà anche da sé quando si accorge che il catalogo è più
-    vecchio del programma, e lo rifà sempre alla creazione di un
-    [nuovo esercizio](esercizi-e-chiusure.md).
+    I file `FDATI001.DB`, `F2025001.DB` e simili che si trovano nella cartella
+    del programma servivano al vecchio collegamento ODBC senza SQL, che non si
+    usa più: il programma non li scrive più e si possono cancellare.
 
     Serve **solo con gli archivi c-tree**: su PostgreSQL la voce non fa niente,
     perché il catalogo lo tiene il server.
+
+!!! note "Con altri computer collegati"
+
+    Per aggiornare il catalogo di una tabella il programma deve averla tutta
+    per sé. Se altri computer stanno usando gli archivi, Facile li elenca prima
+    di cominciare (utente, computer e numero di file aperti) e chiede se
+    continuare.
+
+    Se continui, le tabelle aperte sugli altri computer **vengono saltate**:
+    alla fine un solo messaggio dice quali sono, e il programma le riprende
+    da sé al prossimo avvio, finché non riesce ad aggiornarle tutte. Per farlo
+    subito, fai uscire gli altri utenti e rilancia la voce.
 
 !!! info "Come «Importa Foto» trova le fotografie"
 

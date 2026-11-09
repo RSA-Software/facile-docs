@@ -31,7 +31,7 @@ proprio: creare l'esercizio nuovo, chiudere i conti del vecchio, riaprirli.
 
 | Voce di menu | A cosa serve |
 |---|---|
-| **Seleziona Archivio** | Cambia la cartella degli archivi su cui Facile lavora e richiede l'accesso. Serve a chi tiene più installazioni sullo stesso computer. |
+| **Seleziona Archivio** | Cambia la cartella degli archivi su cui Facile lavora e richiede l'accesso. Serve a chi tiene più installazioni sullo stesso computer. Sugli archivi scelti Facile fa lo stesso controllo di versione dell'avvio. |
 | **Cambio Ditta** | Passa a un'altra [ditta](../anagrafiche/ditte.md). |
 | **Scegli Esercizio** | Passa a un altro anno di gestione, o torna all'anno corrente. |
 | **Nuovo Esercizio** | Crea gli archivi dell'anno nuovo e, se vuoi, riporta le esistenze di magazzino. |
@@ -114,6 +114,16 @@ lavora.
 Molte elaborazioni — [inventario](../inventario/menu-inventario.md) compreso —
 si rifiutano di lavorare su un anno che non sia quello corrente, e lo dicono
 con un messaggio.
+
+!!! note "Anche un anno passato ha la sua versione"
+
+    Un anno chiuso resta com'era quando è stato lasciato, anche dopo gli
+    aggiornamenti del programma. Aprendolo, Facile fa lo stesso controllo
+    di versione dell'avvio (vedi
+    [Primo accesso](../../introduzione/primo-accesso.md#programma-e-archivi-di-versioni-diverse)):
+    se l'anno va aggiornato, sugli archivi non SQL chiede conferma una volta
+    sola. Se non confermi, o se non accetti l'aggiornamento del programma,
+    resti sull'anno di prima.
 
 ### Aprire l'anno nuovo
 

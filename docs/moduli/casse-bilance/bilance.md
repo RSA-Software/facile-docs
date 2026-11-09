@@ -117,6 +117,10 @@ ricezione da bilance e ricezione da file — con i campi che restano gli stessi.
 2. Apri la voce di invio delle variazioni della tua marca di bilance.
 3. Conferma alla domanda *Vuoi trasferire gli articoli alle bilance ?*.
 
+Con le Zenith partono solo gli articoli nuovi o cambiati dall'ultimo invio
+(vedi [cosa conta come variazione](#note), nelle note in fondo). Se
+non è cambiato niente, Facile lo dice e non manda nulla.
+
 ### Riallineare una bilancia da capo
 
 Per le Zenith c'è **Cancellazione Archivi e Invio Articoli**, che chiede
@@ -156,6 +160,7 @@ paga, vedi [Vendita al banco](../vendite/vendita-al-banco.md#passare-in-cassa-lo
 | *Vuoi trasferire gli articoli alle bilance ?* | Conferma prima dell'invio. | **Sì** procede. La risposta preimpostata è **No**. |
 | *Vuoi trasferire gli articoli alle bilance DIBAL ?* | Come sopra, per le Dibal. | **Sì** procede. |
 | *Confermi la cancellazione degli archivi bilance e la ritrasmissione completa ?* | Hai avviato l'invio completo alle Zenith. | **Sì** svuota le bilance e rimanda tutto. |
+| *Nessun articolo variato dall'ultimo invio alle bilance.* | Con **Invio Variazioni Articoli** delle Zenith: nessun articolo è cambiato dall'ultimo invio, e non parte niente. | Niente, le bilance sono già allineate. Se pensi di no, usa **Cancellazione Archivi e Invio Articoli**. |
 | *Deposito Attivo non Impostato!* | Manca il deposito nei parametri della ditta. | Impostalo prima di procedere. |
 | *Impossibile aprire il file C:\\DIBAL\\articoli.txt!* | Facile non riesce a scrivere il file per le bilance Dibal. | Controlla che la cartella `C:\\DIBAL` esista e sia scrivibile, e che nessun altro programma tenga aperto il file. |
 | *Impossibile aprire il file!* | Facile non riesce a leggere o scrivere il file di scambio. | Controlla percorsi e permessi, e che nessun altro programma tenga il file aperto. |
@@ -172,6 +177,31 @@ paga, vedi [Vendita al banco](../vendite/vendita-al-banco.md#passare-in-cassa-lo
     stesso PLU, la bilancia ne tiene uno solo e il venduto dell'altro sparisce.
     La [Stampa Articoli Gestione Bilance](stampe-casse-bilance.md) serve
     esattamente a controllare questo.
+
+!!! info "Zenith: cosa conta come variazione"
+
+    Facile ricorda cosa ha mandato alle bilance l'ultima volta, articolo per
+    articolo (bancone e PLU), e con **Invio Variazioni Articoli** rimanda solo
+    gli articoli in cui è cambiato qualcosa di quello che va alla bilancia:
+    prezzo, anche se cambiato solo nel listino, descrizioni, ingredienti,
+    aliquota IVA, vendita a peso o a pezzo, prezzo d'acquisto, e l'inizio o la
+    fine di una promozione. Parte anche ogni articolo nuovo per le bilance.
+
+    - **Il primo invio manda tutto**: Facile non ha ancora un invio con cui
+      confrontare.
+    - **Cancellazione Archivi e Invio Articoli** manda sempre tutto, e da lì
+      riparte il confronto.
+    - **Un articolo tolto dalle bilance**, per esempio azzerandone il PLU,
+      **resta sulla bilancia** fino alla prossima **Cancellazione Archivi e
+      Invio Articoli**: l'invio delle variazioni manda solo articoli, non
+      cancellazioni.
+    - Facile considera inviate le variazioni appena avvia il trasferimento. Se
+      il trasferimento si interrompe a metà, rifai l'invio con
+      **Cancellazione Archivi e Invio Articoli**.
+
+    Quanto è stato mandato l'ultima volta si trova in `zenith\zenart_inviato.txt`
+    nella cartella del programma, accanto ai comandi di invio. Se lo cancelli,
+    il prossimo invio delle variazioni manda tutto, come il primo.
 
 !!! note "Le bilance Helmac non ricevono il venduto"
 

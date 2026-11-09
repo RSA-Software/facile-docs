@@ -94,6 +94,31 @@ In alto la testata — chi ha consegnato, con quali documenti, a quali condizion
 5. Premi **F2 - Salva**: le esistenze si aggiornano e l'ultimo prezzo di
    acquisto degli articoli viene riscritto.
 
+### Caricare da un foglio Excel o da un CSV
+
+Il foglio porta i nomi delle colonne nella prima riga. Servono **CODICE** e
+**DESCRIZIONE**; le altre più usate sono **QUANTITA**, **PREZZO_IMP** (il
+prezzo senza IVA, oppure **PREZZO** con l'IVA compresa), **IVA**, **BARCODE**
+e **BARCODE2**.
+
+1. Apri **Menu ▸ Magazzino ▸ Nuovo Carico Merci** e indica il **Fornitore**.
+2. Premi **F7 - Dati** e scegli **Foglio Excel**.
+3. Rispondi **Sì** a *Vuoi importare gli Articoli da un foglio Excel ?* e
+   scegli il file: `.xlsx`, `.xls` o `.csv`.
+4. Rispondi **Sì** a *Vuoi procedere con l' importazione del Carico ?*: le righe
+   del foglio entrano nella griglia.
+5. Controlla le righe e premi **F2 - Salva**: solo adesso le esistenze e i
+   prezzi di acquisto si aggiornano.
+
+Gli articoli e i barcode del foglio vengono invece scritti in archivio già
+durante l'importazione, anche se poi il carico non si salva.
+
+Ogni testo letto dal foglio viene ripulito dai caratteri che non si vedono: gli
+spazi non separabili, gli a capo e le tabulazioni dentro la cella diventano
+spazi normali, gli spazi a larghezza zero, i trattini morbidi e i segni di
+direzione del testo si tolgono. Lettere accentate, € e apostrofi tipografici
+arrivano giusti anche dai CSV salvati in UTF-8.
+
 ### Rivedere i prezzi di vendita dopo il carico
 
 Apri [Conferma Listini](../listini-vendita/controllo-listini.md), scegli
@@ -114,6 +139,8 @@ costo si è mosso, con il prezzo che servirebbe per tenere il margine.
 | *Vuoi applicare il costo degli imballaggi?* | Il fornitore ha imballaggi a costo. | **Sì** li somma al costo della merce. |
 | *Stampante Etichette colli non impostata!* | Manca la stampante delle etichette. | Impostarla nelle [impostazioni della postazione](../utility/impostazioni-postazione.md). |
 | *Vuoi Stampare solo la Rimanenza?* | Chiesto stampando. | Sceglie fra il documento intero e la sola rimanenza. |
+| *Nel foglio c'e' un barcode in notazione esponenziale (…): Excel ne ha perso le cifre e non si puo' ricostruire.<br><br>Riga : …<br><br>Quel barcode non sara' salvato e non servira' a cercare l' articolo.<br><br>Vuoi procedere con l' importazione del Carico ?* | Nel foglio importato c'è un barcode scritto come lo mostra Excel, per esempio *8,00123E+12*: le cifre vere non ci sono più. Capita con i CSV aperti e risalvati da Excel. | **Sì** importa il carico senza quel barcode; **No** ferma l'importazione. Per avere il barcode serve il file originale: vedi la nota sui barcode passati da Excel. |
+| *Nel foglio ci sono N barcode in notazione esponenziale (per esempio …): Excel ne ha perso le cifre e non si possono ricostruire.<br><br>Righe : …<br><br>Quei barcode non saranno salvati e non serviranno a cercare gli articoli.<br><br>Vuoi procedere con l' importazione del Carico ?* | Come sopra, per più barcode: l'elenco riporta le prime dieci righe del foglio. | Come sopra. |
 
 !!! note "I messaggi sono tanti e quasi tutti domande"
 
@@ -135,6 +162,50 @@ costo si è mosso, con il prezzo che servirebbe per tenere il margine.
     viene aggiornato. È il valore su cui poggiano margini, ricarichi e la
     [conferma dei listini](../listini-vendita/controllo-listini.md): un prezzo
     sbagliato sul carico si propaga.
+
+!!! info "Il penultimo prezzo si sposta una volta sola per carico"
+
+    Quando salvi un carico, l'ultimo prezzo di acquisto di ogni articolo
+    diventa il penultimo e il prezzo del carico prende il suo posto. Questo
+    succede **una volta per carico**, anche nei due casi in cui il carico tocca
+    lo stesso articolo più di una volta:
+
+    - **salvi di nuovo un carico già registrato**, per correggere una riga o
+      per aggiungere gli estremi della fattura: l'ultimo prezzo prende il
+      valore corretto e il penultimo resta quello del carico precedente;
+    - **lo stesso articolo è su più righe dello stesso carico** (taglie,
+      colori, lotti diversi, o righe ripetute nel foglio importato): l'ultimo
+      prezzo è quello dell'ultima riga salvata e il penultimo resta quello del
+      carico precedente.
+
+    Lo stesso vale per la data dell'ultimo e del penultimo acquisto.
+
+<!-- DA VERIFICARE: il ricalcolo dei contatori di magazzino ricostruisce anche il penultimo prezzo dell'articolo, per sistemare gli articoli toccati prima della correzione? -->
+
+!!! warning "I barcode passati da Excel"
+
+    Excel mostra un barcode di 13 cifre come **8E+12** o **8,00123E+12**, e
+    toglie gli zeri iniziali: *0012345678905* diventa *12345678905*. Quello
+    che arriva a Facile dipende da come il file è stato salvato:
+
+    - un **.xlsx** o un **.xls** salvato da Excel conserva tutte le cifre e
+      Facile legge il barcode intero, anche se Excel lo mostra abbreviato;
+    - un **CSV aperto e risalvato da Excel** contiene il barcode come Excel
+      lo mostrava, *8,00123E+12*: le altre cifre non ci sono più.
+
+    Prima di importare, Facile conta i barcode in notazione esponenziale e lo
+    dice con le righe del foglio dove sono. Quei barcode non vengono salvati
+    sull'articolo e non servono a cercarlo. Se invece la notazione porta
+    ancora tutte le cifre (*8,001234567890E+12*), il barcode viene ricostruito
+    intero senza dire niente. Nelle installazioni con taglie e colori lo
+    stesso controllo vale anche per **Foglio Excel Miniconf s.p.a.** e
+    **Foglio Excel Macron Sports**.
+
+    Per non perdere i barcode, importa il file `.xlsx` che hai ricevuto, oppure
+    il CSV del fornitore senza aprirlo e risalvarlo con Excel. Se devi passarlo
+    da Excel, aprilo da **Dati ▸ Da testo/CSV** e imposta come **Testo** le
+    colonne dei barcode: così restano anche gli zeri iniziali, che Facile non
+    può rimettere.
 
 !!! info "La % Spese va sul valore netto, riga per riga"
 

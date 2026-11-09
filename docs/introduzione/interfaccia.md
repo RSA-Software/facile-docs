@@ -124,6 +124,23 @@ comportamento normale di tutto il programma — un *bip* senza messaggio vuol di
 Nelle tabelle dei campi di questo manuale la colonna **Obbl.** segna con ● i
 campi che il programma pretende.
 
+!!! info "Incollare un testo copiato da fuori"
+
+    Un testo copiato da una pagina web, da un PDF, da Word o da Excel porta
+    spesso caratteri che non si vedono: spazi non separabili, spazi a larghezza
+    zero, trattini morbidi, a capo. Quando lo incolli in un campo con
+    ++ctrl+v++, ++shift+insert++ o con **Incolla** del menu, Facile lo pulisce:
+    a capo, tabulazioni e spazi speciali diventano spazi normali, i caratteri
+    invisibili si tolgono, l'a capo che Excel aggiunge in fondo a una cella
+    copiata sparisce. Lettere accentate, €, apostrofi e virgolette tipografiche
+    restano come sono.
+
+    Serve soprattutto per codici e barcode: con uno spazio invisibile in coda
+    un codice sembra giusto, ma la ricerca non lo trova. La pulizia vale per il
+    testo incollato e per i fogli importati nel
+    [carico merci](../moduli/magazzino/carico-merci.md), non per quello già
+    salvato in archivio.
+
 ## I messaggi che si incontrano ovunque
 
 Queste risposte non appartengono a una maschera in particolare: le dà il
@@ -138,6 +155,8 @@ programma per conto di tutte.
 | *Il record è stato modificato da un altro nodo della rete.* | Un collega ha salvato lo stesso record mentre lo si modificava. | **Ricarica**, guardare che cosa è cambiato e rifare le proprie modifiche. |
 | *Il record è stato cancellato da un altro nodo della rete.* | Un collega l'ha eliminato mentre lo si modificava. | La maschera si chiude: non c'è più niente da salvare. |
 | *La data è esterna all' esercizio corrente.* | La data digitata non appartiene all'anno su cui si sta lavorando. | Correggere la data, oppure cambiare esercizio. |
+| *Driver ODBC SQL non installato correttamente.* | Lanciando una stampa: sul computer manca il collegamento ODBC che le stampe usano per leggere gli archivi. | Chiamare l'assistenza: va configurato il collegamento ODBC SQL di Facile su quel computer. |
+| *La ditta usa ancora il vecchio formato delle date: le stampe non sono disponibili finche' gli archivi non vengono convertiti.<br>Contattare l'assistenza.* | Lanciando una stampa: la ditta ha gli archivi nel formato delle date precedente all'SQL, che le stampe non sanno leggere. | Chiamare l'assistenza per la conversione degli archivi. |
 
 I messaggi delle singole maschere stanno in fondo a ciascuna pagina, e tutti
 insieme nell'[appendice dei messaggi](../appendici/messaggi-errore.md).

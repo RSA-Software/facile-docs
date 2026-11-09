@@ -35,6 +35,7 @@ exit              = 0
 setup             = 0
 abbina            = 0
 ordini            = 1
+prodotti_nuovi    = 0
 prodotti          = 3600
 giacenze          = 1
 prezzi            = 1
@@ -50,6 +51,7 @@ immagini          = 86400
 | `setup` | La [configurazione](installazione.md#4-lancia-la-configurazione) del negozio (988). Normalmente `0`: si lancia a mano all'installazione. |
 | `abbina` | L'[abbinamento](installazione.md#5-abbina-il-catalogo-gia-presente) del catalogo esistente (987). Normalmente `0`. |
 | `ordini` | L'[importazione degli ordini](ordini.md) (980). Quanti giorni rileggere lo dice `interval` nella sezione `[COMMAND]`. |
+| `prodotti_nuovi` | [Solo i prodotti nuovi](prodotti-e-immagini.md#solo-i-prodotti-nuovi-978) (978): crea gli articoli non ancora sul negozio, con collezioni e fotografie, e poi non li tocca più. Se la accendi, lascia `prodotti` e `immagini` a `0`. |
 | `prodotti` | [Prodotti e collezioni](prodotti-e-immagini.md) (984). |
 | `giacenze` | Le [giacenze](giacenze-e-prezzi.md) (982). |
 | `prezzi` | I [prezzi](giacenze-e-prezzi.md#i-prezzi) (983). |
@@ -77,10 +79,12 @@ valgono per tutte le operazioni: vedi [Il file di configurazione](configurazione
 
 1. Al primo giro si fanno **tutte** le operazioni accese.
 2. Le operazioni si fanno sempre in quest'ordine: configurazione,
-   abbinamento, ordini, prodotti, giacenze, prezzi, listino ingrosso, stato
-   degli ordini, immagini. Gli ordini vengono prima delle giacenze perché
-   l'ordinato clienti riduce la disponibilità; le immagini sono per ultime
-   perché sono le più lente.
+   abbinamento, ordini, prodotti nuovi, prodotti, giacenze, prezzi, listino
+   ingrosso, stato degli ordini, immagini. Gli ordini vengono prima delle
+   giacenze perché l'ordinato clienti riduce la disponibilità; i prodotti
+   nuovi vengono prima di giacenze e prezzi, così un articolo appena creato
+   riceve la giacenza nello stesso giro; le immagini sono per ultime perché
+   sono le più lente.
 3. Dal secondo giro in poi, un'operazione con un numero di secondi si fa
    solo se dall'ultima volta è passato almeno quel tempo.
 4. Finito il giro, il programma aspetta `pausa` secondi e ricomincia.
@@ -113,7 +117,7 @@ Ci sono due modi.
 **Con il flag `exit`.** Apri il file di configurazione, imposta `exit = 1`
 nella sezione `[CICLO]` e salva. Il ciclo si ferma entro un secondo se è in
 pausa, alla fine dell'articolo che sta inviando se è dentro un'operazione
-lunga (prodotti, prezzi, immagini), alla fine dell'operazione in corso
+lunga (prodotti, prodotti nuovi, prezzi, immagini), alla fine dell'operazione in corso
 negli altri casi. Finché `exit` resta a `1` il ciclo **non riparte**, nemmeno
 se viene rilanciato: per farlo ripartire rimetti `exit = 0`.
 
@@ -165,6 +169,7 @@ avvio.
 | `Ciclo Shopify fermato dal file di stop` | Fermato con il file di stop, che è stato cancellato. |
 | `Ciclo Shopify: tolto il file di stop rimasto da un arresto precedente (...)` | All'avvio c'era un file di stop dimenticato: è stato tolto e il ciclo parte. |
 | `Prodotti: arresto richiesto, gli articoli rimasti si inviano al prossimo avvio` | L'arresto è arrivato durante un'operazione lunga. Lo stesso per prezzi e immagini. |
+| `Prodotti nuovi: arresto richiesto, gli articoli rimasti si creano al prossimo avvio` | Lo stesso, durante la creazione dei prodotti nuovi. |
 
 ## Vedi anche
 

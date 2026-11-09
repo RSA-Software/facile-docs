@@ -101,6 +101,11 @@ Oltre alle sezioni comuni descritte in [E-commerce](index.md#il-file-di-configur
   operazione prodotti. Un'immagine cambiata viene tolta dal negozio e ricaricata
   al giro successivo.
 
+Lo stesso archivio può alimentare anche un negozio Shopify: i due connettori
+ricordano ciascuno per conto proprio che cosa hanno inviato, e una modifica in
+Facile arriva su tutti e due. Vedi
+[Shopify e WooCommerce sullo stesso archivio](shopify/prodotti-e-immagini.md#shopify-e-woocommerce-sullo-stesso-archivio).
+
 ## Giacenze e prezzi
 
 - **Giacenze (932):** per gli articoli pubblicati, la somma di

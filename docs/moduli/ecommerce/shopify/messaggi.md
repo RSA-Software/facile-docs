@@ -66,7 +66,7 @@ L'elenco delle varianti non abbinate, con il motivo, è nel file
 `shopify_non_abbinati.csv`: vedi
 [Abbina il catalogo già presente](installazione.md#5-abbina-il-catalogo-gia-presente).
 
-## Prodotti e immagini (984, 985)
+## Prodotti e immagini (984, 985, 978)
 
 | Riga del registro | Causa | Cosa fare |
 |---|---|---|
@@ -75,6 +75,11 @@ L'elenco delle varianti non abbinate, con il motivo, è nel file
 | `Articolo ...: gruppo taglie ... inesistente` | L'articolo indica un gruppo di taglie che non esiste. | Correggi il gruppo taglie nell'anagrafica dell'articolo. |
 | `Articolo ...: immagine formato ... illeggibile, saltata` | Un'immagine dell'articolo è danneggiata. | Ricarica l'immagine in Facile. |
 | `Caricamento ... fallito - ...` | Una fotografia non è arrivata sul negozio. | Al giro successivo l'articolo viene ritentato. |
+| `Collezione ... non creata` | Shopify ha rifiutato la creazione di una collezione chiesta da un articolo nuovo (978). Il motivo è nelle righe precedenti. | Gli articoli che ne fanno parte non vengono creati in questo giro e si riprovano al lancio successivo. Se si ripete, controlla il nome dell'elemento della tassonomia. |
+| `Articolo ...: una sua collezione non e' stata creata, si riprova al prossimo avvio` | La collezione dell'articolo nuovo non è stata creata (vedi il messaggio sopra). | Niente: l'articolo si riprova al lancio successivo. |
+| `Collezione ... cancellata sul negozio: non si ricrea, gli articoli nuovi nascono senza` | Con la 978, una collezione collegata è stata cancellata a mano sul negozio. | Se la collezione serve, toglila dalle tassonomie dell'articolo oppure creala di nuovo sul negozio e aggiungi i prodotti a mano. |
+| `Articolo ...: prodotto creato, immagini non inviate: si riprova al prossimo avvio` | Con la 978, il prodotto è stato creato ma le fotografie non sono arrivate. | Niente: al lancio successivo si inviano solo le fotografie. |
+| `Articolo ...: immagini non inviate, si riprova al prossimo avvio` | Il nuovo tentativo di invio delle fotografie non è riuscito. | Niente, se al giro dopo vanno. Se si ripete, guarda le righe precedenti. |
 
 ## Giacenze, prezzi e listino ingrosso (982, 983, 991)
 

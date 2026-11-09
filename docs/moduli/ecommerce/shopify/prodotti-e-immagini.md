@@ -8,11 +8,14 @@ modulo: E-commerce ▸ Shopify
 
 L'operazione **984** crea e aggiorna sul negozio i prodotti e le collezioni;
 l'operazione **985** invia le fotografie. Tutte e due mandano solo quello che
-è nuovo o cambiato dall'ultimo invio.
+è nuovo o cambiato dall'ultimo invio. Per un negozio che, dopo la creazione,
+gestisce i prodotti a mano c'è l'operazione **978**, che
+[crea solo i prodotti nuovi](#solo-i-prodotti-nuovi-978) e poi non li tocca più.
 
 !!! info "In sintesi"
 
-    - **Operazioni:** 984 prodotti e collezioni, 985 immagini
+    - **Operazioni:** 984 prodotti e collezioni, 985 immagini, 978 solo i
+      prodotti nuovi
     - **Si pubblica:** l'articolo con **Includi WEB** attivo
     - **Si toglie dal sito:** togliendo **Includi WEB** — il prodotto passa
       in bozza, non viene cancellato
@@ -172,6 +175,76 @@ collegati:
 È l'operazione più lenta: conviene farla girare a intervalli lunghi, per
 esempio una volta al giorno (vedi [Esecuzione continua](ciclo.md)).
 
+## Solo i prodotti nuovi (978)
+
+Alcuni negozi usano Facile solo per **caricare** i prodotti: una volta sul
+negozio, testi, fotografie e collezioni si sistemano a mano su Shopify e
+Facile non li deve più toccare. Per loro c'è l'operazione **978**, al posto
+della 984 e della 985.
+
+La 978 prende gli articoli con **Includi WEB** attivo che non sono mai stati
+sul negozio e, per ciascuno:
+
+1. crea le collezioni che gli servono e che sul negozio non ci sono ancora;
+2. crea il prodotto con gli stessi dati della 984: titolo, descrizione,
+   marchio, peso, collezioni, campi aggiuntivi, varianti di taglia e colore e
+   prezzo iniziale;
+3. invia le fotografie, come la 985.
+
+Da lì in avanti il prodotto non viene più toccato: le modifiche all'articolo
+in Facile, le immagini cambiate e le taglie o i colori nuovi non arrivano sul
+negozio. Restano invece attive, se le accendi, le operazioni
+[giacenze e prezzi](giacenze-e-prezzi.md): se anche i prezzi li gestisci a
+mano sul negozio, lascia spenta quella dei prezzi.
+
+Rispetto alla 984 cambiano anche questi casi:
+
+- un **prodotto cancellato** a mano sul negozio resta cancellato: la 978 non
+  lo ricrea;
+- una **collezione cancellata** a mano sul negozio non viene ricreata: gli
+  articoli nuovi che ne farebbero parte nascono senza, e il registro lo dice;
+- le collezioni che ci sono già non vengono rinominate né tolte, nemmeno se
+  in Facile l'elemento della tassonomia è stato rinominato o disabilitato.
+  Un articolo nuovo non entra nella collezione di un elemento disabilitato;
+- se le fotografie non arrivano, per esempio per un problema di rete, il
+  prodotto resta creato e le fotografie si riprovano al lancio successivo,
+  finché non vanno.
+
+!!! warning "Non lanciare la 984 e la 985 sullo stesso negozio"
+
+    La 984 aggiorna i prodotti già sul negozio e riscrive testi e collezioni;
+    la 985 rifà le gallerie delle fotografie cambiate in Facile. Su un
+    negozio gestito a mano cancellerebbero il lavoro fatto sul negozio.
+    Nell'[esecuzione continua](ciclo.md) accendi `prodotti_nuovi` e lascia
+    `prodotti` e `immagini` a `0`.
+
+## Shopify e WooCommerce sullo stesso archivio
+
+Lo stesso archivio di Facile può alimentare insieme un negozio Shopify e un
+negozio [WooCommerce](../woocommerce.md). Ciascun connettore ricorda per conto
+suo che cosa ha già inviato. Un articolo modificato in Facile arriva quindi su
+tutti e due i negozi, qualunque dei due giri per primo.
+
+Tieni presente che:
+
+- la casella **Includi WEB** è una sola: un articolo pubblicato va su tutti e
+  due i negozi;
+- quando WooCommerce invia un articolo, un'immagine o una categoria, Shopify
+  li rimanda una volta anche se non sono cambiati. Per un'immagine vuol dire
+  rifare la galleria del prodotto;
+- per lo stesso motivo, dopo che WooCommerce ha aggiornato un marchio, una
+  stagione o un reparto, Shopify rimanda una volta i prodotti che lo usano;
+- listino, depositi e pagamenti si scelgono nel file di configurazione di
+  ciascun connettore, quindi possono essere diversi per i due negozi;
+- per gli ordini conviene usare un **registro** diverso per ciascun negozio,
+  così sai sempre da quale sito arriva un ordine;
+- un cliente che compra sui due negozi con la stessa email diventa un solo
+  cliente in Facile.
+
+Il primo giro di prodotti o immagini dopo l'aggiornamento del connettore
+prende nota di ciò che Shopify ha già ricevuto, e lo scrive nel registro.
+Non rimanda il catalogo: parte solo ciò che era già in attesa.
+
 ## Messaggi principali
 
 | Riga del registro | Che cosa significa |
@@ -179,11 +252,16 @@ esempio una volta al giorno (vedi [Esecuzione continua](ciclo.md)).
 | `Prodotti da inviare: N` | Quanti articoli sono nuovi o cambiati in questo giro. |
 | `Fine sincronizzazione prodotti Shopify: articoli N - nuovi N - aggiornati N - errori N` | Il riepilogo del giro. |
 | `Formato dei prodotti cambiato (...): N prodotti collegati da rimandare` | Hai cambiato `tipo_prodotto`, `sigle` o `nazione`: tutti i prodotti si rimandano una volta. |
+| `Delta Shopify separato da WooCommerce: prodotti N, immagini N, categorie N gia' inviati` | Compare una volta sola, al primo giro dopo l'aggiornamento del connettore: quanti elementi risultavano già sul negozio e non verranno rimandati. Vedi [Shopify e WooCommerce sullo stesso archivio](#shopify-e-woocommerce-sullo-stesso-archivio). |
 | `Articolo ... a taglie e colori senza combinazioni pubblicabili: non inviato` | Nessuna combinazione di taglia e colore ha movimenti nei depositi pubblicati. |
 | `Articolo ...: il codice non da' uno SKU EAN-13 di variante (servono 6 cifre): non inviato` | Il codice dell'articolo a taglie non è di 6 cifre. |
 | `Articolo ...: il prodotto ... non c'e' piu' su Shopify, lo si ricrea` | Il prodotto era stato cancellato sul negozio. |
 | `Fine sincronizzazione immagini Shopify: articoli N - immagini N - errori N` | Il riepilogo delle immagini. |
 | `Articolo ...: immagine formato N illeggibile, saltata` | Un'immagine dell'articolo è danneggiata: ricaricala in Facile. |
+| `Prodotti nuovi da creare: N` | La 978: quanti articoli pubblicabili non sono ancora sul negozio. |
+| `Fine creazione prodotti nuovi Shopify: articoli N - creati N - collezioni nuove N - gallerie N (immagini N) - errori N` | Il riepilogo della 978. |
+| `Collezione ... cancellata sul negozio: non si ricrea, gli articoli nuovi nascono senza` | La 978 ha trovato cancellata sul negozio una collezione che serviva a un articolo nuovo. |
+| `Articolo ...: il prodotto e' stato cancellato sul negozio, le immagini non si inviano` | Il prodotto è stato cancellato prima che le sue fotografie arrivassero: la 978 smette di riprovarle. |
 
 Gli altri messaggi sono in [Messaggi del registro](messaggi.md).
 

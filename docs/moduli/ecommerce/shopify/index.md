@@ -48,6 +48,7 @@ articoli.
 | 987 | Abbinamento | Collega agli articoli di Facile i prodotti già presenti sul negozio. | Una volta, se il negozio aveva già un catalogo. |
 | 984 | Prodotti | Crea e aggiorna prodotti e collezioni. | A ogni giro, o a intervalli. |
 | 985 | Immagini | Invia le fotografie degli articoli nuove o cambiate. | A intervalli più lunghi: è l'operazione più lenta. |
+| 978 | Solo prodotti nuovi | Crea gli articoli non ancora sul negozio, con collezioni e fotografie, e poi non li tocca più. | Al posto della 984 e della 985, sui negozi che gestiscono i prodotti a mano. |
 | 982 | Giacenze | Invia le disponibilità cambiate. La 981 fa la stessa cosa. | A ogni giro. |
 | 983 | Prezzi | Invia i prezzi cambiati, comprese le promozioni che iniziano o finiscono. | A ogni giro. |
 | 991 | Listino ingrosso | Crea le aziende clienti e invia i prezzi del listino ingrosso. | Solo con la vendita ai professionisti. |
@@ -139,6 +140,10 @@ delle categorie di Facile.
     finché in Facile l'articolo resta pubblicabile. Per togliere un
     articolo dal sito, togli **Includi WEB** in Facile: il prodotto passa
     in bozza e smette di essere visibile.
+
+    Con l'operazione [solo prodotti nuovi](prodotti-e-immagini.md#solo-i-prodotti-nuovi-978)
+    (978) è il contrario: Facile non riscrive niente dei prodotti già creati,
+    e un prodotto o una collezione cancellati sul negozio restano cancellati.
 
 ## Vedi anche
 

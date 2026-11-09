@@ -155,8 +155,51 @@ DDT emessi senza nota del fornitore.
     fornitore, dopo l'aggiornamento non riuscirà più a stamparli finché non
     completa i fornitori in anagrafica o divide il DDT.
 
+**[Registratori Micrelec G100 in rete](../moduli/casse-bilance/registratori/micrelec.md).**
+Nuova voce `MICRELEC G100` della **Stampante Fiscale**: i registratori Axon
+Micrelec della serie G100 si collegano direttamente in rete, senza il
+programma di Micrelec. Facile manda le righe mentre batte lo scontrino e
+riceve l'esito di ognuna: un errore compare sulla riga che l'ha causato, e uno
+scontrino interrotto a metà viene annullato sulla cassa. Numero dello
+scontrino, ultimo azzeramento e matricola si leggono dalla cassa, e c'è il
+display cliente `MICRELEC G100`. La voce `MICRELEC` resta com'era.
+
 ### Miglioramenti
 
+- [Versioni in rete](../introduzione/primo-accesso.md#programma-e-archivi-di-versioni-diverse):
+  i computer con build diverse della stessa versione — per esempio 2026 B09.01
+  e 2026 B09.03 — lavorano insieme sugli stessi archivi, senza dover
+  aggiornare tutti. L'aggiornamento serve solo quando cambiano l'anno o il
+  numero dopo la B. Con gli archivi SQL l'aggiornamento degli archivi parte da
+  solo, senza domanda; se una tabella è in uso su un altro computer si ferma
+  dopo qualche secondo e riprende al riavvio, invece di bloccare la rete.
+- [Cambio ditta](../introduzione/primo-accesso.md#scegliere-la-ditta): chiudendo
+  l'elenco senza scegliere si resta sulla ditta di prima, invece di chiudere il
+  programma. La versione degli archivi della ditta scelta si controlla come
+  all'avvio, e chi non accetta l'aggiornamento resta sulla ditta di prima. Con
+  gli archivi SQL ora compaiono anche *Una sola ditta e' presente in archivio!*
+  e, con Facile avviato su una ditta fissa, *Cambio ditta non permesso!*.
+- [Scegli Esercizio e Seleziona Archivio](../moduli/utility/esercizi-e-chiusure.md):
+  anche qui la versione degli archivi si controlla come all'avvio. Un anno
+  passato da aggiornare chiede conferma sugli archivi non SQL; chi non accetta
+  resta sull'anno di prima.
+- [Aggiorna Catalogo Dati](../moduli/utility/manutenzione-archivi.md#controlli-e-messaggi)
+  e aggiornamento degli archivi non SQL all'avvio: con altri computer collegati
+  non si fermano più. Prima di cominciare Facile dice chi sta usando gli
+  archivi (utente, computer, file aperti); le tabelle che gli altri tengono
+  aperte vengono saltate, elencate in un solo messaggio alla fine e riprese da
+  sole al prossimo avvio. Prima bastava una tabella occupata per annullare
+  tutto l'aggiornamento con *Errore Database N. -8*. In più l'aggiornamento
+  aggiunge al catalogo SQL anche le tabelle che ci mancavano.
+- Le stampe usano sempre il collegamento ODBC SQL. Il vecchio collegamento
+  ODBC senza SQL non c'è più: il programma non scrive più i file
+  `FDATI001.DB`, `F2025001.DB` e simili, e non ripassa più il catalogo a ogni
+  apertura degli archivi ma solo quando serve. Vedi
+  [Manutenzione archivi](../moduli/utility/manutenzione-archivi.md) e i
+  [messaggi delle stampe](../introduzione/interfaccia.md#i-messaggi-che-si-incontrano-ovunque).
+- [FacileToWeb](../moduli/ecommerce/index.md#controlli-e-messaggi): con
+  archivi di un'altra versione non parte e lo scrive nel registro, invece di
+  lavorarci sopra.
 - [Destinazioni diverse](../moduli/anagrafiche/destinazioni-diverse.md): la
   finestra è più larga e i dati di nascita del titolare non sono più chiusi
   in un riquadro.
@@ -169,6 +212,15 @@ DDT emessi senza nota del fornitore.
   velocemente durante la vendita.
 
 ### Correzioni
+
+**Casse e Bilance**
+
+- [Bilance Zenith](../moduli/casse-bilance/bilance.md#note):
+  **Invio Variazioni Articoli** mandava ogni volta tutti gli articoli, come
+  l'invio completo. Ora manda solo gli articoli nuovi o cambiati dall'ultimo
+  invio, e se non è cambiato niente avvisa *Nessun articolo variato
+  dall'ultimo invio alle bilance.* Il primo invio dopo l'aggiornamento manda
+  ancora tutto.
 
 **Magazzino**
 
@@ -234,7 +286,11 @@ quello che è cambiato. Tutte le operazioni possono girare da un solo file
 di configurazione, in [esecuzione continua](../moduli/ecommerce/shopify/ciclo.md),
 e si fermano con il flag `exit`. Un prodotto cancellato a mano sul negozio
 viene ricreato, mentre i dati aggiunti sul negozio — collezioni manuali,
-tag, fotografie — restano.
+tag, fotografie — restano. Per i negozi che dopo il caricamento gestiscono i
+prodotti a mano, l'operazione
+[solo prodotti nuovi](../moduli/ecommerce/shopify/prodotti-e-immagini.md#solo-i-prodotti-nuovi-978)
+crea gli articoli non ancora sul negozio, con collezioni e fotografie, e poi
+non li tocca più.
 
 **[Scontrini delle bilance Zenith in cassa](../moduli/vendite/vendita-al-banco.md#passare-in-cassa-lo-scontrino-di-una-bilancia).**
 Sul **Pos Touchscreen** si legge il codice a barre in fondo allo scontrino di
