@@ -116,12 +116,21 @@ stampa diventano il dato vero del buono:
 
 | Segnaposto | Diventa |
 |---|---|
-| `{VALORE}` | L'importo del buono, per esempio `5,56 EURO`. Anche per il buono in percentuale: il buono è sempre stampato per il suo valore in euro. |
-| `{DAL}` | Il primo giorno di validità, `gg/mm/aaaa`. |
-| `{AL}` | L'ultimo giorno di validità, `gg/mm/aaaa`. |
+| `{VALORE}` | L'importo del buono con il punto decimale, per esempio `5.56 EURO`. Anche per il buono in percentuale: il buono è sempre stampato per il suo valore in euro. |
+| `{DAL}` | Il primo giorno di validità, `gg-mm-aaaa`, per esempio `09-12-2026`. |
+| `{AL}` | L'ultimo giorno di validità, `gg-mm-aaaa`. |
 
-Per esempio la riga `Valido dal {DAL} al {AL}` diventa `Valido dal 01/12/2026 al
-31/01/2027`.
+Per esempio la riga `Valido dal {DAL} al {AL}` diventa `Valido dal 01-12-2026 al
+31-01-2027`.
+
+!!! warning "Nelle tue righe usa il trattino e il punto"
+
+    Su tutte le casse tranne le Epson, la barra `/` e la virgola `,` scritte
+    nelle righe di testa e di coda escono sul buono come **spazi**: `Tel. 091/123`
+    diventa `Tel. 091 123`. Per questo i segnaposti stampano le date con il
+    trattino e l'importo con il punto, e nel tuo testo conviene fare lo stesso:
+    scrivi `-` al posto di `/` e `.` al posto di `,`. Solo nelle date delle
+    chiavi del file (`emissione_dal`, `validita_al`…) si scrive ancora la barra.
 
 ## Pulsanti e comandi
 
@@ -215,7 +224,8 @@ Si vuole regalare il 10% della spesa a chi spende almeno 50 euro, solo dall'1 al
 Il **Formato Stampa** della ditta decide come è fatto il buono; i numeri sono
 spiegati nella [scheda della ditta](../anagrafiche/ditte.md#scheda-fidelity-buoni-sconto).
 Con il **formato 3 - Personalizzato da file** il buono contiene solo quello che
-hai scritto nel file, in questo ordine:
+hai scritto nel file, in questo ordine (sulle stampanti 3i esce proprio così:
+testa, codice a barre e coda, come le hai scritte):
 
 1. le righe `header_1` … `header_5`, fino all'ultima compilata: una riga vuota
    in mezzo esce come riga bianca;
@@ -243,7 +253,8 @@ regolarmente, ma senza buono. Il motivo si legge nel file degli errori,
 è impostata una, altrimenti della cartella del programma. Ogni riga comincia
 con la data e l'ora, per esempio `09/11/2026 10:15:00 - Buoni sconto: …`. Se la
 stessa cosa si ripete a ogni scontrino, la riga **non viene ripetuta di
-seguito**: ne compare una sola, non una per ogni vendita.
+seguito**: non ne compare una per ogni vendita. Torna a comparire solo se nel
+frattempo è stato scritto un altro messaggio.
 
 Nella tabella le parti che cambiano da un caso all'altro (percorsi, nomi,
 valori) sono indicate con i puntini.
@@ -252,7 +263,7 @@ valori) sono indicate con i puntini.
 |---|---|---|
 | *Buoni sconto: file di configurazione non trovato: …\cfg\buoni_sconto_00001.ini o …\cfg\buoni_sconto.ini* | La ditta ha l'emissione attiva ma nella cartella **cfg** non c'è né il file della ditta né quello generico. | Crea uno dei due file. Il codice della ditta nel nome è a cinque cifre. |
 | *Buoni sconto: file di configurazione non trovato o non leggibile: …* | Il file c'è ma il programma non riesce ad aprirlo. | Controlla che non sia aperto in esclusiva da un altro programma e che l'utente di Windows possa leggerlo. |
-| *Buoni sconto: il file … e' salvato in UTF-8 con BOM: salvarlo di nuovo in ANSI (Windows-1252)* | Il file è stato salvato in UTF-8 con BOM, e così non si legge. Senza BOM si leggerebbe, ma le lettere accentate uscirebbero sbagliate. | Aprilo nel Blocco note e salvalo con **Codifica** **ANSI**. |
+| *Buoni sconto: il file … e' salvato in UTF-8 con BOM: salvarlo di nuovo in ANSI (Windows-1252)* | Il file è stato salvato in UTF-8 con BOM, e così non viene letto. Senza BOM verrebbe letto, ma le lettere accentate uscirebbero sbagliate. | Aprilo nel Blocco note e salvalo con **Codifica** **ANSI**. |
 | *Buoni sconto: tipo sconosciuto: "…" (valori ammessi: valore, percentuale)* | In `tipo` c'è una parola diversa da `valore` e `percentuale`. | Correggi la parola, oppure togli la riga: vale `valore`. |
 | *Buoni sconto: data non valida in …: "…" (formato gg/mm/aaaa)* | Una data non è nel formato `gg/mm/aaaa` o non esiste nel calendario (per esempio 31/04/2026). Il messaggio dice in quale chiave. | Correggi la data, oppure lasciala vuota se non serve. |
 | *Buoni sconto: data non valida in start_year/start_month/start_day* (o *stop_year/stop_month/stop_day*) | Le date nel vecchio formato a tre chiavi non formano una data vera. | Correggile, oppure scrivi `validita_dal` e `validita_al`. |
@@ -261,6 +272,16 @@ valori) sono indicate con i puntini.
 | *Buoni sconto: validità non determinabile: servono validita_dal/validita_al oppure validita_durata_giorni* | Mancano sia la validità fissa sia la durata. | Scrivi `validita_dal` e `validita_al`, oppure `validita_durata_giorni` (ed eventualmente `validita_dopo_giorni`). |
 | *Buoni sconto: validità non determinabile: validita_dal e validita_al vanno impostate entrambe, con validita_al non prima di validita_dal, oppure serve validita_durata_giorni* | La validità fissa è incompleta (una sola data) o la data finale viene prima di quella iniziale, e non c'è la durata. | Scrivi tutte e due le date nell'ordine giusto, oppure `validita_durata_giorni`. |
 | *Buoni sconto: percorso troppo lungo: …* | Il percorso del file supera i limiti di Windows. | Accorcia il percorso della cartella del programma. |
+
+### Il buono alla cassa
+
+Quando il cliente riporta il buono, il codice si legge in cassa come un normale
+buono a valore. Se il buono è già stato usato, sul display compare il messaggio
+seguente, nessuno sconto viene applicato e la vendita prosegue.
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Buono disabilitato* | Il buono è già stato usato: ogni buono si può incassare una volta sola. | Il buono non è più valido: il cliente non ha diritto allo sconto. |
 
 ## Note
 

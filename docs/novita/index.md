@@ -45,9 +45,14 @@ c'è un modello da scaricare.
 - **Buoni sconto**: il buono esce anche quando il totale dello scontrino è
   **uguale** alla spesa della fascia (prima serviva un totale maggiore).
 - **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8
-  con BOM (senza BOM viene letto, ma le lettere accentate escono sbagliate),
-  il motivo è scritto nel file degli errori `sqlerr.txt` della cartella `log`
-  invece di non uscire il buono senza spiegazioni. La vendita non si ferma.
+  con BOM, il buono non esce e il motivo è scritto nel file degli errori
+  `sqlerr.txt` della cartella `log`, invece di non uscire senza spiegazioni. La
+  vendita non si ferma. Un file in UTF-8 senza BOM, invece, viene letto, ma le
+  lettere accentate escono sbagliate: va salvato in ANSI.
+- **Buoni sconto**: nelle righe di testa e di coda `{DAL}` e `{AL}` stampano
+  la data con il trattino (`09-12-2026`) e `{VALORE}` l'importo con il punto
+  (`5.73 EURO`). Sulle casse diverse da Epson la barra `/` e la virgola `,`
+  scritte nelle righe del file escono come spazi: nel tuo testo usa `-` e `.`.
 
 ### Voci tolte
 

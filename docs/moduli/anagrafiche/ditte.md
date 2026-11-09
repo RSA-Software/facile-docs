@@ -286,6 +286,8 @@ Una griglia con le destinazioni merce dell'azienda — colonne **Codice**,
 
 ### Scheda Fidelity - Buoni Sconto
 
+![La scheda Fidelity - Buoni Sconto della maschera Modifica Ditte](../../assets/img/anagrafiche/ditte-fidelity.png)
+
 Due riquadri. **FIDELITY**:
 
 | Campo | Descrizione |
