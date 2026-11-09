@@ -76,9 +76,11 @@ commentate una per una, con l'esempio della promozione al 10% da 50 euro.
 !!! warning "Salva il file in ANSI"
 
     Il file va salvato in **ANSI** (Windows-1252). In Blocco note si sceglie
-    **ANSI** nel campo **Codifica** di **Salva con nome**. Un file salvato in
-    UTF-8 non viene letto: il buono non esce e il programma lo scrive nel file
-    degli errori.
+    **ANSI** nel campo **Codifica** di **Salva con nome**. Un file salvato
+    in UTF-8 **con BOM** non viene letto: il buono non esce e il programma lo
+    scrive nel file degli errori. Un file salvato in UTF-8 **senza BOM** viene
+    letto, ma le lettere accentate escono sbagliate sul buono. In tutti e due i
+    casi va salvato di nuovo in ANSI.
 
 ## Campi
 
@@ -215,24 +217,33 @@ spiegati nella [scheda della ditta](../anagrafiche/ditte.md#scheda-fidelity-buon
 Con il **formato 3 - Personalizzato da file** il buono contiene solo quello che
 hai scritto nel file, in questo ordine:
 
-1. le righe `header_1` … `header_5` che hai compilato;
+1. le righe `header_1` … `header_5`, fino all'ultima compilata: una riga vuota
+   in mezzo esce come riga bianca;
 2. il codice a barre, con il numero del buono sotto (dove la cassa non lo
    stampa da sé);
-3. le righe in coda della fascia scelta.
+3. le righe in coda della fascia scelta, con la stessa regola: fino
+   all'ultima compilata, le vuote in mezzo escono come righe bianche.
 
 Le righe sono centrate nella larghezza stabilita da `colonne`. Gli altri
-formati (0, 1 e 2) non sono cambiati: hanno la loro cornice «MESSAGGIO
-PROMOZIONALE», l'importo e le date di validità. Solo con il formato 0 le righe
-di testa e di coda del file, se compilate, compaiono comunque nel buono.
+formati (0, 1 e 2) non sono cambiati:
+
+- **formato 1 e 2:** stampano sempre la cornice «MESSAGGIO PROMOZIONALE»,
+  l'importo e le date di validità; le righe di testa e di coda del file non
+  vengono usate;
+- **formato 0:** se nel file c'è almeno una riga di testa, le righe di testa
+  **sostituiscono** la cornice «MESSAGGIO PROMOZIONALE»; senza righe di testa
+  esce la cornice. Seguono l'importo, le date di validità e il codice a barre;
+  le righe di coda escono solo se ce n'è almeno una nel file.
 
 ## Controlli e messaggi
 
 Quando il file non si può usare, **la vendita non si ferma**: lo scontrino esce
 regolarmente, ma senza buono. Il motivo si legge nel file degli errori,
-`sqlerr.txt` nella cartella **log** del programma, in una riga che comincia con
-*Buoni sconto:* e con la data e l'ora. Se la stessa cosa si ripete a ogni
-scontrino, la riga viene scritta **una volta sola per sessione di lavoro**, non
-a ogni vendita.
+`sqlerr.txt`, nella cartella `log` della cartella di lavoro dell'utente se ne
+è impostata una, altrimenti della cartella del programma. Ogni riga comincia
+con la data e l'ora, per esempio `09/11/2026 10:15:00 - Buoni sconto: …`. Se la
+stessa cosa si ripete a ogni scontrino, la riga **non viene ripetuta di
+seguito**: ne compare una sola, non una per ogni vendita.
 
 Nella tabella le parti che cambiano da un caso all'altro (percorsi, nomi,
 valori) sono indicate con i puntini.
@@ -241,7 +252,7 @@ valori) sono indicate con i puntini.
 |---|---|---|
 | *Buoni sconto: file di configurazione non trovato: …\cfg\buoni_sconto_00001.ini o …\cfg\buoni_sconto.ini* | La ditta ha l'emissione attiva ma nella cartella **cfg** non c'è né il file della ditta né quello generico. | Crea uno dei due file. Il codice della ditta nel nome è a cinque cifre. |
 | *Buoni sconto: file di configurazione non trovato o non leggibile: …* | Il file c'è ma il programma non riesce ad aprirlo. | Controlla che non sia aperto in esclusiva da un altro programma e che l'utente di Windows possa leggerlo. |
-| *Buoni sconto: il file … e' salvato in UTF-8 con BOM: salvarlo di nuovo in ANSI (Windows-1252)* | Il file è stato salvato in UTF-8. | Aprilo nel Blocco note e salvalo con **Codifica** **ANSI**. |
+| *Buoni sconto: il file … e' salvato in UTF-8 con BOM: salvarlo di nuovo in ANSI (Windows-1252)* | Il file è stato salvato in UTF-8 con BOM, e così non si legge. Senza BOM si leggerebbe, ma le lettere accentate uscirebbero sbagliate. | Aprilo nel Blocco note e salvalo con **Codifica** **ANSI**. |
 | *Buoni sconto: tipo sconosciuto: "…" (valori ammessi: valore, percentuale)* | In `tipo` c'è una parola diversa da `valore` e `percentuale`. | Correggi la parola, oppure togli la riga: vale `valore`. |
 | *Buoni sconto: data non valida in …: "…" (formato gg/mm/aaaa)* | Una data non è nel formato `gg/mm/aaaa` o non esiste nel calendario (per esempio 31/04/2026). Il messaggio dice in quale chiave. | Correggi la data, oppure lasciala vuota se non serve. |
 | *Buoni sconto: data non valida in start_year/start_month/start_day* (o *stop_year/stop_month/stop_day*) | Le date nel vecchio formato a tre chiavi non formano una data vera. | Correggile, oppure scrivi `validita_dal` e `validita_al`. |

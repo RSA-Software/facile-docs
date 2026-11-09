@@ -44,7 +44,8 @@ c'è un modello da scaricare.
 
 - **Buoni sconto**: il buono esce anche quando il totale dello scontrino è
   **uguale** alla spesa della fascia (prima serviva un totale maggiore).
-- **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8,
+- **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8
+  con BOM (senza BOM viene letto, ma le lettere accentate escono sbagliate),
   il motivo è scritto nel file degli errori `sqlerr.txt` della cartella `log`
   invece di non uscire il buono senza spiegazioni. La vendita non si ferma.
 
