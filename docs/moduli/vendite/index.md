@@ -14,6 +14,7 @@ sotto [Archivi ▸ Listini Vendita](../listini-vendita/index.md).
 
 - [Vendita al banco e POS](vendita-al-banco.md) — le due schermate di cassa.
 - [Scontrini](scontrini.md) — il riepilogo di quello che è stato battuto.
+- [Buoni sconto](buoni-sconto.md) — il buono che esce in cassa a fine scontrino e il file che lo configura.
 - [Promozioni](promozioni.md) — i prezzi promozionali e il loro periodo.
 
 ## I documenti

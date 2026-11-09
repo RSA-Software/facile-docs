@@ -189,7 +189,7 @@ alla cassa.
 | **Codice Fidelity** | La tessera fedeltà. È proposta quella del cliente indicato sul banco. |
 | **Bollini Erogati** | A sinistra i punti che lo scontrino fa maturare, a destra quelli già sulla tessera. Il giorno del compleanno del cliente i punti si moltiplicano o si sommano come stabilito nella ditta con **Bollini Giorno Compleanno**. |
 | **Bollini Premio C/P** | I punti da scalare dalla tessera per un premio: il primo riquadro li toglie dai punti della campagna attuale, il secondo da quelli della campagna precedente. |
-| **Totale Scontrino** | Il totale del banco. |
+| **Totale Scontrino** | Il totale del banco. Se la ditta ha attiva l'emissione dei [buoni sconto](buoni-sconto.md) e il totale raggiunge la spesa stabilita nel file, alla chiusura esce anche il buono. |
 | **Abbuono** | Uno sconto sul totale, in euro. |
 | **Abbuono Fidelity** | Lo sconto che vale il premio: i punti di **Bollini Premio C/P** per il **Valore Bollino** della ditta. Lo calcola il programma. |
 | **Totale Reso** | L'importo di un reso appena fatto, se si decide di usarlo per pagare. |
@@ -803,5 +803,6 @@ limite — li scrive il FacileWebApiService e compaiono così come li riceve.
 ## Vedi anche
 
 - [Scontrini](scontrini.md)
+- [Buoni sconto](buoni-sconto.md)
 - [Promozioni](promozioni.md)
 - [Anagrafica articoli](../anagrafiche/anagrafica-articoli.md)

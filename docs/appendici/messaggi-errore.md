@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-30 — **1130 messaggi**.
+Aggiornato al 2026-11-09 — **1141 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -96,6 +96,17 @@ Aggiornato al 2026-10-30 — **1130 messaggi**.
 | *…<br><br>L'erogazione potrebbe essere avvenuta in parte: verificare la cassa automatica.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Un reso o un prelievo non è stato erogato tutto. | Controlla quanto è uscito dalla macchina e dai il resto a mano. |
 | *…<br><br>Non e' stato erogato l'importo di Euro …* | [Cassa automatica Cashlogy](../moduli/casse-bilance/casse-automatiche/cashlogy.md) | Un **Prelievo** non è riuscito. | Controlla la macchina. |
 | *…<br><br>Se la cassa automatica ha erogato denaro, verificarlo prima di ripetere l'operazione.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Il servizio non ha risposto durante un'erogazione. | Controlla la macchina prima di riprovare. |
+| *Buoni sconto: data non valida in …: "…" (formato gg/mm/aaaa)* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Una data non è nel formato `gg/mm/aaaa` o non esiste nel calendario (per esempio 31/04/2026). Il messaggio dice in quale chiave. | Correggi la data, oppure lasciala vuota se non serve. |
+| *Buoni sconto: data non valida in start_year/start_month/start_day* (o *stop_year/stop_month/stop_day*) | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Le date nel vecchio formato a tre chiavi non formano una data vera. | Correggile, oppure scrivi `validita_dal` e `validita_al`. |
+| *Buoni sconto: fascia …: la percentuale … supera 100* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Con `tipo = percentuale` un `buono_n` è maggiore di 100. | Metti una percentuale da 1 a 100. |
+| *Buoni sconto: file di configurazione non trovato: …\cfg\buoni_sconto_00001.ini o …\cfg\buoni_sconto.ini* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | La ditta ha l'emissione attiva ma nella cartella **cfg** non c'è né il file della ditta né quello generico. | Crea uno dei due file. Il codice della ditta nel nome è a cinque cifre. |
+| *Buoni sconto: file di configurazione non trovato o non leggibile: …* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Il file c'è ma il programma non riesce ad aprirlo. | Controlla che non sia aperto in esclusiva da un altro programma e che l'utente di Windows possa leggerlo. |
+| *Buoni sconto: il file … e' salvato in UTF-8 con BOM: salvarlo di nuovo in ANSI (Windows-1252)* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Il file è stato salvato in UTF-8. | Aprilo nel Blocco note e salvalo con **Codifica** **ANSI**. |
+| *Buoni sconto: nessuna fascia valida (servono spesa_n e buono_n maggiori di zero)* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Nessuna delle cinque fasce ha insieme spesa e buono maggiori di zero. | Compila almeno una coppia `spesa_1` e `buono_1`. |
+| *Buoni sconto: percorso troppo lungo: …* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Il percorso del file supera i limiti di Windows. | Accorcia il percorso della cartella del programma. |
+| *Buoni sconto: tipo sconosciuto: "…" (valori ammessi: valore, percentuale)* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | In `tipo` c'è una parola diversa da `valore` e `percentuale`. | Correggi la parola, oppure togli la riga: vale `valore`. |
+| *Buoni sconto: validità non determinabile: servono validita_dal/validita_al oppure validita_durata_giorni* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | Mancano sia la validità fissa sia la durata. | Scrivi `validita_dal` e `validita_al`, oppure `validita_durata_giorni` (ed eventualmente `validita_dopo_giorni`). |
+| *Buoni sconto: validità non determinabile: validita_dal e validita_al vanno impostate entrambe, con validita_al non prima di validita_dal, oppure serve validita_durata_giorni* | [Buoni sconto](../moduli/vendite/buoni-sconto.md) | La validità fissa è incompleta (una sola data) o la data finale viene prima di quella iniziale, e non c'è la durata. | Scrivi tutte e due le date nell'ordine giusto, oppure `validita_durata_giorni`. |
 | *Calcolare i totali per stabilire il numero di etichette !* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Si è premuto **Etichette** su un documento non ancora stampato, con i **Colli** a zero. | Apri i **Totali**, che contano i colli, e ripeti. |
 | *Cambio ditta non permesso!* | [Ditte](../moduli/anagrafiche/ditte.md) | Il cambio ditta è stato bloccato per questa installazione. | Se serve, chiedi all'assistenza di abilitarlo. |
 | *Cancellati … documenti.* | [Ordini clienti](../moduli/vendite/ordini-clienti.md), [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | La cancellazione è finita. | Nulla: è il resoconto. |

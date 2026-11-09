@@ -16,6 +16,53 @@ una versione specifica del programma lo dicono in apertura, per esempio
 Non sono elencate le modifiche interne, che non cambiano nulla a video, e
 quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
+## Versione 2026 B10.00
+
+In preparazione.
+
+### Nuove funzioni
+
+**[Buoni sconto](../moduli/vendite/buoni-sconto.md).** Le regole del buono che
+esce in cassa a fine scontrino ora stanno in un file di testo per ditta,
+`buoni_sconto_<codice ditta a 5 cifre>.ini` nella cartella **cfg** (oppure
+`buoni_sconto.ini` per tutte le ditte). Si possono stabilire fino a cinque
+fasce di spesa, un periodo di emissione, la validità del buono, fissa o
+relativa, e le righe in testa e in coda. Nel [manuale](../moduli/vendite/buoni-sconto.md)
+c'è un modello da scaricare.
+
+- **Buono in percentuale.** Il buono può valere una percentuale del totale dello
+  scontrino, per esempio il 10% per chi spende almeno 50 euro. La percentuale
+  serve solo a calcolare il buono al momento dell'emissione, arrotondato al
+  centesimo: esce sempre un buono solo, a valore, e si usa al banco come gli
+  altri.
+- **Formato di stampa 3, personalizzato da file.** Il **Formato Stampa** della
+  [ditta](../moduli/anagrafiche/ditte.md#scheda-fidelity-buoni-sconto) accetta
+  anche il numero 3: il buono contiene solo le righe di testa, il codice a
+  barre e le righe in coda scritte nel file. I formati 0, 1 e 2 sono come prima.
+
+### Miglioramenti
+
+- **Buoni sconto**: il buono esce anche quando il totale dello scontrino è
+  **uguale** alla spesa della fascia (prima serviva un totale maggiore).
+- **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8,
+  il motivo è scritto nel file degli errori `sqlerr.txt` della cartella `log`
+  invece di non uscire il buono senza spiegazioni. La vendita non si ferma.
+
+### Voci tolte
+
+Dalla scheda **Fidelity - Buoni Sconto** della ditta sono spariti i campi
+**Soglia Erogazione Buono**, **Inizio Validità (Giorni)**, **Durata (Giorni)**,
+i quattro **Valore** per listino e i sette moltiplicatori del valore, uno per
+giorno della settimana.
+
+!!! warning "Chi usava quei campi deve scrivere il file"
+
+    I valori che erano nella ditta **non sono stati travasati** nel file. Chi
+    emetteva buoni sconto deve scrivere il file di configurazione, partendo dal
+    [modello](../moduli/vendite/buoni-sconto.md): finché il file non c'è, con
+    l'emissione attiva **non esce nessun buono** e il motivo è annotato nel
+    file degli errori.
+
 ## Versione 2026 B09.00
 
 In preparazione.

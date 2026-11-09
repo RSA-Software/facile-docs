@@ -300,14 +300,18 @@ Due riquadri. **FIDELITY**:
 
 | Campo | Descrizione |
 |---|---|
-| **Soglia Erogazione Buono** | Ogni quanto si eroga un buono. |
-| **Inizio Validità (Giorni)**, **Durata (Giorni)** | Da quando vale e per quanto. |
-| **Valore - 1° Listino**, **2° Listino**, **3° Listino**, **Altri Listini** | Il valore del buono per fascia di listino. |
-| **Moltiplicatore Valore Buoni Sconto** — un valore per giorno | Come sopra, sul valore. |
-| **Formato Stampa** | Il modulo del buono. |
+| **Abilita Emissione Buoni Sconto** | Fa uscire il buono in cassa a fine scontrino. Con la casella spenta non esce nessun buono. Quanto vale, da quale spesa, per quanto tempo e con quali scritte non si imposta qui: sta in un [file di configurazione](../vendite/buoni-sconto.md) per ogni ditta. Con la casella attiva e senza il file, il buono non esce. |
+| **Formato Stampa** | Il modulo del buono, un numero da 0 a 3: **0** buono largo 45 colonne, **1** largo 32 colonne, **2** largo 35 colonne, ottimizzato per le stampanti 3I, **3** personalizzato da file (solo le righe scritte nel file, il codice a barre e le righe in coda). |
 | **Codice Organizzazione**, **Codice Punto Vendita** | I codici del circuito. |
 | **Num Buoni Emessi** | Il contatore dei buoni. |
 | **Abilita Circolarità** | Rende i buoni spendibili in tutti i punti vendita del circuito. |
+
+!!! warning "Campi tolti nella versione 2026 B10"
+
+    Non ci sono più **Soglia Erogazione Buono**, **Inizio Validità (Giorni)**,
+    **Durata (Giorni)**, i valori per listino e i moltiplicatori per giorno:
+    ora si scrivono nel [file dei buoni sconto](../vendite/buoni-sconto.md). I
+    valori già presenti non sono stati travasati nel file.
 
 ### Scheda Fatture Elettroniche
 
