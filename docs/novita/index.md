@@ -53,6 +53,43 @@ c'è un modello da scaricare.
   la data con il trattino (`09-12-2026`) e `{VALORE}` l'importo con il punto
   (`5.73 EURO`). Sulle casse diverse da Epson la barra `/` e la virgola `,`
   scritte nelle righe del file escono come spazi: nel tuo testo usa `-` e `.`.
+- **Buoni sconto** con le stampanti Epson e i registratori `MICRELEC G100`: se
+  la cassa rifiuta un comando mentre stampa il buono, la stampa si ferma al
+  primo errore invece di continuare riga per riga, che sull'Epson voleva dire
+  una finestra per ogni riga. Il buono resta registrato, gli altri buoni dello
+  stesso scontrino non si emettono e il motivo va nel file degli errori. Vedi
+  [Quando la cassa non stampa il buono](../moduli/vendite/buoni-sconto.md#quando-la-cassa-non-stampa-il-buono).
+- [Micrelec G100](../moduli/casse-bilance/registratori/micrelec.md#lo-scontrino):
+  se i pagamenti non coprono il totale del registratore, per esempio per un
+  centesimo di arrotondamento, Facile chiude lo scontrino saldando il residuo
+  in contanti. Se la cassa non lo chiude, compare un avviso con **Riprova** e
+  **Annulla**, e con **Annulla** la vendita non viene registrata.
+- [Micrelec](../moduli/casse-bilance/registratori/micrelec.md), con
+  `MICRELEC` e `MICRELEC G100`: la maggiorazione a valore sulla riga esce
+  sullo scontrino come `MAGGIORAZIO` invece che come `SCONTO`, e le lettere
+  accentate delle righe del buono sconto escono senza accento invece che come
+  spazi.
+
+### Correzioni
+
+**Casse e Bilance**
+
+- Stampanti fiscali Epson programmate perché il pagamento non chiuda lo
+  scontrino: lo scontrino restava aperto, la vendita successiva lo annullava
+  sulla stampante, e intanto Facile lo registrava come incassato; anche il
+  buono sconto, rifiutato dalla stampante, non usciva. Ora Facile chiude lo
+  scontrino dopo il pagamento. Se non ci riesce lo dice e, se interrompi, la
+  vendita non viene registrata: vedi i
+  [messaggi della chiusura dello scontrino](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino).
+  Con la programmazione usuale, in cui il pagamento chiude lo scontrino, non
+  cambia nulla.
+- [Micrelec](../moduli/casse-bilance/registratori/micrelec.md#collegamento-con-il-programma-di-micrelec-micrelec),
+  voce `MICRELEC`: il codice a barre del buono sconto esce in formato EAN-13,
+  come con `MICRELEC G100`, mentre prima poteva non uscire; il codice fiscale o
+  la partita IVA del cliente arrivano al registratore come dato del documento
+  invece che come riga di commento; nelle descrizioni la parola TOTALE, che il
+  registratore rifiuta, diventa `TOT.`, la barra `/` diventa uno spazio e le
+  lettere accentate escono senza accento.
 
 ### Voci tolte
 

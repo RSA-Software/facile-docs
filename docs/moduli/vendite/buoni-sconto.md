@@ -132,6 +132,11 @@ Per esempio la riga `Valido dal {DAL} al {AL}` diventa `Valido dal 01-12-2026 al
     scrivi `-` al posto di `/` e `.` al posto di `,`. Solo nelle date delle
     chiavi del file (`emissione_dal`, `validita_al`…) si scrive ancora la barra.
 
+    Con le casse Micrelec (`MICRELEC` e `MICRELEC G100`) le lettere accentate
+    delle tue righe escono senza accento: `CAFFÈ` diventa `CAFFE`.
+
+<!-- DA VERIFICARE: con le casse diverse dalle Micrelec, Epson comprese, il codice sembra trasformare in spazi le lettere accentate delle righe del buono (CAFFÈ esce CAFF): è così sulla carta? Se sì, l'avviso su ANSI e UTF-8 qui sopra va rivisto. -->
+
 ## Pulsanti e comandi
 
 Non applicabile.
@@ -278,6 +283,34 @@ valori) sono indicate con i puntini.
 | *Buoni sconto: validita' gia' scaduta il …* | La validità fissa del file (`validita_al`) è già passata, ma il periodo di emissione è ancora aperto: il buono nascerebbe scaduto, quindi non esce. La data è quella di `validita_al`, scritta `gg-mm-aaaa`. | Sposta in avanti `validita_dal` e `validita_al`, oppure chiudi l'emissione con `emissione_al`. |
 | *Buoni sconto: Formato Stampa … della ditta non previsto: valori ammessi da 0 a 3* | Nella scheda **Fidelity - Buoni Sconto** della ditta il **Formato Stampa** è un numero diverso da 0, 1, 2 e 3. Il buono non saprebbe come stamparsi, quindi non viene né stampato né registrato. | Nella [ditta](../anagrafiche/ditte.md#scheda-fidelity-buoni-sconto) imposta il **Formato Stampa** a un numero da 0 a 3. |
 | *Buoni sconto: percorso troppo lungo: …* | Il percorso del file supera i limiti di Windows. | Accorcia il percorso della cartella del programma. |
+
+### Quando la cassa non stampa il buono
+
+Con le stampanti fiscali **Epson** e con i registratori **`MICRELEC G100`**, se
+la cassa rifiuta un comando mentre stampa il buono — carta finita, coperchio
+aperto, un'operazione che in quel momento non accetta — la stampa del buono
+**si ferma al primo errore**: il resto del buono non viene mandato e il buono
+esce incompleto, o non esce.
+
+- Lo scontrino è già chiuso: la vendita è registrata e non cambia.
+- Il buono **resta registrato** in archivio con il suo codice e vale come gli
+  altri.
+- Se dallo stesso scontrino dovevano uscire più buoni (`multipli = 1`), i
+  successivi non vengono né stampati né registrati.
+- Sull'Epson compare al massimo una finestra, quella della stampante sul
+  comando rifiutato; con `MICRELEC G100` nessuna.
+- Nel file degli errori, lo stesso descritto sopra, si legge una riga con il
+  codice del buono e il motivo.
+
+Con le altre casse non cambia nulla: la stampa del buono prosegue come prima.
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …, Err. …)* | Stampante Epson: la stampante ha rifiutato un comando del buono. Dopo *errore della cassa* c'è il punto in cui si è fermata — *all'apertura del non fiscale*, *sulla riga*, *sul barcode* o *alla chiusura del non fiscale* — e fra parentesi il codice di Facile e l'errore della stampante; a volte segue, dopo i due punti, il testo dell'errore. | Risolvi il problema della stampante. Il buono con quel codice è in archivio, ma il cliente non ha il tagliando completo. |
+| *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): …* | Registratore `MICRELEC G100`: la cassa ha rifiutato un comando del buono. Dopo i due punti c'è l'errore della cassa, per esempio *Errore 0x4C (76) della cassa: errore nei dati del codice a barre*. | Come sopra. |
+| *Buoni sconto: altri … buoni da … euro non emessi per l'errore della cassa* | Dallo stesso scontrino dovevano uscire più buoni, e la stampa di uno si è fermata per un errore della cassa: i buoni che seguivano non sono stati emessi. Compare dopo la riga precedente. | Il cliente non ha ricevuto quei buoni. |
+
+<!-- DA VERIFICARE: che cosa deve fare la cassiera con un buono registrato ma non stampato (ristamparlo, consegnare il codice, disattivarlo) e con i buoni non emessi? La decisione è ancora aperta. -->
 
 ### Il buono alla cassa
 
