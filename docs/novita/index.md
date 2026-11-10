@@ -57,8 +57,12 @@ c'è un modello da scaricare.
   la cassa rifiuta un comando mentre stampa il buono, la stampa si ferma al
   primo errore invece di continuare riga per riga, che sull'Epson voleva dire
   una finestra per ogni riga. Il buono resta registrato, gli altri buoni dello
-  stesso scontrino non si emettono e il motivo va nel file degli errori. Vedi
+  stesso scontrino non si emettono e il motivo va nel file degli errori. Il
+  buono registrato ma non stampato non si può ristampare. Vedi
   [Quando la cassa non stampa il buono](../moduli/vendite/buoni-sconto.md#quando-la-cassa-non-stampa-il-buono).
+- **Buoni sconto**: su tutte le casse le lettere accentate delle righe del
+  buono, e delle altre righe stampate fuori dallo scontrino fiscale, escono
+  senza accento (`CAFFÈ` diventa `CAFFE`) invece che come spazi.
 - [Micrelec G100](../moduli/casse-bilance/registratori/micrelec.md#lo-scontrino):
   se i pagamenti non coprono il totale del registratore, per esempio per un
   centesimo di arrotondamento, Facile chiude lo scontrino saldando il residuo
@@ -66,9 +70,7 @@ c'è un modello da scaricare.
   **Annulla**, e con **Annulla** la vendita non viene registrata.
 - [Micrelec](../moduli/casse-bilance/registratori/micrelec.md), con
   `MICRELEC` e `MICRELEC G100`: la maggiorazione a valore sulla riga esce
-  sullo scontrino come `MAGGIORAZIO` invece che come `SCONTO`, e le lettere
-  accentate delle righe del buono sconto escono senza accento invece che come
-  spazi.
+  sullo scontrino come `MAGGIORAZIO` invece che come `SCONTO`.
 
 ### Correzioni
 
@@ -78,8 +80,8 @@ c'è un modello da scaricare.
   scontrino: lo scontrino restava aperto, la vendita successiva lo annullava
   sulla stampante, e intanto Facile lo registrava come incassato; anche il
   buono sconto, rifiutato dalla stampante, non usciva. Ora Facile chiude lo
-  scontrino dopo il pagamento. Se non ci riesce lo dice e, se interrompi, la
-  vendita non viene registrata: vedi i
+  scontrino dopo il pagamento. Se non ci riesce lo dice, con **Riprova** e
+  **Annulla**, e con **Annulla** la vendita non viene registrata: vedi i
   [messaggi della chiusura dello scontrino](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino).
   Con la programmazione usuale, in cui il pagamento chiude lo scontrino, non
   cambia nulla.
