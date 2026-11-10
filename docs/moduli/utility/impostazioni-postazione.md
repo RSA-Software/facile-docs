@@ -84,7 +84,7 @@ Sono caselle da attivare o disattivare. Le principali:
 | Casella | Cosa fa quando è attiva |
 |---|---|
 | **Descrizione completa** | Mostra la descrizione estesa dell'articolo. |
-| **Disabilita Numerazione Scontrini** | Toglie la numerazione automatica degli [scontrini](../vendite/scontrini.md). |
+| **Disabilita Numerazione Scontrini** | Facile non chiede al registratore il numero dello scontrino, e gli [scontrini](../vendite/scontrini.md) si registrano senza numero fiscale: per un reso o un annullo il numero va cercato sulla carta e indicato a mano. Con i registratori 3i nessuna richiesta del numero, né nel **Pos Touchscreen** né in **Vendita**; con le altre casse vale come prima. È un rimedio d'emergenza per una cassa che non risponde a quella richiesta: vedi [Le casse 3i](../casse-bilance/registratori/index.md#le-casse-3i). |
 | **Calcolo Predefinito per Scontrini** | Applica il calcolo predefinito. |
 | **Arrotonda ai 5 Centesimi Superiori** | Arrotonda i totali per eccesso ai cinque centesimi. Cambiando la **Cassa Automatica**, la casella resta a video solo con `VIRTUO VNE` e `PAGAMICO`. |
 | **Abilita Ricerca Articolo su Vendita con Spazio** | La barra spaziatrice apre la ricerca articolo. |

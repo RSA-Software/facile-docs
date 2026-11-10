@@ -97,7 +97,7 @@ errore e il buono non esce.
 | `validita_dal`, `validita_al` | data | La validità fissa del buono: vale dal primo al secondo giorno. Vanno scritte **tutte e due**, con `validita_al` non prima di `validita_dal`. |
 | `validita_dopo_giorni`, `validita_durata_giorni` | numero di giorni | La validità relativa alla data di emissione: il buono inizia a valere dopo `validita_dopo_giorni` giorni da oggi (0 = oggi) e vale fino al giorno di inizio più `validita_durata_giorni`, compreso. Con 0 e 30, un buono emesso il 09/11 vale dal 09/11 al 09/12. Si usa solo se la validità fissa manca. |
 | `multipli` | `0` oppure `1` | Con `tipo = valore`, quando la spesa è un multiplo della soglia. Con `1` escono tanti buoni quante volte la soglia sta nel totale, ciascuno del valore della fascia. Con `0` esce un solo buono, che vale quel valore moltiplicato per lo stesso numero. Con `tipo = percentuale` la chiave non conta: esce sempre un buono solo. |
-| `colonne` | da 1 a 45 | La larghezza in caratteri del buono stampato con il formato 3. Se manca vale 45. |
+| `colonne` | da 1 a 45 | La larghezza in caratteri del buono stampato con il formato 3. Se manca vale 45. Sui registratori 3i il buono non va oltre 38 caratteri anche con un numero più alto. |
 | `header_1` … `header_5` | testo, al massimo 45 caratteri | Le righe in testa al buono. |
 | `spesa_1` … `spesa_5` | importo | La spesa minima della fascia. |
 | `buono_1` … `buono_5` | importo | Quello che si ottiene con la fascia: euro, o percentuale se `tipo = percentuale`. Un importo in euro si arrotonda al centesimo: `12,345` vale 12,35. |
@@ -127,9 +127,9 @@ Per esempio la riga `Valido dal {DAL} al {AL}` diventa `Valido dal 01-12-2026 al
 
 !!! warning "Nelle tue righe usa il trattino e il punto"
 
-    Su tutte le casse tranne le Epson, la barra `/` e la virgola `,` scritte
-    nelle righe di testa e di coda escono sul buono come **spazi**: `Tel. 091/123`
-    diventa `Tel. 091 123`. Per questo i segnaposti stampano le date con il
+    Su tutte le casse tranne le Epson e i registratori 3i, la barra `/` e la
+    virgola `,` scritte nelle righe di testa e di coda escono sul buono come
+    **spazi**: `Tel. 091/123` diventa `Tel. 091 123`. Per questo i segnaposti stampano le date con il
     trattino e l'importo con il punto, e nel tuo testo conviene fare lo stesso:
     scrivi `-` al posto di `/` e `.` al posto di `,`. Solo nelle date delle
     chiavi del file (`emissione_dal`, `validita_al`…) si scrive ancora la barra.
@@ -255,6 +255,10 @@ formati (0, 1 e 2) non sono cambiati:
   esce la cornice. Seguono l'importo, le date di validità e il codice a barre;
   le righe di coda escono solo se ce n'è almeno una nel file.
 
+Sui registratori 3i una riga non va oltre 38 caratteri, il massimo che la cassa
+stampa: il formato 0 esce largo 38, con la cornice ristretta, e così il formato
+3 con `colonne` più alto di 38. I formati 1 e 2 ci stanno già.
+
 ## Controlli e messaggi
 
 Quando il file non si può usare, **la vendita non si ferma**: lo scontrino esce
@@ -305,12 +309,19 @@ esce incompleto, o non esce.
 - Nel file degli errori, lo stesso descritto sopra, si legge una riga con il
   codice del buono e il motivo.
 
+Con i registratori **3i** la stampa del buono si ferma allo stesso modo quando
+la cassa non si raggiunge o un comando non parte: senza questa regola, con la
+cassa spenta o scollegata, ogni riga del buono farebbe aspettare qualche
+secondo. Un comando che la 3i rifiuta, invece, si vede solo sul display e sulla
+carta, perché la cassa non dice a Facile come è andato: lì la stampa prosegue.
+
 Con le altre casse non cambia nulla: la stampa del buono prosegue come prima.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …, Err. …)* | Stampante Epson: la stampante ha rifiutato un comando del buono. Dopo *errore della cassa* c'è il punto in cui si è fermata — *all'apertura del non fiscale*, *sulla riga*, *sul barcode* o *alla chiusura del non fiscale* — e fra parentesi il codice di Facile e l'errore della stampante; a volte segue, dopo i due punti, il testo dell'errore. | Risolvi il problema della stampante. Il buono con quel codice è in archivio ma non si può ristampare: il cliente non ha il tagliando completo. |
 | *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): …* | Registratore `MICRELEC G100`: la cassa ha rifiutato un comando del buono. Dopo i due punti c'è l'errore della cassa, per esempio *Errore 0x4C (76) della cassa: errore nei dati del codice a barre*. | Come sopra. |
+| *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): collegamento con la cassa non riuscito* / *…: invio del comando alla cassa non riuscito* | Registratore 3i: la cassa non si è raggiunta, o il comando del buono non è partito. Dopo *errore della cassa* c'è il punto in cui la stampa si è fermata. | Controlla che la cassa sia accesa e collegata. Il buono è in archivio ma non si può ristampare. |
 | *Buoni sconto: altri … buoni da … euro non emessi per l'errore della cassa* | Dallo stesso scontrino dovevano uscire più buoni, e la stampa di uno si è fermata per un errore della cassa: i buoni che seguivano non sono stati emessi. Compare dopo la riga precedente. | Il cliente non ha ricevuto quei buoni. |
 
 ### Il buono alla cassa

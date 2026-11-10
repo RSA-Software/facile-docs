@@ -51,8 +51,9 @@ c'è un modello da scaricare.
   lettere accentate escono sbagliate: va salvato in ANSI.
 - **Buoni sconto**: nelle righe di testa e di coda `{DAL}` e `{AL}` stampano
   la data con il trattino (`09-12-2026`) e `{VALORE}` l'importo con il punto
-  (`5.73 EURO`). Sulle casse diverse da Epson la barra `/` e la virgola `,`
-  scritte nelle righe del file escono come spazi: nel tuo testo usa `-` e `.`.
+  (`5.73 EURO`). Sulle casse diverse da Epson e dai registratori 3i la barra
+  `/` e la virgola `,` scritte nelle righe del file escono come spazi: nel tuo
+  testo usa `-` e `.`.
 - **Buoni sconto** con le stampanti Epson e i registratori `MICRELEC G100`: se
   la cassa rifiuta un comando mentre stampa il buono, la stampa si ferma al
   primo errore invece di continuare riga per riga, che sull'Epson voleva dire
@@ -68,6 +69,21 @@ c'è un modello da scaricare.
   centesimo di arrotondamento, Facile chiude lo scontrino saldando il residuo
   in contanti. Se la cassa non lo chiude, compare un avviso con **Riprova** e
   **Annulla**, e con **Annulla** la vendita non viene registrata.
+- **Buoni sconto** con i [registratori 3i](../moduli/casse-bilance/registratori/index.md#buoni-sconto-e-codice-a-barre-dei-resi):
+  le righe del buono non superano i 38 caratteri che la cassa stampa (il
+  formato 0 si stringe, con la sua cornice), la virgola e la barra restano, e
+  con la cassa irraggiungibile la stampa del buono si ferma al primo comando
+  non partito invece di aspettare riga per riga; il motivo va nel file degli
+  errori.
+- [Registratori 3i](../moduli/casse-bilance/registratori/index.md#le-casse-3i):
+  il codice a barre dei resi esce con 13 cifre, come vuole il manuale della
+  cassa; gli sconti e le maggiorazioni in percentuale arrivano alla cassa con
+  al massimo due decimali. Il **Pos Touchscreen** si apre anche con una 3i che
+  non risponde alla richiesta di matricola e azzeramento, come le più vecchie:
+  compare un avviso e gli scontrini si registrano senza numero di azzeramento.
+  Con la voce `3I XON / XOFF LAN` e il log della comunicazione attivo, il file
+  `socket_log.txt` riporta anche la risposta della cassa alla richiesta del
+  numero dello scontrino.
 - [Micrelec](../moduli/casse-bilance/registratori/micrelec.md), con
   `MICRELEC` e `MICRELEC G100`: la maggiorazione a valore sulla riga esce
   sullo scontrino come `MAGGIORAZIO` invece che come `SCONTO`.
@@ -92,6 +108,24 @@ c'è un modello da scaricare.
   invece che come riga di commento; nelle descrizioni la parola TOTALE, che il
   registratore rifiuta, diventa `TOT.`, la barra `/` diventa uno spazio e le
   lettere accentate escono senza accento.
+- [Registratori 3i](../moduli/casse-bilance/registratori/index.md#numero-dello-scontrino-e-azzeramento):
+  Facile chiedeva il numero dello scontrino anche dopo la chiusura, mentre la
+  cassa stampava. Se la cassa non rispondeva restava fermo una decina di
+  secondi senza avvisare e registrava lo scontrino **con numero 0**, buttando
+  il numero giusto letto al pagamento. Ora il numero si legge una volta sola,
+  al pagamento; se la cassa non risponde o rifiuta la richiesta il pagamento
+  parte lo stesso, invece di fermarsi, e il motivo va nel file degli errori. In
+  **Vendita** anche il numero di azzeramento si legge prima dello scontrino e
+  non dopo. La casella **Disabilita Numerazione Scontrini** delle
+  [Impostazioni Postazione](../moduli/utility/impostazioni-postazione.md) ora
+  toglie tutte le richieste del numero, anche in **Vendita**.
+- Registratori 3i nel **Pos Touchscreen**: sul pagamento non arrivato alla
+  cassa la finestra d'errore proponeva **Ignora**, che registrava la vendita
+  con lo scontrino ancora aperto sulla cassa. Ora ci sono solo **Riprova** e
+  **Annulla**: vedi [il pagamento non riuscito](../moduli/casse-bilance/registratori/index.md#il-pagamento-non-riuscito).
+- Registratori 3i in **Vendita**, con il codice a barre dei resi: il buono
+  sconto usciva in mezzo all'appendice dello scontrino annunciata alla cassa;
+  ora esce dopo, come nel **Pos Touchscreen**.
 
 ### Voci tolte
 
