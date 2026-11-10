@@ -84,6 +84,22 @@ c'è un modello da scaricare.
   Con la voce `3I XON / XOFF LAN` e il log della comunicazione attivo, il file
   `socket_log.txt` riporta anche la risposta della cassa alla richiesta del
   numero dello scontrino.
+- **Buoni sconto** con le [casse DTR](../moduli/casse-bilance/registratori/index.md#buoni-sconto)
+  in rete: con la cassa irraggiungibile la stampa del buono si ferma al primo
+  comando non partito invece di aspettare riga per riga; il motivo va nel file
+  degli errori. Su tutte e due le voci DTR la parola `TOTALE` delle righe del
+  buono esce come `TOT.`: la DTR, nel documento gestionale, non stampa la riga
+  che la contiene.
+- [Casse DTR](../moduli/casse-bilance/registratori/index.md#le-casse-dtr): la
+  matricola letta dal registratore si registra negli scontrini ed è quella
+  proposta nel documento di reso, al posto di quella delle Impostazioni
+  Postazione. Dopo il pagamento Facile controlla che lo scontrino sia chiuso
+  e, se è rimasto aperto, lo chiude saldando il residuo in contanti; se non ci
+  riesce compare un avviso con **Riprova** e **Annulla**. Nelle descrizioni
+  degli articoli le lettere accentate escono senza accento invece che come
+  spazi, e la parola `TOTALE` diventa `TOT.`. Con la voce `DTR XON / XOFF LAN`
+  e il log della comunicazione attivo, il file `socket_log.txt` riporta la
+  risposta della cassa alla richiesta di stato.
 - [Micrelec](../moduli/casse-bilance/registratori/micrelec.md), con
   `MICRELEC` e `MICRELEC G100`: la maggiorazione a valore sulla riga esce
   sullo scontrino come `MAGGIORAZIO` invece che come `SCONTO`.
@@ -126,6 +142,30 @@ c'è un modello da scaricare.
 - Registratori 3i in **Vendita**, con il codice a barre dei resi: il buono
   sconto usciva in mezzo all'appendice dello scontrino annunciata alla cassa;
   ora esce dopo, come nel **Pos Touchscreen**.
+- [Casse DTR](../moduli/casse-bilance/registratori/index.md#matricola-numero-dello-scontrino-e-azzeramento)
+  in rete: con la funzione ECHO della cassa accesa Facile non riusciva a
+  leggere la risposta alla richiesta di stato, e il **Pos Touchscreen** non si
+  apriva; a scontrino aperto, poi, il numero dello scontrino letto era più
+  basso di due, e la richiesta fatta prima di ogni pagamento, se non riusciva,
+  fermava il pagamento. Ora matricola, numero e azzeramento si leggono con
+  l'ECHO acceso o spento, una volta sola, subito dopo il pagamento, e il
+  pagamento non si ferma più.
+- Casse DTR nel **Pos Touchscreen**: sul pagamento non arrivato alla cassa la
+  finestra d'errore proponeva **Ignora**, che registrava la vendita con lo
+  scontrino ancora aperto. Ora ci sono solo **Riprova** e **Annulla**, come con
+  le 3i.
+- Casse DTR seriali: Facile non leggeva dalla cassa né il numero dello
+  scontrino né l'azzeramento, e registrava numero 0 e azzeramento 1; i
+  **buoni pasto** si pagavano moltiplicati per il loro numero (due ticket da 7
+  euro per 28 euro); il codice fiscale del cliente usciva come riga di testo e
+  non come dato del documento. Ora numero, azzeramento e matricola si leggono,
+  i buoni pasto valgono il loro taglio e il codice fiscale arriva alla cassa
+  come quello del cliente.
+- Casse DTR in rete: la partita IVA del cliente arrivava alla cassa allungata
+  con degli spazi fino a 16 caratteri, e la cassa non la riconosceva come
+  partita IVA. Ora arriva con le sue 11 cifre. Il versamento e il prelievo di
+  cassa restavano aperti sul registratore, in pagamento: ora si chiudono come
+  con la voce seriale.
 
 ### Voci tolte
 

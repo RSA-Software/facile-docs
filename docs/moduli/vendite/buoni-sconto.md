@@ -139,6 +139,10 @@ Per esempio la riga `Valido dal {DAL} al {AL}` diventa `Valido dal 01-12-2026 al
     tranne che con le casse Micrelec (`MICRELEC` e `MICRELEC G100`), dove
     diventa `EUR`: nel tuo testo scrivi `EURO`.
 
+    Sulle casse DTR la parola `TOTALE` esce come `TOT.`, anche dentro una
+    parola: la DTR, nel documento gestionale, non stampa la riga che la
+    contiene.
+
 ## Pulsanti e comandi
 
 Non applicabile.
@@ -314,6 +318,8 @@ la cassa non si raggiunge o un comando non parte: senza questa regola, con la
 cassa spenta o scollegata, ogni riga del buono farebbe aspettare qualche
 secondo. Un comando che la 3i rifiuta, invece, si vede solo sul display e sulla
 carta, perché la cassa non dice a Facile come è andato: lì la stampa prosegue.
+Lo stesso vale per le casse **DTR** in rete (`DTR XON / XOFF LAN`); con la DTR
+seriale la stampa prosegue come prima.
 
 Con le altre casse non cambia nulla: la stampa del buono prosegue come prima.
 
@@ -321,7 +327,7 @@ Con le altre casse non cambia nulla: la stampa del buono prosegue come prima.
 |---|---|---|
 | *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …, Err. …)* | Stampante Epson: la stampante ha rifiutato un comando del buono. Dopo *errore della cassa* c'è il punto in cui si è fermata — *all'apertura del non fiscale*, *sulla riga*, *sul barcode* o *alla chiusura del non fiscale* — e fra parentesi il codice di Facile e l'errore della stampante; a volte segue, dopo i due punti, il testo dell'errore. | Risolvi il problema della stampante. Il buono con quel codice è in archivio ma non si può ristampare: il cliente non ha il tagliando completo. |
 | *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): …* | Registratore `MICRELEC G100`: la cassa ha rifiutato un comando del buono. Dopo i due punti c'è l'errore della cassa, per esempio *Errore 0x4C (76) della cassa: errore nei dati del codice a barre*. | Come sopra. |
-| *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): collegamento con la cassa non riuscito* / *…: invio del comando alla cassa non riuscito* | Registratore 3i: la cassa non si è raggiunta, o il comando del buono non è partito. Dopo *errore della cassa* c'è il punto in cui la stampa si è fermata. | Controlla che la cassa sia accesa e collegata. Il buono è in archivio ma non si può ristampare. |
+| *Buoni sconto: buono … da … euro registrato ma non stampato: errore della cassa … (codice …): collegamento con la cassa non riuscito* / *…: invio del comando alla cassa non riuscito* | Registratore 3i o cassa DTR in rete: la cassa non si è raggiunta, o il comando del buono non è partito. Dopo *errore della cassa* c'è il punto in cui la stampa si è fermata. | Controlla che la cassa sia accesa e collegata. Il buono è in archivio ma non si può ristampare. |
 | *Buoni sconto: altri … buoni da … euro non emessi per l'errore della cassa* | Dallo stesso scontrino dovevano uscire più buoni, e la stampa di uno si è fermata per un errore della cassa: i buoni che seguivano non sono stati emessi. Compare dopo la riga precedente. | Il cliente non ha ricevuto quei buoni. |
 
 ### Il buono alla cassa

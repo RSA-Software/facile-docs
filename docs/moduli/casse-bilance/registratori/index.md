@@ -15,7 +15,7 @@ registratore stampa e trasmette i corrispettivi.
 
     - **Dove si sceglie:** Menu ▸ Utility ▸ [Impostazioni Postazione](../../utility/impostazioni-postazione.md), campo **Stampante Fiscale**
     - **Vale per:** la sola postazione su cui lo imposti
-    - **Pagine dei modelli:** [Micrelec](micrelec.md), [RCH](rch.md); le casse 3i sono [qui sotto](#le-casse-3i)
+    - **Pagine dei modelli:** [Micrelec](micrelec.md), [RCH](rch.md); le casse 3i e le casse DTR sono qui sotto: [3i](#le-casse-3i), [DTR](#le-casse-dtr)
 
 ---
 
@@ -107,8 +107,6 @@ del registratore stanno nel file `3i.ini` della cartella **cfg**.
   chiede mai il numero dello scontrino: è il rimedio per una cassa che non
   risponde a quella richiesta.
 
-<!-- DA VERIFICARE: il manuale della 3i non dice se a scontrino aperto la cassa dia il numero dello scontrino in corso o dell'ultimo chiuso; Facile lo considera quello in corso. Confermare sulla 3i di prova confrontando il numero in Scontrini con la carta, poi togliere questa nota. -->
-
 ### Il pagamento non riuscito
 
 Nel **Pos Touchscreen**, se il pagamento non arriva al registratore — la porta o
@@ -154,6 +152,113 @@ Con il log della comunicazione attivo, per la voce `3I XON / XOFF LAN` il file
 dello scontrino, una riga che comincia con `Risposta 89F:` con i byte arrivati dalla
 cassa e il tempo di attesa in millisecondi, oppure *nessun byte* se la cassa
 non ha risposto.
+
+## Le casse DTR
+
+Vale per le due voci `DTR XON / XOFF (19200,N,8,1,ECHO ON)` e `DTR XON / XOFF
+LAN`. Per la voce in rete l'indirizzo e la porta del registratore stanno nel
+file `dtr.ini` della cartella **cfg**; per la voce seriale lo stesso file
+indica la velocità della porta.
+
+La funzione **ECHO** della cassa, con cui il registratore rimanda indietro ogni
+comando ricevuto, può essere accesa o spenta: Facile legge le risposte della
+cassa in tutti e due i casi. Sulla voce seriale serve accesa, come dice il nome
+della voce.
+
+### Matricola, numero dello scontrino e azzeramento
+
+- Facile chiede al registratore lo **stato della cassa**: da lì prende la
+  matricola, il numero dello scontrino e il numero di azzeramento. La DTR
+  risponde quando ha finito di stampare, per cui la richiesta si fa una volta
+  sola, **subito dopo il pagamento**, a scontrino chiuso, sia nel **Pos
+  Touchscreen** sia in **Vendita**. Prima del pagamento non si chiede niente:
+  il pagamento non si ferma più per una richiesta non riuscita.
+- La **matricola** letta dal registratore è quella che si registra negli
+  [scontrini](../../vendite/scontrini.md), e quella che il documento di reso
+  propone quando lo scontrino da rendere non la riporta. La matricola scritta
+  nelle [Impostazioni Postazione](../../utility/impostazioni-postazione.md)
+  vale solo se la cassa non la dà. Se le due sono diverse, nel **Pos
+  Touchscreen** compare l'avviso *La matricola impostata differisce dalla
+  matricola letta sul registratore telematico!*, con la domanda se continuare:
+  correggi la matricola nelle Impostazioni Postazione.
+- Con la voce seriale fino a questa versione Facile non leggeva niente dalla
+  cassa: gli scontrini si registravano con numero 0 e azzeramento 1. Ora li
+  legge. Se all'apertura del POS o della vendita la cassa non risponde alla
+  richiesta di stato, si prosegue come prima, senza numero e senza matricola
+  letta, e Facile non la ripete a ogni scontrino.
+- Con la voce in rete, se la cassa non risponde alla richiesta di stato
+  all'apertura, il **Pos Touchscreen** non si apre e **Vendita** fa scegliere
+  fra scaricare il magazzino senza scontrino e interrompere, come prima.
+- Se dopo il pagamento la richiesta non riesce, lo scontrino si registra senza
+  numero fiscale, e nel file degli errori `sqlerr.txt`, nella cartella `log`,
+  resta una riga che comincia con *Cassa DTR: stato della cassa non letto*
+  (vedi i [messaggi della vendita](../../vendite/vendita-al-banco.md#quando-la-cassa-o-la-bilancia-non-rispondono)).
+  Per un reso o un annullo di quello scontrino il numero va indicato a mano.
+- Con la casella **Disabilita Numerazione Scontrini** delle
+  [Impostazioni Postazione](../../utility/impostazioni-postazione.md) gli
+  scontrini si registrano senza numero fiscale; matricola e azzeramento si
+  leggono lo stesso.
+
+### Lo scontrino rimasto aperto
+
+Dopo il pagamento Facile controlla sulla cassa che lo scontrino sia chiuso. Di
+solito lo è, e non si manda altro. Se è rimasto aperto — per esempio un
+pagamento che non copre il totale calcolato dalla cassa — Facile lo chiude
+saldando il residuo in contanti e controlla di nuovo. Se resta aperto, o la
+cassa non risponde più, compare un messaggio con **Riprova** e **Annulla**
+(vedi [Quando si chiude lo scontrino](../../vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino)):
+**Riprova** controlla e, se serve, chiude di nuovo; **Annulla** non registra la
+vendita.
+
+### Il pagamento non riuscito
+
+Nel **Pos Touchscreen**, come con le [casse 3i](#il-pagamento-non-riuscito), se
+il pagamento non arriva al registratore la finestra d'errore ha solo
+**Riprova** e **Annulla**: **Ignora** registrerebbe la vendita con lo
+scontrino ancora aperto sulla cassa. **Annulla** non registra la vendita:
+guarda il display della cassa e, se lo scontrino è rimasto aperto, chiudilo o
+annullalo dalla tastiera della cassa prima di battere la vendita successiva.
+
+### Testi, buoni pasto, codice fiscale, versamenti
+
+- Nelle descrizioni degli articoli le lettere accentate escono senza accento
+  (`CAFFÈ` esce `CAFFE`), invece di diventare spazi.
+- La parola `TOTALE`, che la DTR non accetta nelle righe di testo dello
+  scontrino e che nel documento gestionale fa sparire la riga, diventa `TOT.`,
+  anche dentro una parola (`SUBTOTALE` → `SUBTOT.`). Vale per le descrizioni,
+  per le righe dei buoni sconto e per le altre righe di testo.
+- Con la voce seriale i **buoni pasto** si pagavano moltiplicati per il loro
+  numero: due ticket da 7 euro valevano 28 euro. Ora valgono 14.
+- Il **codice fiscale** o la **partita IVA** del cliente arrivano alla cassa
+  come dato del cliente, che la cassa stampa in fondo allo scontrino: la
+  partita IVA con le sue 11 cifre, il codice fiscale con i suoi 16 caratteri.
+  Con la voce seriale prima usciva solo una riga di testo, e con la voce in
+  rete la partita IVA arrivava allungata con degli spazi, e la cassa non la
+  riconosceva.
+- Con la voce in rete il **versamento** e il **prelievo** di cassa si chiudono
+  sul registratore come con la voce seriale. Prima il documento restava aperto
+  in pagamento sulla cassa.
+
+### Buoni sconto
+
+- Con la voce in rete, se la cassa non si raggiunge o un comando del
+  [buono sconto](../../vendite/buoni-sconto.md) non parte, la stampa del buono
+  si ferma al primo errore invece di aspettare la cassa riga per riga: il buono
+  resta registrato e il motivo va nel file degli errori (vedi
+  [Quando la cassa non stampa il buono](../../vendite/buoni-sconto.md#quando-la-cassa-non-stampa-il-buono)).
+  Un comando rifiutato dalla cassa si vede solo sul display e sulla carta: la
+  DTR non dice a Facile come è andato.
+- Con la voce seriale la stampa del buono prosegue come prima.
+
+<!-- DA VERIFICARE: sotto il codice a barre del buono Facile stampa anche il codice in chiaro; se la DTR stampa già le cifre sotto le barre, il codice esce due volte. Guardare la carta del buono sulla DTR di prova. -->
+
+### Il log della comunicazione
+
+Con il log della comunicazione attivo, per la voce `DTR XON / XOFF LAN` il file
+`socket_log.txt` della cartella `log` riporta, dopo ogni richiesta di stato,
+una riga che comincia con `Risposta 2X:` con i byte arrivati dalla cassa e il
+tempo di attesa in millisecondi, oppure *nessun byte* se la cassa non ha
+risposto.
 
 ## Vedi anche
 
