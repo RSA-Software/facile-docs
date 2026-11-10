@@ -236,6 +236,14 @@ della cassa (vedi [Quando si chiude lo scontrino](../../vendite/vendita-al-banco
 Fino a questa versione la vendita si registrava lo stesso, con numero fiscale
 0, e restava solo una riga nel file degli errori.
 
+Dopo **Annulla** il **Pos Touchscreen** non mostra più la vendita come chiusa,
+con il resto e lo sfondo verde: il display dice **VENDITA NON REGISTRATA**, il
+riquadro del totale **NON REGISTRATA** e lo sfondo delle righe diventa rosso.
+Al tasto successivo la schermata si azzera, come dopo ogni vendita. Nel file
+degli errori `sqlerr.txt` resta una riga come *Cassa DTR: la cassa segnala
+l'errore 33 dopo il pagamento: scontrino non emesso*, sia dal Pos sia da
+**Vendita**.
+
 !!! note "Il reso deve corrispondere allo scontrino d'origine"
 
     Il reso dal **Pos Touchscreen** o da **Vendita** apre sulla cassa un
@@ -247,6 +255,31 @@ Fino a questa versione la vendita si registrava lo stesso, con numero fiscale
     passata. Rendi gli articoli con il prezzo dello scontrino d'origine.
 
 <!-- DA VERIFICARE: la DTR accetta il reso di una parte della quantita' venduta, o di una riga con la descrizione diversa ma lo stesso prezzo? Provato solo il prezzo diverso (rifiutato) e la riga identica (accettata). -->
+
+### L'annullo di un documento commerciale
+
+Dal **Pos Touchscreen**, **Funzioni ▸ Doc. Commerciale di Annullo** annulla
+sulla cassa uno scontrino già emesso, indicato con azzeramento, numero e data.
+Con la DTR Facile, dopo aver mandato l'annullo, rilegge lo stato della cassa,
+come dopo il pagamento:
+
+- se la cassa lo ha eseguito, l'annullo si registra con il numero del
+  documento di annullo letto dalla cassa (prima restava il numero dell'ultima
+  vendita);
+- se la cassa lo ha rifiutato — sulla cassa di prova l'annullo di uno
+  scontrino che non esiste ha dato l'**errore 52** — compare *Errore !* con
+  *La cassa segnala l'errore …: il documento non è stato annullato.*, con
+  **Riprova** e **Annulla**. **Annulla** non registra l'annullo, e il display
+  dice **NON REGISTRATO**: controlla i dati e ripeti l'annullo. **Riprova**
+  toglie l'errore alla cassa e rimanda lo stesso annullo;
+- con la **carta finita**, cambia il rotolo e premi **Riprova**: Facile
+  rilegge lo stato senza rimandare l'annullo, che sarebbe un secondo annullo;
+- se sulla cassa è rimasto aperto uno scontrino, il messaggio lo dice:
+  annullalo dalla tastiera della cassa, poi **Riprova**.
+
+Fino a questa versione Facile non controllava la risposta della cassa, e un
+annullo rifiutato si registrava lo stesso. I messaggi sono nella tabella
+[Quando si annulla un documento commerciale](../../vendite/vendita-al-banco.md#quando-si-annulla-un-documento-commerciale).
 
 ### Il pagamento non riuscito
 

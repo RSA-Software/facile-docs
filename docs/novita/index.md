@@ -173,6 +173,23 @@ c'è un modello da scaricare.
   stesso, senza avvisare. Ora compare un messaggio con il codice d'errore della
   cassa, con **Riprova** e **Annulla**, e con **Annulla** la vendita non viene
   registrata; lo stesso con la carta finita.
+- [Casse DTR, annullo](../moduli/casse-bilance/registratori/index.md#lannullo-di-un-documento-commerciale):
+  dal **Pos Touchscreen** un annullo rifiutato dalla cassa — per esempio di
+  uno scontrino che sulla cassa non c'è — si registrava lo stesso, e un annullo
+  riuscito si registrava con il numero dell'ultima vendita. Ora Facile rilegge
+  lo stato della cassa dopo l'annullo: se la cassa lo rifiuta compare un
+  messaggio con il codice d'errore, e con **Annulla** l'annullo non si
+  registra; se lo esegue, si registra con il numero del documento di annullo.
+- [Pos Touchscreen](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino):
+  dopo **Annulla** su un errore della cassa alla chiusura dello scontrino la
+  schermata restava quella della vendita chiusa, con il resto e lo sfondo
+  verde, come se fosse registrata. Ora mostra **VENDITA NON REGISTRATA** con
+  lo sfondo rosso, con tutte le casse.
+- Casse DTR: nel file degli errori `sqlerr.txt` una cassa in errore dopo il
+  pagamento risultava come *stato della cassa non letto*, e da **Vendita**,
+  dopo un errore nel Pos, la riga non compariva. Ora la riga dice l'errore e
+  il momento, per esempio *Cassa DTR: la cassa segnala l'errore 33 dopo il
+  pagamento: scontrino non emesso*.
 
 ### Voci tolte
 
