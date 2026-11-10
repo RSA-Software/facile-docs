@@ -166,6 +166,13 @@ c'è un modello da scaricare.
   partita IVA. Ora arriva con le sue 11 cifre. Il versamento e il prelievo di
   cassa restavano aperti sul registratore, in pagamento: ora si chiudono come
   con la voce seriale.
+- [Casse DTR](../moduli/casse-bilance/registratori/index.md#la-cassa-in-errore-dopo-il-pagamento):
+  se la cassa rifiutava un comando della vendita — per esempio la riga di un
+  reso con un prezzo diverso da quello dello scontrino d'origine — andava in
+  errore e non emetteva lo scontrino, ma Facile registrava la vendita lo
+  stesso, senza avvisare. Ora compare un messaggio con il codice d'errore della
+  cassa, con **Riprova** e **Annulla**, e con **Annulla** la vendita non viene
+  registrata; lo stesso con la carta finita.
 
 ### Voci tolte
 

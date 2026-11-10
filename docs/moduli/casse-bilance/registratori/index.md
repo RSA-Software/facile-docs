@@ -210,6 +210,44 @@ cassa non risponde più, compare un messaggio con **Riprova** e **Annulla**
 **Riprova** controlla e, se serve, chiude di nuovo; **Annulla** non registra la
 vendita.
 
+### La cassa in errore dopo il pagamento
+
+Quando la DTR rifiuta un comando va in errore, mostra il codice sul display e
+scarta tutti i comandi che arrivano dopo, finché non si preme **C**. Se
+l'errore arriva durante la vendita, quindi, il pagamento non chiude niente e lo
+scontrino non esce. Facile lo vede nello stato della cassa che legge dopo il
+pagamento e non registra più la vendita come riuscita: compare il messaggio
+*La cassa segnala l'errore …: lo scontrino non è stato emesso.*, con il codice
+della cassa (vedi [Quando si chiude lo scontrino](../../vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino)).
+
+- **Annulla** non registra la vendita. **Riprova** ripropone lo stesso
+  messaggio: anche dopo il tasto **C** lo scontrino non c'è, e la cassa
+  direbbe «chiuso» con il numero dello scontrino precedente.
+- Premi **C** sulla cassa per togliere l'errore; la vendita successiva lo
+  toglie comunque da sola. Poi correggi la vendita e ribattila.
+- Se sulla cassa è rimasto aperto lo scontrino con le righe accettate prima
+  dell'errore, il messaggio lo dice: annullalo dalla tastiera della cassa
+  prima di ribattere la vendita.
+- Con la **carta finita** il messaggio è *La cassa segnala la carta finita: lo
+  scontrino potrebbe non essere stato emesso.*: cambia il rotolo e premi
+  **Riprova**, che rilegge lo stato e registra la vendita se lo scontrino è
+  uscito.
+
+Fino a questa versione la vendita si registrava lo stesso, con numero fiscale
+0, e restava solo una riga nel file degli errori.
+
+!!! note "Il reso deve corrispondere allo scontrino d'origine"
+
+    Il reso dal **Pos Touchscreen** o da **Vendita** apre sulla cassa un
+    documento di reso legato allo scontrino d'origine (azzeramento, numero,
+    data, matricola), e la DTR controlla le righe su quello scontrino. Sulla
+    cassa di prova un articolo reso a 0,10 € da uno scontrino in cui era
+    venduto a 12,00 € è stato rifiutato con l'**errore 33**; la riga di un
+    altro scontrino resa con lo stesso prezzo e la stessa descrizione è
+    passata. Rendi gli articoli con il prezzo dello scontrino d'origine.
+
+<!-- DA VERIFICARE: la DTR accetta il reso di una parte della quantita' venduta, o di una riga con la descrizione diversa ma lo stesso prezzo? Provato solo il prezzo diverso (rifiutato) e la riga identica (accettata). -->
+
 ### Il pagamento non riuscito
 
 Nel **Pos Touchscreen**, come con le [casse 3i](#il-pagamento-non-riuscito), se
@@ -258,7 +296,9 @@ Con il log della comunicazione attivo, per la voce `DTR XON / XOFF LAN` il file
 `socket_log.txt` della cartella `log` riporta, dopo ogni richiesta di stato,
 una riga che comincia con `Risposta 2X:` con i byte arrivati dalla cassa e il
 tempo di attesa in millisecondi, oppure *nessun byte* se la cassa non ha
-risposto.
+risposto. Le righe sopra, `SendString: 2X` e una `ReceiveBytes:` per ogni
+pezzo arrivato, ora le scrive Facile: prima un pezzo ricevuto poteva comparire
+come `SendString:`, come se l'avesse mandato Facile.
 
 ## Vedi anche
 
