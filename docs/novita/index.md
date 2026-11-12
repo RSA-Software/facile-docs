@@ -180,6 +180,16 @@ c'è un modello da scaricare.
   lo stato della cassa dopo l'annullo: se la cassa lo rifiuta compare un
   messaggio con il codice d'errore, e con **Annulla** l'annullo non si
   registra; se lo esegue, si registra con il numero del documento di annullo.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md),
+  voci `RCH XON / XOFF (9600,N,8,1)` e `RCH XON / XOFF LAN`, riviste sui
+  manuali del Print!F RT e del Print! 3.0 RT: acconto, omaggio e buono
+  monouso arrivano al registratore nella forma che si aspetta, con il reparto;
+  i buoni pasto in quantità portano il totale e il numero dei buoni; nelle
+  vendite con quantità la quantità precede la descrizione; il codice fiscale
+  del cliente arriva senza spazi in coda; l'annullo di un documento
+  commerciale si chiude da solo invece di restare aperto sulla cassa. La
+  lettura e l'azzeramento dei reparti, che il registratore non prevede, ora
+  danno un messaggio invece di mandare un comando ignorato.
 - [Pos Touchscreen](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino):
   dopo **Annulla** su un errore della cassa alla chiusura dello scontrino la
   schermata restava quella della vendita chiusa, con il resto e lo sfondo

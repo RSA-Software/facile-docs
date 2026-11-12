@@ -51,8 +51,6 @@ decidono che cosa Facile può fare:
 - **FIDELITY**: va acceso se servono i codici a barre sullo scontrino; spento,
   i codici a barre vengono ignorati senza alcun avviso. Se non servono, RCH
   consiglia di lasciarlo spento.
-- **Gestione FATTURA**: va abilitata in modalità SERVICE perché funzioni la
-  fattura interna. Esiste solo sul Print!F, non sul Print! 3.0 RT.
 
 In [Impostazioni Postazione](../../utility/impostazioni-postazione.md) compila
 anche la **Matricola** del registratore: con lo XON/XOFF Facile non la può
@@ -120,7 +118,8 @@ con un documento di reso, che richiama lo scontrino originale, e le righe da
 rendere si registrano come normali vendite. Facile lo fa da solo: quando registri
 un [reso](../../vendite/vendita-al-banco.md#registrare-un-reso) apre il
 documento di reso e manda le righe con la quantità positiva. Reso e annullo
-riportano la matricola del registratore.
+riportano la matricola del registratore. Il documento di annullo si chiude da
+solo, senza bisogno di intervenire sulla tastiera della cassa.
 
 ### Cosa non si può fare
 
@@ -131,6 +130,12 @@ riportano la matricola del registratore.
   display e sulla stampa della cassa, non in Facile.
 - **Righe a doppia altezza o in grassetto** nei documenti gestionali: il
   registratore non le prevede e vengono stampate normali.
+- **Lettura e azzeramento dei reparti.** Il protocollo XON/XOFF non li
+  prevede su nessuno dei due modelli: Facile lo segnala invece di mandare il
+  comando.
+- **Fattura su cassa.** La fattura interna del registratore il Print!F la fa
+  solo in modalità Misuratore Fiscale e il Print! 3.0 RT non la prevede: con
+  un registratore telematico non si usa.
 
 ??? note "Per l'assistenza: i comandi inviati con lo XON/XOFF"
 
@@ -138,7 +143,7 @@ riportano la matricola del registratore.
 
     | Operazione | Comando |
     |---|---|
-    | Vendita | `"DESC"<prezzo>H<reparto>R`, con `<qta>*` davanti al prezzo se diversa da 1 |
+    | Vendita | `"DESC"<prezzo>H<reparto>R`, con `<qta>*` davanti alla descrizione se diversa da 1 |
     | Storno riga | prefisso `0M` |
     | Righe di descrizione aggiuntive | `"TESTO"@` |
     | Sconto / maggiorazione % su articolo | `<perc>*1M` / `<perc>*5M` |
@@ -146,8 +151,9 @@ riportano la matricola del registratore.
     | Sconto / maggiorazione a valore su articolo | `<imp>H3M` / `<imp>H7M` |
     | Sconto / maggiorazione a valore su subtotale | `<imp>H4M` / `<imp>H8M` |
     | Subtotale | `=` |
-    | Acconto / omaggio / buono monouso | `<imp>H16M` / `<imp>H17M` / `<imp>H18M` |
+    | Acconto / omaggio / buono monouso | `16M<imp>H<reparto>R` / `17M<imp>H<reparto>R` / `18M<imp>H<reparto>R` |
     | Pagamento | `<imp>H<n>T`, oppure `<n>T` per chiudere sul residuo |
+    | Buoni pasto | `<totale>H<numero buoni>*<n>T` |
     | Cancellazione | `K` |
     | Annullo documento | `k` |
     | Documento gestionale | apertura `j`, righe `"TESTO"@`, chiusura `J` |
@@ -155,11 +161,9 @@ riportano la matricola del registratore.
     | Codice lotteria | `"CODICE"@37F` |
     | Codice a barre EAN-13 | `"CODICE"1Z` |
     | Reso da documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"104M` |
-    | Annullamento documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"105M` |
-    | Fattura interna (solo Print!F) | `9F` poi `"NNNNN"101M`, intestazioni `"TESTO"@38F` |
+    | Annullamento documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"105M1T` |
     | Entrate / prelievi di cassa | `<imp>H10M` / `<imp>H11M` |
     | Lettura e chiusura giornaliera | `x1Fc` / `z1Fc` |
-    | Lettura e azzeramento reparti | `x2Fc` / `z2Fc` |
     | Selezione operatore | `<n>O` |
     | Apertura cassetto | `a` |
     | Messaggi sul display | `"RIGA 1"1%` e `"RIGA 2"2%` |
@@ -285,8 +289,8 @@ valori di fabbrica.
     comporre il comando.
 
     Con le forme TICKETS l'importo è il totale e la quantità il numero di buoni:
-    `=T5/$1000/&2` sono due buoni da cinque euro. È la convenzione opposta allo
-    XON/XOFF, dove l'importo è il valore del singolo buono.
+    `=T5/$1000/&2` sono due buoni da cinque euro. È la stessa convenzione dello
+    XON/XOFF, dove gli stessi due buoni sono `1000H2*5T`.
 
 ## Il display cliente
 
@@ -301,8 +305,7 @@ stessa **Porta**:
 | `RCH XON / XOFF LAN` | `RCH XON/XOFF LAN` |
 | `RCH MULTIDRIVER SERVER` | `RCH MULTIDRIVER SERVER` |
 
-Sul Print!F la seconda riga del display non è gestita e viene ignorata; sul
-Print! 3.0 RT funziona. La parola TOTALE non è ammessa nei messaggi e viene
+Le due righe del display funzionano su tutti e due i modelli. La parola TOTALE non è ammessa nei messaggi e viene
 sostituita.
 
 ## Diagnostica
@@ -331,6 +334,7 @@ forma di pagamento. Sono quei numeri che vanno scritti nella sezione
 |---|---|---|
 | *Attenzione! Il driver della cassa ha segnalato un errore: … Controllare la stampa prima di proseguire.* | Con il Multidriver, il registratore ha rifiutato lo scontrino o non è stato raggiungibile; al posto dei puntini c'è il testo dell'errore, vedi la tabella qui sotto. | Controlla che cosa è stato stampato. Facile non ristampa da solo: se lo scontrino non è uscito, ripetilo. |
 | *Impossible Eseguire il protocollo di Shell!* | Il Multidriver non si è potuto avviare. | Controlla `PATH_EXE` in `RCH_Multidriver.ini`. |
+| *Errore ! La lettura dei reparti non e' prevista dai registratori RCH collegati in XON/XOFF* | Con lo XON/XOFF hai chiesto la lettura o l'azzeramento dei reparti, che il registratore non prevede. | Premi **Annulla**: **Riprova** ripropone lo stesso messaggio. |
 
 I testi d'errore più comuni del Multidriver, in italiano o in inglese secondo la
 lingua impostata nel Multidriver:

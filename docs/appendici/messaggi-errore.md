@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-10 — **1195 messaggi**.
+Aggiornato al 2026-11-12 — **1196 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -391,6 +391,7 @@ Aggiornato al 2026-11-10 — **1195 messaggi**.
 | *Errore di Comunicazione con la Cassa !<br><br>Scegliere SI per effettuare lo scarico dei prodotti o NO per interrompere l'operazione.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | La cassa non ha risposto mentre lo scontrino veniva emesso. | **No**, la risposta proposta, ferma tutto. **Sì** scarica il magazzino anche se lo scontrino non è uscito: guarda prima il display della cassa. |
 | *Errore di comunicazione!* / *Impossibile contattare l'Authorization Server.* / *Attendere qualche minuto* | [Fatture elettroniche passive](../moduli/contabilita/fatture-elettroniche-passive.md) | Il servizio non risponde. | Attendi e riprova; se il problema resta, contatta l'assistenza. |
 | *Errore generico!* | [Cassa automatica Cashmatic](../moduli/casse-bilance/casse-automatiche/cashmatic.md) | La macchina non ha eseguito il comando, per esempio perché lo stacker non è stato rimosso. | Controlla la macchina e riprova. |
+| *Errore ! La lettura dei reparti non e' prevista dai registratori RCH collegati in XON/XOFF* | [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md) | Con lo XON/XOFF hai chiesto la lettura o l'azzeramento dei reparti, che il registratore non prevede. | Premi **Annulla**: **Riprova** ripropone lo stesso messaggio. |
 | *Errore Selezione Ditta !* | [Copia listini](../moduli/listini-vendita/copia-listini.md) | La ditta indicata in **Da Ditta** non è stata trovata. | Controlla il codice della ditta. |
 | *Errore su cancellazione movimenti dell' ordine!<br>Segnalare il problema all' assistenza e annullare l' ordine!* | [Ordini in lavorazione e in ricezione](../moduli/ordini/ordini-in-lavorazione-e-ricezione.md) | I movimenti di magazzino dell'ordine non si sono potuti togliere. | Annulla l'ordine e chiama l'assistenza: gli archivi restano disallineati. |
 | *Errore sulla richiesta http!* | [Cassa automatica CashDro](../moduli/casse-bilance/casse-automatiche/cashdro.md), [Cassa automatica Virtuo VNE](../moduli/casse-bilance/casse-automatiche/vne.md) | La macchina non è raggiungibile. | Controlla rete e indirizzo. |
