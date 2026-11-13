@@ -16,29 +16,11 @@ una versione specifica del programma lo dicono in apertura, per esempio
 Non sono elencate le modifiche interne, che non cambiano nulla a video, e
 quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
-## Versione 2026 B10.00
+## Versione 2026 B11.00
 
 In preparazione.
 
 ### Nuove funzioni
-
-**[Buoni sconto](../moduli/vendite/buoni-sconto.md).** Le regole del buono che
-esce in cassa a fine scontrino ora stanno in un file di testo per ditta,
-`buoni_sconto_<codice ditta a 5 cifre>.ini` nella cartella **cfg** (oppure
-`buoni_sconto.ini` per tutte le ditte). Si possono stabilire fino a cinque
-fasce di spesa, un periodo di emissione, la validità del buono, fissa o
-relativa, e le righe in testa e in coda. Nel [manuale](../moduli/vendite/buoni-sconto.md)
-c'è un modello da scaricare.
-
-- **Buono in percentuale.** Il buono può valere una percentuale del totale dello
-  scontrino, per esempio il 10% per chi spende almeno 50 euro. La percentuale
-  serve solo a calcolare il buono al momento dell'emissione, arrotondato al
-  centesimo: esce sempre un buono solo, a valore, e si usa al banco come gli
-  altri.
-- **Formato di stampa 3, personalizzato da file.** Il **Formato Stampa** della
-  [ditta](../moduli/anagrafiche/ditte.md#scheda-fidelity-buoni-sconto) accetta
-  anche il numero 3: il buono contiene solo le righe di testa, il codice a
-  barre e le righe in coda scritte nel file. I formati 0, 1 e 2 sono come prima.
 
 **[Registratori RCH con il web service](../moduli/casse-bilance/registratori/rch.md#web-service).**
 In **Stampante Fiscale** c'è la voce nuova `RCH WEB SERVICE`, per i Print!F RT
@@ -64,6 +46,65 @@ si può usare.
   non la comunica, vale quella delle impostazioni; se manca anche quella, il Pos
   non si apre. Su una postazione nuova, con una cassa che comunica la matricola,
   non serve più scriverla a mano.
+
+### Correzioni
+
+**Casse e Bilance**
+
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md),
+  voci `RCH XON / XOFF (9600,N,8,1)` e `RCH XON / XOFF LAN`, riviste sui
+  manuali del Print!F RT e del Print! 3.0 RT: acconto, omaggio e buono
+  monouso arrivano al registratore nella forma che si aspetta, con il reparto;
+  i buoni pasto in quantità portano il totale e il numero dei buoni; nelle
+  vendite con quantità la quantità precede la descrizione; il codice fiscale
+  del cliente arriva senza spazi in coda. La
+  lettura e l'azzeramento dei reparti, che il registratore non prevede, ora
+  danno un messaggio invece di mandare un comando ignorato.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#multidriver-di-rch),
+  voce `RCH MULTIDRIVER SERVER`, rivista sul manuale del protocollo RCH: il
+  documento di reso ora si apre correttamente e le righe da rendere arrivano
+  nella forma prevista per i registratori telematici; reso e annullo di un
+  documento emesso da un altro registratore riportano la sua matricola
+  invece di essere registrati come documenti di un altro apparecchio; i buoni
+  pasto che chiudono a saldo portano il numero dei buoni; nelle righe dei
+  documenti gestionali e della ricevuta del POS la barra, le parentesi tonde
+  e la parola TOTALE, che il registratore rifiuta, vengono sostituite.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#punti-fidelity-codice-a-barre-e-buoni-sconto),
+  tutte le voci: i punti fidelity escono dentro lo scontrino; il codice a
+  barre dello scontrino esce in fondo allo scontrino se sulla cassa è accesa
+  l'opzione FIDELITY, altrimenti su un documento non fiscale subito dopo; il
+  buono sconto resta su un documento non fiscale, ora con il codice a barre
+  anche con il Multidriver. Ai codici a barre viene aggiunta la cifra di
+  controllo, senza la quale il registratore non li stampava. Con lo XON/XOFF e
+  con il Multidriver l'opzione si dichiara con la nuova chiave `fidelity` di
+  `rch.ini` e di `RCH_Multidriver.ini`, che deve corrispondere alla cassa.
+
+## Versione 2026 B10.00
+
+In preparazione.
+
+### Nuove funzioni
+
+**[Buoni sconto](../moduli/vendite/buoni-sconto.md).** Le regole del buono che
+esce in cassa a fine scontrino ora stanno in un file di testo per ditta,
+`buoni_sconto_<codice ditta a 5 cifre>.ini` nella cartella **cfg** (oppure
+`buoni_sconto.ini` per tutte le ditte). Si possono stabilire fino a cinque
+fasce di spesa, un periodo di emissione, la validità del buono, fissa o
+relativa, e le righe in testa e in coda. Nel [manuale](../moduli/vendite/buoni-sconto.md)
+c'è un modello da scaricare.
+
+- **Buono in percentuale.** Il buono può valere una percentuale del totale dello
+  scontrino, per esempio il 10% per chi spende almeno 50 euro. La percentuale
+  serve solo a calcolare il buono al momento dell'emissione, arrotondato al
+  centesimo: esce sempre un buono solo, a valore, e si usa al banco come gli
+  altri.
+- **Formato di stampa 3, personalizzato da file.** Il **Formato Stampa** della
+  [ditta](../moduli/anagrafiche/ditte.md#scheda-fidelity-buoni-sconto) accetta
+  anche il numero 3: il buono contiene solo le righe di testa, il codice a
+  barre e le righe in coda scritte nel file. I formati 0, 1 e 2 sono come prima.
+
+### Miglioramenti
+
 - **Buoni sconto**: il buono esce anche quando il totale dello scontrino è
   **uguale** alla spesa della fascia (prima serviva un totale maggiore).
 - **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8
@@ -202,33 +243,6 @@ si può usare.
   lo stato della cassa dopo l'annullo: se la cassa lo rifiuta compare un
   messaggio con il codice d'errore, e con **Annulla** l'annullo non si
   registra; se lo esegue, si registra con il numero del documento di annullo.
-- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md),
-  voci `RCH XON / XOFF (9600,N,8,1)` e `RCH XON / XOFF LAN`, riviste sui
-  manuali del Print!F RT e del Print! 3.0 RT: acconto, omaggio e buono
-  monouso arrivano al registratore nella forma che si aspetta, con il reparto;
-  i buoni pasto in quantità portano il totale e il numero dei buoni; nelle
-  vendite con quantità la quantità precede la descrizione; il codice fiscale
-  del cliente arriva senza spazi in coda. La
-  lettura e l'azzeramento dei reparti, che il registratore non prevede, ora
-  danno un messaggio invece di mandare un comando ignorato.
-- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#multidriver-di-rch),
-  voce `RCH MULTIDRIVER SERVER`, rivista sul manuale del protocollo RCH: il
-  documento di reso ora si apre correttamente e le righe da rendere arrivano
-  nella forma prevista per i registratori telematici; reso e annullo di un
-  documento emesso da un altro registratore riportano la sua matricola
-  invece di essere registrati come documenti di un altro apparecchio; i buoni
-  pasto che chiudono a saldo portano il numero dei buoni; nelle righe dei
-  documenti gestionali e della ricevuta del POS la barra, le parentesi tonde
-  e la parola TOTALE, che il registratore rifiuta, vengono sostituite.
-- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#punti-fidelity-codice-a-barre-e-buoni-sconto),
-  tutte le voci: i punti fidelity escono dentro lo scontrino; il codice a
-  barre dello scontrino esce in fondo allo scontrino se sulla cassa è accesa
-  l'opzione FIDELITY, altrimenti su un documento non fiscale subito dopo; il
-  buono sconto resta su un documento non fiscale, ora con il codice a barre
-  anche con il Multidriver. Ai codici a barre viene aggiunta la cifra di
-  controllo, senza la quale il registratore non li stampava. Con lo XON/XOFF e
-  con il Multidriver l'opzione si dichiara con la nuova chiave `fidelity` di
-  `rch.ini` e di `RCH_Multidriver.ini`, che deve corrispondere alla cassa.
 - [Pos Touchscreen](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino):
   dopo **Annulla** su un errore della cassa alla chiusura dello scontrino la
   schermata restava quella della vendita chiusa, con il resto e lo sfondo
