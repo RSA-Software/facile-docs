@@ -161,7 +161,7 @@ solo, senza bisogno di intervenire sulla tastiera della cassa.
     | Codice lotteria | `"CODICE"@37F` |
     | Codice a barre EAN-13 | `"CODICE"1Z` |
     | Reso da documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"104M` |
-    | Annullamento documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"105M1T` |
+    | Annullamento documento RT | `"ZZZZ-NNNN-gg-mm-aa-matricola"105M` |
     | Entrate / prelievi di cassa | `<imp>H10M` / `<imp>H11M` |
     | Lettura e chiusura giornaliera | `x1Fc` / `z1Fc` |
     | Selezione operatore | `<n>O` |

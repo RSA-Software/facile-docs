@@ -186,10 +186,18 @@ c'è un modello da scaricare.
   monouso arrivano al registratore nella forma che si aspetta, con il reparto;
   i buoni pasto in quantità portano il totale e il numero dei buoni; nelle
   vendite con quantità la quantità precede la descrizione; il codice fiscale
-  del cliente arriva senza spazi in coda; l'annullo di un documento
-  commerciale si chiude da solo invece di restare aperto sulla cassa. La
+  del cliente arriva senza spazi in coda. La
   lettura e l'azzeramento dei reparti, che il registratore non prevede, ora
   danno un messaggio invece di mandare un comando ignorato.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#multidriver-di-rch),
+  voce `RCH MULTIDRIVER SERVER`, rivista sul manuale del protocollo RCH: il
+  documento di reso ora si apre correttamente e le righe da rendere arrivano
+  nella forma prevista per i registratori telematici; reso e annullo di un
+  documento emesso da un altro registratore riportano la sua matricola
+  invece di essere registrati come documenti di un altro apparecchio; i buoni
+  pasto che chiudono a saldo portano il numero dei buoni; nelle righe dei
+  documenti gestionali e della ricevuta del POS la barra, le parentesi tonde
+  e la parola TOTALE, che il registratore rifiuta, vengono sostituite.
 - [Pos Touchscreen](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino):
   dopo **Annulla** su un errore della cassa alla chiusura dello scontrino la
   schermata restava quella della vendita chiusa, con il resto e lo sfondo
