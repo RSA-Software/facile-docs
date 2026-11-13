@@ -81,8 +81,6 @@ si può usare.
 
 ## Versione 2026 B10.00
 
-In preparazione.
-
 ### Nuove funzioni
 
 **[Buoni sconto](../moduli/vendite/buoni-sconto.md).** Le regole del buono che
@@ -279,8 +277,6 @@ giorno della settimana.
     sono nel [manuale dei buoni sconto](../moduli/vendite/buoni-sconto.md#note).
 
 ## Versione 2026 B09.00
-
-In preparazione.
 
 ### Nuove funzioni
 
