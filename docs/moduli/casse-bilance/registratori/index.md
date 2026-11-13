@@ -59,6 +59,7 @@ l'apparecchio.
 | `RCH XON / XOFF (9600,N,8,1)` | Seriale — vedi [RCH](rch.md) |
 | `RCH XON / XOFF LAN` | Rete — vedi [RCH](rch.md) |
 | `RCH MULTIDRIVER SERVER` | Attraverso il driver di RCH — vedi [RCH](rch.md) |
+| `RCH WEB SERVICE` | Rete, con il web service del registratore — vedi [RCH](rch.md#web-service) |
 
 Per i modelli collegati in rete la porta seriale non serve: l'indirizzo del
 registratore si scrive nel file di configurazione del modello, descritto nella

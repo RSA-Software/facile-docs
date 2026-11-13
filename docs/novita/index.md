@@ -40,8 +40,30 @@ c'è un modello da scaricare.
   anche il numero 3: il buono contiene solo le righe di testa, il codice a
   barre e le righe in coda scritte nel file. I formati 0, 1 e 2 sono come prima.
 
+**[Registratori RCH con il web service](../moduli/casse-bilance/registratori/rch.md#web-service).**
+In **Stampante Fiscale** c'è la voce nuova `RCH WEB SERVICE`, per i Print!F RT
+collegati in rete: Facile parla direttamente con il registratore, senza
+programmi da installare, e il registratore risponde a ogni comando. Facile sa
+se lo scontrino è uscito prima di registrare la vendita, mostra l'errore della
+cassa con il suo codice e la sua descrizione, annulla da solo un documento
+rimasto aperto, e registra su ogni scontrino il numero, l'azzeramento e la
+matricola letti dalla macchina. Sul registratore servono il Protocollo PC su
+STANDARD e la risposta estesa del web service; indirizzo e forme di pagamento
+stanno nel file `RCH_WebService.ini`. Il manuale dice
+[con quali modelli](../moduli/casse-bilance/registratori/rch.md#quali-modelli)
+si può usare.
+
 ### Miglioramenti
 
+- **Pos Touchscreen, matricola del registratore.** All'apertura il Pos chiede
+  la matricola al registratore, con la stessa regola per tutte le casse. Se il
+  registratore la comunica ed è diversa da quella delle
+  [Impostazioni Postazione](../moduli/utility/impostazioni-postazione.md),
+  Facile mostra le due matricole e chiede se aggiornare quella impostata: con
+  **Sì** la salva e prosegue, con **No** il Pos non si apre. Se il registratore
+  non la comunica, vale quella delle impostazioni; se manca anche quella, il Pos
+  non si apre. Su una postazione nuova, con una cassa che comunica la matricola,
+  non serve più scriverla a mano.
 - **Buoni sconto**: il buono esce anche quando il totale dello scontrino è
   **uguale** alla spesa della fascia (prima serviva un totale maggiore).
 - **Buoni sconto**: se il file non c'è, è sbagliato o è salvato in UTF-8
@@ -198,6 +220,15 @@ c'è un modello da scaricare.
   pasto che chiudono a saldo portano il numero dei buoni; nelle righe dei
   documenti gestionali e della ricevuta del POS la barra, le parentesi tonde
   e la parola TOTALE, che il registratore rifiuta, vengono sostituite.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md#punti-fidelity-codice-a-barre-e-buoni-sconto),
+  tutte le voci: i punti fidelity escono dentro lo scontrino; il codice a
+  barre dello scontrino esce in fondo allo scontrino se sulla cassa è accesa
+  l'opzione FIDELITY, altrimenti su un documento non fiscale subito dopo; il
+  buono sconto resta su un documento non fiscale, ora con il codice a barre
+  anche con il Multidriver. Ai codici a barre viene aggiunta la cifra di
+  controllo, senza la quale il registratore non li stampava. Con lo XON/XOFF e
+  con il Multidriver l'opzione si dichiara con la nuova chiave `fidelity` di
+  `rch.ini` e di `RCH_Multidriver.ini`, che deve corrispondere alla cassa.
 - [Pos Touchscreen](../moduli/vendite/vendita-al-banco.md#quando-si-chiude-lo-scontrino):
   dopo **Annulla** su un errore della cassa alla chiusura dello scontrino la
   schermata restava quella della vendita chiusa, con il resto e lo sfondo

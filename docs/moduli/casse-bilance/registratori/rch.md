@@ -1,41 +1,83 @@
 ---
 title: Registratori telematici RCH
-description: Come si collegano a Facile i registratori telematici RCH Print!F RT e Print! 3.0 RT, con il protocollo XON/XOFF su seriale o in rete oppure attraverso il Multidriver di RCH.
+description: Come si collegano a Facile i registratori telematici RCH Print!F RT e Print! 3.0 RT, con il web service della cassa, con il protocollo XON/XOFF su seriale o in rete oppure attraverso il Multidriver di RCH.
 modulo: Casse e Bilance
 ---
 
 # Registratori telematici RCH
 
 Facile pilota i registratori telematici RCH — **Print!F RT**, **Print! 3.0 RT**,
-**ONDA/SPOT RT** — in tre modi diversi, che corrispondono a tre voci
+**ONDA/SPOT RT** — in tre modi diversi, che corrispondono a quattro voci
 dell'elenco **Stampante Fiscale**. Questa pagina spiega quale scegliere, come
 prepararlo e che cosa aspettarsi da ciascuno.
 
 !!! info "In sintesi"
 
     - **Dove si sceglie:** Menu ▸ Utility ▸ [Impostazioni Postazione](../../utility/impostazioni-postazione.md), campo **Stampante Fiscale**
-    - **Voci:** `RCH XON / XOFF (9600,N,8,1)`, `RCH XON / XOFF LAN`, `RCH MULTIDRIVER SERVER`
-    - **Configurazione:** un file nella cartella `cfg` di Facile — [rch.ini](../../../assets/modelli/rch.ini) per lo XON/XOFF, [RCH_Multidriver.ini](../../../assets/modelli/RCH_Multidriver.ini) per il Multidriver
+    - **Voci:** `RCH WEB SERVICE`, `RCH XON / XOFF (9600,N,8,1)`, `RCH XON / XOFF LAN`, `RCH MULTIDRIVER SERVER`
+    - **Configurazione:** un file nella cartella `cfg` di Facile — [RCH_WebService.ini](../../../assets/modelli/RCH_WebService.ini) per il web service, [rch.ini](../../../assets/modelli/rch.ini) per lo XON/XOFF, [RCH_Multidriver.ini](../../../assets/modelli/RCH_Multidriver.ini) per il Multidriver
 
 ---
 
+## File di configurazione da scaricare
+
+I tre file, con le impostazioni predefinite e i commenti che spiegano ogni
+voce. Scarica quello del collegamento scelto, copialo nella cartella `cfg` di
+Facile e correggi l'indirizzo e le forme di pagamento della cassa installata.
+
+| File | Per la voce | Impostazioni predefinite |
+|---|---|---|
+| [RCH_WebService.ini](../../../assets/modelli/RCH_WebService.ini) | `RCH WEB SERVICE` | porta 80, forme di pagamento di fabbrica |
+| [rch.ini](../../../assets/modelli/rch.ini) | `RCH XON / XOFF (9600,N,8,1)`, `RCH XON / XOFF LAN` | porta 9100, forme di pagamento di fabbrica, `fidelity = 0` |
+| [RCH_Multidriver.ini](../../../assets/modelli/RCH_Multidriver.ini) | `RCH MULTIDRIVER SERVER` | forme di pagamento storiche di Facile, `fidelity = 0` |
+
 ## Quale collegamento scegliere
 
-I tre modi non sono intercambiabili: cambiano i comandi, il mezzo di trasporto
+I modi non sono intercambiabili: cambiano i comandi, il mezzo di trasporto
 e quello che il registratore risponde.
 
 | Voce in **Stampante Fiscale** | Come funziona | Collegamento |
 |---|---|---|
+| `RCH WEB SERVICE` | Facile parla direttamente con il registratore, che risponde a ogni comando. | Ethernet |
 | `RCH XON / XOFF (9600,N,8,1)` | Facile manda i comandi direttamente al registratore. | Seriale, con il cavo RCH CABA0056 |
 | `RCH XON / XOFF LAN` | Lo stesso, in rete. | Ethernet |
 | `RCH MULTIDRIVER SERVER` | Facile scrive i comandi in un file e li fa consegnare dal programma Multidriver di RCH. | Rete, USB o seriale, come configurato nel Multidriver |
 
+- Il **web service** è il collegamento da preferire dove il modello lo
+  permette: non serve installare niente, e il registratore risponde. Facile sa
+  se lo scontrino è uscito, mostra l'errore della cassa con il suo codice, e
+  registra su ogni scontrino numero, azzeramento e matricola letti dalla
+  macchina.
 - Lo **XON/XOFF** è il più semplice e diretto, ma Facile non riceve risposte dal
   registratore: un comando rifiutato si vede solo sul display e sulla stampa
   della cassa.
 - Il **Multidriver** è più lento, perché a ogni scontrino avvia il programma di
   RCH, ma restituisce un esito: Facile sa se lo scontrino è stato stampato e
   avvisa l'operatore in caso di errore o di fine carta.
+
+### Quali modelli
+
+| Modello | `RCH WEB SERVICE` | `RCH XON / XOFF` | `RCH MULTIDRIVER SERVER` |
+|---|---|---|---|
+| **Print!F RT** | Sì — è il modello su cui è stato provato | Sì | Sì |
+| **Print! RT** | Previsto dal manuale RCH, non ancora provato con Facile | — | Sì |
+| **Print! 3.0 RT** | Previsto dal manuale RCH, non ancora provato con Facile | Sì | — |
+| **ONDA RT, SPOT RT/RTA** | No: non hanno il web service | Sì | Sì, impostando sulla cassa il protocollo «Print!F» |
+| **LDP33 RT** (Wall-E MEC RT, K-Bill RT) | No | No | Sì, solo in seriale |
+
+Sul **Print!F RT** il web service è sempre attivo dalle matricole 72018101 in
+avanti; sui Print!F precedenti va abilitato dal menu **SERVICE ▸ Connettività ▸
+Ethernet**, alla voce **ABILITA WEBSERVER?**. La **risposta estesa**, che
+Facile richiede, esiste dalla versione 2.4.0 del firmware. Facile usa il web
+service sulla porta 80, senza cifratura.
+
+!!! warning "Web service e XON/XOFF in rete sono alternativi"
+
+    Sulla porta di rete del registratore si sceglie **un solo** protocollo. Con
+    il Protocollo PC su **XON-XOFF** il web service esegue i comandi ma lascia
+    sul display l'errore **E20 SEQUENZA ERRATA** a ogni invio, e non restituisce
+    matricola e contatori; con **STANDARD** lo XON/XOFF in rete non funziona
+    più. Chi passa al web service cambia anche la voce in **Stampante Fiscale**.
 
 !!! note "I vecchi modelli RCH"
 
@@ -44,18 +86,149 @@ e quello che il registratore risponde.
 
 ## Preparare il registratore
 
-Sul registratore, dal menu **SERVICE ▸ Connettività**, abilita il protocollo
-XON/XOFF scegliendo la connessione seriale o Ethernet. Due parametri della cassa
-decidono che cosa Facile può fare:
+Le impostazioni si fanno dalla tastiera del registratore, in modalità SERVICE:
+si entra con **5** e **[CHIAVE]**, poi **555** e **[CONTANTI]** (555 è la
+password di fabbrica); le voci del menu si scorrono con **[PREZZO REPARTO]** e
+**[REPARTO]**, si confermano con **[CONTANTI]**; **[CL]** esce dal menu e **1**
+**[CHIAVE]** riporta la cassa in registrazione.
 
-- **FIDELITY**: va acceso se servono i codici a barre sullo scontrino; spento,
-  i codici a barre vengono ignorati senza alcun avviso. Se non servono, RCH
-  consiglia di lasciarlo spento.
+### Il protocollo
 
-In [Impostazioni Postazione](../../utility/impostazioni-postazione.md) compila
-anche la **Matricola** del registratore: con lo XON/XOFF Facile non la può
-leggere dalla cassa, e serve ai documenti di reso e di annullo, che la vogliono
-di 11 caratteri.
+Dal menu **SERVICE ▸ Connettività** scegli la porta e, alla voce
+**PROTOCOLLO PC**, il protocollo che corrisponde alla voce scelta in Facile:
+
+| Voce in Facile | Porta | Protocollo PC | Altro |
+|---|---|---|---|
+| `RCH WEB SERVICE` | ETHERNET | **STANDARD** | **WEBSRV: Risp. estesa?** su **SI**; **ABILITA STATI?** su **SI** |
+| `RCH XON / XOFF (9600,N,8,1)` | PORTA SERIALE | **XON-XOFF** | — |
+| `RCH XON / XOFF LAN` | ETHERNET | **XON-XOFF** | — |
+| `RCH MULTIDRIVER SERVER` | quella usata dal Multidriver | **STANDARD** | — |
+
+Scorrendo le voci della porta Ethernet (indirizzo IP, subnet mask, gateway,
+porta TCP/IP) conferma con **[CONTANTI]** quelle che non devi cambiare. Alla
+fine il registratore si riavvia da solo.
+
+### L'opzione FIDELITY { #lopzione-fidelity }
+
+Il nome inganna: questa opzione **non gestisce tessere né punti**, che restano
+di Facile. Decide solo se il programma può stampare qualcosa **in coda allo
+scontrino, dopo il pagamento**: è quello che serve per avere il **codice a
+barre dello scontrino dentro lo scontrino**.
+
+Per accenderla:
+
+1. premi **5** e **[CHIAVE]**, poi **555** e **[CONTANTI]**;
+2. premi **[PREZZO REPARTO]** più volte, finché il display mostra
+   **OPZIONE FIDELITY**, e conferma con **[CONTANTI]**;
+3. alla domanda **OPZIONE FIDELITY ?** premi **[REPARTO]** per scegliere **SI**
+   e conferma con **[CONTANTI]**;
+4. premi **[STORNO]** per uscire dal menu e **1** **[CHIAVE]** per tornare in
+   registrazione.
+
+Di fabbrica è spenta. Con l'opzione accesa, dopo il pagamento il registratore
+**aspetta un comando di chiusura** prima di terminare lo scontrino: Facile lo
+manda da solo, ma chi batte uno scontrino a mano dalla tastiera della cassa
+deve chiuderlo lui. Che cosa cambia in Facile è spiegato in
+[Punti fidelity, codice a barre e buoni sconto](#punti-fidelity-codice-a-barre-e-buoni-sconto).
+
+### La matricola
+
+In [Impostazioni Postazione](../../utility/impostazioni-postazione.md) si
+compila la **Matricola** del registratore, di 11 caratteri: serve ai documenti
+di reso e di annullo. Con il web service Facile la legge dalla cassa
+all'apertura del Pos, e se è diversa da quella impostata chiede se aggiornarla
+(vedi [Vendita al banco e POS](../../vendite/vendita-al-banco.md)). Con lo
+XON/XOFF e con il Multidriver la cassa non la comunica: vale quella scritta
+nelle impostazioni.
+
+## Web service { #web-service }
+
+### Come funziona
+
+Con la voce `RCH WEB SERVICE` Facile manda i comandi al registratore in rete,
+e a ogni invio il registratore risponde con l'esito, lo stato del documento, il
+numero dell'ultimo scontrino e dell'ultima chiusura.
+
+1. Mentre batti lo scontrino i comandi vengono solo preparati: alla cassa non
+   arriva ancora niente.
+2. Alla chiusura Facile controlla che la cassa sia libera, manda lo scontrino
+   e aspetta la risposta **prima** di registrare la vendita.
+3. Se la cassa rifiuta un comando, Facile mostra il codice e la descrizione
+   dell'errore, annulla il documento rimasto aperto e propone **Riprova** e
+   **Annulla**: con **Annulla** la vendita non viene registrata.
+4. Se va tutto bene, lo scontrino viene registrato con **numero**,
+   **azzeramento** e **matricola** letti dalla cassa.
+
+!!! note "Il documento annullato consuma un numero"
+
+    Quando un comando viene rifiutato a scontrino iniziato, Facile lo annulla
+    sulla cassa: esce uno scontrino con la scritta di annullamento e totale
+    0,00, che prende un numero progressivo. Non è una vendita, e Facile non lo
+    registra.
+
+Se la risposta della cassa non arriva (rete caduta, cassa spenta a metà),
+Facile non rimanda lo scontrino alla cieca: al tentativo successivo guarda
+prima sulla cassa se il documento è uscito.
+
+### Il file RCH_WebService.ini
+
+Si trova nella cartella `cfg` di Facile. Puoi partire dal
+[file di esempio](../../../assets/modelli/RCH_WebService.ini), già commentato.
+
+| Sezione | Chiave | Predefinito | Descrizione |
+|---|---|---|---|
+| `[OPTIONS]` | `ip` | — | Indirizzo del registratore. |
+| `[OPTIONS]` | `port` | 80 | Porta del web service. |
+| `[OPTIONS]` | `COL_PRIMA_RIGA` | 35 | Caratteri della riga di vendita. |
+| `[OPTIONS]` | `COL_RIGHE_AGG` | 25 | Caratteri delle righe di descrizione aggiuntive. |
+| `[PAGAMENTI]` | come per lo XON/XOFF | di fabbrica | Le [forme di pagamento](#le-forme-di-pagamento) del registratore. |
+
+In [Impostazioni Postazione](../../utility/impostazioni-postazione.md) la
+**Porta** della cassa va lasciata su un valore diverso da zero: non viene
+usata, ma con zero la vendita non parte. Non c'è nessuna voce per l'opzione
+FIDELITY: con il web service Facile lo capisce da solo dalla risposta della
+cassa.
+
+### Cosa non si può fare
+
+- **Fattura su cassa:** non è prevista sui registratori telematici.
+- **Usare insieme lo XON/XOFF in rete:** vedi l'avvertenza in
+  [Quale collegamento scegliere](#quale-collegamento-scegliere).
+
+## Punti fidelity, codice a barre e buoni sconto
+
+Vale per tutte le voci RCH; cambia solo come Facile viene a sapere se sulla
+cassa l'[opzione FIDELITY](#lopzione-fidelity) è accesa.
+
+| Che cosa | Dove esce |
+|---|---|
+| **Punti fidelity** del cliente (tessera, saldo precedente, punti erogati, saldo) | Dentro lo scontrino, prima del pagamento. Non serve nessuna opzione sulla cassa. |
+| **Codice a barre dello scontrino** (quello dei resi) | Con l'opzione FIDELITY **accesa**: in fondo allo scontrino. Con l'opzione **spenta**: su un documento non fiscale, subito dopo lo scontrino. |
+| **Buono sconto**, con il suo codice a barre | Sempre su un documento non fiscale. |
+
+Come Facile sa se l'opzione è accesa:
+
+| Voce | Come lo sa |
+|---|---|
+| `RCH WEB SERVICE` | Da solo, dalla risposta della cassa dopo il pagamento. Non c'è niente da impostare. |
+| `RCH XON / XOFF (9600,N,8,1)`, `RCH XON / XOFF LAN` | Dalla chiave `fidelity` di `rch.ini`. |
+| `RCH MULTIDRIVER SERVER` | Dalla chiave `fidelity` di `RCH_Multidriver.ini`. |
+
+!!! warning "La chiave fidelity deve corrispondere alla cassa"
+
+    Con lo XON/XOFF e con il Multidriver Facile non può chiedere alla cassa se
+    l'opzione è accesa: lo legge dal file, e si fida.
+
+    - `fidelity = 1` con l'opzione **spenta** sulla cassa: il registratore
+      rifiuta i comandi mandati dopo il pagamento, a scontrino già emesso.
+    - `fidelity = 0` con l'opzione **accesa** sulla cassa: lo scontrino resta in
+      attesa della chiusura, e va chiuso dalla tastiera della cassa.
+
+    Quando si accende o si spegne l'opzione sul registratore, va cambiata
+    anche la chiave nel file.
+
+I codici a barre sono EAN-13: il registratore li stampa solo se completi della
+cifra di controllo, che Facile aggiunge da solo.
 
 ## Protocollo XON/XOFF
 
@@ -80,6 +253,7 @@ della cartella `cfg` di Facile. Puoi partire dal
 | `[OPTIONS]` | `COL_PRIMA_RIGA` | 24 | Caratteri della riga di vendita. |
 | `[OPTIONS]` | `COL_RIGHE_AGG` | 24 | Caratteri delle righe di descrizione aggiuntive. |
 | `[OPTIONS]` | `delay_time` | 0 | Pausa fra due comandi, in millisecondi. Lasciala a 0 e alzala solo se il registratore perde battute o risponde con l'errore 24. |
+| `[OPTIONS]` | `fidelity` | 0 | `1` se sulla cassa è accesa l'[opzione FIDELITY](#lopzione-fidelity), `0` se è spenta. Deve corrispondere alla cassa: vedi [Punti fidelity, codice a barre e buoni sconto](#punti-fidelity-codice-a-barre-e-buoni-sconto). |
 | `[PAGAMENTI]` | vedi sotto | — | Le forme di pagamento del registratore. |
 
 Le colonne sono 24 su tutti e due i modelli; il documento gestionale accetta
@@ -211,6 +385,7 @@ anche le configurazioni per seriale, USB e rete.
 | `[OPTIONS]` | `SERIAL`, `SERIALCONF` | Numero della porta seriale e parametri, per esempio `9600,N,8,1`. |
 | `[OPTIONS]` | `COL_PRIMA_RIGA` | Caratteri della riga di vendita; se manca, 35. |
 | `[OPTIONS]` | `COL_RIGHE_AGG` | Caratteri delle righe aggiuntive; se manca, 25. |
+| `[OPTIONS]` | `fidelity` | `1` se sulla cassa è accesa l'[opzione FIDELITY](#lopzione-fidelity), `0` (predefinito) se è spenta. Deve corrispondere alla cassa: vedi [Punti fidelity, codice a barre e buoni sconto](#punti-fidelity-codice-a-barre-e-buoni-sconto). |
 | `[PAGAMENTI]` | vedi sotto | Le forme di pagamento del registratore. |
 
 !!! warning "Le cartelle devono coincidere"
@@ -256,7 +431,6 @@ valori di fabbrica.
 
 - **Leggere il numero dello scontrino:** il Multidriver non lo restituisce, e
   il numero lo conta Facile.
-- **Il codice a barre sullo scontrino** non viene stampato con il Multidriver.
 
 ??? note "Per l'assistenza: i comandi inviati con il Multidriver"
 
@@ -304,6 +478,7 @@ stessa **Porta**:
 | `RCH XON / XOFF (9600,N,8,1)` | `RCH XON/XOFF` |
 | `RCH XON / XOFF LAN` | `RCH XON/XOFF LAN` |
 | `RCH MULTIDRIVER SERVER` | `RCH MULTIDRIVER SERVER` |
+| `RCH WEB SERVICE` | `RCH WEB SERVICE` |
 
 Le due righe del display funzionano su tutti e due i modelli. La parola TOTALE non è ammessa nei messaggi e viene
 sostituita.
@@ -314,6 +489,7 @@ sostituita.
 |---|---|
 | Il traffico verso il registratore | `log\socket_log.txt`, con il log seriale attivo nelle impostazioni |
 | Gli esiti del Multidriver | `log\multidriver_log.txt`, con il log seriale attivo |
+| Comandi e risposte del web service | `log\rch_webservice_log.txt`, con il log seriale attivo |
 | Il log del Multidriver | Il file indicato in `LOGPATH` del file `multidriver.xml` del Multidriver, con `LOG=1` |
 | I comandi di uno scontrino non consegnato | Nella cartella `PATH_IN`, un file `SCO<postazione>-<progressivo>.cmd` |
 
@@ -334,6 +510,14 @@ forma di pagamento. Sono quei numeri che vanno scritti nella sezione
 |---|---|---|
 | *Attenzione! Il driver della cassa ha segnalato un errore: … Controllare la stampa prima di proseguire.* | Con il Multidriver, il registratore ha rifiutato lo scontrino o non è stato raggiungibile; al posto dei puntini c'è il testo dell'errore, vedi la tabella qui sotto. | Controlla che cosa è stato stampato. Facile non ristampa da solo: se lo scontrino non è uscito, ripetilo. |
 | *Impossible Eseguire il protocollo di Shell!* | Il Multidriver non si è potuto avviare. | Controlla `PATH_EXE` in `RCH_Multidriver.ini`. |
+| *Sulla cassa va attivata la risposta estesa del web service: SERVICE, Connettivita', Ethernet, WEBSRV: Risp. estesa = SI, Protocollo PC = STANDARD* | Con il web service, il registratore non riporta nella risposta numero, chiusura e stato. | Sul registratore: **SERVICE ▸ Connettività ▸ Ethernet**, **Protocollo PC** su **STANDARD** e **WEBSRV: Risp. estesa?** su **SI**. |
+| *Indirizzo della cassa non configurato in cfg\RCH_WebService.ini* | Nel file manca l'indirizzo del registratore. | Scrivi l'indirizzo nella chiave `ip`. |
+| *Cassa non raggiungibile all'indirizzo … (…): non e' stato eseguito niente* | Con il web service, il registratore è spento o non è in rete. | Controlla che sia acceso e collegato, e l'indirizzo in `RCH_WebService.ini`. Non è stato stampato niente: si può riprovare. |
+| *La cassa e' occupata: non e' stato eseguito niente. Riprovare fra poco* | Il registratore sta ancora lavorando. | Aspetta qualche secondo e riprova. |
+| *Stampante della cassa: … Non e' stato stampato niente* | Carta esaurita, coperchio aperto o stampante in errore; al posto dei puntini c'è il motivo. | Sistema la stampante della cassa e riprova. |
+| *Sulla cassa c'e' gia' un documento aperto (…): chiuderlo o annullarlo dalla cassa, poi riprovare. Non e' stato stampato niente* | Sul registratore è rimasto aperto un documento, per esempio iniziato dalla tastiera. | Chiudilo o annullalo dalla tastiera della cassa, poi riprova. |
+| *Errore E… … al comando … di … (…). Il documento in corso e' stato annullato: non e' stato emesso nessun documento* | Il registratore ha rifiutato un comando dello scontrino; il messaggio riporta il codice e la descrizione dell'errore e il comando rifiutato. Facile ha annullato il documento rimasto aperto. | Leggi l'errore: per esempio *E16 DOCUMENTO NON RETTIFICABILE O NON ANNULLABILE* su un reso vuol dire che numero, azzeramento o data dello scontrino originale sono sbagliati. Poi **Riprova** o **Annulla**. |
+| *La risposta della cassa non e' arrivata (…) … controllare sulla cassa se l'operazione e' stata registrata prima di riprovare* | La rete è caduta mentre lo scontrino partiva, e Facile non riesce a stabilire dalla cassa se è uscito. | Guarda sulla cassa se lo scontrino è stato stampato. Con **Riprova** Facile ricontrolla sulla cassa prima di rimandare qualcosa. |
 | *Errore ! La lettura dei reparti non e' prevista dai registratori RCH collegati in XON/XOFF* | Con lo XON/XOFF hai chiesto la lettura o l'azzeramento dei reparti, che il registratore non prevede. | Premi **Annulla**: **Riprova** ripropone lo stesso messaggio. |
 
 I testi d'errore più comuni del Multidriver, in italiano o in inglese secondo la
