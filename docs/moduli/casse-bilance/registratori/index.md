@@ -15,7 +15,7 @@ registratore stampa e trasmette i corrispettivi.
 
     - **Dove si sceglie:** Menu ▸ Utility ▸ [Impostazioni Postazione](../../utility/impostazioni-postazione.md), campo **Stampante Fiscale**
     - **Vale per:** la sola postazione su cui lo imposti
-    - **Pagine dei modelli:** [Micrelec](micrelec.md), [RCH](rch.md); le casse 3i e le casse DTR sono qui sotto: [3i](#le-casse-3i), [DTR](#le-casse-dtr)
+    - **Pagine dei modelli:** [Custom](custom.md), [Micrelec](micrelec.md), [RCH](rch.md); le casse 3i e le casse DTR sono qui sotto: [3i](#le-casse-3i), [DTR](#le-casse-dtr)
 
 ---
 
@@ -43,8 +43,9 @@ l'apparecchio.
 | `ALTRA NON IN ELENCO` | Un modello non gestito direttamente. |
 | `DITRON` | — |
 | `DITRON SPOOLER` | — |
-| `CUSTOM XON / XOFF (19200,N,8,1)` | Seriale |
-| `CUSTOM PROTOCOL` | — |
+| `CUSTOM XON / XOFF (19200,N,8,1)` | Seriale — vedi [Custom](custom.md) |
+| `CUSTOM PROTOCOL` | — vedi [Custom](custom.md) |
+| `CUSTOM WEB SERVICE` | Rete, con il web service del registratore, **in versione beta** — vedi [Custom](custom.md#web-service) |
 | `EPSON FP (9600,N,8,1)` | Seriale |
 | `EPSON FP (57600,N,8,1)` | Seriale |
 | `3I XON / XOFF (9600,N,8,1)` | Seriale |
@@ -336,6 +337,7 @@ come `SendString:`, come se l'avesse mandato Facile.
 
 ## Vedi anche
 
+- [Custom](custom.md)
 - [Micrelec](micrelec.md)
 - [RCH](rch.md)
 - [Impostazioni Postazione](../../utility/impostazioni-postazione.md)

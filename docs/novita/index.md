@@ -35,6 +35,20 @@ stanno nel file `RCH_WebService.ini`. Il manuale dice
 [con quali modelli](../moduli/casse-bilance/registratori/rch.md#quali-modelli)
 si può usare.
 
+**[Registratori Custom con il web service (versione beta)](../moduli/casse-bilance/registratori/custom.md#web-service).**
+In **Stampante Fiscale** c'è la voce nuova `CUSTOM WEB SERVICE`, per i
+registratori Custom di terza generazione collegati in rete (K3, Q3X, P3-N,
+JSmart, Big Plus, KubeX, VKP80III, Fusion, Edge): Facile manda al registratore
+lo scontrino intero, senza programmi da installare, e il registratore
+risponde. Facile sa se lo scontrino è uscito prima di registrare la vendita,
+mostra l'errore della cassa con il suo codice e la sua descrizione, annulla da
+solo un documento rimasto aperto, e registra su ogni scontrino il numero,
+l'azzeramento e la matricola letti dalla macchina. Indirizzo e forme di
+pagamento stanno nel file
+[Custom_WebService.ini](../assets/modelli/Custom_WebService.ini), che si scarica
+dal manuale. Il collegamento è in **versione beta**: è scritto sul manuale del
+costruttore e va collaudato sul registratore prima dell'uso.
+
 ### Miglioramenti
 
 - **Pos Touchscreen, matricola del registratore.** All'apertura il Pos chiede
@@ -78,6 +92,15 @@ si può usare.
   controllo, senza la quale il registratore non li stampava. Con lo XON/XOFF e
   con il Multidriver l'opzione si dichiara con la nuova chiave `fidelity` di
   `rch.ini` e di `RCH_Multidriver.ini`, che deve corrispondere alla cassa.
+
+- [Registratori telematici Custom](../moduli/casse-bilance/registratori/custom.md),
+  voci `CUSTOM XON / XOFF (19200,N,8,1)` e `CUSTOM PROTOCOL`: il non riscosso
+  generico ora arriva al registratore (prima lo scontrino restava aperto); il
+  versamento e il prelievo di cassa vengono mandati al registratore; i buoni
+  pasto con più buoni portano l'importo totale; con `CUSTOM PROTOCOL` lo
+  scontrino si registra con il numero e l'azzeramento letti dal registratore;
+  la ricevuta del POS bancario sulle casse collegate in seriale non viene più
+  mandata a un collegamento di rete che non c'è.
 
 ## Versione 2026 B10.00
 

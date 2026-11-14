@@ -314,6 +314,7 @@ nav:
       # Utility > Impostazioni Postazione. Il ramo sta qui perche' e' dove lo si cerca.
       - Registratori telematici:
           - moduli/casse-bilance/registratori/index.md
+          - Custom: moduli/casse-bilance/registratori/custom.md
           - Micrelec: moduli/casse-bilance/registratori/micrelec.md
           - RCH: moduli/casse-bilance/registratori/rch.md
       # Casse automatiche non e' una voce del menu: si sceglie in Impostazioni Postazione.
