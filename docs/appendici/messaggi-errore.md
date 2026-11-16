@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-16 — **1206 messaggi**.
+Aggiornato al 2026-11-16 — **1207 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -726,6 +726,7 @@ Aggiornato al 2026-11-16 — **1206 messaggi**.
 | *In archivio è già presente un record con lo stesso codice.* | [Trasportatori](../moduli/anagrafiche/trasportatori.md) | Il codice digitato è già di un altro trasportatore. | Cambia codice. |
 | *In archivio è già presente un record con lo stesso codice.* | [Unità di misura](../moduli/magazzino/unita-di-misura.md) | Il codice digitato è già di un'altra unità. | Cambia codice. |
 | *In archivio è già presente un record con lo stesso codice.* | [Zone](../moduli/anagrafiche/zone.md) | Il codice digitato è già di un'altra zona. | Cambia codice. |
+| *Indicare come paga il cliente!<br><br>Scrivere l'importo in Contante, in Pagamento Elettronico o in entrambi.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Solo Taglie e Colori - Calzature. Hai premuto **F2 - OK** senza scrivere nessun pagamento. | Scrivi l'importo in **Contante**, in **Pagamento Elettronico** o in entrambi, poi premi di nuovo **F2 - OK**. |
 | *Indicare il Metodo solo se acconto diverso da Zero!* | [Liquidazione IVA e ventilazione](../moduli/contabilita/liquidazione-iva.md) | Si è indicato il metodo di calcolo dell'acconto senza avere un acconto. | Azzera il metodo, oppure indica l'acconto. |
 | *Indicare il tipo di pagamento !* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Manca il [tipo di pagamento](../moduli/contabilita/tipi-di-pagamento.md). | Va indicato: da lì nascono le scadenze. |
 | *Indicare la data di inizio di applicazione del regime Iva per Cassa. …* | [Ditte](../moduli/anagrafiche/ditte.md) | È stata attivata l'IVA per cassa senza indicare la decorrenza. | Indica la data. |

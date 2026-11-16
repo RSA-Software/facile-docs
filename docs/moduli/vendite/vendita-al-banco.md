@@ -198,8 +198,11 @@ alla cassa.
 | **Resto** | Il resto da dare. Lo calcola il programma. |
 
 **Solo Taglie e Colori - Calzature.** Con la fidelity della variante la riga
-si chiama **Bollini Premio** e ha un riquadro solo, e **Pagamento
-Elettronico**, **Assegni** e **Credito** non si compilano.
+si chiama **Bollini Premio** e ha un riquadro solo, e **Assegni** e
+**Credito** non si compilano. Come paga il cliente lo indichi sempre tu:
+scrivi l'importo in **Contante**, in **Pagamento Elettronico** o in entrambi.
+Con i pagamenti tutti vuoti **F2 - OK** non emette lo scontrino. I resi non
+hanno questo obbligo.
 
 Quando i pagamenti non coprono il totale, in fondo compare in rosso
 **F9 - Importo Rimanente** con la cifra che manca: ++f9++ sul campo di un
@@ -608,6 +611,7 @@ del cliente deve essere di 11 o 16 caratteri!*. Tutti finiscono con
 | *L'ultimo scontrino emesso è stato un reso di € …<br><br>Vuoi utilizzare l'importo per il pagamento?* | Aprendo la [chiusura dello scontrino](vendita-al-banco.md#la-chiusura-dello-scontrino), l'ultimo scontrino di quel foglio era un reso non ancora usato. | **Sì** lo mette in **Totale Reso** e in **Contante**. **No** chiede se dimenticarlo. |
 | *Vuoi azzerare l'importo dell'ultimo reso?* | Hai risposto **No** alla domanda precedente. | **Sì** lo dimentica; **No** lo ripropone alla chiusura successiva. |
 | *Sono stati utilizzati troppi metodi di pagamento!<br><br>Correggere gli importi per proseguire.* | Un pagamento copre già da solo tutto il totale, ma ne sono indicati anche altri. | Lascia solo quello, o dividi il totale fra i pagamenti. |
+| *Indicare come paga il cliente!<br><br>Scrivere l'importo in Contante, in Pagamento Elettronico o in entrambi.* | Solo Taglie e Colori - Calzature. Hai premuto **F2 - OK** senza scrivere nessun pagamento. | Scrivi l'importo in **Contante**, in **Pagamento Elettronico** o in entrambi, poi premi di nuovo **F2 - OK**. |
 | *Si è in presenza di resto con pagamenti diversi da contante!<br><br>Vuoi proseguire?* | Il resto supera i 100 euro, e fra i pagamenti c'è un pagamento elettronico, un assegno o un credito. | Quasi sempre un importo è sbagliato: la risposta proposta è **No**. |
 | *Si è in presenza di resto superiore ai 100,00<br><br>Vuoi proseguire?* | Il resto supera i 100 euro. | Controlla il contante digitato. La risposta proposta è **No**. |
 | *Errore di Comunicazione con la Cassa !<br><br>Scegliere SI per effettuare lo scarico dei prodotti o NO per interrompere l'operazione.* | La cassa non ha risposto mentre lo scontrino veniva emesso. | **No**, la risposta proposta, ferma tutto. **Sì** scarica il magazzino anche se lo scontrino non è uscito: guarda prima il display della cassa. |
