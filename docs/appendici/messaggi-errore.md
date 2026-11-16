@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-14 — **1205 messaggi**.
+Aggiornato al 2026-11-16 — **1206 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -787,6 +787,7 @@ Aggiornato al 2026-11-14 — **1205 messaggi**.
 | *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | [Licenza](../moduli/utility/gestione-licenza.md) | Si usa una funzione di un modulo a pagamento che questo PC non ha. Il nome cambia con il modulo (connettore e-commerce, casse automatiche, scambio dati FTP, etichette elettroniche). | Contatta R.S.A. per il modulo; se è già acquistato, richiedilo con **Richiedi modulo**. |
 | *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | [Ricezione dati](../moduli/trasferimenti/ricezione-dati.md) | **Ricezione Movimenti di Vendita** e **Aggiornamento Listino** dal server FTP della ditta (senza *Abilita tabacchi*): ognuna richiede il modulo a pagamento *scambio dati FTP* su questo PC. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../moduli/utility/gestione-licenza.md). |
 | *La funzione scambio dati FTP non è abilitata su questo PC. Per abilitarla rivolgiti a R.S.A. Software: rsa@rsaweb.com, tel. 0941 563653.* | [Scambio degli ordini con l'esterno](../moduli/ordini/scambio-ordini.md) | **Ricezione Ordini da Facile Mobile**, **Ricezione Ordini dal Server FTP** e **Invio Ordini al Server**: ognuna richiede il modulo a pagamento *scambio dati FTP* su questo PC. | Contatta R.S.A.; se il modulo è già acquistato, richiedilo dalla finestra [Licenza](../moduli/utility/gestione-licenza.md). |
+| *La lettura dei reparti non e' prevista dal web service dei registratori RCH* | [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md) | Con `RCH WEB SERVICE` hai chiesto la lettura o l'azzeramento dei reparti. | Non applicabile: usa la lettura giornaliera, oppure leggi i reparti dalla tastiera del registratore. |
 | *La lettura del peso non è disponibile per la bilancia impostata nella postazione.* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Con **Acq. Peso**, la bilancia della postazione è di un tipo da cui la riga del documento non sa leggere il peso (OMEGA CHECKOUT). | Scrivi la quantità a mano. |
 | *La licenza precedente di questo PC non è più valida: inserisci il seriale.* | [Licenza](../moduli/utility/gestione-licenza.md) | Il passaggio automatico non è possibile. | Attiva il PC con il seriale. |
 | *La licenza è corrotta. Contatta RSA Software.* | [Licenza](../moduli/utility/gestione-licenza.md) | La licenza non è più valida per questo programma. | Contatta R.S.A. |

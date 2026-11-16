@@ -92,6 +92,15 @@ costruttore e va collaudato sul registratore prima dell'uso.
   controllo, senza la quale il registratore non li stampava. Con lo XON/XOFF e
   con il Multidriver l'opzione si dichiara con la nuova chiave `fidelity` di
   `rch.ini` e di `RCH_Multidriver.ini`, che deve corrispondere alla cassa.
+- [Registratori telematici RCH](../moduli/casse-bilance/registratori/rch.md),
+  voce `RCH WEB SERVICE`: la lettura e l'azzeramento dei reparti, che il web
+  service non prevede, ora danno un messaggio chiaro invece dell'errore 101
+  della cassa; gli errori 101 e 103 del registratore hanno la loro
+  descrizione. Con tutte le voci RCH il riepilogo stampato del prelievo e del
+  versamento di cassa esce con le colonne allineate.
+- **Prelievo e versamento di cassa:** nella finestra dei tagli di banconote e
+  monete i pulsanti e i campi si vedono subito, senza doverci passare sopra con
+  il mouse.
 
 - [Registratori telematici Custom](../moduli/casse-bilance/registratori/custom.md),
   voci `CUSTOM XON / XOFF (19200,N,8,1)` e `CUSTOM PROTOCOL`: il non riscosso

@@ -55,6 +55,22 @@ e quello che il registratore risponde.
   RCH, ma restituisce un esito: Facile sa se lo scontrino è stato stampato e
   avvisa l'operatore in caso di errore o di fine carta.
 
+### Numero, azzeramento e matricola { #numero-azzeramento-e-matricola }
+
+Ogni scontrino salvato in Facile ha i campi **numero**, **azzeramento** e
+**matricola** del registratore, che servono per farne il reso o l'annullo.
+Facile li compila solo se il registratore glieli comunica:
+
+| Voce | Numero e azzeramento | Matricola |
+|---|---|---|
+| `RCH WEB SERVICE` | **Presenti:** letti dalla cassa a ogni scontrino. | Letta dalla cassa. |
+| `RCH XON / XOFF (9600,N,8,1)`, `RCH XON / XOFF LAN` | **Non indicati:** il registratore non risponde, i campi restano vuoti. | Quella delle Impostazioni Postazione. |
+| `RCH MULTIDRIVER SERVER` | **Non indicati:** il Multidriver non li restituisce, i campi restano vuoti. | Quella delle Impostazioni Postazione. |
+
+Quando non sono indicati, per il reso o l'annullo di uno scontrino numero e
+azzeramento vanno letti sullo scontrino di carta, nella parte finale, e
+scritti nella finestra del reso o dell'annullo.
+
 ### Quali modelli
 
 | Modello | `RCH WEB SERVICE` | `RCH XON / XOFF` | `RCH MULTIDRIVER SERVER` |
@@ -113,11 +129,13 @@ fine il registratore si riavvia da solo.
 Il nome inganna: questa opzione **non gestisce tessere né punti**, che restano
 di Facile. Decide solo se il programma può stampare qualcosa **in coda allo
 scontrino, dopo il pagamento**: è quello che serve per avere il **codice a
-barre dello scontrino dentro lo scontrino**.
+barre dello scontrino dentro lo scontrino**. Di fabbrica è **spenta**.
 
-Per accenderla:
+Per accenderla, sulla tastiera del registratore (Print!F RT; la procedura è al
+paragrafo 4.6 del manuale tecnico RCH):
 
-1. premi **5** e **[CHIAVE]**, poi **555** e **[CONTANTI]**;
+1. premi **5** e **[CHIAVE]**, poi **555** e **[CONTANTI]**: il registratore
+   entra in SERVICE (555 è la password di fabbrica);
 2. premi **[PREZZO REPARTO]** più volte, finché il display mostra
    **OPZIONE FIDELITY**, e conferma con **[CONTANTI]**;
 3. alla domanda **OPZIONE FIDELITY ?** premi **[REPARTO]** per scegliere **SI**
@@ -125,10 +143,24 @@ Per accenderla:
 4. premi **[STORNO]** per uscire dal menu e **1** **[CHIAVE]** per tornare in
    registrazione.
 
-Di fabbrica è spenta. Con l'opzione accesa, dopo il pagamento il registratore
-**aspetta un comando di chiusura** prima di terminare lo scontrino: Facile lo
-manda da solo, ma chi batte uno scontrino a mano dalla tastiera della cassa
-deve chiuderlo lui. Che cosa cambia in Facile è spiegato in
+Per spegnerla si rifà lo stesso giro scegliendo **NO**.
+
+Con l'opzione accesa, dopo il pagamento il registratore **aspetta un comando
+di chiusura** prima di terminare lo scontrino. Facile lo manda da solo. Uno
+scontrino battuto a mano dalla tastiera della cassa, invece, si chiude con un
+**doppio clic veloce sul tasto di avanzamento carta** (FEED).
+
+Dopo aver acceso o spento l'opzione sul registratore:
+
+- con `RCH WEB SERVICE` non c'è altro da fare, perché Facile se ne accorge da
+  solo;
+- con lo XON/XOFF e con il Multidriver va cambiata anche la chiave `fidelity`
+  nel file di configurazione, `1` per accesa e `0` per spenta, e poi va
+  riaperto il Pos di Facile. I file da scaricare ([rch.ini](../../../assets/modelli/rch.ini),
+  [RCH_Multidriver.ini](../../../assets/modelli/RCH_Multidriver.ini)) hanno
+  la stessa spiegazione nei commenti.
+
+Che cosa cambia negli scontrini è spiegato in
 [Punti fidelity, codice a barre e buoni sconto](#punti-fidelity-codice-a-barre-e-buoni-sconto).
 
 ### La matricola
@@ -192,6 +224,9 @@ cassa.
 ### Cosa non si può fare
 
 - **Fattura su cassa:** non è prevista sui registratori telematici.
+- **Lettura e azzeramento dei reparti:** il registratore li scarica solo su un
+  collegamento diretto con il computer, non dal web service. Facile non manda
+  il comando e lo dice. La lettura e la chiusura giornaliera funzionano.
 - **Usare insieme lo XON/XOFF in rete:** vedi l'avvertenza in
   [Quale collegamento scegliere](#quale-collegamento-scegliere).
 
@@ -221,11 +256,16 @@ Come Facile sa se l'opzione è accesa:
 
     - `fidelity = 1` con l'opzione **spenta** sulla cassa: il registratore
       rifiuta i comandi mandati dopo il pagamento, a scontrino già emesso.
-    - `fidelity = 0` con l'opzione **accesa** sulla cassa: lo scontrino resta in
-      attesa della chiusura, e va chiuso dalla tastiera della cassa.
+    - `fidelity = 0` con l'opzione **accesa** sulla cassa: la cassa taglia la
+      carta subito dopo il pagamento e stampa dopo, senza tagliare, la parte
+      finale con matricola, azzeramento e numero del documento. Lo scontrino
+      (o il reso) è emesso, ma quella parte resta dentro la stampante e si vede
+      solo facendo avanzare la carta.
 
     Quando si accende o si spegne l'opzione sul registratore, va cambiata
-    anche la chiave nel file.
+    anche la chiave nel file, e poi va riaperto il Pos. Uno scontrino rimasto
+    in attesa della chiusura si chiude dalla cassa con un doppio clic veloce
+    sul tasto di avanzamento carta.
 
 I codici a barre sono EAN-13: il registratore li stampa solo se completi della
 cifra di controllo, che Facile aggiunge da solo.
@@ -299,7 +339,10 @@ solo, senza bisogno di intervenire sulla tastiera della cassa.
 
 - **Leggere lo stato della cassa.** Con lo XON/XOFF il registratore non
   risponde: Facile non legge matricola, numero dell'ultimo scontrino né
-  ultimo azzeramento. Il numero degli scontrini lo conta Facile.
+  ultimo azzeramento. Sugli scontrini salvati in Facile numero e azzeramento
+  restano vuoti: per un reso o un annullo vanno letti sullo scontrino di carta
+  e scritti nella finestra del reso o dell'annullo (vedi
+  [Numero, azzeramento e matricola](#numero-azzeramento-e-matricola)).
 - **Vedere gli errori del registratore.** Un comando rifiutato si vede sul
   display e sulla stampa della cassa, non in Facile.
 - **Righe a doppia altezza o in grassetto** nei documenti gestionali: il
@@ -429,8 +472,9 @@ valori di fabbrica.
 
 ### Cosa non si può fare
 
-- **Leggere il numero dello scontrino:** il Multidriver non lo restituisce, e
-  il numero lo conta Facile.
+- **Leggere numero e azzeramento dello scontrino:** il Multidriver non li
+  restituisce, quindi sugli scontrini salvati in Facile restano vuoti (vedi
+  [Numero, azzeramento e matricola](#numero-azzeramento-e-matricola)).
 
 ??? note "Per l'assistenza: i comandi inviati con il Multidriver"
 
@@ -519,6 +563,7 @@ forma di pagamento. Sono quei numeri che vanno scritti nella sezione
 | *Errore E… … al comando … di … (…). Il documento in corso e' stato annullato: non e' stato emesso nessun documento* | Il registratore ha rifiutato un comando dello scontrino; il messaggio riporta il codice e la descrizione dell'errore e il comando rifiutato. Facile ha annullato il documento rimasto aperto. | Leggi l'errore: per esempio *E16 DOCUMENTO NON RETTIFICABILE O NON ANNULLABILE* su un reso vuol dire che numero, azzeramento o data dello scontrino originale sono sbagliati. Poi **Riprova** o **Annulla**. |
 | *La risposta della cassa non e' arrivata (…) … controllare sulla cassa se l'operazione e' stata registrata prima di riprovare* | La rete è caduta mentre lo scontrino partiva, e Facile non riesce a stabilire dalla cassa se è uscito. | Guarda sulla cassa se lo scontrino è stato stampato. Con **Riprova** Facile ricontrolla sulla cassa prima di rimandare qualcosa. |
 | *Errore ! La lettura dei reparti non e' prevista dai registratori RCH collegati in XON/XOFF* | Con lo XON/XOFF hai chiesto la lettura o l'azzeramento dei reparti, che il registratore non prevede. | Premi **Annulla**: **Riprova** ripropone lo stesso messaggio. |
+| *La lettura dei reparti non e' prevista dal web service dei registratori RCH* | Con `RCH WEB SERVICE` hai chiesto la lettura o l'azzeramento dei reparti. | Non applicabile: usa la lettura giornaliera, oppure leggi i reparti dalla tastiera del registratore. |
 
 I testi d'errore più comuni del Multidriver, in italiano o in inglese secondo la
 lingua impostata nel Multidriver:
