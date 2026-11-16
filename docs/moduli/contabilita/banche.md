@@ -153,19 +153,17 @@ Valgono inoltre:
 
 !!! warning "Le coordinate non vengono controllate: copiale, non ricostruirle"
 
-    Il programma non calcola il **CIN** e non verifica l'**IBAN**: quello che
-    scrivi viene registrato così com'è. Un CIN sbagliato o un IBAN a cui manca
-    una cifra non fanno scattare nessun avviso qui.
+    Il programma non calcola il **CIN** e dell'**IBAN** controlla solo il
+    carattere di verifica, senza impedire il salvataggio: quello che scrivi
+    viene registrato così com'è. Un CIN sbagliato non fa scattare nessun
+    avviso qui.
 
     Il posto dove poi si vede sono i documenti che escono, e lì i controlli
     sono di forma, non di correttezza:
 
-    - sulla **fattura elettronica** l'IBAN viene riportato **solo se supera i
-      26 caratteri**. Uno più corto — perché incompleto, o perché è stato
-      scritto solo il numero di conto — viene semplicemente **omesso, senza
-      dirlo**: la fattura parte priva delle coordinate;
-    - se l'IBAN contiene **spazi**, il programma avverte con *Presenza di spazi
-      nell'IBAN : devono essere rimossi!* e lascia scegliere se proseguire;
+    - sulla **fattura elettronica** l'IBAN viene riportato **solo se ha la
+      forma prevista dal tracciato** (vedi più sotto). Se non ce l'ha,
+      l'esportazione lo segnala e la fattura parte priva delle coordinate;
     - **ABI** e **CAB** vengono riportati **solo se sono esattamente di cinque
       cifre**. Con quattro cifre, o con uno zero iniziale perso, non compaiono;
     - il **CIN** sulla fattura elettronica non viene riportato mai: serve solo
@@ -187,14 +185,31 @@ Valgono inoltre:
     un IBAN valido ma di un' altra banca passa il controllo senza
     obiezioni.
 
-!!! warning "Un IBAN incompleto non finisce nella fattura elettronica"
+!!! warning "Un IBAN scritto male non finisce nella fattura elettronica"
 
-    Nella fattura elettronica l' IBAN viene scritto solo se è lungo almeno
-    27 caratteri, che è la misura di quelli italiani. Se è più corto
-    l' esportazione lo segnala e la fattura parte **senza IBAN**.
+    Nella fattura elettronica l' IBAN viene scritto se ha la forma che il
+    tracciato prevede: **due lettere, due cifre e poi da 11 a 30 lettere o
+    cifre**, senza spazi, cioè da 15 a 34 caratteri in tutto. Passano quindi
+    anche gli IBAN esteri, per esempio quelli lituani di Revolut da 20
+    caratteri. Gli IBAN italiani, che iniziano con **IT**, devono avere
+    esattamente **27 caratteri**.
 
-    Riguarda anche gli IBAN esteri più corti di 27 caratteri, che sono
-    validi ma non vengono inseriti lo stesso.
+    Se l' IBAN non va bene, l' esportazione lo segnala con uno di questi
+    messaggi, chiede se continuare e, se rispondi **Sì**, la fattura parte
+    **senza IBAN**:
+
+    - *L' IBAN della banca ... contiene degli spazi e non verra' inserito
+      nella fattura: devono essere rimossi.* Togli gli spazi dall'IBAN;
+    - *L' IBAN della banca ... ha ... caratteri e non verra' inserito nella
+      fattura: gli IBAN italiani ne hanno 27.* Manca o avanza una cifra:
+      ricopia l'IBAN dall'estratto conto;
+    - *L' IBAN della banca ... non e' valido per la fattura elettronica e non
+      verra' inserito: deve avere 2 lettere, 2 cifre e da 11 a 30 lettere o
+      cifre.* L'IBAN è troppo corto, troppo lungo o contiene caratteri che non
+      sono lettere o cifre.
+
+    Nell'edizione web gli stessi messaggi compaiono tra gli errori
+    dell'esportazione.
 
 !!! note "Il CIN e il codice SWIFT non li usa nessuno"
 

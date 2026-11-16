@@ -111,6 +111,17 @@ costruttore e va collaudato sul registratore prima dell'uso.
   la ricevuta del POS bancario sulle casse collegate in seriale non viene più
   mandata a un collegamento di rete che non c'è.
 
+**Vendite**
+
+- Fattura elettronica: l'IBAN della banca nei dati di pagamento veniva
+  riportato solo se aveva almeno 27 caratteri, la misura degli IBAN italiani.
+  Gli IBAN esteri più corti, per esempio quelli lituani di Revolut da 20
+  caratteri, restavano fuori. Ora passa qualunque IBAN che abbia la forma
+  prevista dal tracciato della fattura elettronica; quelli italiani devono
+  avere esattamente 27 caratteri. Un IBAN con degli spazi non viene più
+  inserito dopo l'avviso, perché il Sistema di Interscambio lo scarterebbe. Vedi
+  [Banche](../moduli/contabilita/banche.md#note).
+
 ## Versione 2026 B10.00
 
 ### Nuove funzioni
