@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-16 — **1207 messaggi**.
+Aggiornato al 2026-11-16 — **1208 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -401,6 +401,7 @@ Aggiornato al 2026-11-16 — **1207 messaggi**.
 | *Errore su Movimento N. n !<br><br>Correggere il movimento e ricalcolare i saldi.<br><br>Vuoi Continuare ?* | [Manutenzione degli archivi](../moduli/utility/manutenzione-archivi.md) | Una registrazione non si riesce a riscrivere. | Prendi nota del numero. **Sì** va avanti con le altre, **No** si ferma. In ogni caso quel movimento va sistemato e il ricalcolo rifatto. |
 | *Esiste in archivio un buono di consegna in corso per il cliente !<br><br>Buono n. … del …<br><br>Vuoi accorpare i buoni ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Come sopra, per i buoni di consegna. | Come sopra: la risposta proposta è **No**. |
 | *Esiste in archivio un ordine in corso per il cliente !<br><br>Ordine n. … del …<br><br>Vuoi accorpare gli ordini ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è un ordine degli ultimi 30 giorni salvato e non ancora emesso: il messaggio dice quale. Gli ordini già emessi non vengono proposti. | La risposta proposta è **No**: nasce un ordine nuovo. **Sì** aggiunge le righe all'ordine indicato. Rispondi **Sì** solo se è proprio l'ordine che vuoi allungare. |
+| *Esiste in archivio un ordine in corso per il cliente !<br><br>Vuoi accorpare gli ordini ?* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Solo Taglie e Colori - Calzature. Con **F4 - Documenti** si emette un ordine, e per quel cliente c'è un ordine degli ultimi 30 giorni salvato **o già emesso**. Il messaggio non dice quale: è il più recente. | La risposta proposta è **Sì**: le righe si aggiungono a quell'ordine. Se era già emesso, l'emissione viene annullata e l'ordine torna da emettere. **No** crea un ordine nuovo. |
 | *Esistono diversi movimenti contabili per la Fattura N. …<br><br>Mov. Prima Nota N. …* | [Contabilizzazione dei documenti](../moduli/vendite/contabilizzazione-documenti.md) | Per quel documento ci sono più registrazioni. Ne vengono elencate fino a dieci. | Cancella quelle di troppo. |
 | *Esito della ricarica sconosciuto!<br><br>Se la ricarica e' ancora aperta, Ricarica Fondo Cassa la riprende.* | [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md) | Hai smesso di attendere senza sapere come è finita la ricarica. | Premi di nuovo **Ricarica Fondo Cassa**: se la ricarica è aperta, la riprende. |
 | *Esito dell'incasso sconosciuto!<br><br>Controllare la cassa automatica prima di ripetere l'operazione.* | [Cassa automatica CashDro](../moduli/casse-bilance/casse-automatiche/cashdro.md) | Hai smesso di aspettare la CashDro. | Guarda lo schermo della macchina prima di ripetere l'incasso: il cliente potrebbe aver già pagato. |
