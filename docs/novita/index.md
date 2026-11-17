@@ -60,6 +60,13 @@ costruttore e va collaudato sul registratore prima dell'uso.
   non la comunica, vale quella delle impostazioni; se manca anche quella, il Pos
   non si apre. Su una postazione nuova, con una cassa che comunica la matricola,
   non serve più scriverla a mano.
+- **Vendita al banco, documenti richiamati.** Quando con **F6 - Dati** si
+  richiamano righe senza codice articolo da un ordine, un preventivo o un DDT,
+  il programma avvisa e ne elenca descrizione e importo. Prima quelle righe,
+  per esempio le spese di spedizione di un ordine WooCommerce senza l'articolo
+  del trasporto, restavano fuori dal banco senza avviso e la fattura o lo
+  scontrino uscivano con un totale più basso dell'ordine. Vedi
+  [Vendita al banco e POS](../moduli/vendite/vendita-al-banco.md#fatturare-quello-che-e-sul-banco).
 
 ### Correzioni
 

@@ -443,12 +443,13 @@ esempio dopo aver battuto un codice che non è in archivio.
 
     Con **F6 - Dati** sul banco arrivano solo le righe che hanno un codice
     articolo. Le righe descrittive, cioè con la sola descrizione, restano sul
-    documento d'origine anche se hanno un prezzo, e il programma non lo
-    segnala. Capita con gli ordini arrivati dal negozio on line: le spese di
+    documento d'origine anche se hanno un prezzo: se fra le righe scelte ce
+    n'è qualcuna, il programma lo dice ed elenca descrizione e importo di
+    ciascuna. Capita con gli ordini arrivati dal negozio on line: le spese di
     spedizione, gli sconti o un prodotto che in Facile non esiste entrano come
-    righe descrittive quando manca l'articolo su cui registrarli. Prima di
-    emettere il documento, confronta il totale del banco con quello
-    dell'ordine; per gli ordini WooCommerce, vedi come
+    righe descrittive quando manca l'articolo su cui registrarli. Se quelle
+    righe vanno nel documento, aggiungile sul banco con un articolo prima di
+    emetterlo; per gli ordini WooCommerce, vedi come
     [impostare l'articolo delle spese di trasporto](../ecommerce/woocommerce.md#gli-ordini).
 
 ### Incassare con la cassa automatica PagAmico
@@ -595,6 +596,7 @@ tolgono con il tasto **C** del tastierino, poi si riprende a lavorare.
 | *Registro Fatture PA non impostato su Ditta!* / *La Causale Contabile Fatture PA non è impostata o non è valida!* / *La Sezione sulla Causale Contabile Fatture PA non è impostata o non è valida!* | Hai risposto **Sì**, ma nella ditta manca uno dei dati per le fatture PA. Gli stessi tre avvisi esistono per le *Note Credito PA*. | Completa la ditta; intanto il documento resta sul registro e la causale normali. |
 | *Attenzione !<br><br>Sul foglio erano stati richiamati documenti di un altro cliente.<br><br>I riferimenti a quei documenti sono stati tolti: le righe restano sul foglio e vanno controllate prima di emettere il documento.* | Sul foglio hai preso le righe di un ordine, di un preventivo o di un DDT con **F6 - Dati**, e poi hai cambiato il cliente. Il documento che emetterai non riporterà più il numero, il pagamento, il destinatario e l'agente del documento richiamato, che erano dell'altro cliente. | Controlla le righe: sono ancora quelle del documento richiamato. Se non sono per questo cliente, abbandona la vendita e rifalla. Il messaggio può comparire anche alla pressione di **F4 - Documenti**: in quel caso il documento non viene emesso, e dopo il controllo basta premere di nuovo **F4**. |
 | *Attenzione!<br>L'ordine selezionato e' marcato come non frazionabile.* | L'ordine va consegnato tutto insieme. | Non si può evaderne una parte. |
+| *Attenzione !<br><br>Una riga del documento richiamato non ha il codice articolo e non e' stata presa:<br>…<br><br>Se deve andare nel documento, va aggiunta a mano con un articolo prima di emetterlo.* / *Attenzione !<br><br>… righe del documento richiamato non hanno il codice articolo e non sono state prese:<br>…<br><br>Se devono andare nel documento, vanno aggiunte a mano con un articolo prima di emetterlo.* | Con **F6 - Dati** hai scelto, insieme alle altre, righe che hanno solo la descrizione: sul banco arrivano solo le righe con un articolo. Il messaggio elenca descrizione e importo delle righe rimaste fuori, fino a dieci. Negli ordini arrivati dal negozio on line sono di solito le spese di spedizione, gli sconti o i prodotti che in Facile non esistono. | Se quelle righe vanno nel documento, aggiungile sul banco con un articolo prima di emetterlo, così il totale torna con quello del documento richiamato. Per gli ordini WooCommerce, imposta una volta per tutte [l'articolo delle spese di trasporto](../ecommerce/woocommerce.md#gli-ordini). |
 
 **Quando lo scontrino deve portare i dati del cliente** — fattura
 elettronica, lotteria, cliente estero — il programma li controlla tutti
