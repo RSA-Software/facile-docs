@@ -164,6 +164,38 @@ la riga entra descrittiva con l'IVA predefinita della ditta, così il totale
 dell'ordine torna comunque. Se le righe non arrivano al totale del negozio, il
 registro lo segnala.
 
+!!! warning "Imposta l'articolo delle spese di trasporto prima di importare"
+
+    Una riga descrittiva, cioè senza articolo, resta sull'ordine ma **non passa
+    in fattura né nello scontrino**: quando richiami l'ordine con **F6 - Dati**
+    dalla [vendita al banco](../vendite/vendita-al-banco.md#fatturare-quello-che-e-sul-banco),
+    sul banco arrivano solo le righe con un articolo. Le spese di spedizione
+    resterebbero fuori dal documento.
+
+    Per evitarlo:
+
+    1. In [Anagrafica articoli](../anagrafiche/anagrafica-articoli.md) crea un
+       articolo per le spese di trasporto, con l'aliquota IVA con cui le fatturi.
+       Se lo chiami `TRASPORTO` non serve altro.
+    2. Se preferisci un altro codice, scrivilo nel file `.ini` dell'operazione
+       **930**, nella cartella `cfg`:
+
+        ```ini
+        [ARTICOLI]
+        cod_spese_tra = CODICE_ARTICOLO
+        ```
+
+    3. Fai lo stesso per gli sconti e le commissioni, con l'articolo `SCONTO`
+       o con `cod_buono_sco`.
+    4. Al giro successivo controlla il registro dell'operazione: non devono più
+       comparire le righe *Codice articolo per spese di trasporto
+       (cod_spese_tra) non impostato…* o *…non trovato in archivio!*
+
+    L'impostazione vale per gli ordini importati da quel momento. Sugli ordini
+    già in archivio la riga delle spese resta descrittiva: aggiungi le spese
+    sul banco a mano, con l'articolo appena creato, prima di emettere la
+    fattura o lo scontrino.
+
 ## Messaggi del registro
 
 | Riga del registro | Che cosa significa |
@@ -172,7 +204,8 @@ registro lo segnala.
 | `Salto Ordine … (già trovato in archivio)` | L'ordine era già stato importato. |
 | `ORDER KEY - ordine non trovato` | Un ordine del negozio non ha il suo identificativo: l'importazione si ferma. |
 | `Ordine … : le righe differiscono dal totale del negozio di …` | Le righe importate non arrivano al totale dell'ordine sul negozio, per arrotondamenti o per voci che Facile non conosce: controlla l'ordine in Facile. |
-| `Codice articolo per spese di trasporto (cod_spese_tra) non impostato nel file di configurazione!` (e gli analoghi) | Manca una chiave della sezione `[ARTICOLI]`. |
+| `Codice articolo per spese di trasporto (cod_spese_tra) non impostato nel file di configurazione!` (e gli analoghi) | Manca una chiave della sezione `[ARTICOLI]`. Se non esiste nemmeno l'articolo `TRASPORTO` (o `SCONTO`), quelle righe entrano descrittive e non passano in fattura: vedi [Gli ordini](#gli-ordini). |
+| `Codice articolo per spese di trasporto (cod_spese_tra) non trovato in archivio!` (e l'analogo per il buono sconto) | Il codice scritto nella sezione `[ARTICOLI]` non corrisponde a un articolo: correggi il codice o crea l'articolo. |
 | `Articolo … : Nessuna risposta dal server` | Il negozio non ha risposto. |
 | `Impossibile aggiornare Art. … : …` | Il negozio ha rifiutato l'aggiornamento di un prodotto; segue il motivo. |
 | `Impossibile aggiornare Art. … - Disp. …` / `Impossibile aggiornare Art. … - Prezzo …` | Il negozio ha rifiutato la disponibilità o il prezzo. |

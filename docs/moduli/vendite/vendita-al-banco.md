@@ -439,6 +439,18 @@ esempio dopo aver battuto un codice che non è in archivio.
     foglio all'altro, ognuno ritrova i suoi. Se sul foglio cambi il cliente,
     quei riferimenti si tolgono e il programma lo dice.
 
+!!! warning "Dal documento richiamato arrivano solo le righe con un articolo"
+
+    Con **F6 - Dati** sul banco arrivano solo le righe che hanno un codice
+    articolo. Le righe descrittive, cioè con la sola descrizione, restano sul
+    documento d'origine anche se hanno un prezzo, e il programma non lo
+    segnala. Capita con gli ordini arrivati dal negozio on line: le spese di
+    spedizione, gli sconti o un prodotto che in Facile non esiste entrano come
+    righe descrittive quando manca l'articolo su cui registrarli. Prima di
+    emettere il documento, confronta il totale del banco con quello
+    dell'ordine; per gli ordini WooCommerce, vedi come
+    [impostare l'articolo delle spese di trasporto](../ecommerce/woocommerce.md#gli-ordini).
+
 ### Incassare con la cassa automatica PagAmico
 
 Con la cassa automatica **PAGAMICO**, scelta nelle [impostazioni della
