@@ -122,6 +122,18 @@ costruttore e va collaudato sul registratore prima dell'uso.
   inserito dopo l'avviso, perché il Sistema di Interscambio lo scarterebbe. Vedi
   [Banche](../moduli/contabilita/banche.md#note).
 
+**Trasferimenti**
+
+- [Esportazione Sellout - U.DI.AL](../moduli/trasferimenti/esportazione-documenti.md#note):
+  le righe date in omaggio venivano contate due volte, nella riga degli omaggi
+  e anche fra le vendite dello stesso articolo e canale; ora stanno solo nella
+  riga degli omaggi. Il totale delle vendite in euro non cambia, le quantità
+  vendute sì. Una vendita più piccola di una confezione usciva con quantità 0
+  accanto al suo importo: ora esce con quantità 1. Il codice a barre non
+  veniva mai riportato: ora esce l'ultimo EAN a 13 cifre dell'articolo, se
+  c'è. Sugli archivi PostgreSQL l'esportazione si fermava con un errore: ora
+  funziona.
+
 ## Versione 2026 B10.00
 
 ### Nuove funzioni

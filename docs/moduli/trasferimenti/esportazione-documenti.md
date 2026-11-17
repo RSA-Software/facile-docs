@@ -360,6 +360,23 @@ nella [sua pagina](esportazione-ddt-centrale-latte-salerno.md#controlli-e-messag
     dentro al file come numero della trasmissione — ma è un numero che si
     scrive a mano, non uno che il programma tiene.
 
+!!! note "U.DI.AL: codice a barre, omaggi e frazioni di confezione"
+
+    Nel file **U.DI.AL** ogni articolo venduto compare una volta per ogni
+    canale di vendita, con il codice **Udial** del
+    [canale](../altre-tabelle/canali-di-vendita.md) del cliente. Le righe date
+    in omaggio, cioè quelle a valore zero, vanno in una riga a parte segnata
+    `OM` e non sono contate anche fra le vendite.
+
+    Il tracciato vuole **confezioni intere**. Le quantità con i decimali
+    vengono arrotondate; una vendita più piccola di una confezione, per
+    esempio qualche bicchiere da un cartone, esce con quantità 1 e con il suo
+    importo vero, così la riga non ha un valore senza quantità.
+
+    Come codice a barre va l'**ultimo EAN a 13 cifre** inserito nei codici a
+    barre dell'articolo. I codici interni e gli EAN a 14 cifre non entrano:
+    se l'articolo ha solo quelli, il campo resta vuoto.
+
 ## Vedi anche
 
 - [Esportazioni con maschera propria](esportazioni-specifiche.md)
