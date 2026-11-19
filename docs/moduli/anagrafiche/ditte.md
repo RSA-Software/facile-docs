@@ -340,10 +340,22 @@ SMTP**, **Abilita Connessione SSL**, **Abilita Connessione TLS**, **Notifica al
 mittente**.
 
 **S M S** — **Provider SMS** (`SMS HOSTING (www.smshosting.it)`, `R&D
-COMMUNICATION (www.rdcom.it)`, `Leader Mobile (www.leadermobile.it)`), **EMail
-Provider**, **EMail Sender**, **Password** e **Gateway**
-(`INTERNAZIONALE`, `MEDIA QUALITA'`, `ALTA QUALITA'`, `ALTA QUALITA' +
-NOTIFICA`).
+COMMUNICATION (www.rdcom.it)`, `Leader Mobile (www.leadermobile.it)`,
+`OpenAPI (www.openapi.it)`), **EMail Provider**, **EMail Sender**,
+**Password** e **Gateway** (`INTERNAZIONALE`, `MEDIA QUALITA'`, `ALTA
+QUALITA'`, `ALTA QUALITA' + NOTIFICA`).
+
+I campi cambiano nome secondo il provider scelto:
+
+| Provider | Campi |
+|---|---|
+| SMS Hosting | **EMail Provider**, **EMail Mittente** |
+| R&D Communication | **Utente**, **Mittente**, **Password**, **Gateway** |
+| Leader Mobile | **Utente**, **Mittente**, **Password** |
+| OpenAPI | **Token**, **Mittente** |
+
+Con OpenAPI, nel campo **Token** si incolla il token creato nel proprio
+account OpenAPI, abilitato al servizio SMS. Password e gateway non servono.
 
 **P B X** — **Server PBX** e **Porta**. Riguardano una funzione dismessa: vedi
 [Rubrica](rubrica.md).

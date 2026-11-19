@@ -120,6 +120,20 @@ più, e si paga in più.
 | *Confermi l'invio dell' SMS ?* | Conferma prima di spedire. | La risposta preimpostata è **No**. |
 | *Per inviare il testo inserito è necessario inviare più di un messaggio ! Confermi l'invio di N SMS ?* | Il testo supera i 160 caratteri. | Confermando si spediscono — e si pagano — N messaggi. |
 | *Sms Provider non valido* | Nelle impostazioni della ditta non è indicato quale servizio SMS usare. | Va scelto fra quelli previsti; lo imposta l'assistenza insieme alle credenziali. |
+| *Il servizio SMS non ha accettato nessun destinatario: i numeri non sono validi.* | Solo con OpenAPI: nessuno dei numeri indicati (elencati sotto il messaggio) è un numero di telefono valido. Il messaggio non parte. | Correggere i numeri e rimandare. |
+| *Il messaggio è partito, ma questi numeri non sono validi e sono stati scartati :* | Solo con OpenAPI: il messaggio è arrivato agli altri destinatari, ma i numeri elencati sotto non sono validi. | Correggere quei numeri (in rubrica o nell'anagrafica del cliente) e rimandare solo a loro. |
+| *(il testo dell'errore del servizio SMS)* | Il servizio SMS ha rifiutato l'invio, per esempio per credito esaurito o per un token non valido. Con OpenAPI si vede la sua spiegazione. | Seguire l'indicazione del messaggio; per token e credito rivolgersi a chi gestisce l'account del servizio. |
+
+!!! note "Come scrivere i numeri"
+
+    I numeri si separano con la virgola o con il punto e virgola. Un numero
+    senza prefisso è considerato italiano; per l'estero il prefisso si scrive
+    con il `+` davanti.
+
+    Con OpenAPI il numero può contenere anche spazi, punti, barre e trattini,
+    e il prefisso estero si può scrivere anche con lo `00` davanti
+    (`+41 79 123 45 67`, `0041791234567`). Con gli altri servizi è meglio
+    scrivere solo le cifre.
 
 !!! note "L'invio programmato vale solo per il futuro"
 

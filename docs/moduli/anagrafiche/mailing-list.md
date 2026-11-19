@@ -191,7 +191,8 @@ La griglia ha queste colonne:
 !!! info "Il servizio SMS"
 
     Si configura sulla **ditta**, scheda *Server*: si sceglie il fornitore fra
-    quelli previsti e si compilano account, password e mittente. Gli SMS non
+    quelli previsti e si compilano le credenziali (account e password, o il
+    token con OpenAPI) e il mittente. Gli SMS non
     partono da Facile: li consegna quel fornitore, e vanno pagati a lui.
 
     Qui il comando di invio resta acceso anche se il fornitore non è stato
