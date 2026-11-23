@@ -16,9 +16,46 @@ una versione specifica del programma lo dicono in apertura, per esempio
 Non sono elencate le modifiche interne, che non cambiano nulla a video, e
 quelle dei prodotti che hanno un manuale proprio, come Hotel e RistoFacile.
 
-## Versione 2026 B11.00
+## Versione 2026 B11.01
 
 In preparazione.
+
+### Nuove funzioni
+
+**[Lotto e scadenza dal foglio Excel, e righe aggiornate invece che duplicate](../moduli/vendite/documento-di-vendita.md#importare-le-righe-da-un-foglio-excel).**
+L'importazione da **F7 - Dati ▸ Foglio Excel** nel corpo del documento legge
+due colonne nuove, `LOTTO` e `SCADENZA`: il lotto va sulla riga come se lo
+avessi scritto a mano, e se manca la scadenza si prende quella del lotto in
+archivio. Prima di scrivere, Facile controlla tutto il foglio e mostra le
+anomalie: articoli non trovati, righe senza quantità, lotti che non sono in
+archivio, scadenze diverse da quelle dei lotti o non leggibili. Puoi vederne
+l'elenco e fermarti senza che il documento cambi, oppure importare lo stesso:
+in quel caso i lotti che mancano vengono creati subito in archivio, con la
+scadenza del foglio.
+Se il documento ha già delle righe, Facile chiede se aggiornarle: con
+**Sì** ogni riga del foglio completa la riga dello stesso articolo con
+quantità, colli, lotto e scadenza, e tiene il suo prezzo; un articolo uscito
+con più lotti occupa una riga per lotto. È il caso di un ordine scaricato da
+Facile Mobile e completato in magazzino con i pezzi, i chili reali e i lotti:
+si reimporta nello stesso ordine, e da lì i lotti passano nel DDT e nella
+fattura. Il [modello del foglio](../assets/modelli/documento-righe-importazione.xlsx)
+ha le due colonne nuove. **Solo Ortofrutta:** la colonna `LOTTO` resta la
+partita di carico, come prima.
+
+### Correzioni
+
+- **SMS con OpenAPI.** I numeri si possono scrivere anche con spazi, punti,
+  trattini o con lo `00` davanti al prefisso estero: Facile li porta nel
+  formato che il servizio accetta, che prima scartava i numeri scritti in modo
+  diverso. Se alcuni destinatari non sono validi, il messaggio parte agli altri
+  e Facile elenca quelli scartati; se non ne resta nessuno, lo dice. Sugli
+  errori si legge la spiegazione del servizio invece del testo tecnico della
+  risposta. Con tutti i servizi, il punto e virgola separa i numeri come la
+  virgola, e i numeri scritti con il `+` davanti non si saldano più con il
+  successivo né perdono l'ultima cifra. Vedi
+  [SMS](../introduzione/menu-file-e-guida.md#sms).
+
+## Versione 2026 B11.00
 
 ### Nuove funzioni
 

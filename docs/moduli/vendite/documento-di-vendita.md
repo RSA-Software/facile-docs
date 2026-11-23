@@ -527,22 +527,121 @@ per posta, un elenco preparato dal fornitore, un conteggio di magazzino.
 5. Scegli il file, `.xlsx` o `.xls`. La ricerca parte dalla cartella `in`.
 6. Se il foglio non ha la colonna `PREZZO`, il programma avvisa che userà i
    prezzi del listino del documento: rispondi **Sì** per continuare.
-7. Solo negli **ordini a fornitore**: alla domanda *Vuoi inserire eventuali
+7. Se il documento ha già delle righe, il programma chiede se aggiornarle:
+   **Sì** completa le righe esistenti, come spiegato in
+   [Completare un ordine con le quantità reali e i lotti](#completare-un-ordine-con-le-quantita-reali-e-i-lotti);
+   **No** aggiunge le righe del foglio a quelle che ci sono; **Annulla** non
+   importa niente.
+8. Solo negli **ordini a fornitore**: alla domanda *Vuoi inserire eventuali
    articoli non piu' ordinabili nell'ordine?* rispondi **Sì** se vuoi ordinare
    anche gli articoli non più ordinabili, esclusi dai listini o tolti
    dall'assortimento del deposito; con **No**, già selezionato, restano fuori.
-8. Attendi la fine dell'importazione. La finestra di avanzamento mostra a che
-   punto è; **Esci** la interrompe, e le righe già importate restano.
-9. Leggi il riepilogo: righe importate, righe scartate senza quantità o perché
-   non più ordinabili, articoli non trovati. Se qualche riga non è entrata,
-   rispondi **Sì** alla domanda finale per vederne l'elenco, con il numero di
-   riga del foglio e il motivo.
+9. Il programma **controlla tutto il foglio prima di scrivere**: vedi
+   [Il controllo del foglio](#il-controllo-del-foglio). Se non trova
+   anomalie, passa subito all'importazione.
+10. Se trova anomalie, ne mostra i conti: rispondi **Sì** per vederne
+    l'elenco, con il numero di riga del foglio e il motivo. Poi, alla domanda
+    *Vuoi importare lo stesso il foglio Excel?*, rispondi **No** — già
+    selezionato — per correggere il foglio e riprovare: nel documento non è
+    cambiato niente. Con **Sì** l'importazione continua.
+11. Attendi la fine dell'importazione. La finestra di avanzamento mostra a che
+    punto è; **Esci** la interrompe, e le righe già importate restano.
+12. Leggi il riepilogo: quante righe sono entrate e quante righe del foglio
+    sono rimaste fuori.
 
 Le righe importate compaiono nel corpo del documento come quelle inserite a
-mano, con la descrizione dell'articolo. Si **aggiungono** a quelle già
-presenti: se ripeti l'importazione con lo stesso foglio, entrano tutte una
-seconda volta. Per recuperare le righe scartate, correggile in un foglio a
-parte con le sole righe mancanti, oppure aggiungile a mano.
+mano, con la descrizione dell'articolo. Se al passo 7 rispondi **No**, si
+**aggiungono** a quelle già presenti: ripetendo l'importazione con lo stesso
+foglio, entrano tutte una seconda volta. Per recuperare le righe scartate,
+correggile in un foglio a parte con le sole righe mancanti, oppure aggiungile
+a mano.
+
+#### Il controllo del foglio
+
+Prima di scrivere una sola riga, il programma legge tutto il foglio e cerca
+due tipi di anomalie.
+
+**Righe che non entrano.** Vengono lasciate fuori comunque, anche se
+confermi l'importazione:
+
+- l'articolo non è stato trovato, con il motivo quando il codice è stato
+  rovinato da Excel;
+- la quantità è zero o vuota;
+- solo negli ordini a fornitore, l'articolo non è più ordinabile e hai scelto
+  di non ordinarlo.
+
+**Righe che entrano come sono scritte.** Sono segnalate perché probabilmente
+nel foglio c'è un errore, ma se confermi l'importazione entrano con i dati
+del foglio:
+
+- **lotto non presente in archivio**: nessun carico ha mai portato quel lotto
+  per quell'articolo. Spesso è un errore di battitura. Se confermi
+  l'importazione, il lotto viene **creato subito in archivio**, con la
+  scadenza scritta nel foglio, così il documento si registra senza altri
+  errori;
+- **scadenza diversa da quella del lotto**: il lotto è in archivio con
+  un'altra scadenza. L'elenco riporta tutte e due le date. Sulla riga va
+  quella del foglio, e la scadenza del lotto in archivio non cambia;
+- **scadenza non leggibile**: la cella non contiene una data. Vale come
+  vuota, quindi si prende la scadenza del lotto, se il lotto è in archivio.
+
+Se rispondi **No** alla domanda *Vuoi importare lo stesso il foglio Excel?*
+il documento resta com'era e non viene creato nessun lotto: correggi il
+foglio e ripeti l'importazione.
+
+!!! warning "Un lotto creato dall'importazione non ha un carico"
+
+    Il lotto creato confermando l'importazione è un lotto nuovo a tutti gli
+    effetti: il documento di trasporto o la fattura lo scaricano dal
+    magazzino, ma nessun carico lo ha mai portato, quindi la sua giacenza va
+    sotto zero. Se era un errore di battitura, la merce risulta uscita da un
+    lotto che non esiste.
+    Prima di confermare, controlla nell'elenco i lotti segnalati.
+
+#### Completare un ordine con le quantità reali e i lotti
+
+Un ordine arrivato da Facile Mobile, o scritto a mano, si può far completare in
+magazzino su un foglio Excel e poi rileggere **nello stesso ordine**, senza
+duplicare le righe:
+
+1. Prepara il foglio con le colonne `CODICE`, `QUANTITA` e, secondo il caso,
+   `COLLI`, `LOTTO` e `SCADENZA`, e una riga per ogni lotto che esce. Non
+   mettere la colonna `PREZZO` se vuoi tenere i prezzi dell'ordine.
+2. Apri l'ordine, premi **F8 - Corpo**, poi **F7 - Dati ▸ Foglio Excel**, e
+   scegli il file.
+3. Alla domanda sul listino, per la colonna `PREZZO` che manca, rispondi
+   **Sì**.
+4. Alla domanda *Il documento contiene gia' delle righe.* rispondi **Sì**.
+5. Se il [controllo del foglio](#il-controllo-del-foglio) trova anomalie,
+   leggi l'elenco: lotti sconosciuti e scadenze diverse da quelle dei lotti
+   sono di solito errori del foglio. Correggili e riparti dal passo 2, oppure
+   conferma l'importazione.
+6. Leggi il riepilogo: quante righe sono state aggiornate, quante aggiunte e
+   quante righe dell'ordine sono rimaste come prima.
+
+Ogni riga del foglio va sulla **prima riga dello stesso articolo** non ancora
+aggiornata, nell'ordine in cui le righe sono state inserite, e ne sostituisce
+quantità, colli (se nel foglio c'è la colonna `COLLI`), lotto e scadenza (se
+scritti), e il codice IVA se è nel foglio. Prezzo e sconti restano quelli della
+riga, a meno che il foglio abbia la colonna `PREZZO`. Con la colonna `CODDEP`
+conta anche il deposito: la riga del foglio va solo su una riga dello stesso
+deposito.
+
+Se lo stesso articolo è nel foglio più volte, per esempio perché esce con due
+lotti, la prima riga del foglio aggiorna la riga dell'ordine e le altre si
+aggiungono come righe nuove, **con il prezzo e gli sconti della riga
+aggiornata**. Una riga del foglio con un articolo che nell'ordine non c'è si
+aggiunge come in un'importazione normale.
+
+Non vengono toccate le righe dell'ordine senza articolo, quelle già evase
+anche solo in parte, e quelle per cui il foglio non ha una riga: restano come
+prima e il riepilogo le conta. Una riga del foglio con quantità zero viene
+scartata e lascia la riga dell'ordine com'era.
+
+Dall'ordine completato si fanno poi il documento di trasporto o la fattura con
+[Emissione fatture da documenti](emissione-fatture-da-documenti.md): lotti e
+scadenze passano sulle righe del nuovo documento, tranne quando si raggruppa
+per articoli con **Accorpa Lotti** attivo.
 
 #### Il foglio Excel da importare
 
@@ -572,8 +671,9 @@ in minuscolo. Qualunque altra colonna viene ignorata.
 | `COLLI` | | I **Colli** della riga, un numero intero. |
 | `CODIVA` | | Il codice dell'[aliquota IVA](../contabilita/aliquote-iva.md). Vuota o zero, resta quella dell'articolo. |
 | `CODDEP` | | Il codice del [deposito](../magazzino/depositi.md). Vuota o zero, si usa il deposito attivo della ditta. |
-| `DESCRIZIONE` | | Non viene registrata: la descrizione arriva dall'articolo. Serve a te per riconoscere la riga, e compare nell'elenco delle righe non importate. |
-| `PARTITA` o `LOTTO` | | **Solo Ortofrutta**: la partita di carico da cui prendere la merce. Se l'articolo non è in quella partita, il dato viene lasciato vuoto. |
+| `DESCRIZIONE` | | Non viene registrata: la descrizione arriva dall'articolo. Serve a te per riconoscere la riga, e compare nell'elenco delle anomalie. |
+| `LOTTO` o `PARTITA` | | Il **Lotto** della riga, fino a 20 caratteri, scritto in maiuscolo. Vale come il lotto scritto a mano sulla riga: se l'articolo non ha la gestione dei lotti, la riga la prende lo stesso. Un lotto che non è in archivio viene segnalato dal [controllo del foglio](#il-controllo-del-foglio) prima di importare e, se confermi, creato in archivio. **Solo Ortofrutta**: è invece la partita di carico da cui prendere la merce; se l'articolo non è in quella partita, il dato viene lasciato vuoto. |
+| `SCADENZA` | | La **Scadenza** della riga: una data di Excel, oppure un testo come `31/12/2026`. Se manca e il lotto è in archivio, si prende la scadenza del lotto; se è diversa da quella del lotto, il controllo del foglio la segnala. Non c'è nella versione **Ortofrutta**. |
 
 ● Senza `CODICE` l'importazione non parte. Senza `QUANTITA` parte solo se c'è
 `COLLI`, ma fuori dalla versione **Ortofrutta** tutte le righe vengono poi
@@ -608,13 +708,18 @@ scartate perché senza quantità.
       esempio `8001230000000`.
 
     Queste righe finiscono fra gli articoli non trovati, e nell'elenco delle
-    righe non importate è indicato il motivo. Vanno riscritte nel foglio,
+    anomalie è indicato il motivo. Vanno riscritte nel foglio,
     partendo dal codice originale, in una colonna formattata come **Testo**.
 - **Quantità, prezzi e sconti** devono essere numeri, non testo: una quantità
   scritta come testo vale zero, e la riga viene scartata.
 - **Sconti**: scrivi `10` per il dieci per cento. Una cella in formato
   percentuale con `10%` vale `0,1` per Excel, e diventerebbe uno sconto dello
   0,1%.
+- **Lotti**: un lotto fatto solo di cifre, per esempio `000457`, va scritto in
+  una colonna formattata come **Testo**, come i codici: scritto come numero
+  perde gli zeri iniziali. Nel modello la colonna è già impostata così.
+- **Scadenze**: una data che Excel non riconosce, o un testo che non è una
+  data, vale come scadenza vuota, e il controllo del foglio la segnala.
 - **Righe vuote**: una riga senza codice viene saltata e non conta fra le
   scartate.
 
@@ -870,8 +975,13 @@ controlli sono altri.
 | *Colonna CODICE non trovata nel documento !* | Il foglio Excel non ha la colonna del codice. | È obbligatoria: il foglio va sistemato. |
 | *Colonna PREZZO non trovata nel documento !<br>Continuando nell'importazione saranno inseriti i prezzi del listino associato al documento.<br>Vuoi continuare?* | Manca la colonna del prezzo. | **Sì** prende i prezzi dal listino: va bene se i prezzi sono i propri, non se erano quelli del fornitore. |
 | *Nessuna tra le Colonne QUANTITA o COLLI e' stata trovata nel documento !* | Manca la quantità. | Serve almeno una delle due colonne. |
-| *Vuoi inserire eventuali articoli non piu' ordinabili nell'ordine?* | In un ordine a fornitore hai scelto **F7 - Dati ▸ Foglio Excel**. | **Sì** mette nell'ordine anche gli articoli non più ordinabili, quelli esclusi dai listini e quelli tolti dall'assortimento del deposito; **No**, già selezionato, li salta e li conta nel riepilogo finale. |
-| *Importazione terminata.<br><br>Righe importate : …<br>Righe scartate senza quantita' : …<br>Righe scartate non piu' ordinabili : …<br>Articoli non trovati : …<br>di cui con il codice rovinato da Excel : …<br><br>Vuoi vedere l'elenco delle righe non importate?* | Fine di **F7 - Dati ▸ Foglio Excel**. La riga dei non più ordinabili c'è solo negli ordini a fornitore; quella dei codici rovinati solo se ce ne sono, vedi [Come scrivere i valori](#il-foglio-excel-da-importare); la domanda finale solo se qualche riga non è entrata. Se hai interrotto l'importazione, la prima riga dice *Importazione interrotta.* e i conti si fermano lì. | **Sì** apre l'elenco delle righe non entrate, ognuna con il numero di riga del foglio, il codice, la descrizione e il motivo. Le righe importate restano comunque nel documento: quelle senza quantità le correggi nel foglio o le aggiungi a mano, gli articoli non trovati li crei o ne correggi il codice. |
+| *Il documento contiene gia' delle righe.<br><br>Si': ogni riga del foglio aggiorna la riga dello stesso articolo (quantita', colli, lotto e scadenza); le righe in piu' si aggiungono.<br>No: le righe del foglio si aggiungono a quelle esistenti.<br><br>Vuoi aggiornare le righe esistenti?* | Hai scelto **F7 - Dati ▸ Foglio Excel** su un documento che ha già delle righe. | **Sì** completa le righe esistenti: vedi [Completare un ordine con le quantità reali e i lotti](#completare-un-ordine-con-le-quantita-reali-e-i-lotti). **No** aggiunge le righe del foglio, come prima. **Annulla** chiude senza importare niente. |
+| *Importazione terminata.<br><br>Righe aggiornate : …<br>Righe aggiunte : …<br>Righe del documento rimaste come prima : …<br>Righe del foglio non importate : …<br>Lotti creati in archivio : …* | Fine di **F7 - Dati ▸ Foglio Excel** quando hai scelto di aggiornare le righe esistenti. Se hai interrotto l'importazione, la prima riga dice *Importazione interrotta.* e i conti si fermano lì. | *Rimaste come prima* sono le righe dell'ordine che il foglio non ha toccato: controllale, sono gli articoli che il magazzino non ha riportato. Le righe del foglio non importate sono quelle già elencate dal controllo del foglio. |
+| *Vuoi inserire eventuali articoli non piu' ordinabili nell'ordine?* | In un ordine a fornitore hai scelto **F7 - Dati ▸ Foglio Excel**. | **Sì** mette nell'ordine anche gli articoli non più ordinabili, quelli esclusi dai listini e quelli tolti dall'assortimento del deposito; **No**, già selezionato, li salta e li segnala nel controllo del foglio. |
+| *Controllo del foglio terminato.<br><br>Righe da importare : …<br>Articoli non trovati : …<br>di cui con il codice rovinato da Excel : …<br>Righe senza quantita' : …<br>Righe non piu' ordinabili : …<br>Lotti non presenti in archivio : …<br>Scadenze diverse da quelle dei lotti : …<br>Scadenze non leggibili : …<br><br>Le righe con l'articolo non trovato o senza quantita' non saranno importate; le altre entrano come sono scritte nel foglio.<br>I lotti non presenti in archivio saranno creati, con la scadenza scritta nel foglio.<br><br>Vuoi vedere l'elenco delle anomalie?* | **F7 - Dati ▸ Foglio Excel**: il [controllo del foglio](#il-controllo-del-foglio) ha trovato qualcosa. Nel documento non è stato ancora scritto niente. La riga dei codici rovinati c'è solo se ce ne sono; quella dei non più ordinabili solo negli ordini a fornitore; le tre dei lotti e delle scadenze solo se il foglio ha la colonna `LOTTO` o `SCADENZA`, e mai in Ortofrutta; la frase sui lotti da creare solo se ce ne sono. | **Sì** apre l'elenco, con il numero di riga del foglio, il codice, la descrizione e il motivo di ogni anomalia; per le scadenze diverse, le due date. |
+| *Vuoi importare lo stesso il foglio Excel?* | Segue il riepilogo del controllo del foglio. | **No**, già selezionato, chiude senza scrivere niente: correggi il foglio e ripeti l'importazione. **Sì** importa le righe valide, con i lotti e le scadenze come sono scritti nel foglio, e crea in archivio i lotti che mancano. |
+| *Controllo del foglio interrotto: non e' stato importato niente.* | Hai premuto **Esci** sulla barra di avanzamento durante il controllo del foglio. | Nulla: il documento è com'era. Ripeti l'importazione quando vuoi. |
+| *Importazione terminata.<br><br>Righe importate : …<br>Righe del foglio non importate : …<br>Lotti creati in archivio : …* | Fine di **F7 - Dati ▸ Foglio Excel**. La riga dei lotti c'è solo se ne sono stati creati. Se hai interrotto l'importazione, la prima riga dice *Importazione interrotta.* e i conti si fermano lì. | Nulla: è il resoconto. Le righe non importate sono quelle già elencate dal [controllo del foglio](#il-controllo-del-foglio): correggile in un foglio a parte, o aggiungile a mano. |
 | *Vuoi inserire eventuali articoli non piu' ordinabili?* | In un ordine a fornitore stai scaricando le letture del palmare o di un lettore di codici a barre. | Come sopra, ma qui il pulsante già selezionato è **Sì**. |
 | *Nessun codice articolo presente per la riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Una riga del file non ha codice. | La riga **non entra**: va aggiunta a mano. |
 | *Non e' possibile accoppiare l'articolo della riga n. …<br>La riga sara' scartata e dovra' essere inserita manualmente!* | Il codice della riga non si aggancia a nessun articolo. | Come sopra. |
@@ -881,7 +991,8 @@ controlli sono altri.
 | *Impossibile inizializzare il file excel!* | **F7 - Dati ▸ Foglio Excel**: il programma non riesce ad avviare la lettura del foglio. | Riprova; se si ripete, chiama l'assistenza. |
 | *Riga … - articolo '… …' non trovato* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il codice di quella riga del foglio non è in archivio. | La riga non entra: crea l'articolo, o aggiungila a mano. |
 | *Impossibile aprire il file …!<br><br>…* | **Solo Ortofrutta**, **File Listino Prezzi Excel**: il file non si apre; segue la spiegazione. | Chiudilo in Excel e riprova. |
-| *Impossibile aprire il file excel!* / *Impossibile accedere al foglio!* | Il file è aperto altrove o non è leggibile. | Chiuderlo in Excel e riprovare. |
+| *Impossibile aprire il file excel!<br><br>…* | **F7 - Dati ▸ Foglio Excel**: il file scelto non si legge. Sotto il messaggio c'è il motivo, per esempio *No such file or directory.* se il file non è più dove l'hai scelto. | Controlla il file indicato dal motivo: se è aperto in Excel chiudilo, se è stato spostato sceglilo di nuovo, poi riprova. |
+| *Impossibile accedere al foglio!<br><br>…* | Il file è aperto altrove o non è leggibile; sotto il messaggio c'è il motivo. | Chiuderlo in Excel e riprovare. |
 | *In archivio non e' stato trovato nessun documento col numero e data corrispondenti al carico merci!<br>Impossibile continuare.* | Si sta generando un'autofattura da un carico che non ha documento. | Il carico va completato prima. |
 | *In archivio sono stati trovati piu' documenti con stesso numero e data!<br>Impossibile continuare.* | Due documenti hanno lo stesso numero e la stessa data. | Vanno distinti prima di procedere. |
 | *Il fornitore del carico non coincide con l' intestatario dell' Autofattura !* | L'autofattura è intestata a un soggetto diverso dal fornitore del carico. | Si corregge l'intestatario. |
