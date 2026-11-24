@@ -197,6 +197,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
 | *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
 | *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Cruscotto | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
+| *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Cruscotto | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Cruscotto | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
 | *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* | Cruscotto | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
 | *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Cruscotto | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
@@ -263,6 +264,8 @@ Non applicabile.
 
     Gli esiti si abbinano allo stesso modo sia alle fatture inviate via FTP sia
     a quelle inviate con il servizio API di Digithera, e anche alle autofatture.
+    Oltre che dall'FTP, la sincronizzazione li legge anche dal web service di
+    Digithera, da cui arrivano soprattutto quelli delle autofatture.
 
 !!! info "La prima volta in un anno può volerci qualche minuto"
 
