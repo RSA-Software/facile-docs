@@ -119,7 +119,7 @@ Non applicabile.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare la ricezione.* | Il credito sul servizio è finito. | Acquista il credito; il pulsante **Credito** mostra il residuo. |
+| *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare la ricezione dei dati.* / *Impossibile continuare.* | Il credito sul servizio è finito. | Acquista il credito; il pulsante **Credito** mostra il residuo. |
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare l' invio.* | Come sopra, per l'invio. | Come sopra. |
 | *Errore di comunicazione!* / *Impossibile contattare l'Authorization Server.* / *Attendere qualche minuto* | Il servizio non risponde. | Attendi e riprova; se il problema resta, contatta l'assistenza. |
 | *Partita Iva Ditta non impostata!* / *Impossibile continuare.* | Senza la partita IVA della ditta il credito del servizio non si può verificare. | Impostala nella [ditta](../anagrafiche/ditte.md) e riprova. |

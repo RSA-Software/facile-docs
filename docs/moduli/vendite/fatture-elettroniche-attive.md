@@ -141,6 +141,10 @@ Non applicabile.
    sempre scartato come duplicato.
 3. Premi **Annulla** per rinunciare, oppure **OK** per mandarla comunque.
 
+    L'avviso compare solo quando mandi **una fattura alla volta**: se ne
+    selezioni più di una in **Invio Fatture Emesse**, l'invio procede senza
+    domande e senza avviso.
+
 ### Rimediare a una fattura scartata
 
 1. Nel **Cruscotto** individua il documento scartato e leggi il motivo.
@@ -156,7 +160,7 @@ Non applicabile.
 | *Impossibile trovare il documento in archivio!* | Invio | Il documento della riga non c'è più. | Ricaricare l'elenco. |
 | *Impossibile trovare il cliente in archivio!* | Invio | Il cliente è stato cancellato. | Sistemare l'anagrafica. |
 | *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Invio | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
-| *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | Invio | La fattura è già stata consegnata al cliente e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
+| *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | Invio | La fattura ha già un esito vero dal Sistema di Interscambio (consegna, mancata consegna, impossibilità di recapito, esito del committente, decorrenza dei termini) o è già in conservazione, e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
 | *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | Invio | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
 | *Sincronizzazione completata: …* seguito dal numero di file | Cruscotto | È il riepilogo di fine sincronizzazione, con il numero di file scaricati. Può essere anche 0 se non c'era niente di nuovo. All'apertura del cruscotto compare solo se c'è qualcosa da dire. | — |
 | *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
@@ -188,8 +192,8 @@ Non applicabile.
 
     Quando apri il cruscotto, se sull'utente è acceso **Abilita download Stati
     Fatture Attive**, gli esiti vengono scaricati subito, con una barra di
-    avanzamento e il pulsante **Interrompi**. Se non c'è niente di nuovo e il
-    collegamento non è impostato, non compare nessun messaggio. Con **F2 -
+    avanzamento e il pulsante **Interrompi**. Non compare nessun messaggio né se il
+    collegamento non è impostato, né se non c'è niente da segnalare. Con **F2 -
     Sincronizza** si ripete a mano quando si vuole.
 
     Non esiste più un computer "unico" abilitato: basta il permesso
@@ -211,9 +215,10 @@ Non applicabile.
 
     Lo stato mostrato è quello dell'**ultimo invio**. Quando arrivano più esiti
     vale quello più significativo, in quest'ordine: scarto, esito del
-    committente (accettata o rifiutata), decorrenza dei termini, consegna,
-    mancata consegna o impossibilità di recapito, conservazione, firma, presa
-    in carico.
+    committente (accettata o rifiutata), decorrenza dei termini, consegna /
+    mancata consegna / impossibilità di recapito, conservazione, firma, presa
+    in carico. Consegna, mancata consegna e impossibilità di recapito contano
+    allo stesso modo: vale il più recente.
 
     Se una fattura viene mandata una seconda volta e il secondo invio è
     scartato come duplicato, **la consegna del primo invio non si cancella**:
