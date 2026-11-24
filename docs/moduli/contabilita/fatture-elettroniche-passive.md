@@ -75,7 +75,7 @@ Non applicabile.
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
 | **F2 - Carica** | ++f2++ | Carica le fatture da uno o più file scelti a mano, e alla fine rende conto di ognuno. |
-| **F3 - Sinc.** | ++f3++ | Si collega al servizio e scarica le fatture nuove. |
+| **F3 - Sinc.** | ++f3++ | Si collega al servizio e scarica le fatture nuove. Compare solo se sull'utente è acceso **Abilita download Fatture Passive**; la stessa operazione parte anche da sola all'apertura. Durante il lavoro il pulsante diventa **Interrompi**. |
 | **Filtra** | | Restringe l'elenco a un periodo. |
 | **F4 - Contab.** | ++f4++ | Genera la [registrazione di prima nota](registrazione-prima-nota.md) dalla fattura selezionata. |
 | **F5 - Magaz.** | ++f5++ | Genera il carico di magazzino dalle righe della fattura. |
@@ -93,7 +93,9 @@ Non applicabile.
 
 1. Apri **Menu ▸ Contabilità ▸ Fatture Elettroniche Passive**.
 2. Premi **F3 - Sinc.**: il programma si collega e scarica quello che è
-   arrivato.
+   arrivato. Se hai il permesso, lo ha già fatto all'apertura della maschera.
+   Se vuoi fermarlo, premi **Interrompi**: quello che è già stato scaricato
+   resta.
 3. Seleziona una fattura e controlla le schede **Fornitore**, **Dettaglio Iva**
    e **Dettaglio Linee**.
 4. Premi **F9 - Visualizza PDF** se vuoi vedere il documento come lo vede il
@@ -121,7 +123,12 @@ Non applicabile.
 | *Credito Esaurito!* / *E' necessario acquistare del credito per poter effettuare l' invio.* | Come sopra, per l'invio. | Come sopra. |
 | *Errore di comunicazione!* / *Impossibile contattare l'Authorization Server.* / *Attendere qualche minuto* | Il servizio non risponde. | Attendi e riprova; se il problema resta, contatta l'assistenza. |
 | *Partita Iva Ditta non impostata!* / *Impossibile continuare.* | Senza la partita IVA della ditta il credito del servizio non si può verificare. | Impostala nella [ditta](../anagrafiche/ditte.md) e riprova. |
-| *Continuando l'operazione imposterai questo computer come l'unico abilitato allo scarico...* | Lo scarico si lega a una sola postazione. | Prosegui solo se è la postazione da cui si scaricheranno sempre le fatture. |
+| *Sincronizzazione completata: …* seguito dal numero di file | Riepilogo di fine scarico. Può dire 0 file se non c'era niente di nuovo. All'apertura compare solo se c'è qualcosa da dire. | — |
+| *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | La linea è caduta e le riprese automatiche non sono bastate. | Niente: il resto viene scaricato alla prossima sincronizzazione. Se si ripete, controlla la connessione. |
+| *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
+| *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contatta l'assistenza. |
+| *Credito esaurito: le fatture passive non sono state scaricate.* | Il credito sul servizio è finito durante lo scarico. Compare nel riepilogo di fine sincronizzazione. | Acquista il credito tramite l'assistenza e ripeti la sincronizzazione. |
+| *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Il servizio non ha accettato la password del collegamento. | Controlla il collegamento nella scheda **Fatture Elettroniche** della [ditta](../anagrafiche/ditte.md). |
 | *Identificativo Nazione (ISO alpha-2) non impostato su ditta!* | Manca il codice nazione nei dati della ditta. | Impostalo nella [ditta](../anagrafiche/ditte.md). |
 | *Il codice nazione impostato sulla ditta deve essere di due caratteri!* | Il codice nazione non è nel formato ISO a due lettere. | Correggilo, per esempio `IT`. |
 | *Il registro della causale contabile preimpostata non e' valido!* | La causale predefinita non è del registro acquisti. | Correggi la [causale](causali-contabili.md) o indicane un'altra. |
@@ -142,11 +149,26 @@ Non applicabile.
 
 ## Note
 
-!!! warning "Lo scarico si lega a una sola postazione"
+!!! info "Lo scarico parte da solo e si fa da qualsiasi computer"
 
-    Il messaggio che compare al primo scarico avvisa che **quel computer
-    diventa l'unico abilitato** a scaricare le fatture. Scegli con cura la
-    postazione prima di confermare.
+    All'apertura della maschera, se sull'utente è acceso **Abilita download
+    Fatture Passive**, le fatture nuove vengono scaricate subito, con una barra
+    di avanzamento e il pulsante **Interrompi**. Se non c'è niente di nuovo e
+    non ci sono problemi, non compare nessun messaggio. Con **F3 - Sinc.** si
+    ripete a mano.
+
+    Non esiste più un computer "unico" abilitato: basta il permesso
+    sull'utente. Il campo sulla [ditta](../anagrafiche/ditte.md) che indicava
+    il computer non ha più alcun effetto.
+
+    La sincronizzazione automatica all'apertura si può disattivare su un
+    singolo computer: chiedere all'assistenza.
+
+!!! note "Se la linea cade, il lavoro riprende"
+
+    Se la connessione si interrompe, il programma ritenta da solo qualche volta.
+    Se non basta, si ferma e dice quanti file ha scaricato: i rimanenti vengono
+    ripresi alla sincronizzazione successiva, senza rifare quelli già fatti.
 
 !!! note "Contabilizzare e caricare sono due gesti distinti"
 
