@@ -101,12 +101,13 @@ esiti, una per ogni notifica.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
-| **Filtra** | | Restringe l'elenco a quelle andate male. | `TUTTE`, `SCARTATE DIGITHUB`, `SCARTATE SDI` |
+| **Filtra** | | Mostra solo i documenti in uno stato, con i nomi della legenda delle icone. **DA CONTROLLARE** raccoglie quelli su cui intervenire: scartati, rifiutati dal committente, non consegnati o con impossibilità di recapito. | `TUTTE`, `DA CONTROLLARE`, `INVIATA, NESSUNA RISPOSTA`, `PRESA IN CARICO DA DIGITHUB`, `SCARTATA DA DIGITHUB`, `FIRMATA E INVIATA ALLO SDI`, `SCARTATA DALLO SDI`, `CONSEGNATA`, `MANCATA CONSEGNA`, `IMPOSSIBILITÀ DI RECAPITO`, `ACCETTATA DAL COMMITTENTE`, `RIFIUTATA DAL COMMITTENTE`, `DECORRENZA TERMINI`, `IN CONSERVAZIONE` |
+| *(accanto a Filtra)* | | Mostra solo le fatture o solo le autofatture. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE` |
 
 !!! tip "I due scarti non sono la stessa cosa"
 
-    **SCARTATE DIGITHUB** sono quelle fermate dall'intermediario prima di
-    partire; **SCARTATE SDI** quelle partite e respinte dal Sistema di
+    **SCARTATA DA DIGITHUB** è una fattura fermata dall'intermediario prima di
+    partire; **SCARTATA DALLO SDI** una partita e respinta dal Sistema di
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
 
