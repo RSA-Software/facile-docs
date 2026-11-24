@@ -53,7 +53,7 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 **Invio Fatture Emesse** ha in alto i filtri, e sotto una griglia con le
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
-**Cruscotto Fatture PA** ha in alto i filtri e sotto **due griglie**: quella
+**Cruscotto Fatture Elettroniche** ha in alto i filtri e sotto **due griglie**: quella
 grande con le fatture e le autofatture inviate — numero, data, cliente,
 partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero —
 e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
@@ -96,13 +96,13 @@ esiti, una per ogni notifica.
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Visualizza documenti già inviati** | | Mostra anche quelle già trasmesse, che di norma spariscono dall'elenco. | attivo/non attivo |
 
-### Cruscotto Fatture PA
+### Cruscotto Fatture Elettroniche
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
+| **Tipo Doc.** | | Mostra solo le fatture o solo le autofatture. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE` |
 | **Filtra** | | Mostra solo i documenti in uno stato, con i nomi della legenda delle icone. **DA CONTROLLARE** raccoglie quelli su cui intervenire: scartati, rifiutati dal committente, non consegnati o con impossibilità di recapito. | `TUTTE`, `DA CONTROLLARE`, `INVIATA, NESSUNA RISPOSTA`, `PRESA IN CARICO DA DIGITHUB`, `SCARTATA DA DIGITHUB`, `FIRMATA E INVIATA ALLO SDI`, `SCARTATA DALLO SDI`, `CONSEGNATA`, `MANCATA CONSEGNA`, `IMPOSSIBILITÀ DI RECAPITO`, `ACCETTATA DAL COMMITTENTE`, `RIFIUTATA DAL COMMITTENTE`, `DECORRENZA TERMINI`, `IN CONSERVAZIONE` |
-| *(accanto a Filtra)* | | Mostra solo le fatture o solo le autofatture. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE` |
 
 !!! tip "I due scarti non sono la stessa cosa"
 
@@ -127,7 +127,7 @@ Non applicabile.
 | **F6 - Email** | ++f6++ | Manda la fattura per email. |
 | **F7 - Trova** | ++f7++ | Cerca nella griglia. |
 
-### Cruscotto Fatture PA
+### Cruscotto Fatture Elettroniche
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
