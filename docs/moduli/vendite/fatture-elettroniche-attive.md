@@ -38,7 +38,8 @@ Prima di usare queste maschere occorre:
 - avere i dati fiscali dei clienti completi, compreso il codice destinatario o
   la PEC;
 - avere **credito** sul servizio di trasmissione;
-- avere l'utente abilitato al download degli stati.
+- avere l'utente abilitato al download degli stati: è l'unica condizione per
+  sincronizzare, da qualsiasi computer.
 
 ## La maschera
 
@@ -52,11 +53,39 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 **Invio Fatture Emesse** ha in alto i filtri, e sotto una griglia con le
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
-**Cruscotto Fatture PA** ha in alto i filtri e sotto **due griglie**: quella
-grande con le fatture — numero, data, cliente, partita IVA, totale e stato —
+**Cruscotto Fatture Elettroniche** ha in alto i filtri e sotto **due griglie**: quella
+grande con le fatture e le autofatture inviate — numero, data, **Intestatario**,
+partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero,
+e il suo intestatario è il fornitore quando è intestata a un fornitore —
 e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
 l'ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
 della griglia di sopra.
+
+L'icona dello stato è una busta con un tondo colorato: il colore dice a che
+punto è la fattura, il simbolo dentro il tondo dice quale esito è arrivato.
+Azzurro vuol dire che la fattura è in viaggio, verde che è arrivata, giallo che
+c'è da guardare, rosso che è stata respinta, grigio che è ancora in attesa o
+che l'esito è solo informativo. Le stesse icone compaiono nella griglia degli
+esiti, una per ogni notifica.
+
+| Icona | Stato |
+|:---:|---|
+| ![](../../assets/img/vendite/stati-fe/lavorazione.png){ width="24" } | In lavorazione: non è ancora partita. |
+| ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
+| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
+| ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Firmata e inviata al Sistema di Interscambio. |
+| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione, in attesa dell'esito dello SdI. |
+| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
+| ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
+| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: il committente non ha risposto in tempo. |
+| ![](../../assets/img/vendite/stati-fe/impossibilita-di-recapito.png){ width="24" } | Trasmessa, ma con impossibilità di recapito. |
+| ![](../../assets/img/vendite/stati-fe/notifica-di-mancata-consegna.png){ width="24" } | Mancata consegna: la fattura è nel cassetto fiscale del cliente. |
+| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | File dei metadati. |
+| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito del committente è stato scartato dallo SdI. |
+| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata da DigitHub prima di partire: va corretta e rimandata. |
+| ![](../../assets/img/vendite/stati-fe/notifica-di-scarto-sdi.png){ width="24" } | Scartata dal Sistema di Interscambio. |
+| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dal committente (pubblica amministrazione). |
 
 ## Campi
 
@@ -68,17 +97,18 @@ della griglia di sopra.
 | **Cliente** | | Restringe a un cliente. | codice |
 | **Visualizza documenti già inviati** | | Mostra anche quelle già trasmesse, che di norma spariscono dall'elenco. | attivo/non attivo |
 
-### Cruscotto Fatture PA
+### Cruscotto Fatture Elettroniche
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
-| **Filtra** | | Restringe l'elenco a quelle andate male. | `TUTTE`, `SCARTATE DIGITHUB`, `SCARTATE SDI` |
+| **Tipo Doc.** | | Mostra solo le fatture o solo le autofatture. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE` |
+| **Filtra** | | Mostra solo i documenti in uno stato, con i nomi della legenda delle icone. **DA CONTROLLARE** raccoglie quelli su cui intervenire: scartati, rifiutati dal committente, non consegnati o con impossibilità di recapito. | `TUTTE`, `DA CONTROLLARE`, `INVIATA, NESSUNA RISPOSTA`, `PRESA IN CARICO DA DIGITHUB`, `SCARTATA DA DIGITHUB`, `FIRMATA E INVIATA ALLO SDI`, `SCARTATA DALLO SDI`, `CONSEGNATA`, `MANCATA CONSEGNA`, `IMPOSSIBILITÀ DI RECAPITO`, `ACCETTATA DAL COMMITTENTE`, `RIFIUTATA DAL COMMITTENTE`, `DECORRENZA TERMINI`, `IN CONSERVAZIONE` |
 
 !!! tip "I due scarti non sono la stessa cosa"
 
-    **SCARTATE DIGITHUB** sono quelle fermate dall'intermediario prima di
-    partire; **SCARTATE SDI** quelle partite e respinte dal Sistema di
+    **SCARTATA DA DIGITHUB** è una fattura fermata dall'intermediario prima di
+    partire; **SCARTATA DALLO SDI** una partita e respinta dal Sistema di
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
 
@@ -98,11 +128,11 @@ Non applicabile.
 | **F6 - Email** | ++f6++ | Manda la fattura per email. |
 | **F7 - Trova** | ++f7++ | Cerca nella griglia. |
 
-### Cruscotto Fatture PA
+### Cruscotto Fatture Elettroniche
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F2 - Sincronizza** | ++f2++ | Scarica gli stati aggiornati. **Non c'è sempre**: vedi la nota qui sotto. |
+| **F2 - Sincronizza** | ++f2++ | Scarica gli esiti nuovi e aggiorna lo stato delle fatture. Compare solo se sull'utente è acceso **Abilita download Stati Fatture Attive**; la stessa operazione parte anche da sola all'apertura (vedi le note). Durante il lavoro il pulsante diventa **Interrompi**. |
 | **F3 - Credito Residuo** | ++f3++ | Calcola quante trasmissioni restano. |
 | **F4 - Esporta** | ++f4++ | Esporta in XML. |
 | **F5 - Trova** | ++f5++ | Cerca nella griglia. |
@@ -121,6 +151,32 @@ Non applicabile.
 3. Avvia l'invio.
 4. Il giorno dopo apri il **Cruscotto** e controlla gli esiti.
 
+### Aggiornare gli esiti
+
+1. Apri il **Cruscotto Fatture Elettroniche**: se l'utente è abilitato, la
+   sincronizzazione parte da sola e mostra una barra di avanzamento.
+2. Per ripeterla in qualunque momento premi **F2 - Sincronizza**.
+3. Se vuoi fermarla premi **Interrompi**: i file già scaricati restano, e il
+   resto viene ripreso alla sincronizzazione successiva.
+4. Leggi il messaggio finale: dice quanti file sono stati sincronizzati ed
+   eventuali problemi (vedi *Controlli e messaggi*).
+
+Gli esiti di una sola fattura o autofattura si vedono anche dal
+[documento](documento-di-vendita.md): **Fatture Elettroniche** ▸ **Controlla Esiti**.
+
+### Rimandare una fattura già inviata
+
+1. Dalla gestione documenti o da **Invio Fatture Emesse** avvia l'invio e
+   rispondi **Sì** alla domanda *Vuoi inviare il documento ?*.
+2. Se la fattura risulta già inviata, compare un avviso: leggilo con
+   attenzione, perché un secondo invio dello stesso documento viene quasi
+   sempre scartato come duplicato.
+3. Premi **Annulla** per rinunciare, oppure **OK** per mandarla comunque.
+
+    L'avviso compare solo quando mandi **una fattura alla volta**: se ne
+    selezioni più di una in **Invio Fatture Emesse**, l'invio procede senza
+    domande e senza avviso.
+
 ### Rimediare a una fattura scartata
 
 1. Nel **Cruscotto** individua il documento scartato e leggi il motivo.
@@ -136,7 +192,17 @@ Non applicabile.
 | *Impossibile trovare il documento in archivio!* | Invio | Il documento della riga non c'è più. | Ricaricare l'elenco. |
 | *Impossibile trovare il cliente in archivio!* | Invio | Il cliente è stato cancellato. | Sistemare l'anagrafica. |
 | *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Invio | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
-| *Continuando l'operazione imposterai questo computer come l'unico abilitato alla sincronizzazione degli stati.* | Cruscotto | Prima sincronizzazione. | Rispondere **Sì** solo dal computer che deve farlo sempre. |
+| *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | Invio | La fattura ha già un esito vero dal Sistema di Interscambio (consegna, mancata consegna, impossibilità di recapito, esito del committente, decorrenza dei termini) o è già in conservazione, e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
+| *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | Invio | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
+| *Sincronizzazione completata: …* seguito dal numero di file | Cruscotto | È il riepilogo di fine sincronizzazione, con il numero di file scaricati. Può essere anche 0 se non c'era niente di nuovo. All'apertura del cruscotto compare solo se c'è qualcosa da dire. | — |
+| *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
+| *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
+| *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Cruscotto | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
+| *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Cruscotto | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
+| *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Cruscotto | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
+| *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* | Cruscotto | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
+| *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Cruscotto | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
+| *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Cruscotto, griglia degli esiti, colonna **Messaggio** | La fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
 | *Credito Esaurito!* | Cruscotto | Finite le trasmissioni disponibili. | Acquistare credito. |
 | *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Cruscotto | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
 | *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Cruscotto | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
@@ -155,21 +221,63 @@ Non applicabile.
     se il documento è stato preso in carico, e **F8 - Forza Invio** lo rimanda.
     Il cruscotto serve quando si vuole il quadro d'insieme.
 
-!!! warning "Gli esiti non arrivano da soli, e non da tutti i computer"
+!!! info "La sincronizzazione parte da sola, ma non da tutti"
 
-    Il cruscotto **non scarica niente all'apertura**: mostra quello che c'è in
-    archivio. Per aggiornarlo si preme **F2 - Sincronizza**.
+    Quando apri il cruscotto, se sull'utente è acceso **Abilita download Stati
+    Fatture Attive**, gli esiti vengono scaricati subito, con una barra di
+    avanzamento e il pulsante **Interrompi**. Non compare nessun messaggio né se il
+    collegamento non è impostato, né se non c'è niente da segnalare. Con **F2 -
+    Sincronizza** si ripete a mano quando si vuole.
 
-    E quel pulsante **non compare dappertutto**. Servono due cose insieme:
+    Non esiste più un computer "unico" abilitato: basta il permesso
+    sull'utente, e si può sincronizzare da qualsiasi postazione. Il
+    campo sulla [ditta](../anagrafiche/ditte.md) che indicava il computer non
+    ha più alcun effetto.
 
-    - sull'utente dev'essere acceso **Abilita download Stati Fatture Attive**;
-    - il computer dev'essere **quello designato** sulla ditta — oppure non
-      dev'essercene ancora nessuno.
+    I file degli esiti rimasti nella cartella dove li salvavano le versioni
+    precedenti vengono portati in archivio dalla sincronizzazione; quelli
+    che non sono esiti riconoscibili vengono spostati, senza messaggi, nella
+    sottocartella **Non riconosciuti** della stessa cartella.
 
-    La designazione avviene alla prima sincronizzazione, e il programma lo dice
-    chiaramente prima di farlo. **Da quel momento gli altri computer vedono il
-    cruscotto ma non il pulsante**: se gli stati sembrano fermi, la domanda da
-    farsi è se qualcuno abbia sincronizzato dal computer giusto.
+    La sincronizzazione automatica all'apertura si può disattivare per un
+    utente su un computer: chiedere all'assistenza.
+
+!!! note "Se la linea cade, il lavoro riprende"
+
+    Se la connessione si interrompe durante lo scarico, il programma ritenta da
+    solo qualche volta, con una breve pausa tra un tentativo e l'altro. Se non
+    basta, si ferma e dice quanti file ha sincronizzato; i rimanenti vengono
+    scaricati alla sincronizzazione successiva, senza rifare quelli già fatti.
+
+!!! note "Come si decide lo stato di una fattura"
+
+    Lo stato mostrato è quello dell'**ultimo invio**. Quando arrivano più esiti
+    vale quello più significativo, in quest'ordine: scarto, esito del
+    committente (accettata o rifiutata), decorrenza dei termini, consegna /
+    mancata consegna / impossibilità di recapito, conservazione, firma, presa
+    in carico. Consegna, mancata consegna e impossibilità di recapito contano
+    allo stesso modo: vale il più recente.
+
+    Se una fattura viene mandata una seconda volta e il secondo invio è
+    scartato come duplicato, **la consegna del primo invio non si cancella**:
+    la fattura resta consegnata. La **conservazione** compare come stato solo
+    quando non c'è un esito vero.
+
+    Gli esiti si abbinano allo stesso modo sia alle fatture inviate via FTP sia
+    a quelle inviate con il servizio API di Digithera, e anche alle autofatture.
+    Oltre che dall'FTP, la sincronizzazione li legge anche dal web service di
+    Digithera, da cui arrivano soprattutto quelli delle autofatture.
+
+!!! info "La prima volta in un anno può volerci qualche minuto"
+
+    Quando si entra per la prima volta in un anno, la sincronizzazione fa un
+    controllo periodico delle notifiche (finestra *Esiti FAE - Controllo...*)
+    e, se serve, le ripara: verifica che ogni notifica sia associata alla sua
+    fattura e aggiorna lo stato delle fatture. Si fa una volta per anno **su
+    ogni computer** (per ogni utente di Windows che usa Facile): ripeterlo non
+    cambia niente, ma la prima volta su ciascuno può durare alcuni minuti. Al
+    termine ne dice il risultato, se ha aggiornato lo stato di qualche fattura;
+    se lo interrompi, riprende dal punto in cui era arrivato.
 
 !!! tip "Il motivo dello scarto sta nella griglia di sotto"
 
