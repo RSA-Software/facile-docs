@@ -54,7 +54,8 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
 **Cruscotto Fatture PA** ha in alto i filtri e sotto **due griglie**: quella
-grande con le fatture — numero, data, cliente, partita IVA, totale e stato —
+grande con le fatture e le autofatture inviate — numero, data, cliente,
+partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero —
 e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
 l'ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
 della griglia di sopra.
@@ -158,6 +159,9 @@ Non applicabile.
 4. Leggi il messaggio finale: dice quanti file sono stati sincronizzati ed
    eventuali problemi (vedi *Controlli e messaggi*).
 
+Gli esiti di una sola fattura o autofattura si vedono anche dal
+[documento](documento-di-vendita.md): **Fatture Elettroniche** ▸ **Controlla Esiti**.
+
 ### Rimandare una fattura già inviata
 
 1. Dalla gestione documenti o da **Invio Fatture Emesse** avvia l'invio e
@@ -257,7 +261,7 @@ Non applicabile.
     quando non c'è un esito vero.
 
     Gli esiti si abbinano allo stesso modo sia alle fatture inviate via FTP sia
-    a quelle inviate con il servizio API di Digithera.
+    a quelle inviate con il servizio API di Digithera, e anche alle autofatture.
 
 !!! info "La prima volta in un anno può volerci qualche minuto"
 
