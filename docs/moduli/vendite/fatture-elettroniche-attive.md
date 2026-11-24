@@ -193,8 +193,8 @@ Non applicabile.
 | *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
 | *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Cruscotto | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Cruscotto | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
-| *Notifiche rimesse sulla fattura giusta: …. Stati corretti: ….* | Cruscotto | Riepilogo della riparazione che si fa una sola volta per ogni anno su ogni computer (vedi le note). Compare solo se la riparazione ha rimesso a posto qualcosa. | — |
-| *Riparazione interrotta, riprende alla prossima sincronizzazione.* seguito dal riepilogo precedente | Cruscotto | La riparazione è stata fermata prima della fine. | Niente: riprende da sola alla prossima sincronizzazione. |
+| *Notifiche rimesse sulla fattura giusta: …. Stati corretti: ….* | Cruscotto | Riepilogo del controllo che si fa una sola volta per ogni anno su ogni computer (vedi le note). Compare solo se il controllo ha rimesso a posto qualcosa. | — |
+| *Controllo interrotto, riprende alla prossima sincronizzazione.* seguito dal riepilogo precedente | Cruscotto | Il controllo è stato fermato prima della fine. | Niente: riprende da sola alla prossima sincronizzazione. |
 | *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Cruscotto, griglia degli esiti, colonna **Messaggio** | La fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
 | *Credito Esaurito!* | Cruscotto | Finite le trasmissioni disponibili. | Acquistare credito. |
 | *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Cruscotto | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
@@ -258,13 +258,13 @@ Non applicabile.
 
 !!! info "La prima volta in un anno può volerci qualche minuto"
 
-    Quando si entra per la prima volta in un anno, la sincronizzazione fa una
-    riparazione una tantum: rimette le notifiche sulla fattura giusta e corregge
-    gli stati sbagliati. Si fa una volta per anno **su ogni computer** (per ogni
-    utente di Windows che usa Facile): ripeterla non cambia niente, ma la prima
-    volta su ciascuno può durare alcuni minuti. Al termine ne dice il risultato,
-    se ha rimesso a posto qualcosa; se la interrompi, riprende dal punto in cui
-    era arrivata.
+    Quando si entra per la prima volta in un anno, la sincronizzazione fa un
+    controllo una tantum (finestra *Esiti FAE - Controllo...*): rimette le
+    notifiche sulla fattura giusta e corregge gli stati sbagliati. Si fa una
+    volta per anno **su ogni computer** (per ogni utente di Windows che usa
+    Facile): ripeterlo non cambia niente, ma la prima volta su ciascuno può
+    durare alcuni minuti. Al termine ne dice il risultato, se ha rimesso a posto
+    qualcosa; se lo interrompi, riprende dal punto in cui era arrivato.
 
 !!! tip "Il motivo dello scarto sta nella griglia di sotto"
 
