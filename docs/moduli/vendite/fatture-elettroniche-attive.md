@@ -54,8 +54,9 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
 **Cruscotto Fatture Elettroniche** ha in alto i filtri e sotto **due griglie**: quella
-grande con le fatture e le autofatture inviate — numero, data, cliente,
-partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero —
+grande con le fatture e le autofatture inviate — numero, data, **Intestatario**,
+partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero,
+e il suo intestatario è il fornitore quando è intestata a un fornitore —
 e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
 l'ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
 della griglia di sopra.
