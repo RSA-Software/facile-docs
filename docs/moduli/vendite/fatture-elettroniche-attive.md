@@ -59,6 +59,32 @@ e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
 l'ora, lo **Stato** e il **Messaggio**. Gli esiti cambiano scorrendo le righe
 della griglia di sopra.
 
+L'icona dello stato è una busta con un tondo colorato: il colore dice a che
+punto è la fattura, il simbolo dentro il tondo dice quale esito è arrivato.
+Azzurro vuol dire che la fattura è in viaggio, verde che è arrivata, giallo che
+c'è da guardare, rosso che è stata respinta, grigio che è ancora in attesa o
+che l'esito è solo informativo. Le stesse icone compaiono nella griglia degli
+esiti, una per ogni notifica.
+
+| Icona | Stato |
+|:---:|---|
+| ![](../../assets/img/vendite/stati-fe/lavorazione.png){ width="24" } | In lavorazione: non è ancora partita. |
+| ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
+| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
+| ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Firmata e inviata al Sistema di Interscambio. |
+| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione, in attesa dell'esito dello SdI. |
+| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
+| ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
+| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: il committente non ha risposto in tempo. |
+| ![](../../assets/img/vendite/stati-fe/impossibilita-di-recapito.png){ width="24" } | Trasmessa, ma con impossibilità di recapito. |
+| ![](../../assets/img/vendite/stati-fe/notifica-di-mancata-consegna.png){ width="24" } | Mancata consegna: la fattura è nel cassetto fiscale del cliente. |
+| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | File dei metadati. |
+| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito del committente è stato scartato dallo SdI. |
+| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata da DigitHub prima di partire: va corretta e rimandata. |
+| ![](../../assets/img/vendite/stati-fe/notifica-di-scarto-sdi.png){ width="24" } | Scartata dal Sistema di Interscambio. |
+| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dal committente (pubblica amministrazione). |
+
 ## Campi
 
 ### Invio Fatture Emesse
