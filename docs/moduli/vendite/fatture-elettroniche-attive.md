@@ -256,6 +256,9 @@ Non applicabile.
     la fattura resta consegnata. La **conservazione** compare come stato solo
     quando non c'è un esito vero.
 
+    Gli esiti si abbinano allo stesso modo sia alle fatture inviate via FTP sia
+    a quelle inviate con il servizio API di Digithera.
+
 !!! info "La prima volta in un anno può volerci qualche minuto"
 
     Quando si entra per la prima volta in un anno, la sincronizzazione fa un
