@@ -72,7 +72,7 @@ dell'intestazione si legge l'invito a salvare.
 
 | Colonna | Descrizione |
 |---|---|
-| **N. SAL** | Il numero che hai dato all'avanzamento. È libero: *SAL 1*, *M1*, *2° stato*. L'elenco è ordinato su questa colonna. |
+| **N. SAL** | Il numero che hai dato all'avanzamento. È libero: *SAL 1*, *M1*, *2° stato*. Non decide l'ordine dell'elenco: i SAL compaiono nell'ordine in cui li hai inseriti. |
 | **Importo** | L'imponibile complessivo delle fatture collegate. **Non si digita.** Senza fatture collegate resta a zero. |
 | **Fatture** | I numeri dei documenti collegati, separati da virgola, dal più vecchio al più recente. |
 | **Data Fat.** | La data del **primo** documento collegato. Vuota finché non ce n'è nessuno. |

@@ -187,7 +187,9 @@ si apre la finestra [Subappaltatore](subappaltatore.md). Il quarto pulsante,
 
 Gli avanzamenti da fatturare al committente. In cima c'è la tendina
 **Contratto**: l'elenco mostra gli avanzamenti **di quel contratto**, e il
-nuovo apparterrà a quello. Cambiando contratto cambia l'elenco.
+nuovo apparterrà a quello. Cambiando contratto cambia l'elenco. Gli
+avanzamenti compaiono nell'ordine in cui li hai inseriti, non in quello
+alfabetico del numero che hai dato: *SAL 10* resta dopo *SAL 2*.
 
 | Colonna | Descrizione |
 |---|---|
@@ -419,6 +421,10 @@ Valgono inoltre:
 
     - `piano_fatturazione_<numero>_<nome commessa>.xlsx`
     - `monitoraggio_<numero>_<nome commessa>.xlsx`
+
+    Nel piano di fatturazione gli avanzamenti sono raggruppati per contratto
+    e, dentro ogni contratto, elencati nell'ordine in cui li hai inseriti;
+    lo stesso vale per i SAL di ogni subappaltatore.
 
     I caratteri che Windows non accetta nei nomi di file vengono sostituiti
     con un trattino basso. Rilanciando l'elaborazione il foglio viene
