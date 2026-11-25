@@ -54,7 +54,9 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
 **Cruscotto Fatture Elettroniche** ha in alto i filtri e sotto **due griglie**: quella
-grande con le fatture e le autofatture inviate — numero, data, **Intestatario**,
+grande con le fatture e le autofatture inviate — numero, data, **Tipo** (il tipo
+documento della fattura elettronica: TD01 fattura, TD04 nota di credito, TD17
+integrazione per servizi dall'estero…), **Intestatario**,
 partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero,
 e il suo intestatario è il fornitore quando è intestata a un fornitore —
 e sotto, per la fattura selezionata, quella degli **esiti**: un'icona, la data,
@@ -102,7 +104,7 @@ esiti, una per ogni notifica.
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
 | **Data Iniziale**, **Data Finale** | | Il periodo. | date |
-| **Tipo Doc.** | | Mostra solo le fatture o solo le autofatture. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE` |
+| **Tipo Doc.** | | Mostra solo le fatture, solo le autofatture o solo le integrazioni. Sono integrazioni i documenti con tipologia da TD16 a TD19 (reverse charge interno, acquisto di servizi dall'estero, acquisto di beni intracomunitari, acquisto di beni ex art. 17 c. 2); le autofatture sono quelle da TD20 in poi. Vale insieme a **Filtra**. | `TUTTE`, `FATTURE`, `AUTOFATTURE`, `INTEGRAZIONI` |
 | **Filtra** | | Mostra solo i documenti in uno stato, con i nomi della legenda delle icone. **DA CONTROLLARE** raccoglie quelli su cui intervenire: scartati, rifiutati dal committente, non consegnati o con impossibilità di recapito. | `TUTTE`, `DA CONTROLLARE`, `INVIATA, NESSUNA RISPOSTA`, `PRESA IN CARICO DA DIGITHUB`, `SCARTATA DA DIGITHUB`, `FIRMATA E INVIATA ALLO SDI`, `SCARTATA DALLO SDI`, `CONSEGNATA`, `MANCATA CONSEGNA`, `IMPOSSIBILITÀ DI RECAPITO`, `ACCETTATA DAL COMMITTENTE`, `RIFIUTATA DAL COMMITTENTE`, `DECORRENZA TERMINI`, `IN CONSERVAZIONE` |
 
 !!! tip "I due scarti non sono la stessa cosa"
