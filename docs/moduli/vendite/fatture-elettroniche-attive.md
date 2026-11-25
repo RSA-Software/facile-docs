@@ -114,8 +114,6 @@ esiti, una per ogni notifica.
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
 
-Non applicabile.
-
 ## Pulsanti e comandi
 
 ### Invio Fatture Emesse
@@ -140,10 +138,17 @@ Non applicabile.
 | **F5 - Trova** | ++f5++ | Cerca nella griglia. |
 | **F6 - https://fatture.facilecloud.net** | ++f6++ | Apre il portale nel browser. Compare solo se il codice cliente per le fatture PA è impostato sulla ditta. |
 | **F7 - Salva Esito** | ++f7++ | Salva il file dell'esito selezionato nella griglia degli esiti: propone la cartella `out` dell'utente e il nome originale del file. |
-| **F8 - Visualizza Esito** | ++f8++ | Apre il file dell'esito selezionato con il programma predefinito per quel tipo di file. È lo stesso del doppio clic sulla riga. |
+| **F8 - Visualizza Esito** | ++f8++ | Apre il file dell'esito selezionato con il programma predefinito per quel tipo di file; se Windows non ne ha uno, con il Blocco note. È lo stesso del doppio clic sulla riga. |
 | doppio clic su una riga degli esiti | ++enter++ | Come **F8 - Visualizza Esito**. Per salvare il file c'è **F7 - Salva Esito**. |
 
-Non applicabile.
+**F7 - Salva Esito** e **F8 - Visualizza Esito** sono attivi solo quando nella
+griglia degli esiti è selezionata una riga che ha il suo file: restano spenti se
+la griglia è vuota o se l'esito non ha un allegato.
+
+La finestra **Esiti Fatture Elettroniche** che si apre dal documento
+(**Fatture Elettroniche** ▸ **Controlla Esiti**) ha gli stessi tre comandi:
+**F2 - Sincronizza** (anche qui solo se sull'utente è acceso **Abilita download
+Stati Fatture Attive**), **F7 - Salva Esito** e **F8 - Visualizza Esito**.
 
 ## Come si fa
 
@@ -211,15 +216,19 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
 | *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
 | *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
-| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Alcuni stati letti dal web service di Digithera non si sono potuti registrare (per esempio una notifica non riconosciuta). | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
+| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Alcuni stati letti dal web service di Digithera non si sono potuti registrare: per esempio una notifica non riconosciuta, uno stato di consegna arrivato senza la sua notifica, oppure uno stato che l'archivio ha rifiutato per più sincronizzazioni di seguito. | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
 | *Stati dal web service: letti i primi …, i rimanenti alla prossima sincronizzazione.* | Gli stati in attesa erano molti: la sincronizzazione ne legge un certo numero per volta. | Ripetere la sincronizzazione (++f2++) finché il messaggio non compare più. |
 | *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
 | *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* (oppure *… di 1 fattura.*) | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
 | *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
 | *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Nella griglia degli esiti, colonna **Messaggio**: la fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
-| *Credito Esaurito!* | Finite le trasmissioni disponibili. | Acquistare credito. |
-| *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
+| *Credito Esaurito! E' necessario acquistare del credito per poter effettuare l' invio. Impossibile continuare.* | Con **F3 - Credito Residuo**: finite le trasmissioni disponibili. | Acquistare credito. |
+| *Credito Acquistato …*, *Credito Utilizzato …*, *Credito Residuo …* | Con **F3 - Credito Residuo**: il riepilogo delle trasmissioni acquistate, usate e rimaste. | — |
+| *Identificativo Nazione (ISO alpha-2) non impostato su ditta!* / *Il codice nazione impostato sulla ditta deve essere di due caratteri!* / *Partita iva non impostata sulla ditta!* / *Server Digithub non impostato su ditta!* | Con **F2 - Sincronizza**: sulla ditta manca, o è sbagliato, un dato che serve per collegarsi. | Compilarlo in [Ditte](../anagrafiche/ditte.md): nazione e partita IVA nei dati della ditta, il server nella scheda **Fatture Elettroniche**. |
+| *Impossibile scrivere il file '…'.* | Con **F4 - Esporta**: il file XML non si è potuto scrivere nella cartella scelta (cartella protetta, disco pieno, percorso troppo lungo). L'esportazione si ferma. | Scegliere un'altra cartella e ripetere l'esportazione. |
+| *Impossibile aprire il browser!* | Con **F6**: Windows non è riuscito ad aprire il portale nel browser predefinito. | Controllare che ci sia un browser predefinito e riprovare. |
+| *Errore di comunicazione! Impossibile contattare l'Authorization Server. Attendere qualche minuto e riprovare.* | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
 | *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
 | *Autenticazione Fallita!* | Con **F6** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprovare; se si ripete, contattare l'assistenza. |
 | *Mancata risposta dal server!* | Con **F6** il servizio delle fatture elettroniche non ha risposto. | Controllare la connessione a Internet e riprovare. |
