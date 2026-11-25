@@ -140,7 +140,8 @@ Non applicabile.
 | **F5 - Trova** | ++f5++ | Cerca nella griglia. |
 | **F6 - https://fatture.facilecloud.net** | ++f6++ | Apre il portale nel browser. Compare solo se il codice cliente per le fatture PA è impostato sulla ditta. |
 | **F7 - Salva Esito** | ++f7++ | Salva il file dell'esito selezionato nella griglia degli esiti: propone la cartella `out` dell'utente e il nome originale del file. |
-| doppio clic su una riga degli esiti | ++enter++ | Se l'esito ha un allegato, lo apre con il programma predefinito per quel tipo di file. Per salvarlo c'è **F7 - Salva Esito**. |
+| **F8 - Visualizza Esito** | ++f8++ | Apre il file dell'esito selezionato con il programma predefinito per quel tipo di file. È lo stesso del doppio clic sulla riga. |
+| doppio clic su una riga degli esiti | ++enter++ | Come **F8 - Visualizza Esito**. Per salvare il file c'è **F7 - Salva Esito**. |
 
 Non applicabile.
 
