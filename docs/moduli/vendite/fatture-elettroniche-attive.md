@@ -75,8 +75,8 @@ esiti, una per ogni notifica.
 | ![](../../assets/img/vendite/stati-fe/lavorazione.png){ width="24" } | In lavorazione: non è ancora partita. |
 | ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
 | ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
-| ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Firmata e inviata al Sistema di Interscambio. |
-| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | In conservazione: la fattura è stata firmata e mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
+| ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Inviata allo SdI: il servizio di trasmissione ha preparato la fattura e l'ha inviata al Sistema di Interscambio. |
+| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione: la fattura è stata mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
 | ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
 | ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
 | ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
@@ -275,7 +275,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
     Lo stato mostrato è quello dell'**ultimo invio**. Quando arrivano più esiti
     vale quello più significativo, in quest'ordine: scarto, esito del
     committente (accettata o rifiutata), decorrenza dei termini, consegna /
-    mancata consegna / impossibilità di recapito, conservazione, firma, presa
+    mancata consegna / impossibilità di recapito, conservazione, invio allo SdI, presa
     in carico. Consegna, mancata consegna e impossibilità di recapito contano
     allo stesso modo: vale il più recente.
 
