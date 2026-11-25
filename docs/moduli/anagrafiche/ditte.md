@@ -323,8 +323,6 @@ Il collegamento al servizio di trasmissione, nel riquadro *F T P D I G I T H U B
 |---|---|
 | **Indirizzo Server**, **Porta**, **Password** | Il collegamento. |
 | **Usa FTP Passive Mode**, **Abilita Log FTP**, **Usa TLS** | Le opzioni di connessione. |
-| **Computer abilitato download Stati Fatture Attive** | Non ha più alcun effetto: gli esiti delle [fatture emesse](../vendite/fatture-elettroniche-attive.md) si scaricano da qualsiasi computer, basta il permesso sull'utente. |
-| **Computer abilitato download Fatture Passive** | Non ha più alcun effetto: le [fatture ricevute](../contabilita/fatture-elettroniche-passive.md) si scaricano da qualsiasi computer, basta il permesso sull'utente. |
 
 ### Scheda Comunicazioni
 

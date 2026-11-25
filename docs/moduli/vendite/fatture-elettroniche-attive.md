@@ -310,9 +310,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
     Sincronizza** si ripete a mano quando si vuole.
 
     Non esiste più un computer "unico" abilitato: basta il permesso
-    sull'utente, e si può sincronizzare da qualsiasi postazione. Il
-    campo sulla [ditta](../anagrafiche/ditte.md) che indicava il computer non
-    ha più alcun effetto.
+    sull'utente, e si può sincronizzare da qualsiasi postazione.
 
     I file degli esiti rimasti nella cartella dove li salvavano le versioni
     precedenti vengono portati in archivio dalla sincronizzazione; quelli
