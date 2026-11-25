@@ -147,7 +147,8 @@ la griglia è vuota o se l'esito non ha un allegato.
 
 La finestra **Esiti Fatture Elettroniche** che si apre dal documento
 (**Fatture Elettroniche** ▸ **Controlla Esiti**) ha gli stessi tre comandi:
-**F2 - Sincronizza**, **F7 - Salva Esito** e **F8 - Visualizza Esito**.
+**F2 - Sincronizza** (anche qui solo se sull'utente è acceso **Abilita download
+Stati Fatture Attive**), **F7 - Salva Esito** e **F8 - Visualizza Esito**.
 
 ## Come si fa
 
@@ -215,7 +216,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
 | *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
 | *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
-| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Alcuni stati letti dal web service di Digithera non si sono potuti registrare: per esempio una notifica non riconosciuta, uno stato di consegna arrivato senza la sua notifica, oppure uno stato che l'archivio ha rifiutato per tre sincronizzazioni di seguito. | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
+| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Alcuni stati letti dal web service di Digithera non si sono potuti registrare: per esempio una notifica non riconosciuta, uno stato di consegna arrivato senza la sua notifica, oppure uno stato che l'archivio ha rifiutato per più sincronizzazioni di seguito. | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
 | *Stati dal web service: letti i primi …, i rimanenti alla prossima sincronizzazione.* | Gli stati in attesa erano molti: la sincronizzazione ne legge un certo numero per volta. | Ripetere la sincronizzazione (++f2++) finché il messaggio non compare più. |
 | *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
@@ -225,8 +226,9 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Credito Esaurito! E' necessario acquistare del credito per poter effettuare l' invio. Impossibile continuare.* | Con **F3 - Credito Residuo**: finite le trasmissioni disponibili. | Acquistare credito. |
 | *Credito Acquistato …*, *Credito Utilizzato …*, *Credito Residuo …* | Con **F3 - Credito Residuo**: il riepilogo delle trasmissioni acquistate, usate e rimaste. | — |
 | *Identificativo Nazione (ISO alpha-2) non impostato su ditta!* / *Il codice nazione impostato sulla ditta deve essere di due caratteri!* / *Partita iva non impostata sulla ditta!* / *Server Digithub non impostato su ditta!* | Con **F2 - Sincronizza**: sulla ditta manca, o è sbagliato, un dato che serve per collegarsi. | Compilarlo in [Ditte](../anagrafiche/ditte.md): nazione e partita IVA nei dati della ditta, il server nella scheda **Fatture Elettroniche**. |
+| *Impossibile scrivere il file '…'.* | Con **F4 - Esporta**: il file XML non si è potuto scrivere nella cartella scelta (cartella protetta, disco pieno, percorso troppo lungo). L'esportazione si ferma. | Scegliere un'altra cartella e ripetere l'esportazione. |
 | *Impossibile aprire il browser!* | Con **F6**: Windows non è riuscito ad aprire il portale nel browser predefinito. | Controllare che ci sia un browser predefinito e riprovare. |
-| *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
+| *Errore di comunicazione! Impossibile contattare l'Authorization Server. Attendere qualche minuto e riprovare.* | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
 | *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
 | *Autenticazione Fallita!* | Con **F6** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprovare; se si ripete, contattare l'assistenza. |
 | *Mancata risposta dal server!* | Con **F6** il servizio delle fatture elettroniche non ha risposto. | Controllare la connessione a Internet e riprovare. |
