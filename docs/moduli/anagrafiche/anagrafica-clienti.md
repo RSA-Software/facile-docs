@@ -124,7 +124,7 @@ Il programma richiede sempre e comunque **Codice** e **Rag. Sociale 1/Cognome**.
 | Ditta Individuale | | Segnala che il soggetto è una ditta individuale. | NO, SI |
 | P. IVA di Gruppo | | Segnala che il cliente aderisce a un gruppo IVA. | NO, SI |
 | Natura Giuridica | | Codice della forma giuridica usato dalla fattura elettronica: da questo dipende se il capitale sociale e il socio unico vengono trasmessi. | 2 caratteri |
-| Regime Fiscale | | Regime fiscale dichiarato dal cliente. | Da elenco (ORDINARIO, REGIME FORFETTARIO, …) |
+| Regime Fiscale | | Regime fiscale dichiarato dal cliente. La voce `REGIME FORFETARIO DEL TERZO SETTORE` vale solo dall'11/01/2027 (vedi [Ditte](ditte.md)). | Da elenco (ORDINARIO, REGIME FORFETARIO, …) |
 | Indirizzo | | Via e numero civico della sede. | Fino a 100 caratteri |
 | Città | | Digitando un comune presente in archivio, provincia e CAP si compilano da soli. | Fino a 30 caratteri |
 | Cap | | Codice di avviamento postale. | Solo cifre, fino a 5 |

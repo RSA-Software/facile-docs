@@ -104,7 +104,7 @@ impostazioni:
 | **Telefono** *(due campi)*, **Fax** | | I recapiti. | testo |
 | **Attività** | | Il codice dell'attività esercitata. | codice |
 | **Natura Giuridica** | | La forma giuridica dell'azienda. | codice |
-| **Regime Fiscale** | ● | Il regime fiscale, nella codifica usata dalla fattura elettronica: `ORDINARIO`, `CONTRIBUENTI MINIMI`, `REGIME FORFETTARIO`, `AGRICOLTURA E ATTIVITA' CONNESSE E PESCA`, `VENDITA SALI E TABACCHI`, `EDITORIA`, `AGENZIE DI VIAGGI E TURISMO`, `AGRITURISMO`, `IVA PER CASSA`, `REGIME TRANSFRONTALIERO DI FRANCHIGIA IVA`, `ALTRO` e gli altri previsti dalla norma. | voce dell'elenco |
+| **Regime Fiscale** | ● | Il regime fiscale, nella codifica usata dalla fattura elettronica: `ORDINARIO`, `CONTRIBUENTI MINIMI`, `REGIME FORFETARIO`, `PRODUTTORI AGRICOLI; ATTIVITA' AGRICOLE CONNESSE`, `VENDITA SALI E TABACCHI`, `EDITORIA`, `AGENZIE DI VIAGGIO E TURISMO`, `AGRITURISMO`, `IVA PER CASSA`, `REGIME TRANSFRONTALIERO DI FRANCHIGIA IVA`, `REGIME FORFETARIO DEL TERZO SETTORE`, `ALTRO` e gli altri previsti dalla norma. Le voci riportano gli articoli del Testo Unico IVA, con il riferimento precedente fra parentesi. L'ultima, `REGIME FORFETARIO DEL TERZO SETTORE`, è accettata dal Sistema di Interscambio solo dall'11/01/2027: prima di quella data una fattura elettronica che la riporta non viene generata. | voce dell'elenco |
 | **Anno** | ● | L'anno di gestione. | anno |
 | **Regime Iva** | ● | Periodicità della liquidazione IVA. | `M - MENSILE`, `T - TRIMESTRALE` |
 | **Limite Contanti** | | La soglia oltre la quale il programma segnala il pagamento in contanti. | importo |
@@ -556,6 +556,7 @@ articoli classificati secondo un significato che non c'è più.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Una sola ditta e' presente in archivio!* | Si è chiesto il cambio ditta ma l'azienda gestita è una sola. | Non c'è nulla da fare: si sta già lavorando sull'unica azienda. |
+| *Regime Fiscale RF21 impostato su Ditta: il Sistema di Interscambio lo accetta solo dall'11/01/2027.<br><br>Prima di quella data la fattura verrebbe scartata.<br>Impossibile continuare.* | Generando o inviando una fattura elettronica prima dell'11/01/2027: il **Regime Fiscale** della ditta è `REGIME FORFETARIO DEL TERZO SETTORE`, che il Sistema di Interscambio non accetta ancora. Lo stesso messaggio, con *Fornitore* o *Cliente* al posto di *Ditta*, compare per le autofatture quando il regime è quello del fornitore o del cliente. | Fino al 10/01/2027 lascia il regime che la ditta (o il fornitore, o il cliente) usava prima; dall'11/01/2027 la fattura parte senza altri interventi. |
 | *Cambio ditta non permesso!* | Il cambio ditta è stato bloccato per questa installazione. | Se serve, chiedi all'assistenza di abilitarlo. |
 | *Attenzione!<br>La variazione di queste impostazioni può provocare il blocco del funzionamento del programma.<br>Eseguire l'operazione solo dopo aver contattato l'assistenza al numero 0941/563653.* | Si stanno aprendo le **Impostazioni Protette**. | Chiama prima l'assistenza, come dice il messaggio. |
 | *Sei Sicuro di voler continuare?* | Conferma richiesta da **F2 - Salva** nelle **Impostazioni Protette**. La risposta preimpostata è **No**. | Rispondi **Sì** per registrare. La finestra resta aperta: chiudila con **Esci**. |

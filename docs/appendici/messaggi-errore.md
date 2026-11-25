@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-25 — **1247 messaggi**.
+Aggiornato al 2026-11-25 — **1248 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -1104,6 +1104,7 @@ Aggiornato al 2026-11-25 — **1247 messaggi**.
 | *Record cancellato da un altro processo* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il documento è stato eliminato da un'altra postazione mentre era aperto a video. | Il comando non prosegue: la maschera passa al documento successivo, o si chiude se era aperta su quel solo documento. |
 | *Record di un archivio relazionato non trovato!* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | Il fornitore richiama un pagamento, una banca o un'altra tabella che non esiste più. | Segnala l'anomalia all'assistenza: manca un record in una tabella di base. |
 | *Record di un archivio relazionato non trovato!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Manca una tabella collegata — pagamento, banca, aliquota, agente. Con **F3 - Prec.**, **F4 - Succ.** o **F5 - Cerca** il documento cercato non si apre e a video resta quello di prima, che si può salvare senza rischi. | Va ripristinata la voce mancante. |
+| *Regime Fiscale RF21 impostato su Ditta: il Sistema di Interscambio lo accetta solo dall'11/01/2027.<br><br>Prima di quella data la fattura verrebbe scartata.<br>Impossibile continuare.* | [Ditte](../moduli/anagrafiche/ditte.md) | Generando o inviando una fattura elettronica prima dell'11/01/2027: il **Regime Fiscale** della ditta è `REGIME FORFETARIO DEL TERZO SETTORE`, che il Sistema di Interscambio non accetta ancora. Lo stesso messaggio, con *Fornitore* o *Cliente* al posto di *Ditta*, compare per le autofatture quando il regime è quello del fornitore o del cliente. | Fino al 10/01/2027 lascia il regime che la ditta (o il fornitore, o il cliente) usava prima; dall'11/01/2027 la fattura parte senza altri interventi. |
 | *Registro Causale Contabile non compatibile!* | [Anagrafica fornitori](../moduli/anagrafiche/anagrafica-fornitori.md) | La causale indicata non è di acquisti, acquisti CEE o fatture sospese. | Scegli una causale del registro acquisti. |
 | *Registro Documento non coincide con Registro Fatture PA impostato sulla Ditta!<br>Vuoi continuare ?* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Il documento usa un registro diverso da quello dedicato. | **No** e si corregge il registro: proseguire porta a una fattura che l'invio rifiuterà. |
 | *Registro Fatture PA non impostato su Ditta!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Nelle impostazioni della [ditta](../moduli/anagrafiche/ditte.md) manca il registro dedicato. | Va impostato prima di emettere fatture alla PA. |
