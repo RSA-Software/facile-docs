@@ -250,15 +250,17 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
       grado (°);
     - **codici e numeri** (unità di misura, CUP, CIG, numero dell'ordine, del
       contratto, della convenzione e del DDT, numero REA, telefono e fax):
-      solo lettere non accentate, cifre e punteggiatura. Qui un `N° 12` va
-      scritto `N. 12`, e un'unità di misura come `°C` va cambiata;
+      solo lettere non accentate, cifre e punteggiatura. Un `N° 12` viene
+      scritto nel file come `N. 12` senza segnalazioni; gli altri casi, come
+      un'unità di misura `°C`, vengono segnalati e vanno corretti;
     - **codice dell'articolo**: qualsiasi carattere, fino a 35;
     - **ABI e CAB**: solo cifre.
 
     I caratteri che arrivano da un incolla da Word (virgolette curve, trattini
     lunghi, puntini di sospensione, simbolo dell'euro) non vengono segnalati:
     nel file sono sostituiti dal carattere semplice che corrisponde. Nel codice
-    dell'articolo restano invece come sono.
+    dell'articolo restano invece come sono. I pochi caratteri invisibili che
+    un incolla può lasciare nel testo vengono tolti.
 
 !!! note "Lo stato si vede anche nella gestione documenti"
 
