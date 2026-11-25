@@ -74,7 +74,7 @@ esiti, una per ogni notifica.
 | ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
 | ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
 | ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Firmata e inviata al Sistema di Interscambio. |
-| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione, in attesa dell'esito dello SdI. |
+| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | In conservazione: la fattura è stata firmata e mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
 | ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
 | ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
 | ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
@@ -185,33 +185,41 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
    oppure con un nuovo invio massivo.
 
 ## Controlli e messaggi
+
 
-| Messaggio | Dove | Causa | Cosa fare |
-|---|---|---|---|
-| *Nessuna Fattura è stata selezionata per l'invio dell'Email!* | Invio | Nessuna riga spuntata. | Spuntare le fatture. |
-| *Impossibile trovare il documento in archivio!* | Invio | Il documento della riga non c'è più. | Ricaricare l'elenco. |
-| *Impossibile trovare il cliente in archivio!* | Invio | Il cliente è stato cancellato. | Sistemare l'anagrafica. |
-| *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Invio | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
-| *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | Invio | La fattura ha già un esito vero dal Sistema di Interscambio (consegna, mancata consegna, impossibilità di recapito, esito del committente, decorrenza dei termini) o è già in conservazione, e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
-| *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | Invio | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
-| *Sincronizzazione completata: …* seguito dal numero di file | Cruscotto | È il riepilogo di fine sincronizzazione, con il numero di file scaricati. Può essere anche 0 se non c'era niente di nuovo. All'apertura del cruscotto compare solo se c'è qualcosa da dire. | — |
-| *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
-| *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
-| *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Cruscotto | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
-| *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Cruscotto | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
-| *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Cruscotto | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
-| *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* | Cruscotto | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
-| *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Cruscotto | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
-| *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Cruscotto, griglia degli esiti, colonna **Messaggio** | La fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
-| *Credito Esaurito!* | Cruscotto | Finite le trasmissioni disponibili. | Acquistare credito. |
-| *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Cruscotto | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
-| *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Cruscotto | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
-| *Autenticazione Fallita!* | Cruscotto | Con **F6** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprovare; se si ripete, contattare l'assistenza. |
-| *Mancata risposta dal server!* | Cruscotto | Con **F6** il servizio delle fatture elettroniche non ha risposto. | Controllare la connessione a Internet e riprovare. |
-| *POST -> Response status code = …* | Cruscotto | Con **F6** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprovare; se si ripete, comunicare il numero all'assistenza. |
-| *Esportazione Conclusa!* | entrambe | L'XML è stato scritto. | — |
+### Invio Fatture Emesse
 
-Non applicabile.
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Nessuna Fattura è stata selezionata per l'invio dell'Email!* | Nessuna riga spuntata. | Spuntare le fatture. |
+| *Impossibile trovare il documento in archivio!* | Il documento della riga non c'è più. | Ricaricare l'elenco. |
+| *Impossibile trovare il cliente in archivio!* | Il cliente è stato cancellato. | Sistemare l'anagrafica. |
+| *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
+| *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | La fattura ha già un esito vero dal Sistema di Interscambio (consegna, mancata consegna, impossibilità di recapito, esito del committente, decorrenza dei termini) o è già in conservazione, e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
+| *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
+| *Esportazione Conclusa!* | In tutte e due le maschere: l'XML è stato scritto. | — |
+
+### Cruscotto Fatture Elettroniche
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Sincronizzazione completata: …* seguito dal numero di file | È il riepilogo di fine sincronizzazione, con il numero di file scaricati. Può essere anche 0 se non c'era niente di nuovo. All'apertura del cruscotto compare solo se c'è qualcosa da dire. | — |
+| *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
+| *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
+| *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
+| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Alcuni stati letti dal web service di Digithera non si sono potuti registrare (per esempio una notifica non riconosciuta). | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
+| *Stati dal web service: letti i primi …, i rimanenti alla prossima sincronizzazione.* | Gli stati in attesa erano molti: la sincronizzazione ne legge un certo numero per volta. | Ripetere la sincronizzazione (++f2++) finché il messaggio non compare più. |
+| *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
+| *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
+| *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* (oppure *… di 1 fattura.*) | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
+| *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
+| *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Nella griglia degli esiti, colonna **Messaggio**: la fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
+| *Credito Esaurito!* | Finite le trasmissioni disponibili. | Acquistare credito. |
+| *Errore di comunicazione! Impossibile contattare l'Authorization Server.* | Rete o servizio non raggiungibile. | Attendere qualche minuto e riprovare. |
+| *Partita Iva Ditta non impostata!* / *Codice Abilitazione Invio Fatture Elettroniche non impostato!* | Manca un dato sulla ditta. | Compilarlo in [Ditte](../anagrafiche/ditte.md). |
+| *Autenticazione Fallita!* | Con **F6** il programma accede al servizio delle fatture elettroniche prima di aprire il portale, e il servizio ha rifiutato l'accesso. | Riprovare; se si ripete, contattare l'assistenza. |
+| *Mancata risposta dal server!* | Con **F6** il servizio delle fatture elettroniche non ha risposto. | Controllare la connessione a Internet e riprovare. |
+| *POST -> Response status code = …* | Con **F6** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprovare; se si ripete, comunicare il numero all'assistenza. |
 
 ## Note
 
