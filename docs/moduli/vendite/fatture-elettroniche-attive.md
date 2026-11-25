@@ -139,7 +139,8 @@ Non applicabile.
 | **F4 - Esporta** | ++f4++ | Esporta in XML. |
 | **F5 - Trova** | ++f5++ | Cerca nella griglia. |
 | **F6 - https://fatture.facilecloud.net** | ++f6++ | Apre il portale nel browser. Compare solo se il codice cliente per le fatture PA è impostato sulla ditta. |
-| doppio clic su una riga degli esiti | | Se l'esito ha un allegato, propone di salvarlo: parte dalla cartella `out` dell'utente. |
+| **F7 - Salva Esito** | ++f7++ | Salva il file dell'esito selezionato nella griglia degli esiti: propone la cartella `out` dell'utente e il nome originale del file. |
+| doppio clic su una riga degli esiti | ++enter++ | Se l'esito ha un allegato, lo apre con il programma predefinito per quel tipo di file. Per salvarlo c'è **F7 - Salva Esito**. |
 
 Non applicabile.
 
@@ -296,7 +297,9 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
     scarto è il testo della colonna **Messaggio** dell'ultimo esito.
 
     Se l'esito ha un allegato — la ricevuta ufficiale — il **doppio clic** sulla
-    riga propone di salvarlo, partendo dalla cartella `out` dell'utente.
+    riga lo apre; per salvarlo c'è **F7 - Salva Esito**, che parte dalla cartella
+    `out` dell'utente. Il file è un XML: si apre con il programma che Windows usa
+    per quel tipo di file, di solito il browser.
 
 ## Vedi anche
 
