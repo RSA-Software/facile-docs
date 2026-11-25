@@ -152,7 +152,7 @@ non è un guasto.
 | Tipo Destinatario, Cod. Ministeriale | | Come il fornitore è identificato nel [Flusso MOV](../vendite/flusso-mov.md) quando gli si rimandano medicinali (rientri): il tipo e il codice ministeriale del suo sito. Compaiono solo con la [gestione farmaceutica](ditte.md#attivare-la-gestione-farmaceutica) attiva. | F - FARMACIA, D - DISTRIBUTORE, P - PRODUTTORE e gli altri tipi del Ministero; codice fino a 11 caratteri |
 | Causale Contab. | | Causale proposta nelle registrazioni di prima nota. Accanto compare la descrizione. | Codice dall'archivio causali contabili |
 | Natura Giuridica | | Codice della forma giuridica usato dalla fattura elettronica: da questo dipende se il capitale sociale e il socio unico vengono trasmessi. Da non confondere con **Natura Giurid.** della scheda *Generale*. | 2 caratteri |
-| Regime Fiscale | | Regime fiscale dichiarato dal fornitore. | Da elenco (ORDINARIO, REGIME FORFETTARIO, …) |
+| Regime Fiscale | | Regime fiscale dichiarato dal fornitore. La voce `REGIME FORFETARIO DEL TERZO SETTORE` vale solo dall'11/01/2027 (vedi [Ditte](ditte.md)). | Da elenco (ORDINARIO, REGIME FORFETARIO, …) |
 | Ufficio U.R.I. | | Provincia dell'ufficio del registro delle imprese. | 2 caratteri |
 | Numero R.E.A. | | Numero di iscrizione al repertorio economico amministrativo. | Solo cifre, fino a 20 |
 | Capitale Sociale | | Capitale sociale dichiarato. | Importo |
