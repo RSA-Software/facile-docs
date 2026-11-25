@@ -208,6 +208,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
 | *… contiene un carattere non valido (…) alla posizione …<br><br>Vuoi continuare ?* | Generando il file della fattura: un campo contiene un carattere che il tracciato della fattura elettronica non ammette in quel punto. Il messaggio dice quale campo (per esempio *Il codice CUP*, *Il numero del documento di riferimento*, *Il numero REA*, *La descrizione della riga 3*), il valore, il codice del carattere e la sua posizione. Vedi la nota *Quali caratteri sono ammessi*, più sotto. | Rispondere **No**, correggere il campo indicato e rigenerare il file. Rispondendo **Sì** il file viene generato lo stesso, ma il Sistema di Interscambio lo scarterà. |
 | *Il codice del buono Carta del Docente nella riga … e' lungo … caratteri: il massimo e' 35.<br><br>Vuoi continuare ?* | Il codice del buono, scritto nelle note della riga, supera la lunghezza che il tracciato ammette. | Rispondere **No** e correggere il codice del buono nelle note della riga. |
+| *Il Sistema di Interscambio scarterebbe questa fattura:<br><br>- … (controllo …)<br><br>Vuoi continuare ?* | Generando il file della fattura: il programma rifà sul file i controlli che il Sistema di Interscambio farà alla ricezione, e almeno uno non è superato. Ogni riga dice cosa non va e il codice del controllo (per esempio *il totale della riga 3 (12,50) non corrisponde a prezzo, sconti e quantità (12,35) (controllo 00423)*). Se sono più di dieci si vedono i primi dieci. Vedi la nota *I controlli del Sistema di Interscambio*, più sotto. | Rispondere **No**, correggere il documento o l'anagrafica indicata e rigenerare il file. Rispondendo **Sì** il file viene salvato ma la fattura non viene inviata. |
 | *Esportazione Conclusa!* | In tutte e due le maschere: l'XML è stato scritto. | — |
 
 ### Cruscotto Fatture Elettroniche
@@ -237,6 +238,38 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *POST -> Response status code = …* | Con **F6** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprovare; se si ripete, comunicare il numero all'assistenza. |
 
 ## Note
+
+!!! note "I controlli del Sistema di Interscambio"
+
+    Prima di inviare una fattura il programma rifà sul file gli stessi
+    controlli che il Sistema di Interscambio applica quando la riceve, con le
+    stesse tolleranze, così uno scarto si scopre subito e non il giorno dopo:
+
+    - **struttura del file** (controllo 00200): campi obbligatori, lunghezze,
+      caratteri e valori ammessi, secondo il tracciato ufficiale;
+    - **aliquota e natura IVA** (00400, 00401, 00413, 00414, 00429, 00430,
+      00445): la natura c'è solo con aliquota zero, e non è una di quelle
+      generiche non più ammesse;
+    - **riepilogo IVA** (00419, 00443, 00444): ogni aliquota e ogni natura
+      usate nelle righe hanno il loro riepilogo;
+    - **calcoli** (00421, 00422, 00423): il totale di ogni riga corrisponde a
+      prezzo, sconti e quantità (tolleranza un centesimo), l'imponibile del
+      riepilogo alla somma delle righe (tolleranza un euro), l'imposta
+      all'imponibile per l'aliquota (tolleranza un centesimo);
+    - **date** (00403, 00418): la data del documento non è successiva al
+      giorno dell'invio, e una nota di credito non precede la fattura a cui
+      si riferisce;
+    - **ritenuta** (00411, 00415): se una riga o la cassa previdenziale è
+      soggetta a ritenuta ci sono i dati della ritenuta;
+    - **scissione dei pagamenti** (00420): non è ammessa con l'inversione
+      contabile;
+    - **codice destinatario e formato** (00427, 00428);
+    - **autofatture e integrazioni** (da 00471 a 00476): chi emette e chi
+      riceve sono quelli che il tipo di documento richiede.
+
+    Restano al Sistema di Interscambio i controlli che usano le sue banche
+    dati: esistenza di partite IVA e codici fiscali, codice destinatario
+    attivo, dichiarazioni d'intento, fattura già ricevuta.
 
 !!! note "Quali caratteri sono ammessi"
 

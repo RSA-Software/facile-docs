@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-25 — **1250 messaggi**.
+Aggiornato al 2026-11-25 — **1251 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -602,6 +602,7 @@ Aggiornato al 2026-11-25 — **1250 messaggi**.
 | *Il server licenze non risponde. Controlla la connessione o usa l'attivazione offline.* | [Licenza](../moduli/utility/gestione-licenza.md) | Il PC non raggiunge il server delle licenze. | Controlla la connessione, oppure usa **Richiesta offline…**. |
 | *Il servizio deve essere installato sulla macchina locale!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | **F4 - Avvia** o **F5 - Arresta** su un servizio che sta su un altro computer. | Va avviato da lì. |
 | *Il servizio è stato avviato!* — *Il servizio è stato arrestato!* | [Impostazioni della postazione](../moduli/utility/impostazioni-postazione.md) | Il comando è riuscito. | Nessuna azione. |
+| *Il Sistema di Interscambio scarterebbe questa fattura:<br><br>- … (controllo …)<br><br>Vuoi continuare ?* | [Fatture elettroniche attive](../moduli/vendite/fatture-elettroniche-attive.md) | Generando il file della fattura: il programma rifà sul file i controlli che il Sistema di Interscambio farà alla ricezione, e almeno uno non è superato. Ogni riga dice cosa non va e il codice del controllo (per esempio *il totale della riga 3 (12,50) non corrisponde a prezzo, sconti e quantità (12,35) (controllo 00423)*). Se sono più di dieci si vedono i primi dieci. Vedi la nota *I controlli del Sistema di Interscambio*, più sotto. | Rispondere **No**, correggere il documento o l'anagrafica indicata e rigenerare il file. Rispondendo **Sì** il file viene salvato ma la fattura non viene inviata. |
 | *Il Tipo Dato è stato troncato a 10 caratteri!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Negli altri dati gestionali di una riga, il tipo dato è più lungo di 10 caratteri. | Controlla il testo rimasto. |
 | *Il tipo di documento selezionato non puo' contenere articoli fiscali!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Si sta mettendo un articolo fiscale — tabacchi, valori bollati — in un documento che non li ammette. | Serve il tipo di documento giusto. |
 | *Il tipo di pagamento non e' stato impostato.<br>Sara' richiesto al momento della fatturazione!* | [Documento di vendita](../moduli/vendite/documento-di-vendita.md) | Su un documento che diventerà fattura più avanti. | Non è un errore: il pagamento verrà chiesto all'emissione della fattura. |
