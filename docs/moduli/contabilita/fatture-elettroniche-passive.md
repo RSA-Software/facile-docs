@@ -158,8 +158,7 @@ Non applicabile.
     ripete a mano.
 
     Non esiste più un computer "unico" abilitato: basta il permesso
-    sull'utente. Il campo sulla [ditta](../anagrafiche/ditte.md) che indicava
-    il computer non ha più alcun effetto.
+    sull'utente.
 
     La sincronizzazione automatica all'apertura si può disattivare su un
     singolo computer: chiedere all'assistenza.
