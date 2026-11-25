@@ -74,7 +74,7 @@ esiti, una per ogni notifica.
 | ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
 | ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
 | ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Firmata e inviata al Sistema di Interscambio. |
-| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione, in attesa dell'esito dello SdI. |
+| ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | In conservazione: la fattura è stata firmata e mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
 | ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
 | ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
 | ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
@@ -198,9 +198,11 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Sincronizzati … file su …: connessione persa, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | La linea è caduta e le riprese automatiche non sono bastate. | Niente: quello che manca verrà scaricato alla prossima sincronizzazione. Se si ripete, controllare la connessione. |
 | *Sincronizzazione interrotta: sincronizzati … file su …, i rimanenti saranno scaricati alla prossima sincronizzazione.* | Cruscotto | Hai premuto **Interrompi**. | Niente: il lavoro fatto resta e il resto riprende alla prossima sincronizzazione. |
 | *File non scaricati per un errore: …. Restano sull'FTP e saranno riprovati alla prossima sincronizzazione.* | Cruscotto | Alcuni file non si sono potuti scaricare. | Niente: saranno riprovati; se il numero non cala, contattare l'assistenza. |
+| *Stati dal web service non salvati: …. Il dettaglio è nel registro degli errori.* | Cruscotto | Alcuni stati letti dal web service di Digithera non si sono potuti registrare (per esempio una notifica non riconosciuta). | Contattare l'assistenza, che legge il dettaglio nel registro degli errori. |
+| *Stati dal web service: letti i primi …, i rimanenti alla prossima sincronizzazione.* | Cruscotto | Gli stati in attesa erano molti: la sincronizzazione ne legge un certo numero per volta. | Ripetere la sincronizzazione (++f2++) finché il messaggio non compare più. |
 | *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Cruscotto | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Cruscotto | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
-| *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* | Cruscotto | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
+| *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* (oppure *… di 1 fattura.*) | Cruscotto | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
 | *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Cruscotto | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
 | *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Cruscotto, griglia degli esiti, colonna **Messaggio** | La fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
 | *Credito Esaurito!* | Cruscotto | Finite le trasmissioni disponibili. | Acquistare credito. |

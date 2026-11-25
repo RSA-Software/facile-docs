@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-24 — **1220 messaggi**.
+Aggiornato al 2026-11-25 — **1220 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
