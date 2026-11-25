@@ -54,7 +54,7 @@ Sono **due finestre diverse**, una per mandare e una per seguire.
 fatture da mandare: si spuntano quelle che interessano e si preme *Invio*.
 
 **Cruscotto Fatture Elettroniche** ha in alto i filtri e sotto **due griglie**: quella
-grande con le fatture e le autofatture inviate — numero, data, **TD** (il tipo
+grande con le fatture e le autofatture inviate — numero, data, **Tipo** (il tipo
 documento della fattura elettronica: TD01 fattura, TD04 nota di credito, TD17
 integrazione per servizi dall'estero…), **Intestatario**,
 partita IVA, totale e stato; l'autofattura si riconosce dal registro nel numero,
