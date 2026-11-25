@@ -206,6 +206,8 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Registro Fatture PA non impostato sulla Ditta!* — e le gemelle su causale contabile, sezione e note di credito | Mancano le impostazioni fiscali per le fatture PA, o quelle del documento non coincidono. | Rispondere **No** e sistemare [Ditte](../anagrafiche/ditte.md); continuare manda un documento che può essere scartato. |
 | *La fattura risulta già consegnata: un nuovo invio sarà scartato come duplicato. Per correggerla emetti una nota di credito.* | La fattura ha già un esito vero dal Sistema di Interscambio (consegna, mancata consegna, impossibilità di recapito, esito del committente, decorrenza dei termini) o è già in conservazione, e si sta per mandarla di nuovo. L'avviso non blocca: ha i pulsanti **OK** e **Annulla**. | **Annulla**, e per correggere la fattura emettere una nota di credito. **OK** solo se sai perché serve un secondo invio. |
 | *La fattura è già stata inviata e l'esito non è ancora arrivato: un nuovo invio sarà quasi certamente scartato come duplicato.* | La fattura è già stata mandata, ma la sincronizzazione non ha ancora portato l'esito. Anche questo avviso non blocca. | Premere **Annulla**, sincronizzare dal Cruscotto con **F2 - Sincronizza** e controllare l'esito; mandarla di nuovo solo se è stata scartata. |
+| *… contiene un carattere non valido (…) alla posizione …<br><br>Vuoi continuare ?* | Generando il file della fattura: un campo contiene un carattere che il tracciato della fattura elettronica non ammette in quel punto. Il messaggio dice quale campo (per esempio *Il codice CUP*, *Il numero del documento di riferimento*, *Il numero REA*, *La descrizione della riga 3*), il valore, il codice del carattere e la sua posizione. Vedi la nota *Quali caratteri sono ammessi*, più sotto. | Rispondere **No**, correggere il campo indicato e rigenerare il file. Rispondendo **Sì** il file viene generato lo stesso, ma il Sistema di Interscambio lo scarterà. |
+| *Il codice del buono Carta del Docente nella riga … e' lungo … caratteri: il massimo e' 35.<br><br>Vuoi continuare ?* | Il codice del buono, scritto nelle note della riga, supera la lunghezza che il tracciato ammette. | Rispondere **No** e correggere il codice del buono nelle note della riga. |
 | *Esportazione Conclusa!* | In tutte e due le maschere: l'XML è stato scritto. | — |
 
 ### Cruscotto Fatture Elettroniche
@@ -235,6 +237,28 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *POST -> Response status code = …* | Con **F6** il servizio ha risposto con un errore; il numero è il codice dell'errore. | Riprovare; se si ripete, comunicare il numero all'assistenza. |
 
 ## Note
+
+!!! note "Quali caratteri sono ammessi"
+
+    Il tracciato della fattura elettronica non accetta gli stessi caratteri in
+    tutti i campi, e il programma li controlla quando genera il file:
+
+    - **testo libero** (denominazione, nome e cognome, indirizzo, comune,
+      descrizione delle righe, causale, causale del trasporto, codice della
+      commessa o convenzione, riferimenti di testo, banca): lettere, cifre,
+      punteggiatura, lettere accentate e i simboli più comuni, compreso il
+      grado (°);
+    - **codici e numeri** (unità di misura, CUP, CIG, numero dell'ordine, del
+      contratto, della convenzione e del DDT, numero REA, telefono e fax):
+      solo lettere non accentate, cifre e punteggiatura. Qui un `N° 12` va
+      scritto `N. 12`, e un'unità di misura come `°C` va cambiata;
+    - **codice dell'articolo**: qualsiasi carattere, fino a 35;
+    - **ABI e CAB**: solo cifre.
+
+    I caratteri che arrivano da un incolla da Word (virgolette curve, trattini
+    lunghi, puntini di sospensione, simbolo dell'euro) non vengono segnalati:
+    nel file sono sostituiti dal carattere semplice che corrisponde. Nel codice
+    dell'articolo restano invece come sono.
 
 !!! note "Lo stato si vede anche nella gestione documenti"
 
