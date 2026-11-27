@@ -52,6 +52,12 @@ spiega con un messaggio perché non c'è un documento da mostrare.
 
 ### Correzioni
 
+- **Solo Bevande. Fatture con più vuoti resi che merce venduta.** Quando la
+  cauzione dei vuoti resi supera il venduto, il totale da pagare è negativo e
+  la fattura non generava nessuna scadenza: il credito del cliente non
+  compariva nello scadenzario. Ora la fattura genera una sola scadenza con
+  l'importo negativo, alla prima data prevista dal pagamento. Vedi
+  [Tabella vuoti](../moduli/versioni/cauzioni-vuoti.md).
 - **SMS con OpenAPI.** I numeri si possono scrivere anche con spazi, punti,
   trattini o con lo `00` davanti al prefisso estero: Facile li porta nel
   formato che il servizio accetta, che prima scartava i numeri scritti in modo

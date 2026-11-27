@@ -55,6 +55,11 @@ vuoti, il reso da bolla, l'interrogazione e la stampa della situazione.
     L'importo entra sotto l'**aliquota di esenzione** della ditta, perché la
     cauzione non è un corrispettivo: è un deposito che va reso.
 
+    Se i vuoti resi valgono più della merce venduta, il totale da pagare
+    della fattura è negativo: è il cliente ad avere un credito. In quel caso
+    la fattura genera **una sola scadenza**, con l'importo negativo, alla
+    prima data prevista dal pagamento, anche se il pagamento è a più rate.
+
 !!! note "Quando i vuoti si muovono davvero"
 
     Come per la merce, non al salvataggio ma **all'emissione del
