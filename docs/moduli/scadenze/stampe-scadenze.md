@@ -59,6 +59,8 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Pagamento** | | Restringe a un [tipo di pagamento](../contabilita/tipi-di-pagamento.md). | codice |
 | **Cat. Economica** | | Restringe a una [categoria economica](../anagrafiche/categorie-economiche.md). | codice |
 | **Zona** | | Restringe a una [zona](../anagrafiche/zone.md). | codice |
+| **Gruppo Azi.** | | Restringe ai clienti di un gruppo aziende, quello indicato nella scheda del [cliente](../anagrafiche/anagrafica-clienti.md). C'è solo nello scadenziario clienti. | codice |
+| **Escludi** | | Accanto a ogni codice: rovescia il filtro, cioè stampa tutto tranne quello indicato. Va spuntato solo dopo aver scritto il codice. | spunta |
 | **Sezione** | | Restringe a una [sezione](../contabilita/sezioni.md) contabile. | codice |
 | **Tipo Pagam.** | | Quale modalità di pagamento includere. | `TUTTI`, `RIMESSA DIRETTA`, `RI.BA.`, e le altre dell'elenco |
 
@@ -69,6 +71,7 @@ pulsanti **F2 - OK** ed **Esci**.
 | **Data Riferimento** | La data a cui fotografare la situazione. |
 | **Stampa Indirizzo** | Aggiunge l'indirizzo del soggetto. |
 | **Zona** | Restringe a una zona. |
+| **Gruppo Azi.** | Restringe ai clienti di un gruppo aziende. C'è solo nella sintesi dei clienti. |
 | **Tipo Pagamento** | Restringe a un [tipo di pagamento](../contabilita/tipi-di-pagamento.md). |
 | **Agente** | Restringe a un [agente](../anagrafiche/anagrafica-agenti.md). |
 | **Sezione** | Restringe a una [sezione](../contabilita/sezioni.md). |
@@ -112,8 +115,15 @@ cui mandare il sollecito.
 1. Controlla lo scaduto dalla [gestione scadenze](gestione-scadenze.md),
    mettendo **Stato** su `NON PAGATE`.
 2. Apri **Menu ▸ Scadenze ▸ Scadenziario Clienti ▸ Stampa Solleciti**.
-3. Restringi se serve per **Agente** o per **Zona**.
+3. Restringi se serve per **Agente**, per **Zona** o per **Gruppo Azi.**
 4. Premi **F2 - OK**.
+
+### Stampare le scadenze di un gruppo di aziende
+
+1. Apri **Menu ▸ Scadenze ▸ Scadenziario Clienti ▸ Stampa**.
+2. In **Gruppo Azi.** scrivi il codice del gruppo, o premi ++f10++ per sceglierlo dall'elenco.
+3. Scegli il **Raggruppamento** e premi **F2 - OK**: escono solo le scadenze dei
+   clienti che nella loro scheda hanno quel gruppo.
 
 ### Dare a un cliente il quadro della sua posizione
 
@@ -145,6 +155,11 @@ cui mandare il sollecito.
 
     **Stampa** e **Stampa Solleciti** aprono la stessa finestra di selezione:
     cambia quello che viene prodotto, non i filtri da compilare.
+
+!!! note "Escludi un gruppo aziende"
+
+    Con **Escludi** spuntato accanto a **Gruppo Azi.** la stampa riporta i clienti
+    di tutti gli altri gruppi **e anche quelli che non hanno nessun gruppo**.
 
 !!! info "Con quale tasso si calcolano gli interessi di mora"
 
