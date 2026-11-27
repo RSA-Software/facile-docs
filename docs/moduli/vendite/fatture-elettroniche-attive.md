@@ -74,20 +74,20 @@ esiti, una per ogni notifica.
 |:---:|---|
 | ![](../../assets/img/vendite/stati-fe/lavorazione.png){ width="24" } | In lavorazione: non è ancora partita. |
 | ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
-| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
+| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico dal servizio di trasmissione. |
 | ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Inviata allo SdI: il servizio di trasmissione ha preparato la fattura e l'ha inviata al Sistema di Interscambio. |
 | ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione: la fattura è stata mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
-| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
+| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito inviato dalla PA. |
 | ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
-| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
-| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: il committente non ha risposto in tempo. |
+| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dalla PA (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: la PA non ha risposto entro 15 giorni. |
 | ![](../../assets/img/vendite/stati-fe/impossibilita-di-recapito.png){ width="24" } | Trasmessa, ma con impossibilità di recapito. |
 | ![](../../assets/img/vendite/stati-fe/notifica-di-mancata-consegna.png){ width="24" } | Mancata consegna: la fattura è nel cassetto fiscale del cliente. |
-| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | File dei metadati. |
-| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito del committente è stato scartato dallo SdI. |
-| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata da DigitHub prima di partire: va corretta e rimandata. |
+| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | Dati di trasmissione del file. |
+| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito della PA è stato scartato dallo SdI. |
+| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata dal servizio di trasmissione prima di partire: va corretta e rimandata. |
 | ![](../../assets/img/vendite/stati-fe/notifica-di-scarto-sdi.png){ width="24" } | Scartata dal Sistema di Interscambio. |
-| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dal committente (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dalla PA (pubblica amministrazione). |
 
 ## Campi
 
@@ -109,7 +109,7 @@ esiti, una per ogni notifica.
 
 !!! tip "I due scarti non sono la stessa cosa"
 
-    **SCARTATA DA DIGITHUB** è una fattura fermata dall'intermediario prima di
+    **SCARTATA DAL SERVIZIO DI TRASMISSIONE** è una fattura fermata dall'intermediario prima di
     partire; **SCARTATA DALLO SDI** una partita e respinta dal Sistema di
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
@@ -356,6 +356,31 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
     cambia niente, ma la prima volta su ciascuno può durare alcuni minuti. Al
     termine ne dice il risultato, se ha aggiornato lo stato di qualche fattura;
     se lo interrompi, riprende dal punto in cui era arrivato.
+
+!!! note "Cosa dicono le righe della griglia degli esiti"
+
+    Ogni riga della griglia di sotto è un passaggio della fattura, dal più
+    vecchio al più recente, con la data, l'ora e una frase che dice cosa è
+    successo:
+
+    | Nella colonna **Stato** | Cosa vuol dire |
+    |---|---|
+    | *Presa in carico dal servizio di trasmissione* | Il servizio ha ricevuto il file. |
+    | *Elaborata dal servizio di trasmissione* | Il servizio ha controllato e preparato il file per il Sistema di Interscambio. |
+    | *Inviata al Sistema di Interscambio* | Il file è in consegna allo SdI. |
+    | *Ricevuta dal Sistema di Interscambio, in attesa dell'esito* | Lo SdI ha il file e lo sta controllando: l'esito arriva di solito in poche ore, al massimo in cinque giorni. |
+    | *Scartata dal servizio di trasmissione: non è arrivata allo SdI* | Il file non è partito: il motivo è nella colonna **Messaggio**. |
+    | *Consegnata al cliente* | È arrivata la ricevuta di consegna. |
+    | *Non recapitata: è a disposizione del cliente nella sua area riservata dell'Agenzia delle Entrate* | La fattura è valida ed emessa, ma lo SdI non è riuscito a recapitarla: conviene avvisare il cliente. |
+    | *Scartata dal Sistema di Interscambio: va corretta e inviata di nuovo* | La fattura non risulta emessa: il motivo è nella colonna **Messaggio**. |
+    | *Trasmessa, ma lo SdI non è riuscito a recapitarla alla PA* | Vale come prova dell'invio: la fattura va fatta avere all'ente in altro modo. |
+    | *Accettata dalla PA* / *Rifiutata dalla PA* | L'esito che l'ente ha dato alla fattura. |
+    | *Termini decorsi: la PA non ha risposto entro 15 giorni* | L'ente non ha né accettato né rifiutato. |
+    | *Inviata in conservazione* | La fattura è stata mandata in conservazione. |
+
+    Quando non c'è altro da dire, nella colonna **Messaggio** compare fra
+    parentesi una sigla (per esempio *(RC)* o *(IS_ACQUIRED)*): è il nome
+    tecnico del passaggio, utile se chiami l'assistenza.
 
 !!! tip "Il motivo dello scarto sta nella griglia di sotto"
 
