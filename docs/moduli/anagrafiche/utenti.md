@@ -233,6 +233,14 @@ che contiene; rimettendola a una voce si riaccende il ramo che la ospita.
     codice a cinque cifre — `dit00001.bmp` per la ditta 1, `dit00007.bmp` per
     la ditta 7.
 
+    Se più aziende lavorano sulla stessa installazione, ognuna col suo
+    archivio, le loro ditte possono avere lo stesso codice. In quel caso il
+    logo va messo in una sottocartella di `template` che ha il nome
+    dell'archivio, quello del campo **Archivio** dell'accesso: per la ditta 1
+    dell'archivio `ROSSI`, `template\ROSSI\dit00001.bmp`. Il programma cerca
+    prima lì e, se non trova il file, usa quello in `template`. Lo stesso
+    vale per le stampe fatte da FacileNext.
+
     Il campo **Logo** dice quale di quei file usare. Lasciandolo a `0` viene
     preso quello della ditta su cui si lavora; scrivendoci un numero, viene
     preso quello, qualunque ditta sia aperta. Serve a chi tiene più ragioni
