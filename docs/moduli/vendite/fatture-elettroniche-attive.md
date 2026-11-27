@@ -74,20 +74,20 @@ esiti, una per ogni notifica.
 |:---:|---|
 | ![](../../assets/img/vendite/stati-fe/lavorazione.png){ width="24" } | In lavorazione: non è ancora partita. |
 | ![](../../assets/img/vendite/stati-fe/inviata-ftp.png){ width="24" } | Partita verso il servizio di trasmissione, nessuna risposta ancora. |
-| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico da DigitHub. |
+| ![](../../assets/img/vendite/stati-fe/fe-inviato.png){ width="24" } | Presa in carico dal servizio di trasmissione. |
 | ![](../../assets/img/vendite/stati-fe/firmato.png){ width="24" } | Inviata allo SdI: il servizio di trasmissione ha preparato la fattura e l'ha inviata al Sistema di Interscambio. |
 | ![](../../assets/img/vendite/stati-fe/conservazione.png){ width="24" } | Inviata in conservazione: la fattura è stata mandata in conservazione e non è ancora arrivato un esito dallo SdI. |
-| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito del committente. |
+| ![](../../assets/img/vendite/stati-fe/fe-esito-committente.png){ width="24" } | Esito inviato dalla PA. |
 | ![](../../assets/img/vendite/stati-fe/ricevuta-di-consegna.png){ width="24" } | Consegnata: è arrivata la ricevuta di consegna. |
-| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dal committente (pubblica amministrazione). |
-| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: il committente non ha risposto in tempo. |
+| ![](../../assets/img/vendite/stati-fe/fe-accettata.png){ width="24" } | Accettata dalla PA (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/notifica-decorrenza-termini.png){ width="24" } | Decorrenza termini: la PA non ha risposto entro 15 giorni. |
 | ![](../../assets/img/vendite/stati-fe/impossibilita-di-recapito.png){ width="24" } | Trasmessa, ma con impossibilità di recapito. |
 | ![](../../assets/img/vendite/stati-fe/notifica-di-mancata-consegna.png){ width="24" } | Mancata consegna: la fattura è nel cassetto fiscale del cliente. |
-| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | File dei metadati. |
-| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito del committente è stato scartato dallo SdI. |
-| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata da DigitHub prima di partire: va corretta e rimandata. |
+| ![](../../assets/img/vendite/stati-fe/fe-metadati.png){ width="24" } | Dati di trasmissione del file. |
+| ![](../../assets/img/vendite/stati-fe/fe-scarto-esito.png){ width="24" } | L'esito della PA è stato scartato dallo SdI. |
+| ![](../../assets/img/vendite/stati-fe/scartata.png){ width="24" } | Scartata dal servizio di trasmissione prima di partire: va corretta e rimandata. |
 | ![](../../assets/img/vendite/stati-fe/notifica-di-scarto-sdi.png){ width="24" } | Scartata dal Sistema di Interscambio. |
-| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dal committente (pubblica amministrazione). |
+| ![](../../assets/img/vendite/stati-fe/fe-rifiutata.png){ width="24" } | Rifiutata dalla PA (pubblica amministrazione). |
 
 ## Campi
 
@@ -109,7 +109,7 @@ esiti, una per ogni notifica.
 
 !!! tip "I due scarti non sono la stessa cosa"
 
-    **SCARTATA DA DIGITHUB** è una fattura fermata dall'intermediario prima di
+    **SCARTATA DAL SERVIZIO DI TRASMISSIONE** è una fattura fermata dall'intermediario prima di
     partire; **SCARTATA DALLO SDI** una partita e respinta dal Sistema di
     Interscambio. Le prime si correggono e si rimandano subito; le seconde
     hanno un esito ufficiale da leggere.
