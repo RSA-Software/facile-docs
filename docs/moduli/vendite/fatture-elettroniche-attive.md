@@ -357,6 +357,31 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
     termine ne dice il risultato, se ha aggiornato lo stato di qualche fattura;
     se lo interrompi, riprende dal punto in cui era arrivato.
 
+!!! note "Cosa dicono le righe della griglia degli esiti"
+
+    Ogni riga della griglia di sotto è un passaggio della fattura, dal più
+    vecchio al più recente, con la data, l'ora e una frase che dice cosa è
+    successo:
+
+    | Nella colonna **Stato** | Cosa vuol dire |
+    |---|---|
+    | *Presa in carico dal servizio di trasmissione* | Il servizio ha ricevuto il file. |
+    | *Elaborata dal servizio di trasmissione* | Il servizio ha controllato e preparato il file per il Sistema di Interscambio. |
+    | *Inviata al Sistema di Interscambio* | Il file è in consegna allo SdI. |
+    | *Ricevuta dal Sistema di Interscambio, in attesa dell'esito* | Lo SdI ha il file e lo sta controllando: l'esito arriva di solito in poche ore, al massimo in cinque giorni. |
+    | *Scartata dal servizio di trasmissione: non è arrivata allo SdI* | Il file non è partito: il motivo è nella colonna **Messaggio**. |
+    | *Consegnata al cliente* | È arrivata la ricevuta di consegna. |
+    | *Non recapitata: è a disposizione del cliente nella sua area riservata dell'Agenzia delle Entrate* | La fattura è valida ed emessa, ma lo SdI non è riuscito a recapitarla: conviene avvisare il cliente. |
+    | *Scartata dal Sistema di Interscambio: va corretta e inviata di nuovo* | La fattura non risulta emessa: il motivo è nella colonna **Messaggio**. |
+    | *Trasmessa, ma lo SdI non è riuscito a recapitarla alla PA* | Vale come prova dell'invio: la fattura va fatta avere all'ente in altro modo. |
+    | *Accettata dalla PA* / *Rifiutata dalla PA* | L'esito che l'ente ha dato alla fattura. |
+    | *Termini decorsi: la PA non ha risposto entro 15 giorni* | L'ente non ha né accettato né rifiutato. |
+    | *Inviata in conservazione* | La fattura è stata mandata in conservazione. |
+
+    Quando non c'è altro da dire, nella colonna **Messaggio** compare fra
+    parentesi una sigla (per esempio *(RC)* o *(IS_ACQUIRED)*): è il nome
+    tecnico del passaggio, utile se chiami l'assistenza.
+
 !!! tip "Il motivo dello scarto sta nella griglia di sotto"
 
     Selezionando la fattura nella griglia grande, quella in basso mostra la sua
