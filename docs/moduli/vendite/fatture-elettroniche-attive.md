@@ -223,6 +223,7 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 | *Stati dal web service: letti i primi …, i rimanenti alla prossima sincronizzazione.* | Gli stati in attesa erano molti: la sincronizzazione ne legge un certo numero per volta. | Ripetere la sincronizzazione (++f2++) finché il messaggio non compare più. |
 | *Stati dal web service non letti: …. Saranno riletti alla prossima sincronizzazione.* | Gli stati che Digithera mette a disposizione tramite il web service non si sono potuti leggere (il motivo segue i due punti). | Niente: si rileggono alla sincronizzazione successiva; se il messaggio si ripete, contattare l'assistenza. |
 | *Accesso all'FTP di Digithera rifiutato: controllare le credenziali.* | Il servizio non ha accettato la password del collegamento. | Controllare il collegamento nella scheda **Fatture Elettroniche** di [Ditte](../anagrafiche/ditte.md). |
+| *Vuoi eseguire adesso il controllo degli esiti del …?* (oppure *Vuoi riprendere adesso…*) | Dopo una sincronizzazione, la prima volta in un anno su quel computer: il programma propone il controllo periodico delle notifiche. | **Esegui adesso** per farlo subito, **Più tardi** per farselo richiedere alla prossima sincronizzazione, **Non eseguire e non chiedere più** per saltarlo per quell'anno. Vedi la nota *La prima volta in un anno può volerci qualche minuto*. |
 | *Controllo periodico degli esiti … completato: aggiornato lo stato di … fatture.* (oppure *… di 1 fattura.*) | Esito del controllo periodico che si fa una volta per ogni anno su ogni computer (vedi le note). Compare solo se ha aggiornato lo stato di qualche fattura. | — |
 | *Controllo periodico degli esiti … sospeso: riprenderà alla prossima sincronizzazione.* | Il controllo è stato fermato prima della fine. | Niente: riprende da solo alla prossima sincronizzazione. |
 | *Reinvio scartato come duplicato: al cliente è arrivata la versione del primo invio* | Nella griglia degli esiti, colonna **Messaggio**: la fattura è stata mandata una seconda volta e il Sistema di Interscambio ha scartato il secondo invio perché già consegnato. | Niente: la consegna del primo invio resta valida e lo stato della fattura non cambia. |
@@ -348,14 +349,23 @@ Gli esiti di una sola fattura o autofattura si vedono anche dal
 
 !!! info "La prima volta in un anno può volerci qualche minuto"
 
-    Quando si entra per la prima volta in un anno, la sincronizzazione fa un
-    controllo periodico delle notifiche (finestra *Esiti FAE - Controllo...*)
-    e, se serve, le ripara: verifica che ogni notifica sia associata alla sua
-    fattura e aggiorna lo stato delle fatture. Si fa una volta per anno **su
-    ogni computer** (per ogni utente di Windows che usa Facile): ripeterlo non
-    cambia niente, ma la prima volta su ciascuno può durare alcuni minuti. Al
-    termine ne dice il risultato, se ha aggiornato lo stato di qualche fattura;
-    se lo interrompi, riprende dal punto in cui era arrivato.
+    Quando si entra per la prima volta in un anno, la sincronizzazione propone
+    un controllo periodico delle notifiche: verifica che ogni notifica sia
+    associata alla sua fattura e aggiorna lo stato delle fatture. Prima di
+    cominciare chiede cosa fare:
+
+    - **Esegui adesso**: parte il controllo (finestra *Esiti FAE -
+      Controllo...*), che può durare alcuni minuti;
+    - **Più tardi**: non fa niente e lo richiede alla prossima
+      sincronizzazione;
+    - **Non eseguire e non chiedere più**: per quell'anno il controllo non
+      viene fatto e non viene più proposto su quel computer; lo stato delle
+      fatture resta quello attuale.
+
+    Si fa una volta per anno **su ogni computer** (per ogni utente di Windows
+    che usa Facile): ripeterlo non cambia niente. Al termine ne dice il
+    risultato, se ha aggiornato lo stato di qualche fattura; se lo interrompi,
+    riprende dal punto in cui era arrivato.
 
 !!! note "Cosa dicono le righe della griglia degli esiti"
 

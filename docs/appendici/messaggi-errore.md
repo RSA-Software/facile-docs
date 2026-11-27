@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di Facile, con la maschera che li mo
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-27 — **1251 messaggi**.
+Aggiornato al 2026-11-27 — **1252 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -1231,6 +1231,7 @@ Aggiornato al 2026-11-27 — **1251 messaggi**.
 | *Vuoi effettuare l' azzeramento per tutti i Depositi ?* | [Chiusura dell'inventario](../moduli/inventario/chiusura-inventario.md) | Segue la conferma precedente. | **Sì** per tutti, **No** per sceglierne uno. |
 | *Vuoi eliminare le letture?* | [Acquisizione delle letture](../moduli/inventario/acquisizione-letture.md) | Dopo un'acquisizione da terminalino. | **Sì** svuota il terminalino, **No** le lascia. |
 | *Vuoi eliminare le letture?* | [Frontalini](../moduli/casse-bilance/frontalini.md) | Dopo l'acquisizione dal terminalino. | **Sì** svuota il terminalino, **No** le lascia. |
+| *Vuoi eseguire adesso il controllo degli esiti del …?* (oppure *Vuoi riprendere adesso…*) | [Fatture elettroniche attive](../moduli/vendite/fatture-elettroniche-attive.md) | Dopo una sincronizzazione, la prima volta in un anno su quel computer: il programma propone il controllo periodico delle notifiche. | **Esegui adesso** per farlo subito, **Più tardi** per farselo richiedere alla prossima sincronizzazione, **Non eseguire e non chiedere più** per saltarlo per quell'anno. Vedi la nota *La prima volta in un anno può volerci qualche minuto*. |
 | *Vuoi eseguire l' analisi solo sull' anno corrente ?<br>L' interrogazione del Database potrebbe richiedere diversi minuti.* | [Analisi delle vendite](../moduli/analisi-dati/analisi-vendite.md) | Inizio dell'analisi multidimensionale. | **Sì** resta sull'anno corrente, **No** legge lo storico pluriennale, **Annulla** ferma. |
 | *Vuoi eseguire le procedure di Fine Giornata (EOD) ?* | [Casse](../moduli/casse-bilance/casse.md) | Hai avviato la fine giornata. | **Sì** lancia la procedura della cassa. |
 | *Vuoi Esportare le scadenze in formato CSV?* | [Stampe delle scadenze](../moduli/scadenze/stampe-scadenze.md) | Compare prima della stampa dell'elenco scadenze. | **Sì** produce anche un file da aprire in Excel, **No** stampa e basta. |
