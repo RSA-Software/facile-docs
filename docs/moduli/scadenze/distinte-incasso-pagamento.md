@@ -69,6 +69,7 @@ richiamano le scadenze da chiudere, e sotto l'elenco su cui si sceglie.
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
 | **F2 - Salva** | ++f2++ | Registra la distinta e chiude le scadenze scelte. |
+| **F8 - Documento** | ++f8++ | Apre l'anteprima del documento che ha generato la scadenza selezionata nell'elenco, anche se è di un altro anno. C'è sia mentre si incassa sia sulla distinta già registrata. |
 | **Esci** | ++esc++ | Chiude senza salvare. |
 | Elenco di scelta | ++f10++ o ++space++ | Sul campo con il codice, apre l'elenco da cui scegliere. |
 | **Calcolatrice** | ++f12++ | Apre la calcolatrice. |
@@ -85,6 +86,22 @@ richiamano le scadenze da chiudere, e sotto l'elenco su cui si sceglie.
 4. Scegli dall'elenco le scadenze che il cliente sta pagando.
 5. Indica il **Conto** su cui l'incasso entra — la cassa o la banca.
 6. Premi **F2 - Salva**.
+
+### Vedere il documento di una scadenza
+
+Nell'elenco la colonna **Num. Fattura** dice da quale documento viene la
+scadenza; per vederne gli articoli non serve uscire dalla distinta.
+
+1. Seleziona nell'elenco la riga della scadenza.
+2. Premi **F8 - Documento**.
+3. Si apre l'anteprima di stampa del documento, anche se è stato emesso in un
+   anno diverso da quello su cui stai lavorando. Chiudila per tornare alla
+   distinta, che resta com'era.
+
+Il documento si apre solo per le scadenze nate da una fattura, da una nota di
+credito o da un altro documento di vendita: per quelle inserite a mano nello
+scadenzario, nate da una registrazione di prima nota o da uno scontrino,
+Facile lo dice con un messaggio.
 
 ### Rivedere una distinta già fatta
 
@@ -113,6 +130,15 @@ richiamano le scadenze da chiudere, e sotto l'elenco su cui si sceglie.
 | *Vuoi stampare la Distinta?* | A registrazione avvenuta. | **Sì** stampa la distinta. |
 | *Vuoi ristampare le Fatture/Note di Credito ?* | Dopo la registrazione. | **Sì** ristampa i documenti collegati. |
 | *Ci sono Fatture/Note di Credito fatte in anni di esercizio diversi<br>che non possono essere stampate da questo esercizio!* | Alcuni documenti sono di un altro anno. | Ristampali dall'anno in cui sono stati emessi. |
+| *Selezionare nella tabella la scadenza di cui si vuole vedere il documento.* | Con **F8 - Documento**: nell'elenco non è selezionata nessuna riga. | Clicca sulla riga della scadenza e premi di nuovo **F8**. |
+| *La scadenza della riga non è più presente nello scadenzario.* | Con **F8 - Documento**: nel frattempo la scadenza è stata cancellata. | Ricarica la distinta. |
+| *La scadenza non è legata a un documento:<br>è stata inserita a mano nello scadenzario.* | Con **F8 - Documento**: la scadenza non viene da un documento. | Nessuno: non c'è un documento da mostrare. |
+| *La scadenza è stata generata dal movimento di Prima Nota n. …:<br>non c'è un documento con gli articoli da mostrare.* | Con **F8 - Documento**: la scadenza è nata da una registrazione di [prima nota](../contabilita/registrazione-prima-nota.md), per esempio una fattura d'acquisto registrata in contabilità. | Il numero è quello della registrazione: puoi consultarla dalla prima nota. |
+| *La scadenza è stata generata da uno scontrino:<br>l'anteprima è disponibile solo per fatture e documenti.* | Con **F8 - Documento**: la scadenza viene da uno scontrino. | Nessuno. |
+| *La scadenza non è legata a un documento da mostrare.* | Con **F8 - Documento**: la scadenza viene da un movimento che non ha un documento con gli articoli. | Nessuno. |
+| *Il documento n. … dell'esercizio … non è stato trovato:<br>potrebbe essere stato cancellato o rinumerato.* | Con **F8 - Documento**: il documento che aveva generato la scadenza non c'è più con quel numero. | Cercalo dalla gestione dei documenti di quell'anno. |
+| *Il documento n. … è bloccato in attesa di sblocco:<br>non si può visualizzare.* | Con **F8 - Documento**: il documento è bloccato. | Riprova dopo che è stato sbloccato. |
+| *Non è stato possibile leggere il documento dall'archivio dell'esercizio ….* | Con **F8 - Documento**: l'archivio dell'anno del documento non è raggiungibile, per esempio perché quell'anno non è più presente. Sotto compare il motivo. | Controlla che l'anno sia ancora disponibile; altrimenti rivolgiti all'assistenza. |
 | *Impossibile aprire il file json* — *Impossibile caricare il vettore json* | L'acquisizione incassi non riesce a leggere il file. | Fattelo rimandare dall'agente. |
 
 ## Note

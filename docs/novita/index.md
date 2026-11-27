@@ -42,6 +42,14 @@ fattura. Il [modello del foglio](../assets/modelli/documento-righe-importazione.
 ha le due colonne nuove. **Solo Ortofrutta:** la colonna `LOTTO` resta la
 partita di carico, come prima.
 
+**[Il documento di una scadenza, dalla distinta](../moduli/scadenze/distinte-incasso-pagamento.md#vedere-il-documento-di-una-scadenza).**
+Nelle distinte di incasso e di pagamento il pulsante **F8 - Documento** apre
+l'anteprima del documento che ha generato la scadenza selezionata: si vedono
+gli articoli della fattura senza uscire dalla distinta e senza cambiare anno,
+anche quando la fattura è di un esercizio precedente. Per le scadenze inserite
+a mano, nate da una registrazione di prima nota o da uno scontrino, Facile
+spiega con un messaggio perché non c'è un documento da mostrare.
+
 ### Correzioni
 
 - **SMS con OpenAPI.** I numeri si possono scrivere anche con spazi, punti,
