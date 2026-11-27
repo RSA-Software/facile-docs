@@ -156,10 +156,12 @@ cui mandare il sollecito.
     **Stampa** e **Stampa Solleciti** aprono la stessa finestra di selezione:
     cambia quello che viene prodotto, non i filtri da compilare.
 
-!!! note "Escludi un gruppo aziende"
+!!! note "Cosa resta fuori con Escludi"
 
-    Con **Escludi** spuntato accanto a **Gruppo Azi.** la stampa riporta i clienti
-    di tutti gli altri gruppi **e anche quelli che non hanno nessun gruppo**.
+    **Escludi** toglie dalla stampa solo il codice indicato: restano tutti gli
+    altri **e anche le righe in cui quel dato manca**. Escludendo un agente, per
+    esempio, escono le scadenze degli altri agenti e quelle senza agente;
+    escludendo un gruppo aziende, i clienti degli altri gruppi e quelli senza gruppo.
 
 !!! info "Con quale tasso si calcolano gli interessi di mora"
 
