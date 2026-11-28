@@ -42,7 +42,9 @@ movimenti di azzeramento.
 Prima di usare questa maschera occorre:
 
 - avere la **gestione dei lotti attiva** nella [ditta](ditte.md): senza, la
-  voce non c'è nel menu;
+  voce non c'è nel menu. Non c'è nemmeno nella
+  [versione Ortofrutta](../versioni/ortofrutta/index.md), dove il lotto è il
+  numero del carico e si gestisce come prima;
 - lavorare sugli **archivi dell'anno corrente**;
 - per l'azzeramento, avere una [causale di magazzino](../magazzino/causali-magazzino.md)
   adatta. La maschera propone quella indicata come **Inventario da Lettore**
@@ -114,7 +116,7 @@ tipi; il valore dell'altro non si può scrivere.
 
 | Comando | Scorciatoia | Effetto |
 |---|---|---|
-| **F3 - Mostra** | ++f3++ | Carica in griglia i lotti aperti che rispettano i criteri. |
+| **F3 - Mostra** | ++f3++ | Carica in griglia i lotti aperti a oggi che rispettano i criteri. |
 | **F2 - Chiudi** | ++f2++ | Chiude i lotti spuntati, dopo la conferma. È attivo solo sulla lista dei lotti aperti, con almeno una riga spuntata. |
 | **F4 - Riapri** | ++f4++ | In due tempi: la prima volta mostra i lotti chiusi nella **Data di chiusura**, la seconda riapre quelli spuntati. |
 | **Esci** | ++esc++ | Chiude la maschera. |
@@ -147,7 +149,7 @@ tipi; il valore dell'altro non si può scrivere.
 5. Premi **F2 - Chiudi** e rispondi **Sì** a *Vuoi chiudere N lotti e
    azzerarne il residuo con la causale C ?*.
 6. Il resoconto dice anche quanti lotti sono stati azzerati e con quanti
-   movimenti.
+   movimenti, ed elenca ogni lotto azzerato con la quantità tolta.
 
 ### Riaprire i lotti chiusi per sbaglio
 
@@ -180,12 +182,13 @@ tipi; il valore dell'altro non si può scrivere.
 | *La causale indicata genera un movimento in un altro deposito e non può essere usata.* | È una causale di trasferimento, con deposito e causale di destinazione. Compare già scegliendola dall'elenco. | Scegli una causale che non trasferisca merce. |
 | *Vuoi chiudere N lotti ?* | Conferma prima di chiudere, senza azzeramento. | **Sì** procede. La risposta preimpostata è **No**. |
 | *Vuoi chiudere N lotti e azzerarne il residuo con la causale C ?* | Conferma prima di chiudere con l'azzeramento. | **Sì** procede. La risposta preimpostata è **No**. |
-| *Lotti chiusi: N*<br>*Lotti azzerati: N (movimenti: M)*<br>*Lotti saltati (N):* | Il resoconto della chiusura. La seconda riga c'è solo con l'azzeramento; l'elenco dei saltati, una riga *articolo / lotto: motivo* ciascuno, solo se ce ne sono. Dopo venti righe segue *... e altri N*. | Leggi il motivo dei lotti saltati: i motivi sono qui sotto. |
+| *Lotti chiusi: N*<br>*Lotti azzerati: N (movimenti: M)*<br>*Lotti saltati (N):* | Il resoconto della chiusura. La seconda riga c'è solo con l'azzeramento, ed è seguita dai lotti azzerati, una riga *articolo / lotto: quantità* ciascuno: la quantità tolta, con tre decimali e con il segno (negativa per un lotto che era sotto zero). L'elenco dei saltati, una riga *articolo / lotto: motivo* ciascuno, c'è solo se ce ne sono. Dopo venti righe ogni elenco prosegue con *... e altri N*. | Leggi il motivo dei lotti saltati: i motivi sono qui sotto. |
 | *giacenza cambiata dopo l'anteprima* | Nel resoconto, accanto a un lotto saltato: fra **Mostra** e **Chiudi** il lotto si è mosso, per esempio con una vendita. | Premi **F3 - Mostra**, controlla la nuova giacenza e ripeti la chiusura. |
 | *data di chiusura precedente all'inizio vendita* | Nel resoconto: la **Data di chiusura** è prima dell'inizio vendita del lotto. | Chiudilo con una data successiva. |
 | *movimenti successivi alla data di chiusura* | Nel resoconto: il lotto ha movimenti con una data successiva alla **Data di chiusura**. | Chiudilo con una data uguale o successiva al suo **Ultimo Mov.** |
-| *lotto già chiuso* | Nel resoconto: nel frattempo il lotto è stato chiuso, per esempio da un altro utente, con una data uguale o precedente. | Nulla: il lotto tiene la data che ha. |
-| *Operazione interrotta: erano già stati chiusi N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore. Precede il resoconto. | I lotti contati restano chiusi; ripeti **Mostra** e **Chiudi** per gli altri. |
+| *lotto già chiuso* | Nel resoconto: nel frattempo il lotto è stato chiuso, per esempio da un altro utente, e oggi non è più aperto. | Nulla: il lotto tiene la data che ha. |
+| *(il testo di un errore)* | Nel resoconto, accanto a un lotto saltato o non riaperto: scrivendo quel lotto c'è stato un errore, per esempio perché un altro utente lo ha cancellato, lo stava modificando o lo teneva bloccato. Il motivo è la prima riga del messaggio d'errore. Per quel lotto non è stato scritto niente, e l'operazione è andata avanti con gli altri. | Ripeti **Mostra** e l'operazione per quel lotto; se l'errore si ripete, segnalalo con il testo del motivo. |
+| *Operazione interrotta: erano già stati chiusi N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore che non riguarda un singolo lotto, come la perdita del collegamento all'archivio. Precede il resoconto. | I lotti contati restano chiusi; ripeti **Mostra** e **Chiudi** per gli altri. |
 | *Nessun lotto chiuso in questa data.* | Il primo **F4 - Riapri** non ha trovato lotti chiusi nella **Data di chiusura**. | Controlla la data e il periodo di inizio vendita. |
 | *Controllare i lotti chiusi nella data indicata, poi premere di nuovo Riapri.* | Il primo **F4 - Riapri** ha caricato i lotti chiusi in quella data. | Togli le spunte che non servono e premi di nuovo **F4 - Riapri**. |
 | *Cancellazioni non abilitate per l' utente !* | La riapertura cancella i movimenti di azzeramento, e il tuo utente ha il blocco delle cancellazioni. | Fai riaprire da un utente abilitato, o fai togliere il blocco da [Utenti](utenti.md). |
@@ -193,7 +196,7 @@ tipi; il valore dell'altro non si può scrivere.
 | *Lotti riaperti: N*<br>*Movimenti di azzeramento cancellati: M* | Il resoconto della riapertura. Seguono, se ce ne sono, *Lotti non riaperti (N):* e *Lotti riaperti da rettificare a mano (N):*. | Leggi i due elenchi. |
 | *lotto non chiuso in quella data* | Nel resoconto della riapertura, fra i lotti non riaperti: nel frattempo il lotto è stato riaperto o chiuso con un'altra data. | Nulla, oppure cercalo con la sua data di chiusura. |
 | *movimento di azzeramento in un esercizio chiuso: rettificare a mano* | Nel resoconto, fra i lotti riaperti da rettificare: il lotto è stato riaperto, ma il suo movimento di azzeramento sta in un esercizio già chiuso e non è stato cancellato. | Se il residuo va rimesso, fallo con un movimento di rettifica dai [movimenti di magazzino](../magazzino/movimenti-magazzino.md). |
-| *Operazione interrotta: erano già stati riaperti N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore. | I lotti contati restano riaperti; ripeti **Riapri** per gli altri. |
+| *Operazione interrotta: erano già stati riaperti N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore che non riguarda un singolo lotto. | I lotti contati restano riaperti; ripeti **Riapri** per gli altri. |
 
 ## Note
 
@@ -243,8 +246,11 @@ tipi; il valore dell'altro non si può scrivere.
 !!! info "Quali lotti compaiono in griglia"
 
     Con **F3 - Mostra** entrano i lotti con l'inizio vendita nel periodo, che
-    alla **Data di chiusura** sono ancora aperti e che rispettano la
-    **Selezione**. Fra questi:
+    **oggi** sono ancora aperti, cioè senza **Fine Vendita** o con una **Fine
+    Vendita** futura, e che rispettano la **Selezione**. Un lotto chiuso ieri
+    non compare anche se la **Data di chiusura** è di una settimana fa; uno con
+    una chiusura programmata compare, e la chiusura gli anticipa la **Fine
+    Vendita** alla **Data di chiusura**. Fra questi:
 
     - quelli nella **Soglia** compaiono **spuntati**;
     - quelli con giacenza negativa, e quelli senza carichi ma con una
