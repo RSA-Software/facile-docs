@@ -89,8 +89,8 @@ tipi; il valore dell'altro non si può scrivere.
 
 | Campo | Obbl. | Descrizione | Valori ammessi |
 |---|:---:|---|---|
-| **Quantità** **da** … **a** | | Spunta i lotti con una giacenza compresa fra i due valori, estremi inclusi. Propone `0` e `0`: i lotti esauriti esattamente. | quantità, anche negative |
-| **Percentuale** **fino al %** | | Spunta i lotti il cui residuo, in percentuale su quanto è stato caricato, non supera il valore. Con `3` passano il salame da 1 kg che ha lasciato 20 g e la forma da 30 kg che ha lasciato 0,9 kg, cosa che una soglia in chili non può fare. | percentuale |
+| **Quantità** **da** … **a** | | Spunta i lotti con una giacenza compresa fra i due valori, estremi inclusi. Propone `0` e `0`: i lotti esauriti esattamente. Da tastiera si sceglie con ++alt+q++. | quantità, anche negative |
+| **Percentuale** **fino al %** | | Spunta i lotti il cui residuo, in percentuale su quanto è stato caricato, non supera il valore. Con `3` passano il salame da 1 kg che ha lasciato 20 g e la forma da 30 kg che ha lasciato 0,9 kg, cosa che una soglia in chili non può fare. Da tastiera si sceglie con ++alt+p++. | percentuale |
 
 ### Residuo
 
@@ -187,8 +187,8 @@ tipi; il valore dell'altro non si può scrivere.
 | *data di chiusura precedente all'inizio vendita* | Nel resoconto: la **Data di chiusura** è prima dell'inizio vendita del lotto. | Chiudilo con una data successiva. |
 | *movimenti successivi alla data di chiusura* | Nel resoconto: il lotto ha movimenti con una data successiva alla **Data di chiusura**. | Chiudilo con una data uguale o successiva al suo **Ultimo Mov.** |
 | *lotto già chiuso* | Nel resoconto: nel frattempo il lotto è stato chiuso, per esempio da un altro utente, e oggi non è più aperto. | Nulla: il lotto tiene la data che ha. |
-| *(il testo di un errore)* | Nel resoconto, accanto a un lotto saltato o non riaperto: scrivendo quel lotto c'è stato un errore, per esempio perché un altro utente lo ha cancellato, lo stava modificando o lo teneva bloccato. Il motivo è la prima riga del messaggio d'errore. Per quel lotto non è stato scritto niente, e l'operazione è andata avanti con gli altri. | Ripeti **Mostra** e l'operazione per quel lotto; se l'errore si ripete, segnalalo con il testo del motivo. |
-| *Operazione interrotta: erano già stati chiusi N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore che non riguarda un singolo lotto, come la perdita del collegamento all'archivio. Precede il resoconto. | I lotti contati restano chiusi; ripeti **Mostra** e **Chiudi** per gli altri. |
+| *(il testo di un errore)* | Nel resoconto, accanto a un lotto saltato o non riaperto: scrivendo quel lotto c'è stato un errore, per esempio perché un altro utente lo ha cancellato, lo stava modificando o lo teneva bloccato. Il motivo è la prima riga del messaggio d'errore; nella versione web è il messaggio intero. Per quel lotto non è stato scritto niente, e l'operazione è andata avanti con gli altri. | Ripeti **Mostra** e l'operazione per quel lotto; se l'errore si ripete, segnalalo con il testo del motivo. |
+| *Operazione interrotta: erano già stati chiusi N lotti.* | Hai premuto **Esci** nella finestra di avanzamento, oppure all'inizio o alla fine non è stato possibile collegarsi all'archivio. Un errore su un singolo lotto non interrompe l'operazione: il lotto finisce fra i saltati. Precede il resoconto. | I lotti contati restano chiusi; ripeti **Mostra** e **Chiudi** per gli altri. |
 | *Nessun lotto chiuso in questa data.* | Il primo **F4 - Riapri** non ha trovato lotti chiusi nella **Data di chiusura**. | Controlla la data e il periodo di inizio vendita. |
 | *Controllare i lotti chiusi nella data indicata, poi premere di nuovo Riapri.* | Il primo **F4 - Riapri** ha caricato i lotti chiusi in quella data. | Togli le spunte che non servono e premi di nuovo **F4 - Riapri**. |
 | *Cancellazioni non abilitate per l' utente !* | La riapertura cancella i movimenti di azzeramento, e il tuo utente ha il blocco delle cancellazioni. | Fai riaprire da un utente abilitato, o fai togliere il blocco da [Utenti](utenti.md). |
@@ -196,7 +196,7 @@ tipi; il valore dell'altro non si può scrivere.
 | *Lotti riaperti: N*<br>*Movimenti di azzeramento cancellati: M* | Il resoconto della riapertura. Seguono, se ce ne sono, *Lotti non riaperti (N):* e *Lotti riaperti da rettificare a mano (N):*. | Leggi i due elenchi. |
 | *lotto non chiuso in quella data* | Nel resoconto della riapertura, fra i lotti non riaperti: nel frattempo il lotto è stato riaperto o chiuso con un'altra data. | Nulla, oppure cercalo con la sua data di chiusura. |
 | *movimento di azzeramento in un esercizio chiuso: rettificare a mano* | Nel resoconto, fra i lotti riaperti da rettificare: il lotto è stato riaperto, ma il suo movimento di azzeramento sta in un esercizio già chiuso e non è stato cancellato. | Se il residuo va rimesso, fallo con un movimento di rettifica dai [movimenti di magazzino](../magazzino/movimenti-magazzino.md). |
-| *Operazione interrotta: erano già stati riaperti N lotti.* | Hai premuto **Annulla** sulla barra di avanzamento, oppure c'è stato un errore che non riguarda un singolo lotto. | I lotti contati restano riaperti; ripeti **Riapri** per gli altri. |
+| *Operazione interrotta: erano già stati riaperti N lotti.* | Hai premuto **Esci** nella finestra di avanzamento, oppure all'inizio o alla fine non è stato possibile collegarsi all'archivio. | I lotti contati restano riaperti; ripeti **Riapri** per gli altri. |
 
 ## Note
 
