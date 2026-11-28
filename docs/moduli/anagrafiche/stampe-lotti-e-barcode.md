@@ -25,7 +25,10 @@ su un periodo.
 
 **Stampa Lotti in Scadenza** elenca i lotti che scadono nel periodo indicato:
 serve a smaltire per tempo la merce deperibile e a non trovarsi prodotti
-scaduti a scaffale.
+scaduti a scaffale. Elenca solo i lotti ancora in vendita: quelli senza
+**Fine Vendita** e quelli con una **Fine Vendita** successiva a oggi. Un lotto
+con la **Fine Vendita** a oggi è già chiuso e non compare. I lotti finiti si
+chiudono in blocco da [Chiusura Lotti](chiusura-lotti.md).
 
 **Stampa Spostamenti Codici a Barre** elenca i codici a barre che sono stati
 spostati da un articolo a un altro nel periodo. È una stampa di controllo: uno
@@ -140,4 +143,5 @@ Non applicabile.
 ## Vedi anche
 
 - [Anagrafica articoli](anagrafica-articoli.md)
+- [Chiusura lotti](chiusura-lotti.md)
 - [Stampe articoli](stampe-articoli.md)

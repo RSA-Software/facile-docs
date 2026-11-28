@@ -46,6 +46,8 @@ con quali impostazioni. Le pagine qui sotto seguono l'ordine delle voci di menu.
       modifica da griglia, caricamento prezzi, duplica, cancellazione, panieri.
     - [Scorte, assortimento e ubicazioni](anagrafiche/scorte-e-assortimento.md)
       — calcolo delle scorte, distribuzione fra depositi, assortimento.
+    - [Chiusura Lotti](anagrafiche/chiusura-lotti.md) — chiusura in blocco
+      dei lotti finiti, con l'azzeramento del calo peso, e riapertura.
     - [Stampe articoli](anagrafiche/stampe-articoli.md) — le venti stampe di
       magazzino.
     - [Stampa lotti e spostamenti barcode](anagrafiche/stampe-lotti-e-barcode.md)

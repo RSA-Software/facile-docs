@@ -142,7 +142,7 @@ La finestra che si apre con **Aggiungi** su una commessa:
 | **Codice Articolo** | ● | Il componente consumato. | codice |
 | **Data** | ● | Quando. | data |
 | **Quantità** | ● | Quanto. Con la gestione matricole attiva non sono ammessi decimali. | numero |
-| **Lotto** | | Il lotto da cui si preleva, se l'articolo è a lotti. Un lotto chiuso non è utilizzabile. | codice |
+| **Lotto** | | Il lotto da cui si preleva, se l'articolo è a lotti. Non è utilizzabile un lotto chiuso alla data del movimento, cioè con la **Fine Vendita** in quel giorno o prima; con una **Fine Vendita** successiva si usa ancora. | codice |
 | **Causale** | ● | *Scarico da Produzione* o *Scarico Sfrido di Produzione*. | due voci |
 
 ### Carico da Produzione
@@ -265,7 +265,7 @@ Oltre a questi, ogni maschera ha i suoi.
 | *Procedendo con la cancellazione sarà eliminato l'intero andamento della produzione!* — *Vuoi Continuare?* | Hai chiesto di cancellare una commessa. | **Sì** cancella la commessa e tutti i suoi movimenti. La risposta preimpostata è **No**. |
 | *Ci sono righe con impegno materiale per la produzione!* — *Vuoi rimuoverle?* | Si sta chiudendo una commessa che ha ancora righe di impegno non trasformate in scarico. | **Sì** le toglie e prosegue. **No** interrompe la chiusura. |
 | *Ci sono righe con impegno materiale per la produzione fatte in anni diversi dal corrente!* | Come sopra, ma le righe di impegno sono di un esercizio precedente. | Vanno tolte dall'esercizio in cui sono nate: rientra in quell'anno e ripeti. |
-| *Il lotto selezionato è stato chiuso e non può essere utilizzato!* | Il lotto indicato è chiuso. | Scegline un altro. |
+| *Il lotto selezionato è stato chiuso e non può essere utilizzato!* | Il lotto indicato è chiuso alla data del movimento: la sua **Fine Vendita** è in quel giorno o prima. | Scegline un altro, oppure, se è stato chiuso per sbaglio, riaprilo da [Chiusura Lotti](../anagrafiche/chiusura-lotti.md) o togli la **Fine Vendita** dalla scheda del lotto. |
 | *Gestione Lotti attiva per l'articolo selezionato.* — *Vuoi Forzare ?* | Si sta movimentando senza indicare il lotto un articolo che li gestisce. | **Sì** procede senza lotto, e la tracciabilità di quel movimento si perde. La risposta preimpostata è **No**. |
 | *Il Lotto imputato non esiste : vuoi crearlo?* / *Lotto Inesistente!* — *Vuoi Crearlo ?* | Chiudendo la produzione o salvando il carico è stato scritto un lotto nuovo. | **Sì** lo crea al volo. |
 | *Articolo non abilitato alla gestione dei lotti!* — *Vuoi abilitarlo ?* | È stato indicato un lotto per un articolo che non li gestisce. | **Sì** attiva la gestione lotti sull'articolo, da qui in avanti. |

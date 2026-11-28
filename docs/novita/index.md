@@ -50,6 +50,29 @@ anche quando la fattura è di un esercizio precedente. Per le scadenze inserite
 a mano, nate da una registrazione di prima nota o da uno scontrino, Facile
 spiega con un messaggio perché non c'è un documento da mostrare.
 
+**[Chiusura dei lotti in blocco](../moduli/anagrafiche/chiusura-lotti.md).**
+La voce nuova **Archivi ▸ Articoli ▸ Chiusura Lotti**, presente con la
+gestione dei lotti attiva, chiude in un colpo i lotti finiti: si scelgono per
+periodo di inizio vendita, reparto, categoria e fornitore, con una soglia sulla
+giacenza in quantità o in percentuale sul caricato, e si controllano in griglia
+prima di chiudere. Con **Azzera il residuo** la chiusura scrive anche il
+movimento che toglie il calo peso di salumi e formaggi, con la causale delle
+rettifiche d'inventario. **Riapri** annulla una chiusura fatta per sbaglio,
+movimenti di azzeramento compresi. La domanda *Vuoi chiudere tutti i lotti
+aperti prima di una data di riferimento ?*, che in alcune installazioni
+compariva creando un lotto nuovo, non c'è più.
+Cambia anche la regola dei lotti chiusi, ora uguale dappertutto: un lotto è
+chiuso dal giorno della sua **Fine Vendita**, compreso. Una **Fine Vendita**
+messa a oggi lo toglie subito dai lotti che si possono scegliere, nei documenti
+e nella [produzione](../moduli/magazzino/produzione.md); una futura lo lascia
+vendibile fino al giorno prima, mentre prima la produzione lo rifiutava
+subito. Nei documenti conta la data del documento. Seguono la stessa regola
+gli stati `APERTI` e `CHIUSI` di
+[Analisi Lotti](../moduli/analisi-dati/analisi-lotti.md) e la
+[Stampa Lotti in Scadenza](../moduli/anagrafiche/stampe-lotti-e-barcode.md),
+che ora elenca anche i lotti con una chiusura programmata. Nella versione
+Ortofrutta i lotti restano come prima.
+
 ### Correzioni
 
 - **Solo Bevande. Fatture con più vuoti resi che merce venduta.** Quando la

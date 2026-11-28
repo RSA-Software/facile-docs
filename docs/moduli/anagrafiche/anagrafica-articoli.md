@@ -219,7 +219,11 @@ Il menu **F7 - Altri** contiene: **Codici Articolo Fornitori**, **Vendite**,
 Depositi**, **Dati Articoli Fiscali**, **Ingredienti**, **Competenze su
 Vendite** e **Agganci <-> Cod. Art. Clienti**, che apre i
 [codici articolo dei clienti](codici-articolo-clienti.md); vi si aggiungono **Gestione Lotti** e **Gestione Matricole** se
-quelle gestioni sono attive per l'azienda e per l'articolo. Le voci
+quelle gestioni sono attive per l'azienda e per l'articolo. In **Gestione
+Lotti** la **Fine Vendita** chiude il lotto da quel giorno compreso: messa a
+oggi lo toglie subito dai lotti che si possono scegliere, messa a una data
+futura lo lascia vendibile fino al giorno prima. Per chiudere molti lotti in
+una volta c'è [Chiusura Lotti](chiusura-lotti.md). Le voci
 **Acquisti**, **Andamento** e **Promozioni Acquisto** non compaiono agli utenti
 a cui i costi sono preclusi.
 
@@ -379,6 +383,7 @@ Con l'anagrafica già aperta, **F5 - Cerca** riporta allo stesso elenco.
 
 - [Cerca articoli](cerca-articoli.md)
 - [Codici articolo dei clienti](codici-articolo-clienti.md)
+- [Chiusura lotti](chiusura-lotti.md)
 - [Anagrafica clienti](anagrafica-clienti.md)
 - [Anagrafica fornitori](anagrafica-fornitori.md)
 - [Documento di vendita](../vendite/documento-di-vendita.md)

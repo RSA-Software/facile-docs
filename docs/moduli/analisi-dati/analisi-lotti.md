@@ -59,7 +59,7 @@ con l'esportazione.
 | **Data Carico Dal**, **Data Carico Al** | ● | Il periodo in cui i lotti sono stati caricati. | date |
 | **Deposito** | | Restringe a un [deposito](../magazzino/depositi.md). Vuoto significa `TUTTI`. | codice |
 | **Listino** | | Il listino con cui valorizzare. | codice |
-| **Stato** | | Quali lotti mostrare. | `TUTTI`, `APERTI`, `CHIUSI` |
+| **Stato** | | Quali lotti mostrare. `CHIUSI` sono i lotti con la **Fine Vendita** a oggi o prima; `APERTI` quelli senza **Fine Vendita** o con una **Fine Vendita** futura. | `TUTTI`, `APERTI`, `CHIUSI` |
 
 ## Pulsanti e comandi
 
@@ -75,21 +75,23 @@ con l'esportazione.
 
 1. Apri **Menu ▸ Analisi Dati ▸ Giacenza Lotti**.
 2. Indica il periodo di carico e metti **Stato** su `APERTI`: restano i lotti
-   con merce ancora a magazzino.
+   ancora in vendita.
 3. Premi **F2 Esporta** se vuoi lavorarci in Excel.
 
 ### Capire com'è andato uno stock
 
 1. Apri **Analisi Lotti**.
 2. Indica il periodo di carico e il **Listino** con cui valorizzare.
-3. Metti **Stato** su `CHIUSI` per esaminare le partite già esaurite.
+3. Metti **Stato** su `CHIUSI` per esaminare le partite già chiuse.
 
 ### Trovare i lotti fermi
 
 Metti **Stato** su `APERTI` e allarga il periodo di carico all'indietro: i lotti
 vecchi ancora aperti sono quelli su cui la merce non gira. Per la scadenza vera
 e propria c'è la
-[Stampa Lotti in Scadenza](../anagrafiche/stampe-lotti-e-barcode.md).
+[Stampa Lotti in Scadenza](../anagrafiche/stampe-lotti-e-barcode.md). Quelli
+finiti, o con un residuo che è solo calo peso, si chiudono in blocco da
+[Chiusura Lotti](../anagrafiche/chiusura-lotti.md).
 
 ## Controlli e messaggi
 
@@ -107,7 +109,10 @@ e propria c'è la
 
 !!! note "Lotti chiusi e lotti scaduti sono cose diverse"
 
-    Qui `CHIUSI` vuol dire *esauriti*, non *scaduti*. La scadenza si guarda dalla
+    Qui `CHIUSI` vuol dire *tolti dalla vendita*, non *scaduti*: un lotto è
+    chiuso dal giorno della sua **Fine Vendita**, compreso. Un lotto con la
+    **Fine Vendita** a una data futura resta fra gli `APERTI` fino al giorno prima.
+    La scadenza si guarda dalla
     [stampa dei lotti in scadenza](../anagrafiche/stampe-lotti-e-barcode.md).
 
 !!! info "Che cosa esce dalle due voci"
@@ -178,5 +183,6 @@ e propria c'è la
 ## Vedi anche
 
 - [Stampa lotti in scadenza e spostamenti codici a barre](../anagrafiche/stampe-lotti-e-barcode.md)
+- [Chiusura lotti](../anagrafiche/chiusura-lotti.md)
 - [Carico merci](../magazzino/carico-merci.md)
 - [Venduto per…](venduto-per.md)
